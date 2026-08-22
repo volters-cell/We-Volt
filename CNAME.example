@@ -1,0 +1,8 @@
+# Rename this file to CNAME (no extension) once you own a real domain, and put
+# the bare hostname on one line, e.g.:
+#
+#   eutracker.eu
+#
+# GitHub Pages reads that file on every deploy. A domain that does not exist —
+# or a TLD that is not delegated, like .volt — will fail the DNS check and stop
+# the site from serving at all.
