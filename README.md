@@ -97,13 +97,19 @@ A real record is made by importing a published roll-call and then adding the
 country-level reporting by hand:
 
 ```bash
-node scripts/ingest-roll-call.mjs --vote 168393 --out data/decisions
+node scripts/fetch-plenary.mjs --date 2026-09-15    # one sitting
+node scripts/build-index.mjs                        # rebuild the feed
 ```
 
-That pulls the Parliament's roll-call (via [HowTheyVote.eu](https://howtheyvote.eu),
-which republishes the official annexes), groups it by member state, and writes every
-MEP's own vote into the record. It deliberately leaves the impact and press sections
+That reads the Parliament's own roll-call annex for the sitting, maps every member to
+their country through the MEP directory, and writes one record per final vote with
+each MEP's own vote in it. It deliberately leaves the summary and press sections
 empty: those are editorial work, and nothing should generate them.
+
+**It can run itself.** `.github/workflows/plenary-sync.yml` does the same thing every
+weekday evening, validates what it imported, and commits only if something changed —
+so the site follows the plenary on its own. Set it up, and verify the first run,
+following [docs/AUTOMATION.md](docs/AUTOMATION.md).
 
 The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md); how to file a
 country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DATA.md).
@@ -120,13 +126,13 @@ country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DAT
   says so in the panel. The absence is part of the story.
 - **Sample data can never masquerade as a record.** That rule is enforced in code.
 
-## Standing on other people's work
+## Where the data comes from
 
-[HowTheyVote.eu](https://howtheyvote.eu) made European roll-call votes legible before
-anyone else did, and this project imports their republished records rather than
-re-scraping the annexes. EU Tracker starts where they stop: at the map, at the cost,
-and at the press. Boundaries come from public-domain Natural Earth data, simplified
-for display only — they imply no position on any border.
+Roll-call votes come from the European Parliament itself: the roll-call annex
+published with the minutes of each sitting, and the MEP directory that turns the names
+in it into countries. Nothing sits in between. Boundaries come from public-domain
+Natural Earth data, simplified for display only — they imply no position on any
+border.
 
 ## Where it is going
 

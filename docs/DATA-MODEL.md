@@ -123,13 +123,14 @@ states and of the Union; giving them an inset is on the roadmap.
 1. Import a Parliament roll-call, or start from an empty file for a Council or
    Commission act:
    ```bash
-   node scripts/ingest-roll-call.mjs --vote <id> --out data/decisions
+   node scripts/fetch-plenary.mjs --date <YYYY-MM-DD>
    ```
+   See [AUTOMATION.md](AUTOMATION.md) for the sources and the schedule.
 2. Write `summary`, `whatItMeans` and `outcome.headline` — plain language, no jargon
    that a reader would have to look up.
 3. Add impact figures with their sources, or leave them out. An unsourced number is
    worse than a blank.
 4. Add press coverage per country — see
    [CONTRIBUTING-DATA.md](CONTRIBUTING-DATA.md).
-5. Add the file to `data/decisions/index.json`.
+5. Run `node scripts/build-index.mjs` to put it in the feed.
 6. Run `npm test`. Green means it is publishable.

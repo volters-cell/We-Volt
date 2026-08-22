@@ -1,0 +1,74 @@
+# Import the Parliament's roll-call votes on a schedule, so the site follows
+# the plenary without anybody opening a terminal.
+#
+# The Parliament sits in Strasbourg for four days a month and holds shorter
+# sessions in Brussels. Rather than encode that calendar, this runs every
+# weekday evening and asks for the last seven days: on a day with no sitting
+# the annex simply does not exist (404) and the run does nothing.
+#
+# Before enabling: Settings > Actions > General > Workflow permissions must be
+# set to "Read and write permissions" so the run can commit what it imports.
+
+name: Plenary sync
+
+on:
+  schedule:
+    - cron: "0 19 * * 1-5"   # 19:00 UTC, after voting time
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Import sittings from this date (YYYY-MM-DD)"
+        required: false
+      all:
+        description: "Include amendment votes, not only final votes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: plenary-sync
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # --refresh-meps re-reads the member directory first: a newly seated MEP
+      # whose id is not in the cache would otherwise have their votes dropped.
+      # If that fetch fails the run falls back to the cached directory.
+      - name: Import roll-call votes
+        run: |
+          node scripts/fetch-plenary.mjs --refresh-meps \
+            ${{ inputs.since && format('--since {0}', inputs.since) || '' }} \
+            ${{ inputs.all && '--all' || '' }}
+
+      - name: Rebuild the index
+        run: node scripts/build-index.mjs
+
+      - name: Check every record before it goes near the site
+        run: |
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+      - name: Commit what changed
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "No new votes."
+            exit 0
+          fi
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git commit -m "Import roll-call votes from the European Parliament
+
+          Automated by .github/workflows/plenary-sync.yml. Records land with
+          empty summary and press sections: those are editorial work."
+          git push

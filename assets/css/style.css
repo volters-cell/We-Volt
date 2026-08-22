@@ -753,7 +753,6 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   font-size: .84rem;
 }
 .site-footer p { max-width: 70ch; margin: 0 0 .5rem; }
-.footer-credit { font-style: italic; }
 
 .load-error {
   grid-column: 1 / -1;

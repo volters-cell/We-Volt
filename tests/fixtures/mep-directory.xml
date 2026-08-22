@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A miniature stand-in for the Parliament's MEP directory. Invented members. -->
+<meps>
+  <mep>
+    <fullName>Ada Fixture</fullName>
+    <id>1001</id>
+    <country>Germany</country>
+    <politicalGroup>Group of the Progressive Alliance of Socialists and Democrats in the European Parliament</politicalGroup>
+    <nationalPoliticalGroup>Fixture Party</nationalPoliticalGroup>
+  </mep>
+  <mep>
+    <fullName>Bo Sample</fullName>
+    <id>1002</id>
+    <country>Germany</country>
+    <politicalGroup>Group of the European People's Party (Christian Democrats)</politicalGroup>
+    <nationalPoliticalGroup>Sample Union</nationalPoliticalGroup>
+  </mep>
+  <mep>
+    <fullName>Cato Placeholder</fullName>
+    <id>1003</id>
+    <country>Germany</country>
+    <politicalGroup>Group of the European People's Party (Christian Democrats)</politicalGroup>
+    <nationalPoliticalGroup>Sample Union</nationalPoliticalGroup>
+  </mep>
+  <mep>
+    <fullName>Eero Mock</fullName>
+    <id>1004</id>
+    <country>Finland</country>
+    <politicalGroup>Group of the Greens/European Free Alliance</politicalGroup>
+    <nationalPoliticalGroup>Mock Greens</nationalPoliticalGroup>
+  </mep>
+  <mep>
+    <fullName>Dara Stub</fullName>
+    <id>1005</id>
+    <country>Greece</country>
+    <politicalGroup>Renew Europe Group</politicalGroup>
+    <nationalPoliticalGroup>Stub List</nationalPoliticalGroup>
+  </mep>
+</meps>

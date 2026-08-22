@@ -2,15 +2,16 @@
   "name": "eu-tracker",
   "version": "0.1.0",
   "private": true,
-  "description": "An interactive map of the European Union: one decision at a time, country by country — who voted how, what it costs, how the national press framed it.",
+  "description": "An interactive map of the European Union: one decision at a time, country by country \u2014 who voted how, what it costs, how the national press framed it.",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8000",
     "validate": "node scripts/validate-data.mjs",
     "index": "node scripts/build-index.mjs",
     "bundle": "node scripts/build-single-file.mjs",
-    "test": "node tests/ingest.test.mjs && node scripts/validate-data.mjs",
-    "map": "python3 scripts/build_map_data.py $npm_config_src data/eu-countries.geo.json"
+    "test": "node tests/import.test.mjs && node scripts/validate-data.mjs",
+    "map": "python3 scripts/build_map_data.py $npm_config_src data/eu-countries.geo.json",
+    "plenary": "node scripts/fetch-plenary.mjs"
   },
   "license": "MIT"
 }

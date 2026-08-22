@@ -29,6 +29,9 @@ jobs:
           node-version: "22"
       - name: Refuse to publish broken records
         run: node scripts/validate-data.mjs
+
+      - name: Rebuild the single-file bundle
+        run: node scripts/build-single-file.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
