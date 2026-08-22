@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EU Tracker — one decision, country by country</title>
+  <meta name="description" content="An interactive map of the European Union: for a single Council, Commission or Parliament decision, see how each member state voted, what it costs them, and how the national press framed it.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#country-panel">Skip to the country panel</a>
+
+  <div id="sample-banner" class="banner" hidden>
+    <strong>Sample data.</strong>
+    <span id="sample-banner-text"></span>
+    <a href="docs/DATA-MODEL.md">How real records are added</a>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>
+        <span class="brand-name">EU Tracker</span>
+        <span class="brand-tagline">One decision, country by country</span>
+      </span>
+    </div>
+
+    <div class="decision-picker">
+      <label for="decision-select">Decision</label>
+      <select id="decision-select"></select>
+    </div>
+  </header>
+
+  <main>
+    <section class="decision" aria-labelledby="decision-title">
+      <div class="decision-head">
+        <p class="decision-meta">
+          <span id="decision-body" class="chip"></span>
+          <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
+          <time id="decision-date"></time>
+        </p>
+        <h1 id="decision-title"></h1>
+        <p id="decision-subtitle" class="decision-subtitle"></p>
+        <p id="decision-summary" class="decision-summary"></p>
+        <details class="decision-detail">
+          <summary>What it means, and where this comes from</summary>
+          <ul id="decision-means"></ul>
+          <p class="rule"><strong>Voting rule:</strong> <span id="decision-rule"></span></p>
+          <ul id="decision-sources" class="sources"></ul>
+        </details>
+      </div>
+
+      <div id="outcome" class="outcome"></div>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="layer-tabs" role="tablist" aria-label="What the map shows">
+        <button role="tab" id="tab-vote" aria-controls="map-heading" data-layer="vote" aria-selected="true">How they voted</button>
+        <button role="tab" id="tab-impact" aria-controls="map-heading" data-layer="impact" aria-selected="false">What it costs</button>
+        <button role="tab" id="tab-press" aria-controls="map-heading" data-layer="press" aria-selected="false">How the press framed it</button>
+      </div>
+
+      <h2 id="map-heading" class="map-heading">How they voted</h2>
+      <p id="map-hint" class="map-hint">Click a member state to open its record. Use the arrow keys to move between countries.</p>
+
+      <div class="map-wrap">
+        <div id="map" class="map" aria-label="Map of the European Union"></div>
+        <div id="legend" class="legend"></div>
+      </div>
+    </section>
+
+    <section id="country-panel" class="panel" aria-live="polite" aria-labelledby="panel-title">
+      <div class="panel-empty" id="panel-empty">
+        <h2>Pick a country</h2>
+        <p>Every member state on the map holds the same three answers for this decision: how it voted, what the decision costs it, and how its own press told the story.</p>
+      </div>
+      <div class="panel-body" id="panel-body" hidden></div>
+    </section>
+
+    <section class="table-section" aria-labelledby="table-heading">
+      <h2 id="table-heading">All 27 member states</h2>
+      <p class="table-hint">Sortable. This is the same record as the map, for readers who want the numbers straight.</p>
+      <div class="table-scroll">
+        <table id="country-table">
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" data-sort="name">Member state</button></th>
+              <th scope="col"><button type="button" data-sort="position">Position</button></th>
+              <th scope="col"><button type="button" data-sort="meps">MEPs for / against / abstain</button></th>
+              <th scope="col"><button type="button" data-sort="impact">Estimated effect</button></th>
+              <th scope="col"><button type="button" data-sort="press">Press indexed</button></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      EU Tracker is an open-data project: every record is a JSON file in
+      <a href="https://github.com/volters-cell/We-Volt">the repository</a>, every figure carries its source.
+      Boundaries are simplified for display and imply no position on any border.
+    </p>
+    <p class="footer-credit">Vote-record structure follows the ground laid by <a href="https://howtheyvote.eu">HowTheyVote.eu</a>.</p>
+  </footer>
+
+  <script src="assets/js/projection.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/panel.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

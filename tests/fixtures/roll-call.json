@@ -1,0 +1,17 @@
+{
+  "id": 999001,
+  "timestamp": "2026-04-15T11:32:00Z",
+  "display_title": "Test file — fixture roll-call",
+  "description": "A miniature stand-in for a HowTheyVote.eu API response, used by the ingest test. The members below are invented for the fixture and are not real MEPs.",
+  "result": "ADOPTED",
+  "url": "https://howtheyvote.eu/votes/999001",
+  "source_url": "https://www.europarl.europa.eu/",
+  "procedure": { "reference": "2026/0001(COD)", "url": null },
+  "member_votes": [
+    { "position": "FOR", "member": { "id": 1, "first_name": "Ada", "last_name": "Fixture", "country": { "code": "DE" }, "group": { "short_label": "S&D" }, "national_party": "Fixture Party" } },
+    { "position": "AGAINST", "member": { "id": 2, "first_name": "Bo", "last_name": "Sample", "country": { "code": "DE" }, "group": { "short_label": "EPP" }, "national_party": "Sample Union" } },
+    { "position": "ABSTENTION", "member": { "id": 3, "first_name": "Cato", "last_name": "Placeholder", "country": { "code": "DE" }, "group": { "short_label": "EPP" }, "national_party": "Sample Union" } },
+    { "position": "DID_NOT_VOTE", "member": { "id": 4, "first_name": "Dara", "last_name": "Stub", "country": { "code": "EL" }, "group": { "short_label": "Renew" }, "national_party": "Stub List" } },
+    { "position": "FOR", "member": { "id": 5, "first_name": "Eero", "last_name": "Mock", "country": { "code": "FI" }, "group": { "short_label": "Greens/EFA" }, "national_party": "Mock Greens" } }
+  ]
+}

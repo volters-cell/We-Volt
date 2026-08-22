@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "project": "EU Tracker",
+    "dataStatus": "All bundled decisions are illustrative samples. See docs/DATA-MODEL.md."
+  },
+  "decisions": [
+    {
+      "id": "council-2026-hgv-co2-standards",
+      "title": "CO₂ standards for new heavy goods vehicles",
+      "subtitle": "Final adoption by qualified majority",
+      "date": "2026-05-27",
+      "body": "council",
+      "bodyLabel": "Council of the European Union",
+      "status": "sample",
+      "file": "data/decisions/council-2026-hgv-co2-standards.json"
+    },
+    {
+      "id": "ep-2026-nature-restoration-targets",
+      "title": "Nature restoration targets for 2040",
+      "subtitle": "Final plenary vote on the revised regulation",
+      "date": "2026-03-12",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "status": "sample",
+      "file": "data/decisions/ep-2026-nature-restoration-targets.json"
+    },
+    {
+      "id": "commission-2026-atlantic-fishing-opportunities",
+      "title": "2026 fishing opportunities in Atlantic waters",
+      "subtitle": "Implementing decision — no member state vote",
+      "date": "2026-01-20",
+      "body": "commission",
+      "bodyLabel": "European Commission",
+      "status": "sample",
+      "file": "data/decisions/commission-2026-atlantic-fishing-opportunities.json"
+    }
+  ]
+}

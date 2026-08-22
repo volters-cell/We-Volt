@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "term": "2024-2029",
+    "seatsTotal": 720,
+    "seatsSource": "European Council Decision (EU) 2023/2061 on the composition of the European Parliament",
+    "populationSource": "Eurostat, population on 1 January 2024 (rounded to 0.1 million)",
+    "populationNote": "Used for the Council qualified-majority calculation. Refresh yearly: Council population figures are fixed by decision each year.",
+    "councilRule": "Qualified majority = at least 55% of member states (15 of 27) representing at least 65% of the EU population. A blocking minority must include at least 4 member states."
+  },
+  "states": [
+    { "code": "AT", "name": "Austria", "capital": "Vienna", "seats": 20, "population": 9.2, "joined": 1995, "language": "de" },
+    { "code": "BE", "name": "Belgium", "capital": "Brussels", "seats": 22, "population": 11.8, "joined": 1958, "language": "nl" },
+    { "code": "BG", "name": "Bulgaria", "capital": "Sofia", "seats": 17, "population": 6.4, "joined": 2007, "language": "bg" },
+    { "code": "CY", "name": "Cyprus", "capital": "Nicosia", "seats": 6, "population": 0.9, "joined": 2004, "language": "el" },
+    { "code": "CZ", "name": "Czechia", "capital": "Prague", "seats": 21, "population": 10.9, "joined": 2004, "language": "cs" },
+    { "code": "DE", "name": "Germany", "capital": "Berlin", "seats": 96, "population": 84.4, "joined": 1958, "language": "de" },
+    { "code": "DK", "name": "Denmark", "capital": "Copenhagen", "seats": 15, "population": 5.9, "joined": 1973, "language": "da" },
+    { "code": "EE", "name": "Estonia", "capital": "Tallinn", "seats": 7, "population": 1.4, "joined": 2004, "language": "et" },
+    { "code": "ES", "name": "Spain", "capital": "Madrid", "seats": 61, "population": 48.6, "joined": 1986, "language": "es" },
+    { "code": "FI", "name": "Finland", "capital": "Helsinki", "seats": 15, "population": 5.6, "joined": 1995, "language": "fi" },
+    { "code": "FR", "name": "France", "capital": "Paris", "seats": 81, "population": 68.4, "joined": 1958, "language": "fr" },
+    { "code": "GR", "name": "Greece", "capital": "Athens", "seats": 21, "population": 10.4, "joined": 1981, "language": "el" },
+    { "code": "HR", "name": "Croatia", "capital": "Zagreb", "seats": 12, "population": 3.9, "joined": 2013, "language": "hr" },
+    { "code": "HU", "name": "Hungary", "capital": "Budapest", "seats": 21, "population": 9.6, "joined": 2004, "language": "hu" },
+    { "code": "IE", "name": "Ireland", "capital": "Dublin", "seats": 14, "population": 5.3, "joined": 1973, "language": "en" },
+    { "code": "IT", "name": "Italy", "capital": "Rome", "seats": 76, "population": 59.0, "joined": 1958, "language": "it" },
+    { "code": "LT", "name": "Lithuania", "capital": "Vilnius", "seats": 11, "population": 2.9, "joined": 2004, "language": "lt" },
+    { "code": "LU", "name": "Luxembourg", "capital": "Luxembourg", "seats": 6, "population": 0.7, "joined": 1958, "language": "fr" },
+    { "code": "LV", "name": "Latvia", "capital": "Riga", "seats": 9, "population": 1.9, "joined": 2004, "language": "lv" },
+    { "code": "MT", "name": "Malta", "capital": "Valletta", "seats": 6, "population": 0.6, "joined": 2004, "language": "mt" },
+    { "code": "NL", "name": "Netherlands", "capital": "Amsterdam", "seats": 31, "population": 17.9, "joined": 1958, "language": "nl" },
+    { "code": "PL", "name": "Poland", "capital": "Warsaw", "seats": 53, "population": 36.6, "joined": 2004, "language": "pl" },
+    { "code": "PT", "name": "Portugal", "capital": "Lisbon", "seats": 21, "population": 10.6, "joined": 1986, "language": "pt" },
+    { "code": "RO", "name": "Romania", "capital": "Bucharest", "seats": 33, "population": 19.0, "joined": 2007, "language": "ro" },
+    { "code": "SE", "name": "Sweden", "capital": "Stockholm", "seats": 21, "population": 10.5, "joined": 1995, "language": "sv" },
+    { "code": "SI", "name": "Slovenia", "capital": "Ljubljana", "seats": 9, "population": 2.1, "joined": 2004, "language": "sl" },
+    { "code": "SK", "name": "Slovakia", "capital": "Bratislava", "seats": 15, "population": 5.4, "joined": 2004, "language": "sk" }
+  ]
+}
