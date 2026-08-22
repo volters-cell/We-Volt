@@ -27,6 +27,11 @@
     totalPopulation = states.reduce(function (sum, state) { return sum + state.population; }, 0);
   }
 
+  /* A vote count in the colour of the vote it counts. */
+  function num(value, kind) {
+    return '<span class="n-' + kind + '">' + escapeHTML(value) + '</span>';
+  }
+
   function escapeHTML(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, function (char) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
@@ -100,20 +105,25 @@
         escapeHTML(VOTE_LABEL[derived.position] || derived.position) + '</p>' +
         '<p class="position-detail">One seat, one vote in the Council — cast by the ' +
         escapeHTML(country.representative || 'responsible minister') + '. ' +
-        'Weight in the qualified majority: ' + state.population.toFixed(1) +
-        ' million people, ' + ((state.population / (totalPopulation || 1)) * 100).toFixed(1) +
-        '% of the Union.</p>';
+        'Weight in the qualified majority: <strong>' + state.population.toFixed(1) +
+        ' million</strong> people, <strong>' +
+        ((state.population / (totalPopulation || 1)) * 100).toFixed(1) +
+        '%</strong> of the Union.</p>';
     }
 
     if (totals) {
       const cast = totals.for + totals.against + totals.abstain;
+      const share = cast ? Math.round((totals.for / cast) * 100) : null;
       html += '<p class="position position-' + escapeHTML(derived.position) + '">' +
         escapeHTML(VOTE_LABEL[derived.position]) +
         (derived.split ? ' <span class="split-flag">delegation split</span>' : '') + '</p>' +
-        '<p class="position-detail">' + totals.for + ' of ' + state.seats +
-        ' MEPs in favour, ' + totals.against + ' against, ' + totals.abstain +
-        ' abstained, ' + totals.absent + ' did not vote' +
-        (cast ? ' — ' + Math.round((totals.for / cast) * 100) + '% of votes cast were in favour.' : '.') +
+        '<p class="position-detail">' +
+        num(totals.for, 'for') + ' of ' + state.seats + ' MEPs in favour, ' +
+        num(totals.against, 'against') + ' against, ' +
+        num(totals.abstain, 'abstain') + ' abstained, ' +
+        num(totals.absent, 'absent') + ' did not vote' +
+        (share === null ? '.' : ' — ' + num(share + '%', totals.for > totals.against ? 'for' : 'against') +
+          ' of votes cast were in favour.') +
         '</p>' + bar(totals, state.seats) + groupRows(country) + mepRows(country);
     }
 

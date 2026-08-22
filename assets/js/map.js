@@ -23,6 +23,10 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     this.layout = Projection.layout(geo, WIDTH, HEIGHT, 18);
     this.shapes = {};
     this.selected = null;
+    this.hovered = null;
+    this.revealed = {};
+    this.dimmed = null;
+    this.timers = [];
     this.build();
   }
 
@@ -81,9 +85,15 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
 
       group.addEventListener('click', function () { self.select(shape.code); });
       group.addEventListener('keydown', function (event) { self.onKeydown(event, shape); });
-      group.addEventListener('mouseenter', function (event) { self.showTip(shape, event); });
+      group.addEventListener('mouseenter', function (event) {
+        self.showTip(shape, event);
+        if (self.handlers.onHover) self.handlers.onHover(shape.code);
+      });
       group.addEventListener('mousemove', function (event) { self.moveTip(event); });
-      group.addEventListener('mouseleave', function () { self.hideTip(); });
+      group.addEventListener('mouseleave', function () {
+        self.hideTip();
+        if (self.handlers.onHover) self.handlers.onHover(null);
+      });
       group.addEventListener('focus', function () { self.showTip(shape, null); });
       group.addEventListener('blur', function () { self.hideTip(); });
 
@@ -212,6 +222,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
      reader's colour scheme instead of being burned into fill attributes. */
   EUMap.prototype.paint = function (classFor, tipText) {
     this.tipText = tipText;
+    this.classFor = classFor;
     Object.keys(this.shapes).forEach(function (code) {
       const entry = this.shapes[code];
       const wanted = classFor(code);
@@ -219,10 +230,87 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
         'country',
         entry.shape.area < SMALL_AREA ? 'country-small' : '',
         wanted.className,
-        code === this.selected ? 'is-selected' : ''
+        code === this.selected ? 'is-selected' : '',
+        code === this.hovered ? 'is-hovered' : '',
+        this.revealed[code] === false ? '' : 'revealed',
+        this.dimmed && this.dimmed[code] ? 'is-dimmed' : ''
       ].filter(Boolean).join(' '));
       entry.group.setAttribute('aria-label', entry.shape.name + ': ' + wanted.label);
     }, this);
+  };
+
+  /* Emphasis, applied on top of whatever the layer painted. */
+
+  EUMap.prototype.setHovered = function (code) {
+    if (this.hovered && this.shapes[this.hovered]) {
+      this.shapes[this.hovered].group.classList.remove('is-hovered');
+    }
+    this.hovered = code;
+    if (code && this.shapes[code]) this.shapes[code].group.classList.add('is-hovered');
+  };
+
+  /* Dim everything that is not part of the group the reader asked to see —
+     clicking "Against" in the legend should leave the against countries lit. */
+  EUMap.prototype.setDimmed = function (predicate) {
+    this.dimmed = {};
+    Object.keys(this.shapes).forEach(function (code) {
+      const dim = predicate ? !predicate(code) : false;
+      this.dimmed[code] = dim;
+      this.shapes[code].group.classList.toggle('is-dimmed', dim);
+    }, this);
+  };
+
+  /* The reveal: the Union takes the colour of the outcome, holds, then each
+     member state turns to its own vote in a west-to-east sweep. */
+  EUMap.prototype.play = function (resultClass, options) {
+    const self = this;
+    const settings = options || {};
+    this.stop();
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || settings.skip) {
+      this.revealAll();
+      if (settings.onDone) settings.onDone();
+      return;
+    }
+
+    this.svg.setAttribute('class', 'eu-map is-revealing ' + resultClass);
+    Object.keys(this.shapes).forEach(function (code) {
+      self.revealed[code] = false;
+      self.shapes[code].group.classList.remove('revealed');
+    }, this);
+
+    const order = this.layout.shapes.slice().sort(function (a, b) {
+      return a.centroid[0] - b.centroid[0];
+    });
+
+    const hold = settings.hold === undefined ? 620 : settings.hold;
+    const step = settings.step === undefined ? 46 : settings.step;
+
+    this.timers = order.map(function (shape, i) {
+      return window.setTimeout(function () {
+        self.revealed[shape.code] = true;
+        self.shapes[shape.code].group.classList.add('revealed');
+      }, hold + i * step);
+    });
+
+    this.timers.push(window.setTimeout(function () {
+      self.svg.setAttribute('class', 'eu-map');
+      if (settings.onDone) settings.onDone();
+    }, hold + order.length * step + 260));
+  };
+
+  EUMap.prototype.revealAll = function () {
+    this.svg.setAttribute('class', 'eu-map');
+    Object.keys(this.shapes).forEach(function (code) {
+      this.revealed[code] = true;
+      this.shapes[code].group.classList.add('revealed');
+    }, this);
+  };
+
+  EUMap.prototype.stop = function () {
+    (this.timers || []).forEach(window.clearTimeout);
+    this.timers = [];
   };
 
   global.EUMap = EUMap;

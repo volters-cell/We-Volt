@@ -415,6 +415,92 @@ main {
 .swatch.press-neutral { background: var(--press-neutral); }
 .swatch.press-none { background: var(--press-none); }
 
+/* ---------------------------------------------------------------- motion */
+
+/* The reveal. The Union takes the colour of the outcome, holds, then each
+   member state turns to its own vote in a sweep from west to east. */
+.eu-map.is-revealing .country:not(.revealed) .country-shape,
+.eu-map.is-revealing .country:not(.revealed) .country-dot {
+  fill: var(--reveal-fill, var(--vote-absent));
+}
+.eu-map.is-revealing.result-adopted { --reveal-fill: var(--vote-for); }
+.eu-map.is-revealing.result-blocked,
+.eu-map.is-revealing.result-rejected { --reveal-fill: var(--vote-against); }
+.eu-map.is-revealing.result-recorded { --reveal-fill: var(--vote-absent); }
+
+.eu-map.is-revealing .shapes { animation: outcome-pulse 1.1s ease-in-out infinite; }
+@keyframes outcome-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .78; }
+}
+
+.country-shape, .country-dot { transition: fill .45s ease, opacity .25s ease; }
+
+/* Emphasis: hover links the map and the table, dimming isolates one group. */
+.country.is-hovered .country-shape { stroke: var(--ink); stroke-width: 1.6; }
+.country.is-dimmed { opacity: .22; }
+.country.is-dimmed.is-selected { opacity: 1; }
+
+tbody tr.is-hovered { background: var(--surface-sunken); }
+tbody tr.is-dimmed { opacity: .35; }
+
+.meter-fill { transition: width .9s cubic-bezier(.25, .8, .3, 1); }
+
+.replay {
+  font: inherit;
+  font-size: .76rem;
+  color: var(--ink-faint);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .12rem .6rem;
+  cursor: pointer;
+  float: right;
+  margin-left: .5rem;
+}
+.replay:hover { color: var(--ink); border-color: var(--line-strong); }
+
+/* ---------------------------------------------------------------- numbers */
+
+/* A vote count reads faster in the colour of the vote it counts. */
+.n-for { color: var(--vote-for); font-weight: 600; }
+.n-against { color: var(--vote-against); font-weight: 600; }
+.n-abstain { color: var(--vote-abstain); font-weight: 600; }
+.n-absent { color: var(--ink-faint); font-weight: 600; }
+.n-for, .n-against, .n-abstain, .n-absent { font-variant-numeric: tabular-nums; }
+
+.tally-for .tally-number { color: var(--vote-for); }
+.tally-against .tally-number { color: var(--vote-against); }
+.tally-abstain .tally-number { color: var(--vote-abstain); }
+.tally-absent .tally-number { color: var(--ink-faint); }
+
+.meter.met .meter-value strong { color: var(--vote-for); }
+.meter.unmet .meter-value strong { color: var(--vote-against); }
+.meter-value strong { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* The legend is a control, not a caption: each entry isolates its group. */
+.legend li button {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font: inherit;
+  font-size: .82rem;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 0;
+  padding: .1rem .2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.legend li button:hover { background: var(--surface-sunken); color: var(--ink); }
+.legend li button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.legend-hint { margin: .5rem 0 0; font-size: .74rem; color: var(--ink-faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  .eu-map.is-revealing .shapes { animation: none; }
+  .country-shape, .country-dot, .meter-fill { transition: none; }
+}
+
 /* ---------------------------------------------------------------- panel */
 
 .panel {

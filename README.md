@@ -29,6 +29,14 @@ The map holds the left of the screen while the reading column on the right carri
 feed, the decision and the country record. Clicking a country opens it; clicking the
 sea, pressing Escape, or the panel's own Close button shuts it again.
 
+Opening a decision plays it rather than printing it: the whole Union takes the colour
+of the outcome, holds for a beat, then each member state turns to its own vote in a
+sweep from west to east while the totals count up. There is a Replay control, and the
+whole sequence is skipped for readers who ask for reduced motion. Vote counts are
+written in the colour of the vote they count, everywhere they appear. Clicking a
+legend entry isolates that group on the map and in the table; pointing at a row lights
+up the country, and the other way round.
+
 Each decision is scored by its own rule, not a generic one: qualified-majority files
 get the 15-of-27 and 65%-of-population meters and a verdict on whether a blocking
 minority formed; unanimity files are measured against all 27, where an abstention does

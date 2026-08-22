@@ -5,7 +5,12 @@
 
   // layerChosen records whether the reader picked the layer or the page did:
   // an automatic default re-derives for each decision, a deliberate choice sticks.
-  const state = { decision: null, layer: 'vote', layerChosen: false, country: null, filter: 'all' };
+  const state = {
+    decision: null, layer: 'vote', layerChosen: false,
+    country: null, filter: 'all', isolate: null
+  };
+
+  const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache = {};
   let states = [];
   let statesByCode = {};
@@ -37,6 +42,49 @@
       hint: 'Shaded by the dominant framing of the coverage indexed so far. Pale countries have no coverage indexed yet.'
     }
   };
+
+  /* ------------------------------------------------------------ motion */
+
+  const animations = [];
+
+  function stopAnimations() {
+    while (animations.length) cancelAnimationFrame(animations.pop());
+  }
+
+  /* Counts a number up from zero. A vote total that lands rather than simply
+     appearing gives the reader a moment to register what it is. */
+  function countUp(element, value, duration) {
+    if (REDUCED.matches || !duration) {
+      element.textContent = value;
+      return;
+    }
+    const started = performance.now();
+    function frame(now) {
+      const t = Math.min(1, (now - started) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      element.textContent = Math.round(value * eased);
+      if (t < 1) animations.push(requestAnimationFrame(frame));
+    }
+    animations.push(requestAnimationFrame(frame));
+  }
+
+  function animateOutcome(delay) {
+    stopAnimations();
+    const numbers = dom.outcome.querySelectorAll('[data-count]');
+    const fills = dom.outcome.querySelectorAll('.meter-fill');
+
+    const run = function () {
+      Array.prototype.forEach.call(numbers, function (element) {
+        countUp(element, Number(element.getAttribute('data-count')), 900);
+      });
+      Array.prototype.forEach.call(fills, function (fill) {
+        fill.style.width = fill.getAttribute('data-width');
+      });
+    };
+
+    if (REDUCED.matches || !delay) run();
+    else window.setTimeout(run, delay);
+  }
 
   /* ------------------------------------------------------------ the feed */
 
@@ -140,10 +188,15 @@
     }
 
     renderLegend();
+    if (state.isolate) applyIsolation();
   }
 
-  function legendRow(className, label) {
-    return '<li><span class="swatch ' + className + '"></span>' + esc(label) + '</li>';
+  function legendRow(className, label, key) {
+    const swatch = '<span class="swatch ' + className + '"></span>';
+    if (!key) return '<li>' + swatch + esc(label) + '</li>';
+    const on = state.isolate === key;
+    return '<li><button type="button" data-isolate="' + esc(key) + '" aria-pressed="' +
+      (on ? 'true' : 'false') + '">' + swatch + esc(label) + '</button></li>';
   }
 
   function renderLegend() {
@@ -155,7 +208,9 @@
         ? [['vote-not-applicable', 'No vote taken']]
         : [['vote-for', 'In favour'], ['vote-against', 'Against'],
            ['vote-abstain', 'Abstained'], ['vote-absent', 'Did not vote']];
-      html = keys.map(function (pair) { return legendRow('layer-vote ' + pair[0], pair[1]); }).join('');
+      html = keys.map(function (pair) {
+        return legendRow('layer-vote ' + pair[0], pair[1], pair[0].replace('vote-', ''));
+      }).join('');
       if (decision.body === 'parliament') {
         html += '<li><span class="swatch layer-vote vote-for is-split"></span>Delegation split (under 15 points between the top two)</li>';
       }
@@ -174,30 +229,68 @@
         legendRow('layer-impact impact-gain-3', 'Gain over ' + fmt(step * 2) + ' ' + unit);
     } else {
       html = ['supportive', 'critical', 'mixed', 'neutral', 'none'].map(function (framing) {
-        return legendRow('layer-press press-' + framing, Panel.FRAMING_LABEL[framing]);
+        return legendRow('layer-press press-' + framing, Panel.FRAMING_LABEL[framing], framing);
       }).join('');
     }
 
-    dom.legend.innerHTML = '<h3>Legend</h3><ul>' + html + '</ul>';
+    const clickable = html.indexOf('data-isolate') !== -1;
+    dom.legend.innerHTML = '<h3>Legend</h3><ul>' + html + '</ul>' +
+      (clickable
+        ? '<p class="legend-hint">' + (state.isolate
+            ? 'Showing one group. Click it again to bring the rest back.'
+            : 'Click a group to isolate it on the map and in the table.') + '</p>'
+        : '');
+  }
+
+  /* Which countries belong to the isolated group, in the current layer. */
+  function isolateMatches(code) {
+    if (!state.isolate) return true;
+    if (state.layer === 'press') {
+      return Data.pressFraming(state.decision.countries[code]).framing === state.isolate;
+    }
+    return Data.countryPosition(state.decision, code).position === state.isolate;
+  }
+
+  function applyIsolation() {
+    if (map) map.setDimmed(state.isolate ? isolateMatches : null);
+    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
+      row.classList.toggle('is-dimmed',
+        Boolean(state.isolate) && !isolateMatches(row.getAttribute('data-code')));
+    });
+    renderLegend();
+  }
+
+  function setIsolate(key) {
+    state.isolate = state.isolate === key ? null : key;
+    applyIsolation();
+  }
+
+  function setHovered(code) {
+    if (map) map.setHovered(code);
+    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
+      row.classList.toggle('is-hovered', row.getAttribute('data-code') === code);
+    });
   }
 
   /* ---------------------------------------------------------------- outcome */
 
-  function meter(label, valueText, share, threshold, met) {
+  function meter(label, figure, rest, share, threshold, met) {
+    const width = Math.min(100, share * 100).toFixed(1) + '%';
     return '<div class="meter ' + (met ? 'met' : 'unmet') + '">' +
       '<p class="meter-label">' + esc(label) + '</p>' +
-      '<div class="meter-track" role="img" aria-label="' + esc(valueText) + '">' +
-        '<span class="meter-fill" style="width:' + Math.min(100, share * 100).toFixed(1) + '%"></span>' +
+      '<div class="meter-track" role="img" aria-label="' + esc(figure + ' ' + rest) + '">' +
+        '<span class="meter-fill" data-width="' + width + '" style="width:0"></span>' +
         '<span class="meter-threshold" style="left:' + (threshold * 100).toFixed(1) + '%"></span>' +
       '</div>' +
-      '<p class="meter-value">' + esc(valueText) + '</p>' +
+      '<p class="meter-value"><strong>' + esc(figure) + '</strong> ' + esc(rest) + '</p>' +
     '</div>';
   }
 
   function renderOutcome() {
     const decision = state.decision;
     const result = decision.outcome || {};
-    let html = '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
+    let html = '<button type="button" class="replay">Replay</button>' +
+      '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
       esc(result.headline || result.result || '') + '</p>';
 
     if (decision.body === 'council' && decision.voteRule === 'unanimity') {
@@ -207,7 +300,7 @@
       const against = qmv.groups.against;
       html += '<div class="meters">' +
         meter('Member states in favour',
-          qmv.statesFor + ' of 27 — all 27 needed',
+          qmv.statesFor + ' of 27', '— all 27 needed',
           qmv.statesShare, 1, qmv.statesFor === states.length) +
         '</div>' +
         '<p class="outcome-note">' +
@@ -221,10 +314,10 @@
       const qmv = Data.qualifiedMajority(decision, states);
       html += '<div class="meters">' +
         meter('Member states in favour',
-          qmv.statesFor + ' of 27 — 15 needed',
+          qmv.statesFor + ' of 27', '— 15 needed',
           qmv.statesShare, 15 / 27, qmv.statesFor >= 15) +
         meter('Population represented',
-          (qmv.populationShare * 100).toFixed(1) + '% — 65% needed',
+          (qmv.populationShare * 100).toFixed(1) + '%', '— 65% needed',
           qmv.populationShare, 0.65, qmv.populationShare >= 0.65) +
         '</div>' +
         '<p class="outcome-note">' +
@@ -241,13 +334,13 @@
         const cast = tally.for + tally.against + tally.abstain;
         html += '<div class="tally">' +
           ['for', 'against', 'abstain', 'absent'].map(function (key) {
-            return '<div class="tally-cell tally-' + key + '"><span class="tally-number">' +
-              tally[key] + '</span><span class="tally-label">' +
-              esc(Panel.VOTE_LABEL[key]) + '</span></div>';
+            return '<div class="tally-cell tally-' + key + '">' +
+              '<span class="tally-number" data-count="' + tally[key] + '">0</span>' +
+              '<span class="tally-label">' + esc(Panel.VOTE_LABEL[key]) + '</span></div>';
           }).join('') +
           '</div>' +
-          '<p class="outcome-note">' + cast + ' votes cast of 720 seats. ' +
-          'A simple majority of votes cast carries the file.</p>';
+          '<p class="outcome-note"><span class="n-for">' + cast + '</span> votes cast of 720 ' +
+          'seats. A simple majority of votes cast carries the file.</p>';
       }
     } else {
       const covered = Object.keys(decision.countries).filter(function (code) {
@@ -322,7 +415,9 @@
         '<td><span class="vote-pill vote-' + esc(row.positionKey) + '">' + esc(row.position) + '</span>' +
         (row.split ? ' <span class="split-flag">split</span>' : '') + '</td>' +
         '<td class="numeric" data-col="meps">' + (row.meps
-          ? row.meps.for + ' / ' + row.meps.against + ' / ' + row.meps.abstain
+          ? '<span class="n-for">' + row.meps.for + '</span> / ' +
+            '<span class="n-against">' + row.meps.against + '</span> / ' +
+            '<span class="n-abstain">' + row.meps.abstain + '</span>'
           : '—') + '</td>' +
         '<td class="numeric" data-col="impact"' + (row.impact === null ? ' hidden' : '') + '>' +
           esc(Data.formatImpact(row.impact, state.decision.impactUnit)) + '</td>' +
@@ -451,12 +546,27 @@
   async function loadDecision(id, code) {
     const entry = index.decisions.find(function (item) { return item.id === id; }) || index.decisions[0];
     if (!cache[entry.id]) cache[entry.id] = await Data.getJSON(entry.file);
+    const changed = !state.decision || state.decision.id !== entry.id;
     state.decision = cache[entry.id];
+    state.isolate = null;
     renderDecision();
     selectCountry(code || null, { scroll: false });
+    if (changed) playReveal();
+  }
+
+  /* The outcome first — the whole Union in the colour of the result — then
+     each member state turning to its own vote, west to east. */
+  function playReveal() {
+    if (!map || !state.decision) return;
+    const result = (state.decision.outcome && state.decision.outcome.result) || 'recorded';
+    const hold = REDUCED.matches ? 0 : 620;
+    map.play('result-' + result, { hold: hold, step: 46 });
+    animateOutcome(hold);
   }
 
   function setLayer(layer, chosen) {
+    // "Against" means nothing once the map is showing press framing.
+    if (layer !== state.layer) state.isolate = null;
     state.layer = layer;
     if (chosen) state.layerChosen = true;
     Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
@@ -503,7 +613,8 @@
 
       map = new EUMap(dom.map, geo, {
         onSelect: function (code) { selectCountry(code); },
-        onDeselect: function () { selectCountry(null); }
+        onDeselect: function () { selectCountry(null); },
+        onHover: function (code) { setHovered(code); }
       });
 
       const route = readHash();
@@ -537,6 +648,22 @@
         const button = event.target.closest('.link-button');
         if (!button) return;
         selectCountry(button.closest('tr').getAttribute('data-code'));
+      });
+
+      // Pointing at a row lights up the country, and the other way round.
+      dom['country-table'].addEventListener('mouseover', function (event) {
+        const row = event.target.closest('tr[data-code]');
+        setHovered(row ? row.getAttribute('data-code') : null);
+      });
+      dom['country-table'].addEventListener('mouseleave', function () { setHovered(null); });
+
+      dom.legend.addEventListener('click', function (event) {
+        const button = event.target.closest('[data-isolate]');
+        if (button) setIsolate(button.getAttribute('data-isolate'));
+      });
+
+      dom.outcome.addEventListener('click', function (event) {
+        if (event.target.closest('.replay')) playReveal();
       });
 
       Array.prototype.forEach.call(dom['country-table'].querySelectorAll('[data-sort]'), function (button) {
