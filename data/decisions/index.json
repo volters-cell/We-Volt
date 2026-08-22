@@ -1,9 +1,34 @@
 {
   "metadata": {
     "project": "EU Tracker",
+    "updated": "2026-08-22",
     "dataStatus": "All bundled decisions are illustrative samples. See docs/DATA-MODEL.md."
   },
   "decisions": [
+    {
+      "id": "ep-2026-media-freedom-implementation",
+      "title": "Media freedom and the safety of journalists",
+      "subtitle": "Implementation report on the European Media Freedom Act",
+      "date": "2026-07-09",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "result": "adopted",
+      "status": "sample",
+      "file": "data/decisions/ep-2026-media-freedom-implementation.json"
+    },
+    {
+      "id": "council-2026-asylum-reception-standards",
+      "title": "Common standards for asylum reception",
+      "subtitle": "Final adoption by qualified majority",
+      "date": "2026-06-18",
+      "body": "council",
+      "bodyLabel": "Council of the European Union",
+      "voteRuleLabel": "Qualified majority (55% of states, 65% of population)",
+      "result": "adopted",
+      "status": "sample",
+      "file": "data/decisions/council-2026-asylum-reception-standards.json"
+    },
     {
       "id": "council-2026-hgv-co2-standards",
       "title": "CO₂ standards for new heavy goods vehicles",
@@ -11,8 +36,34 @@
       "date": "2026-05-27",
       "body": "council",
       "bodyLabel": "Council of the European Union",
+      "voteRuleLabel": "Qualified majority (55% of states, 65% of population)",
+      "result": "adopted",
       "status": "sample",
       "file": "data/decisions/council-2026-hgv-co2-standards.json"
+    },
+    {
+      "id": "ep-2026-digital-identity-wallet",
+      "title": "European digital identity wallet",
+      "subtitle": "Amendments to the identity framework, second reading",
+      "date": "2026-05-14",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "result": "adopted",
+      "status": "sample",
+      "file": "data/decisions/ep-2026-digital-identity-wallet.json"
+    },
+    {
+      "id": "council-2026-energy-taxation-directive",
+      "title": "Energy taxation directive",
+      "subtitle": "Revision requiring unanimity — not adopted",
+      "date": "2026-04-22",
+      "body": "council",
+      "bodyLabel": "Council of the European Union",
+      "voteRuleLabel": "Unanimity — one member state can stop it",
+      "result": "blocked",
+      "status": "sample",
+      "file": "data/decisions/council-2026-energy-taxation-directive.json"
     },
     {
       "id": "ep-2026-nature-restoration-targets",
@@ -21,6 +72,8 @@
       "date": "2026-03-12",
       "body": "parliament",
       "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "result": "adopted",
       "status": "sample",
       "file": "data/decisions/ep-2026-nature-restoration-targets.json"
     },
@@ -31,6 +84,8 @@
       "date": "2026-01-20",
       "body": "commission",
       "bodyLabel": "European Commission",
+      "voteRuleLabel": "Commission implementing act — adopted without a member state vote",
+      "result": "adopted",
       "status": "sample",
       "file": "data/decisions/commission-2026-atlantic-fishing-opportunities.json"
     }

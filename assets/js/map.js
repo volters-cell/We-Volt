@@ -94,6 +94,13 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     svg.appendChild(shapeLayer);
     svg.appendChild(labelLayer);
 
+    // Clicking the sea closes the open country. A map you can only ever open
+    // and never close is a trap, and the way out has to be the obvious one.
+    svg.addEventListener('click', function (event) {
+      if (event.target.closest('.country')) return;
+      if (self.handlers.onDeselect) self.handlers.onDeselect();
+    });
+
     const tip = document.createElement('div');
     tip.className = 'map-tip';
     tip.hidden = true;
@@ -111,6 +118,11 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       this.select(shape.code);
+      return;
+    }
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      if (this.handlers.onDeselect) this.handlers.onDeselect();
       return;
     }
     const directions = {

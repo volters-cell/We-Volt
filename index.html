@@ -4,16 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EU Tracker</title>
-  <meta name="description" content="An interactive map of the European Union: for a single Council, Commission or Parliament decision, see how each member state voted, what it costs them, and how the national press framed it.">
+  <meta name="description" content="An interactive map of the European Union: for a single Council, Commission or Parliament decision, see how each member state voted, what it costs them, and how each national press framed it.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#country-panel">Skip to the country panel</a>
+  <a class="skip-link" href="#tracker">Skip to the decision list</a>
 
   <div id="sample-banner" class="banner" hidden>
-    <strong>Sample data.</strong>
-    <span id="sample-banner-text"></span>
+    <strong>Sample data</strong>
+    <span class="banner-note">these records show how the tracker is laid out; they are not an account of any real vote.</span>
     <a href="docs/DATA-MODEL.md">How real records are added</a>
   </div>
 
@@ -25,44 +28,23 @@
         <span class="brand-tagline">One decision, country by country</span>
       </span>
     </div>
-
-    <div class="decision-picker">
-      <label for="decision-select">Decision</label>
-      <select id="decision-select"></select>
-    </div>
+    <p class="header-meta">
+      <span id="header-count"></span>
+      <span id="header-updated"></span>
+    </p>
   </header>
 
   <main>
-    <section class="decision" aria-labelledby="decision-title">
-      <div class="decision-head">
-        <p class="decision-meta">
-          <span id="decision-body" class="chip"></span>
-          <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
-          <time id="decision-date"></time>
-        </p>
-        <h1 id="decision-title"></h1>
-        <p id="decision-subtitle" class="decision-subtitle"></p>
-        <p id="decision-summary" class="decision-summary"></p>
-        <details class="decision-detail">
-          <summary>What it means, and where this comes from</summary>
-          <ul id="decision-means"></ul>
-          <p class="rule"><strong>Voting rule:</strong> <span id="decision-rule"></span></p>
-          <ul id="decision-sources" class="sources"></ul>
-        </details>
-      </div>
-
-      <div id="outcome" class="outcome"></div>
-    </section>
-
+    <!-- Left: the map, which stays in view while the record is read. -->
     <section class="map-section" aria-labelledby="map-heading">
       <div class="layer-tabs" role="tablist" aria-label="What the map shows">
-        <button role="tab" id="tab-vote" aria-controls="map-heading" data-layer="vote" aria-selected="true">How they voted</button>
-        <button role="tab" id="tab-impact" aria-controls="map-heading" data-layer="impact" aria-selected="false">What it costs</button>
-        <button role="tab" id="tab-press" aria-controls="map-heading" data-layer="press" aria-selected="false">How the press framed it</button>
+        <button role="tab" id="tab-vote" aria-controls="map" data-layer="vote" aria-selected="true">How they voted</button>
+        <button role="tab" id="tab-impact" aria-controls="map" data-layer="impact" aria-selected="false">What it costs</button>
+        <button role="tab" id="tab-press" aria-controls="map" data-layer="press" aria-selected="false">Press framing</button>
       </div>
 
       <h2 id="map-heading" class="map-heading">How they voted</h2>
-      <p id="map-hint" class="map-hint">Click a member state to open its record. Use the arrow keys to move between countries.</p>
+      <p id="map-hint" class="map-hint">Click a member state to open its record. Click the sea to close it. Arrow keys move between countries.</p>
 
       <div class="map-wrap">
         <div id="map" class="map" aria-label="Map of the European Union"></div>
@@ -70,17 +52,53 @@
       </div>
     </section>
 
-    <section id="country-panel" class="panel" aria-live="polite" aria-labelledby="panel-title">
-      <div class="panel-empty" id="panel-empty">
-        <h2>Pick a country</h2>
-        <p>Every member state on the map holds the same three answers for this decision: how it voted, what the decision costs it, and how its own press told the story.</p>
-      </div>
-      <div class="panel-body" id="panel-body" hidden></div>
-    </section>
+    <!-- Right: what is being tracked, then the decision, then the country. -->
+    <div class="rail">
+      <section id="tracker" class="tracker" aria-labelledby="tracker-heading">
+        <div class="tracker-head">
+          <h2 id="tracker-heading">Recent decisions</h2>
+          <div class="tracker-filters" role="group" aria-label="Filter by institution">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="parliament" aria-pressed="false">Parliament</button>
+            <button type="button" data-filter="council" aria-pressed="false">Council</button>
+            <button type="button" data-filter="commission" aria-pressed="false">Commission</button>
+          </div>
+        </div>
+        <ul id="decision-list" class="decision-list"></ul>
+      </section>
+
+      <section class="decision" aria-labelledby="decision-title">
+        <p class="decision-meta">
+          <span id="decision-body" class="badge"></span>
+          <time id="decision-date"></time>
+          <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
+        </p>
+        <h1 id="decision-title"></h1>
+        <p id="decision-subtitle" class="decision-subtitle"></p>
+        <p id="decision-summary" class="decision-summary"></p>
+
+        <div id="outcome" class="outcome"></div>
+
+        <details class="decision-detail">
+          <summary>What it means, and where this comes from</summary>
+          <ul id="decision-means"></ul>
+          <p class="rule"><strong>Voting rule:</strong> <span id="decision-rule"></span></p>
+          <ul id="decision-sources" class="sources"></ul>
+        </details>
+      </section>
+
+      <section id="country-panel" class="panel" aria-live="polite" aria-labelledby="panel-title">
+        <div class="panel-empty" id="panel-empty">
+          <h2 id="panel-title">Pick a country</h2>
+          <p>Every member state holds the same three answers for this decision: how it voted, what the decision costs it, and how its own press told the story.</p>
+        </div>
+        <div class="panel-body" id="panel-body" hidden></div>
+      </section>
+    </div>
 
     <section class="table-section" aria-labelledby="table-heading">
       <h2 id="table-heading">All 27 member states</h2>
-      <p class="table-hint">Sortable. This is the same record as the map, for readers who want the numbers straight.</p>
+      <p class="table-hint">The same record as the map, for readers who want the numbers straight. Click a column to sort.</p>
       <div class="table-scroll">
         <table id="country-table">
           <thead>

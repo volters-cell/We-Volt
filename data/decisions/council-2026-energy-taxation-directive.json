@@ -1,0 +1,387 @@
+{
+  "id": "council-2026-energy-taxation-directive",
+  "status": "sample",
+  "dataNote": "Illustrative sample record. Positions, figures and press cards are placeholders that show how a real record is laid out — they are not a historical account of any actual vote. Replace with sourced data before publication (see docs/DATA-MODEL.md).",
+  "body": "council",
+  "bodyLabel": "Council of the European Union",
+  "title": "Energy taxation directive",
+  "subtitle": "Revision requiring unanimity — not adopted",
+  "date": "2026-04-22",
+  "voteRule": "unanimity",
+  "voteRuleLabel": "Unanimity — one member state can stop it",
+  "procedure": {
+    "reference": "2021/0213(CNS)",
+    "url": null
+  },
+  "summary": "The revision of minimum energy tax rates failed again. Twenty-three member states were in favour, two against and two abstained — and on a tax file, unanimity means the two against are enough. The minimum rates in force date from 2003.",
+  "whatItMeans": [
+    "Nothing changes: the 2003 minimum rates stay in force.",
+    "Tax files need every member state, so an abstention does not block but a single no does.",
+    "The debate now moves to whether energy taxation should leave unanimity behind."
+  ],
+  "outcome": {
+    "result": "blocked",
+    "headline": "Not adopted — two member states against, and unanimity is required."
+  },
+  "impactUnit": "EUR per person per year",
+  "impactLabel": "Estimated effect had it passed",
+  "sources": [
+    {
+      "label": "Council voting results",
+      "url": "https://www.consilium.europa.eu/en/documents-publications/public-register/voting-results/"
+    },
+    {
+      "label": "Procedure file (Legislative Observatory)",
+      "url": "https://oeil.secure.europarl.europa.eu/"
+    }
+  ],
+  "countries": {
+    "AT": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -11.8,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "BE": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -9.6,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "BG": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -8.7,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "CY": {
+      "position": "abstain",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -6.0,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "CZ": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -9.7,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "DE": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -6.4,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Business daily (sample)",
+          "framing": "critical",
+          "headline": "Unanimity strikes again",
+          "excerpt": "Industry groups renew the call to move energy taxation to majority voting.",
+          "language": "de",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "DK": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -22.5,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "EE": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -14.6,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "ES": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -6.0,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "National daily (sample)",
+          "framing": "critical",
+          "headline": "Reform stalls, minimum rates stay at 2003 levels",
+          "excerpt": "The rates have not been revised in over twenty years.",
+          "language": "es",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "FI": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -11.3,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "FR": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -6.8,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Evening daily (sample)",
+          "framing": "critical",
+          "headline": "Twenty-five governments, one veto",
+          "excerpt": "Paris says the file cannot wait another decade.",
+          "language": "fr",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "GR": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -21.0,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "HR": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -14.6,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "HU": {
+      "position": "against",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -18.6,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Government-aligned daily (sample)",
+          "framing": "supportive",
+          "headline": "Budapest blocks the fuel tax rewrite",
+          "excerpt": "The government presents the veto as protection of household energy prices.",
+          "language": "hu",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "IE": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -13.2,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "IT": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -12.7,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "LT": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -22.8,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "LU": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -19.1,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "LV": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -18.0,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "MT": {
+      "position": "against",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -6.5,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Daily (sample)",
+          "framing": "mixed",
+          "headline": "Valletta holds out over shipping and aviation fuel",
+          "excerpt": "An island state argues its connections are not a luxury.",
+          "language": "mt",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "NL": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -9.2,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Quality daily (sample)",
+          "framing": "critical",
+          "headline": "The veto that costs the climate file",
+          "excerpt": "The Hague wants the passerelle clause used.",
+          "language": "nl",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "PL": {
+      "position": "abstain",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -20.1,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "National daily (sample)",
+          "framing": "mixed",
+          "headline": "Warsaw abstains and asks for a longer transition",
+          "excerpt": "Coal regions want the phase-in extended.",
+          "language": "pl",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "PT": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -8.7,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "RO": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -20.5,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SE": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -11.9,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SI": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -20.7,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SK": {
+      "position": "for",
+      "representative": "Minister for Finance",
+      "impact": {
+        "value": -23.0,
+        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
+        "sample": true
+      },
+      "press": []
+    }
+  }
+}

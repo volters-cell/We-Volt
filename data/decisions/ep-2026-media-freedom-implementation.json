@@ -1,0 +1,1536 @@
+{
+  "id": "ep-2026-media-freedom-implementation",
+  "status": "sample",
+  "dataNote": "Illustrative sample record. Positions, figures and press cards are placeholders that show how a real record is laid out — they are not a historical account of any actual vote. Replace with sourced data before publication (see docs/DATA-MODEL.md).",
+  "body": "parliament",
+  "bodyLabel": "European Parliament",
+  "title": "Media freedom and the safety of journalists",
+  "subtitle": "Implementation report on the European Media Freedom Act",
+  "date": "2026-07-09",
+  "voteRule": "simple-majority",
+  "voteRuleLabel": "Majority of votes cast",
+  "procedure": {
+    "reference": "2026/2014(INI)",
+    "url": null
+  },
+  "summary": "Parliament adopted a non-binding report on how the Media Freedom Act is being applied, naming state advertising, ownership concentration and spyware against journalists as the three pressures that have not eased. It asks the Commission to open proceedings where member states fall short.",
+  "whatItMeans": [
+    "The report binds nobody, but it sets the terms of the next legislative fight.",
+    "It asks member states to bar the use of spyware against journalists outright.",
+    "It calls for public registers of media ownership in every member state."
+  ],
+  "outcome": {
+    "result": "adopted",
+    "headline": "Adopted — a large majority, and the widest split inside the EPP."
+  },
+  "impactUnit": "EUR per person per year",
+  "impactLabel": "Estimated administrative cost",
+  "sources": [
+    {
+      "label": "Roll-call results (European Parliament open data)",
+      "url": "https://data.europarl.europa.eu/"
+    },
+    {
+      "label": "Procedure file (Legislative Observatory)",
+      "url": "https://oeil.secure.europarl.europa.eu/"
+    }
+  ],
+  "countries": {
+    "AT": {
+      "mepGroups": [
+        {
+          "group": "PfE",
+          "seats": 6,
+          "for": 0,
+          "against": 5,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "EPP",
+          "seats": 5,
+          "for": 4,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 5,
+          "for": 5,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -0.8,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "BE": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 4,
+          "for": 3,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 4,
+          "for": 2,
+          "against": 1,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 4,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.9,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "BG": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 6,
+          "for": 4,
+          "against": 0,
+          "abstain": 1,
+          "absent": 1
+        },
+        {
+          "group": "S&D",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 3,
+          "for": 2,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 3,
+          "for": 0,
+          "against": 3,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ESN",
+          "seats": 2,
+          "for": 0,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.4,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "CY": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 2,
+          "for": 1,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 1,
+          "for": 0,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "NI",
+          "seats": 1,
+          "for": 0,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "CZ": {
+      "mepGroups": [
+        {
+          "group": "PfE",
+          "seats": 7,
+          "for": 1,
+          "against": 6,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 5,
+          "for": 4,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 3,
+          "for": 0,
+          "against": 1,
+          "abstain": 0,
+          "absent": 2
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.6,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "DE": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 31,
+          "for": 20,
+          "against": 5,
+          "abstain": 2,
+          "absent": 4
+        },
+        {
+          "group": "S&D",
+          "seats": 14,
+          "for": 12,
+          "against": 1,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "ESN",
+          "seats": 14,
+          "for": 0,
+          "against": 12,
+          "abstain": 0,
+          "absent": 2
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 13,
+          "for": 12,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "NI",
+          "seats": 10,
+          "for": 2,
+          "against": 5,
+          "abstain": 3,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 7,
+          "for": 6,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 7,
+          "for": 7,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.7,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Public broadcaster (sample)",
+          "framing": "neutral",
+          "headline": "Parliament adopts media freedom report",
+          "excerpt": "The resolution is not binding, but sets the terms of the next legislative fight.",
+          "language": "de",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "DK": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 1,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 1,
+          "for": 0,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "EE": {
+      "mepGroups": [
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 1,
+          "for": 0,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.6,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "ES": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 23,
+          "for": 14,
+          "against": 7,
+          "abstain": 2,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 20,
+          "for": 19,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "PfE",
+          "seats": 6,
+          "for": 2,
+          "against": 3,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 6,
+          "for": 5,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 3,
+          "for": 0,
+          "against": 2,
+          "abstain": 1,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.1,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "FI": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 5,
+          "for": 3,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 3,
+          "for": 2,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 1,
+          "for": 0,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.7,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "FR": {
+      "mepGroups": [
+        {
+          "group": "PfE",
+          "seats": 30,
+          "for": 2,
+          "against": 24,
+          "abstain": 1,
+          "absent": 3
+        },
+        {
+          "group": "S&D",
+          "seats": 13,
+          "for": 10,
+          "against": 1,
+          "abstain": 1,
+          "absent": 1
+        },
+        {
+          "group": "Renew",
+          "seats": 13,
+          "for": 13,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 9,
+          "for": 8,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 6,
+          "for": 5,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 6,
+          "for": 5,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 4,
+          "for": 1,
+          "against": 1,
+          "abstain": 1,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Evening daily (sample)",
+          "framing": "supportive",
+          "headline": "Source protection gets a firmer line",
+          "excerpt": "The text asks member states to bar spyware against journalists.",
+          "language": "fr",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "GR": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 7,
+          "for": 3,
+          "against": 1,
+          "abstain": 2,
+          "absent": 1
+        },
+        {
+          "group": "S&D",
+          "seats": 4,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "The Left",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 4,
+          "for": 2,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Daily (sample)",
+          "framing": "critical",
+          "headline": "Surveillance findings rejected by the government",
+          "excerpt": "Athens says the report repeats unproven allegations.",
+          "language": "el",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "HR": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 5,
+          "for": 2,
+          "against": 2,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "S&D",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 0,
+          "against": 1,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 1,
+          "for": 0,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -0.7,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "HU": {
+      "mepGroups": [
+        {
+          "group": "PfE",
+          "seats": 12,
+          "for": 2,
+          "against": 9,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 7,
+          "for": 5,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 1,
+          "for": 0,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.3,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Independent weekly (sample)",
+          "framing": "supportive",
+          "headline": "Parliament names the pressure on Hungarian newsrooms",
+          "excerpt": "The report singles out state advertising as a tool of control.",
+          "language": "hu",
+          "date": null,
+          "url": null,
+          "sample": true
+        },
+        {
+          "outlet": "Government-aligned daily (sample)",
+          "framing": "critical",
+          "headline": "Brussels lectures Hungary on press freedom again",
+          "excerpt": "The government calls the report an interference in domestic media policy.",
+          "language": "hu",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "IE": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 4,
+          "for": 2,
+          "against": 1,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 4,
+          "for": 4,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "IT": {
+      "mepGroups": [
+        {
+          "group": "ECR",
+          "seats": 24,
+          "for": 7,
+          "against": 12,
+          "abstain": 1,
+          "absent": 4
+        },
+        {
+          "group": "S&D",
+          "seats": 21,
+          "for": 19,
+          "against": 0,
+          "abstain": 1,
+          "absent": 1
+        },
+        {
+          "group": "EPP",
+          "seats": 12,
+          "for": 9,
+          "against": 2,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "PfE",
+          "seats": 9,
+          "for": 3,
+          "against": 4,
+          "abstain": 1,
+          "absent": 1
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 5,
+          "for": 5,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 5,
+          "for": 4,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.9,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "National daily (sample)",
+          "framing": "mixed",
+          "headline": "Ownership concentration flagged in Rome's direction",
+          "excerpt": "The report asks for transparency on who owns what.",
+          "language": "it",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "LT": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 4,
+          "for": 2,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.5,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "LU": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.2,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "LV": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 0,
+          "against": 1,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 1,
+          "for": 0,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.5,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "MT": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 3,
+          "for": 1,
+          "against": 0,
+          "abstain": 1,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -0.7,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Daily (sample)",
+          "framing": "supportive",
+          "headline": "Report cites the murder of a journalist as a turning point",
+          "excerpt": "The case is named as the reason the safeguards exist.",
+          "language": "mt",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "NL": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 8,
+          "for": 7,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "PfE",
+          "seats": 6,
+          "for": 1,
+          "against": 5,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 6,
+          "for": 2,
+          "against": 3,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 4,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "Renew",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 0,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -0.1,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "PL": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 22,
+          "for": 16,
+          "against": 2,
+          "abstain": 2,
+          "absent": 2
+        },
+        {
+          "group": "ECR",
+          "seats": 20,
+          "for": 4,
+          "against": 14,
+          "abstain": 2,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "ESN",
+          "seats": 3,
+          "for": 0,
+          "against": 3,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.1,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "National daily (sample)",
+          "framing": "supportive",
+          "headline": "A warning that outlasts any one government",
+          "excerpt": "Editors say the safeguards matter whoever is in office.",
+          "language": "pl",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    },
+    "PT": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 8,
+          "for": 7,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "EPP",
+          "seats": 6,
+          "for": 6,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 3,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 1
+        },
+        {
+          "group": "ECR",
+          "seats": 2,
+          "for": 1,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.2,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "RO": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 11,
+          "for": 11,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 9,
+          "for": 5,
+          "against": 1,
+          "abstain": 1,
+          "absent": 2
+        },
+        {
+          "group": "ECR",
+          "seats": 7,
+          "for": 3,
+          "against": 4,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 4,
+          "for": 3,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 2,
+          "for": 0,
+          "against": 1,
+          "abstain": 1,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.8,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SE": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 6,
+          "for": 4,
+          "against": 0,
+          "abstain": 1,
+          "absent": 1
+        },
+        {
+          "group": "EPP",
+          "seats": 5,
+          "for": 3,
+          "against": 1,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 3,
+          "for": 0,
+          "against": 2,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 3,
+          "for": 3,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "The Left",
+          "seats": 2,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 1
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SI": {
+      "mepGroups": [
+        {
+          "group": "EPP",
+          "seats": 4,
+          "for": 3,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "S&D",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Renew",
+          "seats": 2,
+          "for": 2,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "Greens/EFA",
+          "seats": 1,
+          "for": 1,
+          "against": 0,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -1.0,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": []
+    },
+    "SK": {
+      "mepGroups": [
+        {
+          "group": "S&D",
+          "seats": 5,
+          "for": 4,
+          "against": 1,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "EPP",
+          "seats": 4,
+          "for": 3,
+          "against": 0,
+          "abstain": 1,
+          "absent": 0
+        },
+        {
+          "group": "ECR",
+          "seats": 3,
+          "for": 1,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        },
+        {
+          "group": "NI",
+          "seats": 3,
+          "for": 1,
+          "against": 2,
+          "abstain": 0,
+          "absent": 0
+        }
+      ],
+      "impact": {
+        "value": -0.8,
+        "note": "Cost of the ownership register and reporting duties the report asks for.",
+        "sample": true
+      },
+      "press": [
+        {
+          "outlet": "Daily (sample)",
+          "framing": "mixed",
+          "headline": "Broadcaster reform lands in the report's findings",
+          "excerpt": "MEPs cite the public broadcaster overhaul; the government disputes the framing.",
+          "language": "sk",
+          "date": null,
+          "url": null,
+          "sample": true
+        }
+      ]
+    }
+  }
+}

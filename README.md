@@ -14,7 +14,10 @@ all — *what did everybody else's newspapers say about it?*
 
 ## What it does today
 
-Three layers over the same map, for whichever decision is selected:
+The page opens on the map with a feed of the most recent decisions beside it —
+Parliament roll-calls, Council votes and Commission acts in one list, filterable by
+institution, so both chambers can be tracked from the same screen. Pick one, and three
+layers redraw the map:
 
 | Layer | Answers |
 | --- | --- |
@@ -22,13 +25,21 @@ Three layers over the same map, for whichever decision is selected:
 | **What it costs** | The estimated effect on that member state, per person, with the source of the figure attached. |
 | **How the press framed it** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
 
-Around the map: the outcome in the institution's own arithmetic — for Council files,
-a live qualified-majority calculation showing whether a blocking minority formed and
-by how much it missed — a sortable table of all 27 member states, and a permalink for
-every country so a journalist can link straight to `#/<decision>/PL`.
+The map holds the left of the screen while the reading column on the right carries the
+feed, the decision and the country record. Clicking a country opens it; clicking the
+sea, pressing Escape, or the panel's own Close button shuts it again.
+
+Each decision is scored by its own rule, not a generic one: qualified-majority files
+get the 15-of-27 and 65%-of-population meters and a verdict on whether a blocking
+minority formed; unanimity files are measured against all 27, where an abstention does
+not block but a single vote against does; Commission acts have no country vote at all,
+which is exactly why their cost and press layers matter.
+
+Also: a sortable table of all 27 member states, and a permalink for every country so a
+journalist can link straight to `#/<decision>/PL`.
 
 It works with a keyboard: arrow keys walk between neighbouring countries, Enter opens
-one. Malta and Luxembourg have click targets as big as everyone else's.
+one, Escape closes. Malta and Luxembourg have click targets as big as everyone else's.
 
 ## Run it
 
@@ -45,8 +56,9 @@ It must be served over HTTP — the records are fetched as JSON, so a `file://` 
 will not work.
 
 ```bash
-npm test        # ingest logic + data validation
+npm test          # ingest logic + data validation
 npm run validate  # data validation on its own
+npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ```
 
 ## The data
@@ -62,8 +74,14 @@ data/
   eu-countries.geo.json          the 27 member states, simplified for display
   reference/member-states.json   seats, population, capitals, accession years
   decisions/
-    index.json                   the list the picker reads
+    index.json                   built from the folder — never edited by hand
     <decision-id>.json           one decision, one file
+```
+
+`index.json` is generated, so adding a decision is one file plus one command:
+
+```bash
+node scripts/build-index.mjs    # rebuilds the feed, newest first
 ```
 
 A real record is made by importing a published roll-call and then adding the

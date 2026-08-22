@@ -175,6 +175,8 @@
     const country = decision.countries[state.code] || {};
     node.innerHTML =
       '<header class="panel-head">' +
+        '<button type="button" class="panel-close" aria-label="Close ' +
+          escapeHTML(state.name) + '">Close</button>' +
         '<p class="panel-eyebrow">' + escapeHTML(decision.bodyLabel) + ' · ' +
           escapeHTML(Data.formatDate(decision.date)) + '</p>' +
         '<h2 id="panel-title">' + escapeHTML(state.name) + '</h2>' +

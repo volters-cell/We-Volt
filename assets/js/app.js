@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-  const state = { decision: null, layer: 'vote', country: null };
+  const state = { decision: null, layer: 'vote', country: null, filter: 'all' };
   const cache = {};
   let states = [];
   let statesByCode = {};
@@ -11,10 +11,10 @@
   let map = null;
 
   const dom = {};
-  ['sample-banner', 'sample-banner-text', 'decision-select', 'decision-body', 'decision-status',
+  ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-means',
    'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
-   'panel-empty', 'panel-body', 'country-table'].forEach(function (id) {
+   'panel-empty', 'panel-body', 'country-table', 'header-count', 'header-updated'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -34,6 +34,51 @@
       hint: 'Shaded by the dominant framing of the coverage indexed so far. Pale countries have no coverage indexed yet.'
     }
   };
+
+  /* ------------------------------------------------------------ the feed */
+
+  const RESULT_LABEL = {
+    adopted: 'Adopted',
+    rejected: 'Rejected',
+    blocked: 'Not adopted',
+    recorded: 'Recorded'
+  };
+
+  function renderFeed() {
+    const items = index.decisions.filter(function (item) {
+      return state.filter === 'all' || item.body === state.filter;
+    });
+
+    dom['decision-list'].innerHTML = items.length ? items.map(function (item) {
+      const current = state.decision && item.id === state.decision.id;
+      return '<li>' +
+        '<button type="button" class="decision-card' + (current ? ' is-current' : '') + '"' +
+        ' data-id="' + esc(item.id) + '"' + (current ? ' aria-current="true"' : '') + '>' +
+          '<span class="card-top">' +
+            '<span class="badge badge-' + esc(item.body) + '">' + esc(shortBody(item.body)) + '</span>' +
+            '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
+          '</span>' +
+          '<span class="card-title">' + esc(item.title) + '</span>' +
+          '<span class="card-foot">' +
+            '<span class="result result-' + esc(item.result) + '">' +
+              esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
+            (item.voteRuleLabel ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '') +
+          '</span>' +
+        '</button></li>';
+    }).join('') : '<li class="feed-empty">Nothing recorded from this institution yet.</li>';
+  }
+
+  function shortBody(body) {
+    return { parliament: 'Parliament', council: 'Council', commission: 'Commission' }[body] || body;
+  }
+
+  function setFilter(filter) {
+    state.filter = filter;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-filter') === filter));
+    });
+    renderFeed();
+  }
 
   /* ---------------------------------------------------------------- painting */
 
@@ -143,7 +188,24 @@
     let html = '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
       esc(result.headline || result.result || '') + '</p>';
 
-    if (decision.body === 'council') {
+    if (decision.body === 'council' && decision.voteRule === 'unanimity') {
+      // Unanimity is a different arithmetic: population does not enter it, the
+      // threshold is every member state, and an abstention is not a veto.
+      const qmv = Data.qualifiedMajority(decision, states);
+      const against = qmv.groups.against;
+      html += '<div class="meters">' +
+        meter('Member states in favour',
+          qmv.statesFor + ' of 27 — all 27 needed',
+          qmv.statesShare, 1, qmv.statesFor === states.length) +
+        '</div>' +
+        '<p class="outcome-note">' +
+        (against.length
+          ? 'Voting against: ' + against.map(function (code) {
+              return statesByCode[code] ? statesByCode[code].name : code;
+            }).join(', ') + '. On a file like this one, that is enough on its own. '
+          : 'No member state voted against. ') +
+        'Abstaining does not block a unanimous decision — only a vote against does.</p>';
+    } else if (decision.body === 'council') {
       const qmv = Data.qualifiedMajority(decision, states);
       html += '<div class="meters">' +
         meter('Member states in favour',
@@ -279,7 +341,10 @@
     } else {
       dom['panel-empty'].hidden = true;
       Panel.render(dom['panel-body'], state.decision, statesByCode[state.country], permalink(state.country));
-      if (!options || options.scroll !== false) {
+      // On a narrow screen the panel is far below the map, so bring it into
+      // view; on a wide one it is already beside the map and must not jump.
+      const narrow = window.matchMedia('(max-width: 62rem)').matches;
+      if (narrow && (!options || options.scroll !== false)) {
         dom['panel-body'].scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
@@ -295,6 +360,7 @@
     const decision = state.decision;
 
     dom['decision-body'].textContent = decision.bodyLabel;
+    dom['decision-body'].className = 'badge badge-' + decision.body;
     dom['decision-date'].textContent = Data.formatDate(decision.date);
     dom['decision-date'].setAttribute('datetime', decision.date);
     dom['decision-title'].textContent = decision.title;
@@ -312,23 +378,24 @@
         : esc(source.label)) + '</li>';
     }).join('') + (decision.procedure && decision.procedure.reference
       ? '<li>Procedure reference: <code>' + esc(decision.procedure.reference) + '</code></li>'
+      : '') + (decision.dataNote
+      ? '<li class="data-note">' + esc(decision.dataNote) + '</li>'
       : '');
 
     const isSample = decision.status === 'sample';
     dom['decision-status'].hidden = !isSample;
     dom['sample-banner'].hidden = !isSample;
-    dom['sample-banner-text'].textContent = isSample ? decision.dataNote : '';
 
     renderOutcome();
     paint();
     renderTable();
+    renderFeed();
   }
 
   async function loadDecision(id, code) {
     const entry = index.decisions.find(function (item) { return item.id === id; }) || index.decisions[0];
     if (!cache[entry.id]) cache[entry.id] = await Data.getJSON(entry.file);
     state.decision = cache[entry.id];
-    dom['decision-select'].value = entry.id;
     renderDecision();
     selectCountry(code || null, { scroll: false });
   }
@@ -359,20 +426,50 @@
       Panel.setStates(states);
       index = decisionIndex;
 
-      dom['decision-select'].innerHTML = index.decisions.map(function (item) {
-        return '<option value="' + esc(item.id) + '">' +
-          esc(item.bodyLabel + ' · ' + item.title) + '</option>';
-      }).join('');
+      const counts = index.decisions.reduce(function (totals, item) {
+        totals[item.body] = (totals[item.body] || 0) + 1;
+        return totals;
+      }, {});
+      dom['header-count'].textContent = index.decisions.length + ' decisions tracked · ' +
+        (counts.parliament || 0) + ' Parliament · ' + (counts.council || 0) + ' Council · ' +
+        (counts.commission || 0) + ' Commission';
+      dom['header-updated'].textContent = index.metadata && index.metadata.updated
+        ? 'Updated ' + Data.formatDate(index.metadata.updated) : '';
+
+      renderFeed();
+
+      dom['decision-list'].addEventListener('scroll', function () {
+        const list = dom['decision-list'];
+        const atEnd = list.scrollTop + list.clientHeight >= list.scrollHeight - 4;
+        list.classList.toggle('at-end', atEnd);
+      });
 
       map = new EUMap(dom.map, geo, {
-        onSelect: function (code) { selectCountry(code); }
+        onSelect: function (code) { selectCountry(code); },
+        onDeselect: function () { selectCountry(null); }
       });
 
       const route = readHash();
       await loadDecision(route.decisionId, route.code);
 
-      dom['decision-select'].addEventListener('change', function (event) {
-        loadDecision(event.target.value, state.country);
+      dom['decision-list'].addEventListener('click', function (event) {
+        const card = event.target.closest('.decision-card');
+        if (card) loadDecision(card.getAttribute('data-id'), state.country);
+      });
+
+      Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
+        button.addEventListener('click', function () {
+          setFilter(button.getAttribute('data-filter'));
+        });
+      });
+
+      // Escape closes the open country from anywhere on the page.
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && state.country) selectCountry(null);
+      });
+
+      dom['panel-body'].addEventListener('click', function (event) {
+        if (event.target.closest('.panel-close')) selectCountry(null);
       });
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
