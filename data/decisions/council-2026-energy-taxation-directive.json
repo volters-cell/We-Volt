@@ -39,61 +39,31 @@
     "AT": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -11.8,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "BE": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -9.6,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "BG": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -8.7,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "CY": {
       "position": "abstain",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -6.0,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "CZ": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -9.7,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "DE": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -6.4,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Business daily (sample)",
@@ -110,31 +80,16 @@
     "DK": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -22.5,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "EE": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -14.6,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "ES": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -6.0,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -151,21 +106,11 @@
     "FI": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -11.3,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "FR": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -6.8,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Evening daily (sample)",
@@ -182,31 +127,16 @@
     "GR": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -21.0,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "HR": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -14.6,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "HU": {
       "position": "against",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -18.6,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Government-aligned daily (sample)",
@@ -223,61 +153,31 @@
     "IE": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -13.2,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "IT": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -12.7,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "LT": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -22.8,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "LU": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -19.1,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "LV": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -18.0,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "MT": {
       "position": "against",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -6.5,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -294,11 +194,6 @@
     "NL": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -9.2,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Quality daily (sample)",
@@ -315,11 +210,6 @@
     "PL": {
       "position": "abstain",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -20.1,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -336,51 +226,26 @@
     "PT": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -8.7,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "RO": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -20.5,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "SE": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -11.9,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "SI": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -20.7,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     },
     "SK": {
       "position": "for",
       "representative": "Minister for Finance",
-      "impact": {
-        "value": -23.0,
-        "note": "Estimated household and industry cost of the revised minimum rates, had they been adopted.",
-        "sample": true
-      },
       "press": []
     }
   }

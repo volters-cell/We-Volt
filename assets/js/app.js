@@ -3,7 +3,9 @@
 (function () {
   'use strict';
 
-  const state = { decision: null, layer: 'vote', country: null, filter: 'all' };
+  // layerChosen records whether the reader picked the layer or the page did:
+  // an automatic default re-derives for each decision, a deliberate choice sticks.
+  const state = { decision: null, layer: 'vote', layerChosen: false, country: null, filter: 'all' };
   const cache = {};
   let states = [];
   let statesByCode = {};
@@ -66,6 +68,15 @@
           '</span>' +
         '</button></li>';
     }).join('') : '<li class="feed-empty">Nothing recorded from this institution yet.</li>';
+  }
+
+  /* The cost layer is data-driven: it appears when a decision carries sourced
+     figures and stays out of the way when it does not. */
+  function hasImpact(decision) {
+    return Object.keys(decision.countries).some(function (code) {
+      const impact = decision.countries[code].impact;
+      return impact && typeof impact.value === 'number';
+    });
   }
 
   function shortBody(body) {
@@ -238,13 +249,13 @@
           'A simple majority of votes cast carries the file.</p>';
       }
     } else {
-      const affected = Object.keys(decision.countries).filter(function (code) {
-        const impact = decision.countries[code].impact;
-        return impact && impact.value;
+      const covered = Object.keys(decision.countries).filter(function (code) {
+        return (decision.countries[code].press || []).length;
       }).length;
-      html += '<p class="outcome-note">No country-by-country vote exists for this act. ' +
-        affected + ' member states carry a measurable effect — which is the only ' +
-        'national record there is, and the reason this layer exists.</p>';
+      html += '<p class="outcome-note">No country-by-country vote exists for this act: ' +
+        'the Commission used powers the member states had already delegated to it. ' +
+        'What each country got instead is the effect and the coverage — ' + covered +
+        ' of 27 have press indexed so far.</p>';
     }
 
     dom.outcome.innerHTML = html;
@@ -300,7 +311,8 @@
         '<td class="numeric">' + (row.meps
           ? row.meps.for + ' / ' + row.meps.against + ' / ' + row.meps.abstain
           : '—') + '</td>' +
-        '<td class="numeric">' + esc(Data.formatImpact(row.impact, state.decision.impactUnit)) + '</td>' +
+        '<td class="numeric" data-col="impact"' + (row.impact === null ? ' hidden' : '') + '>' +
+          esc(Data.formatImpact(row.impact, state.decision.impactUnit)) + '</td>' +
         '<td>' + (row.press ? row.press + ' · ' + esc(Panel.FRAMING_LABEL[row.framing]) : '—') + '</td>' +
         '</tr>';
     }).join('');
@@ -386,6 +398,19 @@
     dom['decision-status'].hidden = !isSample;
     dom['sample-banner'].hidden = !isSample;
 
+    const costs = hasImpact(decision);
+    document.getElementById('tab-impact').hidden = !costs;
+    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('[data-col="impact"]'), function (cell) {
+      cell.hidden = !costs;
+    });
+    if (!state.layerChosen) {
+      // "How they voted" is an empty question for an act nobody voted on, so a
+      // Commission file opens on the coverage instead.
+      setLayer(decision.body === 'commission' ? 'press' : 'vote');
+    } else if (!costs && state.layer === 'impact') {
+      setLayer('vote');
+    }
+
     renderOutcome();
     paint();
     renderTable();
@@ -400,8 +425,9 @@
     selectCountry(code || null, { scroll: false });
   }
 
-  function setLayer(layer) {
+  function setLayer(layer, chosen) {
     state.layer = layer;
+    if (chosen) state.layerChosen = true;
     Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
       tab.setAttribute('aria-selected', String(tab.getAttribute('data-layer') === layer));
     });
@@ -473,7 +499,7 @@
       });
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
-        tab.addEventListener('click', function () { setLayer(tab.getAttribute('data-layer')); });
+        tab.addEventListener('click', function () { setLayer(tab.getAttribute('data-layer'), true); });
       });
 
       dom['country-table'].addEventListener('click', function (event) {

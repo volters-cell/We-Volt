@@ -39,61 +39,31 @@
     "AT": {
       "position": "against",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -11.1,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "BE": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -7.5,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "BG": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -9.6,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "CY": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -6.8,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "CZ": {
       "position": "against",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -6.5,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "DE": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -13.2,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Public broadcaster (sample)",
@@ -110,31 +80,16 @@
     "DK": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -13.8,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "EE": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -4.0,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "ES": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -10.9,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -151,31 +106,16 @@
     "FI": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -11.2,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "FR": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -2.1,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "GR": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -8.4,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -192,21 +132,11 @@
     "HR": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -4.0,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "HU": {
       "position": "against",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -8.3,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Government-aligned daily (sample)",
@@ -223,21 +153,11 @@
     "IE": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -6.3,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "IT": {
       "position": "abstain",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -12.2,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -254,51 +174,26 @@
     "LT": {
       "position": "abstain",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -6.4,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "LU": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -3.6,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "LV": {
       "position": "abstain",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -7.7,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "MT": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -5.1,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "NL": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -5.9,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Quality daily (sample)",
@@ -315,11 +210,6 @@
     "PL": {
       "position": "against",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -13.2,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -336,31 +226,16 @@
     "PT": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -4.9,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "RO": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -6.9,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "SE": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -10.4,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Morning paper (sample)",
@@ -377,21 +252,11 @@
     "SI": {
       "position": "for",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -13.6,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     },
     "SK": {
       "position": "against",
       "representative": "Minister for the Interior",
-      "impact": {
-        "value": -3.6,
-        "note": "Estimated cost of meeting the reception standard, net of EU asylum-fund support.",
-        "sample": true
-      },
       "press": []
     }
   }

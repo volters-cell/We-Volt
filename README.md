@@ -22,8 +22,8 @@ layers redraw the map:
 | Layer | Answers |
 | --- | --- |
 | **How they voted** | The member state's position. In Parliament files: the delegation's majority, its split, the breakdown by political group, and — where a real roll-call has been imported — every MEP by name. |
-| **What it costs** | The estimated effect on that member state, per person, with the source of the figure attached. |
-| **How the press framed it** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
+| **Press framing** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
+| **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
 The map holds the left of the screen while the reading column on the right carries the
 feed, the decision and the country record. Clicking a country opens it; clicking the
@@ -64,8 +64,9 @@ npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ## The data
 
 **Everything bundled in this repository right now is an illustrative sample.** The
-three decisions are placeholders that show how a record is laid out; the map, the
-seat counts and the population figures are real. Every sample is flagged as one, in
+seven decisions are placeholders that show how a record is laid out; the map, the
+seat counts and the population figures are real, and no cost estimates are shipped
+because none could be sourced. Every sample is flagged as one, in
 the file (`"status": "sample"`), on the page (a banner and a chip), and in the
 validator, which refuses to let a sample lose its label.
 
@@ -104,7 +105,9 @@ country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DAT
 - **Static files.** The whole site is JSON and JavaScript on a CDN. A newsroom can
   fork it, a grant can end, and the thing still runs.
 - **Every figure carries its source.** A cost estimate without a citation is an
-  opinion; the validator treats it as an error.
+  opinion; the validator treats it as an error. The bundled records carry no cost
+  figures at all, because none of them could be sourced — so that layer does not
+  appear. It returns automatically for any decision that has real ones.
 - **The gaps are visible.** A country with no coverage indexed is pale on the map and
   says so in the panel. The absence is part of the story.
 - **Sample data can never masquerade as a record.** That rule is enforced in code.

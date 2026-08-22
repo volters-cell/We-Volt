@@ -79,11 +79,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -0.8,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "BE": {
@@ -137,11 +132,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.9,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "BG": {
@@ -187,11 +177,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.4,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "CY": {
@@ -229,11 +214,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "CZ": {
@@ -287,11 +267,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.6,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "DE": {
@@ -353,11 +328,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.7,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Public broadcaster (sample)",
@@ -422,11 +392,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "EE": {
@@ -464,11 +429,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.6,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "ES": {
@@ -522,11 +482,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.1,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "FI": {
@@ -580,11 +535,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.7,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "FR": {
@@ -646,11 +596,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Evening daily (sample)",
@@ -707,11 +652,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -760,11 +700,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -0.7,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "HU": {
@@ -802,11 +737,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.3,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Independent weekly (sample)",
@@ -873,11 +803,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "IT": {
@@ -931,11 +856,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.9,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -992,11 +912,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.5,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "LU": {
@@ -1042,11 +957,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.2,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "LV": {
@@ -1100,11 +1010,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.5,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "MT": {
@@ -1126,11 +1031,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -0.7,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -1203,11 +1103,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -0.1,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "PL": {
@@ -1261,11 +1156,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.1,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -1322,11 +1212,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.2,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "RO": {
@@ -1372,11 +1257,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.8,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "SE": {
@@ -1430,11 +1310,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "SI": {
@@ -1472,11 +1347,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.0,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": []
     },
     "SK": {
@@ -1514,11 +1384,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.8,
-        "note": "Cost of the ownership register and reporting duties the report asks for.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",

@@ -87,10 +87,13 @@ or it is labelled.
   Abstentions count against, because in the Council they do. A blocking minority needs
   at least four member states holding more than 35% of the population; the outcome box
   says whether one formed and by how much it missed.
-- **Impact.** Values are bucketed into three steps either side of zero, scaled to the
-  decision's own range, so a file measured in cents per head reads as clearly as one
-  in tens of euros. `not-applicable` and missing values are drawn as *no measurable
-  effect*, never as zero cost.
+- **Impact.** The whole cost layer is optional and data-driven: if no country in a
+  decision carries an `impact.value`, the map tab, the panel card and the table column
+  are all absent, and they reappear as soon as one does. Values are bucketed into three
+  steps either side of zero, scaled to the decision's own range, so a file measured in
+  cents per head reads as clearly as one in tens of euros. Missing values are drawn as
+  *no measurable effect*, never as zero cost. None of the bundled sample records carry
+  cost figures — an unsourced number is worse than a blank.
 - **Press.** The dominant framing colours the country. A tie between two framings is
   drawn as *mixed*. No coverage means a pale country and, in the panel, an invitation
   to file the first entry — the gap is part of what the map is showing.

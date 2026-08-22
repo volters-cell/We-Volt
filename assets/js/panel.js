@@ -122,10 +122,9 @@
 
   function impactSection(decision, country) {
     const impact = country.impact;
-    if (!impact || typeof impact.value !== 'number') {
-      return '<section class="card"><h3>What it costs</h3>' +
-        '<p class="empty">No estimate recorded yet for this member state.</p></section>';
-    }
+    // No figure, no card. An empty box promising a number is worse than the
+    // honest absence of one.
+    if (!impact || typeof impact.value !== 'number') return '';
     const direction = impact.value < 0 ? 'cost' : (impact.value > 0 ? 'gain' : 'neutral');
     return '<section class="card"><h3>' + escapeHTML(decision.impactLabel || 'What it costs') + '</h3>' +
       '<p class="impact-value impact-' + direction + '">' +

@@ -13,11 +13,11 @@
     "reference": "C(2026) 0142",
     "url": null
   },
-  "summary": "The Commission set the 2026 catch limits for Atlantic stocks under the delegated powers in the Common Fisheries Policy. There is no country-by-country vote on an act like this — which is exactly why the national impact and the national press reaction are the only country-level record there is.",
+  "summary": "The Commission set the 2026 catch limits for Atlantic stocks under the delegated powers in the Common Fisheries Policy. There is no country-by-country vote on an act like this — which is exactly why what each national press made of it is the only country-level record there is.",
   "whatItMeans": [
     "Catch limits apply from 1 February 2026 across Atlantic and North Sea stocks.",
     "No member state cast a vote: the act rests on powers already delegated to the Commission.",
-    "National fleets feel the effect unevenly — the map shows where."
+    "National fleets are hit unevenly, and the coverage shows where it was felt: eight member states have press indexed so far."
   ],
   "outcome": {
     "result": "adopted",
@@ -38,56 +38,26 @@
   "countries": {
     "AT": {
       "position": "not-applicable",
-      "impact": {
-        "value": 0.0,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "BE": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.4,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "BG": {
       "position": "not-applicable",
-      "impact": {
-        "value": -0.8,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "CY": {
       "position": "not-applicable",
-      "impact": {
-        "value": -1.1,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "CZ": {
       "position": "not-applicable",
-      "impact": {
-        "value": 0.0,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "DE": {
       "position": "not-applicable",
-      "impact": {
-        "value": -1.6,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Public broadcaster (sample)",
@@ -103,11 +73,6 @@
     },
     "DK": {
       "position": "not-applicable",
-      "impact": {
-        "value": -6.8,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Business paper (sample)",
@@ -123,20 +88,10 @@
     },
     "EE": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.9,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "ES": {
       "position": "not-applicable",
-      "impact": {
-        "value": -7.4,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Regional daily (sample)",
@@ -152,20 +107,10 @@
     },
     "FI": {
       "position": "not-applicable",
-      "impact": {
-        "value": -1.9,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "FR": {
       "position": "not-applicable",
-      "impact": {
-        "value": -4.1,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Regional daily (sample)",
@@ -181,38 +126,18 @@
     },
     "GR": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.2,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "HR": {
       "position": "not-applicable",
-      "impact": {
-        "value": -3.1,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "HU": {
       "position": "not-applicable",
-      "impact": {
-        "value": 0.0,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "IE": {
       "position": "not-applicable",
-      "impact": {
-        "value": -9.2,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Regional daily (sample)",
@@ -228,47 +153,22 @@
     },
     "IT": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.7,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "LT": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.4,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "LU": {
       "position": "not-applicable",
-      "impact": {
-        "value": 0.0,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "LV": {
       "position": "not-applicable",
-      "impact": {
-        "value": -3.3,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "MT": {
       "position": "not-applicable",
-      "impact": {
-        "value": -4.6,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -284,11 +184,6 @@
     },
     "NL": {
       "position": "not-applicable",
-      "impact": {
-        "value": -5.2,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Quality daily (sample)",
@@ -304,20 +199,10 @@
     },
     "PL": {
       "position": "not-applicable",
-      "impact": {
-        "value": -1.4,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "PT": {
       "position": "not-applicable",
-      "impact": {
-        "value": -5.9,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -333,38 +218,18 @@
     },
     "RO": {
       "position": "not-applicable",
-      "impact": {
-        "value": -0.6,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "SE": {
       "position": "not-applicable",
-      "impact": {
-        "value": -2.1,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "SI": {
       "position": "not-applicable",
-      "impact": {
-        "value": -0.7,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     },
     "SK": {
       "position": "not-applicable",
-      "impact": {
-        "value": 0.0,
-        "note": "Estimated change in landed value against the previous year's quota, per head of population. Landlocked member states show zero.",
-        "sample": true
-      },
       "press": []
     }
   }

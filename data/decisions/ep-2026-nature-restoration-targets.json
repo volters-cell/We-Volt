@@ -79,11 +79,6 @@
           "absent": 2
         }
       ],
-      "impact": {
-        "value": -6.4,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "BE": {
@@ -137,11 +132,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -5.1,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "BG": {
@@ -187,11 +177,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 3.2,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "CY": {
@@ -229,11 +214,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 1.1,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "CZ": {
@@ -287,11 +267,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -2.8,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "DE": {
@@ -353,11 +328,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -7.9,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National broadsheet (sample)",
@@ -432,11 +402,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -4.4,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "EE": {
@@ -474,11 +439,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 2.6,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "ES": {
@@ -532,11 +492,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 4.8,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -601,11 +556,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -3.1,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "FR": {
@@ -667,11 +617,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -2.2,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Evening daily (sample)",
@@ -728,11 +673,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 2.9,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Daily (sample)",
@@ -781,11 +721,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 3.6,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "HU": {
@@ -823,11 +758,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.4,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Government-aligned daily (sample)",
@@ -884,11 +814,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 5.2,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Public broadcaster (sample)",
@@ -953,11 +878,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -1.9,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "National daily (sample)",
@@ -1014,11 +934,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 1.8,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "LU": {
@@ -1064,11 +979,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": -8.2,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "LV": {
@@ -1122,11 +1032,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 2.2,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "MT": {
@@ -1148,11 +1053,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 0.6,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "NL": {
@@ -1214,11 +1114,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -9.6,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Quality daily (sample)",
@@ -1283,11 +1178,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -4.7,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Business paper (sample)",
@@ -1344,11 +1234,6 @@
           "absent": 1
         }
       ],
-      "impact": {
-        "value": 3.4,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "RO": {
@@ -1394,11 +1279,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 2.1,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "SE": {
@@ -1452,11 +1332,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -3.8,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": [
         {
           "outlet": "Morning paper (sample)",
@@ -1505,11 +1380,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": 1.6,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     },
     "SK": {
@@ -1547,11 +1417,6 @@
           "absent": 0
         }
       ],
-      "impact": {
-        "value": -0.9,
-        "note": "Net of restoration co-financing from the EU budget. Negative = net cost to the member state, positive = net transfer in.",
-        "sample": true
-      },
       "press": []
     }
   }
