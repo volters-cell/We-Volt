@@ -16,7 +16,8 @@
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-means',
    'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
-   'panel-empty', 'panel-body', 'country-table', 'header-count', 'header-updated'].forEach(function (id) {
+   'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
+   'header-updated'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -289,8 +290,19 @@
     });
   }
 
+  function showColumn(name, visible) {
+    Array.prototype.forEach.call(
+      dom['country-table'].querySelectorAll('[data-col="' + name + '"]'),
+      function (cell) { cell.hidden = !visible; }
+    );
+  }
+
   function renderTable() {
     const rows = tableRows();
+    // A sort held over from a decision that had a column this one lacks would
+    // sort by nothing at all.
+    if (sortKey === 'impact' && !hasImpact(state.decision)) sortKey = 'name';
+    if (sortKey === 'meps' && !rows.some(function (row) { return row.meps; })) sortKey = 'name';
     const direction = sortAsc ? 1 : -1;
     rows.sort(function (a, b) {
       let left = a[sortKey], right = b[sortKey];
@@ -302,20 +314,25 @@
       return (left - right) * direction;
     });
 
+    const decision = state.decision;
     const body = dom['country-table'].querySelector('tbody');
     body.innerHTML = rows.map(function (row) {
       return '<tr data-code="' + row.code + '">' +
         '<th scope="row"><button type="button" class="link-button">' + esc(row.name) + '</button></th>' +
         '<td><span class="vote-pill vote-' + esc(row.positionKey) + '">' + esc(row.position) + '</span>' +
         (row.split ? ' <span class="split-flag">split</span>' : '') + '</td>' +
-        '<td class="numeric">' + (row.meps
+        '<td class="numeric" data-col="meps">' + (row.meps
           ? row.meps.for + ' / ' + row.meps.against + ' / ' + row.meps.abstain
           : '—') + '</td>' +
         '<td class="numeric" data-col="impact"' + (row.impact === null ? ' hidden' : '') + '>' +
           esc(Data.formatImpact(row.impact, state.decision.impactUnit)) + '</td>' +
-        '<td>' + (row.press ? row.press + ' · ' + esc(Panel.FRAMING_LABEL[row.framing]) : '—') + '</td>' +
         '</tr>';
     }).join('');
+
+    showColumn('impact', hasImpact(decision));
+    showColumn('meps', Object.keys(decision.countries).some(function (code) {
+      return Data.mepTotals(decision.countries[code]);
+    }));
   }
 
   /* ---------------------------------------------------------------- routing */
@@ -399,10 +416,24 @@
     dom['sample-banner'].hidden = !isSample;
 
     const costs = hasImpact(decision);
-    document.getElementById('tab-impact').hidden = !costs;
-    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('[data-col="impact"]'), function (cell) {
-      cell.hidden = !costs;
+    const roll = Object.keys(decision.countries).some(function (code) {
+      return Data.mepTotals(decision.countries[code]);
     });
+    showColumn('impact', costs);
+    showColumn('meps', roll);
+    document.getElementById('tab-impact').hidden = !costs;
+
+    // Twenty-seven rows all reading "No vote taken" is a table that answers
+    // nothing. Say it once instead.
+    const tabulable = roll || Object.keys(decision.countries).some(function (code) {
+      const position = decision.countries[code].position;
+      return position && position !== 'not-applicable';
+    });
+    dom['country-table'].parentNode.hidden = !tabulable;
+    dom['table-empty'].hidden = tabulable;
+    dom['table-empty'].textContent = tabulable ? '' :
+      'No member state cast a vote on this act, so there is nothing to tabulate. ' +
+      'What each country got out of it is in the map and the country panels.';
     if (!state.layerChosen) {
       // "How they voted" is an empty question for an act nobody voted on, so a
       // Commission file opens on the coverage instead.
