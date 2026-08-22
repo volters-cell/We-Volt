@@ -6,6 +6,11 @@
   const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
 
   async function getJSON(path) {
+    // The single-file build (scripts/build-single-file.mjs) embeds every record
+    // in the page, so the same code runs from a server or from one HTML file.
+    const bundled = global.__EU_TRACKER_DATA__;
+    if (bundled && bundled[path]) return bundled[path];
+
     const response = await fetch(path, { cache: 'no-cache' });
     if (!response.ok) {
       throw new Error('Could not load ' + path + ' (' + response.status + ')');

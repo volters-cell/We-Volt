@@ -257,7 +257,14 @@
 
   function writeHash() {
     const target = permalink(state.country);
-    if (location.hash !== target) history.replaceState(null, '', target);
+    if (location.hash === target) return;
+    try {
+      history.replaceState(null, '', target);
+    } catch (error) {
+      // Some embedded contexts refuse history writes. The permalink in the
+      // panel still carries the address; only the location bar goes stale.
+      location.hash = target;
+    }
   }
 
   /* ---------------------------------------------------------------- render */

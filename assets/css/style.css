@@ -43,8 +43,11 @@
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
 }
 
+/* Three theme states, not two. A viewer on "system" gets no attribute at all,
+   so prefers-color-scheme has to carry it; an explicit choice stamps
+   data-theme on the root and must win over the operating system either way. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #10141b;
     --surface: #171d26;
     --surface-sunken: #1e2530;
@@ -54,13 +57,11 @@
     --line: #2b3441;
     --line-strong: #3d4757;
     --focus: #7aa7ff;
-
     --vote-for: #2f9c7d;
     --vote-against: #d75b4c;
     --vote-abstain: #d8a53a;
     --vote-absent: #6b7385;
     --vote-na: #3a4351;
-
     --cost-1: #5c4331;
     --cost-2: #96602f;
     --cost-3: #d1793a;
@@ -68,13 +69,41 @@
     --gain-2: #3f8a7c;
     --gain-3: #5fc0aa;
     --zero: #262d38;
-
     --press-supportive: #6d95e8;
     --press-critical: #e2934a;
     --press-mixed: #a37fe0;
     --press-neutral: #7b8496;
     --press-none: #232b36;
   }
+}
+
+:root[data-theme="dark"] {
+    --bg: #10141b;
+    --surface: #171d26;
+    --surface-sunken: #1e2530;
+    --ink: #e8ecf3;
+    --ink-soft: #b0b9c8;
+    --ink-faint: #8c95a5;
+    --line: #2b3441;
+    --line-strong: #3d4757;
+    --focus: #7aa7ff;
+    --vote-for: #2f9c7d;
+    --vote-against: #d75b4c;
+    --vote-abstain: #d8a53a;
+    --vote-absent: #6b7385;
+    --vote-na: #3a4351;
+    --cost-1: #5c4331;
+    --cost-2: #96602f;
+    --cost-3: #d1793a;
+    --gain-1: #2c4a47;
+    --gain-2: #3f8a7c;
+    --gain-3: #5fc0aa;
+    --zero: #262d38;
+    --press-supportive: #6d95e8;
+    --press-critical: #e2934a;
+    --press-mixed: #a37fe0;
+    --press-neutral: #7b8496;
+    --press-none: #232b36;
 }
 
 * { box-sizing: border-box; }
