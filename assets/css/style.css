@@ -129,6 +129,11 @@
 
 * { box-sizing: border-box; }
 
+/* Any element that sets its own display — grid, flex — silently outranks the
+   browser's rule for [hidden], and then hiding it from JavaScript does nothing.
+   This has caught three components already, so: one rule, everywhere. */
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -318,7 +323,6 @@ main {
    legend and all — fits on a laptop screen without scrolling past it. */
 
 .layer-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
-.layer-tabs[hidden] { display: none; }
 .layer-tabs button {
   font: inherit;
   font-size: .88rem;

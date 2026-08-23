@@ -25,8 +25,8 @@
 
   const dom = {};
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
-   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-means',
-   'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
+   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary',
+   'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
    'mep-results', 'decision-section', 'back-to-votes', 'session-list', 'roll-call',
@@ -98,12 +98,17 @@
 
   /* ------------------------------------------------------------ search */
 
+  /* Every word has to match, and a word matches where a word starts: "ukrain"
+     finds Ukraine, but "euro" does not match every record through the middle of
+     some unrelated word. */
+  function wordTest(word) {
+    return new RegExp('\\b' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  }
+
   function matches(item) {
     if (!state.query) return true;
-    // Every word has to appear somewhere: "media hungary" finds the media
-    // freedom vote, not everything about either.
     return state.query.split(/\s+/).every(function (word) {
-      return item.keywords.indexOf(word) !== -1;
+      return wordTest(word).test(item.keywords);
     });
   }
 
@@ -111,9 +116,9 @@
      happens to be open: following one MEP is the point of the site. */
   function mepMatches() {
     if (!state.query || !memberIndex) return [];
-    const words = state.query.split(/\s+/);
+    const tests = state.query.split(/\s+/).map(wordTest);
     return memberIndex.filter(function (member) {
-      return words.every(function (word) { return member.keywords.indexOf(word) !== -1; });
+      return tests.every(function (test) { return test.test(member.keywords); });
     }).slice(0, 25);
   }
 
@@ -173,6 +178,7 @@
     }).join('');
 
     renderMemberVotes();
+    renderFeed();
 
     // Put their country on the map, so the person has a place.
     if (map) {
@@ -307,6 +313,17 @@
   }
 
   function renderFeed() {
+    // Reading one vote should not mean scrolling past every other one. The list
+    // steps aside while a vote or a member is open, and comes back the moment
+    // you search or ask for all votes again.
+    const browsing = Boolean(state.query) || !(state.decision || state.member);
+    dom['session-list'].hidden = !browsing;
+    document.querySelector('.tracker-filters').hidden = !browsing;
+    if (!browsing) {
+      dom['search-status'].hidden = true;
+      return;
+    }
+
     const items = index.decisions.filter(function (item) {
       return (state.filter === 'all' || item.body === state.filter) && matches(item);
     });
@@ -318,6 +335,23 @@
         : 'No vote matches “' + state.query + '”';
     } else {
       dom['search-status'].hidden = true;
+    }
+
+    // A search is a search, not a tour of the calendar: results come back as a
+    // flat list, newest first, rather than unfolding every session they touch.
+    if (state.query) {
+      const shown = items.slice(0, 50);
+      dom['session-list'].innerHTML = shown.length
+        ? '<ul class="decision-list">' + shown.map(function (item) {
+            return decisionCard(item, true);
+          }).join('') + '</ul>' +
+          (items.length > shown.length
+            ? '<p class="feed-empty">Showing the first ' + shown.length + ' of ' +
+              items.length + '. Add a word to narrow it down.</p>'
+            : '')
+        : '<p class="feed-empty">Nothing here matches that. Try a procedure reference, ' +
+          'or a word from the title.</p>';
+      return;
     }
 
     const groups = [];
@@ -370,7 +404,7 @@
     });
   }
 
-  function decisionCard(item) {
+  function decisionCard(item, withDate) {
     const current = state.decision && item.id === state.decision.id;
     return '<li>' +
       '<button type="button" class="decision-card' + (current ? ' is-current' : '') + '"' +
@@ -383,7 +417,10 @@
         '<span class="card-foot">' +
           '<span class="result result-' + esc(item.result) + '">' +
             esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
-          (item.voteRuleLabel ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '') +
+          (withDate
+            ? '<span class="card-rule">' + esc(Data.formatDate(item.date)) + '</span>'
+            : (item.voteRuleLabel
+                ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '')) +
         '</span>' +
       '</button></li>';
   }
@@ -902,21 +939,8 @@
     dom['decision-title'].textContent = decision.title;
     dom['decision-subtitle'].textContent = decision.subtitle || '';
     dom['decision-summary'].textContent = decision.summary || '';
-    dom['decision-rule'].textContent = decision.voteRuleLabel || decision.voteRule || '';
 
-    dom['decision-means'].innerHTML = (decision.whatItMeans || []).map(function (line) {
-      return '<li>' + esc(line) + '</li>';
-    }).join('');
 
-    dom['decision-sources'].innerHTML = (decision.sources || []).map(function (source) {
-      return '<li>' + (source.url
-        ? '<a href="' + esc(source.url) + '">' + esc(source.label) + '</a>'
-        : esc(source.label)) + '</li>';
-    }).join('') + (decision.procedure && decision.procedure.reference
-      ? '<li>Procedure reference: <code>' + esc(decision.procedure.reference) + '</code></li>'
-      : '') + (decision.dataNote
-      ? '<li class="data-note">' + esc(decision.dataNote) + '</li>'
-      : '');
 
     const isSample = decision.status === 'sample';
     dom['decision-status'].hidden = !isSample;

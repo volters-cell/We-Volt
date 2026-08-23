@@ -21,11 +21,13 @@ for (const name of files) {
   const decision = JSON.parse(await readFile(path.join(ROOT, DIR, name), 'utf8'));
   // Everything search should match on, flattened once here so the page does
   // not have to load every record to find one.
+  // The institution is deliberately not in here: it is identical on every
+  // record of a body, so including it made "euro" match all 614 votes through
+  // "European Parliament". The filters cover institution already.
   const keywords = [
     decision.title,
     decision.subtitle,
     decision.summary,
-    decision.bodyLabel,
     (decision.procedure && decision.procedure.reference) || '',
     ...(decision.whatItMeans || [])
   ].join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
