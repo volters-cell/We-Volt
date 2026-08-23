@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Trimmed stand-in for the Open Data Portal's meeting record. -->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:eli-dl="http://data.europa.eu/eli/eli-draft-legislation-ontology#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+  <eli-dl:Activity rdf:about="http://data.europarl.europa.eu/eli/dl/event/MTG-PL-2026-07-06">
+    <vcard:hasLocality rdf:resource="http://publications.europa.eu/resource/authority/place/FRA_SXB"/>
+  </eli-dl:Activity>
+</rdf:RDF>

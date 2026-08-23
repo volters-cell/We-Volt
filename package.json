@@ -11,7 +11,8 @@
     "bundle": "node scripts/build-single-file.mjs",
     "test": "node tests/import.test.mjs && node scripts/validate-data.mjs",
     "map": "python3 scripts/build_map_data.py $npm_config_src data/eu-countries.geo.json",
-    "plenary": "node scripts/fetch-plenary.mjs"
+    "plenary": "node scripts/fetch-plenary.mjs",
+    "sessions": "node scripts/fetch-sessions.mjs"
   },
   "license": "MIT"
 }

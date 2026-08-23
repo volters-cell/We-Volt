@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "term": 10,
+    "fetched": null,
+    "source": "https://www.europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId=10",
+    "locationSource": "https://data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}",
+    "note": "Empty until scripts/fetch-sessions.mjs has been run against the live Parliament endpoints. Until then the site falls back to the latest sitting date among the records it holds."
+  },
+  "sessions": []
+}

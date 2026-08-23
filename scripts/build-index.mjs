@@ -19,6 +19,17 @@ const files = (await readdir(path.join(ROOT, DIR)))
 const decisions = [];
 for (const name of files) {
   const decision = JSON.parse(await readFile(path.join(ROOT, DIR, name), 'utf8'));
+  // Everything search should match on, flattened once here so the page does
+  // not have to load every record to find one.
+  const keywords = [
+    decision.title,
+    decision.subtitle,
+    decision.summary,
+    decision.bodyLabel,
+    (decision.procedure && decision.procedure.reference) || '',
+    ...(decision.whatItMeans || [])
+  ].join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
+
   decisions.push({
     id: decision.id,
     title: decision.title,
@@ -29,6 +40,9 @@ for (const name of files) {
     voteRuleLabel: decision.voteRuleLabel || '',
     result: (decision.outcome && decision.outcome.result) || 'recorded',
     status: decision.status,
+    mepCount: Object.values(decision.countries || {})
+      .reduce((sum, country) => sum + ((country.meps || []).length), 0),
+    keywords: keywords,
     file: `${DIR}/${name}`
   });
 }

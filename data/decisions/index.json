@@ -1,7 +1,7 @@
 {
   "metadata": {
     "project": "EU Tracker",
-    "updated": "2026-08-22",
+    "updated": "2026-08-23",
     "dataStatus": "All bundled decisions are illustrative samples. See docs/DATA-MODEL.md."
   },
   "decisions": [
@@ -15,6 +15,8 @@
       "voteRuleLabel": "Majority of votes cast",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "media freedom and the safety of journalists implementation report on the european media freedom act parliament adopted a non-binding report on how the media freedom act is being applied, naming state advertising, ownership concentration and spyware against journalists as the three pressures that have not eased. it asks the commission to open proceedings where member states fall short. european parliament 2026/2014(ini) the report binds nobody, but it sets the terms of the next legislative fight. it asks member states to bar the use of spyware against journalists outright. it calls for public registers of media ownership in every member state.",
       "file": "data/decisions/ep-2026-media-freedom-implementation.json"
     },
     {
@@ -27,6 +29,8 @@
       "voteRuleLabel": "Qualified majority (55% of states, 65% of population)",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "common standards for asylum reception final adoption by qualified majority ministers adopted binding minimum standards for asylum reception — housing, healthcare and access to work after six months — over the objections of five member states. italy, latvia and lithuania abstained, leaving the opposition short of a blocking minority. council of the european union 2025/0233(cod) reception standards apply from the day of arrival, not from registration. access to the labour market opens after six months instead of nine. compliance is monitored by the asylum agency, with reporting from 2028.",
       "file": "data/decisions/council-2026-asylum-reception-standards.json"
     },
     {
@@ -39,6 +43,8 @@
       "voteRuleLabel": "Qualified majority (55% of states, 65% of population)",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "co₂ standards for new heavy goods vehicles final adoption by qualified majority ministers adopted the regulation requiring a 90% cut in average emissions from new heavy goods vehicles by 2035, against 2019 levels. six member states voted against and austria abstained: enough countries to block it, but between them only 30.5% of the population, and a blocking minority needs more than 35%. council of the european union 2025/0211(cod) new trucks sold from 2035 must average 90% lower emissions than the 2019 fleet. a review clause in 2030 can revisit the trajectory but not the end date. charging and hydrogen corridor obligations move to a separate infrastructure file, which is where the opposing states say the real cost sits.",
       "file": "data/decisions/council-2026-hgv-co2-standards.json"
     },
     {
@@ -51,6 +57,8 @@
       "voteRuleLabel": "Majority of votes cast",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "european digital identity wallet amendments to the identity framework, second reading parliament backed the amended framework for a union-wide digital identity wallet, adding an explicit ban on tracking users across the services they sign into. the privacy safeguards split the greens and the left from the centre. european parliament 2025/0177(cod) member states must offer a wallet within 24 months; using one stays voluntary for citizens. providers may not log which services a person signs into. large platforms must accept the wallet where they already require identity verification.",
       "file": "data/decisions/ep-2026-digital-identity-wallet.json"
     },
     {
@@ -63,6 +71,8 @@
       "voteRuleLabel": "Unanimity — one member state can stop it",
       "result": "blocked",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "energy taxation directive revision requiring unanimity — not adopted the revision of minimum energy tax rates failed again. twenty-three member states were in favour, two against and two abstained — and on a tax file, unanimity means the two against are enough. the minimum rates in force date from 2003. council of the european union 2021/0213(cns) nothing changes: the 2003 minimum rates stay in force. tax files need every member state, so an abstention does not block but a single no does. the debate now moves to whether energy taxation should leave unanimity behind.",
       "file": "data/decisions/council-2026-energy-taxation-directive.json"
     },
     {
@@ -75,6 +85,8 @@
       "voteRuleLabel": "Majority of votes cast",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "nature restoration targets for 2040 final plenary vote on the revised regulation parliament adopted binding restoration targets covering farmland, forest, wetland and marine habitats, with member states required to submit national restoration plans within two years. agriculture obligations were pushed back to 2032 in the final compromise. european parliament 2025/0104(cod) each member state must file a national restoration plan and report progress every three years. farmland obligations start in 2032; wetland and marine obligations start in 2028. co-financing comes from the existing cap envelope, not from new money.",
       "file": "data/decisions/ep-2026-nature-restoration-targets.json"
     },
     {
@@ -87,6 +99,8 @@
       "voteRuleLabel": "Commission implementing act — adopted without a member state vote",
       "result": "adopted",
       "status": "sample",
+      "mepCount": 0,
+      "keywords": "2026 fishing opportunities in atlantic waters implementing decision — no member state vote the commission set the 2026 catch limits for atlantic stocks under the delegated powers in the common fisheries policy. there is no country-by-country vote on an act like this — which is exactly why what each national press made of it is the only country-level record there is. european commission c(2026) 0142 catch limits apply from 1 february 2026 across atlantic and north sea stocks. no member state cast a vote: the act rests on powers already delegated to the commission. national fleets are hit unevenly, and the coverage shows where it was felt: eight member states have press indexed so far.",
       "file": "data/decisions/commission-2026-atlantic-fishing-opportunities.json"
     }
   ]

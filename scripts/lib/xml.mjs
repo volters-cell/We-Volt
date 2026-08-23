@@ -97,16 +97,19 @@ export function parseXML(source) {
   return root;
 }
 
-/* Depth-first search by tag name. The Parliament's tag names are long and
-   dotted (RollCallVote.Result.For), so a suffix match is accepted:
-   findAll(doc, 'Result.For') finds them. */
+/* Depth-first search by tag name. The Parliament writes tag names two ways —
+   dotted (RollCallVote.Result.For) in the annexes, namespace-prefixed
+   (vcard:hasLocality) in the RDF — so both separators are accepted as a
+   prefix: findAll(doc, 'hasLocality') finds vcard:hasLocality. */
 export function findAll(node, name) {
   const wanted = name.toLowerCase();
   const found = [];
   (function walk(current) {
     current.children.forEach(function (child) {
       const label = child.name.toLowerCase();
-      if (label === wanted || label.endsWith('.' + wanted)) found.push(child);
+      if (label === wanted || label.endsWith('.' + wanted) || label.endsWith(':' + wanted)) {
+        found.push(child);
+      }
       walk(child);
     });
   })(node);

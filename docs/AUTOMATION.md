@@ -11,19 +11,39 @@ terms.
 
 | Document | What it gives | Address |
 | --- | --- | --- |
-| **Roll-call annex** | Every roll-call vote of one sitting, and for each one the name and political group of every member who voted for, against or abstained | `https://www.europarl.europa.eu/doceo/document/PV-{term}-{YYYY-MM-DD}-RCV_FR.xml` |
-| **MEP directory** | Every sitting member with their id, country and national party — this is what turns names into countries | `https://www.europarl.europa.eu/meps/en/directory/xml/?leg={term}` |
-| **Open data portal** | The same material as JSON-LD, plus procedure files and documents, if you prefer an API to a document | `https://data.europarl.europa.eu/` |
+| **Roll-call annex** | Every roll-call vote of one sitting, and for each one the name and political group of every member who voted for, against or abstained | `doceo/document/PV-{term}-{date}-RCV_EN.xml`, then `…-RCV_FR.xml`, then `RegData/seance_pleniere/proces_verbal/{year}/{month}-{day}/liste_presence/P{term}_PV({year}){month}-{day}(RCV)_XC.xml` |
+| **Votes list** | What the Parliament says happened: adopted, rejected, lapsed, withdrawn — joined to the annex by the roll-call id | `doceo/document/PV-{term}-{date}-VOT_EN.xml` |
+| **MEP directory** | Every sitting member with their id, country and national party — this is what turns names into countries | `europarl.europa.eu/meps/en/directory/xml/?leg={term}` |
+| **Session calendar** | When each plenary session runs | `europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId={term}` |
+| **Meeting record** | Whether a session sits in Strasbourg or Brussels (`vcard:hasLocality` ending `FRA_SXB` or `BEL_BRU`) | `data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}` |
+
+Three of these were worked out by reading
+[HowTheyVote.eu's scrapers](https://github.com/HowTheyVote/howtheyvote), which are open
+source and have been following these documents for years: the English annex and the
+document-register fallback, the votes list as the authority on results, and the session
+calendar with its separate location lookup. No code was taken — theirs is AGPL and this
+is MIT — but the map of which document holds what is theirs, and it saved a lot of
+guessing.
 
 The annex is the primary source because it is the Parliament's own formal record of a
 roll call, published with the minutes of the sitting, and it carries every member's
-individual vote. The directory is fetched separately and cached in
-`data/reference/meps.json`, because the annex identifies members by id and group but
-not by country.
+individual vote. Three things follow from how these documents are published:
+
+- **Three addresses, one annex.** English first, because its descriptions become the
+  record's titles; French next; then the document register, which sometimes has the
+  file before the document server does. The first that answers wins.
+- **The result arrives later than the votes.** The annex counts votes but does not say
+  what carried. The votes list does, and appears a day or more after the sitting. A
+  same-day import derives the result from the totals and says so in its `dataNote`; a
+  later run replaces it with the Parliament's own and drops the caveat. This is why the
+  schedule re-imports the past week every night.
+- **Names are not countries.** The annex identifies members by id and group. The
+  directory, cached in `data/reference/meps.json`, turns those into countries.
 
 ## Running it by hand
 
 ```bash
+node scripts/fetch-sessions.mjs                         # the plenary calendar, first
 node scripts/fetch-plenary.mjs --date 2026-09-15        # one sitting
 node scripts/fetch-plenary.mjs --since 2026-09-01       # every sitting since
 node scripts/fetch-plenary.mjs --date 2026-09-15 --all  # amendments as well
@@ -31,8 +51,12 @@ node scripts/fetch-plenary.mjs --date 2026-09-15 --dry-run
 node scripts/build-index.mjs && node scripts/validate-data.mjs
 ```
 
-With no arguments it asks for the last seven weekdays, which covers a plenary that has
-just finished. Days with no sitting return 404 and are skipped silently.
+Run the calendar fetch first: with it, the importer only looks at days the Parliament
+actually sat, and the site can say when the last session was and where. Without it the
+importer falls back to trying weekdays, which costs a 404 each and nothing else.
+
+With no arguments the importer asks for the last seven weekdays, which covers a plenary
+that has just finished.
 
 **Only final votes are imported by default.** A plenary produces hundreds of roll
 calls, and the overwhelming majority are amendments — importing them all would bury
@@ -43,8 +67,17 @@ wrong for your purposes, it is two regular expressions at the top of the script.
 
 ## Running it on a schedule
 
-`.github/workflows/plenary-sync.yml` runs every weekday at 19:00 UTC, after voting
-time. It refreshes the member directory, imports whatever is new, rebuilds the index,
+`.github/workflows/plenary-sync.yml` follows the publishing rhythm rather than a
+generic nightly job:
+
+| When | Why |
+| --- | --- |
+| Mon–Thu 12:40 UTC | After the midday votes, while the sitting is running |
+| Mon–Thu 18:40 UTC | After the evening votes |
+| Every night 21:30 UTC | Picks up the votes lists for the past week, replacing derived results with stated ones, and any annex published late |
+| Mondays 04:00 UTC | Refreshes the plenary calendar and the member directory |
+
+Each run refreshes the member directory, imports whatever is new, rebuilds the index,
 runs the tests and the validator, and commits only if something changed. The Pages
 workflow then publishes.
 

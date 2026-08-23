@@ -7,8 +7,10 @@
   // an automatic default re-derives for each decision, a deliberate choice sticks.
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
-    country: null, filter: 'all', isolate: null
+    country: null, filter: 'all', isolate: null, query: ''
   };
+
+  let calendar = { sessions: [] };
 
   const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache = {};
@@ -22,7 +24,8 @@
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-means',
    'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
-   'header-updated'].forEach(function (id) {
+   'header-plenary', 'search-input', 'search-clear', 'search-status',
+   'mep-results'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -86,6 +89,105 @@
     else window.setTimeout(run, delay);
   }
 
+  /* ------------------------------------------------------------ search */
+
+  function matches(item) {
+    if (!state.query) return true;
+    // Every word has to appear somewhere: "media hungary" finds the media
+    // freedom vote, not everything about either.
+    return state.query.split(/\s+/).every(function (word) {
+      return item.keywords.indexOf(word) !== -1;
+    });
+  }
+
+  /* MEP search works on the decision that is open, because that is the record
+     the page is holding. A name search across the whole term needs an index
+     that only exists once real roll-calls have been imported. */
+  function mepMatches() {
+    if (!state.query || !state.decision) return [];
+    const words = state.query.split(/\s+/);
+    const found = [];
+
+    Object.keys(state.decision.countries).forEach(function (code) {
+      (state.decision.countries[code].meps || []).forEach(function (mep) {
+        const haystack = [mep.name, mep.group, mep.party, (statesByCode[code] || {}).name]
+          .join(' ').toLowerCase();
+        if (words.every(function (word) { return haystack.indexOf(word) !== -1; })) {
+          found.push({ mep: mep, code: code });
+        }
+      });
+    });
+
+    return found.slice(0, 40);
+  }
+
+  function renderMepResults() {
+    const found = mepMatches();
+    if (!found.length) {
+      dom['mep-results'].hidden = true;
+      dom['mep-results'].innerHTML = '';
+      return;
+    }
+    dom['mep-results'].hidden = false;
+    dom['mep-results'].innerHTML = '<h3>Members in this vote</h3><ul>' +
+      found.map(function (entry) {
+        const country = statesByCode[entry.code] || { name: entry.code };
+        return '<li><button type="button" class="mep-hit" data-code="' + esc(entry.code) + '">' +
+          '<span class="mep-name">' + esc(entry.mep.name) + '</span>' +
+          '<span class="mep-meta">' + esc(country.name) +
+          (entry.mep.group ? ' · ' + esc(entry.mep.group) : '') + '</span>' +
+          '<span class="vote-pill vote-' + esc(entry.mep.vote) + '">' +
+          esc(Panel.VOTE_LABEL[entry.mep.vote] || entry.mep.vote) + '</span></button></li>';
+      }).join('') + '</ul>';
+  }
+
+  function setQuery(value) {
+    state.query = String(value || '').trim().toLowerCase();
+    dom['search-clear'].hidden = !state.query;
+    renderFeed();
+    renderMepResults();
+  }
+
+  /* ------------------------------------------------------- plenary sessions */
+
+  function renderPlenary() {
+    const today = new Date().toISOString().slice(0, 10);
+    const sessions = calendar.sessions || [];
+    const past = sessions.filter(function (session) { return session.end < today; });
+    const next = sessions.filter(function (session) { return session.end >= today; })[0];
+
+    if (past.length) {
+      const last = past[past.length - 1];
+      dom['header-plenary'].textContent = 'Last plenary ' + sessionLabel(last) +
+        (next ? ' · next ' + sessionLabel(next) : '');
+      return;
+    }
+
+    // No calendar imported yet: say what the records themselves show.
+    const latest = index.decisions
+      .filter(function (item) { return item.body === 'parliament'; })
+      .map(function (item) { return item.date; })
+      .sort()
+      .pop();
+    dom['header-plenary'].textContent = latest
+      ? 'Latest sitting on record ' + Data.formatDate(latest)
+      : '';
+    dom['header-plenary'].title = 'Plenary calendar not imported yet — run npm run sessions.';
+  }
+
+  function sessionLabel(session) {
+    const start = new Date(session.start + 'T00:00:00Z');
+    const end = new Date(session.end + 'T00:00:00Z');
+    const sameMonth = session.start.slice(0, 7) === session.end.slice(0, 7);
+    const startText = start.toLocaleDateString('en-GB', {
+      day: 'numeric', month: sameMonth ? undefined : 'short', timeZone: 'UTC'
+    });
+    const endText = end.toLocaleDateString('en-GB', {
+      day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
+    });
+    return startText + '–' + endText + (session.location ? ', ' + session.location : '');
+  }
+
   /* ------------------------------------------------------------ the feed */
 
   const RESULT_LABEL = {
@@ -97,8 +199,17 @@
 
   function renderFeed() {
     const items = index.decisions.filter(function (item) {
-      return state.filter === 'all' || item.body === state.filter;
+      return (state.filter === 'all' || item.body === state.filter) && matches(item);
     });
+
+    if (state.query) {
+      dom['search-status'].hidden = false;
+      dom['search-status'].textContent = items.length
+        ? items.length + ' vote' + (items.length === 1 ? ' matches' : 's match') + ' “' + state.query + '”'
+        : 'No vote matches “' + state.query + '”';
+    } else {
+      dom['search-status'].hidden = true;
+    }
 
     dom['decision-list'].innerHTML = items.length ? items.map(function (item) {
       const current = state.decision && item.id === state.decision.id;
@@ -116,7 +227,9 @@
             (item.voteRuleLabel ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '') +
           '</span>' +
         '</button></li>';
-    }).join('') : '<li class="feed-empty">Nothing recorded from this institution yet.</li>';
+    }).join('') : '<li class="feed-empty">' + (state.query
+      ? 'Nothing here matches that. Try a procedure reference, or a word from the title.'
+      : 'Nothing recorded from this institution yet.') + '</li>';
   }
 
   /* The cost layer is data-driven: it appears when a decision carries sourced
@@ -572,6 +685,7 @@
     paint();
     renderTable();
     renderFeed();
+    renderMepResults();
   }
 
   async function loadDecision(id, code) {
@@ -615,11 +729,15 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex] = await Promise.all([
+      const [reference, geo, decisionIndex, plenary] = await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
-        Data.getJSON('data/decisions/index.json')
+        Data.getJSON('data/decisions/index.json'),
+        Data.getJSON('data/reference/plenary-calendar.json').catch(function () {
+          return { sessions: [] };
+        })
       ]);
+      calendar = plenary || { sessions: [] };
 
       states = reference.states;
       statesByCode = {};
@@ -631,12 +749,13 @@
         totals[item.body] = (totals[item.body] || 0) + 1;
         return totals;
       }, {});
-      dom['header-count'].textContent = index.decisions.length + ' decisions tracked · ' +
+      dom['header-count'].textContent = index.decisions.length + ' votes tracked · ' +
         (counts.parliament || 0) + ' Parliament · ' + (counts.council || 0) + ' Council · ' +
-        (counts.commission || 0) + ' Commission';
-      dom['header-updated'].textContent = index.metadata && index.metadata.updated
-        ? 'Updated ' + Data.formatDate(index.metadata.updated) : '';
+        (counts.commission || 0) + ' Commission' +
+        (index.metadata && index.metadata.updated
+          ? ' · updated ' + Data.formatDate(index.metadata.updated) : '');
 
+      renderPlenary();
       renderFeed();
 
       dom['decision-list'].addEventListener('scroll', function () {
@@ -663,6 +782,27 @@
         button.addEventListener('click', function () {
           setFilter(button.getAttribute('data-filter'));
         });
+      });
+
+      dom['search-input'].addEventListener('input', function (event) {
+        setQuery(event.target.value);
+      });
+      dom['search-input'].addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && dom['search-input'].value) {
+          event.stopPropagation();
+          dom['search-input'].value = '';
+          setQuery('');
+        }
+      });
+      dom['search-clear'].addEventListener('click', function () {
+        dom['search-input'].value = '';
+        setQuery('');
+        dom['search-input'].focus();
+      });
+
+      dom['mep-results'].addEventListener('click', function (event) {
+        const hit = event.target.closest('.mep-hit');
+        if (hit) selectCountry(hit.getAttribute('data-code'));
       });
 
       // Escape closes the open country from anywhere on the page.

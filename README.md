@@ -53,6 +53,12 @@ minority formed; unanimity files are measured against all 27, where an abstentio
 not block but a single vote against does; Commission acts have no country vote at all,
 which is exactly why their cost and press layers matter.
 
+Search sits above the feed: a word from a title, a procedure reference, or — inside an
+open vote — an MEP by name, party or group, which jumps to that member's country.
+
+The header says when the last plenary session ran and where, and when the next one
+starts, from the Parliament's own calendar.
+
 Also: a sortable table of all 27 member states, and a permalink for every country so a
 journalist can link straight to `#/<decision>/PL`.
 
@@ -116,10 +122,11 @@ their country through the MEP directory, and writes one record per final vote wi
 each MEP's own vote in it. It deliberately leaves the summary and press sections
 empty: those are editorial work, and nothing should generate them.
 
-**It can run itself.** `.github/workflows/plenary-sync.yml` does the same thing every
-weekday evening, validates what it imported, and commits only if something changed —
-so the site follows the plenary on its own. Set it up, and verify the first run,
-following [docs/AUTOMATION.md](docs/AUTOMATION.md).
+**It can run itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
+and again each night — catching the votes list, which states what carried and is
+published a day later than the votes themselves — then validates and commits only if
+something changed. Set it up, and verify the first run, following
+[docs/AUTOMATION.md](docs/AUTOMATION.md).
 
 The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md); how to file a
 country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DATA.md).

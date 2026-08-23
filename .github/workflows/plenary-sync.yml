@@ -1,19 +1,28 @@
-# Import the Parliament's roll-call votes on a schedule, so the site follows
-# the plenary without anybody opening a terminal.
+# Follow the plenary automatically.
 #
-# The Parliament sits in Strasbourg for four days a month and holds shorter
-# sessions in Brussels. Rather than encode that calendar, this runs every
-# weekday evening and asks for the last seven days: on a day with no sitting
-# the annex simply does not exist (404) and the run does nothing.
+# The cadence follows what the Parliament actually publishes and when:
+#
+#   - Roll-call annexes appear during the sitting, shortly after each voting
+#     session. Runs at midday and in the evening on Mon-Thu catch both.
+#   - The votes list, which states whether a text carried, is published a day or
+#     more later. A nightly run re-imports the last week so derived results are
+#     replaced by the Parliament's own.
+#   - The plenary calendar and the member directory change slowly. Weekly.
+#
+# Runs are cheap and idempotent: on a day with no sitting the annex does not
+# exist, nothing is written, and nothing is committed.
 #
 # Before enabling: Settings > Actions > General > Workflow permissions must be
-# set to "Read and write permissions" so the run can commit what it imports.
+# "Read and write permissions" so the run can commit what it imports.
 
 name: Plenary sync
 
 on:
   schedule:
-    - cron: "0 19 * * 1-5"   # 19:00 UTC, after voting time
+    - cron: "40 12 * * 1-4"   # during the sitting, after the midday votes
+    - cron: "40 18 * * 1-4"   # after the evening votes
+    - cron: "30 21 * * *"     # nightly: pick up the votes lists and any late annex
+    - cron: "0 4 * * 1"       # Monday: refresh the calendar and the members
   workflow_dispatch:
     inputs:
       since:
@@ -41,9 +50,14 @@ jobs:
         with:
           node-version: "22"
 
-      # --refresh-meps re-reads the member directory first: a newly seated MEP
-      # whose id is not in the cache would otherwise have their votes dropped.
-      # If that fetch fails the run falls back to the cached directory.
+      # The calendar tells the importer which days the Parliament sat, so it
+      # stops guessing at dates. Weekly is enough; a failure is not fatal.
+      - name: Refresh the plenary calendar
+        if: github.event.schedule == '0 4 * * 1' || github.event_name == 'workflow_dispatch'
+        run: node scripts/fetch-sessions.mjs || echo "calendar refresh failed; keeping the last one"
+
+      # --refresh-meps re-reads the member directory: a newly seated MEP whose
+      # id is not in the cache would otherwise have their votes dropped.
       - name: Import roll-call votes
         run: |
           node scripts/fetch-plenary.mjs --refresh-meps \
@@ -61,13 +75,13 @@ jobs:
       - name: Commit what changed
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
-            echo "No new votes."
+            echo "Nothing new."
             exit 0
           fi
           git config user.name "eu-tracker-bot"
           git config user.email "actions@github.com"
           git add data/
-          git commit -m "Import roll-call votes from the European Parliament
+          git commit -m "Import from the European Parliament
 
           Automated by .github/workflows/plenary-sync.yml. Records land with
           empty summary and press sections: those are editorial work."

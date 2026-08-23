@@ -5,8 +5,9 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parseXML, findAll, find, decodeEntities } from '../scripts/lib/xml.mjs';
-import { parseAnnex, parseDirectory, toDecision, isFinalVote, normaliseGroup, countryCode }
-  from '../scripts/fetch-plenary.mjs';
+import { parseAnnex, parseDirectory, toDecision, isFinalVote, normaliseGroup, countryCode,
+  parseVotList, splitTitle } from '../scripts/fetch-plenary.mjs';
+import { parseCalendar, parseLocation, sittingDays } from '../scripts/fetch-sessions.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = (name) => readFile(path.join(here, 'fixtures', name), 'utf8');
@@ -83,5 +84,42 @@ assert.equal(decision.summary, '');
 const orphan = toDecision(final, {}, '2026-09-15', 'https://example.invalid/annex.xml');
 assert.equal(orphan.unknown.length, 5);
 assert.deepEqual(Object.keys(orphan.decision.countries), []);
+
+/* ------------------------------------------------------------- the votes list */
+
+const official = parseVotList(await read('vot-list.xml'));
+assert.deepEqual(Object.keys(official).sort(), ['900001', '900002']);
+assert.equal(official['900001'].result, 'adopted');
+assert.equal(official['900002'].result, 'rejected');
+
+// The annex counts the votes; the votes list says what carried. Where the two
+// are available, the Parliament's own statement wins over our arithmetic.
+const stated = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml',
+  { result: 'rejected' }).decision;
+assert.equal(stated.outcome.result, 'rejected', '3 for, 1 against — but the Parliament said no');
+assert.doesNotMatch(stated.outcome.headline, /derived/);
+assert.match(decision.outcome.headline, /derived/, 'without a votes list, say the result was derived');
+assert.match(decision.dataNote, /derived/);
+assert.match(stated.dataNote, /votes list/);
+
+/* ---------------------------------------------------------------- the titles */
+
+const split = splitTitle('A10-0123/2026 - Rapporteur - Proposition de résolution (ensemble du texte)');
+assert.equal(split.reference, 'A10-0123/2026');
+assert.equal(split.title, 'Proposition de résolution (ensemble du texte)');
+assert.match(split.subtitle, /A10-0123\/2026 · Rapporteur/);
+
+/* -------------------------------------------------------- the plenary calendar */
+
+const sessions = parseCalendar(await read('session-calendar.json'));
+// The calendar has one entry per sitting day; duplicates fold into one session.
+assert.equal(sessions.length, 3);
+assert.deepEqual(sessions[0], { start: '2026-07-06', end: '2026-07-09', location: null });
+assert.deepEqual(sittingDays([sessions[0]]),
+  ['2026-07-06', '2026-07-07', '2026-07-08', '2026-07-09']);
+assert.ok(sessions[0].start < sessions[1].start, 'sessions come back in order');
+
+assert.equal(parseLocation(await read('meeting.xml')), 'Strasbourg');
+assert.equal(parseLocation('<rdf:RDF xmlns:rdf="x"></rdf:RDF>'), null, 'no locality, no guess');
 
 console.log('import.test.mjs: ok');

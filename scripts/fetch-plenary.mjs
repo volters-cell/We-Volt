@@ -36,10 +36,30 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const TERM = 10; // 2024–2029
 const MEP_CACHE = 'data/reference/meps.json';
 
-const ANNEX_URL = (term, date) =>
-  `https://www.europarl.europa.eu/doceo/document/PV-${term}-${date}-RCV_FR.xml`;
+/* The same roll-call annex is published at more than one address, in more than
+   one language. English first — the descriptions become the record's titles —
+   then French, then the document register, which sometimes has the file before
+   the document server does. */
+const ANNEX_URLS = (term, date) => {
+  const [year, month, day] = date.split('-');
+  return [
+    `https://www.europarl.europa.eu/doceo/document/PV-${term}-${date}-RCV_EN.xml`,
+    `https://www.europarl.europa.eu/doceo/document/PV-${term}-${date}-RCV_FR.xml`,
+    'https://www.europarl.europa.eu/RegData/seance_pleniere/proces_verbal/' +
+      `${year}/${month}-${day}/liste_presence/P${term}_PV(${year})${month}-${day}(RCV)_XC.xml`
+  ];
+};
+
+/* The votes list carries the Parliament's own statement of what carried and
+   what fell. It is published a day or more after the sitting, so a same-day
+   import derives the result and a later run corrects it. */
+const VOT_URL = (term, date) =>
+  `https://www.europarl.europa.eu/doceo/document/PV-${term}-${date}-VOT_EN.xml`;
+
 const DIRECTORY_URL = (term) =>
   `https://www.europarl.europa.eu/meps/en/directory/xml/?leg=${term}`;
+
+const CALENDAR_FILE = 'data/reference/plenary-calendar.json';
 
 /* Country names as the directory writes them, to the codes this project uses.
    Greece is EL in the Parliament's own documents and GR here. */
@@ -94,6 +114,33 @@ function parseArgs(argv) {
     args[key] = !next || next.startsWith('--') ? true : (i += 1, next);
   }
   return args;
+}
+
+async function firstAvailable(urls) {
+  for (const url of urls) {
+    const text = await getText(url);
+    if (text) return { url: url, text: text };
+  }
+  return null;
+}
+
+/* The importer only looks for votes on days the Parliament sat. Without a
+   calendar it falls back to trying weekdays, which costs a 404 and nothing else. */
+async function sittingDayLookup() {
+  try {
+    const calendar = JSON.parse(await readFile(path.join(ROOT, CALENDAR_FILE), 'utf8'));
+    const days = new Set();
+    (calendar.sessions || []).forEach(function (session) {
+      const from = new Date(session.start + 'T00:00:00Z');
+      const to = new Date(session.end + 'T00:00:00Z');
+      for (let day = from; day <= to; day = new Date(day.getTime() + 86400000)) {
+        days.add(day.toISOString().slice(0, 10));
+      }
+    });
+    return days.size ? days : null;
+  } catch (error) {
+    return null;
+  }
 }
 
 async function getText(url) {
@@ -257,6 +304,31 @@ export function parseAnnex(xml) {
   });
 }
 
+/* Reads the votes list: which roll call carried, in the Parliament's words
+   rather than by arithmetic. Keyed by the roll-call identifier so the two
+   documents can be joined. */
+export function parseVotList(xml) {
+  const doc = parseXML(xml);
+  const results = {};
+
+  findAll(doc, 'voting').forEach(function (node) {
+    const id = node.attributes.votingId || node.attributes.Identifier || node.attributes.id;
+    if (!id) return;
+    const raw = String(node.attributes.result || node.attributes.Result || '').toUpperCase();
+    if (!raw) return;
+    results[id] = {
+      raw: raw,
+      result: raw.indexOf('ADOPT') !== -1 ? 'adopted'
+        : raw.indexOf('REJECT') !== -1 ? 'rejected'
+        : raw.indexOf('LAPSE') !== -1 ? 'lapsed'
+        : raw.indexOf('WITHDRAW') !== -1 ? 'withdrawn'
+        : null
+    };
+  });
+
+  return results;
+}
+
 export function isFinalVote(title) {
   if (!title) return false;
   if (AMENDMENT.test(title)) return false;
@@ -282,7 +354,7 @@ export function splitTitle(description) {
   };
 }
 
-export function toDecision(rollCall, members, date, sourceUrl) {
+export function toDecision(rollCall, members, date, sourceUrl, official) {
   const countries = {};
   const unknown = [];
 
@@ -321,17 +393,24 @@ export function toDecision(rollCall, members, date, sourceUrl) {
 
   const totals = { for: 0, against: 0, abstain: 0 };
   rollCall.votes.forEach(function (vote) { totals[vote.vote] += 1; });
-  const adopted = totals.for > totals.against;
   const parts = splitTitle(rollCall.title);
+
+  // Prefer what the Parliament says; fall back to the arithmetic of the annex.
+  const stated = official && official.result;
+  const adopted = stated ? stated === 'adopted' : totals.for > totals.against;
+  const derived = !stated;
 
   return {
     decision: {
       id: `ep-${date}-${slug(parts.reference || parts.title) || rollCall.identifier || 'vote'}`,
       status: 'verified',
-      dataNote: 'Roll-call annex imported from the European Parliament. The annex records how ' +
-        'each member voted but not whether the text carried, so the result below is derived from ' +
-        'the totals: more in favour than against. Votes requiring an absolute majority are the ' +
-        'exception and should be checked against the minutes.',
+      dataNote: derived
+        ? 'Roll-call annex imported from the European Parliament. The annex records how each ' +
+          'member voted but not whether the text carried, so the result below is derived from ' +
+          'the totals: more in favour than against. The votes list, which states the result, is ' +
+          'published a day or more later — re-running the import then replaces this.'
+        : 'Imported from the European Parliament: the roll-call annex for how each member voted, ' +
+          'and the votes list for the result.',
       body: 'parliament',
       bodyLabel: 'European Parliament',
       title: parts.title,
@@ -343,9 +422,12 @@ export function toDecision(rollCall, members, date, sourceUrl) {
       summary: '',
       whatItMeans: [],
       outcome: {
-        result: adopted ? 'adopted' : 'rejected',
+        result: stated && stated !== 'adopted' && stated !== 'rejected'
+          ? stated
+          : (adopted ? 'adopted' : 'rejected'),
         headline: `${adopted ? 'Adopted' : 'Rejected'} — ${totals.for} in favour, ` +
-          `${totals.against} against, ${totals.abstain} abstained.`
+          `${totals.against} against, ${totals.abstain} abstained.` +
+          (derived ? ' Result derived from the totals.' : '')
       },
       impactUnit: 'EUR per person per year',
       impactLabel: 'Estimated net budget effect',
@@ -397,10 +479,20 @@ async function main() {
 
   const members = args.inspect && args.file ? {} : await loadDirectory(args);
 
+  const sittingDays = args.file || args.force ? null : await sittingDayLookup();
+  if (sittingDays) console.log(`${sittingDays.size} sitting days known from the plenary calendar.`);
+
   for (const date of sittingDates(args)) {
-    const url = args.file ? String(args.file) : ANNEX_URL(term, date);
-    const xml = args.file ? await readFile(String(args.file), 'utf8') : await getText(url);
-    if (!xml) continue; // no sitting on that date
+    if (sittingDays && date && !sittingDays.has(date)) continue;
+
+    let url = String(args.file || '');
+    let xml = args.file ? await readFile(String(args.file), 'utf8') : null;
+    if (!args.file) {
+      const found = await firstAvailable(ANNEX_URLS(term, date));
+      if (!found) continue; // nothing published for that day
+      url = found.url;
+      xml = found.text;
+    }
 
     if (args.inspect) {
       console.log(`\n${url}`);
@@ -417,6 +509,17 @@ async function main() {
       continue;
     }
 
+    let official = {};
+    if (!args.file && !args['no-vot']) {
+      const votXml = await getText(VOT_URL(term, sitting));
+      if (votXml) {
+        official = parseVotList(votXml);
+        console.log(`${sitting}: votes list found — ${Object.keys(official).length} stated results.`);
+      } else {
+        console.log(`${sitting}: no votes list yet; results will be derived from the totals.`);
+      }
+    }
+
     const rollCalls = parseAnnex(xml);
     if (!rollCalls.length) {
       console.warn(`${url}: the annex parsed to no roll calls — run --inspect to see its shape.`);
@@ -428,7 +531,8 @@ async function main() {
         skipped += 1;
         continue;
       }
-      const built = toDecision(rollCall, members, sitting, url);
+      const built = toDecision(rollCall, members, sitting, url,
+        official[rollCall.identifier] || null);
       if (taken.has(built.decision.id)) {
         built.decision.id += '-' + (rollCall.identifier || taken.size);
       }

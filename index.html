@@ -29,8 +29,8 @@
       </span>
     </div>
     <p class="header-meta">
+      <span id="header-plenary"></span>
       <span id="header-count"></span>
-      <span id="header-updated"></span>
     </p>
   </header>
 
@@ -64,7 +64,15 @@
             <button type="button" data-filter="commission" aria-pressed="false">Commission</button>
           </div>
         </div>
+        <div class="search">
+          <label class="visually-hidden" for="search-input">Search votes and members</label>
+          <input id="search-input" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Search votes, procedure references, MEPs…">
+          <button type="button" id="search-clear" hidden aria-label="Clear the search">Clear</button>
+        </div>
+        <p id="search-status" class="search-status" hidden></p>
         <ul id="decision-list" class="decision-list"></ul>
+        <div id="mep-results" class="mep-results" hidden></div>
       </section>
 
       <section class="decision" aria-labelledby="decision-title">
