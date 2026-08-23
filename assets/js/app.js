@@ -7,10 +7,11 @@
   // an automatic default re-derives for each decision, a deliberate choice sticks.
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
-    country: null, filter: 'all', isolate: null, query: ''
+    country: null, filter: 'all', isolate: null, query: '', unfolded: false
   };
 
   let calendar = { sessions: [] };
+  let directory = null;
 
   const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache = {};
@@ -25,7 +26,8 @@
    'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
-   'mep-results', 'decision-section', 'back-to-votes'].forEach(function (id) {
+   'mep-results', 'decision-section', 'back-to-votes', 'session-list', 'roll-call',
+   'roll-call-detail', 'roll-call-filter'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -197,6 +199,37 @@
     recorded: 'Recorded'
   };
 
+  /* Votes belong to sittings, and sittings belong to plenary sessions. Grouping
+     them that way is how the Parliament's own week is shaped, and it keeps the
+     landing page to a handful of lines instead of a wall of votes. */
+  function sessionFor(date) {
+    const found = (calendar.sessions || []).find(function (session) {
+      return session.start <= date && date <= session.end;
+    });
+    if (found) return { key: found.start, session: found };
+    return { key: date.slice(0, 7), session: null };
+  }
+
+  function sessionLabelFor(group) {
+    if (group.session) {
+      return (group.session.location ? group.session.location + ' · ' : '') +
+        sessionRange(group.session);
+    }
+    const date = new Date(group.key + '-01T00:00:00Z');
+    return date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  }
+
+  function sessionRange(session) {
+    const start = new Date(session.start + 'T00:00:00Z');
+    const end = new Date(session.end + 'T00:00:00Z');
+    const sameMonth = session.start.slice(0, 7) === session.end.slice(0, 7);
+    return start.toLocaleDateString('en-GB', {
+      day: 'numeric', month: sameMonth ? undefined : 'short', timeZone: 'UTC'
+    }) + '–' + end.toLocaleDateString('en-GB', {
+      day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
+    });
+  }
+
   function renderFeed() {
     const items = index.decisions.filter(function (item) {
       return (state.filter === 'all' || item.body === state.filter) && matches(item);
@@ -211,25 +244,45 @@
       dom['search-status'].hidden = true;
     }
 
-    dom['decision-list'].innerHTML = items.length ? items.map(function (item) {
-      const current = state.decision && item.id === state.decision.id;
-      return '<li>' +
-        '<button type="button" class="decision-card' + (current ? ' is-current' : '') + '"' +
-        ' data-id="' + esc(item.id) + '"' + (current ? ' aria-current="true"' : '') + '>' +
-          '<span class="card-top">' +
-            '<span class="badge badge-' + esc(item.body) + '">' + esc(shortBody(item.body)) + '</span>' +
-            '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
-          '</span>' +
-          '<span class="card-title">' + esc(item.title) + '</span>' +
-          '<span class="card-foot">' +
-            '<span class="result result-' + esc(item.result) + '">' +
-              esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
-            (item.voteRuleLabel ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '') +
-          '</span>' +
-        '</button></li>';
-    }).join('') : '<li class="feed-empty">' + (state.query
-      ? 'Nothing here matches that. Try a procedure reference, or a word from the title.'
-      : 'Nothing recorded from this institution yet.') + '</li>';
+    const groups = [];
+    const byKey = {};
+    items.forEach(function (item) {
+      const where = sessionFor(item.date);
+      if (!byKey[where.key]) {
+        byKey[where.key] = { key: where.key, session: where.session, items: [] };
+        groups.push(byKey[where.key]);
+      }
+      byKey[where.key].items.push(item);
+    });
+    groups.sort(function (a, b) { return a.key < b.key ? 1 : -1; });
+
+    if (!groups.length) {
+      dom['session-list'].innerHTML = '<p class="feed-empty">' + (state.query
+        ? 'Nothing here matches that. Try a procedure reference, or a word from the title.'
+        : 'No votes recorded yet.') + '</p>';
+      return;
+    }
+
+    // Landing folded is the point: the page opens on the search box, and the
+    // session headers say what is behind them. A search opens what it found.
+    dom['session-list'].innerHTML =
+      '<p class="session-tools"><button type="button" id="unfold-all" aria-expanded="' +
+      (state.unfolded ? 'true' : 'false') + '">' +
+      (state.unfolded ? 'Fold all sessions' : 'Unfold all sessions') + '</button></p>' +
+      groups.map(function (group) {
+      const open = state.query || state.unfolded;
+      const current = state.decision && group.items.some(function (item) {
+        return item.id === state.decision.id;
+      });
+      return '<details class="session"' + (open || current ? ' open' : '') + '>' +
+        '<summary>' +
+          '<span class="session-label">' + esc(sessionLabelFor(group)) + '</span>' +
+          '<span class="session-count">' + group.items.length + ' vote' +
+            (group.items.length === 1 ? '' : 's') + '</span>' +
+        '</summary>' +
+        '<ul class="decision-list">' + group.items.map(decisionCard).join('') + '</ul>' +
+        '</details>';
+    }).join('');
   }
 
   /* The cost layer is data-driven: it appears when a decision carries sourced
@@ -239,6 +292,24 @@
       const impact = decision.countries[code].impact;
       return impact && typeof impact.value === 'number';
     });
+  }
+
+  function decisionCard(item) {
+    const current = state.decision && item.id === state.decision.id;
+    return '<li>' +
+      '<button type="button" class="decision-card' + (current ? ' is-current' : '') + '"' +
+      ' data-id="' + esc(item.id) + '"' + (current ? ' aria-current="true"' : '') + '>' +
+        '<span class="card-top">' +
+          '<span class="badge badge-' + esc(item.body) + '">' + esc(shortBody(item.body)) + '</span>' +
+          '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
+        '</span>' +
+        '<span class="card-title">' + esc(item.title) + '</span>' +
+        '<span class="card-foot">' +
+          '<span class="result result-' + esc(item.result) + '">' +
+            esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
+          (item.voteRuleLabel ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '') +
+        '</span>' +
+      '</button></li>';
   }
 
   function shortBody(body) {
@@ -308,8 +379,8 @@
       map.paint(function (code) {
         const position = Data.countryPosition(decision, code);
         return {
-          className: 'layer-vote vote-' + position.position + (position.split ? ' is-split' : ''),
-          label: Panel.VOTE_LABEL[position.position] + (position.split ? ', delegation split' : '')
+          className: 'layer-vote vote-' + position.position,
+          label: Panel.VOTE_LABEL[position.position]
         };
       }, function (code) {
         const position = Data.countryPosition(decision, code);
@@ -354,9 +425,6 @@
       html = keys.map(function (pair) {
         return legendRow('layer-vote ' + pair[0], pair[1], pair[0].replace('vote-', ''));
       }).join('');
-      if (decision.body === 'parliament') {
-        html += '<li><span class="swatch layer-vote vote-for is-split"></span>Delegation split (under 15 points between the top two)</li>';
-      }
     } else if (state.layer === 'impact') {
       const scale = Data.impactScale(decision);
       const unit = decision.impactUnit || '';
@@ -445,6 +513,83 @@
     if (map) map.setHovered(code);
     Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
       row.classList.toggle('is-hovered', row.getAttribute('data-code') === code);
+    });
+  }
+
+  /* ------------------------------------------------------------- roll-call */
+
+  /* The whole vote, member by member where the record has them. Rendered on
+     first open rather than on every decision load: it is 27 tables, and most
+     readers never ask for it. */
+  let rollCallFor = null;
+
+  function renderRollCall() {
+    const decision = state.decision;
+    if (!decision || rollCallFor === decision.id) return;
+    rollCallFor = decision.id;
+
+    const filter = dom['roll-call-filter'].value.trim().toLowerCase();
+    const blocks = states.map(function (item) {
+      const country = decision.countries[item.code] || {};
+      const position = Data.countryPosition(decision, item.code);
+      const totals = Data.mepTotals(country);
+      const meps = country.meps || [];
+
+      const rows = meps.length
+        ? meps.map(function (mep) {
+            return '<tr><th scope="row">' + esc(mep.name) + '</th>' +
+              '<td>' + esc(mep.party || '—') + '</td>' +
+              '<td>' + esc(mep.group || '—') + '</td>' +
+              '<td><span class="vote-pill vote-' + esc(mep.vote) + '">' +
+              esc(Panel.VOTE_LABEL[mep.vote] || mep.vote) + '</span></td></tr>';
+          }).join('')
+        : (country.mepGroups || []).map(function (group) {
+            return '<tr><th scope="row">' + esc(group.group) + '</th>' +
+              '<td>' + group.seats + ' seats</td>' +
+              '<td class="numeric"><span class="n-for">' + (group.for || 0) + '</span> / ' +
+                '<span class="n-against">' + (group.against || 0) + '</span> / ' +
+                '<span class="n-abstain">' + (group.abstain || 0) + '</span></td>' +
+              '<td>' + (group.absent || 0) + ' absent</td></tr>';
+          }).join('');
+
+      return {
+        code: item.code,
+        haystack: [item.name, item.code, Panel.VOTE_LABEL[position.position],
+          meps.map(function (mep) { return mep.name + ' ' + mep.group + ' ' + (mep.party || ''); }).join(' '),
+          (country.mepGroups || []).map(function (group) { return group.group; }).join(' ')
+        ].join(' ').toLowerCase(),
+        html: '<section class="roll-country" data-code="' + esc(item.code) + '">' +
+          '<h4>' + esc(item.name) +
+            '<span class="vote-pill vote-' + esc(position.position) + '">' +
+            esc(Panel.VOTE_LABEL[position.position] || position.position) + '</span>' +
+            (totals ? '<span class="roll-totals"><span class="n-for">' + totals.for +
+              '</span> / <span class="n-against">' + totals.against +
+              '</span> / <span class="n-abstain">' + totals.abstain + '</span></span>' : '') +
+          '</h4>' +
+          (rows
+            ? '<table class="roll-table"><tbody>' + rows + '</tbody></table>'
+            : '<p class="empty">No member-level record for this vote.</p>') +
+          '</section>'
+      };
+    });
+
+    dom.rollCall = blocks;
+    dom['roll-call'].innerHTML =
+      '<p class="roll-note">' + (blocks.some(function (b) { return b.html.indexOf('roll-table') !== -1; })
+        ? 'Every member state, with the record this vote carries: each MEP by name where the ' +
+          'roll-call has been imported, and the totals by political group otherwise.'
+        : 'This record carries no member-level detail.') + '</p>' +
+      blocks.map(function (block) { return block.html; }).join('');
+
+    if (filter) filterRollCall(filter);
+  }
+
+  function filterRollCall(value) {
+    const query = String(value || '').trim().toLowerCase();
+    const blocks = dom.rollCall || [];
+    Array.prototype.forEach.call(dom['roll-call'].querySelectorAll('.roll-country'), function (node) {
+      const block = blocks.find(function (item) { return item.code === node.getAttribute('data-code'); });
+      node.hidden = Boolean(query) && block && block.haystack.indexOf(query) === -1;
     });
   }
 
@@ -549,7 +694,6 @@
         name: item.name,
         position: Panel.VOTE_LABEL[position.position] || position.position,
         positionKey: position.position,
-        split: position.split,
         meps: totals,
         mepsKey: totals ? totals.for : -1,
         impact: impact,
@@ -590,7 +734,7 @@
       return '<tr data-code="' + row.code + '">' +
         '<th scope="row"><button type="button" class="link-button">' + esc(row.name) + '</button></th>' +
         '<td><span class="vote-pill vote-' + esc(row.positionKey) + '">' + esc(row.position) + '</span>' +
-        (row.split ? ' <span class="split-flag">split</span>' : '') + '</td>' +
+        '</td>' +
         '<td class="numeric" data-col="meps">' + (row.meps
           ? '<span class="n-for">' + row.meps.for + '</span> / ' +
             '<span class="n-against">' + row.meps.against + '</span> / ' +
@@ -727,6 +871,9 @@
       setLayer('vote');
     }
 
+    rollCallFor = null;
+    dom['roll-call-detail'].open = false;
+    dom['roll-call'].innerHTML = '';
     renderOutcome();
     paint();
     renderTable();
@@ -742,7 +889,9 @@
     state.layerChosen = false;
     state.layer = 'vote';
     dom['decision-section'].hidden = true;
-    dom['country-table'].parentNode.hidden = true;
+    // The whole section, not just the table: an empty "All 27 member states"
+    // heading on the landing page is a promise with nothing behind it.
+    document.querySelector('.table-section').hidden = true;
     dom['table-empty'].hidden = true;
     document.querySelector('.layer-tabs').hidden = true;
     dom['map-hint'].textContent = 'Click a member state for its profile, or pick a vote ' +
@@ -764,11 +913,14 @@
       clearDecision({ country: code });
       return;
     }
-    if (!cache[entry.id]) cache[entry.id] = await Data.getJSON(entry.file);
+    if (!cache[entry.id]) {
+      cache[entry.id] = Data.expandBallots(await Data.getJSON(entry.file), directory);
+    }
     const changed = !state.decision || state.decision.id !== entry.id;
     state.decision = cache[entry.id];
     state.isolate = null;
     dom['decision-section'].hidden = false;
+    document.querySelector('.table-section').hidden = false;
     document.querySelector('.layer-tabs').hidden = false;
     dom['map-hint'].textContent = 'Click a member state to open its record. ' +
       'Click the sea to close it. Arrow keys move between countries.';
@@ -807,15 +959,18 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex, plenary] = await Promise.all([
+      const [reference, geo, decisionIndex, plenary, members] = await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
         Data.getJSON('data/decisions/index.json'),
         Data.getJSON('data/reference/plenary-calendar.json').catch(function () {
           return { sessions: [] };
-        })
+        }),
+        // Identities live here, once, rather than inside every vote record.
+        Data.getJSON('data/reference/meps.json').catch(function () { return null; })
       ]);
       calendar = plenary || { sessions: [] };
+      directory = members && members.members ? members.members : null;
 
       states = reference.states;
       statesByCode = {};
@@ -846,9 +1001,16 @@
       const route = readHash();
       await loadDecision(route.decisionId, route.code);
 
-      dom['decision-list'].addEventListener('click', function (event) {
+      dom['session-list'].addEventListener('click', function (event) {
         const card = event.target.closest('.decision-card');
-        if (card) loadDecision(card.getAttribute('data-id'), state.country);
+        if (card) {
+          loadDecision(card.getAttribute('data-id'), state.country);
+          return;
+        }
+        if (event.target.closest('#unfold-all')) {
+          state.unfolded = !state.unfolded;
+          renderFeed();
+        }
       });
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
@@ -916,6 +1078,17 @@
 
       dom.outcome.addEventListener('click', function (event) {
         if (event.target.closest('.replay')) playReveal();
+      });
+
+      dom['roll-call-detail'].addEventListener('toggle', function () {
+        if (dom['roll-call-detail'].open) renderRollCall();
+      });
+      dom['roll-call-filter'].addEventListener('input', function (event) {
+        filterRollCall(event.target.value);
+      });
+      dom['roll-call'].addEventListener('click', function (event) {
+        const country = event.target.closest('.roll-country');
+        if (country) selectCountry(country.getAttribute('data-code'));
       });
 
       Array.prototype.forEach.call(dom['country-table'].querySelectorAll('[data-sort]'), function (button) {

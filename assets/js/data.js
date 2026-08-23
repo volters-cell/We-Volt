@@ -5,6 +5,69 @@
 
   const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
 
+  /* A vote can be stored two ways.
+   *
+   * The long way repeats every member's name, party and group inside every
+   * record: 69 KB per vote, 0.9 GB for a five-year term.
+   *
+   * The short way keeps identities in the member directory, once, and stores
+   * the vote itself as pairs of [member id, position]: 8 KB per vote, 104 MB
+   * for a term — small enough that the whole Parliament fits on free static
+   * hosting and this project never needs a paid database.
+   *
+   * The page expands the short form on load, so everything downstream — the
+   * map, the panel, the roll-call, search — sees the same shape either way. */
+  function expandBallots(decision, members) {
+    if (!decision || !Array.isArray(decision.ballots) || !members) return decision;
+
+    decision.countries = decision.countries || {};
+    Object.keys(decision.countries).forEach(function (code) {
+      decision.countries[code].meps = [];
+      decision.countries[code].mepGroups = [];
+    });
+
+    let unknown = 0;
+    decision.ballots.forEach(function (ballot) {
+      const member = members[ballot[0]];
+      const vote = VOTE_KEYS[ballot[1]];
+      if (!member || !member.country || !vote) {
+        unknown += 1;
+        return;
+      }
+      const code = member.country;
+      if (!decision.countries[code]) decision.countries[code] = { meps: [], mepGroups: [], press: [] };
+      const country = decision.countries[code];
+      country.meps = country.meps || [];
+      country.mepGroups = country.mepGroups || [];
+
+      country.meps.push({
+        name: member.name,
+        party: member.party || null,
+        group: member.group || 'NI',
+        vote: vote,
+        id: ballot[0]
+      });
+
+      const group = member.group || 'NI';
+      let row = country.mepGroups.find(function (item) { return item.group === group; });
+      if (!row) {
+        row = { group: group, seats: 0, for: 0, against: 0, abstain: 0, absent: 0 };
+        country.mepGroups.push(row);
+      }
+      row.seats += 1;
+      row[vote] += 1;
+    });
+
+    Object.keys(decision.countries).forEach(function (code) {
+      const country = decision.countries[code];
+      (country.meps || []).sort(function (a, b) { return a.name.localeCompare(b.name); });
+      (country.mepGroups || []).sort(function (a, b) { return b.seats - a.seats; });
+    });
+
+    decision.expanded = { unknown: unknown };
+    return decision;
+  }
+
   async function getJSON(path) {
     // The single-file build (scripts/build-single-file.mjs) embeds every record
     // in the page, so the same code runs from a server or from one HTML file.
@@ -51,25 +114,25 @@
     return any ? totals : null;
   }
 
-  /* The map colours a delegation by where its majority went, and flags the ones
-     that split — a 43/38 delegation is a different story from a unanimous one. */
-  const SPLIT_MARGIN = 0.15;
-
+  /* The map colours a delegation by where most of its members voted. That is
+     arithmetic and nothing more: the numbers behind it are always on screen,
+     and the reader decides what a 43-38 delegation means. */
   function delegationPosition(country) {
     const totals = mepTotals(country);
-    if (!totals) return { position: country && country.position ? country.position : 'unknown', split: false };
+    if (!totals) {
+      return { position: country && country.position ? country.position : 'unknown' };
+    }
     const cast = totals.for + totals.against + totals.abstain;
-    if (!cast) return { position: 'absent', split: false };
+    if (!cast) return { position: 'absent', totals: totals };
     const ranked = ['for', 'against', 'abstain'].sort(function (a, b) { return totals[b] - totals[a]; });
-    const margin = (totals[ranked[0]] - totals[ranked[1]]) / cast;
-    return { position: ranked[0], split: margin < SPLIT_MARGIN, totals: totals };
+    return { position: ranked[0], totals: totals };
   }
 
   function countryPosition(decision, code) {
     const country = decision.countries[code];
-    if (!country) return { position: 'unknown', split: false };
+    if (!country) return { position: 'unknown' };
     if (decision.body === 'parliament') return delegationPosition(country);
-    return { position: country.position || 'unknown', split: false, totals: mepTotals(country) };
+    return { position: country.position || 'unknown', totals: mepTotals(country) };
   }
 
   /* Council qualified majority: 55% of member states (15 of 27) representing 65%
@@ -172,6 +235,7 @@
 
   global.Data = {
     getJSON: getJSON,
+    expandBallots: expandBallots,
     mepTotals: mepTotals,
     decisionTally: decisionTally,
     countryPosition: countryPosition,

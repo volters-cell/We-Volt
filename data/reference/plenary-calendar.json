@@ -4,7 +4,14 @@
     "fetched": null,
     "source": "https://www.europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId=10",
     "locationSource": "https://data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}",
-    "note": "Empty until scripts/fetch-sessions.mjs has been run against the live Parliament endpoints. Until then the site falls back to the latest sitting date among the records it holds."
+    "note": "Provisional. The one session below was reported by the project owner, not fetched: run scripts/fetch-sessions.mjs against the Parliament's calendar to replace it with the full term. Votes that fall outside a known session are grouped by month instead."
   },
-  "sessions": []
+  "sessions": [
+    {
+      "start": "2026-07-06",
+      "end": "2026-07-09",
+      "location": "Strasbourg",
+      "provisional": true
+    }
+  ]
 }

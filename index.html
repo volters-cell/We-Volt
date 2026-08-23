@@ -55,24 +55,25 @@
     <!-- Right: what is being tracked, then the decision, then the country. -->
     <div class="rail">
       <section id="tracker" class="tracker" aria-labelledby="tracker-heading">
-        <div class="tracker-head">
-          <h2 id="tracker-heading">Recent votes</h2>
-          <div class="tracker-filters" role="group" aria-label="Filter by institution">
-            <button type="button" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" data-filter="parliament" aria-pressed="false">Parliament</button>
-            <button type="button" data-filter="council" aria-pressed="false">Council</button>
-            <button type="button" data-filter="commission" aria-pressed="false">Commission</button>
-          </div>
-        </div>
+        <h2 id="tracker-heading" class="visually-hidden">Search the votes</h2>
+
         <div class="search">
           <label class="visually-hidden" for="search-input">Search votes and members</label>
           <input id="search-input" type="search" autocomplete="off" spellcheck="false"
-                 placeholder="Search votes, procedure references, MEPs…">
+                 placeholder="Search a vote, a procedure reference, an MEP…">
           <button type="button" id="search-clear" hidden aria-label="Clear the search">Clear</button>
         </div>
+
+        <div class="tracker-filters" role="group" aria-label="Filter by institution">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="parliament" aria-pressed="false">Parliament</button>
+          <button type="button" data-filter="council" aria-pressed="false">Council</button>
+          <button type="button" data-filter="commission" aria-pressed="false">Commission</button>
+        </div>
+
         <p id="search-status" class="search-status" hidden></p>
-        <ul id="decision-list" class="decision-list"></ul>
         <div id="mep-results" class="mep-results" hidden></div>
+        <div id="session-list" class="session-list"></div>
       </section>
 
       <section class="decision" id="decision-section" aria-labelledby="decision-title" hidden>
@@ -87,6 +88,16 @@
         <p id="decision-summary" class="decision-summary"></p>
 
         <div id="outcome" class="outcome"></div>
+
+        <details class="decision-detail" id="roll-call-detail">
+          <summary>How every member voted</summary>
+          <div class="roll-call-tools">
+            <label class="visually-hidden" for="roll-call-filter">Filter this roll-call</label>
+            <input id="roll-call-filter" type="search" autocomplete="off"
+                   placeholder="Filter by country, group, party or name…">
+          </div>
+          <div id="roll-call"></div>
+        </details>
 
         <details class="decision-detail">
           <summary>What it means, and where this comes from</summary>

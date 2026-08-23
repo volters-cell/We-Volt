@@ -40,8 +40,10 @@ for (const name of files) {
     voteRuleLabel: decision.voteRuleLabel || '',
     result: (decision.outcome && decision.outcome.result) || 'recorded',
     status: decision.status,
-    mepCount: Object.values(decision.countries || {})
-      .reduce((sum, country) => sum + ((country.meps || []).length), 0),
+    mepCount: Array.isArray(decision.ballots)
+      ? decision.ballots.length
+      : Object.values(decision.countries || {})
+          .reduce((sum, country) => sum + ((country.meps || []).length), 0),
     keywords: keywords,
     file: `${DIR}/${name}`
   });

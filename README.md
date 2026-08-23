@@ -22,7 +22,7 @@ pick a vote and the map redraws in one of two layers:
 
 | Layer | Answers |
 | --- | --- |
-| **How they voted** | The member state's position. In Parliament files: the delegation's majority, its split, the breakdown by political group, and — where a real roll-call has been imported — every MEP by name. |
+| **How they voted** | The member state's position. In Parliament files: where most of the delegation voted, the breakdown by political group, and — where a real roll-call has been imported — every MEP by name. |
 | **Press framing** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
@@ -54,8 +54,15 @@ minority formed; unanimity files are measured against all 27, where an abstentio
 not block but a single vote against does; Commission acts have no country vote at all,
 which is exactly why their cost and press layers matter.
 
-Search sits above the feed: a word from a title, a procedure reference, or — inside an
-open vote — an MEP by name, party or group, which jumps to that member's country.
+The page opens on the search box. Below it, votes are grouped into the plenary sessions
+they were taken in — "Strasbourg · 6–9 Jul 2026" — folded until you unfold one, or all
+of them at once. Searching unfolds whatever it finds. A search matches a word from a
+title, a procedure reference, or — inside an open vote — an MEP by name, party or group,
+which jumps to that member's country.
+
+Open a vote and **How every member voted** lists the whole roll-call: each member state
+with its position and totals, every MEP by name where the record carries them, and a
+filter for a country, a group, a party or a person.
 
 The header says when the last plenary session ran and where, and when the next one
 starts, from the Parliament's own calendar.
@@ -81,8 +88,10 @@ It must be served over HTTP — the records are fetched as JSON, so a `file://` 
 will not work.
 
 ```bash
-npm test          # ingest logic + data validation
+npm test          # import logic + data validation
 npm run validate  # data validation on its own
+npm run sessions  # fetch the plenary calendar
+npm run backfill  # import every sitting since the 2024 elections
 npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ```
 
@@ -134,8 +143,10 @@ country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DAT
 
 ## Why it is built this way
 
-- **Static files.** The whole site is JSON and JavaScript on a CDN. A newsroom can
-  fork it, a grant can end, and the thing still runs.
+- **Static files, and cheap ones.** The whole site is JSON and JavaScript on a CDN. A
+  newsroom can fork it, a grant can end, and the thing still runs. Votes are stored as
+  `[member id, position]` pairs against a directory held once, which is the difference
+  between 104 MB and 0.9 GB for a five-year term — and between free hosting and a bill.
 - **Every figure carries its source.** A cost estimate without a citation is an
   opinion; the validator treats it as an error. The bundled records carry no cost
   figures at all, because none of them could be sourced — so that layer does not

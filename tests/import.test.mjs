@@ -48,8 +48,18 @@ assert.ok(!isFinalVote(amendment.title), 'an amendment is not');
 
 /* --------------------------------------------------------------- the record */
 
-const built = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml');
+// The importer writes the compact shape by default and the long one on request.
+const built = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml',
+  null, { fat: true });
 const decision = built.decision;
+
+const compact = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml').decision;
+assert.ok(Array.isArray(compact.ballots), 'the compact form stores ballots');
+assert.equal(compact.ballots.length, 5);
+assert.deepEqual(compact.ballots[0], [1001, 0], '[member id, 0 = for]');
+assert.equal(compact.countries.DE.meps, undefined, 'identities are not repeated per record');
+assert.ok(JSON.stringify(compact).length < JSON.stringify(decision).length / 1.5,
+  'the compact form is substantially smaller');
 
 assert.equal(decision.body, 'parliament');
 assert.equal(decision.status, 'verified');
@@ -121,5 +131,29 @@ assert.ok(sessions[0].start < sessions[1].start, 'sessions come back in order');
 
 assert.equal(parseLocation(await read('meeting.xml')), 'Strasbourg');
 assert.equal(parseLocation('<rdf:RDF xmlns:rdf="x"></rdf:RDF>'), null, 'no locality, no guess');
+
+/* ------------------------------------------------- expanding the short form */
+
+// data.js runs in the browser; load it here with a stand-in for window so the
+// expansion the whole page depends on is actually covered.
+const shim = { matchMedia: () => ({ matches: false }) };
+new Function('window', await readFile(path.join(here, '../assets/js/data.js'), 'utf8'))(shim);
+
+const directory = Object.fromEntries(Object.entries(members).map(([id, m]) => [id, m]));
+const expanded = shim.Data.expandBallots(JSON.parse(JSON.stringify(compact)), directory);
+
+assert.deepEqual(Object.keys(expanded.countries).sort(), ['DE', 'FI', 'GR']);
+assert.equal(expanded.countries.DE.meps.length, 3);
+assert.deepEqual(expanded.countries.DE.meps.map((m) => m.name),
+  ['Ada Fixture', 'Bo Sample', 'Cato Placeholder']);
+assert.deepEqual(expanded.countries.DE.mepGroups.find((g) => g.group === 'EPP'),
+  { group: 'EPP', seats: 2, for: 0, against: 1, abstain: 1, absent: 0 });
+assert.equal(expanded.expanded.unknown, 0);
+
+// A ballot for somebody the directory has never heard of is counted, not crashed on.
+const orphaned = shim.Data.expandBallots(
+  { ballots: [[999999, 0]], countries: {} }, directory);
+assert.equal(orphaned.expanded.unknown, 1);
+assert.deepEqual(Object.keys(orphaned.countries), []);
 
 console.log('import.test.mjs: ok');

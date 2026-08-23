@@ -387,10 +387,6 @@ main {
 .vote-absent .country-shape, .vote-absent .country-dot { fill: var(--vote-absent); }
 .vote-not-applicable .country-shape, .vote-not-applicable .country-dot { fill: var(--vote-na); }
 
-/* A split delegation is hatched: the colour says where the majority went,
-   the hatching says the country was divided about it. */
-.is-split .country-shape { stroke-dasharray: 3 2; stroke: var(--ink); stroke-width: 1.1; }
-
 /* Impact layer */
 .impact-cost-1 .country-shape, .impact-cost-1 .country-dot { fill: var(--cost-1); }
 .impact-cost-2 .country-shape, .impact-cost-2 .country-dot { fill: var(--cost-2); }
@@ -433,7 +429,6 @@ main {
 .swatch.vote-abstain { background: var(--vote-abstain); }
 .swatch.vote-absent { background: var(--vote-absent); }
 .swatch.vote-not-applicable { background: var(--vote-na); }
-.swatch.is-split { border: 2px dashed var(--ink); }
 .swatch.impact-cost-1 { background: var(--cost-1); }
 .swatch.impact-cost-2 { background: var(--cost-2); }
 .swatch.impact-cost-3 { background: var(--cost-3); }
@@ -623,11 +618,6 @@ button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface)
 .position-detail { margin: 0 0 .8rem; font-size: .88rem; color: var(--ink-soft); }
 .no-vote { margin: 0; font-size: .92rem; color: var(--ink-soft); }
 
-.split-flag {
-  font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
-  background: var(--surface-sunken); border: 1px solid var(--line-strong);
-  color: var(--ink-soft); padding: .1rem .4rem; border-radius: 999px; vertical-align: middle;
-}
 
 .vote-bar { display: flex; height: 14px; border-radius: 999px; overflow: hidden; background: var(--surface-sunken); margin-bottom: 1rem; }
 .seg-for { background: var(--vote-for); }
@@ -762,6 +752,78 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .mep-meta { font-size: .78rem; color: var(--ink-faint); flex: 1; }
 
 /* ---------------------------------------------------------------- tracker */
+
+/* Votes are grouped by the session they were taken in, folded until asked for. */
+.session-list { display: grid; gap: .5rem; }
+.session-tools { margin: 0 0 .1rem; }
+.session-tools button {
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--focus);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.session-tools button:hover { text-decoration: underline; }
+.session {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.session > summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .6rem;
+  padding: .6rem .8rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 8px;
+}
+.session > summary::-webkit-details-marker { display: none; }
+.session > summary::before {
+  content: "▸";
+  color: var(--ink-faint);
+  font-size: .8rem;
+  margin-right: .1rem;
+  transition: transform .15s ease;
+}
+.session[open] > summary::before { content: "▾"; }
+.session > summary:hover { background: var(--surface-sunken); }
+.session-label { font-weight: 600; font-size: .92rem; flex: 1; }
+.session-count { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.session .decision-list { padding: 0 .5rem .6rem; }
+
+/* ---------------------------------------------------------------- roll-call */
+
+.roll-call-tools { margin: .6rem 0 .8rem; }
+.roll-call-tools input {
+  width: 100%;
+  font: inherit;
+  font-size: .85rem;
+  padding: .4rem .6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.roll-note { margin: 0 0 .8rem; font-size: .82rem; color: var(--ink-faint); max-width: 62ch; }
+.roll-country { border-top: 1px solid var(--line); padding-top: .7rem; margin-top: .7rem; cursor: pointer; }
+.roll-country:hover { background: var(--surface-sunken); }
+.roll-country h4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin: 0 0 .4rem;
+  font-size: .95rem;
+}
+.roll-totals { font-size: .82rem; font-variant-numeric: tabular-nums; color: var(--ink-faint); }
+.roll-table { font-size: .82rem; }
+.roll-table th { font-weight: 500; }
+
 
 .tracker {
   background: var(--surface);

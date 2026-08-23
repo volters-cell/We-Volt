@@ -34,6 +34,8 @@ import { parseXML, findAll, find, outline } from './lib/xml.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
+const TERM_START = '2024-07-16'; // the constitutive sitting after the June 2024 elections
+const POSITIONS = ['for', 'against', 'abstain', 'absent'];
 const MEP_CACHE = 'data/reference/meps.json';
 
 /* The same roll-call annex is published at more than one address, in more than
@@ -354,7 +356,7 @@ export function splitTitle(description) {
   };
 }
 
-export function toDecision(rollCall, members, date, sourceUrl, official) {
+export function toDecision(rollCall, members, date, sourceUrl, official, options) {
   const countries = {};
   const unknown = [];
 
@@ -400,6 +402,23 @@ export function toDecision(rollCall, members, date, sourceUrl, official) {
   const adopted = stated ? stated === 'adopted' : totals.for > totals.against;
   const derived = !stated;
 
+  // Compact by default: identities stay in the member directory and the vote
+  // stores only [member id, position]. It is a tenth of the size, and it is the
+  // difference between a term of votes fitting on free hosting and not.
+  const compact = !(options && options.fat);
+  if (compact) {
+    Object.keys(countries).forEach(function (code) {
+      delete countries[code].meps;
+      delete countries[code].mepGroups;
+    });
+  }
+
+  const ballots = compact
+    ? rollCall.votes
+        .filter(function (vote) { return vote.id && members[vote.id]; })
+        .map(function (vote) { return [Number(vote.id), POSITIONS.indexOf(vote.vote)]; })
+    : null;
+
   return {
     decision: {
       id: `ep-${date}-${slug(parts.reference || parts.title) || rollCall.identifier || 'vote'}`,
@@ -431,6 +450,7 @@ export function toDecision(rollCall, members, date, sourceUrl, official) {
       },
       impactUnit: 'EUR per person per year',
       impactLabel: 'Estimated net budget effect',
+      ...(ballots ? { ballots: ballots } : {}),
       sources: [
         { label: 'Roll-call annex to the minutes', url: sourceUrl },
         { label: 'European Parliament open data', url: 'https://data.europarl.europa.eu/' }
@@ -472,6 +492,7 @@ function sittingDates(args) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const term = args.term || TERM;
+  const from = typeof args.from === 'string' ? args.from : TERM_START;
   const outDir = typeof args.out === 'string' ? args.out : 'data/decisions';
   const written = [];
   const taken = new Set();
@@ -483,6 +504,8 @@ async function main() {
   if (sittingDays) console.log(`${sittingDays.size} sitting days known from the plenary calendar.`);
 
   for (const date of sittingDates(args)) {
+    // This Parliament only: the term that began after the June 2024 elections.
+    if (date && date < from) continue;
     if (sittingDays && date && !sittingDays.has(date)) continue;
 
     let url = String(args.file || '');
@@ -532,7 +555,7 @@ async function main() {
         continue;
       }
       const built = toDecision(rollCall, members, sitting, url,
-        official[rollCall.identifier] || null);
+        official[rollCall.identifier] || null, { fat: Boolean(args.fat) });
       if (taken.has(built.decision.id)) {
         built.decision.id += '-' + (rollCall.identifier || taken.size);
       }
@@ -546,15 +569,17 @@ async function main() {
           `(${built.unknown.slice(0, 3).join(', ')}…) — try --refresh-meps`);
       }
 
-      const file = path.join(outDir, `${built.decision.id}.json`);
+      // resolve, not join: an absolute --out must not end up under the repo.
+      const directory = path.resolve(ROOT, outDir);
+      const file = path.join(directory, `${built.decision.id}.json`);
+      const shown = path.relative(ROOT, file);
       if (args['dry-run']) {
-        console.log(`would write ${file} — ${built.totals.for}/${built.totals.against}/` +
+        console.log(`would write ${shown} — ${built.totals.for}/${built.totals.against}/` +
           `${built.totals.abstain} across ${Object.keys(built.decision.countries).length} member states`);
       } else {
-        await mkdir(path.join(ROOT, outDir), { recursive: true });
-        await writeFile(path.join(ROOT, file),
-          JSON.stringify(built.decision, null, 2) + '\n', 'utf8');
-        console.log(`${file} — ${built.totals.for}/${built.totals.against}/${built.totals.abstain}`);
+        await mkdir(directory, { recursive: true });
+        await writeFile(file, JSON.stringify(built.decision, null, 2) + '\n', 'utf8');
+        console.log(`${shown} — ${built.totals.for}/${built.totals.against}/${built.totals.abstain}`);
       }
       written.push(built.decision.id);
     }

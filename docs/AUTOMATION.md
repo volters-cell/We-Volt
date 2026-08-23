@@ -122,6 +122,52 @@ Things worth checking on that first run:
 - **Greece**. The Parliament writes it `EL`; this project writes `GR` throughout, and
   the conversion is tested.
 
+## Storage: why this stays free
+
+A roll-call with 720 members, stored with every member's name, party and group inside
+the record, is 69 KB. A five-year term of them is **0.9 GB** — past what a git
+repository or a free static host is comfortable with, and the point at which somebody
+starts paying for a database.
+
+Stored the other way — identities in the member directory, once, and the vote itself as
+pairs of `[member id, position]` — the same roll-call is **7.9 KB**, and a term is
+**104 MB**. That fits inside every free tier: GitHub Pages allows a 1 GB site, and a
+reader opening one vote downloads about 1.7 KB.
+
+So the importer writes the compact form by default:
+
+```jsonc
+"ballots": [[124834, 0], [124835, 1], [124836, 2]]   // 0 for, 1 against, 2 abstain, 3 absent
+```
+
+`--fat` writes the long form instead, if you ever want a record that stands alone
+without the directory. The page expands the short form on load, so the map, the panel,
+the roll-call and search all see the same shape either way.
+
+Two consequences worth knowing:
+
+- **The directory must be current.** A member whose id is not in
+  `data/reference/meps.json` cannot be resolved, so their vote silently disappears from
+  the country breakdown. The importer refreshes the directory on every run and the
+  validator fails on ballots naming members it does not know.
+- **Index size, not disk, is the real ceiling.** A year of votes is about 0.5 MB of
+  index; a whole term in one file would be 7 MB, too heavy to load on page open. Chunk
+  the index by year before backfilling more than a year.
+
+## Backfilling this Parliament
+
+The current term began on 16 July 2024, after the June 2024 elections. The importer
+will not go back past that date unless told to (`--from`), because the previous
+Parliament had different members and the directory would not resolve them.
+
+```bash
+npm run backfill     # every sitting since 16 July 2024, final votes only
+```
+
+That is roughly 300 requests, not 13,500: annexes are published per sitting day, not
+per vote. Add `--all` to include amendment votes, which multiplies the count by about
+eight and is worth doing only once the index is chunked.
+
 ## What the importer will not do
 
 It writes the vote and nothing else. `summary`, `whatItMeans`, the impact figures and

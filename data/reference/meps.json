@@ -1,0 +1,7 @@
+{
+  "source": "https://www.europarl.europa.eu/meps/en/directory/xml/?leg=10",
+  "fetched": null,
+  "term": 10,
+  "note": "The member directory: every MEP's name, country, national party and political group, stored once. Vote records reference members by id rather than repeating this, which is what keeps a whole term of roll-calls at roughly 100 MB instead of 0.9 GB. Empty until scripts/fetch-plenary.mjs --refresh-meps has been run.",
+  "members": {}
+}

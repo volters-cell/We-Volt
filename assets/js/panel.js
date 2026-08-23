@@ -115,8 +115,7 @@
       const cast = totals.for + totals.against + totals.abstain;
       const share = cast ? Math.round((totals.for / cast) * 100) : null;
       html += '<p class="position position-' + escapeHTML(derived.position) + '">' +
-        escapeHTML(VOTE_LABEL[derived.position]) +
-        (derived.split ? ' <span class="split-flag">delegation split</span>' : '') + '</p>' +
+        escapeHTML(VOTE_LABEL[derived.position]) + '</p>' +
         '<p class="position-detail">' +
         num(totals.for, 'for') + ' of ' + state.seats + ' MEPs in favour, ' +
         num(totals.against, 'against') + ' against, ' +

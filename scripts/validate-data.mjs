@@ -12,6 +12,7 @@ import path from 'node:path';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 
 const BODIES = ['parliament', 'council', 'commission'];
+const POSITION_CODES = [0, 1, 2, 3];
 const POSITIONS = ['for', 'against', 'abstain', 'absent', 'not-applicable'];
 const FRAMINGS = ['supportive', 'critical', 'mixed', 'neutral'];
 const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
@@ -24,6 +25,35 @@ function note(file, message) { notes.push(`${file}: ${message}`); }
 
 async function readJSON(relative) {
   return JSON.parse(await readFile(path.join(ROOT, relative), 'utf8'));
+}
+
+/* The compact form: identities in the directory, votes as [id, position]. */
+function checkBallots(file, decision, directory) {
+  if (!Array.isArray(decision.ballots)) return;
+
+  const seen = new Set();
+  let unknown = 0;
+
+  decision.ballots.forEach(function (ballot, i) {
+    if (!Array.isArray(ballot) || ballot.length !== 2) {
+      fail(file, `ballot ${i} is not a [member id, position] pair`);
+      return;
+    }
+    if (typeof ballot[0] !== 'number') fail(file, `ballot ${i} has a non-numeric member id`);
+    if (!POSITION_CODES.includes(ballot[1])) {
+      fail(file, `ballot ${i} has position ${ballot[1]}; expected 0 for, 1 against, 2 abstain, 3 absent`);
+    }
+    if (seen.has(ballot[0])) fail(file, `member ${ballot[0]} votes twice`);
+    seen.add(ballot[0]);
+    if (directory && !directory[ballot[0]]) unknown += 1;
+  });
+
+  if (!directory) {
+    note(file, `${decision.ballots.length} ballots, but no member directory to resolve them ` +
+      '— run scripts/fetch-plenary.mjs --refresh-meps');
+  } else if (unknown) {
+    fail(file, `${unknown} ballots name members the directory does not know`);
+  }
 }
 
 function checkDecision(file, decision, states) {
@@ -127,11 +157,20 @@ if (totalSeats !== 720) fail('member-states.json', `seats total ${totalSeats}, e
 
 checkGeometry('eu-countries.geo.json', await readJSON('data/eu-countries.geo.json'), states);
 
+let directory = null;
+try {
+  const cache = await readJSON('data/reference/meps.json');
+  directory = cache.members || null;
+} catch (error) {
+  directory = null;
+}
+
 const index = await readJSON('data/decisions/index.json');
 for (const entry of index.decisions) {
   const decision = await readJSON(entry.file);
   if (decision.id !== entry.id) fail(entry.file, `id "${decision.id}" does not match the index entry "${entry.id}"`);
   checkDecision(path.basename(entry.file), decision, states);
+  checkBallots(path.basename(entry.file), decision, directory);
 }
 
 notes.forEach((message) => console.log(`note  ${message}`));
