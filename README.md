@@ -26,8 +26,8 @@ layers redraw the map:
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
 The 27 member states sit on a map that shows their neighbours — the UK, Norway,
-Switzerland, Ukraine, Belarus, the Western Balkans, Türkiye, Moldova, Kaliningrad — in
-grey, so the Union is placed rather than floating. Only the member states are
+Iceland, Switzerland, Ukraine, Belarus, the Western Balkans, Türkiye, Moldova,
+Kaliningrad — in grey, so the Union is placed rather than floating. Only the member states are
 clickable.
 
 Opening a country also shows which clubs it is in: EU, euro area, Schengen and NATO,

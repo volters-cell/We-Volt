@@ -128,8 +128,8 @@ joins; `metadata.membershipsAsOf` records what year it was last checked.
 
 - **`member: true`** — the 27 member states. Interactive, labelled, coloured by the
   layer.
-- **`member: false`** — the neighbours: the UK, Norway, Switzerland, Ukraine, Belarus,
-  the Western Balkans, Türkiye, Moldova and Kaliningrad. Drawn in grey behind
+- **`member: false`** — the neighbours: the UK, Norway, Iceland, Switzerland, Ukraine,
+  Belarus, the Western Balkans, Türkiye, Moldova and Kaliningrad. Drawn in grey behind
   everything, unlabelled, and invisible to the pointer, the keyboard and the screen
   reader. The view is fitted to the member states alone, so neighbours run off the
   edge and the viewBox crops them — a country cut off at the frame looks right where a

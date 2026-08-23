@@ -54,6 +54,7 @@ NEIGHBOURS = {
     "Albania": ("AL", "Albania"),
     "Belarus": ("BY", "Belarus"),
     "Bosnia and Herzegovina": ("BA", "Bosnia and Herzegovina"),
+    "Iceland": ("IS", "Iceland"),
     "Montenegro": ("ME", "Montenegro"),
     "Norway": ("NO", "Norway"),
     "Republic of Moldova": ("MD", "Moldova"),
