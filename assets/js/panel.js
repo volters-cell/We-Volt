@@ -180,6 +180,43 @@
     return html + '</section>';
   }
 
+  const BLOCS = [
+    ['euro', 'Euro', 'Outside the euro'],
+    ['schengen', 'Schengen', 'Outside Schengen'],
+    ['nato', 'NATO', 'Not in NATO']
+  ];
+
+  /* Which clubs a member state belongs to. Half of what makes a country's vote
+     legible is which rooms it is already in: a euro member votes on economic
+     governance it is bound by, a non-NATO member sits out defence files. */
+  function blocs(state) {
+    const memberships = state.memberships || {};
+    const chips = ['<span class="bloc bloc-in bloc-eu">EU since ' + state.joined + '</span>'];
+
+    BLOCS.forEach(function (entry) {
+      const membership = memberships[entry[0]] || { member: false };
+      const inside = membership.member;
+      const label = inside ? entry[1] + ' since ' + membership.since : entry[2];
+      const title = membership.note || (inside
+        ? entry[1] + ', since ' + membership.since
+        : entry[2]);
+      chips.push('<button type="button" class="bloc ' + (inside ? 'bloc-in' : 'bloc-out') +
+        ' bloc-' + entry[0] + '" data-bloc="' + entry[0] + '" aria-pressed="false" title="' +
+        escapeHTML(title) + '">' + escapeHTML(label) + '</button>');
+    });
+
+    // Two notes side by side need to say which club each one is about.
+    const notes = BLOCS
+      .filter(function (entry) { return (memberships[entry[0]] || {}).note; })
+      .map(function (entry) {
+        return '<span class="bloc-note"><strong>' + escapeHTML(entry[1]) + ':</strong> ' +
+          escapeHTML(memberships[entry[0]].note) + '</span>';
+      });
+
+    return '<div class="blocs">' + chips.join('') + '</div>' +
+      (notes.length ? '<p class="bloc-notes">' + notes.join('') + '</p>' : '');
+  }
+
   function render(node, decision, state, permalink) {
     const country = decision.countries[state.code] || {};
     node.innerHTML =
@@ -190,8 +227,8 @@
           escapeHTML(Data.formatDate(decision.date)) + '</p>' +
         '<h2 id="panel-title">' + escapeHTML(state.name) + '</h2>' +
         '<p class="panel-facts">' + state.seats + ' MEPs · ' + state.population.toFixed(1) +
-          ' million people · member since ' + state.joined + ' · capital ' +
-          escapeHTML(state.capital) + '</p>' +
+          ' million people · capital ' + escapeHTML(state.capital) + '</p>' +
+        blocs(state) +
         '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
           '">Link to this country’s record</a></p>' +
       '</header>' +

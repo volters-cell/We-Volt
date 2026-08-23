@@ -194,7 +194,7 @@
   function legendRow(className, label, key) {
     const swatch = '<span class="swatch ' + className + '"></span>';
     if (!key) return '<li>' + swatch + esc(label) + '</li>';
-    const on = state.isolate === key;
+    const on = Boolean(state.isolate) && state.isolate.kind === 'layer' && state.isolate.key === key;
     return '<li><button type="button" data-isolate="' + esc(key) + '" aria-pressed="' +
       (on ? 'true' : 'false') + '">' + swatch + esc(label) + '</button></li>';
   }
@@ -235,20 +235,42 @@
 
     const clickable = html.indexOf('data-isolate') !== -1;
     dom.legend.innerHTML = '<h3>Legend</h3><ul>' + html + '</ul>' +
-      (clickable
-        ? '<p class="legend-hint">' + (state.isolate
-            ? 'Showing one group. Click it again to bring the rest back.'
-            : 'Click a group to isolate it on the map and in the table.') + '</p>'
-        : '');
+      (state.isolate
+        ? '<p class="legend-hint">' + esc(isolateSummary()) + '</p>'
+        : (clickable
+            ? '<p class="legend-hint">Click a group to isolate it on the map and in the table. ' +
+              'The chips on a country do the same for the euro area, Schengen and NATO.</p>'
+            : ''));
   }
 
-  /* Which countries belong to the isolated group, in the current layer. */
+  /* Two things can be isolated: a group within the current layer (everyone who
+     voted against), or a bloc (everyone in the euro area). */
   function isolateMatches(code) {
-    if (!state.isolate) return true;
-    if (state.layer === 'press') {
-      return Data.pressFraming(state.decision.countries[code]).framing === state.isolate;
+    const isolate = state.isolate;
+    if (!isolate) return true;
+
+    if (isolate.kind === 'bloc') {
+      const memberships = (statesByCode[code] || {}).memberships || {};
+      const membership = memberships[isolate.key];
+      return Boolean(membership && membership.member);
     }
-    return Data.countryPosition(state.decision, code).position === state.isolate;
+    if (state.layer === 'press') {
+      return Data.pressFraming(state.decision.countries[code]).framing === isolate.key;
+    }
+    return Data.countryPosition(state.decision, code).position === isolate.key;
+  }
+
+  const BLOC_LABEL = { euro: 'the euro area', schengen: 'the Schengen area', nato: 'NATO' };
+
+  function isolateSummary() {
+    const isolate = state.isolate;
+    if (!isolate) return '';
+    const inside = states.filter(function (item) { return isolateMatches(item.code); }).length;
+    if (isolate.kind === 'bloc') {
+      return 'Showing ' + BLOC_LABEL[isolate.key] + ' — ' + inside + ' of 27 member states. ' +
+        'Click the chip again to bring the rest back.';
+    }
+    return 'Showing one group — ' + inside + ' of 27. Click it again to bring the rest back.';
   }
 
   function applyIsolation() {
@@ -257,11 +279,19 @@
       row.classList.toggle('is-dimmed',
         Boolean(state.isolate) && !isolateMatches(row.getAttribute('data-code')));
     });
+    Array.prototype.forEach.call(dom['panel-body'].querySelectorAll('[data-bloc]'), function (chip) {
+      const on = Boolean(state.isolate) && state.isolate.kind === 'bloc' &&
+        state.isolate.key === chip.getAttribute('data-bloc');
+      chip.setAttribute('aria-pressed', String(on));
+    });
     renderLegend();
   }
 
-  function setIsolate(key) {
-    state.isolate = state.isolate === key ? null : key;
+  function setIsolate(kind, key) {
+    const current = state.isolate;
+    state.isolate = current && current.kind === kind && current.key === key
+      ? null
+      : { kind: kind, key: key };
     applyIsolation();
   }
 
@@ -465,6 +495,7 @@
     } else {
       dom['panel-empty'].hidden = true;
       Panel.render(dom['panel-body'], state.decision, statesByCode[state.country], permalink(state.country));
+      if (state.isolate) applyIsolation();
       // On a narrow screen the panel is far below the map, so bring it into
       // view; on a wide one it is already beside the map and must not jump.
       const narrow = window.matchMedia('(max-width: 62rem)').matches;
@@ -565,8 +596,11 @@
   }
 
   function setLayer(layer, chosen) {
-    // "Against" means nothing once the map is showing press framing.
-    if (layer !== state.layer) state.isolate = null;
+    // "Against" means nothing once the map is showing press framing. A bloc
+    // still does, so that one stays.
+    if (layer !== state.layer && state.isolate && state.isolate.kind === 'layer') {
+      state.isolate = null;
+    }
     state.layer = layer;
     if (chosen) state.layerChosen = true;
     Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
@@ -637,7 +671,12 @@
       });
 
       dom['panel-body'].addEventListener('click', function (event) {
-        if (event.target.closest('.panel-close')) selectCountry(null);
+        if (event.target.closest('.panel-close')) {
+          selectCountry(null);
+          return;
+        }
+        const chip = event.target.closest('[data-bloc]');
+        if (chip) setIsolate('bloc', chip.getAttribute('data-bloc'));
       });
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
@@ -659,7 +698,7 @@
 
       dom.legend.addEventListener('click', function (event) {
         const button = event.target.closest('[data-isolate]');
-        if (button) setIsolate(button.getAttribute('data-isolate'));
+        if (button) setIsolate('layer', button.getAttribute('data-isolate'));
       });
 
       dom.outcome.addEventListener('click', function (event) {

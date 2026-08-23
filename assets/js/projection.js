@@ -123,8 +123,11 @@
       return { feature: feature, polygons: polygons };
     });
 
+    // The frame is fitted to the member states alone. Neighbours are drawn on
+    // the same projection and run off the edge, where the viewBox crops them.
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     projected.forEach(function (item) {
+      if (item.feature.properties.member === false) return;
       item.polygons.forEach(function (ring) {
         ring.forEach(function (p) {
           if (p[0] < minX) minX = p[0];
@@ -169,9 +172,13 @@
           area = area / 2;
           if (Math.abs(area) > Math.abs(largestArea)) {
             largestArea = area;
-            const pole = poleOfInaccessibility(screen);
-            labelPoint = pole ? pole.point : screen[0];
-            inscribed = pole ? pole.radius : 0;
+            if (item.feature.properties.member === false) {
+              labelPoint = screen[0];
+            } else {
+              const pole = poleOfInaccessibility(screen);
+              labelPoint = pole ? pole.point : screen[0];
+              inscribed = pole ? pole.radius : 0;
+            }
           }
           screen.forEach(function (p) { cx += p[0]; cy += p[1]; count++; });
         });
@@ -179,6 +186,7 @@
         return {
           code: item.feature.properties.code,
           name: item.feature.properties.name,
+          member: item.feature.properties.member !== false,
           path: d,
           area: Math.abs(largestArea),
           // How much room the shape actually has for a label: Croatia's arm is

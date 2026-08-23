@@ -40,10 +40,17 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       'aria-label': 'Member states of the European Union'
     });
 
+    // Neighbours are context: grey, unlabelled, and invisible to the pointer,
+    // the keyboard and the screen reader alike.
+    const contextLayer = el('g', { class: 'context', 'aria-hidden': 'true' });
     const shapeLayer = el('g', { class: 'shapes' });
     const labelLayer = el('g', { class: 'labels', 'aria-hidden': 'true' });
 
     this.layout.shapes.forEach(function (shape) {
+      if (!shape.member) {
+        contextLayer.appendChild(el('path', { d: shape.path, class: 'context-shape' }));
+        return;
+      }
       const small = shape.area < SMALL_AREA;
       // A label that cannot sit inside the country is drawn above it in dark
       // type instead of white-on-white over the sea.
@@ -101,6 +108,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       self.shapes[shape.code] = { shape: shape, group: group, label: label };
     });
 
+    svg.appendChild(contextLayer);
     svg.appendChild(shapeLayer);
     svg.appendChild(labelLayer);
 
@@ -280,7 +288,9 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       self.shapes[code].group.classList.remove('revealed');
     }, this);
 
-    const order = this.layout.shapes.slice().sort(function (a, b) {
+    const order = this.layout.shapes.filter(function (shape) {
+      return shape.member;
+    }).sort(function (a, b) {
       return a.centroid[0] - b.centroid[0];
     });
 

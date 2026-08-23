@@ -108,7 +108,10 @@ function checkDecision(file, decision, states) {
 }
 
 function checkGeometry(file, geo, states) {
-  const drawn = geo.features.map((feature) => feature.properties.code).sort();
+  const drawn = geo.features
+    .filter((feature) => feature.properties.member !== false)
+    .map((feature) => feature.properties.code)
+    .sort();
   const expected = states.map((state) => state.code).sort();
   if (drawn.join() !== expected.join()) {
     fail(file, 'the map outline and the member-state list disagree');

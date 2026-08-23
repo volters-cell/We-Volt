@@ -25,6 +25,16 @@ layers redraw the map:
 | **Press framing** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
+The 27 member states sit on a map that shows their neighbours — the UK, Norway,
+Switzerland, Ukraine, Belarus, the Western Balkans, Türkiye, Moldova, Kaliningrad — in
+grey, so the Union is placed rather than floating. Only the member states are
+clickable.
+
+Opening a country also shows which clubs it is in: EU, euro area, Schengen and NATO,
+each with the year it joined, and a note where it stayed out — "outside Schengen"
+means something very different for Ireland than it does for Cyprus. Those chips are
+buttons: clicking one lights up that bloc across the whole map.
+
 The map holds the left of the screen while the reading column on the right carries the
 feed, the decision and the country record. Clicking a country opens it; clicking the
 sea, pressing Escape, or the panel's own Close button shuts it again.

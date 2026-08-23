@@ -37,6 +37,9 @@
   --press-neutral: #8b93a3;
   --press-none: #e2e5ec;
 
+  --context: #dcdfe6;
+  --context-line: #ccd1da;
+
   --radius: 10px;
   --shadow: 0 1px 2px rgba(16, 24, 40, .07), 0 8px 24px rgba(16, 24, 40, .06);
   --font: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -82,6 +85,9 @@
     --body-parliament: #9b8ff0;
     --body-council: #6f9ae8;
     --body-commission: #4fb3a8;
+
+    --context: #1c2330;
+    --context-line: #29313d;
   }
 }
 
@@ -116,6 +122,9 @@
     --body-parliament: #9b8ff0;
     --body-council: #6f9ae8;
     --body-commission: #4fb3a8;
+
+    --context: #1c2330;
+    --context-line: #29313d;
 }
 
 * { box-sizing: border-box; }
@@ -332,6 +341,16 @@ main {
 .map { position: relative; }
 .eu-map { width: 100%; height: auto; display: block; touch-action: manipulation; }
 
+/* The neighbours. Present enough to place the Union, quiet enough that the
+   member states remain the only thing the eye lands on. */
+.context-shape {
+  fill: var(--context);
+  stroke: var(--context-line);
+  stroke-width: .6;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
 .country { cursor: pointer; }
 .country-shape { stroke: var(--surface); stroke-width: .8; stroke-linejoin: round; fill: var(--vote-na); transition: fill .15s ease; }
 .country-hit { fill: transparent; }
@@ -519,6 +538,38 @@ tbody tr.is-dimmed { opacity: .35; }
 .panel-head h2 { font-family: var(--serif); font-size: 1.75rem; margin: .2rem 0 .35rem; }
 .panel-facts { margin: 0; font-size: .85rem; color: var(--ink-soft); }
 .panel-actions { margin: .6rem 0 0; font-size: .82rem; }
+
+/* Membership chips. A filled chip is a club the country is in; an outlined one
+   is a club it stayed out of, which is as much of the story. */
+.blocs { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.bloc {
+  font: inherit;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  padding: .16rem .55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+span.bloc { cursor: default; }
+.bloc-in { background: color-mix(in srgb, var(--eu-blue) 12%, transparent); color: var(--eu-blue); border-color: color-mix(in srgb, var(--eu-blue) 30%, transparent); }
+.bloc-out { background: transparent; color: var(--ink-faint); border-color: var(--line-strong); border-style: dashed; }
+.bloc-in.bloc-euro { background: color-mix(in srgb, var(--vote-for) 12%, transparent); color: var(--vote-for); border-color: color-mix(in srgb, var(--vote-for) 32%, transparent); }
+.bloc-in.bloc-nato { background: color-mix(in srgb, var(--press-mixed) 14%, transparent); color: var(--press-mixed); border-color: color-mix(in srgb, var(--press-mixed) 32%, transparent); }
+button.bloc:hover { filter: brightness(.94); }
+button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); border-style: solid; }
+.bloc-notes { margin: .45rem 0 0; font-size: .78rem; color: var(--ink-faint); display: grid; gap: .15rem; }
+.bloc-note strong { color: var(--ink-soft); font-weight: 600; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bloc-in { color: var(--focus); }
+  :root:not([data-theme="light"]) .bloc-in.bloc-euro { color: var(--vote-for); }
+  :root:not([data-theme="light"]) .bloc-in.bloc-nato { color: var(--press-mixed); }
+}
+:root[data-theme="dark"] .bloc-in { color: var(--focus); }
+:root[data-theme="dark"] .bloc-in.bloc-euro { color: var(--vote-for); }
+:root[data-theme="dark"] .bloc-in.bloc-nato { color: var(--press-mixed); }
 
 .card { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 1rem; }
 .card:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }

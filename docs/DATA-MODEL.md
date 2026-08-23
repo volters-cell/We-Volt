@@ -105,10 +105,38 @@ the European Council decision on the Parliament's composition), populations used
 the Council arithmetic, capitals and accession years. Council population figures are
 fixed annually — refresh this file each year and note the source in its `metadata`.
 
+Each member state also carries its memberships, which the country panel shows as
+chips and which the map can isolate:
+
+```jsonc
+"memberships": {
+  "euro":     { "member": true,  "since": 2026 },
+  "schengen": { "member": true,  "since": 2025, "note": "Air and sea borders opened in 2024, land borders in 2025." },
+  "nato":     { "member": false, "note": "Neutrality written into constitutional law since 1955." }
+}
+```
+
+`since` is the year the thing actually took effect — for Schengen, the year internal
+border controls came down, not the year the agreement was signed. A country outside a
+bloc carries a `note` saying why, because "outside Schengen" means something very
+different for Ireland than it does for Cyprus. Update this file when a member state
+joins; `metadata.membershipsAsOf` records what year it was last checked.
+
 `data/eu-countries.geo.json` is built from public-domain boundaries by
-`scripts/build_map_data.py`: EU-27 only, clipped to the map window, Douglas-Peucker
-simplified, rounded to three decimals. It is 56 KB, which is small enough to ship
-without a tile server and detailed enough to recognise your own coastline.
+`scripts/build_map_data.py`. It holds two kinds of feature, told apart by
+`properties.member`:
+
+- **`member: true`** — the 27 member states. Interactive, labelled, coloured by the
+  layer.
+- **`member: false`** — the neighbours: the UK, Norway, Switzerland, Ukraine, Belarus,
+  the Western Balkans, Türkiye, Moldova and Kaliningrad. Drawn in grey behind
+  everything, unlabelled, and invisible to the pointer, the keyboard and the screen
+  reader. The view is fitted to the member states alone, so neighbours run off the
+  edge and the viewBox crops them — a country cut off at the frame looks right where a
+  country missing entirely looks broken.
+
+The file is around 80 KB, small enough to ship without a tile server and detailed
+enough to recognise your own coastline.
 
 ```bash
 python3 scripts/build_map_data.py path/to/europe.geojson data/eu-countries.geo.json
