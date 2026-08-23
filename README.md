@@ -67,8 +67,10 @@ filter for a country, a group, a party or a person.
 The header says when the last plenary session ran and where, and when the next one
 starts, from the Parliament's own calendar.
 
-Also: a sortable table of all 27 member states, and a permalink for every country so a
-journalist can link straight to `#/<decision>/PL`.
+Also: a sortable table of all 27 member states, and links made on demand — **Link to
+this vote**, and one in every country panel — so a journalist can point straight at
+`#/<vote>/PL`. Browsing does not write to the address bar, so reopening the site brings
+you back to the search page rather than to whatever you last clicked.
 
 It works with a keyboard: arrow keys walk between neighbouring countries, Enter opens
 one, Escape closes. Malta and Luxembourg have click targets as big as everyone else's.

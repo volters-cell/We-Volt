@@ -475,6 +475,12 @@ tbody tr.is-dimmed { opacity: .35; }
 
 .meter-fill { transition: width .9s cubic-bezier(.25, .8, .3, 1); }
 
+.vote-link {
+  float: right;
+  font-size: .76rem;
+  margin-left: .5rem;
+}
+
 .replay {
   font: inherit;
   font-size: .76rem;

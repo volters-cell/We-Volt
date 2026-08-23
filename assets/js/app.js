@@ -610,7 +610,9 @@
   function renderOutcome() {
     const decision = state.decision;
     const result = decision.outcome || {};
-    let html = '<button type="button" class="replay">Replay</button>' +
+    let html = '<a class="permalink vote-link" href="' + esc(permalink(state.country)) +
+      '">Link to this vote</a>' +
+      '<button type="button" class="replay">Replay</button>' +
       '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
       esc(result.headline || result.result || '') + '</p>';
 
@@ -763,16 +765,13 @@
     return { decisionId: parts[0] || null, code: (parts[1] || '').toUpperCase() || null };
   }
 
+  /* The address bar is deliberately NOT a running record of what you clicked.
+     Writing every selection into it meant a tab reopened days later came back
+     on somebody's old vote instead of the search page. Links are made on
+     demand instead — the "Link to this vote" control and the one in the
+     country panel — and those links still open exactly what they name. */
   function writeHash() {
-    const target = permalink(state.country);
-    if (location.hash === target) return;
-    try {
-      history.replaceState(null, '', target);
-    } catch (error) {
-      // Some embedded contexts refuse history writes. The permalink in the
-      // panel still carries the address; only the location bar goes stale.
-      location.hash = target;
-    }
+    return;
   }
 
   /* ---------------------------------------------------------------- render */
