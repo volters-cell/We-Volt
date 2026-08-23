@@ -100,6 +100,10 @@ npm run backfill  # import every sitting since the 2024 elections
 npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ```
 
+[about.html](about.html) is the page a reader — or a funder — opens to check the project:
+where each vote comes from, what has been done to it, what is missing and why, and the
+licence on each part. It is deliberately blunt about the gaps.
+
 ## The data
 
 **The votes are real.** 614 roll-call votes — every main vote the Parliament has taken

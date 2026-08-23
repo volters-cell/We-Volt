@@ -56,7 +56,7 @@
     if (!groups.length) return '';
     return '<table class="group-table">' +
       '<caption>By political group</caption>' +
-      '<thead><tr><th scope="col">Group</th><th scope="col">Seats</th>' +
+      '<thead><tr><th scope="col">Group</th><th scope="col">Members</th>' +
       '<th scope="col">For</th><th scope="col">Against</th><th scope="col">Abstain</th>' +
       '<th scope="col">Absent</th></tr></thead><tbody>' +
       groups.map(function (group) {
@@ -66,23 +66,6 @@
           '<td class="cell-against">' + (group.against || 0) + '</td>' +
           '<td class="cell-abstain">' + (group.abstain || 0) + '</td>' +
           '<td class="cell-absent">' + (group.absent || 0) + '</td></tr>';
-      }).join('') +
-      '</tbody></table>';
-  }
-
-  function mepRows(country) {
-    const meps = country.meps || [];
-    if (!meps.length) return '';
-    return '<table class="mep-table">' +
-      '<caption>Every MEP from this member state</caption>' +
-      '<thead><tr><th scope="col">Member</th><th scope="col">National party</th>' +
-      '<th scope="col">Group</th><th scope="col">Vote</th></tr></thead><tbody>' +
-      meps.map(function (mep) {
-        return '<tr><th scope="row">' + escapeHTML(mep.name) + '</th>' +
-          '<td>' + escapeHTML(mep.party || '—') + '</td>' +
-          '<td>' + escapeHTML(mep.group || '—') + '</td>' +
-          '<td><span class="vote-pill vote-' + escapeHTML(mep.vote) + '">' +
-          escapeHTML(VOTE_LABEL[mep.vote] || mep.vote) + '</span></td></tr>';
       }).join('') +
       '</tbody></table>';
   }
@@ -113,6 +96,7 @@
 
     if (totals) {
       const cast = totals.for + totals.against + totals.abstain;
+      totals.total = cast + totals.absent;
       const share = cast ? Math.round((totals.for / cast) * 100) : null;
       html += '<p class="position position-' + escapeHTML(derived.position) + '">' +
         escapeHTML(VOTE_LABEL[derived.position]) + '</p>' +
@@ -123,7 +107,10 @@
         num(totals.absent, 'absent') + ' did not vote' +
         (share === null ? '.' : ' — ' + num(share + '%', totals.for > totals.against ? 'for' : 'against') +
           ' of votes cast were in favour.') +
-        '</p>' + bar(totals, state.seats) + groupRows(country) + mepRows(country);
+        '</p>' + bar(totals, state.seats) + groupRows(country) +
+        '<p class="panel-actions"><button type="button" class="show-in-roll" data-country="' +
+        escapeHTML(state.code) + '">Show ' + escapeHTML(state.name) + '’s ' + totals.total +
+        ' members in the roll-call</button></p>';
     }
 
     return html + '</section>';
@@ -151,10 +138,12 @@
     const press = country.press || [];
     const framing = Data.pressFraming(country);
 
-    let html = '<section class="card"><h3>How the press told it</h3>';
+    let html = '<section class="card"><h3>How the press told it ' +
+      '<span class="chip chip-planned">next</span></h3>';
     if (!press.length) {
-      return html + '<p class="empty">No coverage indexed yet. This is the gap the project ' +
-        'is built to close — a journalist in this country can file the first entry.</p></section>';
+      return html + '<p class="empty">Not built yet. The vote is a matter of record; how it was ' +
+        'told at home is not, and no institution collects it. Indexing that country by country, ' +
+        'with reporters in each member state, is what this project is for.</p></section>';
     }
 
     html += '<p class="framing-summary">Dominant framing: <span class="framing framing-' +

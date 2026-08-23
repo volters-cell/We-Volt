@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EU Tracker — about the data</title>
+  <meta name="description" content="Where EU Tracker's roll-call votes come from, how they are processed, what is missing, and how to contribute.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>
+        <span class="brand-name">EU Tracker</span>
+        <span class="brand-tagline">Every vote of the European Parliament, member by member</span>
+      </span>
+    </div>
+    <p class="header-meta"><a href="index.html" class="header-about">← Back to the votes</a></p>
+  </header>
+
+  <main class="prose">
+    <h1>About the data</h1>
+
+    <p class="prose-lead">EU Tracker holds every main roll-call vote the European Parliament has
+      taken since its term began on 16 July 2024: how every member voted, by name, by political
+      group and by member state. The chamber seats 720 at any moment; 743 people have held
+      one of those seats so far this term, and all of them are here. This page says where that comes from, what has been
+      done to it, and what is still missing.</p>
+
+    <h2>Where the votes come from</h2>
+    <p>When the Parliament votes by roll call, it publishes an annex to the minutes of that
+      sitting naming every member and how they voted. That annex is the record. Everything here
+      derives from it.</p>
+    <p>The archive was imported in bulk from the
+      <a href="https://github.com/HowTheyVote/data">HowTheyVote.eu dataset</a>, which compiles
+      those annexes for the whole term and publishes them as CSV. <strong>That work is theirs and
+      this project credits it.</strong> Check their data licence at
+      <a href="https://howtheyvote.eu/about">howtheyvote.eu/about</a> before reusing anything here
+      that derives from it.</p>
+    <p>Keeping current is done differently, straight from the Parliament, so the site does not
+      depend on anyone standing between it and the source:</p>
+    <table class="prose-table">
+      <thead>
+        <tr><th scope="col">Document</th><th scope="col">What it gives</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Roll-call annex to the minutes</td><td>Every member's vote for one sitting</td></tr>
+        <tr><td>Votes list</td><td>What the Parliament says carried and what fell</td></tr>
+        <tr><td>MEP directory</td><td>Names, countries and groups</td></tr>
+        <tr><td>Session calendar and meeting records</td><td>When each plenary sits, and whether in Strasbourg or Brussels</td></tr>
+      </tbody>
+    </table>
+    <p>An automated job reads them during each sitting and again each night — the votes list is
+      published a day later than the votes themselves, so a same-day import states the result as
+      derived and the later run replaces it with the Parliament's own.</p>
+
+    <h2>What has been done to it</h2>
+    <ul>
+      <li><strong>Nothing has been interpreted.</strong> A member state is coloured by where most
+        of its delegation voted, which is arithmetic. There is no scoring, ranking, or
+        judgement of members, groups or countries anywhere in this project.</li>
+      <li><strong>Only main votes are imported.</strong> A plenary produces hundreds of roll
+        calls, mostly on amendments. The archive keeps the vote on each text as a whole; the
+        importer can take everything with one flag.</li>
+      <li><strong>Identities are stored once.</strong> Each vote records pairs of member id and
+        position rather than repeating names, which is why a five-year term is about 100 MB of
+        static files rather than 0.9 GB, and why the site costs nothing to run.</li>
+      <li><strong>Every record is checked before it is published.</strong> A validator refuses
+        records whose ballots name members the directory does not know, whose group totals do not
+        add up, or whose sources are missing.</li>
+    </ul>
+
+    <h2>What is missing</h2>
+    <p>Stated plainly, because a project that hides its gaps cannot be checked:</p>
+    <ul>
+      <li><strong>The Council and the Commission.</strong> Neither publishes votes in a
+        machine-readable form. Council results exist as documents in a public register; reading
+        them is a scraping problem nobody has solved, and until it is, this site is Parliament
+        only.</li>
+      <li><strong>Plain-language summaries.</strong> Imported records carry the Parliament's own
+        procedural title and nothing else. Turning "Décision d'engager des négociations
+        interinstitutionnelles" into a sentence a reader recognises is editorial work.</li>
+      <li><strong>The press layer.</strong> How a vote was reported in each member state is the
+        part no institution collects, and the reason this project exists. It needs reporters in
+        each country, working to
+        <a href="docs/CONTRIBUTING-DATA.md">a written standard</a> on how coverage is chosen and
+        tagged.</li>
+      <li><strong>National parties.</strong> The bulk dataset carries each member's European
+        group but not their party at home, which matters for reading a delegation.</li>
+      <li><strong>Languages.</strong> The interface is English only. Interface strings are few
+        and static; the harder half is summaries in 24 languages.</li>
+    </ul>
+
+    <h2>How to check it, and how to correct it</h2>
+    <p>Every record is a JSON file in
+      <a href="https://github.com/volters-cell/We-Volt">the repository</a>, with its sources
+      inside it. Nothing is edited silently: a correction is a commit, visible in the history.
+      If you find an error, open an issue against the repository — and if it comes from the
+      upstream dataset, report it to them as well, so it is fixed for everyone.</p>
+
+    <h2>Licence</h2>
+    <ul>
+      <li>Code: MIT.</li>
+      <li>Data authored here: CC BY 4.0.</li>
+      <li>Imported records: the terms of their source, as above.</li>
+      <li>Boundaries: public-domain Natural Earth geometry, simplified for display only. They
+        imply no position on any border.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">← Back to the votes</a></p>
+  </footer>
+</body>
+</html>

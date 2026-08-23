@@ -231,6 +231,10 @@ main {
 
 @media (max-width: 62rem) {
   main { grid-template-columns: minmax(0, 1fr); }
+  /* Scrolling past a full-width map to reach the vote you just opened is the
+     wrong way round on a phone. */
+  .map-section { order: 2; }
+  .rail { order: 1; }
 }
 
 /* ---------------------------------------------------------------- decision */
@@ -690,6 +694,52 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .numeric { font-variant-numeric: tabular-nums; }
 .link-button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; color: var(--focus); text-align: left; font-weight: 600; }
 
+/* ---------------------------------------------------------------- intro */
+
+.intro { margin-bottom: 1rem; }
+.intro-lead {
+  margin: 0 0 .35rem;
+  font-family: var(--serif);
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  line-height: 1.4;
+  color: var(--ink);
+  max-width: 46ch;
+  text-wrap: balance;
+}
+.intro-stats {
+  margin: 0;
+  font-size: .78rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .01em;
+}
+
+.header-about { font-weight: 600; }
+
+.chip-planned {
+  background: transparent;
+  border: 1px dashed var(--line-strong);
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  font-size: .62rem;
+  letter-spacing: .08em;
+  vertical-align: middle;
+  margin-left: .3rem;
+}
+
+.show-in-roll {
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--focus);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.show-in-roll:hover { text-decoration: underline; }
+
 /* ---------------------------------------------------------------- search */
 
 .visually-hidden {
@@ -855,11 +905,21 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 }
 .roll-bar .seg:hover { filter: brightness(1.08); }
 .roll-bar .seg-value { font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
-.roll-bar .seg-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .07em; opacity: .85; }
+.roll-bar .seg-label {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  opacity: .85;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 34rem) { .roll-bar .seg-label { display: none; } }
 .roll-bar .seg-for { background: var(--vote-for); }
 .roll-bar .seg-against { background: var(--vote-against); }
-.roll-bar .seg-abstain { background: var(--vote-abstain); }
-.roll-bar .seg-absent { background: var(--vote-absent); flex: 0 0 auto; }
+.roll-bar .seg-abstain { background: var(--vote-abstain); color: #1c1400; }
+.roll-bar .seg-absent { background: var(--vote-absent); color: #14181f; flex: 0 0 auto; }
 /* One segment chosen: the others step back rather than disappear. */
 .roll-bar:has(.is-active) .seg:not(.is-active) { opacity: .45; }
 .roll-bar .seg.is-active { box-shadow: inset 0 0 0 2px var(--ink); }
@@ -1094,6 +1154,36 @@ button.permalink {
   cursor: pointer;
 }
 .panel-close:hover { color: var(--ink); border-color: var(--line-strong); }
+
+/* ---------------------------------------------------------------- prose */
+
+.prose {
+  display: block;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2.5rem) 4rem;
+}
+.prose h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -.015em;
+}
+.prose h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  margin: 2.2rem 0 .6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+.prose-lead { font-size: 1.08rem; color: var(--ink-soft); margin: 0 0 1.4rem; }
+.prose p { max-width: 66ch; margin: 0 0 .9rem; }
+.prose ul { max-width: 66ch; padding-left: 1.1rem; margin: 0 0 .9rem; }
+.prose li { margin-bottom: .5rem; }
+.prose-table { width: 100%; margin: 1rem 0; font-size: .9rem; }
+.prose-table th, .prose-table td { padding: .45rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.prose-table thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
 
 /* ---------------------------------------------------------------- footer */
 

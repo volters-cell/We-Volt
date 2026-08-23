@@ -25,12 +25,13 @@
       <span class="brand-mark" aria-hidden="true"></span>
       <span>
         <span class="brand-name">EU Tracker</span>
-        <span class="brand-tagline">One decision, country by country</span>
+        <span class="brand-tagline">Every vote of the European Parliament, member by member</span>
       </span>
     </div>
     <p class="header-meta">
       <span id="header-plenary"></span>
       <span id="header-count"></span>
+      <a href="about.html" class="header-about">About the data</a>
     </p>
   </header>
 
@@ -56,6 +57,13 @@
     <div class="rail">
       <section id="tracker" class="tracker" aria-labelledby="tracker-heading">
         <h2 id="tracker-heading" class="visually-hidden">Search the votes</h2>
+
+        <div class="intro" id="intro">
+          <p class="intro-lead">Search any roll-call vote the Parliament has taken since the
+            June 2024 election, and see how every member voted — by name, by group,
+            by country.</p>
+          <p class="intro-stats" id="intro-stats"></p>
+        </div>
 
         <div class="search">
           <label class="visually-hidden" for="search-input">Search votes and members</label>
@@ -111,7 +119,7 @@
             <button type="button" id="roll-reset" hidden>Clear filters</button>
           </div>
 
-          <p class="roll-count" id="roll-count"></p>
+          <p class="roll-count" id="roll-count" aria-live="polite"></p>
           <div id="roll-body"></div>
         </div>
 
@@ -154,6 +162,7 @@
       <a href="https://github.com/HowTheyVote/data">HowTheyVote.eu dataset</a>, which compiles the
       European Parliament's own roll-call annexes.
       Boundaries are simplified for display and imply no position on any border.
+      <a href="about.html">Where the data comes from, and what is missing</a>.
     </p>
   </footer>
 

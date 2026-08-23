@@ -13,6 +13,7 @@
   let calendar = { sessions: [] };
   let directory = null;
   let memberIndex = null;      // every MEP, for search
+  let manyBodies = false;      // is there more than one institution to filter between?
   let memberCache = {};        // their voting records, fetched on demand
   let bySourceId = {};         // vote id in the source data -> record in the index
 
@@ -318,7 +319,8 @@
     // you search or ask for all votes again.
     const browsing = Boolean(state.query) || !(state.decision || state.member);
     dom['session-list'].hidden = !browsing;
-    document.querySelector('.tracker-filters').hidden = !browsing;
+    document.querySelector('.tracker-filters').hidden = !browsing || !manyBodies;
+    document.getElementById('intro').hidden = !browsing;
     if (!browsing) {
       dom['search-status'].hidden = true;
       return;
@@ -524,9 +526,8 @@
       dom.legend.innerHTML = '<h3>Legend</h3><ul>' +
         legendRow('layer-neutral', 'Member state of the European Union') +
         '<li><span class="swatch swatch-context"></span>Europe outside the Union</li>' +
-        '</ul><p class="legend-hint">Pick a vote from the list to colour the map by ' +
-        'how each member state voted. The chips on a country isolate the euro area, ' +
-        'Schengen or NATO.</p>';
+        '</ul><p class="legend-hint">Pick a vote to colour the map by how each member ' +
+        'state voted, or click a country for its own record.</p>';
       return;
     }
 
@@ -1017,6 +1018,12 @@
 
     const costs = hasImpact(decision);
     document.getElementById('tab-impact').hidden = !costs;
+
+    const press = Object.keys(decision.countries).some(function (code) {
+      return (decision.countries[code].press || []).length;
+    });
+    document.getElementById('tab-press').hidden = !press;
+    if (!press && state.layer === 'press') setLayer('vote');
     if (!state.layerChosen) {
       // "How they voted" is an empty question for an act nobody voted on, so a
       // Commission file opens on the coverage instead.
@@ -1154,11 +1161,28 @@
         totals[item.body] = (totals[item.body] || 0) + 1;
         return totals;
       }, {});
-      dom['header-count'].textContent = index.decisions.length + ' votes tracked · ' +
-        (counts.parliament || 0) + ' Parliament · ' + (counts.council || 0) + ' Council · ' +
-        (counts.commission || 0) + ' Commission' +
+      dom['header-count'].textContent = index.decisions.length.toLocaleString('en-GB') +
+        ' roll-call votes · ' + (memberIndex ? memberIndex.length + ' members · ' : '') +
         (index.metadata && index.metadata.updated
-          ? ' · updated ' + Data.formatDate(index.metadata.updated) : '');
+          ? 'updated ' + Data.formatDate(index.metadata.updated) : '');
+
+      // Institutions with nothing in them are not offered as filters: an empty
+      // shelf reads as a broken site rather than an honest gap.
+      Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
+        const body = button.getAttribute('data-filter');
+        button.hidden = body !== 'all' && !counts[body];
+      });
+      manyBodies = Object.keys(counts).filter(function (key) { return counts[key]; }).length > 1;
+
+      const ballots = index.decisions.reduce(function (sum, item) {
+        return sum + (item.mepCount || 0);
+      }, 0);
+      // 743, not 720: seats are 720 at any moment, but members come and go
+      // through a term and every one of them is in here.
+      document.getElementById('intro-stats').textContent =
+        index.decisions.length.toLocaleString('en-GB') + ' votes · ' +
+        (memberIndex ? memberIndex.length + ' members who have sat this term · ' : '') +
+        ballots.toLocaleString('en-GB') + ' individual ballots';
 
       index.decisions.forEach(function (item) {
         if (item.sourceId) bySourceId[item.sourceId] = item;
@@ -1249,6 +1273,12 @@
       dom['panel-body'].addEventListener('click', function (event) {
         if (event.target.closest('.panel-close')) {
           selectCountry(null);
+          return;
+        }
+        const inRoll = event.target.closest('.show-in-roll');
+        if (inRoll) {
+          setRoll({ country: inRoll.getAttribute('data-country'), tab: 'members' });
+          dom.roll.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
         const chip = event.target.closest('[data-bloc]');
