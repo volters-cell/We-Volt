@@ -959,6 +959,12 @@
     state.country = code && statesByCode[code] ? code : null;
     if (map) map.setSelected(state.country);
 
+    // Picking a country narrows the roll-call to its members: the question
+    // after clicking Spain is who in Spain voted which way.
+    if (state.decision && (roll.country || state.country)) {
+      setRoll({ country: state.country || '', tab: state.country ? 'members' : roll.tab });
+    }
+
     if (!state.country) {
       dom['panel-body'].hidden = true;
       dom['panel-empty'].hidden = false;
