@@ -89,15 +89,31 @@
 
         <div id="outcome" class="outcome"></div>
 
-        <details class="decision-detail" id="roll-call-detail">
-          <summary>How every member voted</summary>
-          <div class="roll-call-tools">
-            <label class="visually-hidden" for="roll-call-filter">Filter this roll-call</label>
-            <input id="roll-call-filter" type="search" autocomplete="off"
-                   placeholder="Filter by country, group, party or name…">
+        <div class="roll" id="roll">
+          <div class="roll-bar" id="roll-bar"></div>
+          <p class="roll-summary" id="roll-summary"></p>
+
+          <div class="roll-tabs" role="tablist" aria-label="Break the vote down by">
+            <button type="button" role="tab" data-roll-tab="members" aria-selected="true">MEPs</button>
+            <button type="button" role="tab" data-roll-tab="groups" aria-selected="false">Political groups</button>
+            <button type="button" role="tab" data-roll-tab="countries" aria-selected="false">Countries</button>
           </div>
-          <div id="roll-call"></div>
-        </details>
+
+          <div class="roll-filters">
+            <label class="visually-hidden" for="roll-name">Filter by name</label>
+            <input id="roll-name" type="search" autocomplete="off" placeholder="Filter by name">
+            <label class="visually-hidden" for="roll-group">Political group</label>
+            <select id="roll-group"></select>
+            <label class="visually-hidden" for="roll-country">Country</label>
+            <select id="roll-country"></select>
+            <label class="visually-hidden" for="roll-position">Position</label>
+            <select id="roll-position"></select>
+            <button type="button" id="roll-reset" hidden>Clear filters</button>
+          </div>
+
+          <p class="roll-count" id="roll-count"></p>
+          <div id="roll-body"></div>
+        </div>
 
       </section>
 
@@ -128,24 +144,6 @@
       </section>
     </div>
 
-    <section class="table-section" aria-labelledby="table-heading">
-      <h2 id="table-heading">All 27 member states</h2>
-      <p class="table-hint">The roll-call as a list, for readers who want the positions straight. Click a column to sort. Press coverage is in the country panel.</p>
-      <p id="table-empty" class="table-empty" hidden></p>
-      <div class="table-scroll">
-        <table id="country-table">
-          <thead>
-            <tr>
-              <th scope="col"><button type="button" data-sort="name">Member state</button></th>
-              <th scope="col"><button type="button" data-sort="position">Position</button></th>
-              <th scope="col" data-col="meps"><button type="button" data-sort="meps">MEPs for / against / abstain</button></th>
-              <th scope="col" data-col="impact" hidden><button type="button" data-sort="impact">Estimated effect</button></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">

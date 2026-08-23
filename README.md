@@ -60,17 +60,19 @@ of them at once. Searching unfolds whatever it finds. A search matches a word fr
 title, a procedure reference, or — inside an open vote — an MEP by name, party or group,
 which jumps to that member's country.
 
-Open a vote and **How every member voted** lists the whole roll-call: each member state
-with its position and totals, every MEP by name where the record carries them, and a
-filter for a country, a group, a party or a person.
+Open a vote and the whole chamber is there: a bar showing how it split, then the
+roll-call broken down three ways — **MEPs**, **Political groups**, **Countries** — with
+filters for name, group, country and position. Every part of the bar is a filter:
+click the red block and you get the 169 members who voted against. Click a group or a
+country row to narrow to it, or any name to follow that member across every vote.
 
 The header says when the last plenary session ran and where, and when the next one
 starts, from the Parliament's own calendar.
 
-Also: a sortable table of all 27 member states, and links made on demand — **Link to
-this vote**, and one in every country panel — so a journalist can point straight at
-`#/<vote>/PL`. Browsing does not write to the address bar, so reopening the site brings
-you back to the search page rather than to whatever you last clicked.
+Links are made on demand: **Copy link to this vote**, and one in every country panel,
+put a real pasteable address on the clipboard. Browsing does not write to the address
+bar, so reopening the site brings you back to the search page rather than to whatever
+you last clicked.
 
 It works with a keyboard: arrow keys walk between neighbouring countries, Enter opens
 one, Escape closes. Malta and Luxembourg have click targets as big as everyone else's.

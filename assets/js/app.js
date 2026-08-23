@@ -27,10 +27,11 @@
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
-   'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
+   'panel-empty', 'panel-body', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
-   'mep-results', 'decision-section', 'back-to-votes', 'session-list', 'roll-call',
-   'roll-call-detail', 'roll-call-filter', 'member-section', 'member-name', 'member-group',
+   'mep-results', 'decision-section', 'back-to-votes', 'session-list',
+   'roll', 'roll-bar', 'roll-summary', 'roll-count', 'roll-body', 'roll-name',
+   'roll-group', 'roll-country', 'roll-position', 'roll-reset', 'member-section', 'member-name', 'member-group',
    'member-country', 'member-summary', 'member-totals', 'member-votes', 'member-filter',
    'member-count', 'back-from-member'].forEach(function (id) {
     dom[id] = document.getElementById(id);
@@ -156,7 +157,6 @@
     state.decision = null;
 
     dom['decision-section'].hidden = true;
-    document.querySelector('.table-section').hidden = true;
     document.querySelector('.layer-tabs').hidden = true;
     dom['member-section'].hidden = false;
     // One subject at a time: the country panel belongs to a vote, not a person.
@@ -602,7 +602,7 @@
     // A vote group cannot be isolated when no vote is open; a bloc always can.
     if (state.isolate && state.isolate.kind === 'layer' && !state.decision) state.isolate = null;
     if (map) map.setDimmed(state.isolate ? isolateMatches : null);
-    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
+    Array.prototype.forEach.call(dom['roll-body'].querySelectorAll('[data-code]'), function (row) {
       row.classList.toggle('is-dimmed',
         Boolean(state.isolate) && !isolateMatches(row.getAttribute('data-code')));
     });
@@ -624,89 +624,211 @@
 
   function setHovered(code) {
     if (map) map.setHovered(code);
-    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
+    Array.prototype.forEach.call(dom['roll-body'].querySelectorAll('[data-code]'), function (row) {
       row.classList.toggle('is-hovered', row.getAttribute('data-code') === code);
     });
   }
 
   /* ------------------------------------------------------------- roll-call */
 
-  /* The whole vote, member by member where the record has them. Rendered on
-     first open rather than on every decision load: it is 27 tables, and most
-     readers never ask for it. */
-  let rollCallFor = null;
+  const POSITIONS = ['for', 'against', 'abstain', 'absent'];
 
-  function renderRollCall() {
+  const roll = { tab: 'members', name: '', group: '', country: '', position: '' };
+
+  /* Every ballot in the open vote, flattened once, with everything the filters
+     and the three breakdowns need. */
+  function ballotList() {
     const decision = state.decision;
-    if (!decision || rollCallFor === decision.id) return;
-    rollCallFor = decision.id;
-
-    const filter = dom['roll-call-filter'].value.trim().toLowerCase();
-    const blocks = states.map(function (item) {
-      const country = decision.countries[item.code] || {};
-      const position = Data.countryPosition(decision, item.code);
-      const totals = Data.mepTotals(country);
-      const meps = country.meps || [];
-
-      const rows = meps.length
-        ? meps.map(function (mep) {
-            return '<tr><th scope="row">' + (mep.id
-              ? '<button type="button" class="link-button" data-member="' + esc(mep.id) + '">' +
-                esc(mep.name) + '</button>'
-              : esc(mep.name)) + '</th>' +
-              '<td>' + esc(mep.party || '—') + '</td>' +
-              '<td>' + esc(mep.group || '—') + '</td>' +
-              '<td><span class="vote-pill vote-' + esc(mep.vote) + '">' +
-              esc(Panel.VOTE_LABEL[mep.vote] || mep.vote) + '</span></td></tr>';
-          }).join('')
-        : (country.mepGroups || []).map(function (group) {
-            return '<tr><th scope="row">' + esc(group.group) + '</th>' +
-              '<td>' + group.seats + ' seats</td>' +
-              '<td class="numeric"><span class="n-for">' + (group.for || 0) + '</span> / ' +
-                '<span class="n-against">' + (group.against || 0) + '</span> / ' +
-                '<span class="n-abstain">' + (group.abstain || 0) + '</span></td>' +
-              '<td>' + (group.absent || 0) + ' absent</td></tr>';
-          }).join('');
-
-      return {
-        code: item.code,
-        haystack: [item.name, item.code, Panel.VOTE_LABEL[position.position],
-          meps.map(function (mep) { return mep.name + ' ' + mep.group + ' ' + (mep.party || ''); }).join(' '),
-          (country.mepGroups || []).map(function (group) { return group.group; }).join(' ')
-        ].join(' ').toLowerCase(),
-        html: '<section class="roll-country" data-code="' + esc(item.code) + '">' +
-          '<h4>' + esc(item.name) +
-            '<span class="vote-pill vote-' + esc(position.position) + '">' +
-            esc(Panel.VOTE_LABEL[position.position] || position.position) + '</span>' +
-            (totals ? '<span class="roll-totals"><span class="n-for">' + totals.for +
-              '</span> / <span class="n-against">' + totals.against +
-              '</span> / <span class="n-abstain">' + totals.abstain + '</span></span>' : '') +
-          '</h4>' +
-          (rows
-            ? '<table class="roll-table"><tbody>' + rows + '</tbody></table>'
-            : '<p class="empty">No member-level record for this vote.</p>') +
-          '</section>'
-      };
+    if (!decision) return [];
+    const out = [];
+    Object.keys(decision.countries).forEach(function (code) {
+      (decision.countries[code].meps || []).forEach(function (mep) {
+        out.push({
+          id: mep.id,
+          name: mep.name,
+          group: mep.group || 'NI',
+          country: code,
+          countryName: (statesByCode[code] || {}).name || code,
+          position: mep.vote,
+          haystack: (mep.name + ' ' + (mep.party || '')).toLowerCase()
+        });
+      });
     });
-
-    dom.rollCall = blocks;
-    dom['roll-call'].innerHTML =
-      '<p class="roll-note">' + (blocks.some(function (b) { return b.html.indexOf('roll-table') !== -1; })
-        ? 'Every member state, with the record this vote carries: each MEP by name where the ' +
-          'roll-call has been imported, and the totals by political group otherwise.'
-        : 'This record carries no member-level detail.') + '</p>' +
-      blocks.map(function (block) { return block.html; }).join('');
-
-    if (filter) filterRollCall(filter);
+    out.sort(function (a, b) { return a.name.localeCompare(b.name); });
+    return out;
   }
 
-  function filterRollCall(value) {
-    const query = String(value || '').trim().toLowerCase();
-    const blocks = dom.rollCall || [];
-    Array.prototype.forEach.call(dom['roll-call'].querySelectorAll('.roll-country'), function (node) {
-      const block = blocks.find(function (item) { return item.code === node.getAttribute('data-code'); });
-      node.hidden = Boolean(query) && block && block.haystack.indexOf(query) === -1;
+  function tally(list) {
+    const totals = { for: 0, against: 0, abstain: 0, absent: 0 };
+    list.forEach(function (item) { totals[item.position] += 1; });
+    return totals;
+  }
+
+  function filtered(list) {
+    return list.filter(function (item) {
+      if (roll.group && item.group !== roll.group) return false;
+      if (roll.country && item.country !== roll.country) return false;
+      if (roll.position && item.position !== roll.position) return false;
+      if (roll.name && item.haystack.indexOf(roll.name) === -1) return false;
+      return true;
     });
+  }
+
+  function share(count, total) {
+    return total ? Math.round((count / total) * 100) : 0;
+  }
+
+  /* The bar: the whole chamber in one line, each part clickable, because the
+     first thing a reader wants after seeing "32% against" is the 32%. */
+  function renderBar(totals) {
+    const cast = totals.for + totals.against + totals.abstain;
+    const segments = ['for', 'against', 'abstain'].filter(function (key) { return totals[key]; });
+
+    dom['roll-bar'].innerHTML = segments.map(function (key) {
+      const percent = share(totals[key], cast);
+      return '<button type="button" class="seg seg-' + key +
+        (roll.position === key ? ' is-active' : '') + '" data-position="' + key + '"' +
+        ' style="flex: ' + totals[key] + ' 1 0"' +
+        ' aria-pressed="' + (roll.position === key ? 'true' : 'false') + '"' +
+        ' title="' + esc(Panel.VOTE_LABEL[key]) + ': ' + totals[key] + ' members">' +
+        '<span class="seg-value">' + percent + '%</span>' +
+        '<span class="seg-label">' + esc(Panel.VOTE_LABEL[key]) + '</span>' +
+        '</button>';
+    }).join('') + (totals.absent
+      ? '<button type="button" class="seg seg-absent' + (roll.position === 'absent' ? ' is-active' : '') +
+        '" data-position="absent" aria-pressed="' + (roll.position === 'absent' ? 'true' : 'false') +
+        '" title="Did not vote: ' + totals.absent + ' members">' +
+        '<span class="seg-value">' + totals.absent + '</span>' +
+        '<span class="seg-label">absent</span></button>'
+      : '');
+
+    const decision = state.decision;
+    const result = (decision.outcome && decision.outcome.result) || 'recorded';
+    dom['roll-summary'].innerHTML =
+      '<span class="result result-' + esc(result) + '">' +
+        esc(RESULT_LABEL[result] || result) + '</span> · ' +
+      '<span class="n-for">' + totals.for + '</span> in favour, ' +
+      '<span class="n-against">' + totals.against + '</span> against, ' +
+      '<span class="n-abstain">' + totals.abstain + '</span> abstained. ' +
+      cast + ' of ' + (cast + totals.absent) + ' members voted; ' +
+      '<span class="n-absent">' + totals.absent + '</span> did not.';
+  }
+
+  function renderMembersTab(list) {
+    if (!list.length) return '<p class="empty">No member matches these filters.</p>';
+    return '<ul class="roll-members">' + list.slice(0, 800).map(function (item) {
+      return '<li data-code="' + esc(item.country) + '">' +
+        '<button type="button" class="roll-member" data-member="' + esc(item.id) + '">' +
+          '<span class="rm-name">' + esc(item.name) + '</span>' +
+          '<span class="rm-meta">' + esc(item.countryName) + ' · ' + esc(item.group) + '</span>' +
+          '<span class="vote-pill vote-' + item.position + '">' +
+            esc(Panel.VOTE_LABEL[item.position]) + '</span>' +
+        '</button></li>';
+    }).join('') + '</ul>' +
+      (list.length > 800 ? '<p class="empty">Showing the first 800. Filter to narrow it down.</p>' : '');
+  }
+
+  /* A stacked row per group or per country: the same shape as the bar above, so
+     the eye reads them the same way. */
+  function breakdownRows(list, keyOf, labelOf, dataAttr) {
+    const groups = {};
+    list.forEach(function (item) {
+      const key = keyOf(item);
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(item);
+    });
+
+    const rows = Object.keys(groups).map(function (key) {
+      const totals = tally(groups[key]);
+      const cast = totals.for + totals.against + totals.abstain;
+      return { key: key, label: labelOf(key), size: groups[key].length, totals: totals, cast: cast };
+    });
+    rows.sort(function (a, b) { return b.size - a.size; });
+
+    if (!rows.length) return '<p class="empty">Nothing matches these filters.</p>';
+
+    return '<ul class="breakdown">' + rows.map(function (row) {
+      const parts = POSITIONS.filter(function (key) { return row.totals[key]; }).map(function (key) {
+        return '<span class="bd-seg bd-' + key + '" style="flex:' + row.totals[key] + ' 1 0"></span>';
+      }).join('');
+      return '<li' + (dataAttr ? ' data-code="' + esc(row.key) + '"' : '') + '>' +
+        '<button type="button" class="breakdown-row"' +
+          (dataAttr ? ' data-country="' + esc(row.key) + '"' : ' data-group="' + esc(row.key) + '"') + '>' +
+          '<span class="bd-label">' + esc(row.label) + '</span>' +
+          '<span class="bd-bar">' + parts + '</span>' +
+          '<span class="bd-numbers">' +
+            '<span class="n-for">' + row.totals.for + '</span> · ' +
+            '<span class="n-against">' + row.totals.against + '</span> · ' +
+            '<span class="n-abstain">' + row.totals.abstain + '</span>' +
+          '</span>' +
+        '</button></li>';
+    }).join('') + '</ul>';
+  }
+
+  function renderRoll() {
+    const decision = state.decision;
+    if (!decision) return;
+
+    const all = ballotList();
+    if (!all.length) {
+      dom.roll.hidden = true;
+      return;
+    }
+    dom.roll.hidden = false;
+
+    renderBar(tally(all));
+
+    // The dropdowns list what this vote actually contains, not a fixed menu.
+    const groups = [...new Set(all.map(function (item) { return item.group; }))].sort();
+    const countries = [...new Set(all.map(function (item) { return item.country; }))]
+      .sort(function (a, b) {
+        return ((statesByCode[a] || {}).name || a).localeCompare((statesByCode[b] || {}).name || b);
+      });
+
+    fillSelect(dom['roll-group'], 'All groups', groups.map(function (g) { return [g, g]; }), roll.group);
+    fillSelect(dom['roll-country'], 'All countries', countries.map(function (code) {
+      return [code, (statesByCode[code] || {}).name || code];
+    }), roll.country);
+    fillSelect(dom['roll-position'], 'All positions', POSITIONS.map(function (key) {
+      return [key, Panel.VOTE_LABEL[key]];
+    }), roll.position);
+
+    const list = filtered(all);
+    const active = Boolean(roll.name || roll.group || roll.country || roll.position);
+    dom['roll-reset'].hidden = !active;
+
+    dom['roll-count'].textContent = active
+      ? list.length + ' of ' + all.length + ' members match'
+      : all.length + ' members';
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-roll-tab]'), function (tab) {
+      tab.setAttribute('aria-selected', String(tab.getAttribute('data-roll-tab') === roll.tab));
+    });
+
+    if (roll.tab === 'groups') {
+      dom['roll-body'].innerHTML = breakdownRows(list, function (item) { return item.group; },
+        function (key) { return key; }, false);
+    } else if (roll.tab === 'countries') {
+      dom['roll-body'].innerHTML = breakdownRows(list, function (item) { return item.country; },
+        function (key) { return (statesByCode[key] || {}).name || key; }, true);
+    } else {
+      dom['roll-body'].innerHTML = renderMembersTab(list);
+    }
+
+    if (state.isolate) applyIsolation();
+  }
+
+  function fillSelect(select, allLabel, options, value) {
+    select.innerHTML = '<option value="">' + esc(allLabel) + '</option>' +
+      options.map(function (pair) {
+        return '<option value="' + esc(pair[0]) + '"' +
+          (pair[0] === value ? ' selected' : '') + '>' + esc(pair[1]) + '</option>';
+      }).join('');
+  }
+
+  function setRoll(changes) {
+    Object.assign(roll, changes);
+    renderRoll();
   }
 
   /* ---------------------------------------------------------------- outcome */
@@ -726,9 +848,8 @@
   function renderOutcome() {
     const decision = state.decision;
     const result = decision.outcome || {};
-    let html = '<a class="permalink vote-link" href="' + esc(permalink(state.country)) +
-      '">Link to this vote</a>' +
-      '<button type="button" class="replay">Replay</button>' +
+    let html = '<button type="button" class="permalink vote-link" data-copy="' +
+      esc(shareUrl()) + '">Copy link to this vote</button>' +
       '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
       esc(result.headline || result.result || '') + '</p>';
 
@@ -768,19 +889,8 @@
             'blocking minority, which needs at least 4 states and more than 35%.') +
         ' Abstaining counts the same as voting against when a qualified majority is being counted.</p>';
     } else if (decision.body === 'parliament') {
-      const tally = Data.decisionTally(decision);
-      if (tally) {
-        const cast = tally.for + tally.against + tally.abstain;
-        html += '<div class="tally">' +
-          ['for', 'against', 'abstain', 'absent'].map(function (key) {
-            return '<div class="tally-cell tally-' + key + '">' +
-              '<span class="tally-number" data-count="' + tally[key] + '">0</span>' +
-              '<span class="tally-label">' + esc(Panel.VOTE_LABEL[key]) + '</span></div>';
-          }).join('') +
-          '</div>' +
-          '<p class="outcome-note"><span class="n-for">' + cast + '</span> votes cast of 720 ' +
-          'seats. A simple majority of votes cast carries the file.</p>';
-      }
+      // The stacked bar below carries the numbers; repeating them here twice
+      // over would just be furniture.
     } else {
       const covered = Object.keys(decision.countries).filter(function (code) {
         return (decision.countries[code].press || []).length;
@@ -794,86 +904,39 @@
     dom.outcome.innerHTML = html;
   }
 
-  /* ---------------------------------------------------------------- table */
-
-  let sortKey = 'name';
-  let sortAsc = true;
-
-  function tableRows() {
-    const decision = state.decision;
-    return states.map(function (item) {
-      const country = decision.countries[item.code] || {};
-      const position = Data.countryPosition(decision, item.code);
-      const totals = Data.mepTotals(country);
-      const impact = country.impact && typeof country.impact.value === 'number' ? country.impact.value : null;
-      const framing = Data.pressFraming(country);
-      return {
-        code: item.code,
-        name: item.name,
-        position: Panel.VOTE_LABEL[position.position] || position.position,
-        positionKey: position.position,
-        meps: totals,
-        mepsKey: totals ? totals.for : -1,
-        impact: impact,
-        press: framing.count,
-        framing: framing.framing
-      };
-    });
-  }
-
-  function showColumn(name, visible) {
-    Array.prototype.forEach.call(
-      dom['country-table'].querySelectorAll('[data-col="' + name + '"]'),
-      function (cell) { cell.hidden = !visible; }
-    );
-  }
-
-  function renderTable() {
-    if (!state.decision) return;
-    const rows = tableRows();
-    // A sort held over from a decision that had a column this one lacks would
-    // sort by nothing at all.
-    if (sortKey === 'impact' && !hasImpact(state.decision)) sortKey = 'name';
-    if (sortKey === 'meps' && !rows.some(function (row) { return row.meps; })) sortKey = 'name';
-    const direction = sortAsc ? 1 : -1;
-    rows.sort(function (a, b) {
-      let left = a[sortKey], right = b[sortKey];
-      if (sortKey === 'meps') { left = a.mepsKey; right = b.mepsKey; }
-      if (sortKey === 'position') { left = a.positionKey; right = b.positionKey; }
-      if (left == null) left = -Infinity;
-      if (right == null) right = -Infinity;
-      if (typeof left === 'string') return left.localeCompare(right) * direction;
-      return (left - right) * direction;
-    });
-
-    const decision = state.decision;
-    const body = dom['country-table'].querySelector('tbody');
-    body.innerHTML = rows.map(function (row) {
-      return '<tr data-code="' + row.code + '">' +
-        '<th scope="row"><button type="button" class="link-button">' + esc(row.name) + '</button></th>' +
-        '<td><span class="vote-pill vote-' + esc(row.positionKey) + '">' + esc(row.position) + '</span>' +
-        '</td>' +
-        '<td class="numeric" data-col="meps">' + (row.meps
-          ? '<span class="n-for">' + row.meps.for + '</span> / ' +
-            '<span class="n-against">' + row.meps.against + '</span> / ' +
-            '<span class="n-abstain">' + row.meps.abstain + '</span>'
-          : '—') + '</td>' +
-        '<td class="numeric" data-col="impact"' + (row.impact === null ? ' hidden' : '') + '>' +
-          esc(Data.formatImpact(row.impact, state.decision.impactUnit)) + '</td>' +
-        '</tr>';
-    }).join('');
-
-    showColumn('impact', hasImpact(decision));
-    showColumn('meps', Object.keys(decision.countries).some(function (code) {
-      return Data.mepTotals(decision.countries[code]);
-    }));
-  }
-
   /* ---------------------------------------------------------------- routing */
 
   function permalink(code) {
     const id = state.decision ? state.decision.id : '';
     return '#/' + id + (code ? '/' + code : '');
+  }
+
+  /* An address someone can paste somewhere, not a fragment that only means
+     something inside this page. */
+  function shareUrl(code) {
+    return location.origin + location.pathname + location.search + permalink(code);
+  }
+
+  async function copyLink(button) {
+    const text = button.getAttribute('data-copy');
+    const original = button.textContent;
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(text);
+      copied = true;
+    } catch (error) {
+      // Clipboard access can be refused; fall back to selecting the text so the
+      // reader can copy it themselves.
+      const field = document.createElement('input');
+      field.value = text;
+      field.className = 'copy-fallback';
+      button.after(field);
+      field.select();
+      copied = document.execCommand && document.execCommand('copy');
+      field.remove();
+    }
+    button.textContent = copied ? 'Link copied' : text;
+    window.setTimeout(function () { button.textContent = original; }, copied ? 1600 : 6000);
   }
 
   function readHash() {
@@ -908,10 +971,10 @@
       dom['panel-empty'].hidden = true;
       if (state.decision) {
         Panel.render(dom['panel-body'], state.decision, statesByCode[state.country],
-          permalink(state.country));
+          shareUrl(state.country));
       } else {
         Panel.renderProfile(dom['panel-body'], statesByCode[state.country],
-          permalink(state.country));
+          shareUrl(state.country));
       }
       if (state.isolate) applyIsolation();
       // On a narrow screen the panel is far below the map, so bring it into
@@ -922,7 +985,7 @@
       }
     }
 
-    Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
+    Array.prototype.forEach.call(dom['roll-body'].querySelectorAll('[data-code]'), function (row) {
       row.classList.toggle('is-selected', row.getAttribute('data-code') === state.country);
     });
 
@@ -947,24 +1010,7 @@
     dom['sample-banner'].hidden = !isSample;
 
     const costs = hasImpact(decision);
-    const roll = Object.keys(decision.countries).some(function (code) {
-      return Data.mepTotals(decision.countries[code]);
-    });
-    showColumn('impact', costs);
-    showColumn('meps', roll);
     document.getElementById('tab-impact').hidden = !costs;
-
-    // Twenty-seven rows all reading "No vote taken" is a table that answers
-    // nothing. Say it once instead.
-    const tabulable = roll || Object.keys(decision.countries).some(function (code) {
-      const position = decision.countries[code].position;
-      return position && position !== 'not-applicable';
-    });
-    dom['country-table'].parentNode.hidden = !tabulable;
-    dom['table-empty'].hidden = tabulable;
-    dom['table-empty'].textContent = tabulable ? '' :
-      'No member state cast a vote on this act, so there is nothing to tabulate. ' +
-      'What each country got out of it is in the map and the country panels.';
     if (!state.layerChosen) {
       // "How they voted" is an empty question for an act nobody voted on, so a
       // Commission file opens on the coverage instead.
@@ -973,14 +1019,28 @@
       setLayer('vote');
     }
 
-    rollCallFor = null;
-    dom['roll-call-detail'].open = false;
-    dom['roll-call'].innerHTML = '';
+    roll.name = '';
+    roll.group = '';
+    roll.country = '';
+    roll.position = '';
+    roll.tab = 'members';
+    if (dom['roll-name']) dom['roll-name'].value = '';
+
     renderOutcome();
+    renderRoll();
     paint();
-    renderTable();
     renderFeed();
     renderMepResults();
+  }
+
+  /* "All votes" means all of them: a search left over from finding this vote
+     would otherwise hand back an empty list. */
+  function backToVotes() {
+    dom['search-input'].value = '';
+    state.query = '';
+    dom['search-clear'].hidden = true;
+    clearDecision();
+    dom['search-input'].focus();
   }
 
   /* Nothing open: the map is the Union, the list is the way in. */
@@ -994,10 +1054,6 @@
     state.layerChosen = false;
     state.layer = 'vote';
     dom['decision-section'].hidden = true;
-    // The whole section, not just the table: an empty "All 27 member states"
-    // heading on the landing page is a promise with nothing behind it.
-    document.querySelector('.table-section').hidden = true;
-    dom['table-empty'].hidden = true;
     document.querySelector('.layer-tabs').hidden = true;
     dom['map-hint'].textContent = 'Click a member state for its profile, or pick a vote ' +
       'from the list to see how the Union split.';
@@ -1028,7 +1084,6 @@
     state.decision = cache[entry.id];
     state.isolate = null;
     dom['decision-section'].hidden = false;
-    document.querySelector('.table-section').hidden = false;
     document.querySelector('.layer-tabs').hidden = false;
     dom['map-hint'].textContent = 'Click a member state to open its record. ' +
       'Click the sea to close it. Arrow keys move between countries.';
@@ -1177,8 +1232,7 @@
       dom['member-filter'].addEventListener('input', renderMemberVotes);
 
       dom['back-from-member'].addEventListener('click', function () {
-        clearDecision();
-        dom['search-input'].focus();
+        backToVotes();
       });
 
       // Escape closes the open country from anywhere on the page.
@@ -1199,60 +1253,70 @@
         tab.addEventListener('click', function () { setLayer(tab.getAttribute('data-layer'), true); });
       });
 
-      dom['country-table'].addEventListener('click', function (event) {
-        const button = event.target.closest('.link-button');
-        if (!button) return;
-        selectCountry(button.closest('tr').getAttribute('data-code'));
-      });
-
-      // Pointing at a row lights up the country, and the other way round.
-      dom['country-table'].addEventListener('mouseover', function (event) {
-        const row = event.target.closest('tr[data-code]');
-        setHovered(row ? row.getAttribute('data-code') : null);
-      });
-      dom['country-table'].addEventListener('mouseleave', function () { setHovered(null); });
 
       dom.legend.addEventListener('click', function (event) {
         const button = event.target.closest('[data-isolate]');
         if (button) setIsolate('layer', button.getAttribute('data-isolate'));
       });
 
-      dom.outcome.addEventListener('click', function (event) {
-        if (event.target.closest('.replay')) playReveal();
+      // Copy-link buttons, wherever they appear.
+      document.addEventListener('click', function (event) {
+        const button = event.target.closest('[data-copy]');
+        if (button) copyLink(button);
       });
 
-      dom['roll-call-detail'].addEventListener('toggle', function () {
-        if (dom['roll-call-detail'].open) renderRollCall();
+      // The bar is a filter: click "Against" to see only those who did.
+      dom['roll-bar'].addEventListener('click', function (event) {
+        const segment = event.target.closest('[data-position]');
+        if (!segment) return;
+        const position = segment.getAttribute('data-position');
+        setRoll({ position: roll.position === position ? '' : position, tab: 'members' });
+        dom['roll-count'].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
-      dom['roll-call-filter'].addEventListener('input', function (event) {
-        filterRollCall(event.target.value);
+
+      Array.prototype.forEach.call(document.querySelectorAll('[data-roll-tab]'), function (tab) {
+        tab.addEventListener('click', function () {
+          setRoll({ tab: tab.getAttribute('data-roll-tab') });
+        });
       });
-      dom['roll-call'].addEventListener('click', function (event) {
+
+      dom['roll-name'].addEventListener('input', function (event) {
+        setRoll({ name: event.target.value.trim().toLowerCase() });
+      });
+      dom['roll-group'].addEventListener('change', function (event) {
+        setRoll({ group: event.target.value });
+      });
+      dom['roll-country'].addEventListener('change', function (event) {
+        setRoll({ country: event.target.value });
+      });
+      dom['roll-position'].addEventListener('change', function (event) {
+        setRoll({ position: event.target.value });
+      });
+      dom['roll-reset'].addEventListener('click', function () {
+        dom['roll-name'].value = '';
+        setRoll({ name: '', group: '', country: '', position: '' });
+      });
+
+      dom['roll-body'].addEventListener('click', function (event) {
         const member = event.target.closest('[data-member]');
         if (member) {
           showMember(member.getAttribute('data-member'));
           return;
         }
-        const country = event.target.closest('.roll-country');
-        if (country) selectCountry(country.getAttribute('data-code'));
+        const country = event.target.closest('[data-country]');
+        if (country) selectCountry(country.getAttribute('data-country'));
+        const group = event.target.closest('[data-group]');
+        if (group) setRoll({ group: group.getAttribute('data-group'), tab: 'members' });
       });
 
-      Array.prototype.forEach.call(dom['country-table'].querySelectorAll('[data-sort]'), function (button) {
-        button.addEventListener('click', function () {
-          const key = button.getAttribute('data-sort');
-          sortAsc = key === sortKey ? !sortAsc : true;
-          sortKey = key;
-          renderTable();
-          Array.prototype.forEach.call(dom['country-table'].querySelectorAll('th'), function (th) {
-            th.removeAttribute('aria-sort');
-          });
-          button.closest('th').setAttribute('aria-sort', sortAsc ? 'ascending' : 'descending');
-        });
+      dom['roll-body'].addEventListener('mouseover', function (event) {
+        const row = event.target.closest('[data-code]');
+        setHovered(row ? row.getAttribute('data-code') : null);
       });
+      dom['roll-body'].addEventListener('mouseleave', function () { setHovered(null); });
 
       dom['back-to-votes'].addEventListener('click', function () {
-        clearDecision();
-        dom['search-input'].focus();
+        backToVotes();
       });
 
       window.addEventListener('hashchange', function () {
