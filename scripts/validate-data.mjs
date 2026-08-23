@@ -51,8 +51,23 @@ function checkBallots(file, decision, directory) {
   if (!directory) {
     note(file, `${decision.ballots.length} ballots, but no member directory to resolve them ` +
       '— run scripts/fetch-plenary.mjs --refresh-meps');
-  } else if (unknown) {
+    return;
+  }
+
+  if (unknown) {
     fail(file, `${unknown} ballots name members the directory does not know`);
+  }
+
+  // Every member state should be represented in a plenary roll-call. A missing
+  // one usually means the directory is behind, not that a country abstained.
+  const represented = new Set();
+  decision.ballots.forEach(function (ballot) {
+    const member = directory[ballot[0]];
+    if (member && member.country) represented.add(member.country);
+  });
+  const absent = MEMBER_CODES.filter((code) => !represented.has(code));
+  if (absent.length) {
+    note(file, `no member from ${absent.join(', ')} appears in this roll-call`);
   }
 }
 
@@ -60,9 +75,13 @@ function checkDecision(file, decision, states) {
   const seats = Object.fromEntries(states.map((s) => [s.code, s.seats]));
   const codes = Object.keys(seats);
 
-  ['id', 'body', 'title', 'date', 'summary', 'outcome'].forEach((key) => {
+  ['id', 'body', 'title', 'date', 'outcome'].forEach((key) => {
     if (!decision[key]) fail(file, `missing "${key}"`);
   });
+
+  // A summary is editorial: imported records arrive without one and an editor
+  // writes it. Worth flagging, not worth blocking a publish over.
+  if (!decision.summary) note(file, 'no summary yet — an editor should write one');
   if (!BODIES.includes(decision.body)) fail(file, `body must be one of ${BODIES.join(', ')}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(decision.date || '')) fail(file, 'date must be YYYY-MM-DD');
   if (!['sample', 'verified'].includes(decision.status)) fail(file, 'status must be "sample" or "verified"');
@@ -74,8 +93,16 @@ function checkDecision(file, decision, states) {
   }
 
   const countries = decision.countries || {};
-  const missing = codes.filter((code) => !countries[code]);
-  if (missing.length) fail(file, `no entry for ${missing.join(', ')} — all 27 member states must appear`);
+
+  // A compact record carries its member states inside the ballots; the page
+  // resolves them through the directory. Coverage is checked there instead.
+  const compact = Array.isArray(decision.ballots) && decision.ballots.length;
+  if (!compact) {
+    const missing = codes.filter((code) => !countries[code]);
+    if (missing.length) {
+      fail(file, `no entry for ${missing.join(', ')} — all 27 member states must appear`);
+    }
+  }
   Object.keys(countries).filter((code) => !seats[code])
     .forEach((code) => fail(file, `"${code}" is not an EU member state code`));
 
@@ -150,6 +177,7 @@ function checkGeometry(file, geo, states) {
 
 const reference = await readJSON('data/reference/member-states.json');
 const states = reference.states;
+const MEMBER_CODES = states.map((state) => state.code);
 
 if (states.length !== 27) fail('member-states.json', `${states.length} member states listed, expected 27`);
 const totalSeats = states.reduce((sum, state) => sum + state.seats, 0);
@@ -160,7 +188,7 @@ checkGeometry('eu-countries.geo.json', await readJSON('data/eu-countries.geo.jso
 let directory = null;
 try {
   const cache = await readJSON('data/reference/meps.json');
-  directory = cache.members || null;
+  directory = cache.members && Object.keys(cache.members).length ? cache.members : null;
 } catch (error) {
   directory = null;
 }

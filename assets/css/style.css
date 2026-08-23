@@ -802,6 +802,37 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .session-count { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
 .session .decision-list { padding: 0 .5rem .6rem; }
 
+/* ---------------------------------------------------------------- member */
+
+.member-votes {
+  list-style: none;
+  margin: .6rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .3rem;
+  max-height: 32rem;
+  overflow-y: auto;
+}
+.member-vote {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .2rem .6rem;
+  align-items: baseline;
+  font: inherit;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: .35rem .45rem;
+  cursor: pointer;
+  color: inherit;
+}
+.member-vote:hover { background: var(--surface-sunken); border-color: var(--line); }
+.member-vote .mv-title { font-size: .88rem; font-weight: 500; }
+.member-vote .mv-date { font-size: .76rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.member-hit .mep-meta { flex: none; }
+
 /* ---------------------------------------------------------------- roll-call */
 
 .roll-call-tools { margin: .6rem 0 .8rem; }

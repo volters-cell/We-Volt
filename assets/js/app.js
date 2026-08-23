@@ -7,11 +7,14 @@
   // an automatic default re-derives for each decision, a deliberate choice sticks.
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
-    country: null, filter: 'all', isolate: null, query: '', unfolded: false
+    country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null
   };
 
   let calendar = { sessions: [] };
   let directory = null;
+  let memberIndex = null;      // every MEP, for search
+  let memberCache = {};        // their voting records, fetched on demand
+  let bySourceId = {};         // vote id in the source data -> record in the index
 
   const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache = {};
@@ -27,7 +30,9 @@
    'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
    'mep-results', 'decision-section', 'back-to-votes', 'session-list', 'roll-call',
-   'roll-call-detail', 'roll-call-filter'].forEach(function (id) {
+   'roll-call-detail', 'roll-call-filter', 'member-section', 'member-name', 'member-group',
+   'member-country', 'member-summary', 'member-totals', 'member-votes', 'member-filter',
+   'member-count', 'back-from-member'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -102,25 +107,14 @@
     });
   }
 
-  /* MEP search works on the decision that is open, because that is the record
-     the page is holding. A name search across the whole term needs an index
-     that only exists once real roll-calls have been imported. */
+  /* Members are searched across the whole term, not only inside whatever vote
+     happens to be open: following one MEP is the point of the site. */
   function mepMatches() {
-    if (!state.query || !state.decision) return [];
+    if (!state.query || !memberIndex) return [];
     const words = state.query.split(/\s+/);
-    const found = [];
-
-    Object.keys(state.decision.countries).forEach(function (code) {
-      (state.decision.countries[code].meps || []).forEach(function (mep) {
-        const haystack = [mep.name, mep.group, mep.party, (statesByCode[code] || {}).name]
-          .join(' ').toLowerCase();
-        if (words.every(function (word) { return haystack.indexOf(word) !== -1; })) {
-          found.push({ mep: mep, code: code });
-        }
-      });
-    });
-
-    return found.slice(0, 40);
+    return memberIndex.filter(function (member) {
+      return words.every(function (word) { return member.keywords.indexOf(word) !== -1; });
+    }).slice(0, 25);
   }
 
   function renderMepResults() {
@@ -131,16 +125,98 @@
       return;
     }
     dom['mep-results'].hidden = false;
-    dom['mep-results'].innerHTML = '<h3>Members in this vote</h3><ul>' +
-      found.map(function (entry) {
-        const country = statesByCode[entry.code] || { name: entry.code };
-        return '<li><button type="button" class="mep-hit" data-code="' + esc(entry.code) + '">' +
-          '<span class="mep-name">' + esc(entry.mep.name) + '</span>' +
-          '<span class="mep-meta">' + esc(country.name) +
-          (entry.mep.group ? ' · ' + esc(entry.mep.group) : '') + '</span>' +
-          '<span class="vote-pill vote-' + esc(entry.mep.vote) + '">' +
-          esc(Panel.VOTE_LABEL[entry.mep.vote] || entry.mep.vote) + '</span></button></li>';
+    dom['mep-results'].innerHTML = '<h3>Members</h3><ul>' +
+      found.map(function (member) {
+        const country = statesByCode[member.country] || { name: member.country };
+        return '<li><button type="button" class="mep-hit member-hit" data-member="' +
+          esc(member.id) + '">' +
+          '<span class="mep-name">' + esc(member.name) + '</span>' +
+          '<span class="mep-meta">' + esc(country.name) + ' · ' + esc(member.group) + '</span>' +
+          '<span class="card-rule">' + member.votes + ' votes</span></button></li>';
       }).join('') + '</ul>';
+  }
+
+  /* ------------------------------------------------------------- one member */
+
+  async function showMember(id) {
+    if (!memberCache[id]) {
+      try {
+        memberCache[id] = await Data.getJSON('data/meps/' + id + '.json');
+      } catch (error) {
+        return;
+      }
+    }
+    const member = memberCache[id];
+    state.member = member;
+    state.decision = null;
+
+    dom['decision-section'].hidden = true;
+    document.querySelector('.table-section').hidden = true;
+    document.querySelector('.layer-tabs').hidden = true;
+    dom['member-section'].hidden = false;
+    // One subject at a time: the country panel belongs to a vote, not a person.
+    document.getElementById('country-panel').hidden = true;
+    state.country = null;
+
+    const country = statesByCode[member.country] || { name: member.country };
+    dom['member-name'].textContent = member.name;
+    dom['member-group'].textContent = member.group;
+    dom['member-group'].className = 'badge badge-parliament';
+    dom['member-country'].textContent = country.name;
+    dom['member-summary'].textContent = 'Every roll-call vote this member has cast in the ' +
+      'records held here.';
+
+    dom['member-totals'].innerHTML = ['for', 'against', 'abstain', 'absent'].map(function (key) {
+      return '<div class="tally-cell tally-' + key + '">' +
+        '<span class="tally-number">' + member.totals[key] + '</span>' +
+        '<span class="tally-label">' + esc(Panel.VOTE_LABEL[key]) + '</span></div>';
+    }).join('');
+
+    renderMemberVotes();
+
+    // Put their country on the map, so the person has a place.
+    if (map) {
+      map.paint(function (code) {
+        return code === member.country
+          ? { className: 'layer-neutral', label: country.name }
+          : { className: 'layer-vote vote-unknown', label: '' };
+      }, function (code) {
+        return code === member.country ? '<span>' + esc(member.name) + '</span>' : '';
+      });
+      map.setSelected(member.country);
+    }
+    dom['map-hint'].textContent = member.name + ' sits for ' + country.name + '.';
+    dom.legend.innerHTML = '';
+  }
+
+  function renderMemberVotes() {
+    const member = state.member;
+    if (!member) return;
+    const filter = dom['member-filter'].value.trim().toLowerCase();
+
+    const rows = member.votes.map(function (entry) {
+      return { record: bySourceId[entry[0]], position: entry[1] };
+    }).filter(function (row) {
+      if (!row.record) return false;
+      if (!filter) return true;
+      return (row.record.keywords || '').indexOf(filter) !== -1;
+    });
+
+    dom['member-count'].textContent = rows.length + ' vote' + (rows.length === 1 ? '' : 's') +
+      (filter ? ' matching “' + filter + '”' : '');
+
+    dom['member-votes'].innerHTML = rows.slice(0, 400).map(function (row) {
+      const key = ['for', 'against', 'abstain', 'absent'][row.position];
+      return '<li><button type="button" class="member-vote" data-id="' + esc(row.record.id) + '">' +
+        '<span class="mv-title">' + esc(row.record.title) + '</span>' +
+        '<span class="vote-pill vote-' + key + '">' + esc(Panel.VOTE_LABEL[key]) + '</span>' +
+        '<span class="mv-date">' + esc(Data.formatDate(row.record.date)) + '</span>' +
+        '<span class="result result-' + esc(row.record.result) + '">' +
+        esc(RESULT_LABEL[row.record.result] || row.record.result) + '</span>' +
+        '</button></li>';
+    }).join('') + (rows.length > 400
+      ? '<li class="feed-empty">Showing the most recent 400. Filter to narrow it down.</li>'
+      : '');
   }
 
   function setQuery(value) {
@@ -537,7 +613,10 @@
 
       const rows = meps.length
         ? meps.map(function (mep) {
-            return '<tr><th scope="row">' + esc(mep.name) + '</th>' +
+            return '<tr><th scope="row">' + (mep.id
+              ? '<button type="button" class="link-button" data-member="' + esc(mep.id) + '">' +
+                esc(mep.name) + '</button>'
+              : esc(mep.name)) + '</th>' +
               '<td>' + esc(mep.party || '—') + '</td>' +
               '<td>' + esc(mep.group || '—') + '</td>' +
               '<td><span class="vote-pill vote-' + esc(mep.vote) + '">' +
@@ -884,6 +963,9 @@
   function clearDecision(options) {
     if (map) map.stop();
     state.decision = null;
+    state.member = null;
+    dom['member-section'].hidden = true;
+    document.getElementById('country-panel').hidden = false;
     state.isolate = null;
     state.layerChosen = false;
     state.layer = 'vote';
@@ -916,6 +998,9 @@
       cache[entry.id] = Data.expandBallots(await Data.getJSON(entry.file), directory);
     }
     const changed = !state.decision || state.decision.id !== entry.id;
+    state.member = null;
+    dom['member-section'].hidden = true;
+    document.getElementById('country-panel').hidden = false;
     state.decision = cache[entry.id];
     state.isolate = null;
     dom['decision-section'].hidden = false;
@@ -958,7 +1043,7 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex, plenary, members] = await Promise.all([
+      const [reference, geo, decisionIndex, plenary, members, people] = await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
         Data.getJSON('data/decisions/index.json'),
@@ -966,10 +1051,13 @@
           return { sessions: [] };
         }),
         // Identities live here, once, rather than inside every vote record.
-        Data.getJSON('data/reference/meps.json').catch(function () { return null; })
+        Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
+        // Every member, for search; their voting records load one at a time.
+        Data.getJSON('data/meps/index.json').catch(function () { return null; })
       ]);
       calendar = plenary || { sessions: [] };
       directory = members && members.members ? members.members : null;
+      memberIndex = (people && people.members) || null;
 
       states = reference.states;
       statesByCode = {};
@@ -987,6 +1075,10 @@
         (index.metadata && index.metadata.updated
           ? ' · updated ' + Data.formatDate(index.metadata.updated) : '');
 
+      index.decisions.forEach(function (item) {
+        if (item.sourceId) bySourceId[item.sourceId] = item;
+      });
+
       renderPlenary();
       renderFeed();
 
@@ -996,9 +1088,18 @@
         onHover: function (code) { setHovered(code); }
       });
 
-      // The page opens on the Union, not on a vote somebody else chose.
+      // A shared link opens what it names. Then the hash is cleared, so
+      // reopening or reloading that tab lands on the search page rather than on
+      // whatever was last looked at.
       const route = readHash();
       await loadDecision(route.decisionId, route.code);
+      if (location.hash) {
+        try {
+          history.replaceState(null, '', location.pathname + location.search);
+        } catch (error) {
+          // a sandbox that refuses history writes: nothing else to do
+        }
+      }
 
       dom['session-list'].addEventListener('click', function (event) {
         const card = event.target.closest('.decision-card');
@@ -1036,7 +1137,24 @@
 
       dom['mep-results'].addEventListener('click', function (event) {
         const hit = event.target.closest('.mep-hit');
-        if (hit) selectCountry(hit.getAttribute('data-code'));
+        if (!hit) return;
+        if (hit.hasAttribute('data-member')) {
+          showMember(hit.getAttribute('data-member'));
+        } else {
+          selectCountry(hit.getAttribute('data-code'));
+        }
+      });
+
+      dom['member-votes'].addEventListener('click', function (event) {
+        const row = event.target.closest('.member-vote');
+        if (row) loadDecision(row.getAttribute('data-id'), state.country);
+      });
+
+      dom['member-filter'].addEventListener('input', renderMemberVotes);
+
+      dom['back-from-member'].addEventListener('click', function () {
+        clearDecision();
+        dom['search-input'].focus();
       });
 
       // Escape closes the open country from anywhere on the page.
@@ -1086,6 +1204,11 @@
         filterRollCall(event.target.value);
       });
       dom['roll-call'].addEventListener('click', function (event) {
+        const member = event.target.closest('[data-member]');
+        if (member) {
+          showMember(member.getAttribute('data-member'));
+          return;
+        }
         const country = event.target.closest('.roll-country');
         if (country) selectCountry(country.getAttribute('data-code'));
       });

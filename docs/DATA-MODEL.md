@@ -98,6 +98,24 @@ or it is labelled.
   drawn as *mixed*. No coverage means a pale country and, in the panel, an invitation
   to file the first entry — the gap is part of what the map is showing.
 
+## Following one member
+
+`data/meps/` is the same ballots seen from the other end. `index.json` lists every
+member for search; `<member-id>.json` holds one member's whole record:
+
+```jsonc
+{
+  "id": 197490,
+  "name": "…", "country": "MT", "group": "EPP", "party": null,
+  "totals": { "for": 398, "against": 75, "abstain": 5, "absent": 136 },
+  "votes": [[195775, 3], [195774, 0]]      // [vote id, position], newest first
+}
+```
+
+Built by `node scripts/build-members.mjs` after any import, never by hand. A reader
+following one MEP would otherwise have to download every vote file to answer a question
+about one person; this way it is a few kilobytes.
+
 ## Reference data
 
 `data/reference/member-states.json` holds the seat counts (720 across 27 states, from

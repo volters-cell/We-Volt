@@ -107,6 +107,24 @@
         </details>
       </section>
 
+      <section class="decision" id="member-section" aria-labelledby="member-name" hidden>
+        <p class="decision-meta">
+          <button type="button" class="back-to-votes" id="back-from-member">← All votes</button>
+          <span id="member-group" class="badge"></span>
+          <span id="member-country"></span>
+        </p>
+        <h1 id="member-name"></h1>
+        <p id="member-summary" class="decision-subtitle"></p>
+        <div id="member-totals" class="tally"></div>
+        <div class="roll-call-tools">
+          <label class="visually-hidden" for="member-filter">Filter this member's votes</label>
+          <input id="member-filter" type="search" autocomplete="off"
+                 placeholder="Filter their votes by title or reference…">
+        </div>
+        <p id="member-count" class="search-status"></p>
+        <ul id="member-votes" class="member-votes"></ul>
+      </section>
+
       <section id="country-panel" class="panel" aria-live="polite" aria-labelledby="panel-title">
         <div class="panel-empty" id="panel-empty">
           <h2 id="panel-title">Pick a country</h2>
@@ -139,8 +157,10 @@
   <footer class="site-footer">
     <p>
       EU Tracker is an open-data project: every record is a JSON file in
-      <a href="https://github.com/volters-cell/We-Volt">the repository</a>, every figure carries its source.
-      Roll-call votes come from the European Parliament's own open data.
+      <a href="https://github.com/volters-cell/We-Volt">the repository</a>, and every record carries its source.
+      The roll-call votes shown here were imported from the
+      <a href="https://github.com/HowTheyVote/data">HowTheyVote.eu dataset</a>, which compiles the
+      European Parliament's own roll-call annexes.
       Boundaries are simplified for display and imply no position on any border.
     </p>
   </footer>

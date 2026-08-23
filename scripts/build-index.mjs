@@ -32,6 +32,7 @@ for (const name of files) {
 
   decisions.push({
     id: decision.id,
+    sourceId: decision.sourceId || null,
     title: decision.title,
     subtitle: decision.subtitle || '',
     date: decision.date,

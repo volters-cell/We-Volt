@@ -90,6 +90,7 @@ It must be served over HTTP — the records are fetched as JSON, so a `file://` 
 will not work.
 
 ```bash
+npm run members   # rebuild the per-member records after importing votes
 npm test          # import logic + data validation
 npm run validate  # data validation on its own
 npm run sessions  # fetch the plenary calendar
@@ -99,21 +100,42 @@ npm run bundle    # dist/eu-tracker.html — the whole site as one file
 
 ## The data
 
-**Everything bundled in this repository right now is an illustrative sample.** The
-seven decisions are placeholders that show how a record is laid out; the map, the
-seat counts and the population figures are real, and no cost estimates are shipped
-because none could be sourced. Every sample is flagged as one, in
+**The votes are real.** 614 roll-call votes — every main vote the Parliament has taken
+since the term began on 16 July 2024 — with all 720 members by name, their group, and
+how each of them voted. 441,322 individual ballots.
+
+They were imported from the [HowTheyVote.eu dataset](https://github.com/HowTheyVote/data),
+which compiles the Parliament's own roll-call annexes and publishes them as CSV.
+**Using it requires crediting them**, which the footer, every record's `sources` and this
+file do; check their current data licence at howtheyvote.eu/about before publishing.
+`scripts/fetch-plenary.mjs` reads the Parliament's annexes directly and carries no such
+obligation — that is the long-term route, and it is what keeps the site current after
+each sitting.
+
+Still missing, and honestly labelled as such: Council and Commission records, which have
+no machine-readable source; the plain-language summaries, which are editorial; and the
+press coverage, which is the part that needs journalists. Every sample is flagged as one, in
 the file (`"status": "sample"`), on the page (a banner and a chip), and in the
 validator, which refuses to let a sample lose its label.
 
 ```
 data/
-  eu-countries.geo.json          the 27 member states, simplified for display
-  reference/member-states.json   seats, population, capitals, accession years
+  eu-countries.geo.json          the map: 27 member states, 23 neighbours in grey
+  reference/
+    member-states.json           seats, population, capitals, memberships
+    meps.json                    every MEP: name, country, group — stored once
+    plenary-calendar.json        when each session sits, and where
   decisions/
     index.json                   built from the folder — never edited by hand
-    <decision-id>.json           one decision, one file
+    <vote-id>.json               one vote: metadata and [member id, position] pairs
+  meps/
+    index.json                   every member, for search
+    <member-id>.json             every vote that member cast
 ```
+
+The two folders are the same 441,322 ballots seen from opposite ends: `decisions/`
+answers "who voted how on this", `meps/` answers "how did this person vote on
+everything". Both are built by scripts; neither is edited by hand.
 
 `index.json` is generated, so adding a decision is one file plus one command:
 
