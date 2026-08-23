@@ -14,10 +14,11 @@ all — *what did everybody else's newspapers say about it?*
 
 ## What it does today
 
-The page opens on the map with a feed of the most recent decisions beside it —
-Parliament roll-calls, Council votes and Commission acts in one list, filterable by
-institution, so both chambers can be tracked from the same screen. Pick one, and three
-layers redraw the map:
+The page opens on the Union itself: the 27 member states in the Union's own blue, the
+rest of Europe in grey, and beside them every vote on record — Parliament roll-calls,
+Council votes and Commission acts in one unfolded list, searchable and filterable by
+institution. Nothing is chosen for the reader. Click a country and you get its profile;
+pick a vote and the map redraws in one of two layers:
 
 | Layer | Answers |
 | --- | --- |

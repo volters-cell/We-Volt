@@ -25,7 +25,7 @@
    'decision-rule', 'decision-sources', 'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'country-table', 'table-empty', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
-   'mep-results'].forEach(function (id) {
+   'mep-results', 'decision-section', 'back-to-votes'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -257,7 +257,27 @@
 
   function paint() {
     const decision = state.decision;
-    if (!decision || !map) return;
+    if (!map) return;
+
+    if (!decision) {
+      // No vote open: the Union itself is the subject.
+      map.paint(function () {
+        return { className: 'layer-neutral', label: 'member state of the European Union' };
+      }, function (code) {
+        const item = statesByCode[code];
+        if (!item) return '';
+        const inside = ['euro', 'schengen', 'nato'].filter(function (key) {
+          return ((item.memberships || {})[key] || {}).member;
+        });
+        return '<span>' + item.seats + ' MEPs' +
+          (inside.length ? ' · ' + inside.map(function (key) {
+            return { euro: 'euro', schengen: 'Schengen', nato: 'NATO' }[key];
+          }).join(' · ') : '') + '</span>';
+      });
+      renderLegend();
+      if (state.isolate) applyIsolation();
+      return;
+    }
 
     if (state.layer === 'impact') {
       const scale = Data.impactScale(decision);
@@ -316,6 +336,16 @@
     const decision = state.decision;
     let html = '';
 
+    if (!decision) {
+      dom.legend.innerHTML = '<h3>Legend</h3><ul>' +
+        legendRow('layer-neutral', 'Member state of the European Union') +
+        '<li><span class="swatch swatch-context"></span>Europe outside the Union</li>' +
+        '</ul><p class="legend-hint">Pick a vote from the list to colour the map by ' +
+        'how each member state voted. The chips on a country isolate the euro area, ' +
+        'Schengen or NATO.</p>';
+      return;
+    }
+
     if (state.layer === 'vote') {
       const keys = decision.body === 'commission'
         ? [['vote-not-applicable', 'No vote taken']]
@@ -361,6 +391,7 @@
   function isolateMatches(code) {
     const isolate = state.isolate;
     if (!isolate) return true;
+    if (isolate.kind === 'layer' && !state.decision) return true;
 
     if (isolate.kind === 'bloc') {
       const memberships = (statesByCode[code] || {}).memberships || {};
@@ -387,6 +418,8 @@
   }
 
   function applyIsolation() {
+    // A vote group cannot be isolated when no vote is open; a bloc always can.
+    if (state.isolate && state.isolate.kind === 'layer' && !state.decision) state.isolate = null;
     if (map) map.setDimmed(state.isolate ? isolateMatches : null);
     Array.prototype.forEach.call(dom['country-table'].querySelectorAll('tr[data-code]'), function (row) {
       row.classList.toggle('is-dimmed',
@@ -534,6 +567,7 @@
   }
 
   function renderTable() {
+    if (!state.decision) return;
     const rows = tableRows();
     // A sort held over from a decision that had a column this one lacks would
     // sort by nothing at all.
@@ -576,7 +610,8 @@
   /* ---------------------------------------------------------------- routing */
 
   function permalink(code) {
-    return '#/' + state.decision.id + (code ? '/' + code : '');
+    const id = state.decision ? state.decision.id : '';
+    return '#/' + id + (code ? '/' + code : '');
   }
 
   function readHash() {
@@ -605,9 +640,20 @@
     if (!state.country) {
       dom['panel-body'].hidden = true;
       dom['panel-empty'].hidden = false;
+      dom['panel-empty'].querySelector('p').textContent = state.decision
+        ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
+          'its own press told the story.'
+        : 'Click any member state to see who they are and which clubs they are in. Pick a ' +
+          'vote from the list to see how they voted.';
     } else {
       dom['panel-empty'].hidden = true;
-      Panel.render(dom['panel-body'], state.decision, statesByCode[state.country], permalink(state.country));
+      if (state.decision) {
+        Panel.render(dom['panel-body'], state.decision, statesByCode[state.country],
+          permalink(state.country));
+      } else {
+        Panel.renderProfile(dom['panel-body'], statesByCode[state.country],
+          permalink(state.country));
+      }
       if (state.isolate) applyIsolation();
       // On a narrow screen the panel is far below the map, so bring it into
       // view; on a wide one it is already beside the map and must not jump.
@@ -688,12 +734,44 @@
     renderMepResults();
   }
 
+  /* Nothing open: the map is the Union, the list is the way in. */
+  function clearDecision(options) {
+    if (map) map.stop();
+    state.decision = null;
+    state.isolate = null;
+    state.layerChosen = false;
+    state.layer = 'vote';
+    dom['decision-section'].hidden = true;
+    dom['country-table'].parentNode.hidden = true;
+    dom['table-empty'].hidden = true;
+    document.querySelector('.layer-tabs').hidden = true;
+    dom['map-hint'].textContent = 'Click a member state for its profile, or pick a vote ' +
+      'from the list to see how the Union split.';
+    if (map) map.revealAll();
+    paint();
+    renderFeed();
+    renderMepResults();
+    selectCountry((options && options.country) || null, { scroll: false });
+  }
+
   async function loadDecision(id, code) {
-    const entry = index.decisions.find(function (item) { return item.id === id; }) || index.decisions[0];
+    if (!id) {
+      clearDecision({ country: code });
+      return;
+    }
+    const entry = index.decisions.find(function (item) { return item.id === id; });
+    if (!entry) {
+      clearDecision({ country: code });
+      return;
+    }
     if (!cache[entry.id]) cache[entry.id] = await Data.getJSON(entry.file);
     const changed = !state.decision || state.decision.id !== entry.id;
     state.decision = cache[entry.id];
     state.isolate = null;
+    dom['decision-section'].hidden = false;
+    document.querySelector('.layer-tabs').hidden = false;
+    dom['map-hint'].textContent = 'Click a member state to open its record. ' +
+      'Click the sea to close it. Arrow keys move between countries.';
     renderDecision();
     selectCountry(code || null, { scroll: false });
     if (changed) playReveal();
@@ -758,18 +836,13 @@
       renderPlenary();
       renderFeed();
 
-      dom['decision-list'].addEventListener('scroll', function () {
-        const list = dom['decision-list'];
-        const atEnd = list.scrollTop + list.clientHeight >= list.scrollHeight - 4;
-        list.classList.toggle('at-end', atEnd);
-      });
-
       map = new EUMap(dom.map, geo, {
         onSelect: function (code) { selectCountry(code); },
         onDeselect: function () { selectCountry(null); },
         onHover: function (code) { setHovered(code); }
       });
 
+      // The page opens on the Union, not on a vote somebody else chose.
       const route = readHash();
       await loadDecision(route.decisionId, route.code);
 
@@ -858,9 +931,15 @@
         });
       });
 
+      dom['back-to-votes'].addEventListener('click', function () {
+        clearDecision();
+        dom['search-input'].focus();
+      });
+
       window.addEventListener('hashchange', function () {
         const next = readHash();
-        if (next.decisionId && state.decision && next.decisionId !== state.decision.id) {
+        const current = state.decision ? state.decision.id : null;
+        if (next.decisionId !== current) {
           loadDecision(next.decisionId, next.code);
         } else if (next.code !== state.country) {
           selectCountry(next.code, { scroll: false });

@@ -37,14 +37,14 @@
   <main>
     <!-- Left: the map, which stays in view while the record is read. -->
     <section class="map-section" aria-labelledby="map-heading">
-      <div class="layer-tabs" role="tablist" aria-label="What the map shows">
+      <div class="layer-tabs" role="tablist" aria-label="What the map shows" hidden>
         <button role="tab" id="tab-vote" aria-controls="map" data-layer="vote" aria-selected="true">How they voted</button>
         <button role="tab" id="tab-impact" aria-controls="map" data-layer="impact" aria-selected="false" hidden>What it costs</button>
         <button role="tab" id="tab-press" aria-controls="map" data-layer="press" aria-selected="false">Press framing</button>
       </div>
 
       <h2 id="map-heading" class="map-heading">How they voted</h2>
-      <p id="map-hint" class="map-hint">Click a member state to open its record. Click the sea to close it. Arrow keys move between countries.</p>
+      <p id="map-hint" class="map-hint">Click a member state for its profile, or pick a vote from the list to see how the Union split.</p>
 
       <div class="map-wrap">
         <div id="map" class="map" aria-label="Map of the European Union"></div>
@@ -56,7 +56,7 @@
     <div class="rail">
       <section id="tracker" class="tracker" aria-labelledby="tracker-heading">
         <div class="tracker-head">
-          <h2 id="tracker-heading">Recent decisions</h2>
+          <h2 id="tracker-heading">Recent votes</h2>
           <div class="tracker-filters" role="group" aria-label="Filter by institution">
             <button type="button" data-filter="all" aria-pressed="true">All</button>
             <button type="button" data-filter="parliament" aria-pressed="false">Parliament</button>
@@ -75,8 +75,9 @@
         <div id="mep-results" class="mep-results" hidden></div>
       </section>
 
-      <section class="decision" aria-labelledby="decision-title">
+      <section class="decision" id="decision-section" aria-labelledby="decision-title" hidden>
         <p class="decision-meta">
+          <button type="button" class="back-to-votes" id="back-to-votes">← All votes</button>
           <span id="decision-body" class="badge"></span>
           <time id="decision-date"></time>
           <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>

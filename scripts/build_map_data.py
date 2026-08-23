@@ -48,17 +48,28 @@ EU27 = {
     "Sweden": ("SE", "Sweden"),
 }
 
-# The neighbours worth drawing. Micro-states are left out: at this scale
-# Monaco and San Marino are smaller than the line weight.
+# Every European country that is not in the Union, drawn in grey. The list
+# follows the Council of Europe's geography rather than a strict continental
+# line, which is why the South Caucasus is here: those states sit in European
+# institutions, and a reader looking for them should find them.
 NEIGHBOURS = {
     "Albania": ("AL", "Albania"),
+    "Andorra": ("AD", "Andorra"),
+    "Armenia": ("AM", "Armenia"),
+    "Azerbaijan": ("AZ", "Azerbaijan"),
     "Belarus": ("BY", "Belarus"),
     "Bosnia and Herzegovina": ("BA", "Bosnia and Herzegovina"),
+    "Faroe Islands": ("FO", "Faroe Islands"),
+    "Georgia": ("GE", "Georgia"),
+    "Holy See (Vatican City)": ("VA", "Vatican City"),
     "Iceland": ("IS", "Iceland"),
+    "Liechtenstein": ("LI", "Liechtenstein"),
+    "Monaco": ("MC", "Monaco"),
     "Montenegro": ("ME", "Montenegro"),
     "Norway": ("NO", "Norway"),
     "Republic of Moldova": ("MD", "Moldova"),
     "Russia": ("RU", "Russia"),
+    "San Marino": ("SM", "San Marino"),
     "Serbia": ("RS", "Serbia"),
     "Switzerland": ("CH", "Switzerland"),
     "The former Yugoslav Republic of Macedonia": ("MK", "North Macedonia"),
@@ -158,12 +169,19 @@ def polygons_of(geometry):
 def build_neighbour(source):
     """A neighbour needs a recognisable silhouette and nothing more."""
     code, name = NEIGHBOURS[source["properties"]["NAME"]]
+    candidates = [p[0] for p in polygons_of(source["geometry"]) if in_bbox(p[0], NEIGHBOUR_BBOX)]
+    candidates.sort(key=ring_area, reverse=True)
+    if not candidates:
+        return None
+
+    # Same rule as for member states: the mainland is always kept, however
+    # small, so San Marino and Monaco survive being a fraction of a pixel.
+    keepers = candidates[:1] + [r for r in candidates[1:] if ring_area(r) >= NEIGHBOUR_MIN_AREA]
     kept = []
-    for polygon in polygons_of(source["geometry"]):
-        outer = polygon[0]
-        if not in_bbox(outer, NEIGHBOUR_BBOX) or ring_area(outer) < NEIGHBOUR_MIN_AREA:
-            continue
-        ring = clean_ring(outer, NEIGHBOUR_EPSILON, NEIGHBOUR_PRECISION)
+    for outer in keepers:
+        epsilon = min(NEIGHBOUR_EPSILON, math.sqrt(ring_area(outer)) / 12)
+        precision = NEIGHBOUR_PRECISION if ring_area(outer) > 1 else PRECISION
+        ring = clean_ring(outer, epsilon, precision)
         if ring:
             kept.append([ring])
     if not kept:

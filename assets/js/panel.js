@@ -217,6 +217,28 @@
       (notes.length ? '<p class="bloc-notes">' + notes.join('') + '</p>' : '');
   }
 
+  /* With no vote open, a country is still worth opening: this is who they are
+     and which rooms they sit in. */
+  function renderProfile(node, state, permalink) {
+    node.innerHTML =
+      '<header class="panel-head">' +
+        '<button type="button" class="panel-close" aria-label="Close ' +
+          escapeHTML(state.name) + '">Close</button>' +
+        '<p class="panel-eyebrow">Member state</p>' +
+        '<h2 id="panel-title">' + escapeHTML(state.name) + '</h2>' +
+        '<p class="panel-facts">' + state.seats + ' MEPs · ' + state.population.toFixed(1) +
+          ' million people · capital ' + escapeHTML(state.capital) + '</p>' +
+        blocs(state) +
+      '</header>' +
+      '<section class="card">' +
+        '<p class="neutral-note">Pick a vote from the list to see how ' +
+        escapeHTML(state.name) + ' voted, and how its press told the story.</p>' +
+        '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
+        '">Link to this country</a></p>' +
+      '</section>';
+    node.hidden = false;
+  }
+
   function render(node, decision, state, permalink) {
     const country = decision.countries[state.code] || {};
     node.innerHTML =
@@ -239,5 +261,5 @@
     node.hidden = false;
   }
 
-  global.Panel = { render: render, setStates: setStates, VOTE_LABEL: VOTE_LABEL, FRAMING_LABEL: FRAMING_LABEL, escapeHTML: escapeHTML };
+  global.Panel = { render: render, renderProfile: renderProfile, setStates: setStates, VOTE_LABEL: VOTE_LABEL, FRAMING_LABEL: FRAMING_LABEL, escapeHTML: escapeHTML };
 })(window);

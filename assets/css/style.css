@@ -318,6 +318,7 @@ main {
    legend and all — fits on a laptop screen without scrolling past it. */
 
 .layer-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+.layer-tabs[hidden] { display: none; }
 .layer-tabs button {
   font: inherit;
   font-size: .88rem;
@@ -445,6 +446,8 @@ main {
 .swatch.press-mixed { background: var(--press-mixed); }
 .swatch.press-neutral { background: var(--press-neutral); }
 .swatch.press-none { background: var(--press-none); }
+.swatch.layer-neutral { background: var(--eu-blue); border-color: var(--eu-blue); }
+.swatch.swatch-context { background: var(--context); border-color: var(--context-line); }
 
 /* ---------------------------------------------------------------- motion */
 
@@ -530,6 +533,31 @@ tbody tr.is-dimmed { opacity: .35; }
 @media (prefers-reduced-motion: reduce) {
   .eu-map.is-revealing .shapes { animation: none; }
   .country-shape, .country-dot, .meter-fill { transition: none; }
+}
+
+/* When no vote is open, the Union is the subject: member states in the
+   Union's own blue, everything else in the same grey as always. */
+.layer-neutral .country-shape, .layer-neutral .country-dot { fill: var(--eu-blue); }
+.layer-neutral.is-hovered .country-shape { fill: color-mix(in srgb, var(--eu-blue) 82%, white); }
+
+.back-to-votes {
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--focus);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-right: .4rem;
+  cursor: pointer;
+}
+.back-to-votes:hover { text-decoration: underline; }
+
+.neutral-note {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
 }
 
 /* ---------------------------------------------------------------- panel */
@@ -778,23 +806,14 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   color: var(--surface);
 }
 
-/* Roughly four cards deep, then it scrolls: the feed is a way in, not the page. */
+/* The whole list, unfolded. It is the way into the site, so it is not hidden
+   behind a scrollbar of its own — the page scrolls. */
 .decision-list {
   list-style: none;
   margin: 0;
-  padding: 0 .2rem 0 0;
+  padding: 0;
   display: grid;
   gap: .4rem;
-  max-height: 19rem;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2rem), transparent);
-  mask-image: linear-gradient(to bottom, #000 calc(100% - 2rem), transparent);
-}
-/* No fade once the reader has reached the end of the list. */
-.decision-list.at-end {
-  -webkit-mask-image: none;
-  mask-image: none;
 }
 .feed-empty { font-size: .85rem; color: var(--ink-faint); padding: .5rem 0; }
 
