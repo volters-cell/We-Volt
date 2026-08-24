@@ -12,7 +12,7 @@ import {
 import {
   buildRecord, isFinalVote, procedureReference, documentReference, voteRuleOf, outcomeOf, slug
 } from '../scripts/fetch-plenary.mjs';
-import { foldSessions, locationOf } from '../scripts/fetch-sessions.mjs';
+import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -121,6 +121,12 @@ assert.equal(buildRecord(finalVote, item, {}, '2026-07-09', 10)._counted, 0);
 assert.equal(locationOf(meetings[0]), 'Strasbourg');
 assert.equal(locationOf(meetings[3]), 'Brussels');
 assert.equal(locationOf({}), null, 'no locality, no guess');
+
+// The portal names a term "org/ep-10"; reading that as a number gives NaN, and
+// every sitting of the term gets filtered away.
+assert.equal(termNumber('org/ep-10'), 10);
+assert.equal(termNumber(meetings[0].parliamentary_term), 10);
+assert.equal(termNumber(null), null);
 
 const days = meetings
   .filter((meeting) => meeting.had_activity_type.indexOf('PLENARY') !== -1)

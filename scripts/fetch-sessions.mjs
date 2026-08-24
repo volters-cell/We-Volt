@@ -40,6 +40,12 @@ function parseArgs(argv) {
   return args;
 }
 
+/* The portal names a term "org/ep-10", not "10". */
+export function termNumber(value) {
+  const match = String(value || '').match(/(\d+)\s*$/);
+  return match ? Number(match[1]) : null;
+}
+
 export function locationOf(meeting) {
   const locality = [].concat(meeting.hasLocality || meeting.had_activity_location || [])
     .map(function (entry) { return typeof entry === 'string' ? entry : (entry && entry.id) || ''; })
@@ -79,7 +85,7 @@ export async function fetchSittings(term, from, until) {
       const date = meeting.activity_date;
       if (!date || date < from || date > until) return;
       if (meeting.had_activity_type && meeting.had_activity_type.indexOf('PLENARY') === -1) return;
-      if (meeting.parliamentary_term && Number(lastSegment(meeting.parliamentary_term)) !== term) return;
+      if (meeting.parliamentary_term && termNumber(meeting.parliamentary_term) !== term) return;
       days.push({ date: date, location: locationOf(meeting), label: english(meeting.activity_label) });
     });
   }
