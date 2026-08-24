@@ -100,7 +100,16 @@ export async function get(pathname, params) {
         throw new Error(`${url.pathname} responded ${response.status}`);
       }
       if (!response.ok) throw Object.assign(new Error(`${url.pathname} responded ${response.status}`), { fatal: true });
-      return await response.json();
+
+      // A year the Parliament has not scheduled yet comes back 200 with an
+      // empty body. That is an answer — nothing recorded — not a failure.
+      const body = (await response.text()).trim();
+      if (!body) return null;
+      try {
+        return JSON.parse(body);
+      } catch (error) {
+        throw Object.assign(new Error(`${url.pathname} answered ${body.length} bytes that are not JSON`), { fatal: true });
+      }
     } catch (error) {
       if (error.fatal) throw error;
       lastError = error;
