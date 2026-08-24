@@ -60,6 +60,10 @@ of them at once. Searching unfolds whatever it finds. A search matches a word fr
 title, a procedure reference, or — inside an open vote — an MEP by name, party or group,
 which jumps to that member's country.
 
+Political groups are shown with their conventional colours; drop an artwork file into
+`assets/groups/` and it replaces the colour with that group's own logo — see the README
+there, including on whose marks those are.
+
 Open a vote and the whole chamber is there: a bar showing how it split, then the
 roll-call broken down three ways — **MEPs**, **Political groups**, **Countries** — with
 filters for name, group, country and position. Every part of the bar is a filter:

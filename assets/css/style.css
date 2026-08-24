@@ -1030,6 +1030,10 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   color: var(--ink-soft);
 }
 .bd-tile-country { font-size: .82rem; letter-spacing: .04em; }
+.bd-tile-group { border-width: 0; font-weight: 700; }
+/* A logo replaces the colour rather than sitting on it. */
+.bd-tile.has-logo { background: var(--surface); border: 1px solid var(--line); padding: .2rem; }
+.bd-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 .bd-main { display: grid; gap: .28rem; min-width: 0; }
 .bd-label { font-weight: 650; font-size: .92rem; line-height: 1.25; }
