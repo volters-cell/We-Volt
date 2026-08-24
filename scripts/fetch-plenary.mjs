@@ -91,6 +91,18 @@ function idsOf(value) {
   }).filter(Boolean);
 }
 
+/* The Parliament marks the procedure a text is under in its own title: *** for
+   consent, ***I, ***II and ***III for the readings of the ordinary legislative
+   procedure, * for consultation. It means something to a clerk and nothing to a
+   reader, and the record keeps the procedure in its own field anyway. */
+export function plainTitle(text) {
+  return String(text || '')
+    .replace(/(^|\s)\*{1,3}(I{1,3})?(?=\s|$)/g, '$1')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/\s+([–—-])\s*$/, '')
+    .trim();
+}
+
 /* The vote item's structured label states the majority a text needed. */
 export function voteRuleOf(label) {
   const text = String(label || '');
@@ -179,8 +191,8 @@ export function buildRecord(decision, item, members, date, term) {
   const ballots = ballotsOf(decision);
   const totals = tallyOf(decision);
 
-  const itemTitle = english(item && item.activity_label).replace(/\s+/g, ' ').trim();
-  const decisionTitle = english(decision.activity_label).replace(/\s+/g, ' ').trim();
+  const itemTitle = plainTitle(english(item && item.activity_label).replace(/\s+/g, ' '));
+  const decisionTitle = plainTitle(english(decision.activity_label).replace(/\s+/g, ' '));
   const title = itemTitle || decisionTitle || 'Roll-call vote';
   const detail = itemTitle && decisionTitle && decisionTitle !== itemTitle ? decisionTitle : '';
 

@@ -5,7 +5,7 @@
   "dataNote": "Roll-call vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "EU–Mexico Interim Agreement on Trade ***",
+  "title": "EU–Mexico Interim Agreement on Trade",
   "subtitle": "A10-0198/2026 – Borja Giménez Larraz – Draft Council decision — roll-call vote in plenary",
   "date": "2026-07-08",
   "voteRule": "simple-majority",

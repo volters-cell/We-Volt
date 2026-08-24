@@ -10,7 +10,8 @@ import {
   normaliseGroup, countryCode, lastSegment, english, isRollCall, ballotsOf, tallyOf
 } from '../scripts/lib/portal.mjs';
 import {
-  buildRecord, isFinalVote, procedureReference, documentReference, voteRuleOf, outcomeOf, slug
+  buildRecord, isFinalVote, procedureReference, documentReference, voteRuleOf, outcomeOf, slug,
+  plainTitle
 } from '../scripts/fetch-plenary.mjs';
 import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.mjs';
 
@@ -84,8 +85,16 @@ assert.equal(record.status, 'verified');
 assert.equal(record.date, '2026-07-09');
 assert.equal(record.sourceId, 195719);
 assert.equal(record.id, 'ep-2026-07-09-2023-0212-195719');
-assert.equal(record.title, 'Establishment of the digital euro ***I',
-  'the item gives the record its readable title');
+assert.equal(record.title, 'Establishment of the digital euro',
+  'the item gives the record its readable title, without the clerk\'s marking');
+
+// *** is consent, ***I ***II ***III the readings of the ordinary legislative
+// procedure, * consultation. None of it means anything to a reader, and the
+// record keeps the procedure in its own field.
+assert.equal(plainTitle('Air passenger rights ***III'), 'Air passenger rights');
+assert.equal(plainTitle('EU-Morocco Agreement: amendment ***'), 'EU-Morocco Agreement: amendment');
+assert.equal(plainTitle('Consultation of somebody *'), 'Consultation of somebody');
+assert.equal(plainTitle('An asterisk*inside a word stays'), 'An asterisk*inside a word stays');
 assert.equal(record.procedure.reference, '2023/0212');
 assert.equal(record.voteRuleLabel, 'Majority of votes cast');
 assert.equal(record.outcome.result, 'adopted', '3 for beats 1 against');

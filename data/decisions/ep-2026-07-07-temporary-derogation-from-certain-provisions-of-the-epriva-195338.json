@@ -5,7 +5,7 @@
   "dataNote": "Roll-call vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Temporary derogation from certain provisions of the ePrivacy Directive to combat online child sexual abuse ***II",
+  "title": "Temporary derogation from certain provisions of the ePrivacy Directive to combat online child sexual abuse",
   "subtitle": "C10-0178/2026 – Request for an urgent decision — roll-call vote in plenary",
   "date": "2026-07-07",
   "voteRule": "simple-majority",
