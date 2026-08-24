@@ -1,0 +1,47 @@
+# Ask the Parliament's servers what they actually answer.
+#
+# The importer's addresses were written from documentation rather than from a
+# live response, and one of them is wrong: the scheduled run reports a 404 for
+# the member directory and falls back to the cached copy. This workflow is how
+# that gets diagnosed from a machine that can reach europarl.europa.eu.
+#
+# Run it from the Actions tab; it writes nothing and changes nothing.
+
+name: Probe the sources
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "A sitting date to test, YYYY-MM-DD"
+        required: false
+        default: "2026-07-09"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ask each address what it returns
+        run: |
+          DATE="${{ inputs.date || '2026-07-09' }}"
+          probe () {
+            printf '\n=== %s\n' "$2"
+            code=$(curl -sSL -m 45 -o /tmp/body -w '%{http_code} %{content_type} %{size_download}b' \
+              -A 'eu-tracker/0.1 (open data import; contact via the repository)' \
+              -H 'accept: application/xml,text/xml,application/json,*/*' "$1" || echo "connection failed")
+            printf '    %s -> %s\n' "$1" "$code"
+            head -c 220 /tmp/body | tr '\n' ' '
+            printf '\n'
+          }
+
+          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_EN.xml" "roll-call annex, English"
+          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_FR.xml" "roll-call annex, French"
+          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-VOT_EN.xml" "votes list"
+          probe "https://www.europarl.europa.eu/meps/en/directory/xml/?leg=10" "MEP directory, trailing slash"
+          probe "https://www.europarl.europa.eu/meps/en/directory/xml?leg=10" "MEP directory, no trailing slash"
+          probe "https://www.europarl.europa.eu/meps/en/full-list/xml/" "MEP full list"
+          probe "https://data.europarl.europa.eu/api/v2/meps?parliamentary-term=10&format=application%2Fld%2Bjson&limit=3" "open data portal, members"
+          probe "https://data.europarl.europa.eu/api/v2/meps/show-current?format=application%2Fld%2Bjson&limit=3" "open data portal, current members"
+          probe "https://www.europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId=10" "session calendar"
+          probe "https://data.europarl.europa.eu/api/v1/meetings/MTG-PL-$DATE" "meeting record, v1"
+          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE?format=application%2Fld%2Bjson" "meeting record, v2"
