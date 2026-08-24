@@ -1,9 +1,10 @@
-# Ask the Parliament's servers what they actually answer.
+# Ask the Parliament's open data portal what its vote records actually contain.
 #
-# The importer's addresses were written from documentation rather than from a
-# live response, and one of them is wrong: the scheduled run reports a 404 for
-# the member directory and falls back to the cached copy. This workflow is how
-# that gets diagnosed from a machine that can reach europarl.europa.eu.
+# The website answers 202 with an empty body to everything automated, so the
+# portal at data.europarl.europa.eu is the only usable source. Its sitting
+# endpoints answer properly; what is still unknown is whether a decision
+# carries the individual ballots, or only the totals. This job prints the
+# shape of the records so the importer can be written against fact.
 #
 # Run it from the Actions tab; it writes nothing and changes nothing.
 
@@ -21,28 +22,37 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Ask each address what it returns
+      - name: Read the shape of a sitting's votes
         run: |
           DATE="${{ inputs.date || '2026-07-09' }}"
-          probe () {
-            printf '\n=== %s\n' "$2"
-            code=$(curl -sSL -m 45 -o /tmp/body -w '%{http_code} %{content_type} %{size_download}b' \
-              -A 'eu-tracker/0.1 (open data import; contact via the repository)' \
-              -H 'accept: application/xml,text/xml,application/json,*/*' "$1" || echo "connection failed")
-            printf '    %s -> %s\n' "$1" "$code"
-            head -c 220 /tmp/body | tr '\n' ' '
-            printf '\n'
-          }
+          UA='eu-tracker/0.1 (open data import; contact via the repository)'
+          get () { curl -sSL -m 60 -A "$UA" -H 'accept: application/ld+json' "$1"; }
+          BASE=https://data.europarl.europa.eu/api/v2
 
-          echo "--- the public website ---"
-          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_EN.xml" "roll-call annex"
+          echo "=== every key that appears on a decision"
+          get "$BASE/meetings/MTG-PL-$DATE/decisions?format=application%2Fld%2Bjson" > /tmp/dec.json
+          jq -r '[.data[] | keys[]] | unique[]' /tmp/dec.json
 
           echo
-          echo "--- the open data portal ---"
-          probe "https://data.europarl.europa.eu/api/v2/openapi.json" "the API's own description"
-          probe "https://data.europarl.europa.eu/api/v2/meetings?year=2026&format=application%2Fld%2Bjson&limit=5" "meetings in 2026"
-          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/decisions?format=application%2Fld%2Bjson" "decisions taken at a sitting"
-          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/vote-results?format=application%2Fld%2Bjson" "vote results for a sitting"
-          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/activities?format=application%2Fld%2Bjson" "activities at a sitting"
-          probe "https://data.europarl.europa.eu/api/v2/decisions?format=application%2Fld%2Bjson&limit=3" "decisions collection"
-          probe "https://data.europarl.europa.eu/api/v2/meps/show-current?format=application%2Fld%2Bjson&limit=2&offset=0" "current members, with country and group"
+          echo "=== how many decisions, and the first one in full"
+          jq '.data | length' /tmp/dec.json
+          jq '.data[0]' /tmp/dec.json
+
+          echo
+          echo "=== one decision fetched on its own"
+          ID=$(jq -r '.data[0].activity_id' /tmp/dec.json)
+          echo "id: $ID"
+          get "$BASE/meetings/MTG-PL-$DATE/decisions/$ID?format=application%2Fld%2Bjson" > /tmp/one.json
+          head -c 4000 /tmp/one.json
+          echo
+
+          echo
+          echo "=== every key that appears on a vote-result"
+          get "$BASE/meetings/MTG-PL-$DATE/vote-results?format=application%2Fld%2Bjson" > /tmp/vr.json
+          jq -r '[.data[] | keys[]] | unique[]' /tmp/vr.json
+          echo "-- the first vote-result in full"
+          jq '.data[0]' /tmp/vr.json
+
+          echo
+          echo "=== anything anywhere whose key mentions a voter"
+          jq -r '[paths(scalars) | join(".")] | unique[]' /tmp/dec.json | grep -i -E 'voter|ballot|favor|against|abstain|number' | head -40 || echo "none"
