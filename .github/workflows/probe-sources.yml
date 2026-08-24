@@ -34,14 +34,15 @@ jobs:
             printf '\n'
           }
 
-          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_EN.xml" "roll-call annex, English"
-          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_FR.xml" "roll-call annex, French"
-          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-VOT_EN.xml" "votes list"
-          probe "https://www.europarl.europa.eu/meps/en/directory/xml/?leg=10" "MEP directory, trailing slash"
-          probe "https://www.europarl.europa.eu/meps/en/directory/xml?leg=10" "MEP directory, no trailing slash"
-          probe "https://www.europarl.europa.eu/meps/en/full-list/xml/" "MEP full list"
-          probe "https://data.europarl.europa.eu/api/v2/meps?parliamentary-term=10&format=application%2Fld%2Bjson&limit=3" "open data portal, members"
-          probe "https://data.europarl.europa.eu/api/v2/meps/show-current?format=application%2Fld%2Bjson&limit=3" "open data portal, current members"
-          probe "https://www.europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId=10" "session calendar"
-          probe "https://data.europarl.europa.eu/api/v1/meetings/MTG-PL-$DATE" "meeting record, v1"
-          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE?format=application%2Fld%2Bjson" "meeting record, v2"
+          echo "--- the public website ---"
+          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_EN.xml" "roll-call annex"
+
+          echo
+          echo "--- the open data portal ---"
+          probe "https://data.europarl.europa.eu/api/v2/openapi.json" "the API's own description"
+          probe "https://data.europarl.europa.eu/api/v2/meetings?year=2026&format=application%2Fld%2Bjson&limit=5" "meetings in 2026"
+          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/decisions?format=application%2Fld%2Bjson" "decisions taken at a sitting"
+          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/vote-results?format=application%2Fld%2Bjson" "vote results for a sitting"
+          probe "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-$DATE/activities?format=application%2Fld%2Bjson" "activities at a sitting"
+          probe "https://data.europarl.europa.eu/api/v2/decisions?format=application%2Fld%2Bjson&limit=3" "decisions collection"
+          probe "https://data.europarl.europa.eu/api/v2/meps/show-current?format=application%2Fld%2Bjson&limit=2&offset=0" "current members, with country and group"
