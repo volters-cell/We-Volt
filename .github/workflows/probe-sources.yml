@@ -1,10 +1,10 @@
 # Ask the Parliament's open data portal what its vote records actually contain.
 #
 # The website answers 202 with an empty body to everything automated, so the
-# portal at data.europarl.europa.eu is the only usable source. Its sitting
-# endpoints answer properly; what is still unknown is whether a decision
-# carries the individual ballots, or only the totals. This job prints the
-# shape of the records so the importer can be written against fact.
+# portal at data.europarl.europa.eu is the only usable source. A decision
+# carries the individual ballots — had_voter_favor and its siblings — and this
+# job prints the exact field names and one worked example, small enough to
+# read in the log, so the importer can be written against fact.
 #
 # Run it from the Actions tab; it writes nothing and changes nothing.
 
@@ -26,33 +26,40 @@ jobs:
         run: |
           DATE="${{ inputs.date || '2026-07-09' }}"
           UA='eu-tracker/0.1 (open data import; contact via the repository)'
-          get () { curl -sSL -m 60 -A "$UA" -H 'accept: application/ld+json' "$1"; }
           BASE=https://data.europarl.europa.eu/api/v2
+          get () { curl -sSL -m 60 -A "$UA" -H 'accept: application/ld+json' "$1"; }
 
-          echo "=== every key that appears on a decision"
           get "$BASE/meetings/MTG-PL-$DATE/decisions?format=application%2Fld%2Bjson" > /tmp/dec.json
-          jq -r '[.data[] | keys[]] | unique[]' /tmp/dec.json
 
-          echo
-          echo "=== how many decisions, and the first one in full"
+          echo "=== decisions in the sitting"
           jq '.data | length' /tmp/dec.json
-          jq '.data[0]' /tmp/dec.json
 
           echo
-          echo "=== one decision fetched on its own"
-          ID=$(jq -r '.data[0].activity_id' /tmp/dec.json)
-          echo "id: $ID"
-          get "$BASE/meetings/MTG-PL-$DATE/decisions/$ID?format=application%2Fld%2Bjson" > /tmp/one.json
-          head -c 4000 /tmp/one.json
-          echo
+          echo "=== every field name a decision can carry, with how many decisions carry it"
+          jq -r '[.data[] | keys[]] | group_by(.) | map("\(.[0])  \(length)")[]' /tmp/dec.json
 
           echo
-          echo "=== every key that appears on a vote-result"
-          get "$BASE/meetings/MTG-PL-$DATE/vote-results?format=application%2Fld%2Bjson" > /tmp/vr.json
-          jq -r '[.data[] | keys[]] | unique[]' /tmp/vr.json
-          echo "-- the first vote-result in full"
-          jq '.data[0]' /tmp/vr.json
+          echo "=== the first roll-call decision, with the ballot lists counted rather than printed"
+          jq '[.data[] | select(has("had_voter_favor") or has("had_voter_against") or has("had_voter_abstention"))][0]
+              | with_entries(if (.value | type) == "array" and (.value | length) > 6
+                             then .value = "[\(.value | length) entries] first: \(.value[0])"
+                             else . end)
+              | if .activity_label then .activity_label = .activity_label.en else . end
+              | del(.structuredLabel)' /tmp/dec.json
 
           echo
-          echo "=== anything anywhere whose key mentions a voter"
-          jq -r '[paths(scalars) | join(".")] | unique[]' /tmp/dec.json | grep -i -E 'voter|ballot|favor|against|abstain|number' | head -40 || echo "none"
+          echo "=== how many decisions are roll-calls, and the tally of the first"
+          jq -r '[.data[] | select(has("had_voter_favor"))] | length' /tmp/dec.json
+          jq -r '[.data[] | select(has("had_voter_favor"))][0]
+                 | "for \(.had_voter_favor|length)  against \(.had_voter_against|length? // 0)  abstain \(.had_voter_abstention|length? // 0)"' /tmp/dec.json
+
+          echo
+          echo "=== the shape of one voter entry"
+          jq '[.data[] | select(has("had_voter_favor"))][0].had_voter_favor[0:3]' /tmp/dec.json
+
+          echo
+          echo "=== what the decision points at (documents, procedure, outcome)"
+          jq -r '[.data[] | select(has("had_voter_favor"))][0]
+                 | {activity_id, had_activity_type, had_decision_outcome, based_on_a_realization_of,
+                    recorded_in_a_realization_of, was_motivated_by, decision_method,
+                    number_of_votes_favor, number_of_votes_against, number_of_votes_abstention}' /tmp/dec.json
