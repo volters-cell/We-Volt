@@ -139,16 +139,33 @@ export async function get(pathname, params) {
   throw lastError;
 }
 
-/* The portal pages at a few hundred records; ask until a page comes back short. */
+/* The portal pages at a few hundred records; ask until a page comes back short.
+   Not every endpoint honours offset, and one that ignores it hands back the
+   same page for ever — which is a loop that ends when the machine runs out of
+   memory, not when the data does. So a page that starts where the last one
+   started is the end of the data, whatever its length says. */
+const PAGE_LIMIT = 40;
+
 export async function getAll(pathname, params, pageSize) {
   const size = pageSize || 500;
   const rows = [];
-  for (let offset = 0; ; offset += size) {
-    const payload = await get(pathname, { ...(params || {}), limit: size, offset: offset });
+  let previousFirst = null;
+
+  for (let page = 0; page < PAGE_LIMIT; page += 1) {
+    const payload = await get(pathname, { ...(params || {}), limit: size, offset: page * size });
     const batch = (payload && payload.data) || [];
+    if (!batch.length) return rows;
+
+    const first = batch[0] && (batch[0].id || batch[0].activity_id);
+    if (previousFirst !== null && first === previousFirst) return rows;
+    previousFirst = first;
+
     rows.push(...batch);
     if (batch.length < size) return rows;
   }
+
+  console.warn(`${pathname}: stopped after ${PAGE_LIMIT} pages — the portal kept sending more.`);
+  return rows;
 }
 
 /* ------------------------------------------------------------- the members */
