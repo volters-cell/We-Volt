@@ -91,6 +91,34 @@ Two settings have to be right for it to work:
 You can also run it from the Actions tab by hand (*Run workflow*), optionally giving a
 start date — that is how to backfill a term.
 
+## Checking that nothing is missing
+
+```bash
+node scripts/audit-sources.mjs            # the whole term
+node scripts/audit-sources.mjs --write    # and save the report
+```
+
+This asks the opposite question to the importer's: not "what did I write" but "is
+anything missing". It walks every sitting of the term at the portal and compares vote by
+vote, matching on the Parliament's own voting id, which each record keeps as `sourceId`.
+It reports four things and exits non-zero on any of them: a vote the Parliament published
+ballots for and this site does not hold; a record here with no matching vote there; a
+tally that disagrees with the Parliament's figures; a ballot naming somebody the member
+directory cannot identify.
+
+Two differences are counted rather than flagged, because they are not errors:
+
+- **A roll call with no ballots published.** The Parliament sometimes records a vote as a
+  roll call without publishing who voted how. There is nothing to hold; 32 of the term's
+  679 votes on a text are like this.
+- **Absences held here.** The portal publishes who voted for, against and abstained, and
+  not who was absent. Where a record carries absences they came from the fuller archive
+  this project started from, so the audit compares only the three positions the portal
+  publishes.
+
+`.github/workflows/audit-sources.yml` runs it monthly and writes
+`data/reference/coverage.json`, which is what the About page's completeness table quotes.
+
 ## Verify a real run before trusting the schedule
 
 The endpoints above were each confirmed against live answers from a GitHub runner, and

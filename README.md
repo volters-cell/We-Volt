@@ -110,9 +110,14 @@ licence on each part. It is deliberately blunt about the gaps.
 
 ## The data
 
-**The votes are real.** 650 roll-call votes — every main vote the Parliament has taken
-since the term began on 16 July 2024 — with every member by name, their group, and how
-each of them voted. 464,127 individual ballots.
+**The votes are real, and the claim is checked.** 718 roll-call votes — every main vote
+the Parliament has taken since the term began on 16 July 2024 — with every member by
+name, their group, and how each of them voted. 495,164 individual ballots.
+
+`scripts/audit-sources.mjs` walks all 112 sittings of the term at the Parliament and
+compares vote by vote. As of 24 August 2026: 679 votes on a text, 647 of them published
+with ballots and all 647 held here, 32 recorded as roll calls with no ballots published,
+and **no record whose figures disagree with the Parliament's own**.
 
 Everything comes from the European Parliament's own record, read from its open data portal
 at `data.europarl.europa.eu`: each sitting's decisions, which name every member and how they
@@ -141,7 +146,7 @@ data/
     <member-id>.json             every vote that member cast
 ```
 
-The two folders are the same 464,127 ballots seen from opposite ends: `decisions/`
+The two folders are the same 495,164 ballots seen from opposite ends: `decisions/`
 answers "who voted how on this", `meps/` answers "how did this person vote on
 everything". Both are built by scripts; neither is edited by hand.
 
