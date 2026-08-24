@@ -1,17 +1,244 @@
 {
   "metadata": {
     "term": 10,
-    "fetched": null,
-    "source": "https://www.europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId=10",
-    "locationSource": "https://data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}",
-    "note": "Provisional. The one session below was reported by the project owner, not fetched: run scripts/fetch-sessions.mjs against the Parliament's calendar to replace it with the full term. Votes that fall outside a known session are grouped by month instead."
+    "fetched": "2026-08-24",
+    "source": "https://data.europarl.europa.eu/api/v2/meetings?year={year}",
+    "note": "One entry per plenary session, folded from the sitting days the Parliament records. A null location means the meeting record did not name one."
   },
   "sessions": [
+    {
+      "start": "2024-07-16",
+      "end": "2024-07-19",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2024-09-16",
+      "end": "2024-09-19",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2024-10-07",
+      "end": "2024-10-10",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2024-10-21",
+      "end": "2024-10-24",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2024-11-13",
+      "end": "2024-11-14",
+      "location": "Brussels",
+      "days": 2
+    },
+    {
+      "start": "2024-11-19",
+      "end": "2024-11-19",
+      "location": "Brussels",
+      "days": 1
+    },
+    {
+      "start": "2024-11-25",
+      "end": "2024-11-28",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2024-12-16",
+      "end": "2024-12-19",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-01-20",
+      "end": "2025-01-23",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-01-29",
+      "end": "2025-01-29",
+      "location": "Brussels",
+      "days": 1
+    },
+    {
+      "start": "2025-02-10",
+      "end": "2025-02-13",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-03-10",
+      "end": "2025-03-13",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-03-31",
+      "end": "2025-04-03",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-05-05",
+      "end": "2025-05-08",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-05-21",
+      "end": "2025-05-22",
+      "location": "Brussels",
+      "days": 2
+    },
+    {
+      "start": "2025-06-16",
+      "end": "2025-06-19",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-07-07",
+      "end": "2025-07-10",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-09-08",
+      "end": "2025-09-11",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-10-06",
+      "end": "2025-10-09",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-10-20",
+      "end": "2025-10-23",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-11-12",
+      "end": "2025-11-13",
+      "location": "Brussels",
+      "days": 2
+    },
+    {
+      "start": "2025-11-24",
+      "end": "2025-11-27",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2025-12-15",
+      "end": "2025-12-18",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-01-19",
+      "end": "2026-01-22",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-01-27",
+      "end": "2026-01-27",
+      "location": "Brussels",
+      "days": 1
+    },
+    {
+      "start": "2026-02-09",
+      "end": "2026-02-12",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-02-24",
+      "end": "2026-02-24",
+      "location": "Brussels",
+      "days": 1
+    },
+    {
+      "start": "2026-03-09",
+      "end": "2026-03-12",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-03-25",
+      "end": "2026-03-26",
+      "location": "Brussels",
+      "days": 2
+    },
+    {
+      "start": "2026-04-27",
+      "end": "2026-04-30",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-05-18",
+      "end": "2026-05-21",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-06-15",
+      "end": "2026-06-18",
+      "location": "Strasbourg",
+      "days": 4
+    },
     {
       "start": "2026-07-06",
       "end": "2026-07-09",
       "location": "Strasbourg",
-      "provisional": true
+      "days": 4
+    },
+    {
+      "start": "2026-09-14",
+      "end": "2026-09-17",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-10-05",
+      "end": "2026-10-08",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-10-19",
+      "end": "2026-10-22",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-11-11",
+      "end": "2026-11-12",
+      "location": "Brussels",
+      "days": 2
+    },
+    {
+      "start": "2026-11-23",
+      "end": "2026-11-26",
+      "location": "Strasbourg",
+      "days": 4
+    },
+    {
+      "start": "2026-12-14",
+      "end": "2026-12-17",
+      "location": "Strasbourg",
+      "days": 4
     }
   ]
 }
