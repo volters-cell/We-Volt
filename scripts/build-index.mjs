@@ -58,7 +58,8 @@ const index = {
   metadata: {
     project: 'EU Tracker',
     updated: new Date().toISOString().slice(0, 10),
-    dataStatus: 'All bundled decisions are illustrative samples. See docs/DATA-MODEL.md.'
+    dataStatus: 'Roll-call votes of the European Parliament, from the annexes to its minutes. ' +
+      'Summaries and press coverage are editorial and may be absent. See about.html.'
   },
   decisions
 };
