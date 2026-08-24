@@ -1,7 +1,8 @@
 # Political group logos
 
 Drop a file here named after the group and the site uses it in place of the
-coloured tile, on every group row:
+coloured mark — everywhere that group appears: the roll-call breakdown, and the
+group table in a country's panel. Nine files cover the whole Parliament:
 
 ```
 assets/groups/epp.svg
@@ -20,8 +21,10 @@ letter or a digit turned into a hyphen — the same slug the code builds, so
 `Greens/EFA` becomes `greens-efa`. SVG is preferred; PNG works. Square artwork
 sits best; anything else is fitted inside the tile without being stretched.
 
-Nothing breaks if a file is absent: that group keeps its coloured tile, and the
-two styles sit together happily while you collect the set.
+Nothing breaks if a file is absent: that group keeps its coloured mark, and the
+two styles sit together happily while you collect the set. The names, the
+colours and the swap all live in `assets/js/groups.js`, so a group looks the
+same wherever a reader meets it.
 
 ## Before you add them
 

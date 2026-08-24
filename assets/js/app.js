@@ -637,42 +637,6 @@
 
   const roll = { tab: 'members', name: '', group: '', country: '', position: '' };
 
-  /* Groups are known by their abbreviations and recognised by their names. */
-  const GROUP_NAMES = {
-    'EPP': 'European People’s Party',
-    'S&D': 'Progressive Alliance of Socialists and Democrats',
-    'PfE': 'Patriots for Europe',
-    'ECR': 'European Conservatives and Reformists',
-    'Renew': 'Renew Europe',
-    'Greens/EFA': 'Greens / European Free Alliance',
-    'The Left': 'The Left in the European Parliament',
-    'ESN': 'Europe of Sovereign Nations',
-    'NI': 'Non-attached members'
-  };
-
-  // What fits on a tile, which is not always what the group is called.
-  const GROUP_TILES = { 'Greens/EFA': 'Greens', 'The Left': 'Left' };
-
-  /* The colours these groups are conventionally drawn in — the ones a reader
-     recognises from a seat chart. They are approximations, not official brand
-     values, and they live here so they can be corrected in one place. A group
-     with a logo file in assets/groups/ uses that instead; see the README there,
-     including on whose marks these are. */
-  const GROUP_COLOURS = {
-    'EPP': { fill: '#3399ff', ink: '#08213f' },
-    'S&D': { fill: '#e4002b', ink: '#ffffff' },
-    'PfE': { fill: '#1b3a6b', ink: '#ffffff' },
-    'ECR': { fill: '#0054a5', ink: '#ffffff' },
-    'Renew': { fill: '#ffd200', ink: '#3a2f00' },
-    'Greens/EFA': { fill: '#4aa64a', ink: '#ffffff' },
-    'The Left': { fill: '#8b1a1a', ink: '#ffffff' },
-    'ESN': { fill: '#4b5b6b', ink: '#ffffff' },
-    'NI': { fill: '#9aa2b1', ink: '#14181f' }
-  };
-
-  function groupSlug(key) {
-    return String(key).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  }
 
   /* Every ballot in the open vote, flattened once, with everything the filters
      and the three breakdowns need. */
@@ -830,29 +794,7 @@
     if (kind !== 'group') {
       return '<span class="bd-tile bd-tile-country">' + esc(row.tile) + '</span>';
     }
-    const colour = GROUP_COLOURS[row.key] || { fill: 'var(--surface-sunken)', ink: 'var(--ink-soft)' };
-    return '<span class="bd-tile bd-tile-group" data-logo="' + esc(groupSlug(row.key)) + '"' +
-      ' style="background:' + colour.fill + ';color:' + colour.ink + ';border-color:' +
-      colour.fill + '">' + esc(row.tile) + '</span>';
-  }
-
-  function loadGroupLogos() {
-    Array.prototype.forEach.call(dom['roll-body'].querySelectorAll('[data-logo]'), function (node) {
-      const slug = node.getAttribute('data-logo');
-      ['svg', 'png'].forEach(function (extension) {
-        const image = new Image();
-        image.onload = function () {
-          if (node.querySelector('img')) return;
-          node.textContent = '';
-          node.classList.add('has-logo');
-          node.style.background = '';
-          node.style.borderColor = '';
-          image.alt = '';
-          node.appendChild(image);
-        };
-        image.src = 'assets/groups/' + slug + '.' + extension;
-      });
-    });
+    return Groups.mark(row.key);
   }
 
   function renderRoll() {
@@ -898,8 +840,8 @@
     if (roll.tab === 'groups') {
       dom['roll-body'].innerHTML = breakdownRows(list,
         function (item) { return item.group; },
-        function (key) { return GROUP_NAMES[key] || key; },
-        function (key) { return GROUP_TILES[key] || key; },
+        Groups.name,
+        Groups.tile,
         'group');
     } else if (roll.tab === 'countries') {
       dom['roll-body'].innerHTML = breakdownRows(list,
@@ -911,7 +853,8 @@
       dom['roll-body'].innerHTML = renderMembersTab(list);
     }
 
-    if (roll.tab === 'groups') loadGroupLogos();
+    // Wherever a group mark has just been drawn, its logo replaces the tile.
+    Groups.loadLogos(dom['roll-body']);
     if (state.isolate) applyIsolation();
   }
 

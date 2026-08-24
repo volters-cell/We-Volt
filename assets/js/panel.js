@@ -60,7 +60,9 @@
       '<th scope="col">For</th><th scope="col">Against</th><th scope="col">Abstain</th>' +
       '<th scope="col">Absent</th></tr></thead><tbody>' +
       groups.map(function (group) {
-        return '<tr><th scope="row">' + escapeHTML(group.group) + '</th>' +
+        return '<tr><th scope="row" class="group-cell">' +
+          (global.Groups ? global.Groups.swatch(group.group) : '') +
+          '<span>' + escapeHTML(group.group) + '</span></th>' +
           '<td>' + group.seats + '</td>' +
           '<td class="cell-for">' + (group.for || 0) + '</td>' +
           '<td class="cell-against">' + (group.against || 0) + '</td>' +
@@ -304,6 +306,7 @@
       impactSection(decision, country) +
       pressSection(country) +
       (country.note ? '<p class="country-note">' + escapeHTML(country.note) + '</p>' : '');
+    if (global.Groups) global.Groups.loadLogos(node);
     node.hidden = false;
   }
 

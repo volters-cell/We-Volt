@@ -395,6 +395,7 @@ main {
 .country-label-small { font-size: 11px; fill: var(--ink); stroke: var(--surface); stroke-width: 3.5px; }
 .label-leader { stroke: var(--ink-faint); stroke-width: .7; opacity: .65; }
 
+
 /* Vote layer */
 .layer-vote .country-shape, .layer-vote .country-dot { fill: var(--vote-na); }
 .vote-for .country-shape, .vote-for .country-dot { fill: var(--vote-for); }
@@ -1036,6 +1037,21 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 /* A logo replaces the colour rather than sitting on it. */
 .bd-tile.has-logo { background: var(--surface); border: 1px solid var(--line); padding: .2rem; }
 .bd-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* A group's mark next to its name in a table. The row already says which group
+   it is, so the mark carries no lettering of its own — it is the group's
+   colour, and its logo once one is added. It has to come after .bd-tile: same
+   specificity, so the later rule is the one that sets the size. */
+.group-cell { display: flex; align-items: center; gap: .5rem; }
+.bd-tile-swatch {
+  width: 1.1rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 4px;
+  padding: 0;
+  flex: 0 0 auto;
+}
+.bd-tile-swatch.has-logo { padding: 1px; }
 
 .bd-main { display: grid; gap: .28rem; min-width: 0; }
 .bd-label { font-weight: 650; font-size: .92rem; line-height: 1.25; }
