@@ -1,0 +1,59 @@
+# Check that the site holds everything the Parliament recorded.
+#
+# The sync workflow says what it imported. This one asks the opposite question
+# — is anything missing — by walking every sitting of the term at the open data
+# portal and comparing vote by vote against the records on file. It writes the
+# answer to data/reference/coverage.json so the claim on the About page is a
+# checked number rather than a hopeful one.
+#
+# Monthly, and on demand from the Actions tab. It fails loudly when the site is
+# behind, which is the point.
+
+name: Audit the sources
+
+on:
+  schedule:
+    - cron: "0 5 1 * *"    # the first of the month
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Audit from this date (YYYY-MM-DD). Default: the whole term."
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-sources
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Compare every sitting against what is on file
+        run: |
+          node scripts/audit-sources.mjs --write \
+            ${{ inputs.since && format('--since {0}', inputs.since) || '' }}
+
+      - name: Commit the report
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain data/reference/coverage.json)" ]; then
+            echo "The report has not changed."
+            exit 0
+          fi
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+          git add data/reference/coverage.json
+          git commit -m "Record what the audit found
+
+          Automated by .github/workflows/audit-sources.yml: every sitting of the
+          term at the Parliament's open data portal, compared vote by vote with
+          the records on file."
+          git push
