@@ -1,16 +1,18 @@
 # Follow the plenary automatically.
 #
-# The cadence follows what the Parliament actually publishes and when:
+# Everything comes from the Parliament's open data portal,
+# data.europarl.europa.eu, whose record of a sitting names every member and how
+# they voted. The cadence follows what it publishes and when:
 #
-#   - Roll-call annexes appear during the sitting, shortly after each voting
+#   - A sitting's decisions appear during the day, shortly after each voting
 #     session. Runs at midday and in the evening on Mon-Thu catch both.
-#   - The votes list, which states whether a text carried, is published a day or
-#     more later. A nightly run re-imports the last week so derived results are
-#     replaced by the Parliament's own.
+#   - The portal fills in details, among them whether a text carried, over the
+#     following day. A nightly run re-imports the last fortnight, so a result
+#     this project had to derive is replaced by the Parliament's own.
 #   - The plenary calendar and the member directory change slowly. Weekly.
 #
-# Runs are cheap and idempotent: on a day with no sitting the annex does not
-# exist, nothing is written, and nothing is committed.
+# Runs are cheap and idempotent: on a day with no sitting the portal records no
+# votes, nothing is written, and nothing is committed.
 #
 # Before enabling: Settings > Actions > General > Workflow permissions must be
 # "Read and write permissions" so the run can commit what it imports.
@@ -50,14 +52,15 @@ jobs:
         with:
           node-version: "22"
 
-      # The calendar tells the importer which days the Parliament sat, so it
-      # stops guessing at dates. Weekly is enough; a failure is not fatal.
+      # The calendar is what the site reads to say when the last session was
+      # and when the next one starts. Weekly is enough; a failure is not fatal.
       - name: Refresh the plenary calendar
         if: github.event.schedule == '0 4 * * 1' || github.event_name == 'workflow_dispatch'
         run: node scripts/fetch-sessions.mjs || echo "calendar refresh failed; keeping the last one"
 
-      # --refresh-meps re-reads the member directory: a newly seated MEP whose
-      # id is not in the cache would otherwise have their votes dropped.
+      # --refresh-meps re-reads the member directory: the ballots are lists of
+      # person ids, so a newly seated MEP missing from the cache would appear in
+      # a vote as a number with no name and no country.
       - name: Import roll-call votes
         run: |
           node scripts/fetch-plenary.mjs --refresh-meps \

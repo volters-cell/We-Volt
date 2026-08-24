@@ -1,136 +1,135 @@
-/* Checks the one piece of logic that turns the Parliament's documents into
-   this project's records. Run with `npm test`. No framework — node is enough. */
+/* Checks the one piece of logic that turns the Parliament's records into this
+   project's. The fixtures are cut down from real answers of the open data
+   portal, so a change in its shape shows up here rather than on the site.
+   Run with `npm test`. No framework — node is enough. */
 
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { parseXML, findAll, find, decodeEntities } from '../scripts/lib/xml.mjs';
-import { parseAnnex, parseDirectory, toDecision, isFinalVote, normaliseGroup, countryCode,
-  parseVotList, splitTitle } from '../scripts/fetch-plenary.mjs';
-import { parseCalendar, parseLocation, sittingDays } from '../scripts/fetch-sessions.mjs';
+import {
+  normaliseGroup, countryCode, lastSegment, english, isRollCall, ballotsOf, tallyOf
+} from '../scripts/lib/portal.mjs';
+import {
+  buildRecord, isFinalVote, procedureReference, documentReference, voteRuleOf, outcomeOf, slug
+} from '../scripts/fetch-plenary.mjs';
+import { foldSessions, locationOf } from '../scripts/fetch-sessions.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
-const read = (name) => readFile(path.join(here, 'fixtures', name), 'utf8');
+const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
 
-/* ---------------------------------------------------------------- the reader */
+const decisions = (await read('decisions.json')).data;
+const items = (await read('vote-results.json')).data;
+const meetings = (await read('meetings.json')).data;
+const members = await read('members.json');
 
-const doc = parseXML('<a x="1"><b>one &amp; two</b><c/><b>deep<d>er</d></b></a>');
-assert.equal(doc.children[0].attributes.x, '1');
-assert.deepEqual(findAll(doc, 'b').map((n) => n.text), ['one & two', 'deeper']);
-assert.ok(find(doc, 'c'), 'self-closing elements are still elements');
-assert.equal(decodeEntities('caf&#233; &amp; r&#xE9;sum&#233;'), 'café & résumé');
+const [finalVote, amendment, showOfHands] = decisions;
+const item = items[0];
 
-/* ------------------------------------------------------------- the directory */
+/* ------------------------------------------------------------ reading names */
 
-const members = parseDirectory(await read('mep-directory.xml'));
-assert.equal(Object.keys(members).length, 5);
-assert.deepEqual(members['1001'], {
-  name: 'Ada Fixture', country: 'DE', group: 'S&D', party: 'Fixture Party'
-});
-// The Parliament writes Greece EL; this project writes GR, and the map has no EL.
-assert.equal(members['1005'].country, 'GR');
+assert.equal(lastSegment('person/197628'), '197628');
+assert.equal(lastSegment('http://publications.europa.eu/resource/authority/country/FRA'), 'FRA');
+assert.equal(english({ fr: 'Vote final', en: 'Final vote' }), 'Final vote');
+assert.equal(english({ fr: 'Vote final' }), 'Vote final', 'any language beats none');
+assert.equal(english(null), '');
+
+// The Parliament writes Greece EL and its groups its own way; this project has
+// one spelling for each, and the map has no EL.
+assert.equal(countryCode('FRA'), 'FR');
+assert.equal(countryCode('GRC'), 'GR');
 assert.equal(countryCode('EL'), 'GR');
-assert.equal(countryCode('Czech Republic'), 'CZ');
-assert.equal(countryCode('United Kingdom'), null, 'a former member state is not a member state');
-assert.equal(normaliseGroup('Renew Europe Group'), 'Renew');
+assert.equal(countryCode('GBR'), null, 'a former member state is not a member state');
+assert.equal(normaliseGroup('PPE'), 'EPP');
+assert.equal(normaliseGroup('Verts/ALE'), 'Greens/EFA');
 assert.equal(normaliseGroup('Some New Group'), 'Some New Group', 'unknown groups pass through');
 
-/* ----------------------------------------------------------------- the annex */
+/* ---------------------------------------------------------------- the votes */
 
-const rollCalls = parseAnnex(await read('rcv-annex.xml'));
-assert.equal(rollCalls.length, 2);
+assert.ok(isRollCall(finalVote), 'an electronic roll call is a roll call');
+assert.ok(!isRollCall(showOfHands), 'a show of hands names nobody, so it is not one');
 
-const [final, amendment] = rollCalls;
-assert.match(final.title, /ensemble du texte/);
-assert.equal(final.votes.length, 5);
-assert.ok(isFinalVote(final.title), 'a vote on the whole text is a final vote');
-assert.ok(!isFinalVote(amendment.title), 'an amendment is not');
+assert.deepEqual(tallyOf(finalVote), { for: 3, against: 1, abstain: 1 });
+const ballots = ballotsOf(finalVote);
+assert.equal(ballots.length, 5);
+assert.deepEqual(ballots[0], [1001, 0], '[member id, 0 = for]');
+assert.deepEqual(ballots.find((ballot) => ballot[0] === 1003), [1003, 1], '1 = against');
+assert.deepEqual(ballots.find((ballot) => ballot[0] === 1005), [1005, 2], '2 = abstain');
+assert.deepEqual(ballots.map((ballot) => ballot[0]).slice().sort((a, b) => a - b),
+  ballots.map((ballot) => ballot[0]), 'ballots come back in member order');
 
-/* --------------------------------------------------------------- the record */
+// The whole text, or one amendment to it. The portal marks an amendment by the
+// thing it amends, so this is read from the record rather than from its wording.
+assert.ok(isFinalVote(finalVote));
+assert.ok(!isFinalVote(amendment));
 
-// The importer writes the compact shape by default and the long one on request.
-const built = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml',
-  null, { fat: true });
-const decision = built.decision;
+/* -------------------------------------------------------------- references */
 
-const compact = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml').decision;
-assert.ok(Array.isArray(compact.ballots), 'the compact form stores ballots');
-assert.equal(compact.ballots.length, 5);
-assert.deepEqual(compact.ballots[0], [1001, 0], '[member id, 0 = for]');
-assert.equal(compact.countries.DE.meps, undefined, 'identities are not repeated per record');
-assert.ok(JSON.stringify(compact).length < JSON.stringify(decision).length / 1.5,
-  'the compact form is substantially smaller');
+assert.equal(procedureReference('eli/dl/proc/2023-0212'), '2023/0212');
+assert.equal(documentReference('eli/dl/doc/A-10-2026-0185'), 'A10-0185/2026');
+assert.equal(procedureReference('eli/dl/doc/A-10-2026-0185'), null);
+assert.equal(slug('2023/0212'), '2023-0212');
 
-assert.equal(decision.body, 'parliament');
-assert.equal(decision.status, 'verified');
-assert.equal(decision.date, '2026-09-15');
-assert.equal(decision.outcome.result, 'adopted', '3 for beats 1 against');
-assert.deepEqual(built.totals, { for: 3, against: 1, abstain: 1 });
-assert.deepEqual(Object.keys(decision.countries).sort(), ['DE', 'FI', 'GR']);
-assert.equal(decision.procedure.reference, 'A10-0123/2026');
+assert.equal(voteRuleOf('(Majority of votes cast required)').rule, 'simple-majority');
+assert.equal(voteRuleOf('(Majority of Parliament\'s component Members)').rule, 'absolute-majority');
 
-const germany = decision.countries.DE;
-assert.equal(germany.meps.length, 3);
-assert.deepEqual(germany.meps.map((mep) => mep.name), ['Ada Fixture', 'Bo Sample', 'Cato Placeholder']);
-assert.deepEqual(germany.meps.map((mep) => mep.vote).sort(), ['abstain', 'against', 'for']);
-assert.deepEqual(germany.mepGroups.find((g) => g.group === 'EPP'),
-  { group: 'EPP', seats: 2, for: 0, against: 1, abstain: 1, absent: 0 });
+assert.equal(outcomeOf(amendment), 'rejected', 'the portal stated this one');
+assert.equal(outcomeOf(finalVote), null, 'and did not state this one');
 
-// Group rows must account for exactly their own members — the validator relies on it.
-for (const country of Object.values(decision.countries)) {
-  const seats = country.mepGroups.reduce((sum, group) => sum + group.seats, 0);
-  assert.equal(seats, country.meps.length);
-  for (const group of country.mepGroups) {
-    assert.equal(group.for + group.against + group.abstain + group.absent, group.seats);
-  }
-}
+/* --------------------------------------------------------------- a record */
+
+const record = buildRecord(finalVote, item, members, '2026-07-09', 10);
+
+assert.equal(record.body, 'parliament');
+assert.equal(record.status, 'verified');
+assert.equal(record.date, '2026-07-09');
+assert.equal(record.sourceId, 195719);
+assert.equal(record.id, 'ep-2026-07-09-2023-0212-195719');
+assert.equal(record.title, 'Establishment of the digital euro ***I',
+  'the item gives the record its readable title');
+assert.equal(record.procedure.reference, '2023/0212');
+assert.equal(record.voteRuleLabel, 'Majority of votes cast');
+assert.equal(record.outcome.result, 'adopted', '3 for beats 1 against');
+assert.match(record.outcome.headline, /derived/, 'and the record says the result was derived');
+assert.match(record.dataNote, /follows from the totals/);
+assert.equal(record._counted, 5, 'every voter was found in the directory');
+
+// Where the Parliament states the result, its word stands over the arithmetic.
+const stated = buildRecord(amendment, item, members, '2026-07-09', 10);
+assert.equal(stated.outcome.result, 'rejected');
+assert.doesNotMatch(stated.outcome.headline, /derived/);
+assert.doesNotMatch(stated.dataNote, /follows from the totals/);
+assert.match(stated.subtitle, /Article 3/, 'an amendment says which part it changed');
+
+// The identities live in the directory; a record stores only [id, position].
+assert.deepEqual(record.countries, {}, 'identities are not repeated per record');
+assert.ok(JSON.stringify(record).length < 1400, 'a record stays small');
 
 // The importer never invents the parts that are editorial.
-assert.deepEqual(decision.countries.DE.press, []);
-assert.equal(decision.countries.DE.impact, undefined);
-assert.equal(decision.summary, '');
+assert.equal(record.summary, '');
+assert.deepEqual(record.whatItMeans, []);
 
-// A member the directory does not know is reported, not silently dropped.
-const orphan = toDecision(final, {}, '2026-09-15', 'https://example.invalid/annex.xml');
-assert.equal(orphan.unknown.length, 5);
-assert.deepEqual(Object.keys(orphan.decision.countries), []);
+// Both sources are named: the annex a reader can open, and the data behind it.
+assert.equal(record.sources.length, 2);
+assert.ok(record.sources.every((source) => /^https:\/\//.test(source.url)));
+assert.match(record.sources[1].url, /data\.europarl\.europa\.eu/);
 
-/* ------------------------------------------------------------- the votes list */
+// A member the directory does not know is counted, not silently dropped.
+assert.equal(buildRecord(finalVote, item, {}, '2026-07-09', 10)._counted, 0);
 
-const official = parseVotList(await read('vot-list.xml'));
-assert.deepEqual(Object.keys(official).sort(), ['900001', '900002']);
-assert.equal(official['900001'].result, 'adopted');
-assert.equal(official['900002'].result, 'rejected');
+/* ------------------------------------------------------- the plenary calendar */
 
-// The annex counts the votes; the votes list says what carried. Where the two
-// are available, the Parliament's own statement wins over our arithmetic.
-const stated = toDecision(final, members, '2026-09-15', 'https://example.invalid/annex.xml',
-  { result: 'rejected' }).decision;
-assert.equal(stated.outcome.result, 'rejected', '3 for, 1 against — but the Parliament said no');
-assert.doesNotMatch(stated.outcome.headline, /derived/);
-assert.match(decision.outcome.headline, /derived/, 'without a votes list, say the result was derived');
-assert.match(decision.dataNote, /derived/);
-assert.match(stated.dataNote, /votes list/);
+assert.equal(locationOf(meetings[0]), 'Strasbourg');
+assert.equal(locationOf(meetings[3]), 'Brussels');
+assert.equal(locationOf({}), null, 'no locality, no guess');
 
-/* ---------------------------------------------------------------- the titles */
-
-const split = splitTitle('A10-0123/2026 - Rapporteur - Proposition de résolution (ensemble du texte)');
-assert.equal(split.reference, 'A10-0123/2026');
-assert.equal(split.title, 'Proposition de résolution (ensemble du texte)');
-assert.match(split.subtitle, /A10-0123\/2026 · Rapporteur/);
-
-/* -------------------------------------------------------- the plenary calendar */
-
-const sessions = parseCalendar(await read('session-calendar.json'));
-// The calendar has one entry per sitting day; duplicates fold into one session.
-assert.equal(sessions.length, 3);
-assert.deepEqual(sessions[0], { start: '2026-07-06', end: '2026-07-09', location: null });
-assert.deepEqual(sittingDays([sessions[0]]),
-  ['2026-07-06', '2026-07-07', '2026-07-08', '2026-07-09']);
+const days = meetings
+  .filter((meeting) => meeting.had_activity_type.indexOf('PLENARY') !== -1)
+  .map((meeting) => ({ date: meeting.activity_date, location: locationOf(meeting) }));
+const sessions = foldSessions(days);
+assert.equal(sessions.length, 2, 'consecutive sitting days are one session');
+assert.deepEqual(sessions[0], { start: '2026-07-06', end: '2026-07-08', location: 'Strasbourg', days: 3 });
+assert.deepEqual(sessions[1], { start: '2026-07-22', end: '2026-07-22', location: 'Brussels', days: 1 });
 assert.ok(sessions[0].start < sessions[1].start, 'sessions come back in order');
-
-assert.equal(parseLocation(await read('meeting.xml')), 'Strasbourg');
-assert.equal(parseLocation('<rdf:RDF xmlns:rdf="x"></rdf:RDF>'), null, 'no locality, no guess');
 
 /* ------------------------------------------------- expanding the short form */
 
@@ -139,20 +138,26 @@ assert.equal(parseLocation('<rdf:RDF xmlns:rdf="x"></rdf:RDF>'), null, 'no local
 const shim = { matchMedia: () => ({ matches: false }) };
 new Function('window', await readFile(path.join(here, '../assets/js/data.js'), 'utf8'))(shim);
 
-const directory = Object.fromEntries(Object.entries(members).map(([id, m]) => [id, m]));
-const expanded = shim.Data.expandBallots(JSON.parse(JSON.stringify(compact)), directory);
-
+const expanded = shim.Data.expandBallots(JSON.parse(JSON.stringify(record)), members);
 assert.deepEqual(Object.keys(expanded.countries).sort(), ['DE', 'FI', 'GR']);
 assert.equal(expanded.countries.DE.meps.length, 3);
-assert.deepEqual(expanded.countries.DE.meps.map((m) => m.name),
+assert.deepEqual(expanded.countries.DE.meps.map((mep) => mep.name),
   ['Ada Fixture', 'Bo Sample', 'Cato Placeholder']);
-assert.deepEqual(expanded.countries.DE.mepGroups.find((g) => g.group === 'EPP'),
-  { group: 'EPP', seats: 2, for: 0, against: 1, abstain: 1, absent: 0 });
+assert.deepEqual(expanded.countries.DE.mepGroups.find((group) => group.group === 'EPP'),
+  { group: 'EPP', seats: 2, for: 1, against: 1, abstain: 0, absent: 0 });
 assert.equal(expanded.expanded.unknown, 0);
 
+// Group rows must account for exactly their own members — the validator relies on it.
+for (const country of Object.values(expanded.countries)) {
+  const seats = country.mepGroups.reduce((sum, group) => sum + group.seats, 0);
+  assert.equal(seats, country.meps.length);
+  for (const group of country.mepGroups) {
+    assert.equal(group.for + group.against + group.abstain + group.absent, group.seats);
+  }
+}
+
 // A ballot for somebody the directory has never heard of is counted, not crashed on.
-const orphaned = shim.Data.expandBallots(
-  { ballots: [[999999, 0]], countries: {} }, directory);
+const orphaned = shim.Data.expandBallots({ ballots: [[999999, 0]], countries: {} }, members);
 assert.equal(orphaned.expanded.unknown, 1);
 assert.deepEqual(Object.keys(orphaned.countries), []);
 

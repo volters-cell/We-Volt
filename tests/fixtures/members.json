@@ -1,0 +1,7 @@
+{
+  "1001": { "name": "Ada Fixture", "country": "DE", "group": "S&D", "party": "Fixture Party" },
+  "1002": { "name": "Bo Sample", "country": "DE", "group": "EPP", "party": null },
+  "1003": { "name": "Cato Placeholder", "country": "DE", "group": "EPP", "party": null },
+  "1004": { "name": "Dana Example", "country": "FI", "group": "Renew", "party": null },
+  "1005": { "name": "Eli Specimen", "country": "GR", "group": "Greens/EFA", "party": null }
+}

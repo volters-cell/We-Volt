@@ -1,0 +1,21 @@
+{
+  "//": "The matching answer of .../vote-results: the item a decision belongs to, which is where its readable title, its report and its procedure come from.",
+  "data": [
+    {
+      "id": "eli/dl/event/MTG-PL-2026-07-09-VOT-ITM-992995",
+      "type": "Activity",
+      "activity_id": "MTG-PL-2026-07-09-VOT-ITM-992995",
+      "activity_label": { "en": "Establishment of the digital euro ***I", "fr": "Création d'un euro numérique ***I" },
+      "based_on_a_realization_of": ["eli/dl/doc/A-10-2026-0185"],
+      "consists_of": ["eli/dl/event/MTG-PL-2026-07-09-DEC-195719"],
+      "had_activity_type": "def/ep-activities/PLENARY_VOTE_RESULTS",
+      "structuredLabel": {
+        "en": "<structuredLabel><title>Establishment of the digital euro ***I</title><label>Report: Fernando Navarrete Rojas (A10-0185/2026) (Majority of votes cast required)</label></structuredLabel>"
+      },
+      "inverse_consists_of": [
+        { "id": "eli/dl/event/MTG-PL-2026-07-09", "consists_of": ["eli/dl/event/MTG-PL-2026-07-09-VOT-ITM-992995"] },
+        { "id": "eli/dl/proc/2023-0212", "consists_of": ["eli/dl/event/MTG-PL-2026-07-09-VOT-ITM-992995"] }
+      ]
+    }
+  ]
+}

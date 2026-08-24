@@ -1,62 +1,65 @@
-# Ask the Parliament's open data portal what its records contain.
+# Ask the Parliament's servers what they answer.
 #
-# The website answers 202 with an empty body to everything automated, so the
-# portal at data.europarl.europa.eu is the only usable source. Its sitting
-# decisions carry the individual ballots — had_voter_favor and its siblings,
-# each a list of person ids. What this round settles is the other half: how the
-# portal describes a member, so those ids can be turned into a name, a country
-# and a political group.
+# This is the job that established where the data can be read from, and it is
+# kept so the finding can be re-checked rather than remembered:
 #
-# Run it from the Actions tab; it writes nothing and changes nothing.
+#   - www.europarl.europa.eu answers 202 with an empty body to every automated
+#     request, whatever the address. A bot wall, not a missing page. Nothing in
+#     this project reads it.
+#   - data.europarl.europa.eu/api/v2 answers properly, and its record of a
+#     sitting carries every member's vote.
+#
+# Run it from the Actions tab when an import starts returning nothing, before
+# changing any code: it says in one screen which half of that has changed.
+# It writes nothing.
 
 name: Probe the sources
 
 on:
   workflow_dispatch:
     inputs:
-      mep:
-        description: "A member id to test"
+      date:
+        description: "A sitting date to test, YYYY-MM-DD"
         required: false
-        default: "197628"
+        default: "2026-07-09"
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Read how the portal describes a member
+      - name: Ask each address what it returns
         run: |
-          MEP="${{ inputs.mep || '197628' }}"
+          DATE="${{ inputs.date || '2026-07-09' }}"
           UA='eu-tracker/0.1 (open data import; contact via the repository)'
           BASE=https://data.europarl.europa.eu/api/v2
-          get () { curl -sSL -m 60 -A "$UA" -H 'accept: application/ld+json' "$1"; }
+          LD='format=application%2Fld%2Bjson'
 
-          echo "=== the current membership, asked for in bulk"
-          get "$BASE/meps/show-current?format=application%2Fld%2Bjson&limit=1000&offset=0" > /tmp/cur.json
-          jq '.data | length' /tmp/cur.json
-          jq -r 'keys[]' /tmp/cur.json
-          jq -r '[.data[] | keys[]] | group_by(.) | map("\(.[0])  \(length)")[]' /tmp/cur.json
-          echo "-- how many distinct countries and groups came back"
-          jq -r '[.data[]["api:country-of-representation"]] | unique | length' /tmp/cur.json
-          jq -r '[.data[]["api:political-group"]] | unique | join(", ")' /tmp/cur.json
+          probe () {
+            printf '\n=== %s\n' "$2"
+            code=$(curl -sSL -m 45 -o /tmp/body -w '%{http_code} %{content_type} %{size_download}b' \
+              -A "$UA" -H 'accept: application/ld+json,application/xml,*/*' "$1" || echo "connection failed")
+            printf '    %s\n    -> %s\n' "$1" "$code"
+          }
 
-          echo
-          echo "=== one member on their own"
-          get "$BASE/meps/$MEP?format=application%2Fld%2Bjson" > /tmp/one.json
-          head -c 3000 /tmp/one.json
-          echo
-          echo "-- its field names"
-          jq -r '.data[0] | keys[]' /tmp/one.json 2>/dev/null || jq -r 'keys[]' /tmp/one.json
+          echo "--- the public website, which is expected to answer 202 and nothing ---"
+          probe "https://www.europarl.europa.eu/doceo/document/PV-10-$DATE-RCV_EN.xml" "roll-call annex"
 
           echo
-          echo "=== the whole term, including members who have since left"
-          get "$BASE/meps?parliamentary-term=10&format=application%2Fld%2Bjson&limit=1000&offset=0" > /tmp/all.json
-          jq '.data | length' /tmp/all.json
-          jq '.data[0]' /tmp/all.json
+          echo "--- the open data portal, which is what this project reads ---"
+          probe "$BASE/meetings?year=${DATE%%-*}&$LD&limit=5" "the sittings of a year"
+          probe "$BASE/meetings/MTG-PL-$DATE/decisions?$LD" "the decisions of a sitting"
+          probe "$BASE/meetings/MTG-PL-$DATE/vote-results?$LD" "the vote items behind them"
+          probe "$BASE/meps/show-current?$LD&limit=5" "the sitting members"
 
           echo
-          echo "=== the sittings of a year"
-          get "$BASE/meetings?year=2026&format=application%2Fld%2Bjson&limit=400" > /tmp/mtg.json
-          jq '.data | length' /tmp/mtg.json
-          jq -r '[.data[] | keys[]] | unique | join(", ")' /tmp/mtg.json
-          jq -r '.data[0] | {id, activity_date, had_activity_type, activity_label: .activity_label.en, hadActivityLocation: (.hadActivityLocation // .had_activity_location)}' /tmp/mtg.json
-          jq -r '[.data[].activity_date] | sort | .[0:6] | join(" ")' /tmp/mtg.json
+          echo "--- and whether a decision still carries its ballots ---"
+          curl -sSL -m 60 -A "$UA" "$BASE/meetings/MTG-PL-$DATE/decisions?$LD" > /tmp/dec.json
+          jq -r '
+            [.data[] | select(has("had_voter_favor"))] as $rc
+            | "roll-call decisions: \($rc | length)"
+            , (if ($rc | length) > 0 then
+                 ($rc[0] | "first: \(.activity_id)  for \(.had_voter_favor | length)"
+                          + "  against \(.had_voter_against // [] | length)"
+                          + "  abstain \(.had_voter_abstention // [] | length)"
+                          + "  first voter \(.had_voter_favor[0])")
+               else "NO BALLOTS IN THIS SITTING — the importer would write nothing" end)' /tmp/dec.json

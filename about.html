@@ -32,24 +32,27 @@
       done to it, and what is still missing.</p>
 
     <h2>Where the votes come from</h2>
-    <p>When the Parliament votes by roll call, it publishes an annex to the minutes of that
-      sitting naming every member and how they voted. That annex is the record. Everything here
-      derives from it.</p>
-    <p>Four documents, all published by the Parliament, are all this project reads:</p>
+    <p>When the Parliament votes by roll call, it records who voted for, who voted against
+      and who abstained, member by member, and publishes that record on its open data portal.
+      That record is the source. Everything here derives from it.</p>
+    <p>Four things, all published by the Parliament at
+      <a href="https://data.europarl.europa.eu/">data.europarl.europa.eu</a>, are all this
+      project reads:</p>
     <table class="prose-table">
       <thead>
         <tr><th scope="col">Document</th><th scope="col">What it gives</th></tr>
       </thead>
       <tbody>
-        <tr><td>Roll-call annex to the minutes</td><td>Every member's vote for one sitting</td></tr>
-        <tr><td>Votes list</td><td>What the Parliament says carried and what fell</td></tr>
-        <tr><td>MEP directory</td><td>Names, countries and groups</td></tr>
-        <tr><td>Session calendar and meeting records</td><td>When each plenary sits, and whether in Strasbourg or Brussels</td></tr>
+        <tr><td>A sitting's decisions</td><td>Every member's vote, one by one, for every roll call of that day</td></tr>
+        <tr><td>The vote items behind them</td><td>What was being voted on: the title, the report, the procedure</td></tr>
+        <tr><td>The list of members</td><td>Names, countries and political groups</td></tr>
+        <tr><td>The list of sittings</td><td>When each plenary sits, and whether in Strasbourg or Brussels</td></tr>
       </tbody>
     </table>
-    <p>An automated job reads them during each sitting and again each night — the votes list is
-      published a day later than the votes themselves, so a same-day import states the result as
-      derived and the later run replaces it with the Parliament's own.</p>
+    <p>An automated job reads them during each sitting and again each night. Whether a text
+      carried is published later than the votes themselves, so a same-day import states the
+      result as derived from the totals, and the later run replaces it with the Parliament's
+      own.</p>
 
     <h2>What has been done to it</h2>
     <ul>

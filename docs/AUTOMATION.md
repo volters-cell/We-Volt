@@ -5,35 +5,40 @@ votes, country by country, without anybody opening a terminal.
 
 ## Where the votes come from
 
-Everything comes from the European Parliament itself. No third-party service sits in
-between, which means no dependency on somebody else's uptime, rate limits or licence
-terms.
+Everything comes from the European Parliament itself, through its open data portal at
+`data.europarl.europa.eu/api/v2`. No third-party service sits in between, which means no
+dependency on somebody else's uptime, rate limits or licence terms. The portal needs no
+key and no account, answers JSON-LD, and publishes under the Commission's reuse decision.
 
-| Document | What it gives | Address |
-| --- | --- | --- |
-| **Roll-call annex** | Every roll-call vote of one sitting, and for each one the name and political group of every member who voted for, against or abstained | `doceo/document/PV-{term}-{date}-RCV_EN.xml`, then `…-RCV_FR.xml`, then `RegData/seance_pleniere/proces_verbal/{year}/{month}-{day}/liste_presence/P{term}_PV({year}){month}-{day}(RCV)_XC.xml` |
-| **Votes list** | What the Parliament says happened: adopted, rejected, lapsed, withdrawn — joined to the annex by the roll-call id | `doceo/document/PV-{term}-{date}-VOT_EN.xml` |
-| **MEP directory** | Every sitting member with their id, country and national party — this is what turns names into countries | `europarl.europa.eu/meps/en/directory/xml/?leg={term}` |
-| **Session calendar** | When each plenary session runs | `europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId={term}` |
-| **Meeting record** | Whether a session sits in Strasbourg or Brussels (`vcard:hasLocality` ending `FRA_SXB` or `BEL_BRU`) | `data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}` |
+| Endpoint | What it gives |
+| --- | --- |
+| `/meetings?year={year}` | Every sitting of a year, with its date, its parliamentary term and its locality (`FRA_SXB` is Strasbourg, `BEL_BRU` is Brussels) |
+| `/meetings/MTG-PL-{date}/decisions` | Every decision taken that day. A roll-call carries `had_voter_favor`, `had_voter_against` and `had_voter_abstention`: one person id per member who voted that way, plus the totals and, once published, whether the text carried |
+| `/meetings/MTG-PL-{date}/vote-results` | The vote items those decisions belong to — the readable title, the report, the procedure |
+| `/meps/show-current` | Every sitting member with their id, country and political group |
+| `/meps?parliamentary-term={term}` and `/meps/{id}` | Everyone who has held a seat this term, including those who have since left, and the mandate that names their country |
 
-Everything the site holds is read from those five addresses. Nothing else is consulted,
-and no third party stands between this project and the Parliament's record.
+Four things follow from how the Parliament publishes:
 
-The annex is the primary source because it is the Parliament's own formal record of a
-roll call, published with the minutes of the sitting, and it carries every member's
-individual vote. Three things follow from how these documents are published:
-
-- **Three addresses, one annex.** English first, because its descriptions become the
-  record's titles; French next; then the document register, which sometimes has the
-  file before the document server does. The first that answers wins.
-- **The result arrives later than the votes.** The annex counts votes but does not say
-  what carried. The votes list does, and appears a day or more after the sitting. A
-  same-day import derives the result from the totals and says so in its `dataNote`; a
-  later run replaces it with the Parliament's own and drops the caveat. This is why the
-  schedule re-imports the past week every night.
-- **Names are not countries.** The annex identifies members by id and group. The
-  directory, cached in `data/reference/meps.json`, turns those into countries.
+- **The website cannot be read by a machine.** `www.europarl.europa.eu` answers every
+  automated request — the roll-call annex, the MEP directory, the session calendar —
+  with `202` and an empty body, whatever the address or the user agent. It is a bot
+  wall, not a missing page. The annex link kept on each record is for a reader with a
+  browser; nothing in this project fetches it. `.github/workflows/probe-sources.yml`
+  is the dispatchable job that establishes this, and re-establishes it if the
+  behaviour ever changes.
+- **A ballot is a list of ids, not of names.** The portal identifies a voter as
+  `person/197628` and nothing more, so the member directory is not a convenience but
+  the thing that makes a vote legible. It is cached in `data/reference/meps.json` and
+  refreshed on every run.
+- **The result arrives later than the votes.** A sitting's decisions appear during the
+  day; whether the text carried is filled in afterwards. A same-day import derives the
+  result from the totals and says so in its `dataNote`; a later run replaces it with
+  the Parliament's own and drops the caveat. This is why the schedule re-imports the
+  past fortnight every night.
+- **An amendment says what it amends.** A decision on an amendment carries
+  `decisionAboutId`; a vote on the text as a whole does not. The default filter is
+  that fact, not a guess at the wording of a title.
 
 ## Running it by hand
 
@@ -46,19 +51,19 @@ node scripts/fetch-plenary.mjs --date 2026-09-15 --dry-run
 node scripts/build-index.mjs && node scripts/validate-data.mjs
 ```
 
-Run the calendar fetch first: with it, the importer only looks at days the Parliament
-actually sat, and the site can say when the last session was and where. Without it the
-importer falls back to trying weekdays, which costs a 404 each and nothing else.
+The importer asks the portal which days the Parliament sat and looks only at those, so
+it never guesses at dates. The calendar fetch is for the site rather than the importer:
+it is what lets the page say when the last session was, where it sat, and when the next
+one starts.
 
-With no arguments the importer asks for the last seven weekdays, which covers a plenary
-that has just finished.
+With no arguments the importer covers the last fortnight, which takes in a plenary that
+has just finished.
 
 **Only final votes are imported by default.** A plenary produces hundreds of roll
 calls, and the overwhelming majority are amendments — importing them all would bury
-the decisions that matter under procedural noise. The filter keeps votes on a text as
-a whole (*ensemble du texte*, *vote unique*, resolutions, Commission proposals) and
-skips anything matching an amendment number. `--all` overrides it. If the filter is
-wrong for your purposes, it is two regular expressions at the top of the script.
+the decisions that matter under procedural noise. The filter skips any decision the portal marks
+as being about an amendment. `--all` overrides it. It is `isFinalVote` in
+`scripts/fetch-plenary.mjs`, four lines long.
 
 ## Running it on a schedule
 
@@ -69,7 +74,7 @@ generic nightly job:
 | --- | --- |
 | Mon–Thu 12:40 UTC | After the midday votes, while the sitting is running |
 | Mon–Thu 18:40 UTC | After the evening votes |
-| Every night 21:30 UTC | Picks up the votes lists for the past week, replacing derived results with stated ones, and any annex published late |
+| Every night 21:30 UTC | Re-imports the past fortnight, replacing derived results with the Parliament's own and picking up anything published late |
 | Mondays 04:00 UTC | Refreshes the plenary calendar and the member directory |
 
 Each run refreshes the member directory, imports whatever is new, rebuilds the index,
@@ -86,36 +91,34 @@ Two settings have to be right for it to work:
 You can also run it from the Actions tab by hand (*Run workflow*), optionally giving a
 start date — that is how to backfill a term.
 
-## Verify the first real run before trusting it
+## Verify a real run before trusting the schedule
 
-This importer was written against the published shape of these documents and tested
-against fixtures, **but it has never been run against the live Parliament endpoints**
-— the sandbox it was written in has no access to them. Before relying on the schedule,
-do one supervised run:
+The endpoints above were each confirmed against live answers from a GitHub runner, and
+the shapes the importer reads are pinned by fixtures in `tests/fixtures/` cut down from
+those answers. What has not been proved is a full sitting end to end. Before relying on
+the schedule, do one supervised run — from the Actions tab, or on any machine that can
+reach the portal:
 
 ```bash
-# 1. Look at what the Parliament actually sends for a sitting you know happened
-node scripts/fetch-plenary.mjs --date 2026-09-15 --inspect
+# 1. Import a sitting you know happened, without writing anything
+node scripts/fetch-plenary.mjs --date 2026-07-09 --dry-run
 
-# 2. Import it without writing anything
-node scripts/fetch-plenary.mjs --date 2026-09-15 --dry-run
-
-# 3. If the counts look right, write it and check it
-node scripts/fetch-plenary.mjs --date 2026-09-15
+# 2. If the counts look right, write it and check it
+node scripts/fetch-plenary.mjs --date 2026-07-09
 node scripts/build-index.mjs && node scripts/validate-data.mjs
 ```
 
-`--inspect` prints every tag path in the document with a count. If the element names
-have moved, that output tells you exactly what to change, and the mapping is confined
-to `parseAnnex` and `parseDirectory` in `scripts/fetch-plenary.mjs`.
+Things worth checking on that run:
 
-Things worth checking on that first run:
-
-- **27 member states**, or an explained shortfall. The importer warns when a member id
-  is missing from the directory; `--refresh-meps` usually fixes it.
+- **27 member states**, or an explained shortfall. The importer warns when a ballot
+  names a member the directory does not know; `--refresh-meps` usually fixes it.
 - **The totals** against the Parliament's own published figures for that vote.
-- **Greece**. The Parliament writes it `EL`; this project writes `GR` throughout, and
-  the conversion is tested.
+- **Greece**. The Parliament writes it `EL`, and `GRC` in memberships; this project
+  writes `GR` throughout, and the conversion is tested.
+
+If the portal changes shape, the whole of the mapping is in `scripts/lib/portal.mjs`
+and `buildRecord` in `scripts/fetch-plenary.mjs`, and the fixtures say what it used to
+look like.
 
 ## Storage: why this stays free
 
@@ -159,8 +162,8 @@ Parliament had different members and the directory would not resolve them.
 npm run backfill     # every sitting since 16 July 2024, final votes only
 ```
 
-That is roughly 300 requests, not 13,500: annexes are published per sitting day, not
-per vote. Add `--all` to include amendment votes, which multiplies the count by about
+That is roughly 600 requests, not 13,500: the portal answers per sitting day — every
+decision of that day in one response — not per vote. Add `--all` to include amendment votes, which multiplies the count by about
 eight and is worth doing only once the index is chunked.
 
 ## What the importer will not do
@@ -169,11 +172,12 @@ It writes the vote and nothing else. `summary`, `whatItMeans`, the impact figure
 the press cards are left empty, because those are editorial work and no script should
 invent them.
 
-It also cannot write a good headline. The annex describes a vote as
-`A10-0123/2026 - Rapporteur - Proposition de résolution (ensemble du texte)`, which is
-a procedural label, not a title. The importer splits it — the object of the vote
-becomes the title, the reference and rapporteur become the subtitle — but an editor
-should rewrite it into something a reader recognises. That is the standing job after
+It also cannot write a good headline. The portal titles a vote the way the order paper
+does — `Establishment of the digital euro ***I`, or worse,
+`C10-0178/2026 – Article 3, § 1, point b – Am 16`. The importer takes the vote item's
+title for the record and leaves the decision's own wording as the subtitle, which is
+the best a script can honestly do; an editor should rewrite it into something a reader
+recognises. That is the standing job after
 each plenary: a title, two sentences of summary, and the coverage.
 
 ## The Council

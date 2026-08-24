@@ -1,8 +1,8 @@
 {
-  "source": "https://www.europarl.europa.eu/meps/en/directory/xml/?leg=10",
+  "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
   "fetched": null,
   "term": 10,
-  "note": "Every member of the current Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes.",
+  "note": "Every member of this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes. Refreshed by scripts/fetch-plenary.mjs --refresh-meps.",
   "members": {
     "840": {
       "name": "Charles GOERENS",

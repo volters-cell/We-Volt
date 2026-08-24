@@ -114,10 +114,11 @@ licence on each part. It is deliberately blunt about the gaps.
 since the term began on 16 July 2024 — with every member by name, their group, and how
 each of them voted. 441,322 individual ballots.
 
-Everything comes from the European Parliament's own record: the roll-call annex published
-with the minutes of each sitting, the votes list that states what carried, the member
-directory, and the plenary calendar. `scripts/fetch-plenary.mjs` reads them and keeps the
-site current after each sitting; `npm run backfill` re-reads the whole term.
+Everything comes from the European Parliament's own record, read from its open data portal
+at `data.europarl.europa.eu`: each sitting's decisions, which name every member and how they
+voted; the vote items behind them; the list of members; and the list of sittings.
+`scripts/fetch-plenary.mjs` reads them and keeps the site current after each sitting;
+`npm run backfill` re-reads the whole term.
 
 Still missing, and honestly labelled as such: Council and Commission records, which have
 no machine-readable source; the plain-language summaries, which are editorial; and the
@@ -158,15 +159,15 @@ node scripts/fetch-plenary.mjs --date 2026-09-15    # one sitting
 node scripts/build-index.mjs                        # rebuild the feed
 ```
 
-That reads the Parliament's own roll-call annex for the sitting, maps every member to
-their country through the MEP directory, and writes one record per final vote with
+That reads the Parliament's own record of the sitting, maps every voter's id to a name
+and a country through the member directory, and writes one record per final vote with
 each MEP's own vote in it. It deliberately leaves the summary and press sections
 empty: those are editorial work, and nothing should generate them.
 
 **It can run itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
-and again each night — catching the votes list, which states what carried and is
-published a day later than the votes themselves — then validates and commits only if
-something changed. Set it up, and verify the first run, following
+and again each night — the second pass catching whether each text carried, which the
+Parliament publishes a day later than the votes themselves — then validates and commits
+only if something changed. Set it up, and verify the first run, following
 [docs/AUTOMATION.md](docs/AUTOMATION.md).
 
 The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md); how to file a
@@ -188,9 +189,10 @@ country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DAT
 
 ## Where the data comes from
 
-Roll-call votes come from the European Parliament itself: the roll-call annex
-published with the minutes of each sitting, and the MEP directory that turns the names
-in it into countries. Nothing sits in between. Boundaries come from public-domain
+Roll-call votes come from the European Parliament itself, through its open data portal:
+each sitting's decisions, which record who voted for, against and abstained, and the
+list of members that turns those ids into names, countries and groups. Nothing sits in
+between. Boundaries come from public-domain
 Natural Earth data, simplified for display only — they imply no position on any
 border.
 

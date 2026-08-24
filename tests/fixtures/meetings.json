@@ -1,0 +1,23 @@
+{
+  "//": "Cut down from .../meetings?year=2026: the sittings of a year, each with its date, term and locality.",
+  "data": [
+    { "id": "eli/dl/event/MTG-PL-2026-07-06", "activity_date": "2026-07-06",
+      "activity_label": { "en": "Monday, 6 July 2026" },
+      "had_activity_type": "def/ep-activities/PLENARY_SITTING", "parliamentary_term": "org/ep-10",
+      "hasLocality": ["http://publications.europa.eu/resource/authority/place/FRA_SXB"] },
+    { "id": "eli/dl/event/MTG-PL-2026-07-07", "activity_date": "2026-07-07",
+      "activity_label": { "en": "Tuesday, 7 July 2026" },
+      "had_activity_type": "def/ep-activities/PLENARY_SITTING", "parliamentary_term": "org/ep-10",
+      "hasLocality": ["http://publications.europa.eu/resource/authority/place/FRA_SXB"] },
+    { "id": "eli/dl/event/MTG-PL-2026-07-08", "activity_date": "2026-07-08",
+      "activity_label": { "en": "Wednesday, 8 July 2026" },
+      "had_activity_type": "def/ep-activities/PLENARY_SITTING", "parliamentary_term": "org/ep-10",
+      "hasLocality": ["http://publications.europa.eu/resource/authority/place/FRA_SXB"] },
+    { "id": "eli/dl/event/MTG-PL-2026-07-22", "activity_date": "2026-07-22",
+      "activity_label": { "en": "Wednesday, 22 July 2026" },
+      "had_activity_type": "def/ep-activities/PLENARY_SITTING", "parliamentary_term": "org/ep-10",
+      "hasLocality": ["http://publications.europa.eu/resource/authority/place/BEL_BRU"] },
+    { "id": "eli/dl/event/MTG-CO-2026-07-23", "activity_date": "2026-07-23",
+      "had_activity_type": "def/ep-activities/COMMITTEE_MEETING", "parliamentary_term": "org/ep-10" }
+  ]
+}
