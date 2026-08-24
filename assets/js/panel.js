@@ -221,8 +221,8 @@
       '<section class="card">' +
         '<p class="neutral-note">Pick a vote from the list to see how ' +
         escapeHTML(state.name) + ' voted, and how its press told the story.</p>' +
-        '<p class="panel-actions"><button type="button" class="permalink" data-copy="' +
-        escapeHTML(permalink) + '">Copy link to this country</button></p>' +
+        '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
+        '" data-copy="' + escapeHTML(permalink) + '">Copy link to this country</a></p>' +
       '</section>';
     node.hidden = false;
   }
@@ -292,8 +292,9 @@
         '<p class="panel-facts">' + state.seats + ' MEPs · ' + state.population.toFixed(1) +
           ' million people · capital ' + escapeHTML(state.capital) + '</p>' +
         blocs(state) +
-        '<p class="panel-actions"><button type="button" class="permalink" data-copy="' +
-          escapeHTML(permalink) + '">Copy link to this country’s record</button></p>' +
+        '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
+          '" data-copy="' + escapeHTML(permalink) +
+          '">Copy link to this country’s record</a></p>' +
       '</header>' +
       positionSection(decision, country, state) +
       impactSection(decision, country) +

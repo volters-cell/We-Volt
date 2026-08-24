@@ -489,12 +489,6 @@ tbody tr.is-dimmed { opacity: .35; }
 
 .meter-fill { transition: width .9s cubic-bezier(.25, .8, .3, 1); }
 
-.vote-link {
-  float: right;
-  font-size: .76rem;
-  margin-left: .5rem;
-}
-
 
 /* ---------------------------------------------------------------- numbers */
 
@@ -998,34 +992,83 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .rm-name { font-weight: 600; font-size: .88rem; }
 .rm-meta { flex: 1; font-size: .78rem; color: var(--ink-faint); }
 
-.breakdown { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; max-height: 34rem; overflow-y: auto; }
+.breakdown { list-style: none; margin: 0; padding: 0; display: grid; gap: .2rem; max-height: 40rem; overflow-y: auto; }
 .breakdown-row {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(6rem, 10rem) 1fr auto;
-  align-items: center;
-  gap: .7rem;
+  grid-template-columns: 3rem 1fr;
+  align-items: start;
+  gap: .75rem;
   font: inherit;
   text-align: left;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid var(--line);
-  padding: .45rem .3rem;
+  border-radius: 8px;
+  padding: .55rem .4rem;
   cursor: pointer;
   color: inherit;
 }
 .breakdown-row:hover { background: var(--surface-sunken); }
-.bd-label { font-weight: 600; font-size: .85rem; }
-.bd-bar { display: flex; gap: 1px; height: .85rem; border-radius: 3px; overflow: hidden; background: var(--surface-sunken); }
+
+/* A plain tile rather than a party logo: it identifies the row without
+   borrowing anyone's mark. */
+.bd-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface-sunken);
+  font-size: .64rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-align: center;
+  padding: 0 .15rem;
+  overflow: hidden;
+  color: var(--ink-soft);
+}
+.bd-tile-country { font-size: .82rem; letter-spacing: .04em; }
+
+.bd-main { display: grid; gap: .28rem; min-width: 0; }
+.bd-label { font-weight: 650; font-size: .92rem; line-height: 1.25; }
+.bd-sub { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.bd-bar {
+  display: flex;
+  gap: 1px;
+  height: .6rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface-sunken);
+}
+.bd-seg { transition: flex .2s ease; }
 .bd-for { background: var(--vote-for); }
 .bd-against { background: var(--vote-against); }
 .bd-abstain { background: var(--vote-abstain); }
 .bd-absent { background: var(--vote-absent); }
-.bd-numbers { font-size: .8rem; font-variant-numeric: tabular-nums; }
 
 .breakdown li.is-hovered .breakdown-row,
 .roll-members li.is-hovered .roll-member { background: var(--surface-sunken); }
 .breakdown li.is-dimmed, .roll-members li.is-dimmed { opacity: .35; }
+
+.vote-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .9rem;
+  margin: 0 0 1rem;
+}
+.vote-source {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--focus);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--focus) 35%, transparent);
+}
+.vote-source:hover { border-bottom-color: var(--focus); }
+.vote-share { color: var(--ink-soft); border-bottom-color: var(--line-strong); }
+
+a.permalink { font-size: .8rem; }
 
 button.permalink {
   font: inherit;

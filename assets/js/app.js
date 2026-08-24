@@ -27,7 +27,7 @@
 
   const dom = {};
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
-   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary',
+   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'header-count',
    'header-plenary', 'search-input', 'search-clear', 'search-status',
@@ -637,6 +637,22 @@
 
   const roll = { tab: 'members', name: '', group: '', country: '', position: '' };
 
+  /* Groups are known by their abbreviations and recognised by their names. */
+  const GROUP_NAMES = {
+    'EPP': 'European People’s Party',
+    'S&D': 'Progressive Alliance of Socialists and Democrats',
+    'PfE': 'Patriots for Europe',
+    'ECR': 'European Conservatives and Reformists',
+    'Renew': 'Renew Europe',
+    'Greens/EFA': 'Greens / European Free Alliance',
+    'The Left': 'The Left in the European Parliament',
+    'ESN': 'Europe of Sovereign Nations',
+    'NI': 'Non-attached members'
+  };
+
+  // What fits on a tile, which is not always what the group is called.
+  const GROUP_TILES = { 'Greens/EFA': 'Greens', 'The Left': 'Left' };
+
   /* Every ballot in the open vote, flattened once, with everything the filters
      and the three breakdowns need. */
   function ballotList() {
@@ -730,9 +746,10 @@
       (list.length > 800 ? '<p class="empty">Showing the first 800. Filter to narrow it down.</p>' : '');
   }
 
-  /* A stacked row per group or per country: the same shape as the bar above, so
-     the eye reads them the same way. */
-  function breakdownRows(list, keyOf, labelOf, dataAttr) {
+  /* A row per group or per country: who they are, how many of them voted, and
+     the shape of that vote. The bar is the same instrument as the one at the
+     top of the page, at a smaller size, so the two read together. */
+  function breakdownRows(list, keyOf, labelOf, tileOf, kind) {
     const groups = {};
     list.forEach(function (item) {
       const key = keyOf(item);
@@ -742,26 +759,44 @@
 
     const rows = Object.keys(groups).map(function (key) {
       const totals = tally(groups[key]);
-      const cast = totals.for + totals.against + totals.abstain;
-      return { key: key, label: labelOf(key), size: groups[key].length, totals: totals, cast: cast };
+      return {
+        key: key,
+        label: labelOf(key),
+        tile: tileOf(key),
+        size: groups[key].length,
+        totals: totals,
+        cast: totals.for + totals.against + totals.abstain
+      };
     });
     rows.sort(function (a, b) { return b.size - a.size; });
 
     if (!rows.length) return '<p class="empty">Nothing matches these filters.</p>';
 
     return '<ul class="breakdown">' + rows.map(function (row) {
-      const parts = POSITIONS.filter(function (key) { return row.totals[key]; }).map(function (key) {
-        return '<span class="bd-seg bd-' + key + '" style="flex:' + row.totals[key] + ' 1 0"></span>';
-      }).join('');
-      return '<li' + (dataAttr ? ' data-code="' + esc(row.key) + '"' : '') + '>' +
+      const parts = POSITIONS.filter(function (key) { return row.totals[key]; })
+        .map(function (key) {
+          const percent = share(row.totals[key], row.size);
+          return '<span class="bd-seg bd-' + key + '" style="flex:' + row.totals[key] + ' 1 0"' +
+            ' title="' + esc(Panel.VOTE_LABEL[key]) + ': ' + row.totals[key] +
+            ' (' + percent + '%)"></span>';
+        }).join('');
+
+      return '<li' + (kind === 'country' ? ' data-code="' + esc(row.key) + '"' : '') + '>' +
         '<button type="button" class="breakdown-row"' +
-          (dataAttr ? ' data-country="' + esc(row.key) + '"' : ' data-group="' + esc(row.key) + '"') + '>' +
-          '<span class="bd-label">' + esc(row.label) + '</span>' +
-          '<span class="bd-bar">' + parts + '</span>' +
-          '<span class="bd-numbers">' +
-            '<span class="n-for">' + row.totals.for + '</span> · ' +
-            '<span class="n-against">' + row.totals.against + '</span> · ' +
-            '<span class="n-abstain">' + row.totals.abstain + '</span>' +
+          (kind === 'country'
+            ? ' data-country="' + esc(row.key) + '"'
+            : ' data-group="' + esc(row.key) + '"') + '>' +
+          '<span class="bd-tile bd-tile-' + kind + '">' + esc(row.tile) + '</span>' +
+          '<span class="bd-main">' +
+            '<span class="bd-label">' + esc(row.label) + '</span>' +
+            '<span class="bd-sub">' + row.cast + ' of ' + row.size + ' members voted' +
+              (row.cast
+                ? ' · <span class="n-for">' + row.totals.for + '</span> for, ' +
+                  '<span class="n-against">' + row.totals.against + '</span> against, ' +
+                  '<span class="n-abstain">' + row.totals.abstain + '</span> abstained'
+                : '') +
+            '</span>' +
+            '<span class="bd-bar">' + parts + '</span>' +
           '</span>' +
         '</button></li>';
     }).join('') + '</ul>';
@@ -808,11 +843,17 @@
     });
 
     if (roll.tab === 'groups') {
-      dom['roll-body'].innerHTML = breakdownRows(list, function (item) { return item.group; },
-        function (key) { return key; }, false);
+      dom['roll-body'].innerHTML = breakdownRows(list,
+        function (item) { return item.group; },
+        function (key) { return GROUP_NAMES[key] || key; },
+        function (key) { return GROUP_TILES[key] || key; },
+        'group');
     } else if (roll.tab === 'countries') {
-      dom['roll-body'].innerHTML = breakdownRows(list, function (item) { return item.country; },
-        function (key) { return (statesByCode[key] || {}).name || key; }, true);
+      dom['roll-body'].innerHTML = breakdownRows(list,
+        function (item) { return item.country; },
+        function (key) { return (statesByCode[key] || {}).name || key; },
+        function (key) { return key; },
+        'country');
     } else {
       dom['roll-body'].innerHTML = renderMembersTab(list);
     }
@@ -850,8 +891,7 @@
   function renderOutcome() {
     const decision = state.decision;
     const result = decision.outcome || {};
-    let html = '<button type="button" class="permalink vote-link" data-copy="' +
-      esc(shareUrl()) + '">Copy link to this vote</button>' +
+    let html =
       '<p class="outcome-result outcome-' + esc(result.result || 'unknown') + '">' +
       esc(result.headline || result.result || '') + '</p>';
 
@@ -1026,6 +1066,33 @@
     dom['decision-summary'].textContent = decision.summary || '';
 
 
+
+    // Links that open, in one line under the vote: the Parliament's own file
+    // for this procedure, and the annex the record was read from.
+    const links = [];
+    const reference = decision.procedure && decision.procedure.reference;
+    if (reference) {
+      links.push({
+        url: decision.procedure.url ||
+          // The slash belongs in a procedure reference; encoding it breaks the
+          // lookup on the Parliament's side.
+          'https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=' +
+          encodeURIComponent(reference).replace(/%2F/g, '/'),
+        label: 'Procedure file ' + reference
+      });
+    }
+    (decision.sources || []).forEach(function (source) {
+      if (source.url) links.push({ url: source.url, label: source.label });
+    });
+
+    dom['vote-links'].innerHTML = links.map(function (link) {
+      return '<a class="vote-source" href="' + esc(link.url) +
+        '" target="_blank" rel="noopener noreferrer">' + esc(link.label) +
+        '<span aria-hidden="true"> ↗</span></a>';
+    }).join('') +
+      '<a class="vote-source vote-share" href="' + esc(shareUrl()) + '" data-copy="' +
+      esc(shareUrl()) + '">Copy link to this vote</a>';
+    dom['vote-links'].hidden = false;
 
     const isSample = decision.status === 'sample';
     dom['decision-status'].hidden = !isSample;
@@ -1310,10 +1377,15 @@
         if (button) setIsolate('layer', button.getAttribute('data-isolate'));
       });
 
-      // Copy-link buttons, wherever they appear.
+      // Copy-link controls, wherever they appear. They are real links, so a
+      // modifier click opens them in a tab as any link would; a plain click
+      // copies the address instead of reloading the page you are already on.
       document.addEventListener('click', function (event) {
-        const button = event.target.closest('[data-copy]');
-        if (button) copyLink(button);
+        const control = event.target.closest('[data-copy]');
+        if (!control) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+        event.preventDefault();
+        copyLink(control);
       });
 
       // The bar is a filter: click "Against" to see only those who did.
