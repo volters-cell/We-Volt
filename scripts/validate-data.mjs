@@ -194,11 +194,26 @@ try {
 }
 
 const index = await readJSON('data/decisions/index.json');
+
+/* The Parliament numbers each vote once. Two records carrying the same number
+   are the same vote twice, which puts it on the page twice — and is exactly
+   what happened when records written by different importers met. */
+const bySource = new Map();
+
 for (const entry of index.decisions) {
   const decision = await readJSON(entry.file);
   if (decision.id !== entry.id) fail(entry.file, `id "${decision.id}" does not match the index entry "${entry.id}"`);
   checkDecision(path.basename(entry.file), decision, states);
   checkBallots(path.basename(entry.file), decision, directory);
+
+  if (decision.sourceId === undefined || decision.sourceId === null) continue;
+  const key = String(decision.sourceId);
+  const first = bySource.get(key);
+  if (first) {
+    fail(path.basename(entry.file), `holds the Parliament's vote ${key}, which ${first} already holds`);
+  } else {
+    bySource.set(key, path.basename(entry.file));
+  }
 }
 
 notes.forEach((message) => console.log(`note  ${message}`));

@@ -49,10 +49,15 @@ async function localRecords() {
   for (const name of files) {
     const record = JSON.parse(await readFile(path.join(dir, name), 'utf8'));
     if (record.body !== 'parliament') continue;
+    const cast = { for: 0, against: 0, abstain: 0, absent: 0 };
+    (record.ballots || []).forEach(function (ballot) {
+      const position = ['for', 'against', 'abstain', 'absent'][ballot[1]];
+      if (position) cast[position] += 1;
+    });
     byId.set(String(record.sourceId), {
       file: name,
       date: record.date,
-      ballots: (record.ballots || []).length,
+      cast: cast,
       headline: record.outcome && record.outcome.headline
     });
   }
@@ -90,7 +95,9 @@ async function main() {
 
   const days = [];
   const missing = [];
+  const unpublished = [];
   const disagreeing = [];
+  let absences = 0;
   const strangers = new Map();
   const seen = new Set();
   const amendments = new Set();
@@ -112,7 +119,15 @@ async function main() {
       const id = String(decision.notation_votingId || '');
       const record = held.get(id);
       if (!record) {
-        missing.push({ date: date, votingId: id, title: decision.activity_label && decision.activity_label.en });
+        // A vote the Parliament records as a roll call but publishes no
+        // ballots for is not a gap here: there is nothing to hold.
+        const list = ballotsOf(decision);
+        const where = list.length ? missing : unpublished;
+        where.push({
+          date: date, votingId: id,
+          title: (decision.activity_label && decision.activity_label.en) || null,
+          ballots: list.length
+        });
         continue;
       }
       here += 1;
@@ -122,12 +137,22 @@ async function main() {
       const theirs = tallyOf(decision);
       const ours = statedTally(record.headline);
       if (ours && (ours.for !== theirs.for || ours.against !== theirs.against || ours.abstain !== theirs.abstain)) {
-        disagreeing.push({ file: record.file, ours: ours, theirs: theirs });
+        disagreeing.push({ file: record.file, kind: 'headline', ours: ours, theirs: theirs });
       }
+
+      // Only the three positions the Parliament publishes are compared. A
+      // record may also hold who was absent, which the portal does not say —
+      // that is more than the source, not different from it.
       const ballots = ballotsOf(decision);
-      if (record.ballots !== ballots.length) {
-        disagreeing.push({ file: record.file, ballotsHere: record.ballots, ballotsThere: ballots.length });
+      const cast = record.cast;
+      if (cast.for !== theirs.for || cast.against !== theirs.against || cast.abstain !== theirs.abstain) {
+        disagreeing.push({
+          file: record.file, kind: 'ballots',
+          here: { for: cast.for, against: cast.against, abstain: cast.abstain },
+          there: theirs
+        });
       }
+      if (cast.absent) absences += cast.absent;
       ballots.forEach(function (ballot) {
         if (!directory[String(ballot[0])]) strangers.set(String(ballot[0]), (strangers.get(String(ballot[0])) || 0) + 1);
       });
@@ -158,8 +183,11 @@ async function main() {
     rollCallVotes: rollCallsSeen,
     finalVotes: finalVotesSeen,
     onFile: matched,
+    withoutBallotsAtSource: unpublished.length,
+    absencesHeldHere: absences,
     recordsHere: held.size,
     missing: missing,
+    unpublished: unpublished,
     disagreeing: disagreeing,
     unknownVoters: [...strangers.keys()],
     hereOnly: orphans,
@@ -171,10 +199,12 @@ async function main() {
   console.log(`roll-call votes          ${rollCallsSeen}`);
   console.log(`  of them votes on a text ${finalVotesSeen}`);
   console.log(`  held here               ${matched}`);
+  console.log(`  no ballots published    ${unpublished.length}`);
   console.log(`records on file          ${held.size}`);
   console.log(`missing                  ${missing.length}`);
   console.log(`disagreeing              ${disagreeing.length}`);
   console.log(`ballots naming an unknown member  ${strangers.size}`);
+  console.log(`absences held here that the portal does not publish  ${absences}`);
 
   missing.slice(0, 20).forEach(function (item) {
     console.log(`  missing  ${item.date}  ${item.votingId}  ${String(item.title || '').slice(0, 70)}`);

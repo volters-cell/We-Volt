@@ -6,21 +6,6 @@
   },
   "decisions": [
     {
-      "id": "ep-2026-07-09-2023-0212-195719",
-      "sourceId": 195719,
-      "title": "Establishment of the digital euro",
-      "subtitle": "A10-0185/2026 – Fernando Navarrete Rojas – Decision to enter into interinstitutional negotiations — roll-call vote in plenary",
-      "date": "2026-07-09",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 607,
-      "keywords": "establishment of the digital euro a10-0185/2026 – fernando navarrete rojas – decision to enter into interinstitutional negotiations — roll-call vote in plenary 2023/0212",
-      "file": "data/decisions/ep-2026-07-09-2023-0212-195719.json"
-    },
-    {
       "id": "ep-2026-07-09-2023-0212-cod-195719",
       "sourceId": 195719,
       "title": "Establishment of the digital euro",
@@ -51,21 +36,6 @@
       "file": "data/decisions/ep-2026-07-09-2025-0429-cod-195775.json"
     },
     {
-      "id": "ep-2026-07-09-2025-2211-194869",
-      "sourceId": 194869,
-      "title": "Feasibility of a 28th tax regime and its potential to support EU competitiveness",
-      "subtitle": "A10-0167/2026 – Ľudovít Ódor – Motion for a resolution — roll-call vote in plenary",
-      "date": "2026-07-09",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 597,
-      "keywords": "feasibility of a 28th tax regime and its potential to support eu competitiveness a10-0167/2026 – ľudovít ódor – motion for a resolution — roll-call vote in plenary 2025/2211",
-      "file": "data/decisions/ep-2026-07-09-2025-2211-194869.json"
-    },
-    {
       "id": "ep-2026-07-09-2025-2211-ini-194869",
       "sourceId": 194869,
       "title": "Feasibility of a 28th tax regime and its potential to support EU competitiveness",
@@ -81,21 +51,6 @@
       "file": "data/decisions/ep-2026-07-09-2025-2211-ini-194869.json"
     },
     {
-      "id": "ep-2026-07-09-2026-2799-195769",
-      "sourceId": 195769,
-      "title": "The threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in El-Obeid, Sudan",
-      "subtitle": "RC-B10-0357/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-09",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 600,
-      "keywords": "the threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in el-obeid, sudan rc-b10-0357/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2799",
-      "file": "data/decisions/ep-2026-07-09-2026-2799-195769.json"
-    },
-    {
       "id": "ep-2026-07-09-2026-2799-rsp-195769",
       "sourceId": 195769,
       "title": "The threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in El-Obeid, Sudan",
@@ -109,21 +64,6 @@
       "mepCount": 719,
       "keywords": "the threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in el-obeid, sudan 2026/2799(rsp) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2026/2799(rsp)",
       "file": "data/decisions/ep-2026-07-09-2026-2799-rsp-195769.json"
-    },
-    {
-      "id": "ep-2026-07-09-2026-2800-195749",
-      "sourceId": 195749,
-      "title": "Ongoing persecution of Christians in Nigeria, notably the Kawel village massacre",
-      "subtitle": "RC-B10-0345/2026/REV1 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-09",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 597,
-      "keywords": "ongoing persecution of christians in nigeria, notably the kawel village massacre rc-b10-0345/2026/rev1 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2800",
-      "file": "data/decisions/ep-2026-07-09-2026-2800-195749.json"
     },
     {
       "id": "ep-2026-07-09-2026-2800-rsp-195749",
@@ -156,21 +96,6 @@
       "file": "data/decisions/ep-2026-07-09-temporary-derogation-from-the-eprivacy-directive-ii-195807.json"
     },
     {
-      "id": "ep-2026-07-08-2023-0142-194919",
-      "sourceId": 194919,
-      "title": "EU–Morocco Euro-Mediterranean Aviation Agreement: accession to the EU of Croatia (Protocol)",
-      "subtitle": "A10-0177/2026 – Tomas Tobé – Draft Council decision — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 661,
-      "keywords": "eu–morocco euro-mediterranean aviation agreement: accession to the eu of croatia (protocol) a10-0177/2026 – tomas tobé – draft council decision — roll-call vote in plenary 2023/0142",
-      "file": "data/decisions/ep-2026-07-08-2023-0142-194919.json"
-    },
-    {
       "id": "ep-2026-07-08-2023-0142-nle-194919",
       "sourceId": 194919,
       "title": "EU–Morocco Euro-Mediterranean Aviation Agreement: accession to the EU of Croatia (Protocol)",
@@ -184,21 +109,6 @@
       "mepCount": 719,
       "keywords": "eu–morocco euro-mediterranean aviation agreement: accession to the eu of croatia (protocol) 2023/0142(nle) — roll-call vote in plenary projet de décision du conseil 2023/0142(nle)",
       "file": "data/decisions/ep-2026-07-08-2023-0142-nle-194919.json"
-    },
-    {
-      "id": "ep-2026-07-08-2025-0244-194904",
-      "sourceId": 194904,
-      "title": "Protection of the environment through criminal law",
-      "subtitle": "A10-0156/2026 – Ilhan Kyuchyuk – Draft Council decision — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 667,
-      "keywords": "protection of the environment through criminal law a10-0156/2026 – ilhan kyuchyuk – draft council decision — roll-call vote in plenary 2025/0244",
-      "file": "data/decisions/ep-2026-07-08-2025-0244-194904.json"
     },
     {
       "id": "ep-2026-07-08-2025-0244-nle-194904",
@@ -216,21 +126,6 @@
       "file": "data/decisions/ep-2026-07-08-2025-0244-nle-194904.json"
     },
     {
-      "id": "ep-2026-07-08-2025-0271-195415",
-      "sourceId": 195415,
-      "title": "EU–Mexico Interim Agreement on Trade",
-      "subtitle": "A10-0198/2026 – Borja Giménez Larraz – Draft Council decision — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 665,
-      "keywords": "eu–mexico interim agreement on trade a10-0198/2026 – borja giménez larraz – draft council decision — roll-call vote in plenary 2025/0271",
-      "file": "data/decisions/ep-2026-07-08-2025-0271-195415.json"
-    },
-    {
       "id": "ep-2026-07-08-2025-0271-nle-195415",
       "sourceId": 195415,
       "title": "EU–Mexico Interim Agreement on Trade",
@@ -246,21 +141,6 @@
       "file": "data/decisions/ep-2026-07-08-2025-0271-nle-195415.json"
     },
     {
-      "id": "ep-2026-07-08-2025-0387-194918",
-      "sourceId": 194918,
-      "title": "EU-Morocco Agreement for scientific and technological cooperation setting out the terms and conditions for the participation of Morocco in the Partnership for Research and Innovation in the Mediterranean Area (PRIMA): amendment and supplement",
-      "subtitle": "A10-0151/2026 – Paolo Borchia – Draft Council decision — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 645,
-      "keywords": "eu-morocco agreement for scientific and technological cooperation setting out the terms and conditions for the participation of morocco in the partnership for research and innovation in the mediterranean area (prima): amendment and supplement a10-0151/2026 – paolo borchia – draft council decision — roll-call vote in plenary 2025/0387",
-      "file": "data/decisions/ep-2026-07-08-2025-0387-194918.json"
-    },
-    {
       "id": "ep-2026-07-08-2025-0387-nle-194918",
       "sourceId": 194918,
       "title": "EU-Morocco Agreement for scientific and technological cooperation setting out the terms and conditions for the participation of Morocco in the Partnership for Research and Innovation in the Mediterranean Area (PRIMA): amendment and supplement",
@@ -274,21 +154,6 @@
       "mepCount": 719,
       "keywords": "eu-morocco agreement for scientific and technological cooperation setting out the terms and conditions for the participation of morocco in the partnership for research and innovation in the mediterranean area (prima): amendment and supplement 2025/0387(nle) — roll-call vote in plenary projet de décision du conseil 2025/0387(nle)",
       "file": "data/decisions/ep-2026-07-08-2025-0387-nle-194918.json"
-    },
-    {
-      "id": "ep-2026-07-08-2025-0810-194991",
-      "sourceId": 194991,
-      "title": "EU–Mexico Political, Economic and Cooperation Strategic Partnership Agreement (Interim report)",
-      "subtitle": "A10-0182/2026 – Javi López, Borja Giménez Larraz – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 669,
-      "keywords": "eu–mexico political, economic and cooperation strategic partnership agreement (interim report) a10-0182/2026 – javi lópez, borja giménez larraz – motion for a resolution (as a whole) — roll-call vote in plenary 2025/0810",
-      "file": "data/decisions/ep-2026-07-08-2025-0810-194991.json"
     },
     {
       "id": "ep-2026-07-08-2025-0810-195008",
@@ -321,21 +186,6 @@
       "file": "data/decisions/ep-2026-07-08-2025-0810r-nle-194991.json"
     },
     {
-      "id": "ep-2026-07-08-2025-2255-194935",
-      "sourceId": 194935,
-      "title": "2025 Commission report on Serbia",
-      "subtitle": "A10-0163/2026 – Tonino Picula – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 663,
-      "keywords": "2025 commission report on serbia a10-0163/2026 – tonino picula – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2255",
-      "file": "data/decisions/ep-2026-07-08-2025-2255-194935.json"
-    },
-    {
       "id": "ep-2026-07-08-2025-2255-ini-194935",
       "sourceId": 194935,
       "title": "2025 Commission report on Serbia",
@@ -351,21 +201,6 @@
       "file": "data/decisions/ep-2026-07-08-2025-2255-ini-194935.json"
     },
     {
-      "id": "ep-2026-07-08-2025-2258-194917",
-      "sourceId": 194917,
-      "title": "2025 Commission report on Moldova",
-      "subtitle": "A10-0164/2026 – Sven Mikser – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 665,
-      "keywords": "2025 commission report on moldova a10-0164/2026 – sven mikser – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2258",
-      "file": "data/decisions/ep-2026-07-08-2025-2258-194917.json"
-    },
-    {
       "id": "ep-2026-07-08-2025-2258-ini-194917",
       "sourceId": 194917,
       "title": "2025 Commission report on Moldova",
@@ -379,21 +214,6 @@
       "mepCount": 719,
       "keywords": "2025 commission report on moldova 2025/2258(ini) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2025/2258(ini)",
       "file": "data/decisions/ep-2026-07-08-2025-2258-ini-194917.json"
-    },
-    {
-      "id": "ep-2026-07-08-2025-2259-195067",
-      "sourceId": 195067,
-      "title": "2025 Commission report on Ukraine",
-      "subtitle": "A10-0172/2026 – Michael Gahler – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 655,
-      "keywords": "2025 commission report on ukraine a10-0172/2026 – michael gahler – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2259",
-      "file": "data/decisions/ep-2026-07-08-2025-2259-195067.json"
     },
     {
       "id": "ep-2026-07-08-2025-2259-ini-195067",
@@ -426,21 +246,6 @@
       "file": "data/decisions/ep-2026-07-08-2025-2647-rsp-195340.json"
     },
     {
-      "id": "ep-2026-07-08-2026-2617-195638",
-      "sourceId": 195638,
-      "title": "The impact of the 1974 Turkish invasion on Cypriot women and girls, and the crimes committed by Turkish forces and consequences on gender equality",
-      "subtitle": "B10-0333/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 651,
-      "keywords": "the impact of the 1974 turkish invasion on cypriot women and girls, and the crimes committed by turkish forces and consequences on gender equality b10-0333/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2617",
-      "file": "data/decisions/ep-2026-07-08-2026-2617-195638.json"
-    },
-    {
       "id": "ep-2026-07-08-2026-2617-rsp-195638",
       "sourceId": 195638,
       "title": "The impact of the 1974 Turkish invasion on Cypriot women and girls, and the crimes committed by Turkish forces and consequences on gender equality",
@@ -454,21 +259,6 @@
       "mepCount": 719,
       "keywords": "the impact of the 1974 turkish invasion on cypriot women and girls, and the crimes committed by turkish forces and consequences on gender equality 2026/2617(rsp) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2026/2617(rsp)",
       "file": "data/decisions/ep-2026-07-08-2026-2617-rsp-195638.json"
-    },
-    {
-      "id": "ep-2026-07-08-2026-2680-195361",
-      "sourceId": 195361,
-      "title": "Objection pursuant to Rule 114(3): Trajectory to decrease the contribution of high indirect land-use change-risk biofuels, bioliquids and biomass fuels to renewable energy targets",
-      "subtitle": "B10-0337/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of Parliament's component members",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 660,
-      "keywords": "objection pursuant to rule 114(3): trajectory to decrease the contribution of high indirect land-use change-risk biofuels, bioliquids and biomass fuels to renewable energy targets b10-0337/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2680",
-      "file": "data/decisions/ep-2026-07-08-2026-2680-195361.json"
     },
     {
       "id": "ep-2026-07-08-2026-2680-dea-195361",
@@ -486,21 +276,6 @@
       "file": "data/decisions/ep-2026-07-08-2026-2680-dea-195361.json"
     },
     {
-      "id": "ep-2026-07-08-2026-2714-195414",
-      "sourceId": 195414,
-      "title": "Objection pursuant to Rule 115(2) and (3), and (4)(c): Lead in certain fishing tackle",
-      "subtitle": "B10-0344/2026 – Motion for a resolution — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of Parliament's component members",
-      "result": "rejected",
-      "status": "verified",
-      "mepCount": 659,
-      "keywords": "objection pursuant to rule 115(2) and (3), and (4)(c): lead in certain fishing tackle b10-0344/2026 – motion for a resolution — roll-call vote in plenary 2026/2714",
-      "file": "data/decisions/ep-2026-07-08-2026-2714-195414.json"
-    },
-    {
       "id": "ep-2026-07-08-2026-2714-rps-195414",
       "sourceId": 195414,
       "title": "Objection pursuant to Rule 115(2) and (3), and (4)(c): Lead in certain fishing tackle",
@@ -514,21 +289,6 @@
       "mepCount": 719,
       "keywords": "objection pursuant to rule 115(2) and (3), and (4)(c): lead in certain fishing tackle 2026/2714(rps) — roll-call vote in plenary proposition de résolution 2026/2714(rps)",
       "file": "data/decisions/ep-2026-07-08-2026-2714-rps-195414.json"
-    },
-    {
-      "id": "ep-2026-07-08-2026-2745-195543",
-      "sourceId": 195543,
-      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize NK603 × T25",
-      "subtitle": "B10-0335/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 663,
-      "keywords": "objection pursuant to rule 115(2) and (3): genetically modified maize nk603 × t25 b10-0335/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2745",
-      "file": "data/decisions/ep-2026-07-08-2026-2745-195543.json"
     },
     {
       "id": "ep-2026-07-08-2026-2745-rsp-195543",
@@ -546,21 +306,6 @@
       "file": "data/decisions/ep-2026-07-08-2026-2745-rsp-195543.json"
     },
     {
-      "id": "ep-2026-07-08-2026-2746-195341",
-      "sourceId": 195341,
-      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize DP202216 x NK603 x DAS-40278-9 and its sub-combinations DP 202216 x NK603, DP202216 x DAS-40278-9",
-      "subtitle": "B10-0336/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 599,
-      "keywords": "objection pursuant to rule 115(2) and (3): genetically modified maize dp202216 x nk603 x das-40278-9 and its sub-combinations dp 202216 x nk603, dp202216 x das-40278-9 b10-0336/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2746",
-      "file": "data/decisions/ep-2026-07-08-2026-2746-195341.json"
-    },
-    {
       "id": "ep-2026-07-08-2026-2746-rsp-195341",
       "sourceId": 195341,
       "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize DP202216 x NK603 x DAS-40278-9 and its sub-combinations DP 202216 x NK603, DP202216 x DAS-40278-9",
@@ -574,36 +319,6 @@
       "mepCount": 719,
       "keywords": "objection pursuant to rule 115(2) and (3): genetically modified maize dp202216 x nk603 x das-40278-9 and its sub-combinations dp 202216 x nk603, dp202216 x das-40278-9 2026/2746(rsp) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2026/2746(rsp)",
       "file": "data/decisions/ep-2026-07-08-2026-2746-rsp-195341.json"
-    },
-    {
-      "id": "ep-2026-07-08-2026-2747-195340",
-      "sourceId": 195340,
-      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified soybean MON 87705",
-      "subtitle": "B10-0334/2026 – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-08",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 657,
-      "keywords": "objection pursuant to rule 115(2) and (3): genetically modified soybean mon 87705 b10-0334/2026 – motion for a resolution (as a whole) — roll-call vote in plenary 2026/2747",
-      "file": "data/decisions/ep-2026-07-08-2026-2747-195340.json"
-    },
-    {
-      "id": "ep-2026-07-07-2013-0072-195007",
-      "sourceId": 195007,
-      "title": "Air passenger rights",
-      "subtitle": "A10-0191/2026 – Andrey Novakov – Joint text — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 661,
-      "keywords": "air passenger rights a10-0191/2026 – andrey novakov – joint text — roll-call vote in plenary 2013/0072",
-      "file": "data/decisions/ep-2026-07-07-2013-0072-195007.json"
     },
     {
       "id": "ep-2026-07-07-2013-0072-cod-195007",
@@ -636,21 +351,6 @@
       "file": "data/decisions/ep-2026-07-07-2016-0397-cod-194881.json"
     },
     {
-      "id": "ep-2026-07-07-2024-2117-194927",
-      "sourceId": 194927,
-      "title": "A coherent tax framework for the EU's financial sector",
-      "subtitle": "A10-0169/2026 – Matthias Ecke – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 655,
-      "keywords": "a coherent tax framework for the eu's financial sector a10-0169/2026 – matthias ecke – motion for a resolution (as a whole) — roll-call vote in plenary 2024/2117",
-      "file": "data/decisions/ep-2026-07-07-2024-2117-194927.json"
-    },
-    {
       "id": "ep-2026-07-07-2024-2117-ini-194927",
       "sourceId": 194927,
       "title": "A coherent tax framework for the EU's financial sector",
@@ -664,21 +364,6 @@
       "mepCount": 719,
       "keywords": "a coherent tax framework for the eu's financial sector 2024/2117(ini) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2024/2117(ini)",
       "file": "data/decisions/ep-2026-07-07-2024-2117-ini-194927.json"
-    },
-    {
-      "id": "ep-2026-07-07-2025-0407-195010",
-      "sourceId": 195010,
-      "title": "International road passenger transport services by coach and bus in the border regions: cabotage operations between Austria and Switzerland",
-      "subtitle": "A10-0174/2026 – Elissavet Vozemberg-Vrionidi – Commission proposal and amendments — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 659,
-      "keywords": "international road passenger transport services by coach and bus in the border regions: cabotage operations between austria and switzerland a10-0174/2026 – elissavet vozemberg-vrionidi – commission proposal and amendments — roll-call vote in plenary 2025/0407",
-      "file": "data/decisions/ep-2026-07-07-2025-0407-195010.json"
     },
     {
       "id": "ep-2026-07-07-2025-0407-cod-195010",
@@ -711,21 +396,6 @@
       "file": "data/decisions/ep-2026-07-07-2025-0429-cod-195338.json"
     },
     {
-      "id": "ep-2026-07-07-2025-2134-194903",
-      "sourceId": 194903,
-      "title": "Competition policy – annual report 2025",
-      "subtitle": "A10-0171/2026 – Stéphanie Yon-Courtin – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 657,
-      "keywords": "competition policy – annual report 2025 a10-0171/2026 – stéphanie yon-courtin – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2134",
-      "file": "data/decisions/ep-2026-07-07-2025-2134-194903.json"
-    },
-    {
       "id": "ep-2026-07-07-2025-2134-ini-194903",
       "sourceId": 194903,
       "title": "Competition policy – annual report 2025",
@@ -739,21 +409,6 @@
       "mepCount": 719,
       "keywords": "competition policy – annual report 2025 2025/2134(ini) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2025/2134(ini)",
       "file": "data/decisions/ep-2026-07-07-2025-2134-ini-194903.json"
-    },
-    {
-      "id": "ep-2026-07-07-2025-2169-195006",
-      "sourceId": 195006,
-      "title": "Recommendation on the changing geopolitical situation in East Asia and the need for closer cooperation with like-minded partners in the region",
-      "subtitle": "A10-0189/2026 – Adam Bielan – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 658,
-      "keywords": "recommendation on the changing geopolitical situation in east asia and the need for closer cooperation with like-minded partners in the region a10-0189/2026 – adam bielan – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2169",
-      "file": "data/decisions/ep-2026-07-07-2025-2169-195006.json"
     },
     {
       "id": "ep-2026-07-07-2025-2169-ini-195006",
@@ -771,21 +426,6 @@
       "file": "data/decisions/ep-2026-07-07-2025-2169-ini-195006.json"
     },
     {
-      "id": "ep-2026-07-07-2025-2181-194877",
-      "sourceId": 194877,
-      "title": "A new strategy for media literacy and digital learning",
-      "subtitle": "A10-0173/2026 – Marcos Ros Sempere – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 653,
-      "keywords": "a new strategy for media literacy and digital learning a10-0173/2026 – marcos ros sempere – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2181",
-      "file": "data/decisions/ep-2026-07-07-2025-2181-194877.json"
-    },
-    {
       "id": "ep-2026-07-07-2025-2181-ini-194877",
       "sourceId": 194877,
       "title": "A new strategy for media literacy and digital learning",
@@ -799,21 +439,6 @@
       "mepCount": 719,
       "keywords": "a new strategy for media literacy and digital learning 2025/2181(ini) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2025/2181(ini)",
       "file": "data/decisions/ep-2026-07-07-2025-2181-ini-194877.json"
-    },
-    {
-      "id": "ep-2026-07-07-2025-2208-195275",
-      "sourceId": 195275,
-      "title": "Digital assets – challenges for the competitiveness and integrity of the European Union’s financial system",
-      "subtitle": "A10-0186/2026 – Johan Van Overtveldt – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 610,
-      "keywords": "digital assets – challenges for the competitiveness and integrity of the european union’s financial system a10-0186/2026 – johan van overtveldt – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2208",
-      "file": "data/decisions/ep-2026-07-07-2025-2208-195275.json"
     },
     {
       "id": "ep-2026-07-07-2025-2208-ini-195275",
@@ -831,21 +456,6 @@
       "file": "data/decisions/ep-2026-07-07-2025-2208-ini-195275.json"
     },
     {
-      "id": "ep-2026-07-07-2025-2213-194951",
-      "sourceId": 194951,
-      "title": "Financial activities of the European Investment Bank Group – annual report 2025",
-      "subtitle": "A10-0170/2026 – Joachim Streit – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 636,
-      "keywords": "financial activities of the european investment bank group – annual report 2025 a10-0170/2026 – joachim streit – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2213",
-      "file": "data/decisions/ep-2026-07-07-2025-2213-194951.json"
-    },
-    {
       "id": "ep-2026-07-07-2025-2213-ini-194951",
       "sourceId": 194951,
       "title": "Financial activities of the European Investment Bank Group – annual report 2025",
@@ -859,21 +469,6 @@
       "mepCount": 719,
       "keywords": "financial activities of the european investment bank group – annual report 2025 2025/2213(ini) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2025/2213(ini)",
       "file": "data/decisions/ep-2026-07-07-2025-2213-ini-194951.json"
-    },
-    {
-      "id": "ep-2026-07-07-2025-2248-194870",
-      "sourceId": 194870,
-      "title": "Implementation and delivery of the Sustainable Development Goals in view of the 2026 High-Level Political Forum",
-      "subtitle": "A10-0187/2026 – Lukas Mandl, Pierfrancesco Maran – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 633,
-      "keywords": "implementation and delivery of the sustainable development goals in view of the 2026 high-level political forum a10-0187/2026 – lukas mandl, pierfrancesco maran – motion for a resolution (as a whole) — roll-call vote in plenary 2025/2248",
-      "file": "data/decisions/ep-2026-07-07-2025-2248-194870.json"
     },
     {
       "id": "ep-2026-07-07-2025-2248-ini-194870",
@@ -891,21 +486,6 @@
       "file": "data/decisions/ep-2026-07-07-2025-2248-ini-194870.json"
     },
     {
-      "id": "ep-2026-07-07-2026-0090-194890",
-      "sourceId": 194890,
-      "title": "Draft amending budget No 1/2026: entering the surplus of the financial year 2025",
-      "subtitle": "A10-0180/2026 – Andrzej Halicki – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 653,
-      "keywords": "draft amending budget no 1/2026: entering the surplus of the financial year 2025 a10-0180/2026 – andrzej halicki – motion for a resolution (as a whole) — roll-call vote in plenary 2026/0090",
-      "file": "data/decisions/ep-2026-07-07-2026-0090-194890.json"
-    },
-    {
       "id": "ep-2026-07-07-2026-0090-bud-194890",
       "sourceId": 194890,
       "title": "Draft amending budget No 1/2026: entering the surplus of the financial year 2025",
@@ -921,21 +501,6 @@
       "file": "data/decisions/ep-2026-07-07-2026-0090-bud-194890.json"
     },
     {
-      "id": "ep-2026-07-07-2026-0120-194879",
-      "sourceId": 194879,
-      "title": "Mobilisation of the European Union Solidarity Fund: assistance to Romania, Cyprus and Spain with regard to natural disasters in 2025",
-      "subtitle": "A10-0178/2026 – Bogdan Rzońca – Motion for a resolution (as a whole) — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 656,
-      "keywords": "mobilisation of the european union solidarity fund: assistance to romania, cyprus and spain with regard to natural disasters in 2025 a10-0178/2026 – bogdan rzońca – motion for a resolution (as a whole) — roll-call vote in plenary 2026/0120",
-      "file": "data/decisions/ep-2026-07-07-2026-0120-194879.json"
-    },
-    {
       "id": "ep-2026-07-07-2026-0120-bud-194879",
       "sourceId": 194879,
       "title": "Mobilisation of the European Union Solidarity Fund: assistance to Romania, Cyprus and Spain with regard to natural disasters in 2025",
@@ -949,21 +514,6 @@
       "mepCount": 719,
       "keywords": "mobilisation of the european union solidarity fund: assistance to romania, cyprus and spain with regard to natural disasters in 2025 2026/0120(bud) — roll-call vote in plenary proposition de résolution (ensemble du texte) 2026/0120(bud)",
       "file": "data/decisions/ep-2026-07-07-2026-0120-bud-194879.json"
-    },
-    {
-      "id": "ep-2026-07-07-2026-0126-194920",
-      "sourceId": 194920,
-      "title": "Mobilisation of the European Globalisation Adjustment Fund: Application EGF/2026/000 TA 2026 - Technical assistance at the initiative of the Commission",
-      "subtitle": "A10-0179/2026 – Lucia Yar – Motion for a resolution — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 658,
-      "keywords": "mobilisation of the european globalisation adjustment fund: application egf/2026/000 ta 2026 - technical assistance at the initiative of the commission a10-0179/2026 – lucia yar – motion for a resolution — roll-call vote in plenary 2026/0126",
-      "file": "data/decisions/ep-2026-07-07-2026-0126-194920.json"
     },
     {
       "id": "ep-2026-07-07-2026-0126-bud-194920",
@@ -994,36 +544,6 @@
       "mepCount": 719,
       "keywords": "temporary support and payment of advances regarding the increased fertiliser prices due to the middle east crisis 2026/0150(cod) — roll-call vote in plenary proposition de la commission 2026/0150(cod)",
       "file": "data/decisions/ep-2026-07-07-2026-0150-cod-194993.json"
-    },
-    {
-      "id": "ep-2026-07-07-temporary-derogation-from-certain-provisions-of-the-epriva-195338",
-      "sourceId": 195338,
-      "title": "Temporary derogation from certain provisions of the ePrivacy Directive to combat online child sexual abuse",
-      "subtitle": "C10-0178/2026 – Request for an urgent decision — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 646,
-      "keywords": "temporary derogation from certain provisions of the eprivacy directive to combat online child sexual abuse c10-0178/2026 – request for an urgent decision — roll-call vote in plenary",
-      "file": "data/decisions/ep-2026-07-07-temporary-derogation-from-certain-provisions-of-the-epriva-195338.json"
-    },
-    {
-      "id": "ep-2026-07-07-temporary-support-and-payment-of-advances-regarding-the-in-194993",
-      "sourceId": 194993,
-      "title": "Temporary support and payment of advances regarding the increased fertiliser prices due to the Middle East crisis",
-      "subtitle": "C10-0139/2026 – Commission proposal — roll-call vote in plenary",
-      "date": "2026-07-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 653,
-      "keywords": "temporary support and payment of advances regarding the increased fertiliser prices due to the middle east crisis c10-0139/2026 – commission proposal — roll-call vote in plenary",
-      "file": "data/decisions/ep-2026-07-07-temporary-support-and-payment-of-advances-regarding-the-in-194993.json"
     },
     {
       "id": "ep-2026-07-06-monday-s-agenda-request-by-the-ecr-group-italy-and-denmark-195333",
