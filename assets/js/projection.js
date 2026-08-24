@@ -96,9 +96,11 @@
       let found = search(minX, maxX, minY, maxY, stepX, stepY, null, -Infinity);
       if (!found.point) continue;
 
-      // Two refinement passes around the winner.
+      // Three refinement passes around the winner: each one looks at a
+      // sixteenth of the last one's step, so the label sits on the country's
+      // true centre rather than on the nearest coarse grid line.
       let fineX = stepX, fineY = stepY;
-      for (let pass = 0; pass < 2; pass++) {
+      for (let pass = 0; pass < 3; pass++) {
         fineX /= 4;
         fineY /= 4;
         found = search(
@@ -153,7 +155,9 @@
       shapes: projected.map(function (item) {
         let d = '';
         let cx = 0, cy = 0, count = 0;
-        let largestArea = -Infinity;
+        // Starts at nothing, not at -Infinity: |area| > |-Infinity| is never
+        // true, which silently disabled every label placement below.
+        let largestArea = 0;
         let labelPoint = null;
         let inscribed = 0;
 
@@ -169,8 +173,8 @@
             const a = screen[i], b = screen[i + 1];
             area += a[0] * b[1] - b[0] * a[1];
           }
-          area = area / 2;
-          if (Math.abs(area) > Math.abs(largestArea)) {
+          area = Math.abs(area) / 2;
+          if (area > largestArea) {
             largestArea = area;
             if (item.feature.properties.member === false) {
               labelPoint = screen[0];
@@ -187,8 +191,9 @@
           code: item.feature.properties.code,
           name: item.feature.properties.name,
           member: item.feature.properties.member !== false,
+          disputed: item.feature.properties.disputed === true,
           path: d,
-          area: Math.abs(largestArea),
+          area: largestArea,
           // How much room the shape actually has for a label: Croatia's arm is
           // three pixels wide however many square pixels the country covers.
           inscribed: inscribed,

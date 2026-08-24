@@ -63,6 +63,11 @@ NEIGHBOURS = {
     "Georgia": ("GE", "Georgia"),
     "Holy See (Vatican City)": ("VA", "Vatican City"),
     "Iceland": ("IS", "Iceland"),
+    # XK is the placeholder code the Commission, the ECB and ISO use for
+    # Kosovo. Five member states do not recognise its independence, which is
+    # why the code is provisional; the map draws it because leaving a hole in
+    # the western Balkans is not neutral either.
+    "Kosovo": ("XK", "Kosovo"),
     "Liechtenstein": ("LI", "Liechtenstein"),
     "Monaco": ("MC", "Monaco"),
     "Montenegro": ("ME", "Montenegro"),
@@ -81,6 +86,10 @@ NEIGHBOURS = {
 # Neighbours are kept over a wider window than the member states, because the
 # viewBox crops them anyway and a country cut off at the frame looks right
 # where a country missing entirely looks broken.
+# Borders that are not settled are drawn as broken lines, which is the ordinary
+# cartographic way of saying so without taking a side.
+DISPUTED = {"XK"}
+
 NEIGHBOUR_BBOX = (-25.0, 30.0, 45.0, 75.0)
 NEIGHBOUR_EPSILON = 0.07   # coarser: nobody reads a coastline that is context
 NEIGHBOUR_MIN_AREA = 0.8
@@ -189,7 +198,12 @@ def build_neighbour(source):
     return {
         "type": "Feature",
         "id": code,
-        "properties": {"code": code, "name": name, "member": False},
+        "properties": {
+            "code": code,
+            "name": name,
+            "member": False,
+            **({"disputed": True} if code in DISPUTED else {}),
+        },
         "geometry": {"type": "MultiPolygon", "coordinates": kept},
     }
 

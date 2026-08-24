@@ -235,6 +235,10 @@
 
     if (eu.status === 'candidate') {
       chips.push('<span class="bloc bloc-in bloc-candidate">EU candidate since ' + eu.since + '</span>');
+    } else if (eu.status === 'applicant') {
+      // Applied, but not granted candidate status — the distinction the
+      // Commission draws, and the one Kosovo sits on.
+      chips.push('<span class="bloc bloc-in bloc-candidate">Applied to join in ' + eu.since + '</span>');
     } else if (eu.status === 'former') {
       chips.push('<span class="bloc bloc-out">Left the EU in ' + eu.since + '</span>');
     } else {

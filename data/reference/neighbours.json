@@ -1,7 +1,7 @@
 {
   "metadata": {
     "asOf": "2026",
-    "note": "The European countries outside the Union that the map draws in grey. Populations are approximate, rounded to the nearest hundred thousand, and should be refreshed against Eurostat or the national statistical office before publication. Ukraine's population is a wartime estimate and varies widely between sources.",
+    "note": "The European countries outside the Union that the map draws in grey. Populations are approximate, rounded to the nearest hundred thousand, and should be refreshed against Eurostat or the national statistical office before publication. Ukraine's population is a wartime estimate and varies widely between sources. Kosovo is drawn under the placeholder code XK, which is what the Commission, the ECB and ISO use; the entry says plainly that its status is disputed.",
     "sources": [
       "EU accession status: European Commission, enlargement policy",
       "Schengen and EEA membership: the agreements themselves",
@@ -9,59 +9,292 @@
     ]
   },
   "countries": {
-    "AL": { "name": "Albania", "capital": "Tirana", "population": 2.7,
-      "eu": { "status": "candidate", "since": 2014 }, "nato": 2009, "schengen": false, "euro": false },
-    "AD": { "name": "Andorra", "capital": "Andorra la Vella", "population": 0.08,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": "by agreement" },
-    "AM": { "name": "Armenia", "capital": "Yerevan", "population": 3.0,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": false },
-    "AZ": { "name": "Azerbaijan", "capital": "Baku", "population": 10.2,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": false },
-    "BY": { "name": "Belarus", "capital": "Minsk", "population": 9.1,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": false },
-    "BA": { "name": "Bosnia and Herzegovina", "capital": "Sarajevo", "population": 3.2,
-      "eu": { "status": "candidate", "since": 2022 }, "nato": null, "schengen": false, "euro": false },
-    "FO": { "name": "Faroe Islands", "capital": "Tórshavn", "population": 0.05,
-      "eu": { "status": "outside", "note": "Part of the Kingdom of Denmark, but outside the EU." },
-      "nato": null, "schengen": false, "euro": false },
-    "GE": { "name": "Georgia", "capital": "Tbilisi", "population": 3.7,
-      "eu": { "status": "candidate", "since": 2023 }, "nato": null, "schengen": false, "euro": false },
-    "IS": { "name": "Iceland", "capital": "Reykjavík", "population": 0.39,
-      "eu": { "status": "none", "note": "Applied in 2009; the application was shelved in 2015." },
-      "nato": 1949, "schengen": true, "euro": false, "eea": true },
-    "LI": { "name": "Liechtenstein", "capital": "Vaduz", "population": 0.04,
-      "eu": { "status": "none" }, "nato": null, "schengen": true, "euro": false, "eea": true },
-    "MD": { "name": "Moldova", "capital": "Chișinău", "population": 2.4,
-      "eu": { "status": "candidate", "since": 2022 }, "nato": null, "schengen": false, "euro": false },
-    "MC": { "name": "Monaco", "capital": "Monaco", "population": 0.04,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": "by agreement" },
-    "ME": { "name": "Montenegro", "capital": "Podgorica", "population": 0.62,
-      "eu": { "status": "candidate", "since": 2010 }, "nato": 2017, "schengen": false,
-      "euro": "unilaterally" },
-    "MK": { "name": "North Macedonia", "capital": "Skopje", "population": 1.8,
-      "eu": { "status": "candidate", "since": 2005 }, "nato": 2020, "schengen": false, "euro": false },
-    "NO": { "name": "Norway", "capital": "Oslo", "population": 5.6,
-      "eu": { "status": "none", "note": "Rejected membership in referendums in 1972 and 1994." },
-      "nato": 1949, "schengen": true, "euro": false, "eea": true },
-    "RU": { "name": "Russia", "capital": "Moscow", "population": 143.8,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": false },
-    "SM": { "name": "San Marino", "capital": "San Marino", "population": 0.03,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": "by agreement" },
-    "RS": { "name": "Serbia", "capital": "Belgrade", "population": 6.6,
-      "eu": { "status": "candidate", "since": 2012 }, "nato": null, "schengen": false, "euro": false },
-    "CH": { "name": "Switzerland", "capital": "Bern", "population": 8.9,
-      "eu": { "status": "none", "note": "Bilateral treaties rather than membership; the application was withdrawn in 2016." },
-      "nato": null, "schengen": true, "euro": false },
-    "TR": { "name": "Türkiye", "capital": "Ankara", "population": 85.4,
-      "eu": { "status": "candidate", "since": 1999, "note": "Accession talks have been at a standstill since 2018." },
-      "nato": 1952, "schengen": false, "euro": false },
-    "UA": { "name": "Ukraine", "capital": "Kyiv", "population": 37.0,
-      "eu": { "status": "candidate", "since": 2022 }, "nato": null, "schengen": false, "euro": false,
-      "populationNote": "Wartime estimate; sources differ widely." },
-    "GB": { "name": "United Kingdom", "capital": "London", "population": 68.3,
-      "eu": { "status": "former", "since": 2020, "note": "Joined in 1973 and left on 31 January 2020." },
-      "nato": 1949, "schengen": false, "euro": false },
-    "VA": { "name": "Vatican City", "capital": "Vatican City", "population": 0.001,
-      "eu": { "status": "none" }, "nato": null, "schengen": false, "euro": "by agreement" }
+    "AD": {
+      "name": "Andorra",
+      "capital": "Andorra la Vella",
+      "population": 0.08,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": "by agreement"
+    },
+    "AL": {
+      "name": "Albania",
+      "capital": "Tirana",
+      "population": 2.7,
+      "eu": {
+        "status": "candidate",
+        "since": 2014
+      },
+      "nato": 2009,
+      "schengen": false,
+      "euro": false
+    },
+    "AM": {
+      "name": "Armenia",
+      "capital": "Yerevan",
+      "population": 3.0,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "AZ": {
+      "name": "Azerbaijan",
+      "capital": "Baku",
+      "population": 10.2,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "BA": {
+      "name": "Bosnia and Herzegovina",
+      "capital": "Sarajevo",
+      "population": 3.2,
+      "eu": {
+        "status": "candidate",
+        "since": 2022
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "BY": {
+      "name": "Belarus",
+      "capital": "Minsk",
+      "population": 9.1,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "CH": {
+      "name": "Switzerland",
+      "capital": "Bern",
+      "population": 8.9,
+      "eu": {
+        "status": "none",
+        "note": "Bilateral treaties rather than membership; the application was withdrawn in 2016."
+      },
+      "nato": null,
+      "schengen": true,
+      "euro": false
+    },
+    "FO": {
+      "name": "Faroe Islands",
+      "capital": "Tórshavn",
+      "population": 0.05,
+      "eu": {
+        "status": "outside",
+        "note": "Part of the Kingdom of Denmark, but outside the EU."
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "capital": "London",
+      "population": 68.3,
+      "eu": {
+        "status": "former",
+        "since": 2020,
+        "note": "Joined in 1973 and left on 31 January 2020."
+      },
+      "nato": 1949,
+      "schengen": false,
+      "euro": false
+    },
+    "GE": {
+      "name": "Georgia",
+      "capital": "Tbilisi",
+      "population": 3.7,
+      "eu": {
+        "status": "candidate",
+        "since": 2023
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "IS": {
+      "name": "Iceland",
+      "capital": "Reykjavík",
+      "population": 0.39,
+      "eu": {
+        "status": "none",
+        "note": "Applied in 2009; the application was shelved in 2015."
+      },
+      "nato": 1949,
+      "schengen": true,
+      "euro": false,
+      "eea": true
+    },
+    "LI": {
+      "name": "Liechtenstein",
+      "capital": "Vaduz",
+      "population": 0.04,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": true,
+      "euro": false,
+      "eea": true
+    },
+    "MC": {
+      "name": "Monaco",
+      "capital": "Monaco",
+      "population": 0.04,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": "by agreement"
+    },
+    "MD": {
+      "name": "Moldova",
+      "capital": "Chișinău",
+      "population": 2.4,
+      "eu": {
+        "status": "candidate",
+        "since": 2022
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "ME": {
+      "name": "Montenegro",
+      "capital": "Podgorica",
+      "population": 0.62,
+      "eu": {
+        "status": "candidate",
+        "since": 2010
+      },
+      "nato": 2017,
+      "schengen": false,
+      "euro": "unilaterally"
+    },
+    "MK": {
+      "name": "North Macedonia",
+      "capital": "Skopje",
+      "population": 1.8,
+      "eu": {
+        "status": "candidate",
+        "since": 2005
+      },
+      "nato": 2020,
+      "schengen": false,
+      "euro": false
+    },
+    "NO": {
+      "name": "Norway",
+      "capital": "Oslo",
+      "population": 5.6,
+      "eu": {
+        "status": "none",
+        "note": "Rejected membership in referendums in 1972 and 1994."
+      },
+      "nato": 1949,
+      "schengen": true,
+      "euro": false,
+      "eea": true
+    },
+    "RS": {
+      "name": "Serbia",
+      "capital": "Belgrade",
+      "population": 6.6,
+      "eu": {
+        "status": "candidate",
+        "since": 2012
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "RU": {
+      "name": "Russia",
+      "capital": "Moscow",
+      "population": 143.8,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false
+    },
+    "SM": {
+      "name": "San Marino",
+      "capital": "San Marino",
+      "population": 0.03,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": "by agreement"
+    },
+    "TR": {
+      "name": "Türkiye",
+      "capital": "Ankara",
+      "population": 85.4,
+      "eu": {
+        "status": "candidate",
+        "since": 1999,
+        "note": "Accession talks have been at a standstill since 2018."
+      },
+      "nato": 1952,
+      "schengen": false,
+      "euro": false
+    },
+    "UA": {
+      "name": "Ukraine",
+      "capital": "Kyiv",
+      "population": 37.0,
+      "eu": {
+        "status": "candidate",
+        "since": 2022
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": false,
+      "populationNote": "Wartime estimate; sources differ widely."
+    },
+    "VA": {
+      "name": "Vatican City",
+      "capital": "Vatican City",
+      "population": 0.001,
+      "eu": {
+        "status": "none"
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": "by agreement"
+    },
+    "XK": {
+      "name": "Kosovo",
+      "capital": "Pristina",
+      "population": 1.6,
+      "eu": {
+        "status": "applicant",
+        "since": 2022,
+        "note": "Kosovo declared independence in 2008 and applied to join the Union in December 2022. Five member states — Spain, Greece, Cyprus, Romania and Slovakia — do not recognise it, so the Commission treats it as a potential candidate rather than a candidate. Its Stabilisation and Association Agreement has been in force since 2016."
+      },
+      "nato": null,
+      "schengen": false,
+      "euro": "unilaterally, since 2002",
+      "eea": false
+    }
   }
 }

@@ -6,8 +6,8 @@
   const SVG_NS = 'http://www.w3.org/2000/svg';
   const WIDTH = 760;
   const HEIGHT = 700;
-  const SMALL_AREA = 300;   // px² — below this a state needs a click target of its own
-const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will not fit inside
+  const SMALL_AREA = 150;   // px² — below this a state needs a click target of its own
+  const TIGHT_LABEL = 8;    // px of inscribed radius — below this the name will not fit inside
 
   function el(name, attrs) {
     const node = document.createElementNS(SVG_NS, name);
@@ -21,13 +21,23 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
      One that is not — Luxembourg, Slovenia, Malta — gets it just outside, on a
      short leader line, pushed clear of its neighbours' labels rather than
      stacked on top of them. */
+  const MARGIN = 12;        // px — no label is allowed nearer the frame than this
+
+  function inFrame(point) {
+    return point[0] >= MARGIN && point[0] <= WIDTH - MARGIN &&
+           point[1] >= MARGIN && point[1] <= HEIGHT - MARGIN;
+  }
+
   function placeLabels(placements, layer) {
     const centre = [WIDTH / 2, HEIGHT / 2];
 
     placements.forEach(function (item) {
       const pole = item.shape.centroid;
       if (!item.tight) {
-        item.at = [pole[0], pole[1] + 4];
+        // Dead on the pole of inaccessibility. The text is centred on that
+        // point in both directions by the stylesheet, so nothing is nudged
+        // here to compensate for a baseline.
+        item.at = [pole[0], pole[1]];
         return;
       }
       // Away from the middle of the map, so callouts point at open water or
@@ -35,28 +45,55 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       const dx = pole[0] - centre[0];
       const dy = pole[1] - centre[1];
       const length = Math.hypot(dx, dy) || 1;
-      const reach = Math.max(item.shape.inscribed, 3) + 13;
-      item.at = [pole[0] + (dx / length) * reach, pole[1] + (dy / length) * reach];
+      const reach = Math.max(item.shape.inscribed, 3) + 10;
+      const out = [pole[0] + (dx / length) * reach, pole[1] + (dy / length) * reach];
+      // Malta sits on the southern edge, so its outward callout would land off
+      // the map. Where that happens the label goes the other way instead.
+      item.at = inFrame(out)
+        ? out
+        : [pole[0] - (dx / length) * reach, pole[1] - (dy / length) * reach];
     });
 
     // Three passes of gentle separation: enough to unpick the Benelux, not
-    // enough to send a label somewhere it stops meaning anything.
-    const tight = placements.filter(function (item) { return item.tight; });
+    // enough to send a label somewhere it stops meaning anything. A label
+    // sitting inside its own country may shuffle a few pixels to break contact
+    // with a neighbour — Slovenia against Croatia — but never far enough to
+    // leave the country it names, which is what its inscribed radius allows.
+    placements.forEach(function (item) {
+      item.slack = item.tight ? Infinity : Math.max(0, Math.min(4, item.shape.inscribed - 6));
+    });
+
     for (let pass = 0; pass < 3; pass++) {
-      tight.forEach(function (item) {
+      placements.forEach(function (item) {
+        if (!item.slack) return;
         placements.forEach(function (other) {
           if (other === item) return;
           const dx = item.at[0] - other.at[0];
           const dy = item.at[1] - other.at[1];
           const distance = Math.hypot(dx, dy);
-          const wanted = 17;
+          const wanted = 16;
           if (distance >= wanted || distance === 0) return;
           const push = (wanted - distance) / 2;
           item.at[0] += (dx / distance) * push;
           item.at[1] += (dy / distance) * push;
+
+          if (item.slack === Infinity) return;
+          const pole = item.shape.centroid;
+          const driftX = item.at[0] - pole[0];
+          const driftY = item.at[1] - pole[1];
+          const drift = Math.hypot(driftX, driftY);
+          if (drift <= item.slack) return;
+          item.at[0] = pole[0] + (driftX / drift) * item.slack;
+          item.at[1] = pole[1] + (driftY / drift) * item.slack;
         });
       });
     }
+
+    // Whatever the passes did, nothing hangs off the edge of the frame.
+    placements.forEach(function (item) {
+      item.at[0] = Math.min(WIDTH - MARGIN, Math.max(MARGIN, item.at[0]));
+      item.at[1] = Math.min(HEIGHT - MARGIN, Math.max(MARGIN, item.at[1]));
+    });
 
     placements.forEach(function (item) {
       item.label.setAttribute('x', item.at[0].toFixed(1));
@@ -69,8 +106,8 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       const length = Math.hypot(dx, dy) || 1;
       // Stop the line short of both ends: at the shape, and under the text.
       const from = [pole[0] + (dx / length) * 2, pole[1] + (dy / length) * 2];
-      const to = [item.at[0] - (dx / length) * 7, item.at[1] - (dy / length) * 7];
-      if (length < 12) return;
+      const to = [item.at[0] - (dx / length) * 9, item.at[1] - (dy / length) * 9];
+      if (length < 13) return;
       const leader = el('line', {
         x1: from[0].toFixed(1), y1: from[1].toFixed(1),
         x2: to[0].toFixed(1), y2: to[1].toFixed(1),
@@ -83,7 +120,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
   function EUMap(container, geo, handlers) {
     this.container = container;
     this.handlers = handlers || {};
-    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 18);
+    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12);
     this.shapes = {};
     this.selected = null;
     this.hovered = null;
@@ -114,7 +151,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     this.layout.shapes.forEach(function (shape) {
       if (!shape.member) {
         const outside = el('g', {
-          class: 'country outside',
+          class: 'country outside' + (shape.disputed ? ' outside-disputed' : ''),
           tabindex: '0',
           role: 'button',
           'data-code': shape.code,
