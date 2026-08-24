@@ -373,14 +373,6 @@ main {
   stroke-linejoin: round;
   transition: fill .15s ease;
 }
-/* A boundary that is not settled is drawn broken — the ordinary cartographic
-   way of saying so. Kosovo is the only one on this map. */
-.outside-disputed .context-shape {
-  stroke: var(--ink-faint);
-  stroke-width: .9;
-  stroke-dasharray: 3 2.5;
-}
-
 .outside { cursor: pointer; }
 .outside:hover .context-shape { fill: color-mix(in srgb, var(--context) 80%, var(--ink)); }
 .outside:focus { outline: none; }

@@ -191,7 +191,6 @@
           code: item.feature.properties.code,
           name: item.feature.properties.name,
           member: item.feature.properties.member !== false,
-          disputed: item.feature.properties.disputed === true,
           path: d,
           area: largestArea,
           // How much room the shape actually has for a label: Croatia's arm is

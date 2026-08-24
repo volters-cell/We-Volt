@@ -151,7 +151,7 @@
     this.layout.shapes.forEach(function (shape) {
       if (!shape.member) {
         const outside = el('g', {
-          class: 'country outside' + (shape.disputed ? ' outside-disputed' : ''),
+          class: 'country outside',
           tabindex: '0',
           role: 'button',
           'data-code': shape.code,
