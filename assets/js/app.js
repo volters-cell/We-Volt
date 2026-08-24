@@ -29,8 +29,7 @@
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
-   'panel-empty', 'panel-body', 'header-count',
-   'header-plenary', 'search-input', 'search-clear', 'search-status',
+   'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-clear', 'search-status',
    'mep-results', 'decision-section', 'back-to-votes', 'session-list',
    'roll', 'roll-bar', 'roll-summary', 'roll-count', 'roll-body', 'roll-name',
    'roll-group', 'roll-country', 'roll-position', 'roll-reset', 'member-section', 'member-name', 'member-group',
@@ -1243,11 +1242,6 @@
         totals[item.body] = (totals[item.body] || 0) + 1;
         return totals;
       }, {});
-      dom['header-count'].textContent = index.decisions.length.toLocaleString('en-GB') +
-        ' roll-call votes' +
-        (index.metadata && index.metadata.updated
-          ? ' · updated ' + Data.formatDate(index.metadata.updated) : '');
-
       // Institutions with nothing in them are not offered as filters: an empty
       // shelf reads as a broken site rather than an honest gap.
       Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {

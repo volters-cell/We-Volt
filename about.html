@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EU Tracker — about the data</title>
-  <meta name="description" content="Where EU Tracker's roll-call votes come from, how they are processed, what is missing, and how to contribute.">
+  <meta name="description" content="Where EU Tracker's roll-call votes come from, how complete they are, how they are processed, and how to check them.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +28,8 @@
 
     <p class="prose-lead">EU Tracker holds every main roll-call vote the European Parliament has
       taken since its term began on 16 July 2024: how every member voted, by name, by political
-      group and by member state. The chamber has 720 seats. This page says where that comes from, what has been
-      done to it, and what is still missing.</p>
+      group and by member state. The chamber has 720 seats. This page says where that comes from,
+      how complete it is, and what has been done to it.</p>
 
     <h2>Where the votes come from</h2>
     <p>When the Parliament votes by roll call, it records who voted for, who voted against
@@ -77,17 +77,6 @@
       hundreds, almost all procedural, and importing them would bury the decisions a reader
       came for. The importer can take them on request.</p>
 
-    <h2>What is still missing from the votes themselves</h2>
-    <ul>
-      <li><strong>Who was absent</strong>, for 115 of the 718 records. The Parliament's portal
-        publishes who voted for, against and abstained, and does not publish who did not vote.
-        Where a record carries absences — 603 of them, 47,684 entries — they come from the
-        fuller archive this project started from.</li>
-      <li><strong>National parties.</strong> A member's country and political group are here;
-        the party they were elected for is not. The portal records it as an organisation
-        number rather than a name, and resolving those is the next piece of work.</li>
-    </ul>
-
     <h2>What has been done to it</h2>
     <ul>
       <li><strong>Nothing has been interpreted.</strong> A member state is coloured by where most
@@ -102,27 +91,6 @@
       <li><strong>Every record is checked before it is published.</strong> A validator refuses
         records whose ballots name members the directory does not know, whose group totals do not
         add up, or whose sources are missing.</li>
-    </ul>
-
-    <h2>What is missing</h2>
-    <p>Stated plainly, because a project that hides its gaps cannot be checked:</p>
-    <ul>
-      <li><strong>The Council and the Commission.</strong> Neither publishes votes in a
-        machine-readable form. Council results exist as documents in a public register; reading
-        them is a scraping problem nobody has solved, and until it is, this site is Parliament
-        only.</li>
-      <li><strong>Plain-language summaries.</strong> Imported records carry the Parliament's own
-        procedural title and nothing else. Turning "Décision d'engager des négociations
-        interinstitutionnelles" into a sentence a reader recognises is editorial work.</li>
-      <li><strong>The press layer.</strong> How a vote was reported in each member state is the
-        part no institution collects, and the reason this project exists. It needs reporters in
-        each country, working to
-        <a href="docs/CONTRIBUTING-DATA.md">a written standard</a> on how coverage is chosen and
-        tagged.</li>
-      <li><strong>National parties.</strong> Members are recorded with their European political
-        group but not yet with their party at home, which matters for reading a delegation.</li>
-      <li><strong>Languages.</strong> The interface is English only. Interface strings are few
-        and static; the harder half is summaries in 24 languages.</li>
     </ul>
 
     <h2>How to check it, and how to correct it</h2>
