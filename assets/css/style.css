@@ -369,8 +369,13 @@ main {
   stroke: var(--context-line);
   stroke-width: .6;
   stroke-linejoin: round;
-  pointer-events: none;
+  transition: fill .15s ease;
 }
+.outside { cursor: pointer; }
+.outside:hover .context-shape { fill: color-mix(in srgb, var(--context) 80%, var(--ink)); }
+.outside:focus { outline: none; }
+.outside:focus-visible .context-shape { stroke: var(--focus); stroke-width: 2; }
+.outside.is-selected .context-shape { stroke: var(--ink-soft); stroke-width: 1.2; }
 
 .country { cursor: pointer; }
 .country-shape { stroke: var(--surface); stroke-width: .8; stroke-linejoin: round; fill: var(--vote-na); transition: fill .15s ease; }
@@ -385,7 +390,8 @@ main {
 /* White with a dark halo: the same label has to read on a dark green fill and
    on the pale grey of a country with nothing recorded. */
 .country-label { font-size: 12px; font-weight: 700; fill: #fff; text-anchor: middle; paint-order: stroke; stroke: rgba(0,0,0,.6); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
-.country-label-small { font-size: 11px; fill: var(--ink); stroke: var(--surface); }
+.country-label-small { font-size: 11px; fill: var(--ink); stroke: var(--surface); stroke-width: 3.5px; }
+.label-leader { stroke: var(--ink-faint); stroke-width: .7; opacity: .65; }
 
 /* Vote layer */
 .layer-vote .country-shape, .layer-vote .country-dot { fill: var(--vote-na); }
@@ -428,7 +434,7 @@ main {
 .map-tip strong { display: block; }
 
 .legend { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .9rem; }
-.legend h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 0 0 .5rem; }
+
 .legend ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .35rem 1rem; font-size: .82rem; color: var(--ink-soft); }
 .legend li { display: flex; align-items: center; gap: .4rem; }
 .swatch { width: 15px; height: 15px; border-radius: 4px; border: 1px solid var(--line-strong); background: var(--vote-na); display: inline-block; }
@@ -593,6 +599,7 @@ span.bloc { cursor: default; }
 .bloc-out { background: transparent; color: var(--ink-faint); border-color: var(--line-strong); border-style: dashed; }
 .bloc-in.bloc-euro { background: color-mix(in srgb, var(--vote-for) 12%, transparent); color: var(--vote-for); border-color: color-mix(in srgb, var(--vote-for) 32%, transparent); }
 .bloc-in.bloc-nato { background: color-mix(in srgb, var(--press-mixed) 14%, transparent); color: var(--press-mixed); border-color: color-mix(in srgb, var(--press-mixed) 32%, transparent); }
+.bloc-in.bloc-candidate { background: color-mix(in srgb, var(--eu-gold) 24%, transparent); color: var(--ink); border-color: color-mix(in srgb, var(--eu-gold) 60%, transparent); }
 button.bloc:hover { filter: brightness(.94); }
 button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); border-style: solid; }
 .bloc-notes { margin: .45rem 0 0; font-size: .78rem; color: var(--ink-faint); display: grid; gap: .15rem; }

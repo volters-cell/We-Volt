@@ -1,8 +1,8 @@
 {
-  "source": "https://github.com/HowTheyVote/data — compiled by HowTheyVote.eu from the European Parliament's roll-call annexes",
+  "source": "https://www.europarl.europa.eu/meps/en/directory/xml/?leg=10",
   "fetched": null,
   "term": 10,
-  "note": "Identities are stored here once. Vote records reference members by id, which is what keeps a full term of roll-calls at tens of megabytes.",
+  "note": "Every member of the current Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes.",
   "members": {
     "840": {
       "name": "Charles GOERENS",

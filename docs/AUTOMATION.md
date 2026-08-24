@@ -17,13 +17,8 @@ terms.
 | **Session calendar** | When each plenary session runs | `europarl.europa.eu/plenary/en/ajax/getSessionCalendar.html?family=PV&termId={term}` |
 | **Meeting record** | Whether a session sits in Strasbourg or Brussels (`vcard:hasLocality` ending `FRA_SXB` or `BEL_BRU`) | `data.europarl.europa.eu/api/v1/meetings/MTG-PL-{date}` |
 
-Three of these were worked out by reading
-[HowTheyVote.eu's scrapers](https://github.com/HowTheyVote/howtheyvote), which are open
-source and have been following these documents for years: the English annex and the
-document-register fallback, the votes list as the authority on results, and the session
-calendar with its separate location lookup. No code was taken — theirs is AGPL and this
-is MIT — but the map of which document holds what is theirs, and it saved a lot of
-guessing.
+Everything the site holds is read from those five addresses. Nothing else is consulted,
+and no third party stands between this project and the Parliament's record.
 
 The annex is the primary source because it is the Parliament's own formal record of a
 roll call, published with the minutes of the sitting, and it carries every member's

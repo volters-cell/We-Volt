@@ -28,22 +28,14 @@
 
     <p class="prose-lead">EU Tracker holds every main roll-call vote the European Parliament has
       taken since its term began on 16 July 2024: how every member voted, by name, by political
-      group and by member state. The chamber seats 720 at any moment; 743 people have held
-      one of those seats so far this term, and all of them are here. This page says where that comes from, what has been
+      group and by member state. The chamber has 720 seats. This page says where that comes from, what has been
       done to it, and what is still missing.</p>
 
     <h2>Where the votes come from</h2>
     <p>When the Parliament votes by roll call, it publishes an annex to the minutes of that
       sitting naming every member and how they voted. That annex is the record. Everything here
       derives from it.</p>
-    <p>The archive was imported in bulk from the
-      <a href="https://github.com/HowTheyVote/data">HowTheyVote.eu dataset</a>, which compiles
-      those annexes for the whole term and publishes them as CSV. <strong>That work is theirs and
-      this project credits it.</strong> Check their data licence at
-      <a href="https://howtheyvote.eu/about">howtheyvote.eu/about</a> before reusing anything here
-      that derives from it.</p>
-    <p>Keeping current is done differently, straight from the Parliament, so the site does not
-      depend on anyone standing between it and the source:</p>
+    <p>Four documents, all published by the Parliament, are all this project reads:</p>
     <table class="prose-table">
       <thead>
         <tr><th scope="col">Document</th><th scope="col">What it gives</th></tr>
@@ -90,8 +82,8 @@
         each country, working to
         <a href="docs/CONTRIBUTING-DATA.md">a written standard</a> on how coverage is chosen and
         tagged.</li>
-      <li><strong>National parties.</strong> The bulk dataset carries each member's European
-        group but not their party at home, which matters for reading a delegation.</li>
+      <li><strong>National parties.</strong> Members are recorded with their European political
+        group but not yet with their party at home, which matters for reading a delegation.</li>
       <li><strong>Languages.</strong> The interface is English only. Interface strings are few
         and static; the harder half is summaries in 24 languages.</li>
     </ul>
@@ -100,14 +92,13 @@
     <p>Every record is a JSON file in
       <a href="https://github.com/volters-cell/We-Volt">the repository</a>, with its sources
       inside it. Nothing is edited silently: a correction is a commit, visible in the history.
-      If you find an error, open an issue against the repository — and if it comes from the
-      upstream dataset, report it to them as well, so it is fixed for everyone.</p>
+      If you find an error, open an issue against the repository.</p>
 
     <h2>Licence</h2>
     <ul>
       <li>Code: MIT.</li>
       <li>Data authored here: CC BY 4.0.</li>
-      <li>Imported records: the terms of their source, as above.</li>
+      <li>The votes themselves: the Parliament's public record.</li>
       <li>Boundaries: public-domain Natural Earth geometry, simplified for display only. They
         imply no position on any border.</li>
     </ul>

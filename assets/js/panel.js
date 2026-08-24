@@ -227,6 +227,59 @@
     node.hidden = false;
   }
 
+  /* A country the map draws in grey. It has no vote in these records, so what
+     is worth saying is who they are and where they stand with the Union. */
+  function renderOutside(node, code, country) {
+    const eu = country.eu || {};
+    const chips = [];
+
+    if (eu.status === 'candidate') {
+      chips.push('<span class="bloc bloc-in bloc-candidate">EU candidate since ' + eu.since + '</span>');
+    } else if (eu.status === 'former') {
+      chips.push('<span class="bloc bloc-out">Left the EU in ' + eu.since + '</span>');
+    } else {
+      chips.push('<span class="bloc bloc-out">Not in the EU</span>');
+    }
+    if (country.eea) chips.push('<span class="bloc bloc-in">European Economic Area</span>');
+    chips.push(country.schengen
+      ? '<span class="bloc bloc-in">Schengen</span>'
+      : '<span class="bloc bloc-out">Outside Schengen</span>');
+    chips.push(country.nato
+      ? '<span class="bloc bloc-in bloc-nato">NATO since ' + country.nato + '</span>'
+      : '<span class="bloc bloc-out">Not in NATO</span>');
+    if (country.euro) {
+      chips.push('<span class="bloc bloc-in bloc-euro">Uses the euro ' +
+        escapeHTML(country.euro === true ? '' : country.euro) + '</span>');
+    }
+
+    const people = country.population >= 1
+      ? country.population.toFixed(1) + ' million people'
+      : Math.round(country.population * 1000) + ' thousand people';
+
+    node.innerHTML =
+      '<header class="panel-head">' +
+        '<button type="button" class="panel-close" aria-label="Close ' +
+          escapeHTML(country.name) + '">Close</button>' +
+        '<p class="panel-eyebrow">Outside the Union</p>' +
+        '<h2 id="panel-title">' + escapeHTML(country.name) + '</h2>' +
+        '<p class="panel-facts">' + escapeHTML(people) + ' · capital ' +
+          escapeHTML(country.capital) + '</p>' +
+        '<div class="blocs">' + chips.join('') + '</div>' +
+        (eu.note || country.populationNote
+          ? '<p class="bloc-notes">' +
+            (eu.note ? '<span class="bloc-note">' + escapeHTML(eu.note) + '</span>' : '') +
+            (country.populationNote
+              ? '<span class="bloc-note">Population: ' + escapeHTML(country.populationNote) + '</span>'
+              : '') + '</p>'
+          : '') +
+      '</header>' +
+      '<section class="card"><p class="neutral-note">' + escapeHTML(country.name) +
+        ' sends no members to the European Parliament, so it casts no votes in these ' +
+        'records. It is drawn here because what the Union decides rarely stops at its ' +
+        'own border.</p></section>';
+    node.hidden = false;
+  }
+
   function render(node, decision, state, permalink) {
     const country = decision.countries[state.code] || {};
     node.innerHTML =
@@ -249,5 +302,6 @@
     node.hidden = false;
   }
 
-  global.Panel = { render: render, renderProfile: renderProfile, setStates: setStates, VOTE_LABEL: VOTE_LABEL, FRAMING_LABEL: FRAMING_LABEL, escapeHTML: escapeHTML };
+  global.Panel = { render: render, renderProfile: renderProfile, renderOutside: renderOutside,
+    setStates: setStates, VOTE_LABEL: VOTE_LABEL, FRAMING_LABEL: FRAMING_LABEL, escapeHTML: escapeHTML };
 })(window);

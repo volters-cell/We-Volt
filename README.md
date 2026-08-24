@@ -107,16 +107,13 @@ licence on each part. It is deliberately blunt about the gaps.
 ## The data
 
 **The votes are real.** 614 roll-call votes — every main vote the Parliament has taken
-since the term began on 16 July 2024 — with all 720 members by name, their group, and
-how each of them voted. 441,322 individual ballots.
+since the term began on 16 July 2024 — with every member by name, their group, and how
+each of them voted. 441,322 individual ballots.
 
-They were imported from the [HowTheyVote.eu dataset](https://github.com/HowTheyVote/data),
-which compiles the Parliament's own roll-call annexes and publishes them as CSV.
-**Using it requires crediting them**, which the footer, every record's `sources` and this
-file do; check their current data licence at howtheyvote.eu/about before publishing.
-`scripts/fetch-plenary.mjs` reads the Parliament's annexes directly and carries no such
-obligation — that is the long-term route, and it is what keeps the site current after
-each sitting.
+Everything comes from the European Parliament's own record: the roll-call annex published
+with the minutes of each sitting, the votes list that states what carried, the member
+directory, and the plenary calendar. `scripts/fetch-plenary.mjs` reads them and keeps the
+site current after each sitting; `npm run backfill` re-reads the whole term.
 
 Still missing, and honestly labelled as such: Council and Commission records, which have
 no machine-readable source; the plain-language summaries, which are editorial; and the

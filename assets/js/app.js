@@ -12,6 +12,7 @@
 
   let calendar = { sessions: [] };
   let directory = null;
+  let outside = null;          // the countries the map draws in grey
   let memberIndex = null;      // every MEP, for search
   let manyBodies = false;      // is there more than one institution to filter between?
   let memberCache = {};        // their voting records, fetched on demand
@@ -523,7 +524,7 @@
     let html = '';
 
     if (!decision) {
-      dom.legend.innerHTML = '<h3>Legend</h3><ul>' +
+      dom.legend.innerHTML = '<ul>' +
         legendRow('layer-neutral', 'Member state of the European Union') +
         '<li><span class="swatch swatch-context"></span>Europe outside the Union</li>' +
         '</ul><p class="legend-hint">Pick a vote to colour the map by how each member ' +
@@ -559,7 +560,7 @@
     }
 
     const clickable = html.indexOf('data-isolate') !== -1;
-    dom.legend.innerHTML = '<h3>Legend</h3><ul>' + html + '</ul>' +
+    dom.legend.innerHTML = '<ul>' + html + '</ul>' +
       (state.isolate
         ? '<p class="legend-hint">' + esc(isolateSummary()) + '</p>'
         : (clickable
@@ -956,6 +957,20 @@
 
   /* ---------------------------------------------------------------- render */
 
+  /* Clicking a grey country opens its profile, in the same place a member
+     state's record appears. */
+  function selectOutside(code) {
+    const country = outside && outside[code];
+    if (!country) return;
+    if (map) map.setSelected(code);
+    state.country = null;
+    dom['panel-empty'].hidden = true;
+    document.getElementById('country-panel').hidden = false;
+    Panel.renderOutside(dom['panel-body'], code, country);
+    const narrow = window.matchMedia('(max-width: 62rem)').matches;
+    if (narrow) dom['panel-body'].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function selectCountry(code, options) {
     state.country = code && statesByCode[code] ? code : null;
     if (map) map.setSelected(state.country);
@@ -1135,7 +1150,8 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex, plenary, members, people] = await Promise.all([
+      const [reference, geo, decisionIndex, plenary, members, people, neighbours] =
+        await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
         Data.getJSON('data/decisions/index.json'),
@@ -1145,11 +1161,13 @@
         // Identities live here, once, rather than inside every vote record.
         Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
         // Every member, for search; their voting records load one at a time.
-        Data.getJSON('data/meps/index.json').catch(function () { return null; })
+        Data.getJSON('data/meps/index.json').catch(function () { return null; }),
+        Data.getJSON('data/reference/neighbours.json').catch(function () { return null; })
       ]);
       calendar = plenary || { sessions: [] };
       directory = members && members.members ? members.members : null;
       memberIndex = (people && people.members) || null;
+      outside = (neighbours && neighbours.countries) || {};
 
       states = reference.states;
       statesByCode = {};
@@ -1162,9 +1180,9 @@
         return totals;
       }, {});
       dom['header-count'].textContent = index.decisions.length.toLocaleString('en-GB') +
-        ' roll-call votes · ' + (memberIndex ? memberIndex.length + ' members · ' : '') +
+        ' roll-call votes' +
         (index.metadata && index.metadata.updated
-          ? 'updated ' + Data.formatDate(index.metadata.updated) : '');
+          ? ' · updated ' + Data.formatDate(index.metadata.updated) : '');
 
       // Institutions with nothing in them are not offered as filters: an empty
       // shelf reads as a broken site rather than an honest gap.
@@ -1174,15 +1192,11 @@
       });
       manyBodies = Object.keys(counts).filter(function (key) { return counts[key]; }).length > 1;
 
-      const ballots = index.decisions.reduce(function (sum, item) {
-        return sum + (item.mepCount || 0);
-      }, 0);
-      // 743, not 720: seats are 720 at any moment, but members come and go
-      // through a term and every one of them is in here.
+      // Two numbers, both facts: the votes held, and the seats in the chamber.
+      const seats = states.reduce(function (sum, item) { return sum + item.seats; }, 0);
       document.getElementById('intro-stats').textContent =
-        index.decisions.length.toLocaleString('en-GB') + ' votes · ' +
-        (memberIndex ? memberIndex.length + ' members who have sat this term · ' : '') +
-        ballots.toLocaleString('en-GB') + ' individual ballots';
+        index.decisions.length.toLocaleString('en-GB') + ' votes · ' + seats + ' seats · ' +
+        'since 16 July 2024';
 
       index.decisions.forEach(function (item) {
         if (item.sourceId) bySourceId[item.sourceId] = item;
@@ -1194,7 +1208,8 @@
       map = new EUMap(dom.map, geo, {
         onSelect: function (code) { selectCountry(code); },
         onDeselect: function () { selectCountry(null); },
-        onHover: function (code) { setHovered(code); }
+        onHover: function (code) { setHovered(code); },
+        onOutside: function (code) { selectOutside(code); }
       });
 
       // A shared link opens what it names. Then the hash is cleared, so

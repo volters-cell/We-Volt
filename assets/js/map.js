@@ -17,6 +17,69 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     return node;
   }
 
+  /* Labels. A country wide enough to hold its own code gets it in the middle.
+     One that is not — Luxembourg, Slovenia, Malta — gets it just outside, on a
+     short leader line, pushed clear of its neighbours' labels rather than
+     stacked on top of them. */
+  function placeLabels(placements, layer) {
+    const centre = [WIDTH / 2, HEIGHT / 2];
+
+    placements.forEach(function (item) {
+      const pole = item.shape.centroid;
+      if (!item.tight) {
+        item.at = [pole[0], pole[1] + 4];
+        return;
+      }
+      // Away from the middle of the map, so callouts point at open water or
+      // at the frame rather than back across the Union.
+      const dx = pole[0] - centre[0];
+      const dy = pole[1] - centre[1];
+      const length = Math.hypot(dx, dy) || 1;
+      const reach = Math.max(item.shape.inscribed, 3) + 13;
+      item.at = [pole[0] + (dx / length) * reach, pole[1] + (dy / length) * reach];
+    });
+
+    // Three passes of gentle separation: enough to unpick the Benelux, not
+    // enough to send a label somewhere it stops meaning anything.
+    const tight = placements.filter(function (item) { return item.tight; });
+    for (let pass = 0; pass < 3; pass++) {
+      tight.forEach(function (item) {
+        placements.forEach(function (other) {
+          if (other === item) return;
+          const dx = item.at[0] - other.at[0];
+          const dy = item.at[1] - other.at[1];
+          const distance = Math.hypot(dx, dy);
+          const wanted = 17;
+          if (distance >= wanted || distance === 0) return;
+          const push = (wanted - distance) / 2;
+          item.at[0] += (dx / distance) * push;
+          item.at[1] += (dy / distance) * push;
+        });
+      });
+    }
+
+    placements.forEach(function (item) {
+      item.label.setAttribute('x', item.at[0].toFixed(1));
+      item.label.setAttribute('y', item.at[1].toFixed(1));
+
+      if (!item.tight) return;
+      const pole = item.shape.centroid;
+      const dx = item.at[0] - pole[0];
+      const dy = item.at[1] - pole[1];
+      const length = Math.hypot(dx, dy) || 1;
+      // Stop the line short of both ends: at the shape, and under the text.
+      const from = [pole[0] + (dx / length) * 2, pole[1] + (dy / length) * 2];
+      const to = [item.at[0] - (dx / length) * 7, item.at[1] - (dy / length) * 7];
+      if (length < 12) return;
+      const leader = el('line', {
+        x1: from[0].toFixed(1), y1: from[1].toFixed(1),
+        x2: to[0].toFixed(1), y2: to[1].toFixed(1),
+        class: 'label-leader'
+      });
+      layer.insertBefore(leader, layer.firstChild);
+    });
+  }
+
   function EUMap(container, geo, handlers) {
     this.container = container;
     this.handlers = handlers || {};
@@ -40,15 +103,39 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       'aria-label': 'Member states of the European Union'
     });
 
-    // Neighbours are context: grey, unlabelled, and invisible to the pointer,
-    // the keyboard and the screen reader alike.
-    const contextLayer = el('g', { class: 'context', 'aria-hidden': 'true' });
+    // Neighbours stay visually secondary but are no longer inert: a reader
+    // looking at Serbia or Ukraine should be able to click it.
+    const contextLayer = el('g', { class: 'context' });
     const shapeLayer = el('g', { class: 'shapes' });
     const labelLayer = el('g', { class: 'labels', 'aria-hidden': 'true' });
 
+    const placements = [];
+
     this.layout.shapes.forEach(function (shape) {
       if (!shape.member) {
-        contextLayer.appendChild(el('path', { d: shape.path, class: 'context-shape' }));
+        const outside = el('g', {
+          class: 'country outside',
+          tabindex: '0',
+          role: 'button',
+          'data-code': shape.code,
+          'aria-label': shape.name
+        });
+        outside.appendChild(el('path', { d: shape.path, class: 'context-shape' }));
+        outside.addEventListener('click', function () {
+          if (self.handlers.onOutside) self.handlers.onOutside(shape.code);
+        });
+        outside.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          if (self.handlers.onOutside) self.handlers.onOutside(shape.code);
+        });
+        outside.addEventListener('mouseenter', function (event) {
+          self.showTip(shape, event, shape.name);
+        });
+        outside.addEventListener('mousemove', function (event) { self.moveTip(event); });
+        outside.addEventListener('mouseleave', function () { self.hideTip(); });
+        contextLayer.appendChild(outside);
+        self.shapes[shape.code] = { shape: shape, group: outside };
         return;
       }
       const small = shape.area < SMALL_AREA;
@@ -82,13 +169,11 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
         }));
       }
 
-      const label = el('text', {
-        x: shape.centroid[0].toFixed(1),
-        y: (shape.centroid[1] + (tight ? -11 : 4)).toFixed(1),
-        class: 'country-label' + (tight ? ' country-label-small' : '')
-      });
+      // Placed properly below, once every label is known.
+      const label = el('text', { class: 'country-label' + (tight ? ' country-label-small' : '') });
       label.textContent = shape.code;
       labelLayer.appendChild(label);
+      placements.push({ shape: shape, label: label, tight: tight, layer: labelLayer });
 
       group.addEventListener('click', function () { self.select(shape.code); });
       group.addEventListener('keydown', function (event) { self.onKeydown(event, shape); });
@@ -107,6 +192,8 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
       shapeLayer.appendChild(group);
       self.shapes[shape.code] = { shape: shape, group: group, label: label };
     });
+
+    placeLabels(placements, labelLayer);
 
     svg.appendChild(contextLayer);
     svg.appendChild(shapeLayer);
@@ -154,7 +241,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     let best = null;
     let bestDistance = Infinity;
     Object.keys(this.shapes).forEach(function (code) {
-      if (code === shape.code) return;
+      if (code === shape.code || !this.shapes[code].shape.member) return;
       const to = this.shapes[code].shape.centroid;
       const dx = to[0] - from[0];
       const dy = to[1] - from[1];
@@ -191,10 +278,9 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     }
   };
 
-  EUMap.prototype.showTip = function (shape, event) {
-    if (!this.tipText) return;
-    const text = this.tipText(shape.code);
-    if (!text) return;
+  EUMap.prototype.showTip = function (shape, event, plain) {
+    const text = plain !== undefined ? '' : (this.tipText ? this.tipText(shape.code) : '');
+    if (plain === undefined && !text) return;
     this.tip.innerHTML = '<strong>' + shape.name + '</strong>' + text;
     this.tip.hidden = false;
     if (event) {
@@ -233,6 +319,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
     this.classFor = classFor;
     Object.keys(this.shapes).forEach(function (code) {
       const entry = this.shapes[code];
+      if (!entry.shape.member) return;
       const wanted = classFor(code);
       entry.group.setAttribute('class', [
         'country',
@@ -262,6 +349,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
   EUMap.prototype.setDimmed = function (predicate) {
     this.dimmed = {};
     Object.keys(this.shapes).forEach(function (code) {
+      if (!this.shapes[code].shape.member) return;
       const dim = predicate ? !predicate(code) : false;
       this.dimmed[code] = dim;
       this.shapes[code].group.classList.toggle('is-dimmed', dim);
@@ -284,6 +372,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
 
     this.svg.setAttribute('class', 'eu-map is-revealing ' + resultClass);
     Object.keys(this.shapes).forEach(function (code) {
+      if (!self.shapes[code].shape.member) return;
       self.revealed[code] = false;
       self.shapes[code].group.classList.remove('revealed');
     }, this);
@@ -313,6 +402,7 @@ const TIGHT_LABEL = 9;    // px of inscribed radius — below this the name will
   EUMap.prototype.revealAll = function () {
     this.svg.setAttribute('class', 'eu-map');
     Object.keys(this.shapes).forEach(function (code) {
+      if (!this.shapes[code].shape.member) return;
       this.revealed[code] = true;
       this.shapes[code].group.classList.add('revealed');
     }, this);
