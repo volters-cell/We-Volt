@@ -1,8 +1,8 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": null,
+  "fetched": "2026-08-24",
   "term": 10,
-  "note": "Every member of this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes. Refreshed by scripts/fetch-plenary.mjs --refresh-meps.",
+  "note": "Every member who has held a seat in this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes. Members marked former have left the House; the portal no longer states their group.",
   "members": {
     "840": {
       "name": "Charles GOERENS",
@@ -170,7 +170,8 @@
       "name": "Daniel CASPARY",
       "country": "DE",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "28223": {
       "name": "Andreas SCHWAB",
@@ -416,7 +417,8 @@
       "name": "Bas EICKHOUT",
       "country": "NL",
       "group": "Greens/EFA",
-      "party": null
+      "party": null,
+      "former": true
     },
     "96752": {
       "name": "Martin HÄUSLING",
@@ -662,7 +664,8 @@
       "name": "Ondřej KOVAŘÍK",
       "country": "CZ",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "119435": {
       "name": "Davor Ivo STIER",
@@ -728,7 +731,8 @@
       "name": "Henna VIRKKUNEN",
       "country": "FI",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "124736": {
       "name": "Merja KYLLÖNEN",
@@ -860,7 +864,8 @@
       "name": "Anders VISTISEN",
       "country": "DK",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "124877": {
       "name": "Jadwiga WIŚNIEWSKA",
@@ -1136,7 +1141,8 @@
       "name": "Christophe HANSEN",
       "country": "LU",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197391": {
       "name": "Heléne FRITZON",
@@ -1256,7 +1262,8 @@
       "name": "Christine SCHNEIDER",
       "country": "DE",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197425": {
       "name": "Ralf SEEKATZ",
@@ -1316,7 +1323,8 @@
       "name": "Predrag Fred MATIĆ",
       "country": "HR",
       "group": "S&D",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197443": {
       "name": "Andreas GLÜCK",
@@ -1424,7 +1432,8 @@
       "name": "Maximilian KRAH",
       "country": "DE",
       "group": "NI",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197490": {
       "name": "Magdalena ADAMOWICZ",
@@ -1484,7 +1493,8 @@
       "name": "Marie-Pierre VEDRENNE",
       "country": "FR",
       "group": "Renew",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197503": {
       "name": "David CORMAND",
@@ -1532,7 +1542,8 @@
       "name": "Martin HLAVÁČEK",
       "country": "CZ",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197528": {
       "name": "Ondřej KNOTEK",
@@ -1940,7 +1951,8 @@
       "name": "Tom BERENDSEN",
       "country": "NL",
       "group": "NI",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197780": {
       "name": "Bart GROOTHUIS",
@@ -2072,7 +2084,8 @@
       "name": "Andrius KUBILIUS",
       "country": "LT",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "197845": {
       "name": "Tsvetelina PENKOVA",
@@ -2576,7 +2589,8 @@
       "name": "Filip TUREK",
       "country": "CZ",
       "group": "NI",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256851": {
       "name": "Ondřej DOSTÁL",
@@ -2600,7 +2614,8 @@
       "name": "Balázs GYŐRFFY",
       "country": "HU",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256855": {
       "name": "Pál SZEKERES",
@@ -2648,7 +2663,8 @@
       "name": "Zoltán TARR",
       "country": "HU",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256864": {
       "name": "András Tivadar KULJA",
@@ -2672,7 +2688,8 @@
       "name": "Péter MAGYAR",
       "country": "HU",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256869": {
       "name": "Grégory ALLIONE",
@@ -2816,7 +2833,8 @@
       "name": "Sylvie JOSSERAND",
       "country": "FR",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256895": {
       "name": "Julien LEONARDELLI",
@@ -2834,7 +2852,8 @@
       "name": "Gaëtan DUSSAUSAYE",
       "country": "FR",
       "group": "PfE",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256898": {
       "name": "Pierre JOUVET",
@@ -3002,7 +3021,8 @@
       "name": "Carola RACKETE",
       "country": "DE",
       "group": "The Left",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256928": {
       "name": "Petr BYSTRON",
@@ -3077,7 +3097,7 @@
       "party": null
     },
     "256945": {
-      "name": "Irmhild BOẞDORF",
+      "name": "Irmhild BOSSDORF",
       "country": "DE",
       "group": "ESN",
       "party": null
@@ -3308,7 +3328,8 @@
       "name": "Sebastiaan STÖTELER",
       "country": "NL",
       "group": "NI",
-      "party": null
+      "party": null,
+      "former": true
     },
     "256992": {
       "name": "Hana JALLOUL MURO",
@@ -3584,7 +3605,8 @@
       "name": "Marcin KIERWIŃSKI",
       "country": "PL",
       "group": "EPP",
-      "party": null
+      "party": null,
+      "former": true
     },
     "257043": {
       "name": "Maravillas ABADÍA JOVER",
@@ -3956,7 +3978,8 @@
       "name": "Roxana MÎNZATU",
       "country": "RO",
       "group": "S&D",
-      "party": null
+      "party": null,
+      "former": true
     },
     "257106": {
       "name": "Alessandro ZAN",
@@ -4058,7 +4081,8 @@
       "name": "Antonio DECARO",
       "country": "IT",
       "group": "NI",
-      "party": null
+      "party": null,
+      "former": true
     },
     "257123": {
       "name": "Lucia ANNUNZIATA",
@@ -4433,7 +4457,7 @@
       "party": null
     },
     "277057": {
-      "name": "Marie-Sophie LANIG",
+      "name": "Marie-Sophie CHRIST",
       "country": "DE",
       "group": "EPP",
       "party": null
