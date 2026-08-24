@@ -1,10 +1,11 @@
-# Ask the Parliament's open data portal what its vote records actually contain.
+# Ask the Parliament's open data portal what its records contain.
 #
 # The website answers 202 with an empty body to everything automated, so the
-# portal at data.europarl.europa.eu is the only usable source. A decision
-# carries the individual ballots — had_voter_favor and its siblings — and this
-# job prints the exact field names and one worked example, small enough to
-# read in the log, so the importer can be written against fact.
+# portal at data.europarl.europa.eu is the only usable source. Its sitting
+# decisions carry the individual ballots — had_voter_favor and its siblings,
+# each a list of person ids. What this round settles is the other half: how the
+# portal describes a member, so those ids can be turned into a name, a country
+# and a political group.
 #
 # Run it from the Actions tab; it writes nothing and changes nothing.
 
@@ -13,53 +14,49 @@ name: Probe the sources
 on:
   workflow_dispatch:
     inputs:
-      date:
-        description: "A sitting date to test, YYYY-MM-DD"
+      mep:
+        description: "A member id to test"
         required: false
-        default: "2026-07-09"
+        default: "197628"
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Read the shape of a sitting's votes
+      - name: Read how the portal describes a member
         run: |
-          DATE="${{ inputs.date || '2026-07-09' }}"
+          MEP="${{ inputs.mep || '197628' }}"
           UA='eu-tracker/0.1 (open data import; contact via the repository)'
           BASE=https://data.europarl.europa.eu/api/v2
           get () { curl -sSL -m 60 -A "$UA" -H 'accept: application/ld+json' "$1"; }
 
-          get "$BASE/meetings/MTG-PL-$DATE/decisions?format=application%2Fld%2Bjson" > /tmp/dec.json
-
-          echo "=== decisions in the sitting"
-          jq '.data | length' /tmp/dec.json
-
-          echo
-          echo "=== every field name a decision can carry, with how many decisions carry it"
-          jq -r '[.data[] | keys[]] | group_by(.) | map("\(.[0])  \(length)")[]' /tmp/dec.json
-
-          echo
-          echo "=== the first roll-call decision, with the ballot lists counted rather than printed"
-          jq '[.data[] | select(has("had_voter_favor") or has("had_voter_against") or has("had_voter_abstention"))][0]
-              | with_entries(if (.value | type) == "array" and (.value | length) > 6
-                             then .value = "[\(.value | length) entries] first: \(.value[0])"
-                             else . end)
-              | if .activity_label then .activity_label = .activity_label.en else . end
-              | del(.structuredLabel)' /tmp/dec.json
+          echo "=== the current membership, asked for in bulk"
+          get "$BASE/meps/show-current?format=application%2Fld%2Bjson&limit=1000&offset=0" > /tmp/cur.json
+          jq '.data | length' /tmp/cur.json
+          jq -r 'keys[]' /tmp/cur.json
+          jq -r '[.data[] | keys[]] | group_by(.) | map("\(.[0])  \(length)")[]' /tmp/cur.json
+          echo "-- how many distinct countries and groups came back"
+          jq -r '[.data[]["api:country-of-representation"]] | unique | length' /tmp/cur.json
+          jq -r '[.data[]["api:political-group"]] | unique | join(", ")' /tmp/cur.json
 
           echo
-          echo "=== how many decisions are roll-calls, and the tally of the first"
-          jq -r '[.data[] | select(has("had_voter_favor"))] | length' /tmp/dec.json
-          jq -r '[.data[] | select(has("had_voter_favor"))][0]
-                 | "for \(.had_voter_favor|length)  against \(.had_voter_against|length? // 0)  abstain \(.had_voter_abstention|length? // 0)"' /tmp/dec.json
+          echo "=== one member on their own"
+          get "$BASE/meps/$MEP?format=application%2Fld%2Bjson" > /tmp/one.json
+          head -c 3000 /tmp/one.json
+          echo
+          echo "-- its field names"
+          jq -r '.data[0] | keys[]' /tmp/one.json 2>/dev/null || jq -r 'keys[]' /tmp/one.json
 
           echo
-          echo "=== the shape of one voter entry"
-          jq '[.data[] | select(has("had_voter_favor"))][0].had_voter_favor[0:3]' /tmp/dec.json
+          echo "=== the whole term, including members who have since left"
+          get "$BASE/meps?parliamentary-term=10&format=application%2Fld%2Bjson&limit=1000&offset=0" > /tmp/all.json
+          jq '.data | length' /tmp/all.json
+          jq '.data[0]' /tmp/all.json
 
           echo
-          echo "=== what the decision points at (documents, procedure, outcome)"
-          jq -r '[.data[] | select(has("had_voter_favor"))][0]
-                 | {activity_id, had_activity_type, had_decision_outcome, based_on_a_realization_of,
-                    recorded_in_a_realization_of, was_motivated_by, decision_method,
-                    number_of_votes_favor, number_of_votes_against, number_of_votes_abstention}' /tmp/dec.json
+          echo "=== the sittings of a year"
+          get "$BASE/meetings?year=2026&format=application%2Fld%2Bjson&limit=400" > /tmp/mtg.json
+          jq '.data | length' /tmp/mtg.json
+          jq -r '[.data[] | keys[]] | unique | join(", ")' /tmp/mtg.json
+          jq -r '.data[0] | {id, activity_date, had_activity_type, activity_label: .activity_label.en, hadActivityLocation: (.hadActivityLocation // .had_activity_location)}' /tmp/mtg.json
+          jq -r '[.data[].activity_date] | sort | .[0:6] | join(" ")' /tmp/mtg.json
