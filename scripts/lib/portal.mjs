@@ -81,6 +81,22 @@ export function english(value) {
   return String(value.en || value.mul || value.fr || Object.values(value)[0] || '');
 }
 
+/* The portal answers 429 to a client that asks as fast as a script can. One
+   request at a time, a quarter-second apart, is well inside what it tolerates
+   and still walks a whole term in a couple of minutes. */
+const PACE = 250;
+let lastCall = 0;
+
+function sleep(ms) {
+  return new Promise(function (resolve) { setTimeout(resolve, ms); });
+}
+
+async function waitTurn() {
+  const wait = lastCall + PACE - Date.now();
+  if (wait > 0) await sleep(wait);
+  lastCall = Date.now();
+}
+
 export async function get(pathname, params) {
   const url = new URL(BASE + pathname);
   url.searchParams.set('format', 'application/ld+json');
@@ -89,15 +105,19 @@ export async function get(pathname, params) {
   });
 
   let lastError = null;
-  for (let attempt = 0; attempt < 3; attempt += 1) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
     try {
+      await waitTurn();
       const response = await fetch(url, {
         headers: { accept: 'application/ld+json', 'user-agent': AGENT },
         redirect: 'follow'
       });
       if (response.status === 404) return null; // nothing recorded there
       if (response.status === 429 || response.status >= 500) {
-        throw new Error(`${url.pathname} responded ${response.status}`);
+        // Being asked to slow down is not a failure; it is an instruction.
+        const after = Number(response.headers.get('retry-after'));
+        throw Object.assign(new Error(`${url.pathname} responded ${response.status}`),
+          { after: Number.isFinite(after) && after > 0 ? after * 1000 : 0 });
       }
       if (!response.ok) throw Object.assign(new Error(`${url.pathname} responded ${response.status}`), { fatal: true });
 
@@ -113,7 +133,7 @@ export async function get(pathname, params) {
     } catch (error) {
       if (error.fatal) throw error;
       lastError = error;
-      await new Promise(function (resolve) { setTimeout(resolve, 1000 * (attempt + 1) * (attempt + 1)); });
+      await sleep(error.after || 1000 * Math.pow(2, attempt + 1));
     }
   }
   throw lastError;

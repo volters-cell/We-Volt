@@ -26,7 +26,7 @@
  * Nothing about the cost or the press is ever generated. Those are editorial.
  */
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers,
@@ -263,6 +263,31 @@ async function sittingVotes(date) {
   });
 }
 
+/* Every voting id already on file, and the record that holds it. The
+   Parliament numbers each vote once, so holding the same number twice would
+   put the same vote on the page twice — which is what a backfill over records
+   written before this importer existed would otherwise do. */
+async function alreadyHeld(outDir) {
+  const directory = path.resolve(ROOT, outDir);
+  const held = new Map();
+  let names;
+  try {
+    names = await readdir(directory);
+  } catch (error) {
+    return held; // nothing imported yet
+  }
+  for (const name of names) {
+    if (!name.endsWith('.json') || name === 'index.json') continue;
+    try {
+      const record = JSON.parse(await readFile(path.join(directory, name), 'utf8'));
+      if (record.sourceId !== undefined && record.sourceId !== null) held.set(String(record.sourceId), name);
+    } catch (error) {
+      // a file that will not parse is the validator's problem, not this one's
+    }
+  }
+  return held;
+}
+
 /* --------------------------------------------------------------- the run */
 
 function requestedDates(args) {
@@ -292,9 +317,11 @@ async function main() {
   const dates = await sittingDates(from, window.until);
   console.log(`${dates.length} sitting day${dates.length === 1 ? '' : 's'} between ${from} and ${window.until}.`);
 
+  const held = await alreadyHeld(outDir);
   const written = [];
   const taken = new Set();
   let skipped = 0;
+  let already = 0;
 
   for (const date of dates) {
     const votes = await sittingVotes(date);
@@ -313,6 +340,13 @@ async function main() {
       delete record._counted;
 
       if (!record.ballots.length) continue;
+
+      // Held already, under whatever name it was first written with.
+      const existing = held.get(String(record.sourceId));
+      if (existing && existing !== `${record.id}.json`) {
+        already += 1;
+        continue;
+      }
       if (taken.has(record.id)) record.id += '-' + taken.size;
       taken.add(record.id);
 
@@ -335,11 +369,13 @@ async function main() {
         await writeFile(file, JSON.stringify(record, null, 2) + '\n', 'utf8');
         console.log(`${shown} — ${tally}`);
       }
+      held.set(String(record.sourceId), `${record.id}.json`);
       written.push(record.id);
     }
   }
 
   console.log(`\n${written.length} record${written.length === 1 ? '' : 's'}` +
+    (already ? `, ${already} already held` : '') +
     (skipped ? `, ${skipped} amendment votes skipped (pass --all to keep them)` : '') + '.');
   if (written.length && !args['dry-run']) {
     console.log('Next: node scripts/build-index.mjs, then node scripts/validate-data.mjs');
