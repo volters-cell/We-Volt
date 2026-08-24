@@ -70,6 +70,12 @@ jobs:
       - name: Rebuild the index
         run: node scripts/build-index.mjs
 
+      # The same votes seen from the other end: one file per member, so a reader
+      # following an MEP sees the new sitting too. Without this the vote pages
+      # move and the member pages stay where they were.
+      - name: Rebuild the member profiles
+        run: node scripts/build-members.mjs
+
       - name: Check every record before it goes near the site
         run: |
           node tests/import.test.mjs
