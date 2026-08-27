@@ -1053,6 +1053,85 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 }
 .bd-tile-swatch.has-logo { padding: 1px; }
 
+/* ------------------------------------------------------- a party's own line
+
+   How one national party's members voted, on every vote, under the outcome.
+   Folded shut: the summary is the answer, the names are for the reader who
+   wants to check it. */
+.delegation {
+  margin: .9rem 0 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-sunken);
+}
+.delegation > summary {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .6rem .8rem;
+  cursor: pointer;
+  font-size: .92rem;
+  list-style: none;
+}
+.delegation > summary::-webkit-details-marker { display: none; }
+.delegation > summary::after {
+  content: "▸";
+  margin-left: auto;
+  color: var(--ink-faint);
+  font-size: .8rem;
+  transition: transform .15s ease;
+}
+.delegation[open] > summary::after { transform: rotate(90deg); }
+.delegation > summary:hover { background: color-mix(in srgb, var(--surface-sunken) 70%, var(--ink) 6%); }
+.delegation > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.dg-mark { width: .85rem; height: .85rem; border-radius: 3px; flex: 0 0 auto; }
+.dg-label { font-weight: 700; }
+.dg-sum { color: var(--ink-soft); }
+.dg-members {
+  list-style: none;
+  margin: 0;
+  padding: 0 .8rem .3rem;
+  display: grid;
+  gap: .3rem;
+}
+.dg-members li {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: .35rem;
+  font-size: .9rem;
+}
+.dg-name { min-width: 0; }
+.dg-note { margin: 0; padding: 0 .8rem .7rem; font-size: .8rem; color: var(--ink-faint); }
+
+/* ------------------------------------------------------------------ sharing */
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  align-items: center;
+  margin-top: .2rem;
+}
+.share-button {
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: .42rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.share-button:hover { border-color: var(--ink-faint); color: var(--ink); }
+.share-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.share-copy { font-weight: 600; color: var(--ink); border-color: var(--ink-faint); }
+
 .bd-main { display: grid; gap: .28rem; min-width: 0; }
 .bd-label { font-weight: 650; font-size: .92rem; line-height: 1.25; }
 .bd-sub { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }

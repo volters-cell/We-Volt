@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "note": "National parties whose members are worth following as a bloc across every vote. The Parliament's open data records a member's country and political group but not the party they were elected for, so the members of each delegation are listed here by their Parliament person id — the same id every ballot uses.",
+    "asOf": "2026",
+    "sources": [
+      "Membership: the party's own list of its members of the European Parliament",
+      "Ids and names: data.europarl.europa.eu/api/v2/meps"
+    ]
+  },
+  "delegations": [
+    {
+      "key": "volt",
+      "name": "Volt",
+      "longName": "Volt Europa",
+      "group": "Greens/EFA",
+      "colour": "#502379",
+      "site": "https://volteuropa.org/",
+      "note": "Volt's members sit within the Greens/European Free Alliance group.",
+      "members": [
+        { "id": 197439, "name": "Damian Boeselager", "country": "DE" },
+        { "id": 256964, "name": "Nela Riehl", "country": "DE" },
+        { "id": 256965, "name": "Kai Tegethoff", "country": "DE" },
+        { "id": 256978, "name": "Reinier van Lanschot", "country": "NL" },
+        { "id": 256990, "name": "Anna Strolenberg", "country": "NL" }
+      ]
+    }
+  ]
+}

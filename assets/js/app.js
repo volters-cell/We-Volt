@@ -635,6 +635,7 @@
   const POSITIONS = ['for', 'against', 'abstain', 'absent'];
 
   const roll = { tab: 'members', name: '', group: '', country: '', position: '' };
+  let delegations = [];
 
 
   /* Every ballot in the open vote, flattened once, with everything the filters
@@ -680,6 +681,29 @@
     return total ? Math.round((count / total) * 100) : 0;
   }
 
+  /* Every denominator on this page comes from the size of the chamber, never
+     from the number of ballots a particular record happens to carry.
+
+     The Parliament has 720 seats. Some records name every member including
+     those who did not vote; others, the ones read from the portal, name only
+     the members who did — the portal does not publish absences. Counting the
+     ballots would therefore make "of N members" mean 720 on one vote and 607
+     on the next, for no reason a reader could see. So the seats decide, the
+     votes cast are counted, and what is left is what it says: members who did
+     not vote. */
+  function chamberSeats() {
+    return states.reduce(function (sum, item) { return sum + item.seats; }, 0);
+  }
+
+  function seatsOf(code) {
+    const state = statesByCode[code];
+    return state ? state.seats : 0;
+  }
+
+  function castOf(totals) {
+    return totals.for + totals.against + totals.abstain;
+  }
+
   /* The bar: the whole chamber in one line, each part clickable, because the
      first thing a reader wants after seeing "32% against" is the 32%. */
   function renderBar(totals) {
@@ -696,24 +720,20 @@
         '<span class="seg-value">' + percent + '%</span>' +
         '<span class="seg-label">' + esc(Panel.VOTE_LABEL[key]) + '</span>' +
         '</button>';
-    }).join('') + (totals.absent
-      ? '<button type="button" class="seg seg-absent' + (roll.position === 'absent' ? ' is-active' : '') +
-        '" data-position="absent" aria-pressed="' + (roll.position === 'absent' ? 'true' : 'false') +
-        '" title="Did not vote: ' + totals.absent + ' members">' +
-        '<span class="seg-value">' + totals.absent + '</span>' +
-        '<span class="seg-label">absent</span></button>'
-      : '');
+    }).join('');
 
     const decision = state.decision;
     const result = (decision.outcome && decision.outcome.result) || 'recorded';
+    const seats = chamberSeats();
+    const silent = Math.max(0, seats - cast);
     dom['roll-summary'].innerHTML =
       '<span class="result result-' + esc(result) + '">' +
         esc(RESULT_LABEL[result] || result) + '</span> · ' +
       '<span class="n-for">' + totals.for + '</span> in favour, ' +
       '<span class="n-against">' + totals.against + '</span> against, ' +
       '<span class="n-abstain">' + totals.abstain + '</span> abstained. ' +
-      cast + ' of ' + (cast + totals.absent) + ' members voted; ' +
-      '<span class="n-absent">' + totals.absent + '</span> did not.';
+      cast + ' of ' + seats + ' members voted; ' +
+      '<span class="n-absent">' + silent + '</span> did not.';
   }
 
   function renderMembersTab(list) {
@@ -743,13 +763,17 @@
 
     const rows = Object.keys(groups).map(function (key) {
       const totals = tally(groups[key]);
+      const cast = castOf(totals);
       return {
         key: key,
         label: labelOf(key),
         tile: tileOf(key),
+        // A member state's delegation is a fixed size; a political group's is
+        // not recorded per vote, so nothing is claimed about it.
+        seats: kind === 'country' ? seatsOf(key) : 0,
         size: groups[key].length,
         totals: totals,
-        cast: totals.for + totals.against + totals.abstain
+        cast: cast
       };
     });
     rows.sort(function (a, b) { return b.size - a.size; });
@@ -759,7 +783,7 @@
     return '<ul class="breakdown">' + rows.map(function (row) {
       const parts = POSITIONS.filter(function (key) { return row.totals[key]; })
         .map(function (key) {
-          const percent = share(row.totals[key], row.size);
+          const percent = share(row.totals[key], row.seats || row.cast || row.size);
           return '<span class="bd-seg bd-' + key + '" style="flex:' + row.totals[key] + ' 1 0"' +
             ' title="' + esc(Panel.VOTE_LABEL[key]) + ': ' + row.totals[key] +
             ' (' + percent + '%)"></span>';
@@ -773,7 +797,10 @@
           tile(row, kind) +
           '<span class="bd-main">' +
             '<span class="bd-label">' + esc(row.label) + '</span>' +
-            '<span class="bd-sub">' + row.cast + ' of ' + row.size + ' members voted' +
+            '<span class="bd-sub">' +
+              (row.seats
+                ? row.cast + ' of ' + row.seats + ' members voted'
+                : row.cast + ' vote' + (row.cast === 1 ? '' : 's') + ' cast') +
               (row.cast
                 ? ' · <span class="n-for">' + row.totals.for + '</span> for, ' +
                   '<span class="n-against">' + row.totals.against + '</span> against, ' +
@@ -829,8 +856,8 @@
     dom['roll-reset'].hidden = !active;
 
     dom['roll-count'].textContent = active
-      ? list.length + ' of ' + all.length + ' members match'
-      : all.length + ' members';
+      ? list.length + ' of ' + all.length + ' listed members match'
+      : all.length + ' members listed';
 
     Array.prototype.forEach.call(document.querySelectorAll('[data-roll-tab]'), function (tab) {
       tab.setAttribute('aria-selected', String(tab.getAttribute('data-roll-tab') === roll.tab));
@@ -883,6 +910,61 @@
       '<p class="meter-value"><strong>' + esc(figure) + '</strong> ' + esc(rest) + '</p>' +
     '</div>';
   }
+
+  /* How a named party's members voted on this record. The Parliament publishes
+     a member's country and political group but not the party they stood for,
+     so the membership comes from data/reference/delegations.json and is read
+     against this vote's own ballots. Nothing is inferred: a member with no
+     ballot in the record did not vote. */
+  function delegationVote(decision, delegation) {
+    const positions = new Map();
+    (decision.ballots || []).forEach(function (ballot) {
+      positions.set(String(ballot[0]), POSITIONS[ballot[1]]);
+    });
+
+    const members = delegation.members.map(function (member) {
+      return { name: member.name, country: member.country, position: positions.get(String(member.id)) || 'absent' };
+    });
+
+    const totals = { for: 0, against: 0, abstain: 0, absent: 0 };
+    members.forEach(function (member) { totals[member.position] += 1; });
+    return { members: members, totals: totals, cast: castOf(totals) };
+  }
+
+  function delegationLine(decision) {
+    if (!delegations.length || !(decision.ballots || []).length) return '';
+
+    return delegations.map(function (delegation) {
+      const result = delegationVote(decision, delegation);
+      const parts = ['for', 'against', 'abstain'].filter(function (key) { return result.totals[key]; })
+        .map(function (key) {
+          return '<span class="n-' + key + '">' + result.totals[key] + '</span> ' +
+            esc(DELEGATION_WORD[key]);
+        });
+      if (result.totals.absent) {
+        parts.push('<span class="n-absent">' + result.totals.absent + '</span> did not vote');
+      }
+
+      const names = result.members.map(function (member) {
+        return '<li><span class="dg-name">' + esc(member.name) + '</span>' +
+          '<span class="vote-pill vote-' + member.position + '">' +
+          esc(Panel.VOTE_LABEL[member.position]) + '</span></li>';
+      }).join('');
+
+      return '<details class="delegation">' +
+        '<summary>' +
+          '<span class="dg-mark" style="background:' + esc(delegation.colour || '#444') + '"></span>' +
+          '<span class="dg-label">' + esc(delegation.name) + '</span>' +
+          '<span class="dg-sum">' + parts.join(', ') + '</span>' +
+        '</summary>' +
+        '<ul class="dg-members">' + names + '</ul>' +
+        '<p class="dg-note">' + esc(delegation.note || '') + ' ' +
+          esc(delegation.members.length) + ' members of the Parliament.</p>' +
+        '</details>';
+    }).join('');
+  }
+
+  const DELEGATION_WORD = { for: 'in favour', against: 'against', abstain: 'abstained' };
 
   function renderOutcome() {
     const decision = state.decision;
@@ -939,7 +1021,7 @@
         ' of 27 have press indexed so far.</p>';
     }
 
-    dom.outcome.innerHTML = html;
+    dom.outcome.innerHTML = html + delegationLine(decision);
   }
 
   /* ---------------------------------------------------------------- routing */
@@ -953,6 +1035,56 @@
      something inside this page. */
   function shareUrl(code) {
     return location.origin + location.pathname + location.search + permalink(code);
+  }
+
+  /* Sharing a vote. The address carries the vote, so anyone opening it lands
+     on the same record; the text is the vote's own headline, so the reader who
+     receives it knows what they are being sent before they click. */
+  function shareText(decision) {
+    if (!decision) return 'EU Tracker — every vote of the European Parliament, member by member';
+    const outcome = (decision.outcome && decision.outcome.result) || '';
+    return decision.title + (outcome ? ' — ' + (RESULT_LABEL[outcome] || outcome) : '') +
+      ' in the European Parliament';
+  }
+
+  function shareRow(decision) {
+    const url = shareUrl();
+    const text = shareText(decision);
+    const e = encodeURIComponent;
+    const targets = [
+      { label: 'Bluesky', href: 'https://bsky.app/intent/compose?text=' + e(text + ' ' + url) },
+      { label: 'X', href: 'https://x.com/intent/tweet?text=' + e(text) + '&url=' + e(url) },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + e(url) },
+      { label: 'WhatsApp', href: 'https://wa.me/?text=' + e(text + ' ' + url) },
+      { label: 'Email', href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
+    ];
+
+    return '<div class="share" role="group" aria-label="Share this vote">' +
+      '<button type="button" class="share-button share-copy" data-copy="' + esc(url) + '">' +
+        'Copy link</button>' +
+      '<button type="button" class="share-button share-native" hidden' +
+        ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">Share…</button>' +
+      targets.map(function (target) {
+        return '<a class="share-button" href="' + esc(target.href) +
+          '" target="_blank" rel="noopener noreferrer">' + esc(target.label) + '</a>';
+      }).join('') +
+      '</div>';
+  }
+
+  /* The system share sheet, where the browser has one — a phone, mostly. It is
+     revealed rather than rendered conditionally so the markup stays the same. */
+  function armNativeShare(root) {
+    if (!navigator.share) return;
+    Array.prototype.forEach.call(root.querySelectorAll('.share-native'), function (button) {
+      button.hidden = false;
+      button.onclick = function () {
+        navigator.share({
+          title: 'EU Tracker',
+          text: button.getAttribute('data-share-text'),
+          url: button.getAttribute('data-share-url')
+        }).catch(function () { /* the reader closed the sheet */ });
+      };
+    });
   }
 
   async function copyLink(button) {
@@ -1085,9 +1217,8 @@
       return '<a class="vote-source" href="' + esc(link.url) +
         '" target="_blank" rel="noopener noreferrer">' + esc(link.label) +
         '<span aria-hidden="true"> ↗</span></a>';
-    }).join('') +
-      '<a class="vote-source vote-share" href="' + esc(shareUrl()) + '" data-copy="' +
-      esc(shareUrl()) + '">Copy link to this vote</a>';
+    }).join('') + shareRow(decision);
+    armNativeShare(dom['vote-links']);
     dom['vote-links'].hidden = false;
 
     const isSample = decision.status === 'sample';
@@ -1213,7 +1344,7 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex, plenary, members, people, neighbours] =
+      const [reference, geo, decisionIndex, plenary, members, people, neighbours, blocs] =
         await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
@@ -1225,12 +1356,17 @@
         Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
         // Every member, for search; their voting records load one at a time.
         Data.getJSON('data/meps/index.json').catch(function () { return null; }),
-        Data.getJSON('data/reference/neighbours.json').catch(function () { return null; })
+        Data.getJSON('data/reference/neighbours.json').catch(function () { return null; }),
+        // Parties worth following as a bloc: the Parliament records a member's
+        // group but not the party they were elected for, so the membership is
+        // kept here, by person id.
+        Data.getJSON('data/reference/delegations.json').catch(function () { return null; })
       ]);
       calendar = plenary || { sessions: [] };
       directory = members && members.members ? members.members : null;
       memberIndex = (people && people.members) || null;
       outside = (neighbours && neighbours.countries) || {};
+      delegations = (blocs && blocs.delegations) || [];
 
       states = reference.states;
       statesByCode = {};

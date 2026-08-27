@@ -52,22 +52,28 @@
   }
 
   function groupRows(country) {
-    const groups = country.mepGroups || [];
+    const groups = (country.mepGroups || []).filter(function (group) {
+      return (group.for || 0) + (group.against || 0) + (group.abstain || 0) > 0;
+    });
     if (!groups.length) return '';
+    // Votes cast, not seats held: no record says how large a national
+    // delegation's group was on the day, so nothing is claimed about it. The
+    // members who did not vote are stated once, above, for the whole
+    // delegation, where the seat count makes it a stable figure.
     return '<table class="group-table">' +
       '<caption>By political group</caption>' +
-      '<thead><tr><th scope="col">Group</th><th scope="col">Members</th>' +
-      '<th scope="col">For</th><th scope="col">Against</th><th scope="col">Abstain</th>' +
-      '<th scope="col">Absent</th></tr></thead><tbody>' +
+      '<thead><tr><th scope="col">Group</th><th scope="col">Votes cast</th>' +
+      '<th scope="col">For</th><th scope="col">Against</th>' +
+      '<th scope="col">Abstain</th></tr></thead><tbody>' +
       groups.map(function (group) {
+        const cast = (group.for || 0) + (group.against || 0) + (group.abstain || 0);
         return '<tr><th scope="row" class="group-cell">' +
           (global.Groups ? global.Groups.swatch(group.group) : '') +
           '<span>' + escapeHTML(group.group) + '</span></th>' +
-          '<td>' + group.seats + '</td>' +
+          '<td>' + cast + '</td>' +
           '<td class="cell-for">' + (group.for || 0) + '</td>' +
           '<td class="cell-against">' + (group.against || 0) + '</td>' +
-          '<td class="cell-abstain">' + (group.abstain || 0) + '</td>' +
-          '<td class="cell-absent">' + (group.absent || 0) + '</td></tr>';
+          '<td class="cell-abstain">' + (group.abstain || 0) + '</td></tr>';
       }).join('') +
       '</tbody></table>';
   }
@@ -97,8 +103,13 @@
     }
 
     if (totals) {
+      // The delegation's size is the seats it holds, always — never the number
+      // of ballots this particular record happens to carry. Records read from
+      // the Parliament's portal name only the members who voted, so counting
+      // ballots would change the denominator from one vote to the next.
       const cast = totals.for + totals.against + totals.abstain;
-      totals.total = cast + totals.absent;
+      const silent = Math.max(0, state.seats - cast);
+      totals.total = state.seats;
       const share = cast ? Math.round((totals.for / cast) * 100) : null;
       html += '<p class="position position-' + escapeHTML(derived.position) + '">' +
         escapeHTML(VOTE_LABEL[derived.position]) + '</p>' +
@@ -106,13 +117,13 @@
         num(totals.for, 'for') + ' of ' + state.seats + ' MEPs in favour, ' +
         num(totals.against, 'against') + ' against, ' +
         num(totals.abstain, 'abstain') + ' abstained, ' +
-        num(totals.absent, 'absent') + ' did not vote' +
+        num(silent, 'absent') + ' did not vote' +
         (share === null ? '.' : ' — ' + num(share + '%', totals.for > totals.against ? 'for' : 'against') +
           ' of votes cast were in favour.') +
         '</p>' + bar(totals, state.seats) + groupRows(country) +
         '<p class="panel-actions"><button type="button" class="show-in-roll" data-country="' +
-        escapeHTML(state.code) + '">Show ' + escapeHTML(state.name) + '’s ' + totals.total +
-        ' members in the roll-call</button></p>';
+        escapeHTML(state.code) + '">Show ' + escapeHTML(state.name) + '’s members in the roll-call' +
+        '</button></p>';
     }
 
     return html + '</section>';
