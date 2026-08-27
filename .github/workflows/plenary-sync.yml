@@ -45,6 +45,8 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -82,11 +84,14 @@ jobs:
           node scripts/validate-data.mjs
 
       - name: Commit what changed
+        id: commit
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Nothing new."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
           git config user.name "eu-tracker-bot"
           git config user.email "actions@github.com"
           git add data/
@@ -95,3 +100,14 @@ jobs:
           Automated by .github/workflows/plenary-sync.yml. Records land with
           an empty summary: writing one is editorial work."
           git push
+
+  # A push made with the built-in token does not trigger other workflows, so the
+  # import would otherwise sit in the repository without ever reaching the site.
+  publish:
+    needs: import
+    if: needs.import.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

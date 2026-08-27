@@ -37,6 +37,42 @@
     if (panel) panel.setAttribute('aria-labelledby', id);
   }
 
+  /* Going back.
+
+     The address bar is deliberately not a running record of what you clicked —
+     a tab reopened days later should come back on the search page, not on
+     somebody's old vote. But a reader who has just opened a vote, or a country,
+     expects the browser's Back button and a phone's back gesture to close it
+     again rather than leave the site.
+
+     So each thing you open pushes a history entry at the address you are
+     already on: the address bar does not change, and Back has something to pop.
+     Popping it undoes exactly one step, innermost first. The close buttons go
+     through the same door, so the two can never drift apart. */
+  const backStack = [];
+
+  function openStep(undo) {
+    backStack.push(undo);
+    try {
+      history.pushState({ euTracker: backStack.length }, '', location.href);
+    } catch (error) {
+      backStack.pop(); // a browser that will not take the entry keeps the button
+    }
+  }
+
+  function closeStep(fallback) {
+    if (backStack.length) {
+      history.back();   // the popstate handler does the closing
+      return;
+    }
+    if (fallback) fallback();
+  }
+
+  function popStep() {
+    const undo = backStack.pop();
+    if (undo) undo();
+  }
+
   /* A country you have just clicked is the answer to that click, so its record
      moves to the top of the reading column — above the search and the list of
      plenary sessions — instead of sitting under everything else. It goes back
@@ -170,6 +206,7 @@
       }
     }
     const member = memberCache[id];
+    openStep(function () { backToVotes({ fromHistory: true }); });
     state.member = member;
     state.decision = null;
 
@@ -398,11 +435,12 @@
       (state.unfolded ? 'true' : 'false') + '">' +
       (state.unfolded ? 'Fold all sessions' : 'Unfold all sessions') + '</button></p>' +
       groups.map(function (group) {
-      const open = state.query || state.unfolded;
+      const open = state.query || state.unfolded || unfoldedSessions.has(group.key);
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
       });
-      return '<details class="session"' + (open || current ? ' open' : '') + '>' +
+      return '<details class="session" data-session="' + esc(group.key) + '"' +
+        (open || current ? ' open' : '') + '>' +
         '<summary>' +
           '<span class="session-label">' + esc(sessionLabelFor(group)) + '</span>' +
           '<span class="session-count">' + group.items.length + ' vote' +
@@ -633,6 +671,11 @@
 
   const roll = { tab: 'members', name: '', group: '', country: '', position: '' };
   let delegations = [];
+
+  /* Which plenary sessions the reader has unfolded. The list is rebuilt on
+     every render, so without this, closing a vote would drop them back to a
+     folded list with no memory of where they had been reading. */
+  const unfoldedSessions = new Set();
 
 
   /* Every ballot in the open vote, flattened once, with everything the filters
@@ -1136,7 +1179,11 @@
   }
 
   function selectCountry(code, options) {
+    const opening = Boolean(code && statesByCode[code]) && code !== state.country;
     state.country = code && statesByCode[code] ? code : null;
+    if (opening && !(options && options.replaceStep)) {
+      openStep(function () { selectCountry(null, { fromHistory: true }); });
+    }
     if (map) map.setSelected(state.country);
 
     // Picking a country narrows the roll-call to its members: the question
@@ -1250,7 +1297,11 @@
 
   /* "All votes" means all of them: a search left over from finding this vote
      would otherwise hand back an empty list. */
-  function backToVotes() {
+  function backToVotes(options) {
+    if (!(options && options.fromHistory)) {
+      // Let Back do it, so the history and the page agree about where we are.
+      if (backStack.length) { history.back(); return; }
+    }
     dom['search-input'].value = '';
     state.query = '';
     dom['search-clear'].hidden = true;
@@ -1279,10 +1330,13 @@
     selectCountry((options && options.country) || null, { scroll: false });
   }
 
-  async function loadDecision(id, code) {
+  async function loadDecision(id, code, options) {
     if (!id) {
       clearDecision({ country: code });
       return;
+    }
+    if (!(options && options.fromHistory) && (!state.decision || state.decision.id !== id)) {
+      openStep(function () { backToVotes({ fromHistory: true }); });
     }
     const entry = index.decisions.find(function (item) { return item.id === id; });
     if (!entry) {
@@ -1361,6 +1415,7 @@
       outside = (neighbours && neighbours.countries) || {};
       delegations = (blocs && blocs.delegations) || [];
 
+      document.body.classList.remove('is-loading');
       states = reference.states;
       statesByCode = {};
       states.forEach(function (item) { statesByCode[item.code] = item; });
@@ -1394,7 +1449,9 @@
 
       map = new EUMap(dom.map, geo, {
         onSelect: function (code) { selectCountry(code); },
-        onDeselect: function () { selectCountry(null); },
+        onDeselect: function () {
+          if (state.country) closeStep(function () { selectCountry(null); });
+        },
         onHover: function (code) { setHovered(code); },
         onOutside: function (code) { selectOutside(code); }
       });
@@ -1420,9 +1477,21 @@
         }
         if (event.target.closest('#unfold-all')) {
           state.unfolded = !state.unfolded;
+          unfoldedSessions.clear();
           renderFeed();
         }
       });
+
+      // Which sessions are open is the reader's place in the list. Remember it,
+      // so closing a vote puts them back where they were rather than at the top
+      // of a folded list.
+      dom['session-list'].addEventListener('toggle', function (event) {
+        const details = event.target.closest('.session');
+        if (!details) return;
+        const key = details.getAttribute('data-session');
+        if (details.open) unfoldedSessions.add(key);
+        else unfoldedSessions.delete(key);
+      }, true);
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
         button.addEventListener('click', function () {
@@ -1469,12 +1538,14 @@
 
       // Escape closes the open country from anywhere on the page.
       document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && state.country) selectCountry(null);
+        if (event.key === 'Escape' && state.country) {
+          closeStep(function () { selectCountry(null); });
+        }
       });
 
       dom['panel-body'].addEventListener('click', function (event) {
         if (event.target.closest('.panel-close')) {
-          selectCountry(null);
+          closeStep(function () { selectCountry(null); });
           return;
         }
         const inRoll = event.target.closest('.show-in-roll');
@@ -1562,6 +1633,10 @@
         backToVotes();
       });
 
+      window.addEventListener('popstate', function () {
+        popStep();
+      });
+
       window.addEventListener('hashchange', function () {
         const next = readHash();
         const current = state.decision ? state.decision.id : null;
@@ -1572,10 +1647,24 @@
         }
       });
     } catch (error) {
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('has-failed');
+      const local = location.protocol === 'file:';
       document.querySelector('main').insertAdjacentHTML('afterbegin',
-        '<p class="load-error"><strong>Could not load the data.</strong> ' + esc(error.message) +
-        '<br>The site reads its records over HTTP — open it with a local server ' +
-        '(<code>python3 -m http.server</code>), not as a <code>file://</code> path.</p>');
+        '<div class="load-error" role="alert">' +
+          '<p><strong>The votes could not be loaded.</strong> ' +
+          (local
+            ? 'The site reads its records over HTTP, so it cannot run from a ' +
+              '<code>file://</code> path. Serve the folder — <code>python3 -m http.server</code> — ' +
+              'and open it at <code>localhost</code>.'
+            : 'That is usually a connection that dropped mid-request. Nothing is lost; ' +
+              'the records are static files and will load on a second try.') +
+          '</p>' +
+          '<p class="load-error-detail">' + esc(error.message) + '</p>' +
+          (local ? '' : '<p><button type="button" class="button-link" id="retry-load">Try again</button></p>') +
+        '</div>');
+      const retry = document.getElementById('retry-load');
+      if (retry) retry.addEventListener('click', function () { location.reload(); });
     }
   }
 

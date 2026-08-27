@@ -51,7 +51,7 @@
     // delegation's group was on the day, so nothing is claimed about it. The
     // members who did not vote are stated once, above, for the whole
     // delegation, where the seat count makes it a stable figure.
-    return '<table class="group-table">' +
+    return '<div class="table-scroll"><table class="group-table">' +
       '<caption>By political group</caption>' +
       '<thead><tr><th scope="col">Group</th><th scope="col">Votes cast</th>' +
       '<th scope="col">For</th><th scope="col">Against</th>' +
@@ -66,7 +66,7 @@
           '<td class="cell-against">' + (group.against || 0) + '</td>' +
           '<td class="cell-abstain">' + (group.abstain || 0) + '</td></tr>';
       }).join('') +
-      '</tbody></table>';
+      '</tbody></table></div>';
   }
 
   function positionSection(decision, country, state) {

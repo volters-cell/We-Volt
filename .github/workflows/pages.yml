@@ -1,10 +1,20 @@
 # The site is static files, so publishing is a copy. Enable Pages for the
 # repository with "GitHub Actions" as the source, and this does the rest.
+#
+# It publishes on every push to the repository's default branch, whatever that
+# branch is called — this repository's is not main, and naming a branch here
+# that does not exist is how a site quietly stops being published.
+#
+# It is also callable by another workflow. The plenary sync calls it after it
+# commits an import, because a push made with the built-in GITHUB_TOKEN
+# deliberately does not trigger other workflows: without that call, every
+# import would land in the repository and never reach the site.
+
 name: Publish
 
 on:
   push:
-    branches: [main]
+  workflow_call:
   workflow_dispatch:
 
 permissions:
@@ -18,6 +28,10 @@ concurrency:
 
 jobs:
   publish:
+    # A push to some other branch is somebody's work in progress, not the site.
+    if: >-
+      github.event_name != 'push' ||
+      github.ref_name == github.event.repository.default_branch
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -27,11 +41,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+
       - name: Refuse to publish broken records
         run: node scripts/validate-data.mjs
 
       - name: Rebuild the single-file bundle
         run: node scripts/build-single-file.mjs
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

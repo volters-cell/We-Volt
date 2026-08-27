@@ -224,6 +224,16 @@ main {
    than below a roll-call of seven hundred names. */
 .rail.has-country #country-panel { order: -1; }
 
+/* A grid item will not shrink below its content unless told to. Without this a
+   five-column table inside the panel makes a 320-pixel phone scroll sideways. */
+.rail > * { min-width: 0; }
+
+/* When something is scrolled into view — a country tapped on a phone, the
+   roll-call jumped to from the panel — it should land a little below the top
+   of the screen rather than flush against it. */
+#country-panel, .panel-body, #decision-section, #member-section, #roll { scroll-margin-top: 1.75rem; }
+.map-section { min-width: 0; }
+
 @media (max-width: 62rem) {
   main { grid-template-columns: minmax(0, 1fr); }
   /* Scrolling past a full-width map to reach the vote you just opened is the
@@ -612,6 +622,36 @@ button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface)
 .seg-absent { background: var(--vote-absent); }
 
 table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+
+/* A table narrower than its columns scrolls inside its own box rather than
+   taking the page with it. */
+/* The shadows appear only on the side that has more table behind it, and slide
+   away as you scroll to that end — so a table too wide for a phone says so,
+   instead of looking cut off. */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background:
+    linear-gradient(to right, var(--surface) 40%, transparent) left center / 2.2rem 100% no-repeat,
+    linear-gradient(to left, var(--surface) 40%, transparent) right center / 2.2rem 100% no-repeat,
+    radial-gradient(farthest-side at 0 50%, color-mix(in srgb, var(--ink) 16%, transparent), transparent)
+      left center / .7rem 100% no-repeat,
+    radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--ink) 16%, transparent), transparent)
+      right center / .7rem 100% no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+.table-scroll table { min-width: 17rem; background: var(--surface); }
+
+/* On a narrow phone the five columns fit only if they are asked to. Tightening
+   them beats a table clipped mid-column, which reads as a broken page rather
+   than as something you can scroll. */
+@media (max-width: 26rem) {
+  .group-table { font-size: .78rem; }
+  .group-table th, .group-table td { padding: .3rem .22rem; }
+  .group-table thead th { font-size: .6rem; letter-spacing: .02em; }
+  .group-cell { gap: .35rem; }
+  .bd-tile-swatch { width: .85rem; min-width: .85rem; height: .85rem; }
+}
 caption { text-align: left; font-size: .78rem; color: var(--ink-faint); padding-bottom: .4rem; }
 th, td { text-align: left; padding: .35rem .4rem; border-bottom: 1px solid var(--line); }
 thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); font-weight: 600; }
@@ -1094,6 +1134,101 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .share-button:hover { border-color: var(--ink-faint); color: var(--ink); }
 .share-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .share-copy { font-weight: 600; color: var(--ink); border-color: var(--ink-faint); }
+
+/* --------------------------------------------------------------- motion
+
+   Things that appear should arrive rather than snap into place — enough to
+   show the reader where to look, little enough that a fast reader never waits
+   for it. Anyone who has asked their system for less motion gets none. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+
+  #decision-section:not([hidden]),
+  #member-section:not([hidden]),
+  .panel-body:not([hidden]) {
+    animation: arrive .22s cubic-bezier(.2, .7, .3, 1) both;
+  }
+
+  .session > summary { transition: background-color .15s ease; }
+  .decision-card, .roll-member, .breakdown-row { transition: background-color .12s ease, border-color .12s ease; }
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ------------------------------------------------------------ loading
+
+   Static JSON on a CDN usually lands in a blink, but on a slow phone the page
+   would otherwise sit blank with no sign that anything was happening. */
+.loading-thread {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  z-index: 40;
+  background: linear-gradient(90deg, transparent, var(--eu-blue), var(--eu-gold), transparent);
+  background-size: 40% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.is-loading .loading-thread { opacity: 1; animation: thread 1.1s ease-in-out infinite; }
+
+@keyframes thread {
+  from { background-position: -40% 0; }
+  to { background-position: 140% 0; }
+}
+
+.load-error {
+  grid-column: 1 / -1;
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--vote-against);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--vote-against) 8%, var(--surface));
+  max-width: 62ch;
+}
+.load-error p { margin: 0 0 .6rem; }
+.load-error p:last-child { margin-bottom: 0; }
+.load-error-detail { font-size: .82rem; color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+@media (prefers-reduced-motion: reduce) {
+  .is-loading .loading-thread { animation: none; }
+}
+
+/* ------------------------------------------------------------- touch sizes
+
+   A finger is not a cursor. Where the pointer is coarse, every control gets
+   enough height to be hit without aiming: the legend chips, the layer tabs,
+   the share row, the header link and the roll-call filters were all built at
+   mouse sizes. Nothing moves on a laptop. */
+@media (pointer: coarse) {
+  .legend li button,
+  .layer-tabs button,
+  .share-button,
+  .tracker-filters button,
+  .bloc,
+  #unfold-all,
+  .header-about,
+  .permalink,
+  .back-to-votes,
+  .vote-source,
+  .show-in-roll {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+  .legend li button { padding-block: .5rem; }
+  .roll-filters input,
+  .roll-filters select,
+  .roll-filters button,
+  .search input { min-height: 2.9rem; }
+  .roll-member, .decision-card, .breakdown-row { min-height: 3rem; }
+  .panel-close { min-height: 2.6rem; padding-inline: .9rem; }
+}
 
 /* A link that has to look like the way out — used on the not-found page. */
 .button-link {
