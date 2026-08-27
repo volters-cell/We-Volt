@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Two pages. Every vote lives at an address of the form #/<vote-id>, which a
+     crawler reads as the same document, so listing them here would say nothing
+     true. The votes are discoverable as data: data/decisions/index.json. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://volters-cell.github.io/We-Volt/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://volters-cell.github.io/We-Volt/about.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

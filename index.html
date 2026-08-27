@@ -3,8 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EU Tracker</title>
-  <meta name="description" content="An interactive map of the European Union: for a single Council, Commission or Parliament decision, see how each member state voted, what it costs them, and how each national press framed it.">
+  <title>EU Tracker — every vote of the European Parliament, member by member</title>
+  <meta name="description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta name="author" content="EU Tracker">
+  <!-- The published address. Change these four lines and the sitemap if the
+       site moves to its own domain; nothing else refers to it. -->
+  <link rel="canonical" href="https://volters-cell.github.io/We-Volt/">
+  <meta property="og:url" content="https://volters-cell.github.io/We-Volt/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EU Tracker">
+  <meta property="og:title" content="EU Tracker — every vote of the European Parliament">
+  <meta property="og:description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta property="og:image" content="https://volters-cell.github.io/We-Volt/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A map of the European Union beside the words: every vote of the European Parliament, member by member.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EU Tracker — every vote of the European Parliament">
+  <meta name="twitter:description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta name="twitter:image" content="https://volters-cell.github.io/We-Volt/assets/social-card.png">
+  <meta name="theme-color" content="#0b3a8f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171d26" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +56,8 @@
   </header>
 
   <main>
+    <h1 class="visually-hidden">EU Tracker — every roll-call vote of the European Parliament,
+      member by member</h1>
     <!-- Left: the map, which stays in view while the record is read. -->
     <section class="map-section" aria-labelledby="map-heading">
       <div class="layer-tabs" role="tablist" aria-label="What the map shows" hidden>
@@ -90,7 +113,7 @@
           <time id="decision-date"></time>
           <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
         </p>
-        <h1 id="decision-title"></h1>
+        <h2 id="decision-title"></h2>
         <p id="decision-subtitle" class="decision-subtitle"></p>
         <p id="decision-summary" class="decision-summary"></p>
         <p id="vote-links" class="vote-links"></p>
@@ -131,7 +154,7 @@
           <span id="member-group" class="badge"></span>
           <span id="member-country"></span>
         </p>
-        <h1 id="member-name"></h1>
+        <h2 id="member-name"></h2>
         <p id="member-summary" class="decision-subtitle"></p>
         <div id="member-totals" class="tally"></div>
         <div class="roll-call-tools">

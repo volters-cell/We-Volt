@@ -1,0 +1,7 @@
+# EU Tracker — a public record of how the European Parliament voted.
+# Everything here is open data and meant to be found, quoted and linked to.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://volters-cell.github.io/We-Volt/sitemap.xml

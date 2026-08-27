@@ -1132,6 +1132,53 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .share-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .share-copy { font-weight: 600; color: var(--ink); border-color: var(--ink-faint); }
 
+/* A link that has to look like the way out — used on the not-found page. */
+.button-link {
+  display: inline-block;
+  margin: .3rem .4rem .3rem 0;
+  padding: .55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.button-link:hover { border-color: var(--ink-faint); }
+.button-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.cite {
+  margin: 0 0 .9rem;
+  padding: .8rem 1rem;
+  border-left: 3px solid var(--eu-blue);
+  background: var(--surface-sunken);
+  border-radius: 0 8px 8px 0;
+  font-size: .92rem;
+  max-width: 66ch;
+}
+.cite-url { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+
+/* --------------------------------------------------------------- printing
+
+   A vote printed or saved as PDF is a document, not a screenshot of an app:
+   the record, the numbers and the roll-call, without the controls that only
+   work when they can be clicked. */
+@media print {
+  :root { --surface: #fff; --surface-sunken: #fff; --ink: #000; --line: #999; }
+  body { background: #fff; color: #000; }
+  .site-header .header-meta,
+  .map-section, .layer-tabs, .filters, .roll-filters, .share, .skip-link,
+  .decision-list, #session-list, .search-form, .back-to-votes, .roll-reset,
+  #sample-banner { display: none !important; }
+  main { display: block; max-width: none; padding: 0; }
+  .rail { display: block; }
+  .card, .panel, .delegation { border: 1px solid #999; break-inside: avoid; }
+  .delegation > summary::after { content: ""; }
+  .delegation[open] .dg-members, .dg-members { display: block; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .75em; word-break: break-all; }
+  .roll-members li, .breakdown li { break-inside: avoid; }
+}
+
 .bd-main { display: grid; gap: .28rem; min-width: 0; }
 .bd-label { font-weight: 650; font-size: .92rem; line-height: 1.25; }
 .bd-sub { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
