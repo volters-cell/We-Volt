@@ -1416,6 +1416,13 @@
       delegations = (blocs && blocs.delegations) || [];
 
       document.body.classList.remove('is-loading');
+
+      // A placeholder that fits the box it is in. The long one is clipped
+      // mid-word on a phone, which reads as a broken field.
+      if (window.matchMedia('(max-width: 34rem)').matches) {
+        dom['search-input'].placeholder = 'Search a vote or an MEP…';
+      }
+
       states = reference.states;
       statesByCode = {};
       states.forEach(function (item) { statesByCode[item.code] = item; });

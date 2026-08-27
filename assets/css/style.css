@@ -196,6 +196,30 @@ a:hover { text-decoration-thickness: 2px; }
   font-variant-numeric: tabular-nums;
 }
 .header-meta span { display: block; }
+
+/* On a phone the header was taking a third of the screen: the brand on two
+   lines, the plenary dates wrapped and right-aligned under it, and the About
+   link alone on a third row. Everything reads left, small, and in one flow. */
+@media (max-width: 34rem) {
+  .site-header {
+    padding: .8rem 1rem;
+    gap: .35rem .8rem;
+    align-items: flex-start;
+  }
+  .brand { gap: .6rem; }
+  .brand-mark { width: 28px; height: 28px; border-width: 2px; }
+  .brand-name { font-size: 1.05rem; }
+  .brand-tagline { font-size: .76rem; }
+  .header-meta {
+    text-align: left;
+    font-size: .74rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .1rem .6rem;
+    width: 100%;
+  }
+  .header-meta span { display: inline; }
+}
 #header-plenary { color: var(--ink-soft); font-weight: 500; }
 
 main {
@@ -1199,36 +1223,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   .is-loading .loading-thread { animation: none; }
 }
 
-/* ------------------------------------------------------------- touch sizes
 
-   A finger is not a cursor. Where the pointer is coarse, every control gets
-   enough height to be hit without aiming: the legend chips, the layer tabs,
-   the share row, the header link and the roll-call filters were all built at
-   mouse sizes. Nothing moves on a laptop. */
-@media (pointer: coarse) {
-  .legend li button,
-  .layer-tabs button,
-  .share-button,
-  .tracker-filters button,
-  .bloc,
-  #unfold-all,
-  .header-about,
-  .permalink,
-  .back-to-votes,
-  .vote-source,
-  .show-in-roll {
-    min-height: 2.75rem;
-    display: inline-flex;
-    align-items: center;
-  }
-  .legend li button { padding-block: .5rem; }
-  .roll-filters input,
-  .roll-filters select,
-  .roll-filters button,
-  .search input { min-height: 2.9rem; }
-  .roll-member, .decision-card, .breakdown-row { min-height: 3rem; }
-  .panel-close { min-height: 2.6rem; padding-inline: .9rem; }
-}
 
 /* A link that has to look like the way out — used on the not-found page. */
 .button-link {
@@ -1501,4 +1496,52 @@ button.permalink {
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ------------------------------------------------------------- touch sizes
+
+   A finger is not a cursor. Where the pointer is coarse, every control gets
+   enough height to be hit without aiming: the legend chips, the layer tabs,
+   the share row, the header link and the roll-call filters were all built at
+   mouse sizes. Nothing moves on a laptop. */
+@media (pointer: coarse) {
+  /* Boxed controls grow to a comfortable height. */
+  .legend li button,
+  .layer-tabs button,
+  .share-button,
+  .tracker-filters button,
+  .bloc,
+  #unfold-all {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+  .legend li button { padding-block: .5rem; }
+
+  /* Text links get their room from padding instead. Stretching an underlined
+     link to a fixed height leaves the underline floating below the words. */
+  .header-about,
+  .permalink,
+  .back-to-votes,
+  .vote-source,
+  .show-in-roll {
+    display: inline-block;
+    width: fit-content;
+    padding-block: .6rem;
+  }
+  /* The line under these is a border, which would sit at the bottom of the
+     padding rather than under the words. A real underline stays with the text. */
+  .vote-source {
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--focus) 45%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .3em;
+  }
+  .roll-filters input,
+  .roll-filters select,
+  .roll-filters button,
+  .search input { min-height: 2.9rem; }
+  .roll-member, .decision-card, .breakdown-row { min-height: 3rem; }
+  .panel-close { min-height: 2.6rem; padding-inline: .9rem; }
 }
