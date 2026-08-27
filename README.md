@@ -178,6 +178,19 @@ only if something changed. Set it up, and verify the first run, following
 The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md); how to file a
 country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DATA.md).
 
+**Following a party across every vote.** The Parliament records a member's country and
+political group but not the party they were elected for, so parties worth following as a
+bloc are listed by person id in `data/reference/delegations.json`. Each one gets a line
+under the outcome of every vote — Volt's five members, for instance — read from that
+vote's own ballots, so nothing is inferred: a member with no ballot did not vote. Adding
+a party is adding its members' ids to that file.
+
+**One rule for every number on the page.** Denominators come from seats, never from the
+ballots a record happens to carry: the chamber has 720, a delegation has what its member
+state holds. Records imported from the portal name only the members who voted — the
+portal does not publish absences — so counting ballots would make "of N members" mean
+something different on every vote.
+
 ## Why it is built this way
 
 - **Static files, and cheap ones.** The whole site is JSON and JavaScript on a CDN. A

@@ -236,8 +236,6 @@ export function buildRecord(decision, item, members, date, term) {
         `${totals.against} against, ${totals.abstain} abstained.` +
         (stated ? '' : ' Result derived from the totals.')
     },
-    impactUnit: 'EUR per person per year',
-    impactLabel: 'Estimated net budget effect',
     ballots: ballots,
     sources: [
       { label: 'Roll-call annex to the minutes', url: ANNEX_URL(term, date) },

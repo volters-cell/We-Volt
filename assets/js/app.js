@@ -26,6 +26,16 @@
   let map = null;
 
   const dom = {};
+
+  /* The panel has two headings — the prompt when nothing is open, and the
+     country's name when something is. Only one of them exists at a time as far
+     as a reader is concerned, so the section points at whichever is showing;
+     naming a hidden heading is how a panel ends up announced as "Pick a
+     country" while Germany is on screen. */
+  function panelLabelled(id) {
+    const panel = document.getElementById('country-panel');
+    if (panel) panel.setAttribute('aria-labelledby', id);
+  }
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
@@ -718,7 +728,11 @@
         ' aria-pressed="' + (roll.position === key ? 'true' : 'false') + '"' +
         ' title="' + esc(Panel.VOTE_LABEL[key]) + ': ' + totals[key] + ' members">' +
         '<span class="seg-value">' + percent + '%</span>' +
-        '<span class="seg-label">' + esc(Panel.VOTE_LABEL[key]) + '</span>' +
+        // A segment narrower than about a tenth of the bar cannot hold a word
+        // without clipping it, and "abst…" reads worse than nothing: the
+        // percentage and the colour already say which part this is, and the
+        // sentence underneath names all three.
+        (percent >= 9 ? '<span class="seg-label">' + esc(Panel.VOTE_LABEL[key]) + '</span>' : '') +
         '</button>';
     }).join('');
 
@@ -1152,6 +1166,7 @@
     if (!state.country) {
       dom['panel-body'].hidden = true;
       dom['panel-empty'].hidden = false;
+      panelLabelled('panel-empty-title');
       dom['panel-empty'].querySelector('p').textContent = state.decision
         ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
           'its own press told the story.'
@@ -1159,6 +1174,7 @@
           'vote from the list to see how they voted.';
     } else {
       dom['panel-empty'].hidden = true;
+      panelLabelled('panel-title');
       if (state.decision) {
         Panel.render(dom['panel-body'], state.decision, statesByCode[state.country],
           shareUrl(state.country));
