@@ -5,6 +5,11 @@
  * picker never drift from what is actually in the folder.
  *
  *   node scripts/build-index.mjs
+ *
+ * It also writes assets/groups/logos.json, the list of political group logos
+ * that have actually been added. Without it the page has to guess, and a guess
+ * means a browser console full of 404s for the eight groups whose logo nobody
+ * has dropped in yet.
  */
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
@@ -58,11 +63,24 @@ const index = {
   metadata: {
     project: 'EU Tracker',
     updated: new Date().toISOString().slice(0, 10),
-    dataStatus: 'Roll-call votes of the European Parliament, from the annexes to its minutes. ' +
-      'Summaries and press coverage are editorial and may be absent. See about.html.'
+    dataStatus: 'Roll-call votes of the European Parliament, from its open data portal. ' +
+      'Summaries are editorial and may be absent. See about.html.'
   },
   decisions
 };
 
 await writeFile(path.join(ROOT, DIR, 'index.json'), JSON.stringify(index, null, 2) + '\n', 'utf8');
 console.log(`index.json — ${decisions.length} decisions, newest ${decisions[0].date}`);
+
+/* Which group logos exist. Drop a file into assets/groups/ and run this. */
+const GROUP_DIR = 'assets/groups';
+let logos = [];
+try {
+  logos = (await readdir(path.join(ROOT, GROUP_DIR)))
+    .filter((name) => /\.(svg|png)$/i.test(name))
+    .sort();
+} catch (error) {
+  logos = [];
+}
+await writeFile(path.join(ROOT, GROUP_DIR, 'logos.json'), JSON.stringify(logos) + '\n', 'utf8');
+console.log(`${GROUP_DIR}/logos.json — ${logos.length} logo${logos.length === 1 ? '' : 's'}`);

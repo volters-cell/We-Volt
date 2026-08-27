@@ -30,9 +30,8 @@ publish a record; `npm run validate` will tell you what is missing.
 ```
 
 `status` is the honesty switch. `sample` puts a banner across the page and a chip on
-every figure. `verified` removes them — and the validator then refuses any press item
-still carrying `"sample": true`. There is no third state: a record is either sourced
-or it is labelled.
+every figure; `verified` removes them. There is no third state: a record is either
+sourced or it is labelled.
 
 ## A country entry
 
@@ -55,18 +54,6 @@ or it is labelled.
     "source": { "label": "…", "url": "https://…" },
     "sample": true                    // drop this once the figure is sourced
   },
-
-  "press": [
-    {
-      "outlet": "…",
-      "headline": "…",
-      "excerpt": "One or two sentences, quoted fairly.",
-      "framing": "critical",          // supportive | critical | mixed | neutral
-      "language": "pl",
-      "date": "2026-05-28",
-      "url": "https://…"
-    }
-  ],
 
   "note": "Anything a reader needs that the fields above cannot hold."
 }
@@ -94,9 +81,6 @@ or it is labelled.
   cents per head reads as clearly as one in tens of euros. Missing values are drawn as
   *no measurable effect*, never as zero cost. None of the bundled sample records carry
   cost figures — an unsourced number is worse than a blank.
-- **Press.** The dominant framing colours the country. A tie between two framings is
-  drawn as *mixed*. No coverage means a pale country and, in the panel, an invitation
-  to file the first entry — the gap is part of what the map is showing.
 
 ## Following one member
 
@@ -176,7 +160,5 @@ states and of the Union; giving them an inset is on the roadmap.
    that a reader would have to look up.
 3. Add impact figures with their sources, or leave them out. An unsourced number is
    worse than a blank.
-4. Add press coverage per country — see
-   [CONTRIBUTING-DATA.md](CONTRIBUTING-DATA.md).
-5. Run `node scripts/build-index.mjs` to put it in the feed.
-6. Run `npm test`. Green means it is publishable.
+4. Run `node scripts/build-index.mjs` to put it in the feed.
+5. Run `npm test`. Green means it is publishable.

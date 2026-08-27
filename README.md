@@ -1,16 +1,15 @@
 # EU Tracker
 
 **One European decision at a time, shown country by country: who voted how, what it
-costs each member state, and how each national press told the story.**
+costs each member state.**
 
 Open the map. Click a country. That is the whole interface.
 
 Brussels publishes almost everything and explains almost nothing. A roll-call vote
-arrives as a PDF annex with 720 names in it. A Council decision arrives as a line in a
-press release. What none of it answers is the question a reader in Poznań or Palermo
-actually asks: *what did **we** do, and what does it mean for **us**?* EU Tracker is
-built around that question, and around a second one that no institution answers at
-all — *what did everybody else's newspapers say about it?*
+arrives as an annex with 720 names in it, in a file built for a clerk. What none of it
+answers is the question a reader in Poznań or Palermo actually asks: *what did **we**
+do?* EU Tracker is built around that question — and around the one after it: *how did
+my own member vote, and does that match what they say at home?*
 
 ## What it does today
 
@@ -23,7 +22,6 @@ pick a vote and the map redraws in one of two layers:
 | Layer | Answers |
 | --- | --- |
 | **How they voted** | The member state's position. In Parliament files: where most of the delegation voted, the breakdown by political group, and — where a real roll-call has been imported — every MEP by name. |
-| **Press framing** | The coverage indexed for that country, each item tagged supportive, critical, mixed or neutral. |
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
 The 27 member states sit on a map that shows their neighbours — the UK, Norway,
@@ -52,7 +50,7 @@ Each decision is scored by its own rule, not a generic one: qualified-majority f
 get the 15-of-27 and 65%-of-population meters and a verdict on whether a blocking
 minority formed; unanimity files are measured against all 27, where an abstention does
 not block but a single vote against does; Commission acts have no country vote at all,
-which is exactly why their cost and press layers matter.
+and say so.
 
 The page opens on the search box. Below it, votes are grouped into the plenary sessions
 they were taken in — "Strasbourg · 6–9 Jul 2026" — folded until you unfold one, or all
@@ -126,10 +124,9 @@ voted; the vote items behind them; the list of members; and the list of sittings
 `npm run backfill` re-reads the whole term.
 
 Still missing, and honestly labelled as such: Council and Commission records, which have
-no machine-readable source; the plain-language summaries, which are editorial; and the
-press coverage, which is the part that needs journalists. Every sample is flagged as one, in
-the file (`"status": "sample"`), on the page (a banner and a chip), and in the
-validator, which refuses to let a sample lose its label.
+no machine-readable source, and the plain-language summaries, which are editorial work.
+Every sample is flagged as one, in the file (`"status": "sample"`), on the page (a
+banner and a chip), and in the validator, which refuses to let a sample lose its label.
 
 ```
 data/
@@ -166,8 +163,8 @@ node scripts/build-index.mjs                        # rebuild the feed
 
 That reads the Parliament's own record of the sitting, maps every voter's id to a name
 and a country through the member directory, and writes one record per final vote with
-each MEP's own vote in it. It deliberately leaves the summary and press sections
-empty: those are editorial work, and nothing should generate them.
+each MEP's own vote in it. It deliberately leaves the summary empty: that is editorial
+work, and nothing should generate it.
 
 **It can run itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
 and again each night — the second pass catching whether each text carried, which the
@@ -175,8 +172,7 @@ Parliament publishes a day later than the votes themselves — then validates an
 only if something changed. Set it up, and verify the first run, following
 [docs/AUTOMATION.md](docs/AUTOMATION.md).
 
-The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md); how to file a
-country's press coverage is in [docs/CONTRIBUTING-DATA.md](docs/CONTRIBUTING-DATA.md).
+The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md).
 
 **Following a party across every vote.** The Parliament records a member's country and
 political group but not the party they were elected for, so parties worth following as a
@@ -216,10 +212,11 @@ border.
 
 ## Where it is going
 
-Multilingual interface, national press partners filing coverage in their own
-languages, an inset for the outermost regions, and a decision archive rather than a
-handful of files. The plan, and its fit with the Creative Europe journalism
-partnerships strand, is in [docs/ROADMAP.md](docs/ROADMAP.md).
+A multilingual interface, plain-language summaries for the votes that still have none,
+national parties resolved so any party can be followed as a bloc, embeds a newsroom can
+drop into an article, and an inset for the outermost regions. The plan, and its fit
+with the Creative Europe journalism partnerships strand, is in
+[docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Licence
 

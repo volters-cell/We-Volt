@@ -35,7 +35,7 @@
         return;
       }
       const code = member.country;
-      if (!decision.countries[code]) decision.countries[code] = { meps: [], mepGroups: [], press: [] };
+      if (!decision.countries[code]) decision.countries[code] = { meps: [], mepGroups: [] };
       const country = decision.countries[code];
       country.meps = country.meps || [];
       country.mepGroups = country.mepGroups || [];
@@ -179,20 +179,6 @@
 
   const FRAMINGS = ['supportive', 'critical', 'mixed', 'neutral'];
 
-  function pressFraming(country) {
-    const press = (country && country.press) || [];
-    if (!press.length) return { framing: 'none', count: 0 };
-    const counts = {};
-    press.forEach(function (item) {
-      counts[item.framing] = (counts[item.framing] || 0) + 1;
-    });
-    const ranked = FRAMINGS.filter(function (f) { return counts[f]; })
-      .sort(function (a, b) { return counts[b] - counts[a]; });
-    if (!ranked.length) return { framing: 'neutral', count: press.length };
-    const dominant = ranked[0];
-    const tied = ranked.length > 1 && counts[ranked[1]] === counts[dominant];
-    return { framing: tied ? 'mixed' : dominant, count: press.length };
-  }
 
   /* Five buckets either side of zero, scaled to the decision's own range, so a
      file measured in cents per head reads as clearly as one in tens of euros. */
@@ -241,7 +227,6 @@
     countryPosition: countryPosition,
     delegationPosition: delegationPosition,
     qualifiedMajority: qualifiedMajority,
-    pressFraming: pressFraming,
     impactScale: impactScale,
     formatImpact: formatImpact,
     formatDate: formatDate,

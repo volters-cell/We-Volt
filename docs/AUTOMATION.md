@@ -196,9 +196,8 @@ eight and is worth doing only once the index is chunked.
 
 ## What the importer will not do
 
-It writes the vote and nothing else. `summary`, `whatItMeans`, the impact figures and
-the press cards are left empty, because those are editorial work and no script should
-invent them.
+It writes the vote and nothing else. `summary` and `whatItMeans` are left empty,
+because those are editorial work and no script should invent them.
 
 It also cannot write a good headline. The portal titles a vote the way the order paper
 does — `Establishment of the digital euro ***I`, or worse,

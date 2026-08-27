@@ -23,7 +23,7 @@
  * procedure. That is what turns "Article 3, § 1, point b – Am 16" into a record
  * headed "Establishment of the digital euro", filed under 2023/0212.
  *
- * Nothing about the cost or the press is ever generated. Those are editorial.
+ * Nothing editorial is ever generated: a record arrives with an empty summary.
  */
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';

@@ -14,7 +14,6 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const BODIES = ['parliament', 'council', 'commission'];
 const POSITION_CODES = [0, 1, 2, 3];
 const POSITIONS = ['for', 'against', 'abstain', 'absent', 'not-applicable'];
-const FRAMINGS = ['supportive', 'critical', 'mixed', 'neutral'];
 const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
 
 const problems = [];
@@ -148,19 +147,6 @@ function checkDecision(file, decision, states) {
       fail(where, 'an impact figure needs a note explaining what it measures');
     }
 
-    (country.press || []).forEach((item) => {
-      if (!item.outlet) fail(where, 'a press item has no outlet');
-      if (!item.headline) fail(where, 'a press item has no headline');
-      if (!FRAMINGS.includes(item.framing)) {
-        fail(where, `press framing "${item.framing}" is not one of ${FRAMINGS.join(', ')}`);
-      }
-      if (decision.status === 'verified' && !item.url) {
-        note(where, `press item "${item.headline}" has no link`);
-      }
-      if (decision.status === 'verified' && item.sample) {
-        fail(where, `press item "${item.headline}" is still flagged as a sample`);
-      }
-    });
   });
 }
 

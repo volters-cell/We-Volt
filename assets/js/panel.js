@@ -1,6 +1,5 @@
-/* The country panel — the thing the whole map exists to open. Three answers,
-   in the order a reader asks them: how did we vote, what does it cost us,
-   what did our own press say. */
+/* The country panel — the thing the whole map exists to open: how did this
+   country vote, member by member and group by group. */
 (function (global) {
   'use strict';
 
@@ -11,14 +10,6 @@
     absent: 'Did not vote',
     'not-applicable': 'No vote taken',
     unknown: 'Not recorded'
-  };
-
-  const FRAMING_LABEL = {
-    supportive: 'Supportive',
-    critical: 'Critical',
-    mixed: 'Mixed',
-    neutral: 'Neutral',
-    none: 'No coverage indexed yet'
   };
 
   let totalPopulation = 0;
@@ -147,40 +138,6 @@
       '</section>';
   }
 
-  function pressSection(country) {
-    const press = country.press || [];
-    const framing = Data.pressFraming(country);
-
-    let html = '<section class="card"><h3>How the press told it ' +
-      '<span class="chip chip-planned">next</span></h3>';
-    if (!press.length) {
-      return html + '<p class="empty">Not built yet. The vote is a matter of record; how it was ' +
-        'told at home is not, and no institution collects it. Indexing that country by country, ' +
-        'with reporters in each member state, is what this project is for.</p></section>';
-    }
-
-    html += '<p class="framing-summary">Dominant framing: <span class="framing framing-' +
-      escapeHTML(framing.framing) + '">' + escapeHTML(FRAMING_LABEL[framing.framing]) +
-      '</span> · ' + press.length + ' item' + (press.length === 1 ? '' : 's') + ' indexed</p>';
-
-    html += '<ul class="press-list">' + press.map(function (item) {
-      return '<li class="press-item framing-border-' + escapeHTML(item.framing) + '">' +
-        '<p class="press-outlet">' + escapeHTML(item.outlet) +
-        (item.language ? ' <span class="lang">' + escapeHTML(item.language.toUpperCase()) + '</span>' : '') +
-        (item.sample ? ' <span class="chip chip-sample">sample</span>' : '') + '</p>' +
-        (item.url
-          ? '<p class="press-headline"><a href="' + escapeHTML(item.url) + '">' + escapeHTML(item.headline) + '</a></p>'
-          : '<p class="press-headline">' + escapeHTML(item.headline) + '</p>') +
-        (item.excerpt ? '<p class="press-excerpt">' + escapeHTML(item.excerpt) + '</p>' : '') +
-        '<p class="press-meta"><span class="framing framing-' + escapeHTML(item.framing) + '">' +
-        escapeHTML(FRAMING_LABEL[item.framing] || item.framing) + '</span>' +
-        (item.date ? ' · ' + escapeHTML(Data.formatDate(item.date)) : '') + '</p>' +
-        '</li>';
-    }).join('') + '</ul>';
-
-    return html + '</section>';
-  }
-
   const BLOCS = [
     ['euro', 'Euro', 'Outside the euro'],
     ['schengen', 'Schengen', 'Outside Schengen'],
@@ -233,7 +190,7 @@
       '</header>' +
       '<section class="card">' +
         '<p class="neutral-note">Pick a vote from the list to see how ' +
-        escapeHTML(state.name) + ' voted, and how its press told the story.</p>' +
+        escapeHTML(state.name) + ' voted, member by member.</p>' +
         '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
         '" data-copy="' + escapeHTML(permalink) + '">Copy link to this country</a></p>' +
       '</section>';
@@ -315,12 +272,11 @@
       '</header>' +
       positionSection(decision, country, state) +
       impactSection(decision, country) +
-      pressSection(country) +
       (country.note ? '<p class="country-note">' + escapeHTML(country.note) + '</p>' : '');
     if (global.Groups) global.Groups.loadLogos(node);
     node.hidden = false;
   }
 
   global.Panel = { render: render, renderProfile: renderProfile, renderOutside: renderOutside,
-    setStates: setStates, VOTE_LABEL: VOTE_LABEL, FRAMING_LABEL: FRAMING_LABEL, escapeHTML: escapeHTML };
+    setStates: setStates, VOTE_LABEL: VOTE_LABEL, escapeHTML: escapeHTML };
 })(window);

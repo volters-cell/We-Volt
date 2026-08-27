@@ -7,13 +7,14 @@ across 27 countries.
 
 - The map: EU-27, projected the way the EU projects its own maps, keyboard-navigable,
   56 KB of geometry and no tile server.
-- Three layers over one decision: vote, cost, press framing.
+- The vote laid over the map: how every member state, every political group and every
+  member voted, on any record.
 - Council qualified-majority arithmetic computed live, including whether a blocking
   minority formed.
 - Parliament records down to the individual MEP, imported from published roll-calls.
 - Permalinks to any country's record on any decision.
-- Three sample decisions, labelled as samples in the data, on the page, and by the
-  validator.
+- The whole of this parliamentary term imported from the Parliament's open data
+  portal, checked vote by vote against it by a monthly audit.
 
 ## Next — what makes it usable by a journalist on deadline
 
@@ -29,17 +30,18 @@ across 27 countries.
    article, with attribution baked in. This is the distribution mechanism — most
    readers will meet the project inside somebody else's story.
 5. **Multilingual interface.** Interface strings first (they are few and static), then
-   summaries in the 24 official languages. Press excerpts stay in their original
-   language with an optional translation.
+   summaries in the 24 official languages. The Parliament publishes its own titles in
+   all of them, which is the starting point.
 
 ## Later — what makes it a network rather than a website
 
-6. **National press partners.** One reporter per member state filing coverage entries.
-   The editorial standards are already written down in
-   [CONTRIBUTING-DATA.md](CONTRIBUTING-DATA.md); what is missing is the people.
-7. **Cost methodology board.** Impact figures are the hardest part to do honestly. A
-   published methodology, a named reviewer per figure, and a visible range where
-   estimates conflict.
+6. **Plain-language summaries.** The Parliament titles a vote the way the order paper
+   does. Turning that into a sentence a reader recognises is editorial work, and it is
+   what stands between a record and a story. One editor per session would do it.
+7. **National parties.** A member's country and group are here; the party they were
+   elected for is not, because the portal records it as an organisation number rather
+   than a name. Resolving those numbers would let any party be followed as a bloc, the
+   way Volt already is.
 8. **Outermost regions inset.** The Azores, Madeira, the Canaries and the French
    overseas departments are member-state territory and currently off the map.
 9. **Accessibility audit.** Keyboard navigation and colour contrast were built in from
@@ -63,18 +65,21 @@ What this project can put in an application that most cannot:
   map, click a country and see the output, in the same session in which they read the
   application.
 - **Genuinely cross-border by construction.** The product does not work with one
-  country in it. Its value comes from the comparison — the same decision, 27 framings
-  — which is the exact thing the strand exists to fund.
-- **A defined role for partner newsrooms.** Partners are not audiences here; they file
-  the country records, and the editorial standards for doing that are already written.
-- **Multilingualism as a feature, not a translation cost.** The press layer holds
-  headlines in their own languages by design.
+  country in it. Its value comes from the comparison — the same vote, 27 delegations,
+  eight political groups — which is the exact thing the strand exists to fund.
+- **A defined role for partner newsrooms.** Partners are not audiences here: they get
+  a per-vote record they can embed, cite and check against the Parliament's own.
+- **Multilingualism as a feature, not a translation cost.** The Parliament publishes
+  every vote's title in all 24 official languages; the interface is the only part that
+  needs writing.
 - **Open outputs.** Code MIT, data CC BY, no lock-in, and everything survives the end
   of the grant because the site is static files.
-- **Measurable outcomes.** Decisions covered, member states with press entries filed,
-  embeds placed in partner outlets, and the coverage gaps the map makes visible.
+- **Measurable outcomes.** Votes covered against the Parliament's own count — a figure
+  the monthly audit produces rather than a claim — embeds placed in partner outlets,
+  and summaries written.
 
-The honest weaknesses to prepare answers for: the cost figures need a methodology and
-named reviewers before anyone should rely on them; the press layer needs sustained
-human effort in 27 countries, which is the bulk of any budget; and sample data must be
-gone from the public site before it is presented as a service.
+The honest weaknesses to prepare answers for: 115 of the votes still have no
+plain-language summary, and writing them is human work that a budget has to pay for;
+national parties are missing until the portal's organisation numbers are resolved; and
+the cost layer needs a published methodology and named reviewers before anyone should
+rely on a figure in it.

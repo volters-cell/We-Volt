@@ -93,5 +93,5 @@ jobs:
           git commit -m "Import from the European Parliament
 
           Automated by .github/workflows/plenary-sync.yml. Records land with
-          empty summary and press sections: those are editorial work."
+          an empty summary: writing one is editorial work."
           git push

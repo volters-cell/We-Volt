@@ -21,6 +21,10 @@ letter or a digit turned into a hyphen — the same slug the code builds, so
 `Greens/EFA` becomes `greens-efa`. SVG is preferred; PNG works. Square artwork
 sits best; anything else is fitted inside the tile without being stretched.
 
+After adding one, run `node scripts/build-index.mjs` — it rewrites `logos.json`,
+the list of files that exist. The page reads that list rather than guessing, so
+a group with no logo costs no failed request.
+
 Nothing breaks if a file is absent: that group keeps its coloured mark, and the
 two styles sit together happily while you collect the set. The names, the
 colours and the swap all live in `assets/js/groups.js`, so a group looks the

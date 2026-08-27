@@ -68,10 +68,6 @@
     impact: {
       heading: 'What it costs each member state',
       hint: 'Shaded by the estimated effect per person. Every figure carries its source in the country panel.'
-    },
-    press: {
-      heading: 'How each national press framed it',
-      hint: 'Shaded by the dominant framing of the coverage indexed so far. Pale countries have no coverage indexed yet.'
     }
   };
 
@@ -498,18 +494,6 @@
         const impact = (decision.countries[code] || {}).impact;
         return '<span>' + esc(Data.formatImpact(impact ? impact.value : null, decision.impactUnit)) + '</span>';
       });
-    } else if (state.layer === 'press') {
-      map.paint(function (code) {
-        const framing = Data.pressFraming(decision.countries[code]);
-        return {
-          className: 'layer-press press-' + framing.framing,
-          label: Panel.FRAMING_LABEL[framing.framing]
-        };
-      }, function (code) {
-        const framing = Data.pressFraming(decision.countries[code]);
-        return '<span>' + esc(Panel.FRAMING_LABEL[framing.framing]) +
-          (framing.count ? ' · ' + framing.count + ' item' + (framing.count === 1 ? '' : 's') : '') + '</span>';
-      });
     } else {
       map.paint(function (code) {
         const position = Data.countryPosition(decision, code);
@@ -572,10 +556,6 @@
         legendRow('layer-impact impact-gain-1', 'Gain under ' + fmt(step) + ' ' + unit) +
         legendRow('layer-impact impact-gain-2', 'Gain ' + fmt(step) + '–' + fmt(step * 2) + ' ' + unit) +
         legendRow('layer-impact impact-gain-3', 'Gain over ' + fmt(step * 2) + ' ' + unit);
-    } else {
-      html = ['supportive', 'critical', 'mixed', 'neutral', 'none'].map(function (framing) {
-        return legendRow('layer-press press-' + framing, Panel.FRAMING_LABEL[framing], framing);
-      }).join('');
     }
 
     const clickable = html.indexOf('data-isolate') !== -1;
@@ -599,9 +579,6 @@
       const memberships = (statesByCode[code] || {}).memberships || {};
       const membership = memberships[isolate.key];
       return Boolean(membership && membership.member);
-    }
-    if (state.layer === 'press') {
-      return Data.pressFraming(state.decision.countries[code]).framing === isolate.key;
     }
     return Data.countryPosition(state.decision, code).position === isolate.key;
   }
@@ -1036,13 +1013,8 @@
       // The stacked bar below carries the numbers; repeating them here twice
       // over would just be furniture.
     } else {
-      const covered = Object.keys(decision.countries).filter(function (code) {
-        return (decision.countries[code].press || []).length;
-      }).length;
       html += '<p class="outcome-note">No country-by-country vote exists for this act: ' +
-        'the Commission used powers the member states had already delegated to it. ' +
-        'What each country got instead is the effect and the coverage — ' + covered +
-        ' of 27 have press indexed so far.</p>';
+        'the Commission used powers the member states had already delegated to it.</p>';
     }
 
     dom.outcome.innerHTML = html + delegationLine(decision);
@@ -1180,7 +1152,7 @@
       railShowsCountry(false);
       dom['panel-empty'].querySelector('p').textContent = state.decision
         ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
-          'its own press told the story.'
+          'how its own members voted.'
         : 'Click any member state to see who they are and which clubs they are in. Pick a ' +
           'vote from the list to see how they voted.';
     } else {
@@ -1256,15 +1228,8 @@
     const costs = hasImpact(decision);
     document.getElementById('tab-impact').hidden = !costs;
 
-    const press = Object.keys(decision.countries).some(function (code) {
-      return (decision.countries[code].press || []).length;
-    });
-    document.getElementById('tab-press').hidden = !press;
-    if (!press && state.layer === 'press') setLayer('vote');
     if (!state.layerChosen) {
-      // "How they voted" is an empty question for an act nobody voted on, so a
-      // Commission file opens on the coverage instead.
-      setLayer(decision.body === 'commission' ? 'press' : 'vote');
+      setLayer('vote');
     } else if (!costs && state.layer === 'impact') {
       setLayer('vote');
     }
@@ -1353,7 +1318,7 @@
   }
 
   function setLayer(layer, chosen) {
-    // "Against" means nothing once the map is showing press framing. A bloc
+    // "Against" means nothing once the map is showing what a decision costs. A bloc
     // still does, so that one stays.
     if (layer !== state.layer && state.isolate && state.isolate.kind === 'layer') {
       state.isolate = null;

@@ -95,12 +95,34 @@
      otherwise. The image is swapped in only once it has actually loaded, so a
      missing file leaves the tile alone rather than leaving a hole. Called on
      whatever has just been rendered, so every list gets the same treatment. */
+  /* Which logo files exist, asked for once. scripts/build-index.mjs writes the
+     list; guessing instead would mean a failed request for every group nobody
+     has added a logo for yet. */
+  let available = null;
+
+  function logoList() {
+    if (available) return available;
+    available = fetch('assets/groups/logos.json', { cache: 'no-cache' })
+      .then(function (response) { return response.ok ? response.json() : []; })
+      .catch(function () { return []; });
+    return available;
+  }
+
   function loadLogos(root) {
     if (!root) return;
-    Array.prototype.forEach.call(root.querySelectorAll('[data-logo]'), function (node) {
-      if (node.classList.contains('has-logo')) return;
-      const key = node.getAttribute('data-logo');
-      ['svg', 'png'].forEach(function (extension) {
+    const marks = Array.prototype.slice.call(root.querySelectorAll('[data-logo]'));
+    if (!marks.length) return;
+
+    logoList().then(function (files) {
+      if (!files.length) return;
+      marks.forEach(function (node) {
+        if (node.classList.contains('has-logo')) return;
+        const key = node.getAttribute('data-logo');
+        const file = files.find(function (name) {
+          return name.replace(/\.(svg|png)$/i, '') === key;
+        });
+        if (!file) return;
+
         const image = new Image();
         image.onload = function () {
           if (node.querySelector('img')) return;
@@ -111,7 +133,7 @@
           image.alt = '';
           node.appendChild(image);
         };
-        image.src = 'assets/groups/' + key + '.' + extension;
+        image.src = 'assets/groups/' + file;
       });
     });
   }
