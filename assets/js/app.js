@@ -36,6 +36,16 @@
     const panel = document.getElementById('country-panel');
     if (panel) panel.setAttribute('aria-labelledby', id);
   }
+
+  /* A country you have just clicked is the answer to that click, so its record
+     moves to the top of the reading column — above the search and the list of
+     plenary sessions — instead of sitting under everything else. It goes back
+     to the bottom when nothing is open, so the page still starts on the
+     search. */
+  function railShowsCountry(open) {
+    const rail = document.querySelector('.rail');
+    if (rail) rail.classList.toggle('has-country', Boolean(open));
+  }
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
@@ -1167,6 +1177,7 @@
       dom['panel-body'].hidden = true;
       dom['panel-empty'].hidden = false;
       panelLabelled('panel-empty-title');
+      railShowsCountry(false);
       dom['panel-empty'].querySelector('p').textContent = state.decision
         ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
           'its own press told the story.'
@@ -1175,6 +1186,7 @@
     } else {
       dom['panel-empty'].hidden = true;
       panelLabelled('panel-title');
+      railShowsCountry(true);
       if (state.decision) {
         Panel.render(dom['panel-body'], state.decision, statesByCode[state.country],
           shareUrl(state.country));

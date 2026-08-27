@@ -231,6 +231,11 @@ main {
   min-width: 0;
 }
 
+/* Except when a country is open. Then its record is what the reader just asked
+   for, so it comes first — above the search and the plenary sessions — rather
+   than below a roll-call of seven hundred names. */
+.rail.has-country #country-panel { order: -1; }
+
 @media (max-width: 62rem) {
   main { grid-template-columns: minmax(0, 1fr); }
   /* Scrolling past a full-width map to reach the vote you just opened is the
