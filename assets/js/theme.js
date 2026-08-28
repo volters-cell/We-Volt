@@ -1,132 +1,110 @@
-/* Theme management for EU Tracker
-   Handles light/dark/system theme switching with localStorage persistence
-   and proper ARIA attribute management. */
+/* Light, dark, or whatever the machine says.
 
-(function () {
+   Three states, one button. The icon shows the state you are in — a sun, a
+   moon, or a half-filled circle for "follow the system" — and the label says
+   what the next press will do, so the control is legible whether you read it
+   or look at it.
+
+   The choice is remembered. Storage can be refused outright (a private window,
+   a browser set to block it), so every read and write is guarded: the site
+   works without memory, it just forgets. */
+(function (global) {
   'use strict';
 
-  const THEME_KEY = 'eu-tracker-theme';
-  const THEMES = ['light', 'dark', 'system'];
+  const KEY = 'eu-tracker-theme';
+  const ORDER = ['light', 'dark', 'system'];
 
-  // Current theme state
-  let currentTheme = null;
-
-  // Get the user's system preference
-  function getSystemPreference() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  // Get stored theme or default to system
-  function getStoredTheme() {
-    const stored = localStorage.getItem(THEME_KEY);
-    return stored && THEMES.includes(stored) ? stored : 'light';
-  }
-
-  // Apply theme to document
-  function applyTheme(theme) {
-    const html = document.documentElement;
-    
-    // Remove all theme attributes first
-    html.removeAttribute('data-theme');
-    
-    // Apply the selected theme
-    if (theme === 'light') {
-      html.setAttribute('data-theme', 'light');
-    } else if (theme === 'dark') {
-      html.setAttribute('data-theme', 'dark');
-    }
-    // 'system' uses no attribute, relying on prefers-color-scheme
-    
-    currentTheme = theme;
-    updateToggleButton();
-    
-    // Save to localStorage
-    localStorage.setItem(THEME_KEY, theme);
-  }
-
-  // Update the toggle button's appearance and label
-  function updateToggleButton() {
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (!toggleBtn) return;
-
-    const icons = {
-      light: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
-      dark: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>',
-      system: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-    };
-
-    const labels = {
-      light: 'Switch to dark theme',
-      dark: 'Switch to light theme',
-      system: 'Switch to system theme'
-    };
-
-    toggleBtn.innerHTML = icons[theme] || icons.system;
-    toggleBtn.setAttribute('aria-label', labels[theme] || labels.system);
-    toggleBtn.setAttribute('title', labels[theme] || labels.system);
-  }
-
-  // Cycle to next theme
-  function cycleTheme() {
-    const currentIndex = THEMES.indexOf(currentTheme);
-    const nextIndex = (currentIndex + 1) % THEMES.length;
-    const nextTheme = THEMES[nextIndex];
-    
-    applyTheme(nextTheme);
-    
-    // Dispatch custom event for other components
-    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme: nextTheme } }));
-  }
-
-  // Initialize theme
-  function initTheme() {
-    const storedTheme = getStoredTheme();
-    applyTheme(storedTheme);
-
-    // Set up toggle button - try multiple times if not found
-    function setupButton() {
-      const toggleBtn = document.getElementById('theme-toggle');
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', cycleTheme);
-        
-        // Add keyboard support
-        toggleBtn.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            cycleTheme();
-          }
-        });
-      } else {
-        // Try again after a short delay
-        setTimeout(setupButton, 100);
-      }
-    }
-    
-    setupButton();
-
-    // Listen for system preference changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-      if (currentTheme === 'system') {
-        applyTheme('system');
-      }
-    });
-  }
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTheme);
-  } else {
-    initTheme();
-  }
-
-  // Expose for debugging
-  window.EUTheme = {
-    get: () => currentTheme,
-    set: (theme) => {
-      if (THEMES.includes(theme)) {
-        applyTheme(theme);
-      }
-    },
-    cycle: cycleTheme
+  const ICONS = {
+    light: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+      '<circle cx="12" cy="12" r="4.4" fill="none"/>' +
+      '<line x1="12" y1="1.9" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.1"/>' +
+      '<line x1="1.9" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.1" y2="12"/>' +
+      '<line x1="4.9" y1="4.9" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.1" y2="19.1"/>' +
+      '<line x1="4.9" y1="19.1" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="19.1" y2="4.9"/></svg>',
+    dark: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+      '<path d="M20.7 13.5A8.5 8.5 0 0 1 10.5 3.3 8.6 8.6 0 1 0 20.7 13.5z" ' +
+      'fill="currentColor" stroke="none"/></svg>',
+    // A circle with one half filled: neither chosen, the machine decides.
+    system: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+      '<circle cx="12" cy="12" r="8.2" fill="none"/>' +
+      '<path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor" stroke="none"/></svg>'
   };
-})();
+
+  const NEXT_LABEL = {
+    light: 'Light theme. Switch to dark.',
+    dark: 'Dark theme. Switch to follow the system.',
+    system: 'Following the system. Switch to light.'
+  };
+
+  let current = null;
+
+  function stored() {
+    try {
+      const value = localStorage.getItem(KEY);
+      return ORDER.indexOf(value) === -1 ? null : value;
+    } catch (error) {
+      return null;   // storage refused; the default stands
+    }
+  }
+
+  function remember(theme) {
+    try {
+      localStorage.setItem(KEY, theme);
+    } catch (error) {
+      // nothing to do: the choice holds for this visit and no longer
+    }
+  }
+
+  function button() {
+    return document.getElementById('theme-toggle');
+  }
+
+  function apply(theme, options) {
+    const root = document.documentElement;
+    if (theme === 'system') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', theme);
+    current = theme;
+
+    const control = button();
+    if (control) {
+      control.innerHTML = ICONS[theme];
+      control.setAttribute('aria-label', NEXT_LABEL[theme]);
+      control.setAttribute('title', NEXT_LABEL[theme]);
+      control.setAttribute('data-theme-state', theme);
+    }
+
+    if (!(options && options.quiet)) {
+      remember(theme);
+      global.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
+    }
+  }
+
+  function cycle() {
+    apply(ORDER[(ORDER.indexOf(current) + 1) % ORDER.length]);
+  }
+
+  function start() {
+    apply(stored() || 'light', { quiet: !stored() });
+
+    const control = button();
+    // A button already answers Enter and Space by firing click. Handling those
+    // keys as well is how a control ends up switching twice on one press.
+    if (control) control.addEventListener('click', cycle);
+
+    try {
+      global.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+        if (current === 'system') apply('system', { quiet: true });
+      });
+    } catch (error) {
+      // an older browser without matchMedia listeners: nothing breaks
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+
+  global.EUTheme = { get: function () { return current; }, set: apply, cycle: cycle };
+})(window);

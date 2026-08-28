@@ -74,13 +74,13 @@
   function buildCountryViewContent(countryCode, countryData) {
     const votes = getCountryVotes(countryCode);
     
-    let html = '
+    let html = `
       <div class="country-view">
         <header class="country-view-header">
-          <h2>' + escapeHTML(countryData.name) + '</h2>
+          <h2>${escapeHTML(countryData.name)}</h2>
           <div class="country-meta">
-            <span class="country-code">' + escapeHTML(countryCode) + '</span>
-            <span class="country-seats">' + (countryData.seats || 'N/A') + ' seats</span>
+            <span class="country-code">${escapeHTML(countryCode)}</span>
+            <span class="country-seats">${(countryData.seats || 'N/A')} seats</span>
           </div>
         </header>
         
@@ -88,23 +88,23 @@
           <h3>Voting Statistics</h3>
           <div class="stats-grid">
             <div class="stat-card">
-              <span class="stat-value">' + (votes.total || 0) + '</span>
+              <span class="stat-value">${(votes.total || 0)}</span>
               <span class="stat-label">Total Votes</span>
             </div>
             <div class="stat-card">
-              <span class="stat-value">' + (votes.for || 0) + '</span>
+              <span class="stat-value">${(votes.for || 0)}</span>
               <span class="stat-label">For</span>
             </div>
             <div class="stat-card">
-              <span class="stat-value">' + (votes.against || 0) + '</span>
+              <span class="stat-value">${(votes.against || 0)}</span>
               <span class="stat-label">Against</span>
             </div>
             <div class="stat-card">
-              <span class="stat-value">' + (votes.abstain || 0) + '</span>
+              <span class="stat-value">${(votes.abstain || 0)}</span>
               <span class="stat-label">Abstentions</span>
             </div>
             <div class="stat-card">
-              <span class="stat-value">' + (votes.absent || 0) + '</span>
+              <span class="stat-value">${(votes.absent || 0)}</span>
               <span class="stat-label">Absent</span>
             </div>
           </div>
@@ -113,11 +113,11 @@
         <section class="country-votes">
           <h3>Recent Votes</h3>
           <div class="votes-list">
-            ' + buildVotesList(countryCode) + '
+            ${buildVotesList(countryCode)}
           </div>
         </section>
       </div>
-    ';
+    `;
     
     return html;
   }
@@ -151,7 +151,7 @@
       modal.setAttribute('role', 'dialog');
       modal.setAttribute('aria-labelledby', 'country-view-title');
       modal.setAttribute('aria-modal', 'true');
-      modal.innerHTML = '
+      modal.innerHTML = `
         <div class="modal-overlay" tabindex="-1"></div>
         <div class="modal-content country-view-content" tabindex="-1">
           <button class="modal-close" aria-label="Close country view">
@@ -162,7 +162,7 @@
           </button>
           <div id="country-view-container"></div>
         </div>
-      ';
+      `;
       document.body.appendChild(modal);
       
       // Add close handler

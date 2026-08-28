@@ -55,19 +55,20 @@
     <p class="header-meta">
       <span id="header-plenary"></span>
       <a href="about.html" class="header-about">About the data</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme" onclick="window.EUTheme.cycle&&window.EUTheme.cycle()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
+      <div class="site-share" id="site-share">
+        <button type="button" class="site-share-button" id="site-share-button"
+                aria-expanded="false" aria-controls="site-share-menu"
+                aria-label="Share this site" title="Share this site">
+          <span>Share</span>
+          <svg class="caret" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 9.5 12 15.5 18 9.5" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="site-share-menu" id="site-share-menu" role="menu" hidden></div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button"
+              aria-label="Toggle the theme" title="Toggle the theme"></button>
     </p>
   </header>
 
@@ -243,6 +244,7 @@
   <script src="assets/js/map.js"></script>
   <script src="assets/js/panel.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/share.js"></script>
   <script src="assets/js/keyboard.js"></script>
   <script src="assets/js/country-view.js"></script>
   <script src="assets/js/search.js"></script>

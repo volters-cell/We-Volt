@@ -199,38 +199,33 @@ a:hover { text-decoration-thickness: 2px; }
 
 
 .theme-toggle {
-  background: none;
-  border: none;
+  --size: 2.15rem;
+  width: var(--size);
+  height: var(--size);
+  margin-left: .5rem;
   padding: 0;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  color: var(--ink-soft);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  cursor: pointer;
 }
-
-.theme-toggle:hover {
-  background: var(--surface-sunken);
-  color: var(--ink);
+.theme-toggle:hover { color: var(--ink); border-color: var(--ink-faint); }
+.theme-toggle:active { transform: scale(.94); }
+.theme-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
 }
-
-.theme-toggle:focus {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-  color: var(--ink);
-}
-
-.theme-toggle svg
-
-/* Loading states and transitions */
-.is-loading {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+@media (prefers-reduced-motion: no-preference) {
+  .theme-toggle svg { transition: transform .25s cubic-bezier(.2,.7,.3,1); }
+  .theme-toggle:hover svg { transform: rotate(18deg); }
+  .theme-toggle[data-theme-state="dark"]:hover svg { transform: rotate(-18deg); }
 }
 
 .is-loaded {
@@ -343,14 +338,6 @@ a:hover { text-decoration-thickness: 2px; }
   /* Better spacing for touch */
   .map-wrap {
     -webkit-tap-highlight-color: transparent;
-  }
-  
-  /* Ensure all buttons have minimum touch size */
-  button:not(.theme-toggle),
-  [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-    padding: 0.5rem 1rem;
   }
   
   /* Search improvements for mobile */
@@ -1752,6 +1739,147 @@ button.permalink {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ------------------------------------------------------------ sharing the site
+
+   A button in the header with a caret, and a short menu under it. The caret
+   turns over when the menu is open, which is the whole of the animation. */
+.site-share { position: relative; display: inline-flex; }
+
+.site-share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .3rem .6rem .3rem .7rem;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.site-share-button:hover { color: var(--ink); border-color: var(--ink-faint); }
+.site-share-button .caret { width: .8rem; height: .8rem; }
+.site-share-button[aria-expanded="true"] { color: var(--ink); border-color: var(--ink-faint); }
+.site-share-button[aria-expanded="true"] .caret { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-share-button .caret { transition: transform .18s cubic-bezier(.2,.7,.3,1); }
+  .site-share-menu { animation: arrive .16s cubic-bezier(.2,.7,.3,1) both; }
+}
+
+.site-share-menu {
+  position: absolute;
+  top: calc(100% + .4rem);
+  right: 0;
+  z-index: 30;
+  min-width: 12rem;
+  padding: .3rem;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .16), 0 2px 6px rgba(0, 0, 0, .08);
+}
+.site-share-menu hr { margin: .3rem .4rem; border: 0; border-top: 1px solid var(--line); }
+
+.share-row {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: 100%;
+  padding: .5rem .6rem;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: left;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+}
+.share-row:hover, .share-row:focus-visible { background: var(--surface-sunken); }
+.share-row svg { width: 1.05rem; height: 1.05rem; flex: none; color: var(--ink-soft); }
+.share-row:hover svg { color: var(--ink); }
+
+@media (max-width: 34rem) {
+  .site-share-menu { right: auto; left: 0; }
+}
+
+/* ---------------------------------------------------- how a control behaves
+
+   One set of manners for everything you can press, so the map, the filters,
+   the share row and the theme button all answer the same way:
+
+     - the pointer says it is pressable, and a tap does not wait 300ms to see
+       whether it was a double-tap, nor flash a grey box on Android;
+     - hovering lifts the surface a little;
+     - pressing moves it down a hair — the feedback that makes a control feel
+       immediate is the one that happens on the way down, not after the click;
+     - focus draws the same ring everywhere, and only for keyboards.
+
+   Anything that sets its own background or border still does; this is the
+   behaviour underneath. */
+button,
+summary,
+[role="button"],
+.share-button,
+.button-link,
+.vote-source,
+.permalink {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+summary:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* The press. Small, fast, and never on the map: a country moving under the
+   finger would read as the map sliding. */
+@media (prefers-reduced-motion: no-preference) {
+  button:not(.country):not(.seg),
+  .share-button,
+  .button-link,
+  .decision-card,
+  .roll-member,
+  .breakdown-row,
+  .session > summary {
+    transition: background-color .12s ease, border-color .12s ease,
+                color .12s ease, transform .08s ease, box-shadow .12s ease;
+  }
+
+  .share-button:active,
+  .button-link:active,
+  .tracker-filters button:active,
+  .layer-tabs button:active,
+  #unfold-all:active,
+  .legend li button:active,
+  .roll-filters button:active,
+  .panel-close:active,
+  .back-to-votes:active,
+  .show-in-roll:active { transform: translateY(1px); }
+
+  .decision-card:active,
+  .roll-member:active,
+  .breakdown-row:active { transform: scale(.995); }
+}
+
+/* A pressed segment of the vote bar answers by brightening, not by moving:
+   it is part of a measured bar and must not change size. */
+.roll-bar .seg { transition: filter .12s ease, opacity .12s ease; }
+.roll-bar .seg:hover { filter: brightness(1.08); }
+.roll-bar .seg:active { filter: brightness(.94); }
 
 /* ------------------------------------------------------------- touch sizes
 
