@@ -39,6 +39,9 @@
     
     currentTheme = theme;
     updateToggleButton();
+    
+    // Save to localStorage
+    localStorage.setItem(THEME_KEY, theme);
   }
 
   // Update the toggle button's appearance and label
@@ -69,7 +72,6 @@
     const nextIndex = (currentIndex + 1) % THEMES.length;
     const nextTheme = THEMES[nextIndex];
     
-    localStorage.setItem(THEME_KEY, nextTheme);
     applyTheme(nextTheme);
     
     // Dispatch custom event for other components
@@ -81,19 +83,26 @@
     const storedTheme = getStoredTheme();
     applyTheme(storedTheme);
 
-    // Set up toggle button
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', cycleTheme);
-      
-      // Add keyboard support
-      toggleBtn.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          cycleTheme();
-        }
-      });
+    // Set up toggle button - try multiple times if not found
+    function setupButton() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', cycleTheme);
+        
+        // Add keyboard support
+        toggleBtn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            cycleTheme();
+          }
+        });
+      } else {
+        // Try again after a short delay
+        setTimeout(setupButton, 100);
+      }
     }
+    
+    setupButton();
 
     // Listen for system preference changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
@@ -115,7 +124,6 @@
     get: () => currentTheme,
     set: (theme) => {
       if (THEMES.includes(theme)) {
-        localStorage.setItem(THEME_KEY, theme);
         applyTheme(theme);
       }
     },
