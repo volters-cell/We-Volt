@@ -19,7 +19,7 @@
   // Get stored theme or default to system
   function getStoredTheme() {
     const stored = localStorage.getItem(THEME_KEY);
-    return stored && THEMES.includes(stored) ? stored : 'system';
+    return stored && THEMES.includes(stored) ? stored : 'light';
   }
 
   // Apply theme to document
