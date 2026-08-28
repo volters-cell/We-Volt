@@ -6,7 +6,7 @@ across 27 countries.
 ## Now — the prototype in this repository
 
 - The map: EU-27, projected the way the EU projects its own maps, keyboard-navigable,
-  56 KB of geometry and no tile server.
+  96 KB of geometry and no tile server.
 - The vote laid over the map: how every member state, every political group and every
   member voted, on any record.
 - Council qualified-majority arithmetic computed live, including whether a blocking

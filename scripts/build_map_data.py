@@ -62,6 +62,7 @@ NEIGHBOURS = {
     "Faroe Islands": ("FO", "Faroe Islands"),
     "Georgia": ("GE", "Georgia"),
     "Holy See (Vatican City)": ("VA", "Vatican City"),
+    "Greenland": ("GL", "Greenland"),
     "Iceland": ("IS", "Iceland"),
     # XK is the placeholder code the Commission, the ECB and ISO use for
     # Kosovo, five member states not recognising its independence. It is drawn
@@ -86,7 +87,12 @@ NEIGHBOURS = {
 # Neighbours are kept over a wider window than the member states, because the
 # viewBox crops them anyway and a country cut off at the frame looks right
 # where a country missing entirely looks broken.
-NEIGHBOUR_BBOX = (-25.0, 30.0, 45.0, 75.0)
+#
+# The window has to reach the places Europe's neighbours actually go, or a
+# country arrives with the wrong half of itself: at 45E Azerbaijan kept only
+# Nakhchivan, its exclave, and lost the mainland; at 75N Norway lost Svalbard.
+# West and north far enough for Greenland, east far enough for the Caspian.
+NEIGHBOUR_BBOX = (-75.0, 30.0, 51.0, 84.0)
 NEIGHBOUR_EPSILON = 0.07   # coarser: nobody reads a coastline that is context
 NEIGHBOUR_MIN_AREA = 0.8
 NEIGHBOUR_PRECISION = 2

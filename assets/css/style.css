@@ -661,7 +661,12 @@ main {
 /* White with a dark halo: the same label has to read on a dark green fill and
    on the pale grey of a country with nothing recorded. */
 .country-label { font-size: 12px; font-weight: 700; fill: #fff; text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: rgba(0,0,0,.6); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
-.country-label-small { font-size: 11px; fill: var(--ink); stroke: var(--surface); stroke-width: 3.5px; }
+/* A name that sits outside its country is drawn exactly like every other one,
+   only smaller. It was dark type on a thick pale halo, which was legible over
+   the sea and read as highlighter pen everywhere else — and Luxembourg's,
+   Slovenia's and the Netherlands' all land on the blue. White letters cut out
+   of a dark outline read on the blue, on the grey and on the sea alike. */
+.country-label-small { font-size: 11px; }
 .label-leader { stroke: var(--ink-faint); stroke-width: .7; opacity: .65; }
 
 

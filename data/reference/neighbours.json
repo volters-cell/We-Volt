@@ -126,6 +126,22 @@
       "schengen": false,
       "euro": false
     },
+    "GL": {
+      "name": "Greenland",
+      "capital": "Nuuk",
+      "population": 0.057,
+      "populationNote": "about 57,000 people, the smallest population of any territory on this map",
+      "eu": {
+        "status": "former",
+        "since": 1985,
+        "note": "Greenland is part of the Kingdom of Denmark and joined the Communities with it in 1973. It voted to leave in 1982 over fishing rights and left in 1985 — the only territory ever to do so. It is now one of the Union’s overseas countries and territories, outside the single market but inside the Danish realm."
+      },
+      "nato": null,
+      "natoNote": "Not a member in its own right; the Kingdom of Denmark has been since 1949.",
+      "schengen": false,
+      "euro": false,
+      "eea": false
+    },
     "IS": {
       "name": "Iceland",
       "capital": "Reykjavík",
@@ -204,7 +220,7 @@
       "population": 5.6,
       "eu": {
         "status": "none",
-        "note": "Rejected membership in referendums in 1972 and 1994."
+        "note": "Rejected membership in referendums in 1972 and 1994. Svalbard, drawn to the north, is Norwegian under the 1920 treaty but outside the EEA and Schengen."
       },
       "nato": 1949,
       "schengen": true,

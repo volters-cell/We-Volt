@@ -72,7 +72,10 @@
           const dx = item.at[0] - other.at[0];
           const dy = item.at[1] - other.at[1];
           const distance = Math.hypot(dx, dy);
-          const wanted = 16;
+          // Centre to centre. A two-letter label is about seventeen pixels
+          // wide, so anything under that and the boxes touch however far apart
+          // their middles are.
+          const wanted = 19;
           if (distance >= wanted || distance === 0) return;
           const push = (wanted - distance) / 2;
           item.at[0] += (dx / distance) * push;
@@ -179,7 +182,7 @@
       const small = shape.area < SMALL_AREA;
       // A label that cannot sit inside the country is drawn above it in dark
       // type instead of white-on-white over the sea.
-      const tight = (small || shape.inscribed < TIGHT_LABEL) && shape.code !== 'LU';
+      const tight = small || shape.inscribed < TIGHT_LABEL;
 
       const group = el('g', {
         class: 'country' + (small ? ' country-small' : ''),

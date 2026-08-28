@@ -239,9 +239,14 @@
         '<p class="panel-facts">' + escapeHTML(people) + ' · capital ' +
           escapeHTML(country.capital) + '</p>' +
         '<div class="blocs">' + chips.join('') + '</div>' +
-        (eu.note || country.populationNote
+        (eu.note || country.populationNote || country.natoNote
           ? '<p class="bloc-notes">' +
             (eu.note ? '<span class="bloc-note">' + escapeHTML(eu.note) + '</span>' : '') +
+            // A territory can be covered by an alliance without being a member
+            // of it; the chip alone would say the wrong thing about Greenland.
+            (country.natoNote
+              ? '<span class="bloc-note">NATO: ' + escapeHTML(country.natoNote) + '</span>'
+              : '') +
             (country.populationNote
               ? '<span class="bloc-note">Population: ' + escapeHTML(country.populationNote) + '</span>'
               : '') + '</p>'

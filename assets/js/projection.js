@@ -169,11 +169,15 @@
       return { feature: feature, polygons: polygons };
     });
 
-    // The frame is fitted to the member states alone. Neighbours are drawn on
-    // the same projection and run off the edge, where the viewBox crops them.
+    // The frame is fitted to the member states, plus the few neighbours marked
+    // to be kept whole — Azerbaijan sits east of the Union and Norway's Arctic
+    // islands north of it, and both would otherwise fall outside the picture.
+    // Everything else is drawn on the same projection and runs off the edge,
+    // where the viewBox crops it, as a map crops Russia.
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     projected.forEach(function (item) {
-      if (item.feature.properties.member === false) return;
+      const properties = item.feature.properties;
+      if (properties.member === false && properties.frame !== true) return;
       item.polygons.forEach(function (ring) {
         ring.forEach(function (p) {
           if (p[0] < minX) minX = p[0];
