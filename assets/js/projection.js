@@ -61,6 +61,50 @@
     return best;
   }
 
+  /* The centre of area of a ring — where the shape balances. It reads as the
+     middle of a country to anyone looking at it, which the pole of
+     inaccessibility does not always: Germany's widest inscribed circle sits
+     out west in Hesse, because the country narrows towards Bavaria and the
+     northern coast is full of bites. */
+  function areaCentroid(ring) {
+    let twiceArea = 0, x = 0, y = 0;
+    for (let i = 0; i < ring.length - 1; i++) {
+      const ax = ring[i][0], ay = ring[i][1];
+      const bx = ring[i + 1][0], by = ring[i + 1][1];
+      const cross = ax * by - bx * ay;
+      twiceArea += cross;
+      x += (ax + bx) * cross;
+      y += (ay + by) * cross;
+    }
+    if (!twiceArea) return null;
+    return [x / (3 * twiceArea), y / (3 * twiceArea)];
+  }
+
+  /* Where a country's name goes: as near its centre of area as it can sit
+     without crowding a border.
+
+     The pole of inaccessibility is the safest point — the one furthest inside
+     — but on a lopsided country it is not the point a reader would call the
+     middle. So the label starts at the centre of area and walks back towards
+     the pole until it has room around it: at least three fifths of what the
+     pole itself has. Round countries barely move; awkward ones end up
+     somewhere between the two, and none ends up outside itself. */
+  function labelPointFor(ring, pole) {
+    if (!pole || !pole.point) return pole;
+    const centre = areaCentroid(ring);
+    if (!centre) return pole;
+
+    const wanted = pole.distance * 0.6;
+    for (let t = 1; t > 0; t -= 0.1) {
+      const x = pole.point[0] + (centre[0] - pole.point[0]) * t;
+      const y = pole.point[1] + (centre[1] - pole.point[1]) * t;
+      if (pointInRing(x, y, ring) && distanceToRing(x, y, ring) >= wanted) {
+        return { point: [x, y], distance: pole.distance };
+      }
+    }
+    return pole;
+  }
+
   function poleOfInaccessibility(ring) {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     ring.forEach(function (p) {
@@ -180,20 +224,13 @@
               labelPoint = screen[0];
             } else {
               const pole = poleOfInaccessibility(screen);
-              labelPoint = pole ? pole.point : screen[0];
+              const placed = pole ? labelPointFor(screen, { point: pole.point, distance: pole.radius }) : null;
+              labelPoint = placed ? placed.point : screen[0];
               inscribed = pole ? pole.radius : 0;
             }
           }
           screen.forEach(function (p) { cx += p[0]; cy += p[1]; count++; });
         });
-
-        // Special case: nudge Germany's label more to the center
-        let finalCentroid = labelPoint || [cx / count, cy / count];
-        if (item.feature.properties.code === 'DE') {
-          // Germany's pole of inaccessibility tends to be slightly east
-          // Adjust it westward to center the "DE" label better
-          finalCentroid = [finalCentroid[0] - 15, finalCentroid[1]];
-        }
 
         return {
           code: item.feature.properties.code,
@@ -204,7 +241,7 @@
           // How much room the shape actually has for a label: Croatia's arm is
           // three pixels wide however many square pixels the country covers.
           inscribed: inscribed,
-          centroid: finalCentroid
+          centroid: labelPoint || [cx / count, cy / count]
         };
       })
     };
