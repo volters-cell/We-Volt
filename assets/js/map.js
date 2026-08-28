@@ -179,7 +179,7 @@
       const small = shape.area < SMALL_AREA;
       // A label that cannot sit inside the country is drawn above it in dark
       // type instead of white-on-white over the sea.
-      const tight = small || shape.inscribed < TIGHT_LABEL;
+      const tight = (small || shape.inscribed < TIGHT_LABEL) && shape.code !== 'LU';
 
       const group = el('g', {
         class: 'country' + (small ? ' country-small' : ''),
