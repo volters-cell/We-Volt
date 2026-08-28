@@ -187,6 +187,14 @@
           screen.forEach(function (p) { cx += p[0]; cy += p[1]; count++; });
         });
 
+        // Special case: nudge Germany's label more to the center
+        let finalCentroid = labelPoint || [cx / count, cy / count];
+        if (item.feature.properties.code === 'DE') {
+          // Germany's pole of inaccessibility tends to be slightly east
+          // Adjust it westward to center the "DE" label better
+          finalCentroid = [finalCentroid[0] - 15, finalCentroid[1]];
+        }
+
         return {
           code: item.feature.properties.code,
           name: item.feature.properties.name,
@@ -196,7 +204,7 @@
           // How much room the shape actually has for a label: Croatia's arm is
           // three pixels wide however many square pixels the country covers.
           inscribed: inscribed,
-          centroid: labelPoint || [cx / count, cy / count]
+          centroid: finalCentroid
         };
       })
     };
