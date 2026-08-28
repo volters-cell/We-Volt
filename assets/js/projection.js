@@ -209,9 +209,16 @@
         let largestArea = 0;
         let labelPoint = null;
         let inscribed = 0;
+        let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
 
         item.polygons.forEach(function (ring) {
           const screen = ring.map(toScreen);
+          screen.forEach(function (p) {
+            if (p[0] < left) left = p[0];
+            if (p[0] > right) right = p[0];
+            if (p[1] < top) top = p[1];
+            if (p[1] > bottom) bottom = p[1];
+          });
           d += 'M' + screen.map(function (p) {
             return p[0].toFixed(1) + ' ' + p[1].toFixed(1);
           }).join('L') + 'Z';
@@ -246,7 +253,13 @@
           // How much room the shape actually has for a label: Croatia's arm is
           // three pixels wide however many square pixels the country covers.
           inscribed: inscribed,
-          centroid: labelPoint || [cx / count, cy / count]
+          centroid: labelPoint || [cx / count, cy / count],
+          // Where the shape landed, before any cropping — an inset needs to
+          // know this to move a drawing back inside the frame.
+          bounds: { x: left, y: top, width: right - left, height: bottom - top },
+          // Set on a territory drawn in a box of its own; the value is the
+          // code of the country whose record that box opens.
+          inset: item.feature.properties.inset || null
         };
       })
     };

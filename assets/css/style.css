@@ -597,7 +597,7 @@ main {
    grid area and that area ends where the full-width table begins, so the map
    releases by itself at the bottom of the row instead of riding over what
    comes after it. Anywhere else it simply scrolls like everything else. */
-@media (min-width: 62.0625rem) and (min-height: 40rem) {
+@media (min-width: 62.0625rem) and (min-height: 30rem) {
   .map-section {
     position: sticky;
     top: 1rem;
@@ -641,9 +641,11 @@ main {
 }
 @media (max-width: 62rem) { .eu-map { max-height: none; } }
 /* Where the map is pinned it has to leave room for its own chrome — tabs,
-   hint and legend — so the pinned card never grows taller than the screen. */
-@media (min-width: 62.0625rem) and (min-height: 40rem) {
-  .eu-map { max-height: min(60svh, 720px); }
+   hint and legend, which together run to about fifteen rems — so the pinned
+   card never grows taller than the screen it is pinned to. The map shrinks to
+   fit a short window rather than the pin switching itself off. */
+@media (min-width: 62.0625rem) and (min-height: 30rem) {
+  .eu-map { max-height: min(calc(100svh - 15rem), 720px); }
 }
 
 /* The neighbours. Present enough to place the Union, quiet enough that the
@@ -660,6 +662,25 @@ main {
 .outside:focus { outline: none; }
 .outside:focus-visible .context-shape { stroke: var(--focus); stroke-width: 2; }
 .outside.is-selected .context-shape { stroke: var(--ink-soft); stroke-width: 1.2; }
+
+/* An inset: a territory too far off to fit the frame, drawn at the map's own
+   scale in a box of its own. The box is quiet — it is a footnote to the map,
+   not a second map — and it opens the record of the country it belongs to. */
+.inset-frame {
+  fill: var(--surface);
+  stroke: var(--line);
+  stroke-width: 1;
+  transition: stroke .15s ease;
+}
+.inset:hover .inset-frame { stroke: var(--line-strong); }
+.inset:focus-visible .inset-frame { stroke: var(--focus); stroke-width: 2; }
+.inset-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-anchor: middle;
+  fill: var(--ink-faint);
+  letter-spacing: .01em;
+}
 
 .country { cursor: pointer; }
 .country-shape { stroke: var(--surface); stroke-width: .8; stroke-linejoin: round; fill: var(--vote-na); transition: fill .15s ease; }
