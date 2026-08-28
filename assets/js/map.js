@@ -244,7 +244,7 @@
     });
 
     const tip = document.createElement('div');
-    tip.className = 'map-tip';
+    tip.className = 'country-tooltip';
     tip.hidden = true;
 
     this.container.innerHTML = '';
@@ -319,7 +319,7 @@
     const text = plain !== undefined ? '' : (this.tipText ? this.tipText(shape.code) : '');
     if (plain === undefined && !text) return;
     this.tip.innerHTML = '<strong>' + shape.name + '</strong>' + text;
-    this.tip.hidden = false;
+    this.tip.classList.add('is-visible');
     if (event) {
       this.moveTip(event);
     } else {
@@ -346,7 +346,7 @@
   };
 
   EUMap.prototype.hideTip = function () {
-    this.tip.hidden = true;
+    this.tip.classList.remove('is-visible');
   };
 
   /* Paint: one class per state, so the palette lives in CSS and follows the
