@@ -663,25 +663,6 @@ main {
 .outside:focus-visible .context-shape { stroke: var(--focus); stroke-width: 2; }
 .outside.is-selected .context-shape { stroke: var(--ink-soft); stroke-width: 1.2; }
 
-/* An inset: a territory too far off to fit the frame, drawn at the map's own
-   scale in a box of its own. The box is quiet — it is a footnote to the map,
-   not a second map — and it opens the record of the country it belongs to. */
-.inset-frame {
-  fill: var(--surface);
-  stroke: var(--line);
-  stroke-width: 1;
-  transition: stroke .15s ease;
-}
-.inset:hover .inset-frame { stroke: var(--line-strong); }
-.inset:focus-visible .inset-frame { stroke: var(--focus); stroke-width: 2; }
-.inset-label {
-  font-size: 10px;
-  font-weight: 600;
-  text-anchor: middle;
-  fill: var(--ink-faint);
-  letter-spacing: .01em;
-}
-
 .country { cursor: pointer; }
 .country-shape { stroke: var(--surface); stroke-width: .8; stroke-linejoin: round; fill: var(--vote-na); transition: fill .15s ease; }
 .country-hit { fill: transparent; }

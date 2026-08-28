@@ -103,13 +103,11 @@ NEIGHBOUR_PRECISION = 2
 # each entry pulls the frame outwards and every member state gets smaller.
 FRAMED = {"AZ"}
 
-# Svalbard is far enough north that fitting the frame around it would cost the
-# Union a tenth of its size, and cropping it would lose it altogether. So it
-# leaves Norway here as a territory of its own and the map draws it as an
-# inset — its true outline at true scale, in a box of its own. INSETS maps the
-# code it is given to the country whose record its box opens.
+# Norway's Arctic islands are dropped. Svalbard is far enough north that
+# fitting the frame around it would cost the Union a tenth of its size, and
+# anything left in the outline above the frame is drawn nowhere at all — so it
+# is cut here rather than left in the file to fall off the top edge.
 ARCTIC_LATITUDE = 74.0
-INSETS = {"SJ": "NO"}
 
 # Map window: continental Europe plus Cyprus and Malta. Overseas territories
 # (Azores, Madeira, Canaries, French overseas departments) fall outside and are
@@ -222,26 +220,14 @@ def build_neighbour(source):
     }
 
 
-def split_svalbard(norway):
-    """Norway's Arctic islands leave as Svalbard, for the map to inset."""
-    mainland, arctic = [], []
-    for polygon in norway["geometry"]["coordinates"]:
-        top = max(point[1] for point in polygon[0])
-        (arctic if top > ARCTIC_LATITUDE else mainland).append(polygon)
-    if not arctic or not mainland:
-        return None
-    norway["geometry"]["coordinates"] = mainland
-    return {
-        "type": "Feature",
-        "id": "SJ",
-        "properties": {
-            "code": "SJ",
-            "name": "Svalbard",
-            "member": False,
-            "inset": INSETS["SJ"],
-        },
-        "geometry": {"type": "MultiPolygon", "coordinates": arctic},
-    }
+def drop_arctic_islands(norway):
+    """Norway keeps its mainland; Svalbard is north of the frame either way."""
+    mainland = [
+        polygon for polygon in norway["geometry"]["coordinates"]
+        if max(point[1] for point in polygon[0]) <= ARCTIC_LATITUDE
+    ]
+    if mainland:
+        norway["geometry"]["coordinates"] = mainland
 
 
 def build_feature(source):
@@ -283,11 +269,9 @@ def main(src_path, out_path):
         elif name in NEIGHBOURS:
             built = build_neighbour(feature)
             if built:
-                context.append(built)
                 if built["id"] == "NO":
-                    svalbard = split_svalbard(built)
-                    if svalbard:
-                        context.append(svalbard)
+                    drop_arctic_islands(built)
+                context.append(built)
     features.sort(key=lambda f: f["id"])
     context.sort(key=lambda f: f["id"])
     missing = {code for code, _ in EU27.values()} - {f["id"] for f in features}

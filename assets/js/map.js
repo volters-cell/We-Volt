@@ -24,14 +24,6 @@
      stacked on top of them. */
   const MARGIN = 12;        // px — no label is allowed nearer the frame than this
 
-  /* Insets. Svalbard sits far enough north that fitting the frame around it
-     would cost every member state a tenth of its size, and cropping it would
-     lose it altogether. So it is drawn where a paper map would draw it: in a
-     box of its own in the corner, at the same scale as the rest, labelled, and
-     opening the record of the country it belongs to. */
-  const INSET_PAD = 9;      // px of air between the outline and its box
-  const INSET_CAPTION = 15; // px under the outline for the name
-
   function inFrame(point) {
     return point[0] >= MARGIN && point[0] <= WIDTH - MARGIN &&
            point[1] >= MARGIN && point[1] <= HEIGHT - MARGIN;
@@ -156,16 +148,11 @@
     // looking at Serbia or Ukraine should be able to click it.
     const contextLayer = el('g', { class: 'context' });
     const shapeLayer = el('g', { class: 'shapes' });
-    const insetLayer = el('g', { class: 'insets' });
     const labelLayer = el('g', { class: 'labels', 'aria-hidden': 'true' });
 
     const placements = [];
 
     this.layout.shapes.forEach(function (shape) {
-      if (shape.inset) {
-        self.buildInset(shape, insetLayer);
-        return;
-      }
       if (!shape.member) {
         const outside = el('g', {
           class: 'country outside',
@@ -262,8 +249,6 @@
     svg.appendChild(contextLayer);
     svg.appendChild(shapeLayer);
     svg.appendChild(labelLayer);
-    // Last, so the box sits over whatever the frame happens to crop behind it.
-    if (insetLayer.childNodes.length) svg.appendChild(insetLayer);
 
     // Clicking the sea closes the open country. A map you can only ever open
     // and never close is a trap, and the way out has to be the obvious one.
@@ -285,72 +270,6 @@
 
   /* Arrow keys walk to the nearest state in that direction — the map is a
      stand-in for a menu of 27 items, and it should behave like one. */
-  /* A territory drawn in a box of its own: true outline, same scale as the
-     map, moved bodily back inside the frame. The box opens the record of the
-     country it belongs to, because that is the record it has. */
-  EUMap.prototype.buildInset = function (shape, layer) {
-    const self = this;
-    const bounds = shape.bounds;
-    if (!bounds || !isFinite(bounds.width) || !isFinite(bounds.height)) return;
-
-    const owner = this.layout.shapes.filter(function (other) {
-      return other.code === shape.inset;
-    })[0];
-    const title = owner ? shape.name + ' · ' + owner.name : shape.name;
-
-    const boxWidth = bounds.width + INSET_PAD * 2;
-    const boxHeight = bounds.height + INSET_PAD * 2 + INSET_CAPTION;
-    const x = WIDTH - MARGIN - boxWidth;
-    const y = MARGIN;
-
-    const group = el('g', {
-      class: 'country outside inset',
-      tabindex: '0',
-      role: 'button',
-      'data-code': shape.code,
-      'aria-label': title
-    });
-    group.appendChild(el('rect', {
-      x: x.toFixed(1), y: y.toFixed(1),
-      width: boxWidth.toFixed(1), height: boxHeight.toFixed(1),
-      rx: '7', class: 'inset-frame'
-    }));
-
-    const drawing = el('g', {
-      transform: 'translate(' + (x + INSET_PAD - bounds.x).toFixed(1) +
-                 ' ' + (y + INSET_PAD - bounds.y).toFixed(1) + ')'
-    });
-    drawing.appendChild(el('path', { d: shape.path, class: 'context-shape' }));
-    group.appendChild(drawing);
-
-    const caption = el('text', {
-      x: (x + boxWidth / 2).toFixed(1),
-      y: (y + boxHeight - 5).toFixed(1),
-      class: 'inset-label'
-    });
-    caption.textContent = shape.name;
-    group.appendChild(caption);
-
-    const open = function () {
-      if (self.handlers.onOutside) self.handlers.onOutside(shape.inset || shape.code);
-    };
-    group.addEventListener('click', open);
-    group.addEventListener('keydown', function (event) {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      event.preventDefault();
-      open();
-    });
-    const named = { code: shape.code, name: title, centroid: shape.centroid };
-    group.addEventListener('mouseenter', function (event) { self.showTip(named, event, title); });
-    group.addEventListener('mousemove', function (event) { self.moveTip(event); });
-    group.addEventListener('mouseleave', function () { self.hideTip(); });
-    group.addEventListener('focus', function () { self.showTip(named, null, title); });
-    group.addEventListener('blur', function () { self.hideTip(); });
-
-    layer.appendChild(group);
-    this.shapes[shape.code] = { shape: shape, group: group };
-  };
-
   EUMap.prototype.onKeydown = function (event, shape) {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
