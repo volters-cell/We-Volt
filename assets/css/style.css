@@ -243,10 +243,11 @@ main {
   min-width: 0;
 }
 
-/* Except when a country is open. Then its record is what the reader just asked
-   for, so it comes first — above the search and the plenary sessions — rather
-   than below a roll-call of seven hundred names. */
-.rail.has-country #country-panel { order: -1; }
+/* The country comes first, always: its record when one is open, and the
+   invitation to pick one when none is. Either way the map's answer sits at the
+   top of the reading column rather than below the plenary sessions and a
+   roll-call of seven hundred names. */
+.rail #country-panel { order: -1; }
 
 /* A grid item will not shrink below its content unless told to. Without this a
    five-column table inside the panel makes a 320-pixel phone scroll sideways. */
