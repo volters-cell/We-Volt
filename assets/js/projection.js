@@ -170,10 +170,11 @@
     });
 
     // The frame is fitted to the member states, plus the few neighbours marked
-    // to be kept whole — Azerbaijan sits east of the Union and Norway's Arctic
-    // islands north of it, and both would otherwise fall outside the picture.
-    // Everything else is drawn on the same projection and runs off the edge,
-    // where the viewBox crops it, as a map crops Russia.
+    // to be kept whole — today only Azerbaijan, which sits east of the Union and
+    // would otherwise fall outside the picture. Everything else is drawn on the
+    // same projection and runs off the edge, where the viewBox crops it: Norway's
+    // Arctic islands at the top, Greenland in the corner, as a map crops Russia.
+    // Europe keeps the middle of the frame; the far places are anchors, not mass.
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     projected.forEach(function (item) {
       const properties = item.feature.properties;

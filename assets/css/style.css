@@ -591,11 +591,19 @@ main {
   padding: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-/* The map used to be sticky. It is not any more: a grid item that is taller
-   than its neighbour is not reliably clamped to its own grid area, so the
-   pinned card rode down over the table below it. The map scrolls with the page
-   like everything else, and its height is capped so the whole card — map,
-   legend and all — fits on a laptop screen without scrolling past it. */
+/* The map follows the page down. Sticky is allowed only where it can behave:
+   a two-column layout, and a window tall enough that the whole card — map,
+   legend and all — fits on screen at once. The card is start-aligned in its
+   grid area and that area ends where the full-width table begins, so the map
+   releases by itself at the bottom of the row instead of riding over what
+   comes after it. Anywhere else it simply scrolls like everything else. */
+@media (min-width: 62.0625rem) and (min-height: 40rem) {
+  .map-section {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+  }
+}
 
 .layer-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
 .layer-tabs button {
@@ -632,6 +640,11 @@ main {
   touch-action: manipulation;
 }
 @media (max-width: 62rem) { .eu-map { max-height: none; } }
+/* Where the map is pinned it has to leave room for its own chrome — tabs,
+   hint and legend — so the pinned card never grows taller than the screen. */
+@media (min-width: 62.0625rem) and (min-height: 40rem) {
+  .eu-map { max-height: min(60svh, 720px); }
+}
 
 /* The neighbours. Present enough to place the Union, quiet enough that the
    member states remain the only thing the eye lands on. */
