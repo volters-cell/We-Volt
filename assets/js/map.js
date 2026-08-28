@@ -7,6 +7,7 @@
   const WIDTH = 760;
   const HEIGHT = 700;
   const SMALL_AREA = 150;   // px² — below this a state needs a click target of its own
+  const DOT_AREA = 40;      // px² — below this it cannot be seen at all without a mark
   const TIGHT_LABEL = 8;    // px of inscribed radius — below this the name will not fit inside
 
   function el(name, attrs) {
@@ -191,13 +192,23 @@
       group.appendChild(el('path', { d: shape.path, class: 'country-shape' }));
 
       if (small) {
-        // Malta is six square-kilometres of pixels; give it a fair click target.
+        // Luxembourg is a few pixels across and Malta fewer; both need a click
+        // target bigger than themselves. It is invisible: the country's own
+        // outline is what the reader sees.
         group.appendChild(el('circle', {
           cx: shape.centroid[0].toFixed(1),
           cy: shape.centroid[1].toFixed(1),
           r: '11',
           class: 'country-hit'
         }));
+      }
+
+      if (shape.area < DOT_AREA) {
+        // Malta, though, is smaller than the dot that stands for it: without
+        // one it would have no colour to show when the map is painted by vote.
+        // Luxembourg is drawn large enough to speak for itself — a disc there
+        // sat across the Belgian and German borders and read as a fault in the
+        // map rather than as a country.
         group.appendChild(el('circle', {
           cx: shape.centroid[0].toFixed(1),
           cy: shape.centroid[1].toFixed(1),
