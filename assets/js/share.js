@@ -28,6 +28,9 @@
     x: icon('<path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.2L4.7 21H1.5l7.5-8.6L1.2 3h6.6l4.5 5.7L17.5 3zm-1.1 16.1h1.8L7.7 4.8H5.8l10.6 14.3z" fill="currentColor" stroke="none"/>'),
     linkedin: icon('<path d="M4.9 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2zM3.2 9.2h3.4V21H3.2V9.2zm6 0h3.2v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.3V21h-3.4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9.2V9.2z" fill="currentColor" stroke="none"/>'),
     whatsapp: icon('<path d="M12 2.5a9.4 9.4 0 0 0-8 14.3L2.5 21.5l4.9-1.4A9.4 9.4 0 1 0 12 2.5zm5.5 13.3c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.8-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.7-.1 1.3z" fill="currentColor" stroke="none"/>'),
+    telegram: icon('<path d="M21.9 4.3 2.9 11.6c-1 .4-1 1.3 0 1.6l4.6 1.4 1.8 5.4c.2.6.5.7 1 .3l2.6-2.1 4.5 3.3c.8.5 1.4.2 1.6-.8l3-14.1c.2-1-.4-1.5-1.1-1.3zM8.9 14.2l9.3-5.8c.4-.3.8-.1.5.2l-7.7 7-.3 3.2-1.8-4.6z" fill="currentColor" stroke="none"/>'),
+    signal: icon('<path d="M12 2.4c-5.4 0-9.8 3.9-9.8 8.6 0 2.5 1.2 4.7 3.1 6.2l-1 3.6c-.2.6.4 1.1 1 .8l4-1.9c.9.2 1.8.3 2.7.3 5.4 0 9.8-3.9 9.8-8.6S17.4 2.4 12 2.4z" fill="currentColor" stroke="none"/>'),
+    instagram: icon('<path d="M7.6 2.5h8.8a5.1 5.1 0 0 1 5.1 5.1v8.8a5.1 5.1 0 0 1-5.1 5.1H7.6a5.1 5.1 0 0 1-5.1-5.1V7.6a5.1 5.1 0 0 1 5.1-5.1zm0 2a3.1 3.1 0 0 0-3.1 3.1v8.8a3.1 3.1 0 0 0 3.1 3.1h8.8a3.1 3.1 0 0 0 3.1-3.1V7.6a3.1 3.1 0 0 0-3.1-3.1H7.6zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.4-2.7a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" fill="currentColor" stroke="none"/>'),
     email: icon('<path d="M3.5 5h17a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm.9 2 7.6 5.6L19.6 7H4.4z" fill="currentColor" stroke="none"/>'),
     copy: icon('<path d="M9 3h9a2 2 0 0 1 2 2v9h-2V5H9V3zM5 7h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 2v10h9V9H5z" fill="currentColor" stroke="none"/>'),
     device: icon('<path d="M12 3.2 8.4 6.8l1.4 1.4L11 7v9h2V7l1.2 1.2 1.4-1.4L12 3.2zM5 13v6.8c0 .7.5 1.2 1.2 1.2h11.6c.7 0 1.2-.5 1.2-1.2V13h-2v6H7v-6H5z" fill="currentColor" stroke="none"/>')
@@ -43,6 +46,15 @@
       { key: 'x', label: 'X', href: 'https://x.com/intent/tweet?text=' + e(sentence) + '&url=' + e(address) },
       { key: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + e(address) },
       { key: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/?text=' + e(sentence + ' ' + address) },
+      { key: 'telegram', label: 'Telegram', href: 'https://t.me/share/url?url=' + e(address) + '&text=' + e(sentence) },
+      // Signal and Instagram take nothing from a web page: Signal has no share
+      // address at all, and Instagram accepts no link from outside the app. So
+      // these two copy the link instead of pretending to open something, and
+      // say so. On a phone the share sheet at the top reaches both properly.
+      { key: 'signal', label: 'Signal', copy: 'Copied for Signal',
+        title: 'Signal has no web link — this copies the address to paste into a chat' },
+      { key: 'instagram', label: 'Instagram', copy: 'Copied for Instagram',
+        title: 'Instagram takes no links from the web — this copies the address to paste' },
       { key: 'email', label: 'Email', href: 'mailto:?subject=' + e(TITLE) + '&body=' + e(sentence + '\n\n' + address) }
     ];
   }
@@ -61,6 +73,12 @@
     rows.push('<hr>');
 
     links().forEach(function (item) {
+      if (item.copy) {
+        rows.push('<button type="button" role="menuitem" class="share-row"' +
+          ' data-copy-site="1" data-said="' + item.copy + '" title="' + item.title + '">' +
+          MARKS[item.key] + '<span>' + item.label + '</span></button>');
+        return;
+      }
       rows.push('<a role="menuitem" class="share-row" href="' + item.href +
         '" target="_blank" rel="noopener noreferrer">' + MARKS[item.key] +
         '<span>' + item.label + '</span></a>');
@@ -110,8 +128,9 @@
         event.preventDefault();
         const said = row.querySelector('span');
         const was = said.textContent;
+        const message = row.getAttribute('data-said') || 'Link copied';
         const done = function () {
-          said.textContent = 'Link copied';
+          said.textContent = message;
           setTimeout(function () { said.textContent = was; close(true); }, 900);
         };
         if (navigator.clipboard) {

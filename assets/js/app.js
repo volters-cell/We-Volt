@@ -7,7 +7,10 @@
   // an automatic default re-derives for each decision, a deliberate choice sticks.
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
-    country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null
+    country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null,
+    // The neighbour whose record is open, if any. It is not `country`: a
+    // neighbour has no seats and never narrows the roll-call.
+    outside: null
   };
 
   let calendar = { sessions: [] };
@@ -1157,21 +1160,35 @@
 
   /* Clicking a grey country opens its profile, in the same place a member
      state's record appears. */
-  function selectOutside(code) {
+  function selectOutside(code, options) {
     const country = outside && outside[code];
     if (!country) return;
+    // Opening a neighbour is a step like any other, so Back closes it.
+    if (code !== state.outside && !(options && options.fromHistory)) {
+      openStep(function () { closeOutside(); });
+    }
+    state.outside = code;
     if (map) map.setSelected(code);
     state.country = null;
     dom['panel-empty'].hidden = true;
+    dom['panel-body'].hidden = false;
     document.getElementById('country-panel').hidden = false;
     Panel.renderOutside(dom['panel-body'], code, country);
     const narrow = window.matchMedia('(max-width: 62rem)').matches;
     if (narrow) dom['panel-body'].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  /* Puts the reading column back to its invitation. selectCountry(null) does
+     the work; this only makes sure the neighbour is forgotten with it. */
+  function closeOutside() {
+    state.outside = null;
+    selectCountry(null, { replaceStep: true });
+  }
+
   function selectCountry(code, options) {
     const opening = Boolean(code && statesByCode[code]) && code !== state.country;
     state.country = code && statesByCode[code] ? code : null;
+    if (state.country || !code) state.outside = null;
     if (opening && !(options && options.replaceStep)) {
       openStep(function () { selectCountry(null, { fromHistory: true }); });
     }
@@ -1444,12 +1461,29 @@
       renderFeed();
 
       map = new EUMap(dom.map, geo, {
-        onSelect: function (code) { selectCountry(code); },
+        // Clicking a country a second time closes it again. The map is the
+        // way in and the same click is the way out, which is what a reader
+        // tries first — and it goes back through the history step the first
+        // click pushed, so Back and the second click end in the same place.
+        onSelect: function (code) {
+          if (code && code === state.country) {
+            closeStep(function () { selectCountry(null); });
+            return;
+          }
+          selectCountry(code);
+        },
         onDeselect: function () {
           if (state.country) closeStep(function () { selectCountry(null); });
+          else if (state.outside) closeStep(function () { closeOutside(); });
         },
         onHover: function (code) { setHovered(code); },
-        onOutside: function (code) { selectOutside(code); }
+        onOutside: function (code) {
+          if (code && code === state.outside) {
+            closeStep(function () { closeOutside(); });
+            return;
+          }
+          selectOutside(code);
+        }
       });
 
       // A shared link opens what it names. Then the hash is cleared, so
