@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-08-29",
+  "fetched": "2026-08-30",
   "term": 10,
   "note": "Every member who has held a seat in this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of roll-calls at tens of megabytes. Members marked former have left the House; the portal no longer states their group.",
   "members": {
