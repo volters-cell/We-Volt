@@ -1,7 +1,7 @@
 {
   "metadata": {
     "term": 10,
-    "fetched": "2026-08-24",
+    "fetched": "2026-08-31",
     "source": "https://data.europarl.europa.eu/api/v2/meetings?year={year}",
     "note": "One entry per plenary session, folded from the sitting days the Parliament records. A null location means the meeting record did not name one."
   },
