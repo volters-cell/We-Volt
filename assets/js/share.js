@@ -11,7 +11,7 @@
   'use strict';
 
   const TITLE = 'EU Tracker';
-  const TEXT = 'Every roll-call vote of the European Parliament, member by member.';
+  const TEXT = 'Every vote of the European Parliament, member by member.';
 
   function url() {
     // The site, not the vote you happen to have open.
@@ -52,9 +52,9 @@
       // these two copy the link instead of pretending to open something, and
       // say so. On a phone the share sheet at the top reaches both properly.
       { key: 'signal', label: 'Signal', copy: 'Copied for Signal',
-        title: 'Signal has no web link — this copies the address to paste into a chat' },
+        title: 'Signal has no web link — this copies the message to paste into a chat' },
       { key: 'instagram', label: 'Instagram', copy: 'Copied for Instagram',
-        title: 'Instagram takes no links from the web — this copies the address to paste' },
+        title: 'Instagram takes no links from the web — this copies the message to paste' },
       { key: 'email', label: 'Email', href: 'mailto:?subject=' + e(TITLE) + '&body=' + e(sentence + '\n\n' + address) }
     ];
   }
@@ -74,8 +74,11 @@
 
     links().forEach(function (item) {
       if (item.copy) {
+        // These two carry the same sentence as every other row; the plain
+        // Copy link above stays a bare address, which is what that asks for.
         rows.push('<button type="button" role="menuitem" class="share-row"' +
-          ' data-copy-site="1" data-said="' + item.copy + '" title="' + item.title + '">' +
+          ' data-copy-site="1" data-with-text="1"' +
+          ' data-said="' + item.copy + '" title="' + item.title + '">' +
           MARKS[item.key] + '<span>' + item.label + '</span></button>');
         return;
       }
@@ -126,6 +129,9 @@
 
       if (row.hasAttribute('data-copy-site')) {
         event.preventDefault();
+        const wanted = row.hasAttribute('data-with-text')
+          ? TITLE + ' — ' + TEXT + ' ' + url()
+          : url();
         const said = row.querySelector('span');
         const was = said.textContent;
         const message = row.getAttribute('data-said') || 'Link copied';
@@ -134,10 +140,10 @@
           setTimeout(function () { said.textContent = was; close(true); }, 900);
         };
         if (navigator.clipboard) {
-          navigator.clipboard.writeText(url()).then(done, done);
+          navigator.clipboard.writeText(wanted).then(done, done);
         } else {
           const field = document.createElement('input');
-          field.value = url();
+          field.value = wanted;
           document.body.appendChild(field);
           field.select();
           try { document.execCommand('copy'); } catch (error) { /* nothing to do */ }

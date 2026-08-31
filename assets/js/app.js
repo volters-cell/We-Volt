@@ -1074,7 +1074,7 @@
      on the same record; the text is the vote's own headline, so the reader who
      receives it knows what they are being sent before they click. */
   function shareText(decision) {
-    if (!decision) return 'EU Tracker — every vote of the European Parliament, member by member';
+    if (!decision) return 'EU Tracker — Every vote of the European Parliament, member by member.';
     const outcome = (decision.outcome && decision.outcome.result) || '';
     return decision.title + (outcome ? ' — ' + (RESULT_LABEL[outcome] || outcome) : '') +
       ' in the European Parliament';
