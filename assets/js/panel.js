@@ -177,6 +177,27 @@
 
   /* With no vote open, a country is still worth opening: this is who they are
      and which rooms they sit in. */
+  /* The line under a country's name. The seat count is a door rather than a
+     fact: pressing it unfolds the members who hold those seats, filled in by
+     the page, which is the part that holds the member directory. */
+  function facts(state) {
+    return '<p class="panel-facts">' +
+        '<button type="button" class="seat-toggle" data-seats="' + escapeHTML(state.code) + '"' +
+          ' aria-expanded="false" aria-controls="country-meps">' +
+          state.seats + ' MEPs' +
+          '<span class="seat-caret" aria-hidden="true">\u25be</span>' +
+        '</button>' +
+        ' · ' + state.population.toFixed(1) + ' million people · capital ' +
+        escapeHTML(state.capital) +
+      '</p>';
+  }
+
+  /* The list the seat count opens sits under the membership chips, so the line
+     of facts and the chips that belong with it stay together. */
+  function membersHost() {
+    return '<div class="country-meps" id="country-meps" hidden></div>';
+  }
+
   function renderProfile(node, state, permalink) {
     node.innerHTML =
       '<header class="panel-head">' +
@@ -184,9 +205,9 @@
           escapeHTML(state.name) + '">Close</button>' +
         '<p class="panel-eyebrow">Member state</p>' +
         '<h2 id="panel-title">' + escapeHTML(state.name) + '</h2>' +
-        '<p class="panel-facts">' + state.seats + ' MEPs · ' + state.population.toFixed(1) +
-          ' million people · capital ' + escapeHTML(state.capital) + '</p>' +
+        facts(state) +
         blocs(state) +
+        membersHost() +
       '</header>' +
       '<section class="card">' +
         '<p class="neutral-note">Pick a vote from the list to see how ' +
@@ -268,9 +289,9 @@
         '<p class="panel-eyebrow">' + escapeHTML(decision.bodyLabel) + ' · ' +
           escapeHTML(Data.formatDate(decision.date)) + '</p>' +
         '<h2 id="panel-title">' + escapeHTML(state.name) + '</h2>' +
-        '<p class="panel-facts">' + state.seats + ' MEPs · ' + state.population.toFixed(1) +
-          ' million people · capital ' + escapeHTML(state.capital) + '</p>' +
+        facts(state) +
         blocs(state) +
+        membersHost() +
         '<p class="panel-actions"><a class="permalink" href="' + escapeHTML(permalink) +
           '" data-copy="' + escapeHTML(permalink) +
           '">Copy link to this country’s record</a></p>' +

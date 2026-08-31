@@ -170,6 +170,82 @@
     }).slice(0, 25);
   }
 
+  /* The seat count in a country's panel is a door. Behind it are the members
+     who hold those seats, by name, each one opening their own record.
+
+     A country can show more members than it has seats: a seat changes hands
+     when someone resigns or is elected to something else, and everyone who has
+     held one this term is in the directory. Where the two numbers differ the
+     list says so rather than looking like a miscount. */
+  function surnameKey(name) {
+    const parts = String(name || '').split(/\s+/);
+    const capitals = parts.filter(function (part) {
+      return part.length > 1 && part === part.toUpperCase();
+    });
+    return (capitals.length ? capitals.join(' ') : String(name || '')).toLowerCase();
+  }
+
+  function countryMembersHTML(code) {
+    if (!memberIndex) {
+      return '<p class="neutral-note">The member directory has not loaded.</p>';
+    }
+    const country = statesByCode[code];
+    const people = memberIndex.filter(function (member) {
+      return member.country === code;
+    }).sort(function (a, b) {
+      return surnameKey(a.name).localeCompare(surnameKey(b.name), 'en');
+    });
+
+    if (!people.length) {
+      return '<p class="neutral-note">No member of this country is in the directory yet.</p>';
+    }
+
+    // The two numbers can differ in both directions, and each says something
+    // different: more people than seats means a seat changed hands, fewer
+    // means someone holds a seat but has cast no vote in the records here.
+    let note = '';
+    if (country && people.length > country.seats) {
+      note = '<p class="seat-note">' + people.length + ' people have held ' +
+        esc(country.name) + '’s ' + country.seats + ' seats this term — a seat that ' +
+        'changes hands has more than one holder.</p>';
+    } else if (country && people.length < country.seats) {
+      note = '<p class="seat-note">' + people.length + ' of ' + esc(country.name) + '’s ' +
+        country.seats + ' seats have a member on record here.</p>';
+    }
+
+    return note + '<ul>' + people.map(function (member) {
+      const group = window.Groups ? Groups.name(member.group) : member.group;
+      return '<li><button type="button" class="mep-hit" data-member="' + esc(member.id) + '">' +
+        (window.Groups ? Groups.swatch(member.group) : '') +
+        '<span class="mep-name">' + esc(member.name) + '</span>' +
+        '<span class="mep-meta">' + esc(group) + ' · ' +
+        member.votes.toLocaleString('en-GB') + ' votes</span>' +
+        '</button></li>';
+    }).join('') + '</ul>';
+  }
+
+  function toggleCountryMembers(button) {
+    const list = document.getElementById('country-meps');
+    if (!list) return;
+    const code = button.getAttribute('data-seats');
+
+    if (button.getAttribute('aria-expanded') === 'true') {
+      list.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      return;
+    }
+
+    // Built once per country, then kept: the panel is rebuilt often enough
+    // that rendering seven hundred rows on every open would be felt.
+    if (list.dataset.code !== code) {
+      list.innerHTML = countryMembersHTML(code);
+      list.dataset.code = code;
+      if (window.Groups) Groups.loadLogos(list);
+    }
+    list.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+  }
+
   function renderMepResults() {
     const found = mepMatches();
     if (!found.length) {
@@ -200,7 +276,11 @@
       }
     }
     const member = memberCache[id];
-    openStep(function () { backToVotes({ fromHistory: true }); });
+    // Where the reader came from, so Back puts them there. Opening a member
+    // from a country's own list and landing on the vote list instead would
+    // lose the place they were keeping.
+    const from = state.country;
+    openStep(function () { backToVotes({ fromHistory: true, country: from }); });
     state.member = member;
     state.decision = null;
 
@@ -1338,8 +1418,10 @@
     dom['search-input'].value = '';
     state.query = '';
     dom['search-clear'].hidden = true;
-    clearDecision();
-    dom['search-input'].focus();
+    // Carries options.country through, so coming back from a member returns to
+    // the country whose list they were opened from.
+    clearDecision(options);
+    if (!(options && options.country)) dom['search-input'].focus();
   }
 
   /* Nothing open: the map is the Union, the list is the way in. */
@@ -1609,6 +1691,16 @@
         if (inRoll) {
           setRoll({ country: inRoll.getAttribute('data-country'), tab: 'members' });
           dom.roll.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        const seats = event.target.closest('.seat-toggle');
+        if (seats) {
+          toggleCountryMembers(seats);
+          return;
+        }
+        const person = event.target.closest('[data-member]');
+        if (person) {
+          showMember(person.getAttribute('data-member'));
           return;
         }
         const chip = event.target.closest('[data-bloc]');
