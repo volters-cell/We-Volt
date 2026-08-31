@@ -15,7 +15,6 @@
 
   const WIDTH = 1080;
   const HEIGHT = 1920;
-  const SITE = 'volters-cell.github.io/We-Volt';
 
   const INK = {
     ground: '#0b1b3a',
@@ -42,15 +41,18 @@
   /* Fits a title into the space it has by trying the largest size first. Long
      titles are the rule here, not the exception: the Parliament names a vote
      the way an order paper does. */
-  function layoutTitle(ctx, text, maxWidth, sizes, maxLines) {
+  function layoutTitle(ctx, text, maxWidth, sizes, budget) {
+    let last = null;
     for (let i = 0; i < sizes.length; i++) {
-      ctx.font = font(700, sizes[i], "'Source Serif 4', Georgia, serif");
+      const size = sizes[i];
+      ctx.font = font(700, size, "'Source Serif 4', Georgia, serif");
       const lines = wrap(ctx, text, maxWidth);
-      if (lines.length <= maxLines || i === sizes.length - 1) {
-        return { size: sizes[i], lines: lines.slice(0, maxLines), clipped: lines.length > maxLines };
-      }
+      const room = Math.max(1, Math.floor(budget / (size * 1.14)));
+      last = { size: size, lines: lines.slice(0, room), clipped: lines.length > room };
+      if (!last.clipped) return last;
     }
-    return { size: sizes[sizes.length - 1], lines: [], clipped: false };
+    // Nothing fits whole: the smallest size, cut to the room there is.
+    return last;
   }
 
   function wrap(ctx, text, maxWidth) {
@@ -105,7 +107,8 @@
   }
 
   /* card({ title, subtitle, dateLabel, bodyLabel, result, totals, seats, url })
-     resolves to a PNG blob, or null where the canvas will not give one up. */
+     resolves to a PNG blob, or null where the canvas will not give one up.
+     The url is what the code in the corner opens. */
   async function card(vote) {
     await ready();
 
@@ -128,29 +131,36 @@
     ctx.fillRect(0, 0, WIDTH, 14);
     ctx.textBaseline = 'alphabetic';
 
-    /* Measured before it is drawn, because a story is a fixed frame with a
-       reader's thumb at the bottom and the app's own controls at the top: the
-       block has to sit in the middle of what is left, whether the title runs
-       to one line or to six. */
-    const title = layoutTitle(ctx, vote.title, inner, [96, 86, 76, 66, 58], 6);
-    ctx.font = font(400, 34);
-    const subtitle = vote.subtitle ? wrap(ctx, vote.subtitle, inner).slice(0, 2) : [];
-
+    /* Measured before it is drawn. A story is a fixed frame with the app's own
+       controls over the top and bottom of it, so everything has to fit the band
+       between them — and the title is the one part whose height is not known
+       until it is wrapped. So the rest is added up first, and the title takes
+       what is left, at the largest size that fits it. */
     const BRAND = 96;        // the mark and the name
     const META = 104;        // institution and date, and air under it
-    const TITLE = title.lines.length * title.size * 1.14;
-    const SUB = subtitle.length ? subtitle.length * 48 + 26 : 0;
     const VERDICT = 190;
     const BAR = 46 + 78;
     const CELLS = 156 + 70;
     const SEATS = vote.seats ? 56 : 0;
-    const block = BRAND + META + TITLE + SUB + VERDICT + BAR + CELLS + SEATS;
+    const CODE = 208;        // the square in the corner
+    const FOOT = CODE + 60;
 
     // Instagram covers roughly the top and bottom eighth of a story with its
     // own controls, so the safe band is what is between them.
-    const TOP_SAFE = 300;
-    const BOTTOM_SAFE = HEIGHT - 300;
-    let y = Math.max(TOP_SAFE, TOP_SAFE + ((BOTTOM_SAFE - TOP_SAFE) - block) / 2);
+    const TOP_SAFE = 280;
+    const BOTTOM_SAFE = HEIGHT - 290;
+
+    ctx.font = font(400, 34);
+    const subtitle = vote.subtitle ? wrap(ctx, vote.subtitle, inner).slice(0, 2) : [];
+    const SUB = subtitle.length ? subtitle.length * 48 + 26 : 0;
+
+    const budget = (BOTTOM_SAFE - TOP_SAFE) -
+      (BRAND + META + SUB + VERDICT + BAR + CELLS + SEATS + FOOT);
+    const title = layoutTitle(ctx, vote.title, inner, [96, 86, 76, 66, 58, 50], budget);
+
+    const TITLE = title.lines.length * title.size * 1.14;
+    const block = BRAND + META + TITLE + SUB + VERDICT + BAR + CELLS + SEATS + FOOT;
+    let y = TOP_SAFE + Math.max(0, ((BOTTOM_SAFE - TOP_SAFE) - block) / 2);
 
     brandMark(ctx, pad + 26, y - 14, 26);
     ctx.fillStyle = INK.text;
@@ -229,13 +239,25 @@
         totals.absent + ' did not', pad, y);
     }
 
-    // The foot, kept clear of the controls a story app draws over the bottom.
+    /* The foot: the code that opens this vote, and whose figures these are.
+       No address is printed. A story is read at arm's length and a line of raw
+       URL reads as clutter; the square is the way in, and it carries the
+       vote's own address rather than the front page. */
+    y += 60;
+    const drawn = vote.url && global.QR &&
+      QR.draw(ctx, vote.url, pad, y, CODE, {
+        ink: INK.ground, background: '#ffffff', quiet: 3
+      });
+
+    const textX = drawn ? pad + CODE + 34 : pad;
+    const footTop = y + (drawn ? 84 : 20);
+
+    ctx.fillStyle = INK.text;
+    ctx.font = font(700, 34);
+    ctx.fillText(drawn ? 'Scan to open this vote' : 'EU Tracker', textX, footTop);
     ctx.fillStyle = INK.faint;
-    ctx.font = font(400, 30);
-    ctx.fillText('Source: European Parliament open data', pad, HEIGHT - 340);
-    ctx.fillStyle = INK.gold;
-    ctx.font = font(700, 40);
-    ctx.fillText(SITE, pad, HEIGHT - 278);
+    ctx.font = font(400, 28);
+    ctx.fillText('EU Tracker · European Parliament open data', textX, footTop + 44);
 
     return await new Promise(function (resolve) {
       if (canvas.toBlob) {

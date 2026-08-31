@@ -1207,8 +1207,8 @@
       // The picture. On a phone it goes into the share sheet, where Instagram
       // offers Stories; anywhere else it is saved to be posted from one.
       '<button type="button" class="share-button share-story"' +
-        ' title="A 1080\u00d71920 picture of this vote. On a phone the share sheet' +
-        ' offers Instagram, then Add to story.">Instagram story</button>' +
+        ' title="Opens the phone\u2019s share sheet with a picture of this vote.' +
+        ' Choose Instagram, then Add to story.">Instagram</button>' +
       '<button type="button" class="share-button share-native" hidden' +
         ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">Share…</button>' +
       targets.map(function (target) {
@@ -1234,14 +1234,17 @@
     });
   }
 
-  /* The vote as a 1080x1920 picture, for Instagram Stories and every other
-     story format.
+  /* The vote as a 1080x1920 picture, handed to the phone's own share sheet.
 
-     No web page can post into Stories directly — Instagram takes that only
-     from a registered native app — so this hands the finished image to the
-     phone's own share sheet, where Instagram appears and offers "Add to
-     story". A browser that will not accept files in a share saves the image
-     instead, and the link is copied with it so the story can carry both. */
+     No web page can post into Instagram Stories by itself — Instagram accepts
+     that only from a registered native app — so this opens the sheet the phone
+     already has, with every app on it. Choosing Instagram there offers Add to
+     story, and the picture arrives as the story.
+
+     The link is put on the clipboard first, every time. Instagram's own link
+     sticker offers whatever the clipboard holds, so adding a tappable link to
+     the story is one paste rather than a hunt; and the picture carries a code
+     for the same address, for anyone reading a story that has none. */
   async function shareStory(button) {
     if (!window.Story || !state.decision) return;
     const decision = state.decision;
@@ -1260,6 +1263,9 @@
     // denominator, the ballots are what was cast, and the rest did not vote.
     totals.absent = Math.max(0, seats - castOf(totals));
 
+    const url = shareUrl();
+    try { await navigator.clipboard.writeText(url); } catch (error) { /* no clipboard */ }
+
     let blob = null;
     try {
       blob = await Story.card({
@@ -1269,7 +1275,8 @@
         dateLabel: Data.formatDate(decision.date),
         result: (decision.outcome && decision.outcome.result) || 'recorded',
         totals: totals,
-        seats: seats
+        seats: seats,
+        url: url
       });
     } catch (error) {
       blob = null;
@@ -1283,12 +1290,11 @@
 
     const name = 'eu-tracker-' + decision.date + '.png';
     const file = new File([blob], name, { type: 'image/png' });
-    const url = shareUrl();
 
     if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
       try {
         await navigator.share({ files: [file], text: shareText(decision) + ' ' + url });
-        say('Shared');
+        say('Link copied too');
         restore();
         return;
       } catch (error) {
@@ -1305,7 +1311,6 @@
     link.click();
     document.body.removeChild(link);
     window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
-    try { await navigator.clipboard.writeText(url); } catch (error) { /* no clipboard */ }
     say('Image saved');
     restore();
   }
