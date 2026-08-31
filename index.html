@@ -228,14 +228,42 @@
 </main>
 
   <footer class="site-footer">
-    <p>
-      EU Tracker is an open-data project: every record is a JSON file in
-      <a href="https://github.com/volters-cell/We-Volt">the repository</a>, and every record carries its source.
-      Roll-call votes come from the European Parliament's own record, published on its open
-      data portal, which names every member and how they voted.
-      Boundaries are simplified for display and imply no position on any border.
-      <a href="about.html">Where the data comes from, and what is missing</a>.
-    </p>
+    <div class="footer-inner">
+      <div class="footer-lead">
+        <p class="footer-name">EU Tracker</p>
+        <p>Every roll-call vote of the European Parliament, member by member. Each record is
+          a JSON file in the public repository, and each one names the source it was read from.</p>
+      </div>
+
+      <dl class="footer-facts">
+        <div>
+          <dt>Source</dt>
+          <dd>European Parliament open data portal,
+            <span class="footer-mono">data.europarl.europa.eu</span></dd>
+        </div>
+        <div>
+          <dt>Coverage</dt>
+          <dd>Every roll-call vote of the current term, from 16 July 2024</dd>
+        </div>
+        <div>
+          <dt>Updated</dt>
+          <dd>Automatically, after each plenary sitting</dd>
+        </div>
+        <div>
+          <dt>Licence</dt>
+          <dd>Code MIT · records under the terms of their source</dd>
+        </div>
+      </dl>
+
+      <nav class="footer-links" aria-label="About this project">
+        <a href="about.html">Where the data comes from</a>
+        <a href="https://github.com/volters-cell/We-Volt">Code and records</a>
+        <a href="https://data.europarl.europa.eu/">European Parliament open data</a>
+      </nav>
+    </div>
+
+    <p class="footer-note">Boundaries are simplified for display and imply no position on any
+      border. This site is not affiliated with the European Parliament.</p>
   </footer>
 
   <script src="assets/js/groups.js"></script>

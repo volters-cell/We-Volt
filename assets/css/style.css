@@ -1740,13 +1740,67 @@ button.permalink {
 
 /* ---------------------------------------------------------------- footer */
 
+/* The footer says what this is and where it came from, and it uses the width
+   of the screen to do it: on a laptop the three parts stand side by side
+   across the page rather than in a column in the corner. It lines up with the
+   same 1560px measure as the page above it, so the whole thing reads as one
+   sheet. Below 62rem it stacks. */
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 3rem;
+  background: var(--surface-sunken, var(--surface));
+  padding: 2rem clamp(1rem, 4vw, 2.5rem) 2.5rem;
   color: var(--ink-faint);
   font-size: .84rem;
 }
-.site-footer p { max-width: 70ch; margin: 0 0 .5rem; }
+.footer-inner {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, .7fr);
+  align-items: start;
+}
+.footer-lead p { margin: 0; max-width: 42ch; }
+.footer-name {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: .95rem;
+  letter-spacing: .01em;
+  margin-bottom: .35rem !important;
+}
+
+/* Four plain facts, the ones a reader checks before trusting a number. */
+.footer-facts {
+  margin: 0;
+  display: grid;
+  gap: .85rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.footer-facts dt {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: .2rem;
+}
+.footer-facts dd { margin: 0; color: var(--ink-faint); }
+.footer-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95em; }
+
+.footer-links { display: grid; gap: .45rem; justify-items: start; }
+.footer-links a { font-weight: 600; }
+
+.footer-note {
+  max-width: 1560px;
+  margin: 1.75rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: .78rem;
+}
+
+@media (max-width: 62rem) {
+  .footer-inner { grid-template-columns: minmax(0, 1fr); }
+}
 
 .load-error {
   grid-column: 1 / -1;

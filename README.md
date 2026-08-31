@@ -1,23 +1,24 @@
 # EU Tracker
 
-**One European decision at a time, shown country by country: who voted how, what it
-costs each member state.**
+**Every roll-call vote of the European Parliament, member by member, shown country by
+country on a map.**
 
-Open the map. Click a country. That is the whole interface.
+EU Tracker reads the European Parliament's own published record of each sitting and
+presents it as a map and a searchable list: how each member state's delegation voted,
+how each political group voted, and how each MEP voted, one vote at a time.
 
-Brussels publishes almost everything and explains almost nothing. A roll-call vote
-arrives as an annex with 720 names in it, in a file built for a clerk. What none of it
-answers is the question a reader in Poznań or Palermo actually asks: *what did **we**
-do?* EU Tracker is built around that question — and around the one after it: *how did
-my own member vote, and does that match what they say at home?*
+The Parliament publishes roll-call results as annexes listing every member and their
+position. This project imports those files, joins the member ids to names, countries
+and groups, and stores one record per vote so the same result can be read either by
+vote or by member.
 
 ## What it does today
 
 The page opens on the Union itself: the 27 member states in the Union's own blue, the
 rest of Europe in grey, and beside them every vote on record — Parliament roll-calls,
 Council votes and Commission acts in one unfolded list, searchable and filterable by
-institution. Nothing is chosen for the reader. Click a country and you get its profile;
-pick a vote and the map redraws in one of two layers:
+institution. Click a country and you get its profile; pick a vote and the map redraws in
+one of two layers:
 
 | Layer | Answers |
 | --- | --- |
@@ -25,22 +26,21 @@ pick a vote and the map redraws in one of two layers:
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
 The 27 member states sit on a map that shows their neighbours — the UK, Norway,
-Iceland, Switzerland, Ukraine, Belarus, the Western Balkans, Türkiye, Moldova,
-Kaliningrad — in grey, so the Union is placed rather than floating. Only the member states are
-clickable.
+Iceland, Switzerland, Ukraine, Belarus, the Western Balkans, Türkiye, Moldova, the
+Caucasus and Greenland — in grey, so the Union is shown in its geographic context. Only
+member states carry vote data; the grey countries open a short factual profile.
 
-Opening a country also shows which clubs it is in: EU, euro area, Schengen and NATO,
-each with the year it joined, and a note where it stayed out — "outside Schengen"
-means something very different for Ireland than it does for Cyprus. Those chips are
-buttons: clicking one lights up that bloc across the whole map.
+Opening a country also shows which organisations it belongs to — EU, euro area,
+Schengen and NATO — each with the year it joined, and a note where it is outside one.
+Those chips are buttons: clicking one highlights that bloc across the whole map.
 
 The map holds the left of the screen while the reading column on the right carries the
 feed, the decision and the country record. Clicking a country opens it; clicking the
 sea, pressing Escape, or the panel's own Close button shuts it again.
 
-Opening a decision plays it rather than printing it: the whole Union takes the colour
-of the outcome, holds for a beat, then each member state turns to its own vote in a
-sweep from west to east while the totals count up. There is a Replay control, and the
+Opening a decision animates the result: the whole Union takes the colour of the
+outcome, holds, then each member state turns to its own vote in a sweep from west to
+east while the totals count up. There is a Replay control, and the
 whole sequence is skipped for readers who ask for reduced motion. Vote counts are
 written in the colour of the vote they count, everywhere they appear. Clicking a
 legend entry isolates that group on the map and in the table; pointing at a row lights
@@ -102,13 +102,13 @@ npm run backfill  # import every sitting since the 2024 elections
 npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ```
 
-[about.html](about.html) is the page a reader — or a funder — opens to check the project:
-where each vote comes from, what has been done to it, what is missing and why, and the
-licence on each part. It is deliberately blunt about the gaps.
+[about.html](about.html) documents the sources: where each vote comes from, what
+processing is applied to it, what the dataset does and does not cover, and the licence
+on each part.
 
 ## The data
 
-**The votes are real, and the claim is checked.** 718 roll-call votes — every main vote
+**Coverage is verified against the source.** 718 roll-call votes — every main vote
 the Parliament has taken since the term began on 16 July 2024 — with every member by
 name, their group, and how each of them voted. 495,164 individual ballots.
 
@@ -123,14 +123,14 @@ voted; the vote items behind them; the list of members; and the list of sittings
 `scripts/fetch-plenary.mjs` reads them and keeps the site current after each sitting;
 `npm run backfill` re-reads the whole term.
 
-Still missing, and honestly labelled as such: Council and Commission records, which have
-no machine-readable source, and the plain-language summaries, which are editorial work.
-Every sample is flagged as one, in the file (`"status": "sample"`), on the page (a
-banner and a chip), and in the validator, which refuses to let a sample lose its label.
+Not currently covered: Council and Commission records, for which no machine-readable
+source is available, and the plain-language summaries, which are written by hand. Any
+sample record is labelled as one in the file (`"status": "sample"`), on the page (a
+banner and a chip), and in the validator, which rejects a sample that loses its label.
 
 ```
 data/
-  eu-countries.geo.json          the map: 27 member states, 23 neighbours in grey
+  eu-countries.geo.json          the map: 27 member states, 25 neighbours in grey
   reference/
     member-states.json           seats, population, capitals, memberships
     meps.json                    every MEP: name, country, group — stored once
@@ -161,10 +161,9 @@ node scripts/fetch-plenary.mjs --date 2026-09-15    # one sitting
 node scripts/build-index.mjs                        # rebuild the feed
 ```
 
-That reads the Parliament's own record of the sitting, maps every voter's id to a name
-and a country through the member directory, and writes one record per final vote with
-each MEP's own vote in it. It deliberately leaves the summary empty: that is editorial
-work, and nothing should generate it.
+That reads the Parliament's record of the sitting, maps every voter's id to a name and a
+country through the member directory, and writes one record per final vote with each
+MEP's own vote in it. The summary field is left empty: summaries are written by hand.
 
 **It can run itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
 and again each night — the second pass catching whether each text carried, which the
@@ -187,19 +186,18 @@ state holds. Records imported from the portal name only the members who voted �
 portal does not publish absences — so counting ballots would make "of N members" mean
 something different on every vote.
 
-## Why it is built this way
+## Design decisions
 
-- **Static files, and cheap ones.** The whole site is JSON and JavaScript on a CDN. A
-  newsroom can fork it, a grant can end, and the thing still runs. Votes are stored as
-  `[member id, position]` pairs against a directory held once, which is the difference
-  between 104 MB and 0.9 GB for a five-year term — and between free hosting and a bill.
-- **Every figure carries its source.** A cost estimate without a citation is an
-  opinion; the validator treats it as an error. The bundled records carry no cost
-  figures at all, because none of them could be sourced — so that layer does not
-  appear. It returns automatically for any decision that has real ones.
-- **The gaps are visible.** A country with no coverage indexed is pale on the map and
-  says so in the panel. The absence is part of the story.
-- **Sample data can never masquerade as a record.** That rule is enforced in code.
+- **Static files.** The site is JSON and JavaScript served as static files, with no
+  backend and no build step, so it can be hosted anywhere and forked as it stands.
+  Votes are stored as `[member id, position]` pairs against a member directory held
+  once: about 104 MB rather than 0.9 GB for a five-year term.
+- **Every figure carries its source.** The validator treats an unsourced cost figure as
+  an error. The bundled records carry no cost figures, so that layer is not shown; it
+  appears for any decision that has sourced ones.
+- **Missing data is shown as missing.** A country with no coverage indexed is drawn
+  pale on the map and says so in its panel.
+- **Sample records stay labelled.** The validator enforces it.
 
 ## Where the data comes from
 
@@ -212,10 +210,9 @@ border.
 
 ## Where it is going
 
-A multilingual interface, plain-language summaries for the votes that still have none,
-national parties resolved so any party can be followed as a bloc, embeds a newsroom can
-drop into an article, and an inset for the outermost regions. The plan, and its fit
-with the Creative Europe journalism partnerships strand, is in
+Planned: a multilingual interface, plain-language summaries for the votes that have
+none, national parties resolved so any party can be followed as a bloc, embeddable
+views, and an inset for the outermost regions. The full plan is in
 [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Licence

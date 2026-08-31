@@ -1,7 +1,6 @@
 # Roadmap
 
-Where the project is, and what it would take to make it a working newsroom tool
-across 27 countries.
+The current state of the project and the work planned next.
 
 ## Now — the prototype in this repository
 
@@ -16,28 +15,26 @@ across 27 countries.
 - The whole of this parliamentary term imported from the Parliament's open data
   portal, checked vote by vote against it by a monthly audit.
 
-## Next — what makes it usable by a journalist on deadline
+## Next
 
 1. **A real archive.** One import run per plenary session, so the site holds every
    roll-call of the term rather than three files. The importer already exists; it
    needs a schedule and a review step.
-2. **Search across decisions.** "Show me every vote where my country's delegation was
-   split", "every decision where Ireland and Denmark diverged". This is the query no
-   existing tool answers, and the data model already supports it.
+2. **Search across decisions.** Queries across the whole term rather than within one
+   vote — for example, votes where a delegation split, or where two member states
+   diverged. The data model already supports it.
 3. **Country view.** The mirror of the current view: one member state, every decision,
    its record across the term.
-4. **Embeds.** A single decision map as an `<iframe>` a newsroom can drop into an
-   article, with attribution baked in. This is the distribution mechanism — most
-   readers will meet the project inside somebody else's story.
+4. **Embeds.** A single decision map as an `<iframe>` that can be placed in an
+   article, with attribution included.
 5. **Multilingual interface.** Interface strings first (they are few and static), then
    summaries in the 24 official languages. The Parliament publishes its own titles in
    all of them, which is the starting point.
 
-## Later — what makes it a network rather than a website
+## Later
 
-6. **Plain-language summaries.** The Parliament titles a vote the way the order paper
-   does. Turning that into a sentence a reader recognises is editorial work, and it is
-   what stands between a record and a story. One editor per session would do it.
+6. **Plain-language summaries.** The Parliament titles a vote as the order paper does.
+   Rewriting those titles in plain language is editorial work and is done by hand.
 7. **National parties.** A member's country and group are here; the party they were
    elected for is not, because the portal records it as an organisation number rather
    than a name. Resolving those numbers would let any party be followed as a bloc, the
@@ -45,41 +42,35 @@ across 27 countries.
 8. **Outermost regions inset.** The Azores, Madeira, the Canaries and the French
    overseas departments are member-state territory and currently off the map.
 9. **Accessibility audit.** Keyboard navigation and colour contrast were built in from
-   the start; an audit against WCAG 2.2 AA with actual screen-reader users is the
-   test that matters.
-10. **Data API.** The JSON files are already the API. Documenting them and versioning
-    them makes other people's projects possible.
+   the start; the next step is an audit against WCAG 2.2 AA, including testing with
+   screen-reader users.
+10. **Data API.** The JSON files are already the interface. The work is to document
+    and version them so other projects can depend on them.
 
-## Funding fit — Creative Europe
+## Funding
 
-The natural home is the **Journalism Partnerships** strand of Creative Europe's
-cross-sectoral programme, which funds cross-border collaboration between newsrooms and
-projects that strengthen media pluralism and access to trustworthy news. Check the
-current call text, budget and deadlines on the EU Funding & Tenders portal before
-writing anything — the strand's details change between calls, and nothing in this
-document should be treated as a substitute for the call itself.
+The project is aimed at the **Journalism Partnerships** strand of Creative Europe's
+cross-sectoral programme, which supports cross-border collaboration between newsrooms
+and projects concerned with media pluralism and access to news. Call text, budget and
+deadlines are published on the EU Funding & Tenders portal and change between calls;
+this document is not a substitute for the call itself.
 
-What this project can put in an application that most cannot:
+What the repository currently provides:
 
-- **A working prototype, not a concept.** The repository runs. A reviewer can open the
-  map, click a country and see the output, in the same session in which they read the
-  application.
-- **Genuinely cross-border by construction.** The product does not work with one
-  country in it. Its value comes from the comparison — the same vote, 27 delegations,
-  eight political groups — which is the exact thing the strand exists to fund.
-- **A defined role for partner newsrooms.** Partners are not audiences here: they get
-  a per-vote record they can embed, cite and check against the Parliament's own.
-- **Multilingualism as a feature, not a translation cost.** The Parliament publishes
-  every vote's title in all 24 official languages; the interface is the only part that
-  needs writing.
-- **Open outputs.** Code MIT, data CC BY, no lock-in, and everything survives the end
-  of the grant because the site is static files.
-- **Measurable outcomes.** Votes covered against the Parliament's own count — a figure
-  the monthly audit produces rather than a claim — embeds placed in partner outlets,
-  and summaries written.
+- A working prototype that can be opened and used as it stands.
+- Coverage of all 27 member states from a single source, so the same vote can be
+  compared across delegations and political groups.
+- Per-vote records that can be embedded, cited and checked against the Parliament's
+  published data.
+- Vote titles available in all 24 official languages from the source; only the
+  interface strings need translating.
+- Open licensing: code under MIT, data authored here under CC BY 4.0, imported records
+  under the terms of their source. The site is static files and does not depend on a
+  running service.
+- Coverage measured against the Parliament's own count by the audit script rather than
+  asserted.
 
-The honest weaknesses to prepare answers for: 115 of the votes still have no
-plain-language summary, and writing them is human work that a budget has to pay for;
-national parties are missing until the portal's organisation numbers are resolved; and
-the cost layer needs a published methodology and named reviewers before anyone should
-rely on a figure in it.
+Current limitations: 115 votes have no plain-language summary, and writing them is
+manual work; national parties are not resolved until the portal's organisation numbers
+are mapped; and the cost layer requires a published methodology and review before any
+figure in it is used.
