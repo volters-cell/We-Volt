@@ -72,7 +72,10 @@ The header says when the last plenary session ran and where, and when the next o
 starts, from the Parliament's own calendar.
 
 Links are made on demand: **Copy link to this vote**, and one in every country panel,
-put a real pasteable address on the clipboard. Browsing does not write to the address
+put a real pasteable address on the clipboard. **Instagram story** draws the open vote as
+a 1080x1920 picture — title, result, the split and the totals — and hands it to the
+phone's share sheet, where Instagram offers Stories; on a desktop it saves the image and
+copies the link instead. No web page can post into Stories directly. Browsing does not write to the address
 bar, so reopening the site brings you back to the search page rather than to whatever
 you last clicked.
 

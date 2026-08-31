@@ -1204,6 +1204,11 @@
     return '<div class="share" role="group" aria-label="Share this vote">' +
       '<button type="button" class="share-button share-copy" data-copy="' + esc(url) + '">' +
         'Copy link</button>' +
+      // The picture. On a phone it goes into the share sheet, where Instagram
+      // offers Stories; anywhere else it is saved to be posted from one.
+      '<button type="button" class="share-button share-story"' +
+        ' title="A 1080\u00d71920 picture of this vote. On a phone the share sheet' +
+        ' offers Instagram, then Add to story.">Instagram story</button>' +
       '<button type="button" class="share-button share-native" hidden' +
         ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">Share…</button>' +
       targets.map(function (target) {
@@ -1227,6 +1232,82 @@
         }).catch(function () { /* the reader closed the sheet */ });
       };
     });
+  }
+
+  /* The vote as a 1080x1920 picture, for Instagram Stories and every other
+     story format.
+
+     No web page can post into Stories directly — Instagram takes that only
+     from a registered native app — so this hands the finished image to the
+     phone's own share sheet, where Instagram appears and offers "Add to
+     story". A browser that will not accept files in a share saves the image
+     instead, and the link is copied with it so the story can carry both. */
+  async function shareStory(button) {
+    if (!window.Story || !state.decision) return;
+    const decision = state.decision;
+    const said = button.textContent;
+    const say = function (words) { button.textContent = words; };
+    const restore = function () {
+      window.setTimeout(function () { say(said); button.disabled = false; }, 1400);
+    };
+
+    button.disabled = true;
+    say('Drawing…');
+
+    const totals = tally(ballotList());
+    const seats = chamberSeats();
+    // The same arithmetic as the line under the bar: the seats are the
+    // denominator, the ballots are what was cast, and the rest did not vote.
+    totals.absent = Math.max(0, seats - castOf(totals));
+
+    let blob = null;
+    try {
+      blob = await Story.card({
+        title: decision.title,
+        subtitle: decision.subtitle,
+        bodyLabel: decision.bodyLabel,
+        dateLabel: Data.formatDate(decision.date),
+        result: (decision.outcome && decision.outcome.result) || 'recorded',
+        totals: totals,
+        seats: seats
+      });
+    } catch (error) {
+      blob = null;
+    }
+
+    if (!blob) {
+      say('Could not draw it');
+      restore();
+      return;
+    }
+
+    const name = 'eu-tracker-' + decision.date + '.png';
+    const file = new File([blob], name, { type: 'image/png' });
+    const url = shareUrl();
+
+    if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+      try {
+        await navigator.share({ files: [file], text: shareText(decision) + ' ' + url });
+        say('Shared');
+        restore();
+        return;
+      } catch (error) {
+        // The sheet was closed, or the browser refused it: fall through and
+        // save the file, which always works.
+      }
+    }
+
+    const href = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = href;
+    link.download = name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
+    try { await navigator.clipboard.writeText(url); } catch (error) { /* no clipboard */ }
+    say('Image saved');
+    restore();
   }
 
   async function copyLink(button) {
@@ -1744,6 +1825,11 @@
       // modifier click opens them in a tab as any link would; a plain click
       // copies the address instead of reloading the page you are already on.
       document.addEventListener('click', function (event) {
+        const story = event.target.closest('.share-story');
+        if (story) {
+          shareStory(story);
+          return;
+        }
         const control = event.target.closest('[data-copy]');
         if (!control) return;
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;

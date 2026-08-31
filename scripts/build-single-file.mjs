@@ -13,7 +13,11 @@ import path from 'node:path';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const REPO = 'https://github.com/volters-cell/We-Volt/blob/main';
 
-const SCRIPTS = ['projection.js', 'data.js', 'map.js', 'panel.js', 'app.js'];
+/* Read from index.html rather than listed here: a list drifts, and this one
+   had — the bundle was shipping without the theme toggle, the share menu, the
+   keyboard help, search and the story card. */
+const scriptsOf = (html) =>
+  [...html.matchAll(/<script src="assets\/js\/([^"]+)"><\/script>/g)].map((m) => m[1]);
 
 const read = (relative) => readFile(path.join(ROOT, relative), 'utf8');
 
@@ -76,12 +80,13 @@ let body = html.slice(html.indexOf('<body>') + '<body>'.length, html.lastIndexOf
 
 // Relative links to the repository's own docs have nowhere to point once the
 // page is a single file, so send them to the repository instead.
+const names = scriptsOf(body);
 body = body
   .replace(/href="(docs\/[^"]+)"/g, `href="${REPO}/$1"`)
   .replace(/\s*<script src="assets\/js\/[^"]+"><\/script>/g, '');
 
 const css = await read('assets/css/style.css');
-const scripts = await Promise.all(SCRIPTS.map((name) => read(`assets/js/${name}`)));
+const scripts = await Promise.all(names.map((name) => read(`assets/js/${name}`)));
 const data = await collectData();
 
 const page = `<title>${title}</title>
