@@ -1328,7 +1328,7 @@
     dom['decision-section'].hidden = true;
     document.querySelector('.layer-tabs').hidden = true;
     dom['map-hint'].textContent = 'Click a member state for its profile, or pick a vote ' +
-      'from the list to see how the Union split.';
+      'from the list.';
     if (map) map.revealAll();
     paint();
     renderFeed();
