@@ -15,6 +15,7 @@
 
   let calendar = { sessions: [] };
   let directory = null;
+  let geoData = null;          // the outlines, kept for the story card
   let outside = null;          // the countries the map draws in grey
   let memberIndex = null;      // every MEP, for search
   let manyBodies = false;      // is there more than one institution to filter between?
@@ -1266,6 +1267,13 @@
     const url = shareUrl();
     try { await navigator.clipboard.writeText(url); } catch (error) { /* no clipboard */ }
 
+    // The Union painted by this vote, from the same outline and the same
+    // reading of the record as the map on the page.
+    const positions = {};
+    Object.keys(statesByCode).forEach(function (code) {
+      positions[code] = Data.countryPosition(decision, code).position;
+    });
+
     let blob = null;
     try {
       blob = await Story.card({
@@ -1276,7 +1284,15 @@
         result: (decision.outcome && decision.outcome.result) || 'recorded',
         totals: totals,
         seats: seats,
-        url: url
+        url: url,
+        geo: geoData,
+        positions: positions,
+        // Where the pill points. The address without its scheme: it is read,
+        // and sometimes typed, rather than clicked.
+        site: (location.origin + location.pathname)
+          .replace(/^https?:\/\//, '')
+          .replace(/index\.html$/, '')
+          .replace(/\/$/, '')
       });
     } catch (error) {
       blob = null;
@@ -1678,6 +1694,7 @@
       renderPlenary();
       renderFeed();
 
+      geoData = geo;
       map = new EUMap(dom.map, geo, {
         // Clicking a country a second time closes it again. The map is the
         // way in and the same click is the way out, which is what a reader

@@ -73,12 +73,14 @@ starts, from the Parliament's own calendar.
 
 Links are made on demand: **Copy link to this vote**, and one in every country panel,
 put a real pasteable address on the clipboard. **Instagram** draws the open vote as a
-1080x1920 picture — title, result, the split, the totals, and a QR code that opens that
-vote — and opens the phone's own share sheet with it, where Instagram offers Add to
-story. The link goes on the clipboard at the same time, so Instagram's link sticker
-offers it with one paste. No web page can post into Stories by itself; on a desktop the
-image is saved instead. The QR code is generated in the page (`assets/js/qr.js`), not
-fetched from an image service. Browsing does not write to the address
+1080x1920 picture — the question, the title, the result, the split, the totals, and the
+Union itself painted by that vote — and opens the phone's own share sheet with it, where
+Instagram offers Add to story. The way back to the site is on the picture twice: a QR
+code carrying that vote's own address, and the address in words beside it. The link goes
+on the clipboard at the same time, so Instagram's link sticker offers it with one paste.
+No web page can post into Stories by itself; on a desktop the image is saved instead.
+The QR code is generated in the page (`assets/js/qr.js`), not fetched from an image
+service, and the map is drawn from the same outline file and projection as the site. Browsing does not write to the address
 bar, so reopening the site brings you back to the search page rather than to whatever
 you last clicked.
 

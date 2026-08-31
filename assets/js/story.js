@@ -28,6 +28,16 @@
     abstain: '#b8860b',
     absent: '#5b6b86'
   };
+  // The map's colours, the same four the page uses.
+  const VOTE = {
+    for: '#2f9c7d',
+    against: '#d75b4c',
+    abstain: '#d8a53a',
+    split: '#7c8ba1',
+    absent: '#3a4351',
+    unknown: '#3a4351'
+  };
+
   const RESULT = {
     adopted: { word: 'Adopted', ink: '#38c08a' },
     rejected: { word: 'Rejected', ink: '#ff7a6b' },
@@ -97,6 +107,64 @@
     ctx.restore();
   }
 
+  /* The Union itself, painted by the vote. This is the thing the site is, and
+     on a story it is what makes a reader stop: a shape they recognise, in the
+     colours of an argument they can see the shape of before they read a word.
+
+     Drawn from the same outline file and the same projection as the page, so
+     the picture and the site cannot drift apart. */
+  function drawMap(ctx, geo, positions, x, y, width, height) {
+    if (!geo || !global.Projection || !global.Path2D) return false;
+
+    /* The page frames the map around Azerbaijan too, so a reader can find it.
+       In a story there is no room for that: the frame holds the member states
+       and nothing else, so the Union fills the space it is given. The
+       neighbours are still drawn, and run off the edge as they do on the page.
+       A shallow copy — the outlines themselves are shared, not rewritten. */
+    const framed = {
+      type: geo.type,
+      features: geo.features.map(function (feature) {
+        if (!feature.properties || feature.properties.frame !== true) return feature;
+        const properties = {};
+        Object.keys(feature.properties).forEach(function (key) {
+          if (key !== 'frame') properties[key] = feature.properties[key];
+        });
+        return { type: feature.type, id: feature.id, properties: properties,
+          geometry: feature.geometry };
+      })
+    };
+
+    const layout = Projection.layout(framed, width, height, 4);
+    if (!layout || !layout.shapes) return false;
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(x, y, width, height);
+    ctx.clip();
+    ctx.translate(x, y);
+
+    // The neighbours first, dark and quiet: they place the Union without
+    // competing with it.
+    layout.shapes.forEach(function (shape) {
+      if (shape.member) return;
+      ctx.fillStyle = '#16274b';
+      ctx.fill(new Path2D(shape.path));
+    });
+
+    layout.shapes.forEach(function (shape) {
+      if (!shape.member) return;
+      ctx.fillStyle = VOTE[positions[shape.code]] || VOTE.unknown;
+      const path = new Path2D(shape.path);
+      ctx.fill(path);
+      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = INK.ground;
+      ctx.stroke(path);
+    });
+
+    ctx.restore();
+    return true;
+  }
+
   async function ready() {
     if (!document.fonts || !document.fonts.ready) return;
     try {
@@ -133,45 +201,67 @@
 
     /* Measured before it is drawn. A story is a fixed frame with the app's own
        controls over the top and bottom of it, so everything has to fit the band
-       between them — and the title is the one part whose height is not known
-       until it is wrapped. So the rest is added up first, and the title takes
-       what is left, at the largest size that fits it. */
-    const BRAND = 96;        // the mark and the name
-    const META = 104;        // institution and date, and air under it
-    const VERDICT = 190;
-    const BAR = 46 + 78;
-    const CELLS = 156 + 70;
-    const SEATS = vote.seats ? 56 : 0;
-    const CODE = 208;        // the square in the corner
-    const FOOT = CODE + 60;
+       between them, and two parts have no fixed height: the title, which is not
+       known until it is wrapped, and the map, which should take whatever is
+       left. The map is the reason to stop scrolling, so it is promised its
+       share first and the title takes what remains. */
+    const BRAND = 80;        // the mark and the name
+    const META = 84;         // institution and date
+    const HOOK = 66;         // the question the picture answers
+    /* The verdict is drawn on its baseline, so its own height sits above that
+       line: the block has to carry the air before it, the letters themselves,
+       and the gap to the bar, or a long title runs into the word. */
+    const LEAD = 46;         // air between the title and the verdict
+    const VERDICT_TOP = 80;  // the cap height of the word below
+    const VERDICT = LEAD + VERDICT_TOP + 40;
+    const BAR = 42 + 54;
+    const NUMBERS = 58;      // the three counts, in one line
+    const SEATS = vote.seats ? 44 : 0;
+    const CODE = 180;        // the square beside the link
+    const FOOT = CODE + 24;
 
-    // Instagram covers roughly the top and bottom eighth of a story with its
-    // own controls, so the safe band is what is between them.
-    const TOP_SAFE = 280;
-    const BOTTOM_SAFE = HEIGHT - 290;
+    const MAP_MAX = 520;
+    const MAP_MIN = 260;     // below this the Union is a smudge; better none
 
-    ctx.font = font(400, 34);
-    const subtitle = vote.subtitle ? wrap(ctx, vote.subtitle, inner).slice(0, 2) : [];
-    const SUB = subtitle.length ? subtitle.length * 48 + 26 : 0;
+    // Instagram draws its own controls over the top and bottom of a story.
+    const TOP_SAFE = 230;
+    const BOTTOM_SAFE = HEIGHT - 240;
+    const band = BOTTOM_SAFE - TOP_SAFE;
 
-    const budget = (BOTTOM_SAFE - TOP_SAFE) -
-      (BRAND + META + SUB + VERDICT + BAR + CELLS + SEATS + FOOT);
-    const title = layoutTitle(ctx, vote.title, inner, [96, 86, 76, 66, 58, 50], budget);
+    const canMap = Boolean(vote.geo && global.Projection && global.Path2D);
+    const fixed = BRAND + META + HOOK + VERDICT + BAR + NUMBERS + SEATS + FOOT;
 
-    const TITLE = title.lines.length * title.size * 1.14;
-    const block = BRAND + META + TITLE + SUB + VERDICT + BAR + CELLS + SEATS + FOOT;
-    let y = TOP_SAFE + Math.max(0, ((BOTTOM_SAFE - TOP_SAFE) - block) / 2);
+    const title = layoutTitle(ctx, vote.title, inner,
+      [92, 82, 72, 64, 56, 48], band - fixed - (canMap ? MAP_MIN : 0));
+    // The first line is drawn on its baseline, so the block has to carry the
+    // height of the letters above it or the hook line runs into the title.
+    const TITLE_TOP = title.size * 0.82;
+    const TITLE = TITLE_TOP + title.lines.length * title.size * 1.14;
 
-    brandMark(ctx, pad + 26, y - 14, 26);
+    const spare = band - fixed - TITLE;
+    const MAP = canMap && spare >= MAP_MIN ? Math.min(MAP_MAX, spare) : 0;
+
+    const block = fixed + TITLE + MAP;
+    let y = TOP_SAFE + Math.max(0, (band - block) / 2);
+
+    brandMark(ctx, pad + 24, y - 12, 24);
     ctx.fillStyle = INK.text;
-    ctx.font = font(700, 42);
-    ctx.fillText('EU Tracker', pad + 76, y);
+    ctx.font = font(700, 40);
+    ctx.fillText('EU Tracker', pad + 70, y);
     y += BRAND;
 
     ctx.fillStyle = INK.faint;
-    ctx.font = font(600, 32);
-    ctx.fillText(String(vote.bodyLabel || '').toUpperCase() + '  ·  ' + (vote.dateLabel || ''), pad, y);
+    ctx.font = font(600, 30);
+    ctx.fillText(String(vote.bodyLabel || '').toUpperCase() + '  ·  ' +
+      (vote.dateLabel || ''), pad, y);
     y += META;
+
+    // The question the picture answers, in the Union's own gold: the reason to
+    // look at the map below rather than scroll past it.
+    ctx.fillStyle = INK.gold;
+    ctx.font = font(700, 40);
+    ctx.fillText('How did your country vote?', pad, y);
+    y += HOOK + TITLE_TOP;
 
     ctx.fillStyle = INK.text;
     ctx.font = font(700, title.size, "'Source Serif 4', Georgia, serif");
@@ -179,26 +269,19 @@
       const last = title.clipped && i === title.lines.length - 1;
       ctx.fillText(last ? line + '…' : line, pad, y + i * title.size * 1.14);
     });
-    y += TITLE + title.size * 0.14;
-
-    if (subtitle.length) {
-      ctx.fillStyle = INK.faint;
-      ctx.font = font(400, 34);
-      subtitle.forEach(function (line, i) { ctx.fillText(line, pad, y + i * 48); });
-      y += SUB;
-    }
+    y += TITLE - TITLE_TOP + title.size * 0.2;
 
     // The verdict.
-    y += 118;
+    y += LEAD + VERDICT_TOP;
     ctx.fillStyle = outcome.ink;
-    ctx.font = font(700, 112);
+    ctx.font = font(700, 104);
     ctx.fillText(outcome.word, pad, y);
-    y += 72;
+    y += 40;
 
     // The split, drawn as the bar the page draws.
     const totals = vote.totals || { for: 0, against: 0, abstain: 0, absent: 0 };
     const cast = totals.for + totals.against + totals.abstain;
-    const barH = 46;
+    const barH = 42;
     if (cast > 0) {
       let x = pad;
       [['for', INK.for], ['against', INK.against], ['abstain', INK.abstain]].forEach(function (pair) {
@@ -209,55 +292,72 @@
         x += width;
       });
     }
-    y += barH + 78;
+    y += BAR;
 
-    // The three numbers, each in the colour of the vote it counts.
-    const cells = [
-      { label: 'In favour', value: totals.for, ink: INK.for },
-      { label: 'Against', value: totals.against, ink: INK.against },
-      { label: 'Abstained', value: totals.abstain, ink: INK.abstain }
-    ];
-    const cellW = (inner - 32) / 3;
-    cells.forEach(function (cell, i) {
-      const x = pad + i * (cellW + 16);
-      ctx.fillStyle = INK.panel;
-      roundRect(ctx, x, y, cellW, 156, 18);
-      ctx.fill();
-      ctx.fillStyle = cell.ink;
-      ctx.font = font(700, 74);
-      ctx.fillText(String(cell.value), x + 26, y + 82);
+    /* The three counts on one line, each number in the colour of the vote it
+       counts and each word after it in the quieter grey — so the eye takes the
+       figures first and the labels only if it wants them. */
+    let x = pad;
+    [['for', 'for', INK.for], ['against', 'against', INK.against],
+     ['abstain', 'abstained', INK.abstain]].forEach(function (part, i) {
+      if (i) {
+        ctx.fillStyle = INK.faint;
+        ctx.font = font(400, 40);
+        ctx.fillText('  ·  ', x, y);
+        x += ctx.measureText('  ·  ').width;
+      }
+      ctx.fillStyle = part[2];
+      ctx.font = font(700, 52);
+      const number = String(totals[part[0]]);
+      ctx.fillText(number, x, y);
+      x += ctx.measureText(number).width + 12;
       ctx.fillStyle = INK.soft;
-      ctx.font = font(600, 28);
-      ctx.fillText(cell.label, x + 26, y + 126);
+      ctx.font = font(600, 34);
+      ctx.fillText(part[1], x, y);
+      x += ctx.measureText(part[1]).width;
     });
-    y += 156 + 56;
+    y += NUMBERS;
 
     if (vote.seats) {
       ctx.fillStyle = INK.faint;
-      ctx.font = font(400, 30);
+      ctx.font = font(400, 28);
       ctx.fillText(cast + ' of ' + vote.seats + ' members voted · ' +
         totals.absent + ' did not', pad, y);
+      y += SEATS;
     }
 
-    /* The foot: the code that opens this vote, and whose figures these are.
-       No address is printed. A story is read at arm's length and a line of raw
-       URL reads as clutter; the square is the way in, and it carries the
-       vote's own address rather than the front page. */
-    y += 60;
+    if (MAP) {
+      // The Union is nearly square in this projection, so a square is what it
+      // is given, centred: a wide box would only pad it with empty sea.
+      const side = Math.min(inner, MAP - 16);
+      drawMap(ctx, vote.geo, vote.positions || {}, (WIDTH - side) / 2, y, side, MAP - 16);
+      y += MAP;
+    }
+
+    /* The foot: the way in, said twice. The code carries this vote's own
+       address, for a phone held up to the screen or a screenshot passed on;
+       the pill beside it says where that goes in words, because a story is as
+       often read by someone who will type it as by someone who will scan it. */
     const drawn = vote.url && global.QR &&
       QR.draw(ctx, vote.url, pad, y, CODE, {
         ink: INK.ground, background: '#ffffff', quiet: 3
       });
 
-    const textX = drawn ? pad + CODE + 34 : pad;
-    const footTop = y + (drawn ? 84 : 20);
+    const pillX = drawn ? pad + CODE + 28 : pad;
+    const pillW = WIDTH - pad - pillX;
+    const pillH = 104;
+    const pillY = y + (CODE - pillH) / 2;
 
-    ctx.fillStyle = INK.text;
-    ctx.font = font(700, 34);
-    ctx.fillText(drawn ? 'Scan to open this vote' : 'EU Tracker', textX, footTop);
-    ctx.fillStyle = INK.faint;
-    ctx.font = font(400, 28);
-    ctx.fillText('EU Tracker · European Parliament open data', textX, footTop + 44);
+    ctx.fillStyle = INK.gold;
+    roundRect(ctx, pillX, pillY, pillW, pillH, pillH / 2);
+    ctx.fill();
+
+    ctx.fillStyle = '#12203f';
+    ctx.font = font(700, 36);
+    ctx.fillText('Open the full record', pillX + 40, pillY + 44);
+    ctx.font = font(600, 26);
+    ctx.fillText(vote.site || '', pillX + 40, pillY + 78);
+
 
     return await new Promise(function (resolve) {
       if (canvas.toBlob) {
