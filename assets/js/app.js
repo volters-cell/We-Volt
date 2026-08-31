@@ -267,7 +267,7 @@
 
   /* ------------------------------------------------------------- one member */
 
-  async function showMember(id) {
+  async function showMember(id, options) {
     if (!memberCache[id]) {
       try {
         memberCache[id] = await Data.getJSON('data/meps/' + id + '.json');
@@ -280,7 +280,9 @@
     // from a country's own list and landing on the vote list instead would
     // lose the place they were keeping.
     const from = state.country;
-    openStep(function () { backToVotes({ fromHistory: true, country: from }); });
+    if (!(options && options.fromHistory)) {
+      openStep(function () { backToVotes({ fromHistory: true, country: from }); });
+    }
     state.member = member;
     state.decision = null;
 
@@ -1450,8 +1452,20 @@
       clearDecision({ country: code });
       return;
     }
+    // Back has to undo the step the reader actually took. Opening a vote from
+    // a member's own list is a step out of that member's record, not out of
+    // the vote list: going back has to put them where they were, with the
+    // country they had open if they had one.
     if (!(options && options.fromHistory) && (!state.decision || state.decision.id !== id)) {
-      openStep(function () { backToVotes({ fromHistory: true }); });
+      const fromMember = state.member && state.member.id;
+      const fromCountry = state.country;
+      openStep(function () {
+        if (fromMember) {
+          showMember(fromMember, { fromHistory: true });
+        } else {
+          backToVotes({ fromHistory: true, country: fromCountry });
+        }
+      });
     }
     const entry = index.decisions.find(function (item) { return item.id === id; });
     if (!entry) {
