@@ -2,11 +2,11 @@
   "id": "ep-2026-06-16-2025-0390-app-193493",
   "sourceId": 193493,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Measures necessary for the implementation of the Protocol, annexed to the TEU and to the TFEU, on the financial consequences of the expiry of the ECSC Treaty and on the Research Fund for Coal and Steel",
-  "subtitle": "2025/0390(APP) — roll-call vote in plenary",
+  "subtitle": "2025/0390(APP) — vote in plenary",
   "date": "2026-06-16",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-16-RCV_EN.xml"
     },
     {

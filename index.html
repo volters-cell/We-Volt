@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EU Tracker — every vote of the European Parliament, member by member</title>
-  <meta name="description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta name="description" content="Every vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
   <meta name="author" content="EU Tracker">
   <!-- The published address. Change these four lines and the sitemap if the
        site moves to its own domain; nothing else refers to it. -->
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EU Tracker">
   <meta property="og:title" content="EU Tracker — Every vote of the European Parliament, member by member.">
-  <meta property="og:description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta property="og:description" content="Every vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
   <meta property="og:image" content="https://volters-cell.github.io/We-Volt/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EU Tracker — Every vote of the European Parliament, member by member.">
-  <meta name="twitter:description" content="Every roll-call vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
+  <meta name="twitter:description" content="Every vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">
   <meta name="twitter:image" content="https://volters-cell.github.io/We-Volt/assets/social-card.png">
   <meta name="theme-color" content="#0b3a8f" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#171d26" media="(prefers-color-scheme: dark)">
@@ -52,9 +52,11 @@
         <span class="brand-tagline">Every vote of the European Parliament, member by member</span>
       </span>
     </div>
-    <p class="header-meta">
+    <div class="header-meta">
       <span id="header-plenary"></span>
       <a href="about.html" class="header-about">About the data</a>
+    </div>
+    <div class="header-tools">
       <div class="site-share" id="site-share">
         <button type="button" class="site-share-button" id="site-share-button"
                 aria-expanded="false" aria-controls="site-share-menu"
@@ -69,11 +71,11 @@
       </div>
       <button id="theme-toggle" class="theme-toggle" type="button"
               aria-label="Toggle the theme" title="Toggle the theme"></button>
-    </p>
+    </div>
   </header>
 
   <main>
-    <h1 class="visually-hidden">EU Tracker — every roll-call vote of the European Parliament,
+    <h1 class="visually-hidden">EU Tracker — every vote of the European Parliament,
       member by member</h1>
     <!-- Left: the map, which stays in view while the record is read. -->
     <section class="map-section" aria-labelledby="map-heading">
@@ -97,7 +99,7 @@
         <h2 id="tracker-heading" class="visually-hidden">Search the votes</h2>
 
         <div class="intro" id="intro">
-          <p class="intro-lead">Search any roll-call vote the Parliament has taken since the
+          <p class="intro-lead">Search any vote the Parliament has taken since the
             June 2024 election, and see how every member voted — by name, by group,
             by country.</p>
           <p class="intro-stats" id="intro-stats"></p>
@@ -231,7 +233,7 @@
     <div class="footer-inner">
       <div class="footer-lead">
         <p class="footer-name">EU Tracker</p>
-        <p>Every roll-call vote of the European Parliament, member by member. Each record is
+        <p>Every vote of the European Parliament, member by member. Each record is
           a JSON file in the public repository, and each one names the source it was read from.</p>
       </div>
 
@@ -243,7 +245,7 @@
         </div>
         <div>
           <dt>Coverage</dt>
-          <dd>Every roll-call vote of the current term, from 16 July 2024</dd>
+          <dd>Every vote of the current term, from 16 July 2024</dd>
         </div>
         <div>
           <dt>Updated</dt>

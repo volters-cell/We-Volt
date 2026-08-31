@@ -2,11 +2,11 @@
   "id": "ep-2026-01-22-2025-2007-ini-183177",
   "sourceId": 183177,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "European technological sovereignty and digital infrastructure",
-  "subtitle": "2025/2007(INI) — roll-call vote in plenary",
+  "subtitle": "2025/2007(INI) — vote in plenary",
   "date": "2026-01-22",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-01-22-RCV_EN.xml"
     },
     {

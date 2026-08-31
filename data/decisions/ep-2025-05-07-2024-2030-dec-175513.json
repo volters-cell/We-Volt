@@ -2,11 +2,11 @@
   "id": "ep-2025-05-07-2024-2030-dec-175513",
   "sourceId": 175513,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Discharge 2023: Agencies",
-  "subtitle": "2024/2030(DEC) — roll-call vote in plenary",
+  "subtitle": "2024/2030(DEC) — vote in plenary",
   "date": "2025-05-07",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-05-07-RCV_EN.xml"
     },
     {

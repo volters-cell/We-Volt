@@ -216,7 +216,7 @@
     dom['member-group'].textContent = member.group;
     dom['member-group'].className = 'badge badge-parliament';
     dom['member-country'].textContent = country.name;
-    dom['member-summary'].textContent = 'Every roll-call vote this member has cast in the ' +
+    dom['member-summary'].textContent = 'Every vote this member has cast in the ' +
       'records held here.';
 
     dom['member-totals'].innerHTML = ['for', 'against', 'abstain', 'absent'].map(function (key) {
@@ -290,8 +290,11 @@
 
     if (past.length) {
       const last = past[past.length - 1];
-      dom['header-plenary'].textContent = 'Last plenary ' + sessionLabel(last) +
-        (next ? ' · next ' + sessionLabel(next) : '');
+      setHeaderPlenary(
+        'Last plenary ' + sessionLabel(last) + (next ? ' · next ' + sessionLabel(next) : ''),
+        // On a phone the same line has to fit the width, so the cities go.
+        'Plenary ' + sessionLabel(last, true) + (next ? ' · next ' + sessionLabel(next, true) : '')
+      );
       return;
     }
 
@@ -301,13 +304,36 @@
       .map(function (item) { return item.date; })
       .sort()
       .pop();
-    dom['header-plenary'].textContent = latest
-      ? 'Latest sitting on record ' + Data.formatDate(latest)
-      : '';
+    setHeaderPlenary(latest ? 'Latest sitting on record ' + Data.formatDate(latest) : '');
     dom['header-plenary'].title = 'Plenary calendar not imported yet — run npm run sessions.';
   }
 
-  function sessionLabel(session) {
+  /* The header line comes in two lengths and the screen picks one. Both are
+     kept on the element, so a rotation or a resize swaps them without the
+     calendar being read again. */
+  const narrowHeader = window.matchMedia('(max-width: 40rem)');
+
+  function setHeaderPlenary(full, short) {
+    const node = dom['header-plenary'];
+    if (!node) return;
+    node.dataset.full = full || '';
+    node.dataset.short = short || full || '';
+    applyHeaderPlenary();
+  }
+
+  function applyHeaderPlenary() {
+    const node = dom['header-plenary'];
+    if (!node || node.dataset.full === undefined) return;
+    node.textContent = narrowHeader.matches ? node.dataset.short : node.dataset.full;
+  }
+
+  if (narrowHeader.addEventListener) {
+    narrowHeader.addEventListener('change', applyHeaderPlenary);
+  } else if (narrowHeader.addListener) {
+    narrowHeader.addListener(applyHeaderPlenary);   // Safari before 14
+  }
+
+  function sessionLabel(session, terse) {
     const start = new Date(session.start + 'T00:00:00Z');
     const end = new Date(session.end + 'T00:00:00Z');
     const sameMonth = session.start.slice(0, 7) === session.end.slice(0, 7);
@@ -317,7 +343,8 @@
     const endText = end.toLocaleDateString('en-GB', {
       day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
     });
-    return startText + '–' + endText + (session.location ? ', ' + session.location : '');
+    return startText + '–' + endText +
+      (session.location && !terse ? ', ' + session.location : '');
   }
 
   /* ------------------------------------------------------------ the feed */

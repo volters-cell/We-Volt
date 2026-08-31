@@ -1,28 +1,28 @@
 # EU Tracker
 
-**Every roll-call vote of the European Parliament, member by member, shown country by
+**Every vote of the European Parliament, member by member, shown country by
 country on a map.**
 
 EU Tracker reads the European Parliament's own published record of each sitting and
 presents it as a map and a searchable list: how each member state's delegation voted,
 how each political group voted, and how each MEP voted, one vote at a time.
 
-The Parliament publishes roll-call results as annexes listing every member and their
-position. This project imports those files, joins the member ids to names, countries
+The Parliament publishes the result of each recorded vote as an annex listing every
+member and their position. This project imports those files, joins the member ids to names, countries
 and groups, and stores one record per vote so the same result can be read either by
 vote or by member.
 
 ## What it does today
 
 The page opens on the Union itself: the 27 member states in the Union's own blue, the
-rest of Europe in grey, and beside them every vote on record — Parliament roll-calls,
+rest of Europe in grey, and beside them every vote on record — Parliament votes,
 Council votes and Commission acts in one unfolded list, searchable and filterable by
 institution. Click a country and you get its profile; pick a vote and the map redraws in
 one of two layers:
 
 | Layer | Answers |
 | --- | --- |
-| **How they voted** | The member state's position. In Parliament files: where most of the delegation voted, the breakdown by political group, and — where a real roll-call has been imported — every MEP by name. |
+| **How they voted** | The member state's position. In Parliament files: where most of the delegation voted, the breakdown by political group, and — where the individual ballots have been imported — every MEP by name. |
 | **What it costs** | Hidden until a decision carries sourced cost figures. The data model supports it and the interface brings the layer back on its own the moment real numbers exist — see below. |
 
 The 27 member states sit on a map that shows their neighbours — the UK, Norway,
@@ -63,7 +63,7 @@ Political groups are shown with their conventional colours; drop an artwork file
 there, including on whose marks those are.
 
 Open a vote and the whole chamber is there: a bar showing how it split, then the
-roll-call broken down three ways — **MEPs**, **Political groups**, **Countries** — with
+result broken down three ways — **MEPs**, **Political groups**, **Countries** — with
 filters for name, group, country and position. Every part of the bar is a filter:
 click the red block and you get the 169 members who voted against. Click a group or a
 country row to narrow to it, or any name to follow that member across every vote.
@@ -108,13 +108,13 @@ on each part.
 
 ## The data
 
-**Coverage is verified against the source.** 718 roll-call votes — every main vote
+**Coverage is verified against the source.** 718 votes — every main vote
 the Parliament has taken since the term began on 16 July 2024 — with every member by
 name, their group, and how each of them voted. 495,164 individual ballots.
 
 `scripts/audit-sources.mjs` walks all 112 sittings of the term at the Parliament and
 compares vote by vote. As of 24 August 2026: 679 votes on a text, 647 of them published
-with ballots and all 647 held here, 32 recorded as roll calls with no ballots published,
+with ballots and all 647 held here, 32 recorded with no ballots published,
 and **no record whose figures disagree with the Parliament's own**.
 
 Everything comes from the European Parliament's own record, read from its open data portal
@@ -153,7 +153,7 @@ everything". Both are built by scripts; neither is edited by hand.
 node scripts/build-index.mjs    # rebuilds the feed, newest first
 ```
 
-A real record is made by importing a published roll-call and then adding the
+A real record is made by importing a published vote and then adding the
 country-level reporting by hand:
 
 ```bash
@@ -201,7 +201,7 @@ something different on every vote.
 
 ## Where the data comes from
 
-Roll-call votes come from the European Parliament itself, through its open data portal:
+Votes come from the European Parliament itself, through its open data portal:
 each sitting's decisions, which record who voted for, against and abstained, and the
 list of members that turns those ids into names, countries and groups. Nothing sits in
 between. Boundaries come from public-domain

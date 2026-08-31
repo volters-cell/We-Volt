@@ -2,11 +2,11 @@
   "id": "ep-2026-06-16-2025-0260-cod-193515",
   "sourceId": 193515,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Non-application of customs duties on imports of certain goods",
-  "subtitle": "2025/0260(COD) — roll-call vote in plenary",
+  "subtitle": "2025/0260(COD) — vote in plenary",
   "date": "2026-06-16",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-16-RCV_EN.xml"
     },
     {

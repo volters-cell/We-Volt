@@ -2,11 +2,11 @@
   "id": "ep-2026-03-12-2026-2641-rsp-189169",
   "sourceId": 189169,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Human trafficking and grave human rights violations linked to the recruitment of non-Russian nationals, in particular from Africa, for Russia’s war of aggression in Ukraine",
-  "subtitle": "2026/2641(RSP) — roll-call vote in plenary",
+  "subtitle": "2026/2641(RSP) — vote in plenary",
   "date": "2026-03-12",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-03-12-RCV_EN.xml"
     },
     {

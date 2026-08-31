@@ -2,11 +2,11 @@
   "id": "ep-2024-10-08-2024-0212-bud-169701",
   "sourceId": 169701,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Mobilisation of the European Union Solidarity Fund: assistance to Italy, Slovenia, Austria, Greece and France further to natural disasters that occurred in 2023",
-  "subtitle": "2024/0212(BUD) — roll-call vote in plenary",
+  "subtitle": "2024/0212(BUD) — vote in plenary",
   "date": "2024-10-08",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-10-08-RCV_EN.xml"
     },
     {

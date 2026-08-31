@@ -63,7 +63,7 @@ const index = {
   metadata: {
     project: 'EU Tracker',
     updated: new Date().toISOString().slice(0, 10),
-    dataStatus: 'Roll-call votes of the European Parliament, from its open data portal. ' +
+    dataStatus: 'Votes of the European Parliament, from its open data portal. ' +
       'Summaries are editorial and may be absent. See about.html.'
   },
   decisions

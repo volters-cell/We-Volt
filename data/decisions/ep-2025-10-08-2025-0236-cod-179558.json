@@ -2,11 +2,11 @@
   "id": "ep-2025-10-08-2025-0236-cod-179558",
   "sourceId": 179558,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Amending certain CAP Regulations as regards the conditionality system, types of intervention in the form of direct payment, types of intervention in certain sectors and rural development and annual performance reports, data and interoperability governance, suspensions of payments annual performance clearance and controls and penalties",
-  "subtitle": "2025/0236(COD) — roll-call vote in plenary",
+  "subtitle": "2025/0236(COD) — vote in plenary",
   "date": "2025-10-08",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-10-08-RCV_EN.xml"
     },
     {

@@ -2,11 +2,11 @@
   "id": "ep-2026-03-26-2025-0429-cod-189270",
   "sourceId": 189270,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2021/1232 as regards the extension of its period of application",
-  "subtitle": "2025/0429(COD) — roll-call vote in plenary",
+  "subtitle": "2025/0429(COD) — vote in plenary",
   "date": "2026-03-26",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-03-26-RCV_EN.xml"
     },
     {

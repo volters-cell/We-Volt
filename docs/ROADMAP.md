@@ -10,7 +10,7 @@ The current state of the project and the work planned next.
   member voted, on any record.
 - Council qualified-majority arithmetic computed live, including whether a blocking
   minority formed.
-- Parliament records down to the individual MEP, imported from published roll-calls.
+- Parliament records down to the individual MEP, imported from the published ballots.
 - Permalinks to any country's record on any decision.
 - The whole of this parliamentary term imported from the Parliament's open data
   portal, checked vote by vote against it by a monthly audit.
@@ -18,7 +18,7 @@ The current state of the project and the work planned next.
 ## Next
 
 1. **A real archive.** One import run per plenary session, so the site holds every
-   roll-call of the term rather than three files. The importer already exists; it
+   vote of the term rather than three files. The importer already exists; it
    needs a schedule and a review step.
 2. **Search across decisions.** Queries across the whole term rather than within one
    vote — for example, votes where a delegation split, or where two member states

@@ -1,7 +1,7 @@
 # Political group logos
 
 Drop a file here named after the group and the site uses it in place of the
-coloured mark — everywhere that group appears: the roll-call breakdown, and the
+coloured mark — everywhere that group appears: the breakdown of a vote, and the
 group table in a country's panel. Nine files cover the whole Parliament:
 
 ```

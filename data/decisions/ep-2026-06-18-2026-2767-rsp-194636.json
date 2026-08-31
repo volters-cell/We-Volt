@@ -2,11 +2,11 @@
   "id": "ep-2026-06-18-2026-2767-rsp-194636",
   "sourceId": 194636,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Continued crackdown on civic space and fundamental freedoms in Burkina Faso",
-  "subtitle": "2026/2767(RSP) — roll-call vote in plenary",
+  "subtitle": "2026/2767(RSP) — vote in plenary",
   "date": "2026-06-18",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-18-RCV_EN.xml"
     },
     {

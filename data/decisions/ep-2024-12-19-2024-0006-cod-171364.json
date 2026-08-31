@@ -2,11 +2,11 @@
   "id": "ep-2024-12-19-2024-0006-cod-171364",
   "sourceId": 171364,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Amending Directive 2009/38/EC as regards the establishment and functioning of European Works Councils and the effective enforcement of transnational information and consultation rights",
-  "subtitle": "2024/0006(COD) — roll-call vote in plenary",
+  "subtitle": "2024/0006(COD) — vote in plenary",
   "date": "2024-12-19",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-12-19-RCV_EN.xml"
     },
     {

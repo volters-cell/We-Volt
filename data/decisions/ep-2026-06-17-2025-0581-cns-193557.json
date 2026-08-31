@@ -2,11 +2,11 @@
   "id": "ep-2026-06-17-2025-0581-cns-193557",
   "sourceId": 193557,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "General arrangements for excise duty applied to tobacco and tobacco related products",
-  "subtitle": "2025/0581(CNS) — roll-call vote in plenary",
+  "subtitle": "2025/0581(CNS) — vote in plenary",
   "date": "2026-06-17",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-17-RCV_EN.xml"
     },
     {

@@ -113,7 +113,7 @@
           ' of votes cast were in favour.') +
         '</p>' + bar(totals, state.seats) + groupRows(country) +
         '<p class="panel-actions"><button type="button" class="show-in-roll" data-country="' +
-        escapeHTML(state.code) + '">Show ' + escapeHTML(state.name) + '’s members in the roll-call' +
+        escapeHTML(state.code) + '">Show ' + escapeHTML(state.name) + '’s members in the vote' +
         '</button></p>';
     }
 

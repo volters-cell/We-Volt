@@ -2,11 +2,11 @@
   "id": "ep-2026-06-16-2025-0359-193848",
   "sourceId": 193848,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
+  "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)",
-  "subtitle": "A10-0073/2026 – Arba Kokalari, Michael McNamara – Proposal to vote on amendments — roll-call vote in plenary",
+  "subtitle": "A10-0073/2026 – Arba Kokalari, Michael McNamara – Proposal to vote on amendments — vote in plenary",
   "date": "2026-06-16",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2640,7 +2640,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-16-RCV_EN.xml"
     },
     {

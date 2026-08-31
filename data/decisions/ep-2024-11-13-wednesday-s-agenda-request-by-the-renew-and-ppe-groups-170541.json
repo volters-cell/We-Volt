@@ -2,11 +2,11 @@
   "id": "ep-2024-11-13-wednesday-s-agenda-request-by-the-renew-and-ppe-groups-170541",
   "sourceId": 170541,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
+  "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Wednesday’s agenda – Request by the Renew and PPE groups",
-  "subtitle": "roll-call vote in plenary",
+  "subtitle": "vote in plenary",
   "date": "2024-11-13",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2160,7 +2160,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-11-13-RCV_EN.xml"
     },
     {

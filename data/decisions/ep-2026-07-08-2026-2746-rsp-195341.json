@@ -2,11 +2,11 @@
   "id": "ep-2026-07-08-2026-2746-rsp-195341",
   "sourceId": 195341,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize DP202216 x NK603 x DAS-40278-9 and its sub-combinations DP 202216 x NK603, DP202216 x DAS-40278-9",
-  "subtitle": "2026/2746(RSP) — roll-call vote in plenary",
+  "subtitle": "2026/2746(RSP) — vote in plenary",
   "date": "2026-07-08",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2900,7 +2900,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-07-08-RCV_EN.xml"
     },
     {

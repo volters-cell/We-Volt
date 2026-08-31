@@ -2,11 +2,11 @@
   "id": "ep-2025-04-01-2023-0454-cod-173691",
   "sourceId": 173691,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Re-attribution of scientific and technical tasks to the European Chemicals Agency",
-  "subtitle": "2023/0454(COD) — roll-call vote in plenary",
+  "subtitle": "2023/0454(COD) — vote in plenary",
   "date": "2025-04-01",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2896,7 +2896,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-04-01-RCV_EN.xml"
     },
     {

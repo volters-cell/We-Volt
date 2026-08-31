@@ -188,14 +188,24 @@ a:hover { text-decoration-thickness: 2px; }
 .brand-name { display: block; font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; }
 .brand-tagline { display: block; color: var(--ink-faint); font-size: .82rem; }
 
+/* The right of the header: the plenary dates and the About link stacked and
+   right-aligned, then the two controls beside them. They used to sit inside a
+   <p>, which the parser closed at the first <div> — so on a phone the Share
+   button and the theme toggle escaped into the header itself and took a row
+   each. They are their own element now. */
 .header-meta {
-  margin: 0;
+  margin: 0 0 0 auto;
   text-align: right;
   font-size: .8rem;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .1rem;
+  min-width: 0;
 }
-.header-meta span { display: block; }
+.header-tools { display: flex; align-items: center; gap: .4rem; flex: none; }
 
 
 .theme-toggle {
@@ -358,40 +368,6 @@ a:hover { text-decoration-thickness: 2px; }
   }
 }
 
-@media (max-width: 40rem) {
-  /* Very small screens */
-  .site-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-  
-  .header-meta {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: flex-start;
-  }
-  
-  .header-meta span {
-    display: inline;
-  }
-  
-  .brand {
-    justify-content: space-between;
-  }
-  
-  /* Map takes full width on very small screens */
-  .map-section {
-    order: -1;
-  }
-  
-  .rail {
-    order: 1;
-  }
-}
-
 /* Focus visible for keyboard navigation */
 :focus-visible {
   outline: 2px solid var(--focus);
@@ -416,50 +392,32 @@ a:hover { text-decoration-thickness: 2px; }
   top: 0;
 }
 
-/* Highlight country on hover */
-.map path:hover {
-  filter: brightness(1.1);
-  cursor: pointer;
-}
-
-.map path:focus {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-
- {
-  width: 48px;
-  height: 48px;
-  color: var(--ink-soft);
-  margin-bottom: 0.5rem;
-}
-
- {
-  display: block;
-}
-
-/* On a phone the header was taking a third of the screen: the brand on two
-   lines, the plenary dates wrapped and right-aligned under it, and the About
-   link alone on a third row. Everything reads left, small, and in one flow. */
-@media (max-width: 34rem) {
+/* On a phone the header ran to a third of the screen. It is two rows now: the
+   brand with the two controls beside it, then the plenary dates and the About
+   link along the bottom in small type. */
+@media (max-width: 40rem) {
   .site-header {
-    padding: .8rem 1rem;
-    gap: .35rem .8rem;
-    align-items: flex-start;
+    padding: .7rem 1rem;
+    gap: .4rem .75rem;
+    align-items: center;
   }
-  .brand { gap: .6rem; }
-  .brand-mark { width: 28px; height: 28px; border-width: 2px; }
-  .brand-name { font-size: 1.05rem; }
-  .brand-tagline { font-size: .76rem; }
+  .brand { gap: .55rem; flex: 1 1 auto; min-width: 0; }
+  .brand-mark { width: 26px; height: 26px; border-width: 2px; }
+  .brand-name { font-size: 1.02rem; }
+  .brand-tagline { font-size: .74rem; line-height: 1.35; }
+  .header-tools { order: 1; margin-left: auto; }
   .header-meta {
-    text-align: left;
-    font-size: .74rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .1rem .6rem;
+    order: 2;
     width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: .73rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: .1rem .7rem;
   }
-  .header-meta span { display: inline; }
 }
 #header-plenary { color: var(--ink-soft); font-weight: 500; }
 
@@ -502,10 +460,14 @@ main {
 
 @media (max-width: 62rem) {
   main { grid-template-columns: minmax(0, 1fr); }
-  /* Scrolling past a full-width map to reach the vote you just opened is the
-     wrong way round on a phone. */
-  .map-section { order: 2; }
-  .rail { order: 1; }
+  /* One column, in the order the page is read: the map first, because it is
+     what the site is; then the country you tapped, whose panel scrolls itself
+     into view; then the sessions and everything below them. */
+  .map-section { order: 1; }
+  .rail { order: 2; }
+  /* The map card gives its padding back to the map on a phone. */
+  .map-section { padding: .85rem .7rem 1rem; }
+  .map-hint { font-size: .8rem; margin-bottom: .6rem; }
 }
 
 /* ---------------------------------------------------------------- decision */
@@ -1878,8 +1840,15 @@ button.permalink {
 .share-row svg { width: 1.05rem; height: 1.05rem; flex: none; color: var(--ink-soft); }
 .share-row:hover svg { color: var(--ink); }
 
-@media (max-width: 34rem) {
-  .site-share-menu { right: auto; left: 0; }
+/* On a phone the Share button sits at the right of the header, so the menu
+   hangs from its right edge and grows leftwards. Pinning it to the left, as
+   it once was, pushed it off the screen and gave the page a sideways scroll. */
+@media (max-width: 40rem) {
+  .site-share-menu {
+    right: 0;
+    left: auto;
+    max-width: calc(100vw - 1.5rem);
+  }
 }
 
 /* ---------------------------------------------------- how a control behaves
@@ -2001,6 +1970,54 @@ input:focus-visible {
   .search input { min-height: 2.9rem; }
   .roll-member, .decision-card, .breakdown-row { min-height: 3rem; }
   .panel-close { min-height: 2.6rem; padding-inline: .9rem; }
+}
+
+
+/* ---------------------------------------------------------------- phone
+
+   Below 40rem the page is a single column and every element has to earn its
+   height. Type comes down a step, the cards give back some padding, and a
+   session line fits on one line, so a term of sittings is a scroll rather
+   than a journey. Nothing here shrinks a tap target: the block above sets
+   those, and this one only touches type, spacing and wrapping. */
+@media (max-width: 40rem) {
+  /* The brand takes a share of the row rather than all of it, so the Share
+     button and the theme toggle stay beside it instead of wrapping below. */
+  .brand { flex: 1 1 55%; }
+  .brand-tagline {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  main { padding: .8rem .75rem 2.5rem; gap: .8rem; }
+  .rail { gap: .8rem; }
+  .tracker, .panel, .decision { padding: .9rem .85rem; }
+
+  .intro { margin-bottom: .75rem; }
+  .intro-lead { font-size: 1rem; max-width: none; }
+  .panel-empty h2 { font-size: 1.3rem; }
+  .panel-body h2, .panel-title { font-size: 1.25rem; }
+
+  /* One sitting, one line. */
+  .session > summary { padding: .55rem .6rem; gap: .45rem; align-items: center; }
+  .session-label { font-size: .83rem; line-height: 1.3; }
+  .session-count { font-size: .72rem; white-space: nowrap; }
+  .session-list { gap: .4rem; }
+
+  .site-footer { padding: 1.5rem 1rem 2rem; }
+  .footer-facts { gap: .75rem 1rem; }
+}
+
+/* The narrowest phones still in use — 320 CSS pixels. The brand gives up more
+   of the row so the two controls stay beside it, and the tagline holds to a
+   single line. */
+@media (max-width: 24rem) {
+  .brand { flex: 1 1 45%; gap: .45rem; }
+  .brand-tagline { -webkit-line-clamp: 1; font-size: .7rem; }
+  .site-share-button { padding-inline: .6rem; }
+  main { padding: .7rem .6rem 2rem; }
 }
 
 

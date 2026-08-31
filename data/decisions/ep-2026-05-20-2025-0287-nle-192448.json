@@ -2,11 +2,11 @@
   "id": "ep-2026-05-20-2025-0287-nle-192448",
   "sourceId": 192448,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
+  "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "EU-Cook Islands Sustainable Fisheries Partnership Agreement (2025-2032): Implementing Protocol",
-  "subtitle": "2025/0287(NLE) — roll-call vote in plenary",
+  "subtitle": "2025/0287(NLE) — vote in plenary",
   "date": "2026-05-20",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2892,7 +2892,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-05-20-RCV_EN.xml"
     },
     {

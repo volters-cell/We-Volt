@@ -156,7 +156,7 @@ async function loadMembers(args) {
     term: Number(args.term || TERM),
     note: 'Every member who has held a seat in this Parliament: name, country and ' +
       'political group, stored once. Vote records reference members by id rather ' +
-      'than repeating this, which keeps a whole term of roll-calls at tens of megabytes. ' +
+      'than repeating this, which keeps a whole term of votes at tens of megabytes. ' +
       'Members marked former have left the House; the portal no longer states their group.',
     members: members
   }, null, 2) + '\n', 'utf8');
@@ -212,16 +212,16 @@ export function buildRecord(decision, item, members, date, term) {
     sourceId: Number(votingId) || votingId,
     status: 'verified',
     dataNote: stated
-      ? 'Roll-call vote of the European Parliament, imported from its open data portal. ' +
+      ? 'Vote of the European Parliament, imported from its open data portal. ' +
         'The portal records how each member voted and states whether the text carried.'
-      : 'Roll-call vote of the European Parliament, imported from its open data portal. ' +
+      : 'Vote of the European Parliament, imported from its open data portal. ' +
         'The portal records how each member voted; it does not state whether this text ' +
         'carried, so the result below follows from the totals — more in favour than ' +
         'against. Votes needing an absolute majority are the exception.',
     body: 'parliament',
     bodyLabel: 'European Parliament',
     title: title,
-    subtitle: (detail ? detail + ' — ' : '') + 'roll-call vote in plenary',
+    subtitle: (detail ? detail + ' — ' : '') + 'vote in plenary',
     date: date,
     voteRule: rule.rule,
     voteRuleLabel: rule.label,
@@ -238,7 +238,7 @@ export function buildRecord(decision, item, members, date, term) {
     },
     ballots: ballots,
     sources: [
-      { label: 'Roll-call annex to the minutes', url: ANNEX_URL(term, date) },
+      { label: 'Vote annex to the minutes', url: ANNEX_URL(term, date) },
       {
         label: 'European Parliament open data',
         url: `${PORTAL}/meetings/MTG-PL-${date}/decisions?format=application%2Fld%2Bjson`

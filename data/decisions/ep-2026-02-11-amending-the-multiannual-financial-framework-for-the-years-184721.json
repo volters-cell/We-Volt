@@ -2,11 +2,11 @@
   "id": "ep-2026-02-11-amending-the-multiannual-financial-framework-for-the-years-184721",
   "sourceId": 184721,
   "status": "verified",
-  "dataNote": "Roll-call vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
+  "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
   "title": "Amending the multiannual financial framework for the years 2021 to 2027",
-  "subtitle": "C10-0023/2026 – Proposal for a Council regulation — roll-call vote in plenary",
+  "subtitle": "C10-0023/2026 – Proposal for a Council regulation — vote in plenary",
   "date": "2026-02-11",
   "voteRule": "absolute-majority",
   "voteRuleLabel": "Majority of Parliament's component members",
@@ -2632,7 +2632,7 @@
   ],
   "sources": [
     {
-      "label": "Roll-call annex to the minutes",
+      "label": "Vote annex to the minutes",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-02-11-RCV_EN.xml"
     },
     {
