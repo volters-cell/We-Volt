@@ -125,18 +125,22 @@
       </section>
 
       <section class="decision" id="decision-section" aria-labelledby="decision-title" hidden>
-        <p class="decision-meta">
-          <button type="button" class="back-to-votes" id="back-to-votes">← All votes</button>
-          <span id="decision-body" class="badge"></span>
-          <time id="decision-date"></time>
-          <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
-        </p>
-        <h2 id="decision-title"></h2>
-        <p id="decision-subtitle" class="decision-subtitle"></p>
-        <p id="decision-summary" class="decision-summary"></p>
-        <p id="vote-links" class="vote-links"></p>
+        <!-- What the vote was and how it went. Its own block, so that on one
+             column it can sit above the map while the roll-call sits below. -->
+        <div class="decision-brief">
+          <p class="decision-meta">
+            <button type="button" class="back-to-votes" id="back-to-votes">← All votes</button>
+            <span id="decision-body" class="badge"></span>
+            <time id="decision-date"></time>
+            <span id="decision-status" class="chip chip-sample" hidden>Sample record</span>
+          </p>
+          <h2 id="decision-title"></h2>
+          <p id="decision-subtitle" class="decision-subtitle"></p>
+          <p id="decision-summary" class="decision-summary"></p>
+          <p id="vote-links" class="vote-links"></p>
 
-        <div id="outcome" class="outcome"></div>
+          <div id="outcome" class="outcome"></div>
+        </div>
 
         <div class="roll" id="roll">
           <div class="roll-bar" id="roll-bar"></div>

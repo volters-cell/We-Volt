@@ -455,16 +455,51 @@ main {
 /* When something is scrolled into view — a country tapped on a phone, the
    roll-call jumped to from the panel — it should land a little below the top
    of the screen rather than flush against it. */
-#country-panel, .panel-body, #decision-section, #member-section, #roll { scroll-margin-top: 1.75rem; }
+#country-panel, .panel-body, .decision-brief, #decision-section, #member-section, #roll { scroll-margin-top: 1.75rem; }
 .map-section { min-width: 0; }
 
 @media (max-width: 62rem) {
   main { grid-template-columns: minmax(0, 1fr); }
-  /* One column, in the order the page is read: the map first, because it is
-     what the site is; then the country you tapped, whose panel scrolls itself
-     into view; then the sessions and everything below them. */
-  .map-section { order: 1; }
-  .rail { order: 2; }
+
+  /* One column, and the reading column dissolves into it — its sections become
+     items of the page's own grid, so they can be ordered against the map
+     instead of only among themselves.
+
+     The order is what the reader came for. A link to a vote, opened from a
+     message, has to arrive on that vote: what it was, how it went, who was
+     for and against. The same for a link to a member. Then the map, then the
+     country if one is open, then the sessions. With nothing open the first two
+     are hidden and it reads as before: map, country, sessions. */
+  .rail { display: contents; }
+
+  /* The vote splits in two here: what it was and how it went above the map,
+     the roll-call of seven hundred names below it. :not([hidden]) matters —
+     display on an id would otherwise beat the browser's own rule for hidden
+     and show a closed section's insides. */
+  #decision-section:not([hidden]) { display: contents; }
+  .decision-brief, #decision-section > .roll {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(1.1rem, 2.5vw, 1.6rem);
+    min-width: 0;
+  }
+  #decision-section > .roll { margin-top: 0; }
+
+  /* Inside the brief, the result comes before the paperwork: on a phone the
+     source links and the share row were filling the screen the outcome should
+     have been on. */
+  .decision-brief { display: flex; flex-direction: column; }
+  .decision-brief #outcome { order: 1; }
+  .decision-brief #vote-links { order: 2; }
+
+  .decision-brief, #member-section { order: 1; }
+  .map-section { order: 2; }
+  #decision-section > .roll { order: 3; }
+  .rail #country-panel { order: 4; }
+  #tracker { order: 5; }
+
   /* The map card gives its padding back to the map on a phone. */
   .map-section { padding: .85rem .7rem 1rem; }
   .map-hint { font-size: .8rem; margin-bottom: .6rem; }
@@ -2063,7 +2098,8 @@ input:focus-visible {
 
   main { padding: .8rem .75rem 2.5rem; gap: .8rem; }
   .rail { gap: .8rem; }
-  .tracker, .panel, .decision { padding: .9rem .85rem; }
+  .tracker, .panel, .decision,
+  .decision-brief, #decision-section > .roll { padding: .9rem .85rem; }
 
   .intro { margin-bottom: .75rem; }
   .intro-lead { font-size: 1rem; max-width: none; }

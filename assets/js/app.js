@@ -1488,6 +1488,15 @@
     renderDecision();
     selectCountry(code || null, { scroll: false });
     if (changed) playReveal();
+
+    // On one column the vote opens above the map, which is above the list the
+    // reader just tapped: without this they would be left looking at the list
+    // with the answer off the top of the screen.
+    if (changed && !(options && options.fromHistory) &&
+        window.matchMedia('(max-width: 62rem)').matches) {
+      const brief = document.querySelector('.decision-brief');
+      if (brief) brief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   /* The outcome first — the whole Union in the colour of the result — then
