@@ -1286,13 +1286,7 @@
         seats: seats,
         url: url,
         geo: geoData,
-        positions: positions,
-        // Where the pill points. The address without its scheme: it is read,
-        // and sometimes typed, rather than clicked.
-        site: (location.origin + location.pathname)
-          .replace(/^https?:\/\//, '')
-          .replace(/index\.html$/, '')
-          .replace(/\/$/, '')
+        positions: positions
       });
     } catch (error) {
       blob = null;

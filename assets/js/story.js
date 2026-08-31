@@ -174,7 +174,7 @@
     }
   }
 
-  /* card({ title, subtitle, dateLabel, bodyLabel, result, totals, seats, url })
+  /* card({ title, dateLabel, bodyLabel, result, totals, seats, url, geo, positions })
      resolves to a PNG blob, or null where the canvas will not give one up.
      The url is what the code in the corner opens. */
   async function card(vote) {
@@ -334,10 +334,11 @@
       y += MAP;
     }
 
-    /* The foot: the way in, said twice. The code carries this vote's own
-       address, for a phone held up to the screen or a screenshot passed on;
-       the pill beside it says where that goes in words, because a story is as
-       often read by someone who will type it as by someone who will scan it. */
+    /* The foot: the way in. The code carries this vote's own address, for a
+       phone held up to the screen or a screenshot passed on; the pill beside
+       it says what that is for. No address is printed — a line of raw URL
+       tells a reader nothing the words do not, and reads as clutter at the
+       distance a story is looked at. */
     const drawn = vote.url && global.QR &&
       QR.draw(ctx, vote.url, pad, y, CODE, {
         ink: INK.ground, background: '#ffffff', quiet: 3
@@ -353,10 +354,10 @@
     ctx.fill();
 
     ctx.fillStyle = '#12203f';
-    ctx.font = font(700, 36);
-    ctx.fillText('Open the full record', pillX + 40, pillY + 44);
-    ctx.font = font(600, 26);
-    ctx.fillText(vote.site || '', pillX + 40, pillY + 78);
+    ctx.font = font(700, 38);
+    ctx.textAlign = 'center';
+    ctx.fillText('Open the full record', pillX + pillW / 2, pillY + 66);
+    ctx.textAlign = 'left';
 
 
     return await new Promise(function (resolve) {
