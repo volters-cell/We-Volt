@@ -15,10 +15,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "probe (look and report) or fetch"
+        description: "survey (list every picture on the Parliament's pages), probe, or fetch"
         type: choice
-        options: [probe, fetch, refetch]
-        default: probe
+        options: [survey, probe, fetch, refetch]
+        default: survey
 
 permissions:
   contents: write
@@ -39,17 +39,27 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Keep the browser between runs
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+
       - name: Get a browser
         run: |
           npm i --no-save playwright@1.49
           npx playwright install --with-deps chromium
 
-      - name: Look at what the pages carry
+      - name: List every picture the Parliament's pages carry
+        if: ${{ inputs.mode == 'survey' }}
+        run: node scripts/mirror-group-logos.mjs --survey
+
+      - name: Look at what a member's page carries
         if: ${{ inputs.mode == 'probe' }}
         run: node scripts/mirror-group-logos.mjs --probe
 
       - name: Take the marks
-        if: ${{ inputs.mode != 'probe' }}
+        if: ${{ inputs.mode == 'fetch' || inputs.mode == 'refetch' }}
         run: |
           if [ "${{ inputs.mode }}" = "refetch" ]; then
             node scripts/mirror-group-logos.mjs --all
@@ -58,11 +68,11 @@ jobs:
           fi
 
       - name: List the files the page may ask for
-        if: ${{ inputs.mode != 'probe' }}
+        if: ${{ inputs.mode == 'fetch' || inputs.mode == 'refetch' }}
         run: node scripts/build-index.mjs
 
       - name: Commit them
-        if: ${{ inputs.mode != 'probe' }}
+        if: ${{ inputs.mode == 'fetch' || inputs.mode == 'refetch' }}
         run: |
           git config user.name "eu-tracker"
           git config user.email "actions@users.noreply.github.com"

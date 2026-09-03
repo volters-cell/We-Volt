@@ -1480,6 +1480,10 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 }
 .bd-tile-swatch.has-logo { padding: 1px; }
 
+/* The same mark inside a badge, where the line is smaller. */
+.badge-group { display: inline-flex; align-items: center; gap: .35rem; }
+.badge-group .bd-tile-swatch { width: .9rem; min-width: .9rem; height: .9rem; }
+
 /* ------------------------------------------------------- a party's own line
 
    How one national party's members voted, on every vote, under the outcome.

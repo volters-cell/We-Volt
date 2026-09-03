@@ -76,6 +76,77 @@ const already = new Set(
     .map((n) => n.replace(/\.[^.]+$/, ''))
 );
 
+/* --survey: open a handful of the Parliament's own pages and write down every
+   picture on each — <img>, background image, and the sprites an <svg><use>
+   points at — with no filtering at all. A mark that is not an <img> on a
+   member's page may still be published somewhere on the site, and this is how
+   that is found rather than guessed at. */
+if (has('--survey')) {
+  const pages = [
+    'https://www.europarl.europa.eu/meps/en/home',
+    'https://www.europarl.europa.eu/meps/en/search/advanced',
+    'https://www.europarl.europa.eu/about-parliament/en/organisation-and-rules/organisation/political-groups',
+    'https://www.europarl.europa.eu/election-results-2024/en/european-results/2024-2029/',
+    'https://www.europarl.europa.eu/news/en/faq/22/political-groups'
+  ];
+  const browser = await chromium.launch();
+  const context = await browser.newContext({ viewport: { width: 1280, height: 1400 }, locale: 'en-GB' });
+  const page = await context.newPage();
+
+  for (const address of pages) {
+    try {
+      await page.goto(address, { waitUntil: 'load', timeout: 60000 });
+      await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
+      // Whatever waits for a scroll.
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await page.waitForTimeout(2500);
+    } catch (error) {
+      console.log(`\n${address}\n  could not open: ${error.message}`);
+      continue;
+    }
+
+    const seen = await page.evaluate(() => {
+      const out = [];
+      document.querySelectorAll('img').forEach((image) => {
+        const url = image.currentSrc || image.src;
+        if (url) out.push({ how: 'img', url, text: image.alt || image.title || '' });
+      });
+      document.querySelectorAll('*').forEach((node) => {
+        const picture = getComputedStyle(node).backgroundImage;
+        const match = picture && picture.match(/url\(["']?(.+?)["']?\)/);
+        if (match && !match[1].startsWith('data:')) {
+          out.push({ how: 'css', url: new URL(match[1], location.href).href,
+                     text: (node.getAttribute('aria-label') || '').slice(0, 60) });
+        }
+      });
+      document.querySelectorAll('use').forEach((node) => {
+        const href = node.getAttribute('href') || node.getAttribute('xlink:href') || '';
+        if (href) out.push({ how: 'use', url: href, text: (node.closest('a,button,li') || {}).textContent ?
+          (node.closest('a,button,li').textContent || '').trim().slice(0, 60) : '' });
+      });
+      return out;
+    });
+
+    const unique = [];
+    const already = new Set();
+    seen.forEach((item) => {
+      const key = item.how + item.url;
+      if (already.has(key)) return;
+      already.add(key);
+      unique.push(item);
+    });
+
+    console.log(`\n${page.url()}\n  ${unique.length} distinct pictures, ` +
+      `${(await page.content()).length} bytes of page`);
+    unique.slice(0, 120).forEach((item) => {
+      console.log(`   ${item.how.padEnd(4)} ${item.url.slice(0, 130)}` + (item.text ? `  [${item.text}]` : ''));
+    });
+  }
+
+  await browser.close();
+  process.exit(0);
+}
+
 const wanted = [...example.keys()].filter(
   (group) => has('--probe') || has('--all') || !already.has(slug(group))
 );

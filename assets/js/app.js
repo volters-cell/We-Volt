@@ -301,8 +301,13 @@
 
     const country = statesByCode[member.country] || { name: member.country };
     dom['member-name'].textContent = member.name;
-    dom['member-group'].textContent = member.group;
-    dom['member-group'].className = 'badge badge-parliament';
+    // The group's own mark beside its name, the same mark the breakdown of a
+    // vote and a country's table carry.
+    dom['member-group'].innerHTML =
+      (window.Groups ? Groups.swatch(member.group) : '') +
+      '<span>' + esc(member.group) + '</span>';
+    dom['member-group'].className = 'badge badge-parliament badge-group';
+    if (window.Groups) Groups.loadLogos(dom['member-group']);
     dom['member-country'].textContent = country.name;
 
     // The face and the party they were elected for. The political group is in
