@@ -1,0 +1,69 @@
+# Give every member a face and a party.
+#
+# The vote records name a member by id. The Parliament's own record of that
+# person carries two more things a reader expects — the address of the official
+# portrait, and the national party they were elected for — and this job reads
+# them and commits the result.
+#
+# It runs on the first of the month, because parties rename themselves and
+# members change them, and on demand from the Actions tab. A run asks only
+# about members still missing one of the two, so the monthly run is a handful
+# of requests; "everyone" re-reads the whole House.
+
+name: Faces and parties
+
+on:
+  schedule:
+    - cron: "20 4 1 * *"
+  workflow_dispatch:
+    inputs:
+      everyone:
+        description: "Re-read every member, not only those missing something"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profiles-sync
+  cancel-in-progress: false
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Read each member's record
+        run: |
+          if [ "${{ inputs.everyone }}" = "true" ]; then
+            node scripts/fetch-profiles.mjs --all
+          else
+            node scripts/fetch-profiles.mjs
+          fi
+
+      - name: Rebuild the member files and check the data
+        run: |
+          node scripts/build-members.mjs
+          node scripts/build-index.mjs
+          node scripts/validate-data.mjs
+
+      - name: Commit what changed
+        run: |
+          git config user.name "eu-tracker"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git add data
+          git commit -m "Read the members' portraits and parties from the Parliament"
+          git push

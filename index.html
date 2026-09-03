@@ -176,8 +176,14 @@
           <span id="member-group" class="badge"></span>
           <span id="member-country"></span>
         </p>
-        <h2 id="member-name"></h2>
-        <p id="member-summary" class="decision-subtitle"></p>
+        <div class="member-head">
+          <div id="member-face" class="member-face"></div>
+          <div class="member-head-words">
+            <h2 id="member-name"></h2>
+            <p id="member-party" class="member-party"></p>
+            <p id="member-summary" class="decision-subtitle"></p>
+          </div>
+        </div>
         <div id="member-totals" class="tally"></div>
         <div class="roll-call-tools">
           <label class="visually-hidden" for="member-filter">Filter this member's votes</label>
@@ -273,6 +279,7 @@
   </footer>
 
   <script src="assets/js/groups.js"></script>
+  <script src="assets/js/faces.js"></script>
   <script src="assets/js/projection.js"></script>
   <script src="assets/js/data.js"></script>
   <script src="assets/js/map.js"></script>

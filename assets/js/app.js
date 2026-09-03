@@ -81,6 +81,7 @@
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-clear', 'search-status',
+   'member-face', 'member-party',
    'mep-results', 'decision-section', 'back-to-votes', 'session-list',
    'roll', 'roll-bar', 'roll-summary', 'roll-count', 'roll-body', 'roll-name',
    'roll-group', 'roll-country', 'roll-position', 'roll-reset', 'member-section', 'member-name', 'member-group',
@@ -217,9 +218,11 @@
     return note + '<ul>' + people.map(function (member) {
       const group = window.Groups ? Groups.name(member.group) : member.group;
       return '<li><button type="button" class="mep-hit" data-member="' + esc(member.id) + '">' +
-        (window.Groups ? Groups.swatch(member.group) : '') +
+        (window.Faces ? Faces.avatar(member, { size: 'md' })
+          : (window.Groups ? Groups.swatch(member.group) : '')) +
         '<span class="mep-name">' + esc(member.name) + '</span>' +
-        '<span class="mep-meta">' + esc(group) + ' · ' +
+        '<span class="mep-meta">' +
+        (member.party ? esc(member.party) + ' · ' : '') + esc(group) + ' · ' +
         member.votes.toLocaleString('en-GB') + ' votes</span>' +
         '</button></li>';
     }).join('') + '</ul>';
@@ -260,8 +263,10 @@
         const country = statesByCode[member.country] || { name: member.country };
         return '<li><button type="button" class="mep-hit member-hit" data-member="' +
           esc(member.id) + '">' +
+          (window.Faces ? Faces.avatar(member, { size: 'md' }) : '') +
           '<span class="mep-name">' + esc(member.name) + '</span>' +
-          '<span class="mep-meta">' + esc(country.name) + ' · ' + esc(member.group) + '</span>' +
+          '<span class="mep-meta">' + esc(country.name) + ' · ' + esc(member.group) +
+            (member.party ? ' · ' + esc(member.party) : '') + '</span>' +
           '<span class="card-rule">' + member.votes + ' votes</span></button></li>';
       }).join('') + '</ul>';
   }
@@ -299,6 +304,22 @@
     dom['member-group'].textContent = member.group;
     dom['member-group'].className = 'badge badge-parliament';
     dom['member-country'].textContent = country.name;
+
+    // The face and the party they were elected for. The political group is in
+    // the line above; the party is the other half of who they are, and the one
+    // a reader at home recognises.
+    if (dom['member-face']) {
+      dom['member-face'].innerHTML = window.Faces
+        ? Faces.avatar(member, { size: 'lg', eager: true }) : '';
+    }
+    if (dom['member-party']) {
+      const label = member.party
+        ? member.party + (member.partyShort && member.partyShort !== member.party
+            ? ' (' + member.partyShort + ')' : '')
+        : '';
+      dom['member-party'].textContent = label;
+      dom['member-party'].hidden = !label;
+    }
     dom['member-summary'].textContent = 'Every vote this member has cast in the ' +
       'records held here.';
 
@@ -796,6 +817,8 @@
           group: mep.group || 'NI',
           country: code,
           countryName: (statesByCode[code] || {}).name || code,
+          party: mep.party || null,
+          photo: mep.photo || null,
           position: mep.vote,
           haystack: (mep.name + ' ' + (mep.party || '')).toLowerCase()
         });
@@ -889,8 +912,10 @@
     return '<ul class="roll-members">' + list.slice(0, 800).map(function (item) {
       return '<li data-code="' + esc(item.country) + '">' +
         '<button type="button" class="roll-member" data-member="' + esc(item.id) + '">' +
+          (window.Faces ? Faces.avatar(item) : '') +
           '<span class="rm-name">' + esc(item.name) + '</span>' +
-          '<span class="rm-meta">' + esc(item.countryName) + ' · ' + esc(item.group) + '</span>' +
+          '<span class="rm-meta">' + esc(item.countryName) + ' · ' + esc(item.group) +
+            (item.party ? ' · ' + esc(item.party) : '') + '</span>' +
           '<span class="vote-pill vote-' + item.position + '">' +
             esc(Panel.VOTE_LABEL[item.position]) + '</span>' +
         '</button></li>';

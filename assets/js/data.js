@@ -43,6 +43,7 @@
       country.meps.push({
         name: member.name,
         party: member.party || null,
+        photo: member.photo || null,
         group: member.group || 'NI',
         vote: vote,
         id: ballot[0]

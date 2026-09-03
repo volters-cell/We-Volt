@@ -69,6 +69,9 @@ for (const [memberId, votes] of byMember) {
     country: member.country,
     group: member.group,
     party: member.party || null,
+    partyShort: member.partyShort || null,
+    photo: member.photo || null,
+    homepage: member.homepage || null,
     totals: totals,
     votes: votes
   }) + '\n', 'utf8');
@@ -78,6 +81,10 @@ for (const [memberId, votes] of byMember) {
     name: member.name,
     country: member.country,
     group: member.group,
+    // The party and the portrait travel with the index: a face in a list of
+    // seven hundred should not need seven hundred more requests to draw.
+    party: member.party || null,
+    photo: member.photo || null,
     votes: votes.length,
     // What search matches on, lowercased once here rather than on every keystroke.
     keywords: [member.name, member.group, member.party, member.country]

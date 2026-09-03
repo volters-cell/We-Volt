@@ -38,8 +38,16 @@
     return (one + two).toUpperCase();
   }
 
-  function url(id) {
-    return PHOTO + encodeURIComponent(String(id)) + '.jpg';
+  /* The address the Parliament itself gives for a member's portrait, read from
+     its record of that person and carried in the directory. Where a member was
+     imported before that field existed, the address is derived instead — it is
+     the same address, built the same way. */
+  function url(member) {
+    if (member && typeof member === 'object') {
+      if (member.photo) return member.photo;
+      return member.id ? PHOTO + encodeURIComponent(String(member.id)) + '.jpg' : '';
+    }
+    return member ? PHOTO + encodeURIComponent(String(member)) + '.jpg' : '';
   }
 
   /* avatar(member, options) -> the markup for one face.
@@ -57,7 +65,7 @@
     return '<span class="face face-' + size + '"' + style + ' aria-hidden="true">' +
       '<span class="face-initials">' + escape(initials(member.name)) + '</span>' +
       (member.id
-        ? '<img class="face-photo" alt="" src="' + escape(url(member.id)) + '"' +
+        ? '<img class="face-photo" alt="" src="' + escape(url(member)) + '"' +
           ' loading="' + (settings.eager ? 'eager' : 'lazy') + '" decoding="async"' +
           ' onload="this.classList.add(\'is-there\')" onerror="this.remove()">'
         : '') +
