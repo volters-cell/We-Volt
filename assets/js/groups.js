@@ -119,7 +119,7 @@
         if (node.classList.contains('has-logo')) return;
         const key = node.getAttribute('data-logo');
         const file = files.find(function (name) {
-          return name.replace(/\.(svg|png)$/i, '') === key;
+          return name.replace(/\.(svg|png|jpe?g)$/i, '') === key;
         });
         if (!file) return;
 

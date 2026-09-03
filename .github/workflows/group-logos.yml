@@ -1,0 +1,75 @@
+# Take the political groups' own marks from the Parliament's pages.
+#
+# A group's mark appears on the page of every member who sits in it, so the job
+# opens one member per group and reads the mark from there. europarl.europa.eu
+# turns a plain HTTP client away, so — as with the portraits — the page is
+# opened in a real Chromium and the bytes come back out of it.
+#
+# Run "probe" first: it prints every picture on each page with the score the
+# script gave it and writes nothing, which is how a wrong pick is caught before
+# it is committed.
+
+name: The groups' marks
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe (look and report) or fetch"
+        type: choice
+        options: [probe, fetch, refetch]
+        default: probe
+
+permissions:
+  contents: write
+
+concurrency:
+  group: group-logos
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Get a browser
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+
+      - name: Look at what the pages carry
+        if: ${{ inputs.mode == 'probe' }}
+        run: node scripts/mirror-group-logos.mjs --probe
+
+      - name: Take the marks
+        if: ${{ inputs.mode != 'probe' }}
+        run: |
+          if [ "${{ inputs.mode }}" = "refetch" ]; then
+            node scripts/mirror-group-logos.mjs --all
+          else
+            node scripts/mirror-group-logos.mjs
+          fi
+
+      - name: List the files the page may ask for
+        if: ${{ inputs.mode != 'probe' }}
+        run: node scripts/build-index.mjs
+
+      - name: Commit them
+        if: ${{ inputs.mode != 'probe' }}
+        run: |
+          git config user.name "eu-tracker"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -z "$(git status --porcelain assets/groups)" ]; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git add assets/groups
+          git commit -m "Take the political groups' marks from the Parliament"
+          git push

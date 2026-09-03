@@ -1521,16 +1521,26 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   display: grid;
   gap: .3rem;
 }
-.dg-members li {
+.dg-members li { border-top: 1px solid var(--line); }
+.dg-member {
+  font: inherit;
+  font-size: .9rem;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: .5rem;
   justify-content: space-between;
-  border-top: 1px solid var(--line);
-  padding-top: .35rem;
-  font-size: .9rem;
+  padding: .35rem .25rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
 }
-.dg-name { min-width: 0; }
+.dg-member:hover { background: var(--surface-sunken); }
+.dg-member:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.dg-name { min-width: 0; margin-right: auto; }
 .dg-note { margin: 0; padding: 0 .8rem .7rem; font-size: .8rem; color: var(--ink-faint); }
 
 /* ------------------------------------------------------------------ sharing */

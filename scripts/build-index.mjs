@@ -77,7 +77,7 @@ const GROUP_DIR = 'assets/groups';
 let logos = [];
 try {
   logos = (await readdir(path.join(ROOT, GROUP_DIR)))
-    .filter((name) => /\.(svg|png)$/i.test(name))
+    .filter((name) => /\.(svg|png|jpe?g)$/i.test(name))
     .sort();
 } catch (error) {
   logos = [];

@@ -1084,6 +1084,17 @@
     '</div>';
   }
 
+  /* One member out of the directory, by the id every ballot uses. */
+  let byId = null;
+  function memberById(id) {
+    if (!memberIndex) return null;
+    if (!byId) {
+      byId = new Map();
+      memberIndex.forEach(function (member) { byId.set(String(member.id), member); });
+    }
+    return byId.get(String(id)) || null;
+  }
+
   /* How a named party's members voted on this record. The Parliament publishes
      a member's country and political group but not the party they stood for,
      so the membership comes from data/reference/delegations.json and is read
@@ -1096,7 +1107,18 @@
     });
 
     const members = delegation.members.map(function (member) {
-      return { name: member.name, country: member.country, position: positions.get(String(member.id)) || 'absent' };
+      // The directory is the fuller record: it writes the name the way the
+      // Parliament writes it, and it knows the group the member sits in now.
+      const known = memberById(member.id);
+      return {
+        id: member.id,
+        name: (known && known.name) || member.name,
+        country: member.country,
+        group: (known && known.group) || delegation.group,
+        party: (known && known.party) || delegation.name,
+        photo: known ? known.photo : null,
+        position: positions.get(String(member.id)) || 'absent'
+      };
     });
 
     const totals = { for: 0, against: 0, abstain: 0, absent: 0 };
@@ -1118,10 +1140,14 @@
         parts.push('<span class="n-absent">' + result.totals.absent + '</span> did not vote');
       }
 
+      // Each member with their own face, and the row is a door to their record
+      // — the same door the roll-call rows open.
       const names = result.members.map(function (member) {
-        return '<li><span class="dg-name">' + esc(member.name) + '</span>' +
+        return '<li><button type="button" class="dg-member" data-member="' + esc(member.id) + '">' +
+          (window.Faces ? Faces.avatar(member) : '') +
+          '<span class="dg-name">' + esc(member.name) + '</span>' +
           '<span class="vote-pill vote-' + member.position + '">' +
-          esc(Panel.VOTE_LABEL[member.position]) + '</span></li>';
+          esc(Panel.VOTE_LABEL[member.position]) + '</span></button></li>';
       }).join('');
 
       return '<details class="delegation">' +
@@ -1866,6 +1892,13 @@
         } else {
           selectCountry(hit.getAttribute('data-code'));
         }
+      });
+
+      // A delegation's members open their own record, like every other name
+      // on the page.
+      dom.outcome.addEventListener('click', function (event) {
+        const person = event.target.closest('[data-member]');
+        if (person) showMember(person.getAttribute('data-member'));
       });
 
       dom['member-votes'].addEventListener('click', function (event) {
