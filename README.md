@@ -62,6 +62,16 @@ Political groups are shown with their conventional colours; drop an artwork file
 `assets/groups/` and it replaces the colour with that group's own logo — see the README
 there, including on whose marks those are.
 
+Every member has a face and a party. The portrait is the official one the
+Parliament publishes, at the address its own record of that person gives; the
+party is the national one they were elected for — Centerpartiet, Prawo i
+Sprawiedliwość, Partido Popular — which is not the same thing as the European
+group they sit with. Both are read by `scripts/fetch-profiles.mjs` from the
+membership the portal classifies as NATIONAL_POLITICAL_GROUP, and both travel
+with the member index so a list of seven hundred draws seven hundred faces
+without seven hundred more requests. A portrait that does not arrive leaves the
+member's initials on their group's colour rather than a broken image.
+
 Open a vote and the whole chamber is there: a bar showing how it split, then the
 result broken down three ways — **MEPs**, **Political groups**, **Countries** — with
 filters for name, group, country and position. Every part of the bar is a filter:
@@ -103,6 +113,7 @@ will not work.
 
 ```bash
 npm run members   # rebuild the per-member records after importing votes
+npm run profiles  # read each member's portrait and national party
 npm test          # import logic + data validation
 npm run validate  # data validation on its own
 npm run sessions  # fetch the plenary calendar
@@ -141,7 +152,8 @@ data/
   eu-countries.geo.json          the map: 27 member states, 25 neighbours in grey
   reference/
     member-states.json           seats, population, capitals, memberships
-    meps.json                    every MEP: name, country, group — stored once
+    meps.json                    every MEP: name, country, group, national party
+                                 and the address of their portrait — stored once
     plenary-calendar.json        when each session sits, and where
   decisions/
     index.json                   built from the folder — never edited by hand

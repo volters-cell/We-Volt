@@ -179,6 +179,24 @@ try {
   directory = null;
 }
 
+/* Every member should have a face and the party they were elected for: both
+   are in the Parliament's own record of them, and both are what a reader looks
+   for first. A member who has just arrived will be missing them until the next
+   run of scripts/fetch-profiles.mjs, so this says so rather than failing. */
+if (directory) {
+  const ids = Object.keys(directory);
+  const faceless = ids.filter((id) => !directory[id].photo);
+  const partyless = ids.filter((id) => !directory[id].party);
+  if (faceless.length) {
+    note('meps.json', `${faceless.length} of ${ids.length} members have no portrait — ` +
+      'run npm run profiles');
+  }
+  if (partyless.length) {
+    note('meps.json', `${partyless.length} of ${ids.length} members have no national party — ` +
+      'run npm run profiles');
+  }
+}
+
 const index = await readJSON('data/decisions/index.json');
 
 /* The Parliament numbers each vote once. Two records carrying the same number
