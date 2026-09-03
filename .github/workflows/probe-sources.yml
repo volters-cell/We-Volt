@@ -98,3 +98,38 @@ jobs:
               -A "$UA" "https://www.europarl.europa.eu/mepphoto/$MEP.jpg")
             echo "  mepphoto/$MEP.jpg -> $code"
           done
+
+          echo
+          echo "--- the img field the person record carries, and the party organisations ---"
+          for MEP in 197400 197439; do
+            curl -sSL -m 45 -A "$UA" -H 'accept: application/ld+json' "$BASE/meps/$MEP?$LD" > /tmp/m.json
+            printf '\n### MEP %s\n' "$MEP"
+            jq -r '.data[0] | "img: \(.img // "none")   homepage: \(.homepage // "none")"' /tmp/m.json
+            echo "national party memberships in this term:"
+            jq -r '.data[0].hasMembership[]?
+              | select(.membershipClassification == "def/ep-entities/NATIONAL_POLITICAL_GROUP")
+              | "  org=\(.organization)  during=\(.memberDuring.startDate)..\(.memberDuring.endDate // "open")"' /tmp/m.json
+            for O in $(jq -r '.data[0].hasMembership[]? | select(.membershipClassification == "def/ep-entities/NATIONAL_POLITICAL_GROUP") | select(.memberDuring.endDate == null) | .organization' /tmp/m.json); do
+              ID="${O##*/}"
+              printf '  --- party org %s ---\n' "$ID"
+              curl -sSL -m 45 -A "$UA" -H 'accept: application/ld+json' "$BASE/corporate-bodies/$ID?$LD" > /tmp/o.json
+              jq -r '.data[0] | "    label: \(.label // "-")",
+                "    prefLabel.en: \(.prefLabel.en // "-")",
+                "    altLabel.en: \(.altLabel.en // "-")",
+                "    keys: " + (keys_unsorted | join(", "))' /tmp/o.json
+              head -c 900 /tmp/o.json; echo
+            done
+          done
+
+          echo
+          echo "--- does the portrait answer a browser-shaped request? ---"
+          BROWSER='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+          for TRY in "plain" "browser" "browser+referer"; do
+            case "$TRY" in
+              plain)  ARGS=(-A "$UA") ;;
+              browser) ARGS=(-A "$BROWSER" -H 'accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8' -H 'accept-language: en-GB,en;q=0.9') ;;
+              *) ARGS=(-A "$BROWSER" -H 'accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8' -H 'referer: https://www.europarl.europa.eu/meps/en/197400') ;;
+            esac
+            code=$(curl -sSL -m 30 -o /tmp/p.jpg -w '%{http_code} %{content_type} %{size_download}b' "${ARGS[@]}" "https://www.europarl.europa.eu/mepphoto/197400.jpg")
+            echo "  $TRY -> $code"
+          done
