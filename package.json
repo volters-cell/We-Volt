@@ -15,7 +15,8 @@
     "sessions": "node scripts/fetch-sessions.mjs",
     "backfill": "node scripts/fetch-plenary.mjs --since 2024-07-16",
     "members": "node scripts/build-members.mjs",
-    "profiles": "node scripts/fetch-profiles.mjs"
+    "profiles": "node scripts/fetch-profiles.mjs",
+    "faces": "node scripts/mirror-faces.mjs"
   },
   "license": "MIT"
 }

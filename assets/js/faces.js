@@ -14,6 +14,12 @@
 (function (global) {
   'use strict';
 
+  /* The copies kept here. The Parliament's own address answers a browser and
+     turns an automated request away, so the portraits are mirrored into the
+     repository — and a page drawing seven hundred faces then draws them from
+     the same server as everything else rather than sending seven hundred
+     requests to somebody else's. */
+  const MIRROR = 'assets/faces/';
   const PHOTO = 'https://www.europarl.europa.eu/mepphoto/';
 
   function escape(text) {
@@ -38,11 +44,16 @@
     return (one + two).toUpperCase();
   }
 
-  /* The address the Parliament itself gives for a member's portrait, read from
-     its record of that person and carried in the directory. Where a member was
-     imported before that field existed, the address is derived instead — it is
-     the same address, built the same way. */
+  /* Where to find a member's face: the copy kept here first. */
   function url(member) {
+    const id = member && typeof member === 'object' ? member.id : member;
+    return id ? MIRROR + encodeURIComponent(String(id)) + '.jpg' : '';
+  }
+
+  /* And where it came from: the address the Parliament's own record of that
+     person gives, which a member imported since the last mirror still has even
+     though no copy has been taken of it yet. */
+  function source(member) {
     if (member && typeof member === 'object') {
       if (member.photo) return member.photo;
       return member.id ? PHOTO + encodeURIComponent(String(member.id)) + '.jpg' : '';
@@ -67,10 +78,15 @@
       (member.id
         ? '<img class="face-photo" alt="" src="' + escape(url(member)) + '"' +
           ' loading="' + (settings.eager ? 'eager' : 'lazy') + '" decoding="async"' +
-          ' onload="this.classList.add(\'is-there\')" onerror="this.remove()">'
+          ' data-source="' + escape(source(member)) + '"' +
+          // One retry at the Parliament's own address, for a member who joined
+          // since the last mirror; then the initials, which are always right.
+          ' onload="this.classList.add(\'is-there\')"' +
+          ' onerror="if(this.dataset.source&&this.src!==this.dataset.source)' +
+          '{this.src=this.dataset.source;}else{this.remove();}">'
         : '') +
       '</span>';
   }
 
-  global.Faces = { avatar: avatar, url: url, initials: initials };
+  global.Faces = { avatar: avatar, url: url, source: source, initials: initials };
 })(window);

@@ -63,7 +63,13 @@ Political groups are shown with their conventional colours; drop an artwork file
 there, including on whose marks those are.
 
 Every member has a face and a party. The portrait is the official one the
-Parliament publishes, at the address its own record of that person gives; the
+Parliament publishes, mirrored into `assets/faces/` — 742 of the 743 members
+who have held a seat this term, at 240px, about 9 MB in all. The Parliament's
+own host answers a browser and turns an automated request away with an empty
+202, so `scripts/mirror-faces.mjs` fetches each one from inside a real Chromium
+on the site's own origin; serving the copies from here also means a page
+drawing seven hundred faces does not send seven hundred requests elsewhere.
+© European Union, reused under the Parliament's reuse notice. The
 party is the national one they were elected for — Centerpartiet, Prawo i
 Sprawiedliwość, Partido Popular — which is not the same thing as the European
 group they sit with. Both are read by `scripts/fetch-profiles.mjs` from the
