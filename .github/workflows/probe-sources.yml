@@ -63,3 +63,38 @@ jobs:
                           + "  abstain \(.had_voter_abstention // [] | length)"
                           + "  first voter \(.had_voter_favor[0])")
                else "NO BALLOTS IN THIS SITTING — the importer would write nothing" end)' /tmp/dec.json
+
+          echo
+          echo "--- what a member's own record carries: the national party, and a portrait ---"
+          for MEP in 197400 197439 124936; do
+            printf '\n### MEP %s\n' "$MEP"
+            curl -sSL -m 45 -A "$UA" -H 'accept: application/ld+json' \
+              "$BASE/meps/$MEP?$LD" > /tmp/mep.json
+            jq -r '.data[0] | keys_unsorted | "keys: " + join(", ")' /tmp/mep.json
+            echo "memberships:"
+            jq -r '.data[0].hasMembership // [] | .[] |
+              "  role=\(.role // "-")  class=\(.membershipClassification // "-")"
+              + "  org=\(.organization // "-")  represents=\(.represents // "-")"
+              + "  during=\(.memberDuring.startDate // "-")..\(.memberDuring.endDate // "open")"' /tmp/mep.json
+            echo "raw (first 3000 chars):"
+            head -c 3000 /tmp/mep.json; echo
+          done
+
+          echo
+          echo "--- and what a party organisation resolves to ---"
+          ORG=$(jq -r '[.data[0].hasMembership[]? | select(.organization != null) | .organization] | .[]' /tmp/mep.json | head -5)
+          for O in $ORG; do
+            ID="${O##*/}"
+            printf '\n### org %s\n' "$ID"
+            curl -sSL -m 45 -A "$UA" -H 'accept: application/ld+json' \
+              "$BASE/corporate-bodies/$ID?$LD" > /tmp/org.json
+            head -c 1200 /tmp/org.json; echo
+          done
+
+          echo
+          echo "--- the official portrait, which needs no API ---"
+          for MEP in 197400 197439; do
+            code=$(curl -sSL -m 30 -o /dev/null -w '%{http_code} %{content_type} %{size_download}b' \
+              -A "$UA" "https://www.europarl.europa.eu/mepphoto/$MEP.jpg")
+            echo "  mepphoto/$MEP.jpg -> $code"
+          done
