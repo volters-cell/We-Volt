@@ -46,8 +46,9 @@ jobs:
           key: playwright-1.49-chromium
 
       - name: Get a browser
+        timeout-minutes: 8
         run: |
-          npm i --no-save playwright@1.49
+          npm i --no-save --no-audit --no-fund playwright@1.49
           npx playwright install --with-deps chromium
 
       - name: List every picture the Parliament's pages carry
