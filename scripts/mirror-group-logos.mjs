@@ -82,13 +82,13 @@ const already = new Set(
    member's page may still be published somewhere on the site, and this is how
    that is found rather than guessed at. */
 if (has('--survey')) {
-  const pages = [
+  // SURVEY_PAGES lets a run look somewhere else without editing this file.
+  const pages = (process.env.SURVEY_PAGES || [
     'https://www.europarl.europa.eu/meps/en/home',
     'https://www.europarl.europa.eu/meps/en/search/advanced',
     'https://www.europarl.europa.eu/about-parliament/en/organisation-and-rules/organisation/political-groups',
-    'https://www.europarl.europa.eu/election-results-2024/en/european-results/2024-2029/',
     'https://www.europarl.europa.eu/news/en/faq/22/political-groups'
-  ];
+  ].join(',')).split(',').map((one) => one.trim()).filter(Boolean);
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: { width: 1280, height: 1400 }, locale: 'en-GB' });
   const page = await context.newPage();
