@@ -90,8 +90,25 @@ const page = await context.newPage();
 /* Every image on the page, with what the page says about it, so a mark can be
    recognised by more than its file name. Background images count: a mark is as
    often set in CSS as written as an <img>. */
+/* A member's address redirects to their name — /meps/en/840 becomes
+   /meps/en/840/ABIR_AL-SAHLANI/home — and a redirect lands mid-question if the
+   question was asked too early. So it is asked again once the page has settled
+   rather than treated as a failure. */
+async function settled(work) {
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      return await work();
+    } catch (error) {
+      if (!/Execution context was destroyed|Target closed|navigat/i.test(String(error.message))) throw error;
+      await page.waitForLoadState('domcontentloaded').catch(() => {});
+      await page.waitForTimeout(1500);
+    }
+  }
+  return work();
+}
+
 async function pictures() {
-  return page.evaluate(() => {
+  return settled(() => page.evaluate(() => {
     const found = [];
     document.querySelectorAll('img').forEach((image) => {
       if (!image.currentSrc && !image.src) return;
@@ -117,12 +134,12 @@ async function pictures() {
       });
     });
     return found;
-  });
+  }));
 }
 
 /* Fetched from inside the page, so it is the browser asking. */
 async function bytes(url) {
-  const answer = await page.evaluate(async (address) => {
+  const answer = await settled(() => page.evaluate(async (address) => {
     try {
       const response = await fetch(address, { credentials: 'include' });
       if (!response.ok) return { status: response.status, body: null };
@@ -138,7 +155,7 @@ async function bytes(url) {
     } catch (error) {
       return { status: 0, error: String(error && error.message), body: null };
     }
-  }, url);
+  }, url));
   return { ...answer, buffer: answer.body ? Buffer.from(answer.body, 'base64') : null };
 }
 
@@ -180,7 +197,8 @@ for (const group of wanted) {
   const id = example.get(group);
   const address = MEP + id;
   try {
-    await page.goto(address, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.goto(address, { waitUntil: 'load', timeout: 60000 });
+    await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
     await page.waitForTimeout(1200);
   } catch (error) {
     console.warn(`${group}: could not open ${address} — ${error.message}`);
@@ -194,7 +212,7 @@ for (const group of wanted) {
     .sort((a, b) => b.points - a.points);
 
   if (has('--probe')) {
-    console.log(`\n${group} — ${address} (${await page.title()})`);
+    console.log(`\n${group} — ${page.url()}`);
     console.log(`  ${all.length} pictures on the page; ${ranked.length} look like this group's mark`);
     all.slice(0, 40).forEach((picture) => {
       const mark = score(picture, group);
