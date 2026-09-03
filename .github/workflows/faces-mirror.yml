@@ -1,0 +1,83 @@
+# Fetch the members' official portraits and keep a copy here.
+#
+# europarl.europa.eu answers a plain HTTP client with an empty 202 — a wall for
+# automated requests. A browser is a different client, so the fetch is made from
+# inside a real Chromium on the site's own origin. If that wall is up for the
+# browser too, the probe says so in one screen and nothing is written.
+#
+# Run "probe" first when something changes at the source. A full run fetches
+# every member without a copy, resizes each to 240px square, and commits.
+
+name: The members' portraits
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe (try three, write nothing) or fetch"
+        type: choice
+        options: [probe, fetch, refetch]
+        default: probe
+  schedule:
+    # After the monthly profile read, so a new member's face follows their name.
+    - cron: "40 4 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: faces-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Get a browser
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+
+      - name: Ask for three, and see what comes back
+        if: ${{ inputs.mode == 'probe' }}
+        run: node scripts/mirror-faces.mjs --probe
+
+      - name: Fetch the portraits
+        if: ${{ inputs.mode != 'probe' }}
+        run: |
+          if [ "${{ inputs.mode }}" = "refetch" ]; then
+            node scripts/mirror-faces.mjs --all
+          else
+            node scripts/mirror-faces.mjs
+          fi
+
+      - name: Cut them to size
+        if: ${{ inputs.mode != 'probe' }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+          # 240px square, cropped to the head, stripped of everything a camera
+          # writes into a file. About 12 kilobytes each.
+          mogrify -path assets/faces -resize 240x240^ -gravity north \
+                  -extent 240x240 -quality 82 -strip assets/faces/*.jpg
+          echo "$(ls assets/faces/*.jpg | wc -l) portraits, $(du -sh assets/faces | cut -f1) in total"
+
+      - name: Commit them
+        if: ${{ inputs.mode != 'probe' }}
+        run: |
+          git config user.name "eu-tracker"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- assets/faces && [ -z "$(git status --porcelain assets/faces)" ]; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git add assets/faces
+          git commit -m "Mirror the members' portraits from the Parliament"
+          git push
