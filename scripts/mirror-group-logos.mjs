@@ -350,6 +350,15 @@ for (const group of wanted) {
         `${item.url.slice(0, 90)}${item.alt ? '  [' + item.alt.slice(0, 40) + ']' : ''}`);
     });
     console.log(`  ${ranked.length} of ${(await candidates()).length} pictures scored above zero`);
+    if (only.length) {
+      // Asked about one group: show what its header is actually made of, which
+      // is the only way to see a mark the scoring cannot.
+      const head = await settled(() => page.evaluate(() => {
+        const bar = document.querySelector('header, [role="banner"], .header, #header, .site-header');
+        return bar ? bar.innerHTML.replace(/\s+/g, ' ').slice(0, 2600) : '(no header element)';
+      }));
+      console.log(`  header: ${head}`);
+    }
   }
 
   let taken = false;
