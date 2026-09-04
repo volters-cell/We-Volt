@@ -1789,6 +1789,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   :root { --surface: #fff; --surface-sunken: #fff; --ink: #000; --line: #999; }
   body { background: #fff; color: #000; }
   .site-header .header-meta,
+  .join,
   .map-section, .layer-tabs, .filters, .roll-filters, .share, .skip-link,
   .decision-list, #session-list, .search-form, .back-to-votes, .roll-reset,
   #sample-banner { display: none !important; }
@@ -2012,6 +2013,91 @@ button.permalink {
    across the page rather than in a column in the corner. It lines up with the
    same 1560px measure as the page above it, so the whole thing reads as one
    sheet. Below 62rem it stacks. */
+/* ------------------------------------------------------------------- join
+
+   A band between the records and the footer. It is in Volt's own purple
+   rather than the site's blue, so it reads as a party asking rather than as
+   the tracker speaking: everything above it is the Parliament's record, and
+   this is plainly something else. */
+.join {
+  --join-ink: #ffffff;
+  --join-field: #502379;
+  background:
+    radial-gradient(120% 140% at 88% 8%, rgba(255, 255, 255, .16), transparent 60%),
+    linear-gradient(135deg, #5d2a8a 0%, #502379 55%, #3d1a5c 100%);
+  color: var(--join-ink);
+  padding: clamp(2rem, 5vw, 3.25rem) clamp(1rem, 4vw, 2.5rem);
+}
+.join-inner {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 4vw, 3rem);
+}
+.join-words { max-width: 62ch; min-width: 0; }
+.join-eyebrow {
+  margin: 0 0 .5rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .72);
+}
+.join h2 {
+  margin: 0 0 .7rem;
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  color: var(--join-ink);
+}
+.join-note { margin: 0; font-size: .95rem; line-height: 1.55; color: rgba(255, 255, 255, .85); }
+
+.join-act { display: grid; gap: .55rem; justify-items: start; }
+/* Big enough to be the answer to the paragraph beside it, and white on the
+   purple so it is the brightest thing in the band. */
+.join-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -.005em;
+  padding: .9rem 1.6rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #3d1a5c;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .65);
+  transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease;
+}
+.join-button:hover {
+  background: #fff8e6;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -12px rgba(0, 0, 0, .7);
+}
+.join-button:active { transform: translateY(0); }
+.join-button:focus-visible { outline: 3px solid #f6c700; outline-offset: 3px; }
+.join-arrow { transition: transform .16s ease; }
+.join-button:hover .join-arrow { transform: translateX(3px); }
+.join-small { margin: 0; font-size: .76rem; color: rgba(255, 255, 255, .7); }
+
+@media (prefers-reduced-motion: reduce) {
+  .join-button, .join-arrow { transition: none; }
+  .join-button:hover { transform: none; }
+  .join-button:hover .join-arrow { transform: none; }
+}
+
+@media (max-width: 48rem) {
+  .join-inner { flex-direction: column; align-items: stretch; }
+  .join-act { justify-items: stretch; }
+  .join-button { justify-content: center; }
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--surface-sunken, var(--surface));
