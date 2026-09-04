@@ -87,6 +87,18 @@ if (has('--survey')) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 1400 }, locale: 'en-GB' });
   const page = await context.newPage();
 
+/* Every picture the page actually asks the network for. Some sites hydrate a
+   mark from a script — the EPP's header holds an empty div named
+   "logo-eppfull" and fills it in later — so the file exists in the traffic
+   even when it is in neither the markup nor any computed style. */
+const requested = new Map();
+page.on('response', (response) => {
+  const type = String(response.headers()['content-type'] || '');
+  if (!/^image\//.test(type)) return;
+  const url = response.url();
+  if (!requested.has(url)) requested.set(url, type);
+});
+
   for (const address of pages) {
     try {
       await page.goto(address, { waitUntil: 'load', timeout: 60000 });
@@ -316,6 +328,7 @@ const report = [];
 
 for (const group of wanted) {
   const site = SITES[group];
+  requested.clear();
   try {
     await page.goto(site, { waitUntil: 'load', timeout: 60000 });
     await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
@@ -333,6 +346,14 @@ for (const group of wanted) {
   } catch (error) {
     console.warn(`${group}: could not open ${site} — ${error.message}`);
     continue;
+  }
+
+  if (has('--probe') && only.length) {
+    const pictures = [...requested.entries()]
+      .filter(([url]) => !/mepphoto|\/photo\/|\/photos\/|getty/i.test(url));
+    console.log(`\n${group}: ${pictures.length} pictures fetched (of ${requested.size}), ` +
+      'photographs set aside:');
+    pictures.slice(0, 40).forEach(([url, type]) => console.log(`   ${type.padEnd(16)} ${url.slice(0, 140)}`));
   }
 
   if (has('--probe') && only.length) {
