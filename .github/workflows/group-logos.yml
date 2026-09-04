@@ -1,12 +1,12 @@
-# Take the political groups' own marks from the Parliament's pages.
+# Take the political groups' own marks.
 #
-# A group's mark appears on the page of every member who sits in it, so the job
-# opens one member per group and reads the mark from there. europarl.europa.eu
-# turns a plain HTTP client away, so — as with the portraits — the page is
-# opened in a real Chromium and the bytes come back out of it.
+# The Parliament does not publish them: ten of its pages were surveyed and they
+# carry portraits, its own emblem and interface icons, nothing else. So each
+# mark comes from that group's own site, out of its own header — read in a real
+# browser, because that is where a header actually exists.
 #
-# Run "probe" first: it prints every picture on each page with the score the
-# script gave it and writes nothing, which is how a wrong pick is caught before
+# Run "probe" first: it prints what it found on each site and the score it gave
+# each candidate, and writes nothing, which is how a wrong pick is caught before
 # it is committed.
 
 name: The groups' marks
@@ -55,13 +55,13 @@ jobs:
           npm i --no-save --no-audit --no-fund playwright@1.49
           npx playwright install --with-deps chromium
 
-      - name: List every picture the Parliament's pages carry
+      - name: List every picture those pages carry
         if: ${{ inputs.mode == 'survey' }}
         env:
           SURVEY_PAGES: ${{ inputs.pages }}
         run: node scripts/mirror-group-logos.mjs --survey
 
-      - name: Look at what a member's page carries
+      - name: Look at what each group's site carries
         if: ${{ inputs.mode == 'probe' }}
         run: node scripts/mirror-group-logos.mjs --probe
 
