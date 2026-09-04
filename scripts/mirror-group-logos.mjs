@@ -65,6 +65,15 @@ const SITES = {
   'ESN': 'https://esn-group.eu/'
 };
 
+/* One site defeats the heuristic: the EPP's home page carries no mark as an
+   image and no drawn one in its header — 47 pictures, and the ten that score
+   are all article photographs. Its mark is served as a stylesheet background
+   from its own theme, so that file is named here rather than guessed at. An
+   entry only ever names a file on the group's own site. */
+const MARK = {
+  'EPP': 'https://www.eppgroup.eu/themes/customs/eppgroup/images/eppgroup2023/icons/EPP-logo-opacity.svg'
+};
+
 await mkdir(path.join(ROOT, OUT), { recursive: true });
 
 /* ------------------------------------------------------------------ survey */
@@ -309,6 +318,21 @@ for (const group of wanted) {
   } catch (error) {
     console.warn(`${group}: could not open ${site} — ${error.message}`);
     continue;
+  }
+
+  // A named mark is taken as given; everything else is found by looking.
+  if (MARK[group]) {
+    const answer = await bytes(MARK[group]);
+    const type = kind(answer.buffer);
+    if (type) {
+      const file = `${slug(group)}.${type}`;
+      if (!has('--probe')) await writeFile(path.join(ROOT, OUT, file), answer.buffer);
+      console.log(`  ${group} -> ${file} (${answer.buffer.length}b, named) ${MARK[group]}`);
+      report.push({ group, file, from: MARK[group], page: page.url() });
+      saved += 1;
+      continue;
+    }
+    console.warn(`  ${group}: the named mark ${MARK[group]} came back as nothing usable`);
   }
 
   const ranked = (await candidates())
