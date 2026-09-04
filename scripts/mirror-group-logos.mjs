@@ -234,7 +234,9 @@ async function candidates() {
                       getComputedStyle(node, '::after')];
       const pictures = [];
       styles.forEach((style) => {
-        pictures.push(style.backgroundImage, style.maskImage, style.webkitMaskImage);
+        // content: url() as well — an empty div that nonetheless shows a mark is
+        // usually doing it that way.
+        pictures.push(style.backgroundImage, style.maskImage, style.webkitMaskImage, style.content);
       });
       pictures.forEach((picture) => {
         const match = picture && picture !== 'none' && picture.match(/url\(["']?(.+?)["']?\)/);
