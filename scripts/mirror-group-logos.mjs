@@ -128,8 +128,10 @@ const already = new Set(
     .map((name) => name.replace(/\.[^.]+$/, ''))
 );
 
+const only = (process.env.ONLY_GROUPS || '').split(',').map((one) => one.trim()).filter(Boolean);
 const wanted = Object.keys(SITES).filter(
-  (group) => has('--probe') || has('--all') || !already.has(slug(group))
+  (group) => (!only.length || only.includes(group)) &&
+    (has('--probe') || has('--all') || !already.has(slug(group)))
 );
 
 console.log(`${wanted.length} group marks to take (${already.size} already here).`);
@@ -222,6 +224,8 @@ function score(item) {
   if (/opacity|watermark|placeholder|shadow/.test(text)) return 0;
   if (item.width && (item.width < 24 || item.height < 12)) return 0;
   if (item.width && item.width / Math.max(item.height, 1) > 12) return 0;
+  // A mark is a mark, not a photograph across the top of the page.
+  if (item.width > 620 || item.height > 320) return 0;
 
   let points = 0;
   if (/logo|brand|mark/.test(text)) points += 4;
@@ -321,7 +325,7 @@ for (const group of wanted) {
         `${item.inHeader ? ' header' : ''}${item.goesHome ? ' home' : ''}  ` +
         `${item.url.slice(0, 90)}${item.alt ? '  [' + item.alt.slice(0, 40) + ']' : ''}`);
     });
-    if (!ranked.length) console.log('  nothing in the header looked like a mark');
+    console.log(`  ${ranked.length} of ${(await candidates()).length} pictures scored above zero`);
   }
 
   let taken = false;

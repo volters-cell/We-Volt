@@ -14,6 +14,10 @@ name: The groups' marks
 on:
   workflow_dispatch:
     inputs:
+      groups:
+        description: "probe: only these groups, comma-separated (blank for all)"
+        type: string
+        required: false
       pages:
         description: "survey: pages to look at, comma-separated (blank for the usual set)"
         type: string
@@ -63,6 +67,8 @@ jobs:
 
       - name: Look at what each group's site carries
         if: ${{ inputs.mode == 'probe' }}
+        env:
+          ONLY_GROUPS: ${{ inputs.groups }}
         run: node scripts/mirror-group-logos.mjs --probe
 
       - name: Take the marks
