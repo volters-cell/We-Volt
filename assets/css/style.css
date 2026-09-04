@@ -2046,17 +2046,43 @@ button.permalink {
   align-items: center;
   gap: .75rem clamp(1.5rem, 4vw, 3rem);
 }
-/* The party's name, said quietly once, so the line below it has an author. */
+/* The party's own mark, once, so the line beside it has an author.
+
+   Volt publishes it as a single shape with no colour of its own — its site
+   fills it from the surrounding text — so the file is kept exactly as
+   published and this paints it, white on the purple, which is how the party
+   uses it on a dark ground. A browser without masks gets the name set in
+   type, which is what stood here before. */
 .join-mark {
-  margin: 0;
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
   font-size: .74rem;
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, .62);
-  padding-right: clamp(1.5rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 3.5vw, 2.5rem);
   border-right: 1px solid rgba(255, 255, 255, .25);
+}
+
+@supports ((-webkit-mask-image: url("../brand/volt.svg")) or (mask-image: url("../brand/volt.svg"))) {
+  /* A mask clips everything the element draws, its border included, so the
+     rule that separates the lettered fallback from the line is gone here — and
+     the mark does not need one. */
+  .join-mark {
+    width: 4.6rem;
+    height: 1.9rem;
+    padding-right: 0;
+    border-right: 0;
+    margin-right: clamp(1.25rem, 3.5vw, 2.5rem);
+    background: #fff;
+    -webkit-mask: url("../brand/volt.svg") no-repeat left center;
+    mask: url("../brand/volt.svg") no-repeat left center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+  .join-mark-text { display: none; }
 }
 .join h2 {
   margin: 0;
@@ -2102,7 +2128,7 @@ button.permalink {
 /* On one column the rule under the name would cut the line in half. */
 @media (max-width: 46rem) {
   .join-inner { align-items: flex-start; gap: .55rem; }
-  .join-mark { padding-right: 0; border-right: 0; }
+  .join-mark { padding-right: 0; margin-right: 0; border-right: 0; }
   .join h2 { flex-basis: 100%; }
   .join-button { margin-top: .5rem; }
 }
