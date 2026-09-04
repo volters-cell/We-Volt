@@ -1799,7 +1799,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   :root { --surface: #fff; --surface-sunken: #fff; --ink: #000; --line: #999; }
   body { background: #fff; color: #000; }
   .site-header .header-meta,
-  .join,
+  .join, .volt-strip,
   .map-section, .layer-tabs, .filters, .roll-filters, .share, .skip-link,
   .decision-list, #session-list, .search-form, .back-to-votes, .roll-reset,
   #sample-banner { display: none !important; }
@@ -2023,6 +2023,41 @@ button.permalink {
    across the page rather than in a column in the corner. It lines up with the
    same 1560px measure as the page above it, so the whole thing reads as one
    sheet. Below 62rem it stacks. */
+/* ------------------------------------------------------------ the top strip
+
+   Whose site this is, said once, before anything else: the party's mark and
+   one line. It is a strip rather than a band — thin enough that the tracker's
+   own header is still the first thing with weight on the page, and it does not
+   ask for anything. The asking waits for the foot of the page. */
+.volt-strip {
+  background: #502379;
+  color: #fff;
+  padding: .5rem clamp(1rem, 4vw, 2.5rem);
+}
+.volt-strip-inner {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(.75rem, 2.5vw, 1.25rem);
+}
+.volt-strip p {
+  margin: 0;
+  font-size: .92rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: #fff;
+}
+.volt-strip .join-mark { height: 1.15rem; }
+
+@supports ((-webkit-mask-image: url("../brand/volt.svg")) or (mask-image: url("../brand/volt.svg"))) {
+  .volt-strip .join-mark { width: 2.8rem; height: 1.15rem; margin-right: 0; }
+}
+
+@media (max-width: 30rem) {
+  .volt-strip p { font-size: .84rem; }
+}
+
 /* ------------------------------------------------------------------- join
 
    A band between the records and the footer: one line, and one door. At the
@@ -2088,7 +2123,7 @@ button.permalink {
   margin: 0;
   flex: 1 1 18rem;
   min-width: 0;
-  font-size: clamp(1.3rem, 2.6vw, 1.85rem);
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
   font-weight: 650;
   line-height: 1.2;
   letter-spacing: -.02em;
