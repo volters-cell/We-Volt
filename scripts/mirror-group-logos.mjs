@@ -145,6 +145,58 @@ if (has('--survey')) {
   process.exit(0);
 }
 
+/* --------------------------------------------------------------------- dig
+
+   For a site that fills its mark in from a script. The EPP's header holds an
+   empty <div name="logo-eppfull">, so the drawing is in the code the page
+   loads rather than in the page. This waits properly for the hydration, then,
+   if the div is still empty, reads the page's own scripts and stylesheets
+   looking for the name — and prints what it finds around it. */
+if (has('--dig')) {
+  const group = (process.env.ONLY_GROUPS || 'EPP').split(',')[0].trim();
+  const site = SITES[group];
+  const browser = await chromium.launch();
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'en-GB' });
+  const page = await context.newPage();
+
+  await page.goto(site, { waitUntil: 'load', timeout: 60000 });
+  await page.waitForLoadState('networkidle', { timeout: 25000 }).catch(() => {});
+  // Long enough for anything that hydrates after the page settles.
+  await page.waitForTimeout(9000);
+
+  console.log(`${group} — ${page.url()}`);
+  console.log('the brand element, after waiting:');
+  console.log(await page.evaluate(() => {
+    const node = document.querySelector('.navbar-brand [class*="logo"], [name*="logo"], .img-logo');
+    if (!node) return '(not found)';
+    return node.outerHTML.replace(/\s+/g, ' ').slice(0, 1200);
+  }));
+
+  const sources = await page.evaluate(() =>
+    [...document.querySelectorAll('script[src], link[rel="stylesheet"]')]
+      .map((node) => node.src || node.href).filter(Boolean));
+  console.log(`\n${sources.length} scripts and stylesheets to read.`);
+
+  for (const address of sources) {
+    let text = '';
+    try {
+      const answer = await context.request.get(address, { timeout: 30000 });
+      if (!answer.ok()) continue;
+      text = await answer.text();
+    } catch (error) {
+      continue;
+    }
+    // The name the header gives the mark, and any drawing near it.
+    const at = text.search(/logo-?epp|eppfull|logo-full/i);
+    if (at < 0) continue;
+    console.log(`\n--- ${address.slice(0, 130)} (${text.length} bytes), match at ${at}`);
+    console.log(text.slice(Math.max(0, at - 700), at + 1400).replace(/\s+/g, ' '));
+  }
+
+  await browser.close();
+  process.exit(0);
+}
+
 /* -------------------------------------------------------------------- take */
 
 const already = new Set(

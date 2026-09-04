@@ -25,7 +25,7 @@ on:
       mode:
         description: "survey (list every picture on the Parliament's pages), probe, or fetch"
         type: choice
-        options: [survey, probe, fetch, refetch]
+        options: [survey, probe, dig, fetch, refetch]
         default: survey
 
 permissions:
@@ -64,6 +64,12 @@ jobs:
         env:
           SURVEY_PAGES: ${{ inputs.pages }}
         run: node scripts/mirror-group-logos.mjs --survey
+
+      - name: Dig a mark out of a site's own code
+        if: ${{ inputs.mode == 'dig' }}
+        env:
+          ONLY_GROUPS: ${{ inputs.groups }}
+        run: node scripts/mirror-group-logos.mjs --dig
 
       - name: Look at what each group's site carries
         if: ${{ inputs.mode == 'probe' }}
