@@ -87,17 +87,6 @@ if (has('--survey')) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 1400 }, locale: 'en-GB' });
   const page = await context.newPage();
 
-/* Every picture the page actually asks the network for. Some sites hydrate a
-   mark from a script — the EPP's header holds an empty div named
-   "logo-eppfull" and fills it in later — so the file exists in the traffic
-   even when it is in neither the markup nor any computed style. */
-const requested = new Map();
-page.on('response', (response) => {
-  const type = String(response.headers()['content-type'] || '');
-  if (!/^image\//.test(type)) return;
-  const url = response.url();
-  if (!requested.has(url)) requested.set(url, type);
-});
 
   for (const address of pages) {
     try {
@@ -163,6 +152,18 @@ if (!wanted.length) process.exit(0);
 const browser = await chromium.launch();
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'en-GB' });
 const page = await context.newPage();
+
+/* Every picture the page actually asks the network for. Some sites hydrate a
+   mark from a script — the EPP's header holds an empty div named
+   "logo-eppfull" and fills it in later — so the file exists in the traffic
+   even when it is in neither the markup nor any computed style. */
+const requested = new Map();
+page.on('response', (response) => {
+  const type = String(response.headers()['content-type'] || '');
+  if (!/^image\//.test(type)) return;
+  const url = response.url();
+  if (!requested.has(url)) requested.set(url, type);
+});
 
 /* A page can redirect on arrival — to a language, or to a consent screen — and
    a question asked mid-redirect lands nowhere. So it is asked again. */
