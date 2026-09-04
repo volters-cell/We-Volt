@@ -1426,7 +1426,9 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .breakdown-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 3rem 1fr;
+  /* Wide enough for a wordmark. Most of these marks are the group's name set
+     in type, and squeezed into a square they shrink to an illegible strip. */
+  grid-template-columns: 4.6rem 1fr;
   align-items: start;
   gap: .75rem;
   font: inherit;

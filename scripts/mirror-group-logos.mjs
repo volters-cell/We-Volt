@@ -211,13 +211,19 @@ async function candidates() {
                    alt: node.getAttribute('aria-label') || '', ...place(node) });
     });
 
-    document.querySelectorAll('a, div, span, h1').forEach((node) => {
-      const picture = getComputedStyle(node).backgroundImage;
-      const match = picture && picture.match(/url\(["']?(.+?)["']?\)/);
-      if (!match || match[1].startsWith('data:')) return;
-      found.push({ kind: 'css', url: new URL(match[1], location.href).href, alt: '',
-                   words: [node.className, node.id, node.getAttribute('aria-label')].join(' '),
-                   ...place(node) });
+    /* A mark set in CSS. Two ways: painted as a background, or cut out as a
+       mask so the site can recolour it. The EPP's own header does the second,
+       and a scan that only looks at backgrounds cannot see its logo at all. */
+    document.querySelectorAll('a, div, span, h1, i').forEach((node) => {
+      const style = getComputedStyle(node);
+      [style.backgroundImage, style.maskImage, style.webkitMaskImage].forEach((picture) => {
+        const match = picture && picture !== 'none' && picture.match(/url\(["']?(.+?)["']?\)/);
+        if (!match || match[1].startsWith('data:')) return;
+        found.push({ kind: 'css', url: new URL(match[1], location.href).href, alt: '',
+                     words: [node.className, node.id, node.getAttribute('name'),
+                             node.getAttribute('alt'), node.getAttribute('aria-label')].join(' '),
+                     ...place(node) });
+      });
     });
 
     return found;
