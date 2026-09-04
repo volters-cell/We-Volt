@@ -648,6 +648,16 @@ main {
   white-space: nowrap;
 }
 .map-hint { margin: 0 0 .9rem; font-size: .85rem; color: var(--ink-faint); }
+/* Said to a screen reader, out of the way for everyone else. */
+.map-hint.is-quiet {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 .map-wrap { position: relative; }
 .map { position: relative; }

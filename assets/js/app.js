@@ -1660,6 +1660,8 @@
     document.querySelector('.layer-tabs').hidden = true;
     dom['map-hint'].textContent = 'Click a member state for its profile, or pick a vote ' +
       'from the list.';
+    // Nothing open: the line is the way in, and is said out loud again.
+    dom['map-hint'].classList.remove('is-quiet');
     if (map) map.revealAll();
     paint();
     renderFeed();
@@ -1705,6 +1707,10 @@
     document.querySelector('.layer-tabs').hidden = false;
     dom['map-hint'].textContent = 'Click a member state to open its record. ' +
       'Click the sea to close it. Arrow keys move between countries.';
+    // Kept for a screen reader, taken out of the way for everyone else: with a
+    // vote open the map is showing the vote, and an instruction has no business
+    // standing between the reader and it.
+    dom['map-hint'].classList.add('is-quiet');
     renderDecision();
     selectCountry(code || null, { scroll: false });
     if (changed) playReveal();
