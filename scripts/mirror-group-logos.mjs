@@ -70,11 +70,24 @@ const SITES = {
    are all article photographs. Its mark is served as a stylesheet background
    from its own theme, so that file is named here rather than guessed at. An
    entry only ever names a file on the group's own site. */
-const MARK = {
-  // (none yet: the address the EPP's theme serves under a logo-ish name turned
-  // out to be a faded watermark — an outline heart with no lettering, white on
-  // white — so it was fetched, looked at, and rejected rather than shipped.)
-};
+const MARK = {};
+
+/* Groups whose mark this cannot reach, and must therefore not guess at.
+ *
+ * The EPP. Its header holds an empty <div name="logo-eppfull" alt="EPP Group
+ * logo"> and fills it in from its own script bundle, so the mark is in none of
+ * the places a page can be asked about it: not an image, not a background, not
+ * a mask, not a pseudo-element, not content:url(), not an inline drawing, and
+ * not in the traffic — of the fourteen pictures the page fetches, the three
+ * that are not photographs are two background textures and a translucent
+ * watermark heart with no lettering, which was taken once, rendered, and
+ * rejected.
+ *
+ * Left to itself the scoring would then settle on the best of what remains,
+ * which is an article photograph. So it is stopped here: the EPP keeps its
+ * lettered tile, which says the right thing, rather than wearing a stock
+ * picture. */
+const CANNOT = { 'EPP': 'its mark is drawn from a script, not published as a file' };
 
 await mkdir(path.join(ROOT, OUT), { recursive: true });
 
@@ -142,9 +155,13 @@ const already = new Set(
 
 const only = (process.env.ONLY_GROUPS || '').split(',').map((one) => one.trim()).filter(Boolean);
 const wanted = Object.keys(SITES).filter(
-  (group) => (!only.length || only.includes(group)) &&
+  (group) => (!only.length || only.includes(group)) && !CANNOT[group] &&
     (has('--probe') || has('--all') || !already.has(slug(group)))
 );
+
+Object.keys(CANNOT).forEach((group) => {
+  console.log(`${group}: skipped — ${CANNOT[group]}. It keeps its lettered tile.`);
+});
 
 console.log(`${wanted.length} group marks to take (${already.size} already here).`);
 if (!wanted.length) process.exit(0);

@@ -25,6 +25,14 @@ photograph winning for want of anything better.
 The non-attached members are not a group and have no mark. They keep a
 lettered tile, as does any group whose mark has not been found.
 
+The EPP is the one group whose mark could not be taken. Its header holds an
+empty div named `logo-eppfull` and fills it in from its own script bundle, so
+the mark is in none of the places a page can be asked about it — not an image,
+a background, a mask, a pseudo-element, `content: url()`, an inline drawing,
+nor the network traffic. Left to itself the scoring would then settle on the
+best of what remains, which is an article photograph, so `CANNOT` in the script
+stops it: the EPP keeps its lettered tile rather than wearing a stock picture.
+
 ## How they are drawn
 
 A mark sits on a light tile in both themes, because it is drawn for the paper
