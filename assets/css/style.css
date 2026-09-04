@@ -2015,18 +2015,18 @@ button.permalink {
    sheet. Below 62rem it stacks. */
 /* ------------------------------------------------------------------- join
 
-   A band between the records and the footer. It is in Volt's own purple
-   rather than the site's blue, so it reads as a party asking rather than as
-   the tracker speaking: everything above it is the Parliament's record, and
-   this is plainly something else. */
+   A band between the records and the footer: one line, and one door. At the
+   end of a record an argument is worse than an invitation, so there is no
+   argument — the reader has just spent their time on how Europe was decided,
+   and this says only that deciding it is open to them.
+
+   Flat Volt purple, no gradient and no glow. It reads as a party asking
+   rather than as the tracker speaking, and it should look like a statement
+   rather than an advertisement. */
 .join {
-  --join-ink: #ffffff;
-  --join-field: #502379;
-  background:
-    radial-gradient(120% 140% at 88% 8%, rgba(255, 255, 255, .16), transparent 60%),
-    linear-gradient(135deg, #5d2a8a 0%, #502379 55%, #3d1a5c 100%);
-  color: var(--join-ink);
-  padding: clamp(2rem, 5vw, 3.25rem) clamp(1rem, 4vw, 2.5rem);
+  background: #502379;
+  color: #fff;
+  padding: clamp(1.9rem, 4.5vw, 2.9rem) clamp(1rem, 4vw, 2.5rem);
 }
 .join-inner {
   max-width: 1560px;
@@ -2034,68 +2034,67 @@ button.permalink {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(1.25rem, 4vw, 3rem);
+  gap: .75rem clamp(1.5rem, 4vw, 3rem);
 }
-.join-words { max-width: 62ch; min-width: 0; }
-.join-eyebrow {
-  margin: 0 0 .5rem;
-  font-size: .72rem;
+/* The party's name, said quietly once, so the line below it has an author. */
+.join-mark {
+  margin: 0;
+  flex: 0 0 auto;
+  font-size: .74rem;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: .22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .62);
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+  border-right: 1px solid rgba(255, 255, 255, .25);
 }
 .join h2 {
-  margin: 0 0 .7rem;
-  font-size: clamp(1.35rem, 3.2vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -.015em;
-  color: var(--join-ink);
+  margin: 0;
+  flex: 1 1 18rem;
+  min-width: 0;
+  font-size: clamp(1.3rem, 2.6vw, 1.85rem);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  color: #fff;
 }
-.join-note { margin: 0; font-size: .95rem; line-height: 1.55; color: rgba(255, 255, 255, .85); }
-
-.join-act { display: grid; gap: .55rem; justify-items: start; }
-/* Big enough to be the answer to the paragraph beside it, and white on the
-   purple so it is the brightest thing in the band. */
+/* Outlined, not filled: the quieter of the two ways to make a button obvious,
+   and the one that does not shout across the record above it. It fills on
+   hover, which is where the invitation becomes an offer. */
 .join-button {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
-  gap: .6rem;
+  gap: .55rem;
   font: inherit;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -.005em;
-  padding: .9rem 1.6rem;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  padding: .72rem 1.35rem;
+  border: 1.5px solid rgba(255, 255, 255, .55);
   border-radius: 999px;
-  background: #fff;
-  color: #3d1a5c;
+  background: transparent;
+  color: #fff;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .65);
-  transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
 }
-.join-button:hover {
-  background: #fff8e6;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 30px -12px rgba(0, 0, 0, .7);
-}
-.join-button:active { transform: translateY(0); }
-.join-button:focus-visible { outline: 3px solid #f6c700; outline-offset: 3px; }
-.join-arrow { transition: transform .16s ease; }
-.join-button:hover .join-arrow { transform: translateX(3px); }
-.join-small { margin: 0; font-size: .76rem; color: rgba(255, 255, 255, .7); }
+.join-button:hover { background: #fff; color: #3d1a5c; border-color: #fff; }
+.join-button:focus-visible { outline: 2px solid #f6c700; outline-offset: 3px; }
+.join-arrow { transition: transform .18s ease; }
+.join-button:hover .join-arrow { transform: translateX(2px); }
 
 @media (prefers-reduced-motion: reduce) {
   .join-button, .join-arrow { transition: none; }
-  .join-button:hover { transform: none; }
   .join-button:hover .join-arrow { transform: none; }
 }
 
-@media (max-width: 48rem) {
-  .join-inner { flex-direction: column; align-items: stretch; }
-  .join-act { justify-items: stretch; }
-  .join-button { justify-content: center; }
+/* On one column the rule under the name would cut the line in half. */
+@media (max-width: 46rem) {
+  .join-inner { align-items: flex-start; gap: .55rem; }
+  .join-mark { padding-right: 0; border-right: 0; }
+  .join h2 { flex-basis: 100%; }
+  .join-button { margin-top: .5rem; }
 }
 
 .site-footer {
