@@ -25,13 +25,17 @@ photograph winning for want of anything better.
 The non-attached members are not a group and have no mark. They keep a
 lettered tile, as does any group whose mark has not been found.
 
-The EPP is the one group whose mark could not be taken. Its header holds an
-empty div named `logo-eppfull` and fills it in from its own script bundle, so
-the mark is in none of the places a page can be asked about it — not an image,
-a background, a mask, a pseudo-element, `content: url()`, an inline drawing,
-nor the network traffic. Left to itself the scoring would then settle on the
-best of what remains, which is an article photograph, so `CANNOT` in the script
-stops it: the EPP keeps its lettered tile rather than wearing a stock picture.
+One mark could not be found by looking, and is named instead. The EPP's header
+holds an empty div named `logo-eppfull` and fills it in from its own script
+bundle, so the mark is in none of the places a page can be asked about it — not
+an image, a background, a mask, a pseudo-element, `content: url()`, an inline
+drawing, nor the network traffic. `--dig` reads the site's own scripts, and the
+sprite map inside one of them gives the path each such name lives at. So `MARK`
+in the script names the EPP's own file at the EPP's own address, read out of
+the EPP's own code — not a guess. `CANNOT`, beside it, is for a group whose
+mark truly cannot be reached: naming one there keeps the scoring from settling
+on the best of whatever else is on the page, which is how a group nearly ended
+up wearing an article photograph.
 
 ## How they are drawn
 
