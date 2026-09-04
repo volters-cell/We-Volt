@@ -1,0 +1,54 @@
+{
+  "note": "Each political group's mark and the page it was taken from. The Parliament does not publish these, so each comes from that group's own site, and identifies that group.",
+  "taken": "2026-09-04",
+  "marks": [
+    {
+      "group": "ECR",
+      "file": "ecr.svg",
+      "from": "https://ecrgroup.eu/layout/ECRg-logtype-big.svg",
+      "page": "https://ecrgroup.eu/"
+    },
+    {
+      "group": "EPP",
+      "file": "epp.svg",
+      "from": "https://www.eppgroup.eu/themes/customs/eppgroup/images/eppgroup2023/icons/EPP-logo-opacity.svg",
+      "page": "https://www.eppgroup.eu/"
+    },
+    {
+      "group": "ESN",
+      "file": "esn.png",
+      "from": "https://cdn.dorik.com/66f2616720bf9b0012e67e2a/images/logofJAaB-5suZj.png",
+      "page": "https://esn-group.eu/"
+    },
+    {
+      "group": "Greens/EFA",
+      "file": "greens-efa.svg",
+      "from": "https://www.greens-efa.eu/files/layout/img/logo/greens_efa_en.svg",
+      "page": "https://www.greens-efa.eu/en/"
+    },
+    {
+      "group": "PfE",
+      "file": "pfe.svg",
+      "from": "https://patriotsforeurope.eu/",
+      "page": "https://patriotsforeurope.eu/"
+    },
+    {
+      "group": "Renew",
+      "file": "renew.svg",
+      "from": "https://renew-europe.files.svdcdn.com/production/main/global/renew-europe-logo.svg?dm=1614648150",
+      "page": "https://www.reneweuropegroup.eu/"
+    },
+    {
+      "group": "S&D",
+      "file": "s-d.svg",
+      "from": "https://www.socialistsanddemocrats.eu/themes/custom/sd/images/svg/sd-logo-red.svg",
+      "page": "https://www.socialistsanddemocrats.eu/en"
+    },
+    {
+      "group": "The Left",
+      "file": "the-left.png",
+      "from": "https://left.eu/app/uploads/2024/05/cropped-The-Left_Logo_A_Color-1.png",
+      "page": "https://left.eu/the-group/"
+    }
+  ]
+}
