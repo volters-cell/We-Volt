@@ -30,6 +30,7 @@
  */
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -100,7 +101,16 @@ const MARK = {
  * picture. */
 const CANNOT = {};
 
+/* Marks that are not a political group of the Parliament, and do not belong in
+   the group table. Volt is a party whose members sit inside Greens/EFA; its
+   mark is wanted for the invitation at the foot of the page, so it is kept
+   apart from the marks that stand for a group in a vote. */
+const PARTIES = {
+  'Volt': { site: 'https://volteuropa.org/', out: 'assets/brand', file: 'volt' }
+};
+
 await mkdir(path.join(ROOT, OUT), { recursive: true });
+await mkdir(path.join(ROOT, 'assets/brand'), { recursive: true });
 
 /* ------------------------------------------------------------------ survey */
 
@@ -217,16 +227,28 @@ const already = new Set(
 );
 
 const only = (process.env.ONLY_GROUPS || '').split(',').map((one) => one.trim()).filter(Boolean);
-const wanted = Object.keys(SITES).filter(
-  (group) => (!only.length || only.includes(group)) && !CANNOT[group] &&
-    (has('--probe') || has('--all') || !already.has(slug(group)))
-);
+
+/* Every mark to take, each knowing where it lives. A group's goes with the
+   groups; a party's goes with the site's own brand files. */
+const wanted = [];
+Object.keys(SITES).forEach(function (group) {
+  if (only.length && !only.includes(group)) return;
+  if (CANNOT[group]) return;
+  if (!has('--probe') && !has('--all') && already.has(slug(group))) return;
+  wanted.push({ key: group, site: SITES[group], out: OUT, file: slug(group), group: true });
+});
+Object.keys(PARTIES).forEach(function (party) {
+  if (only.length && !only.includes(party)) return;
+  const where = PARTIES[party];
+  if (!has('--probe') && !has('--all') && existsSync(path.join(ROOT, where.out, where.file + '.svg'))) return;
+  wanted.push({ key: party, site: where.site, out: where.out, file: where.file, group: false });
+});
 
 Object.keys(CANNOT).forEach((group) => {
   console.log(`${group}: skipped — ${CANNOT[group]}. It keeps its lettered tile.`);
 });
 
-console.log(`${wanted.length} group marks to take (${already.size} already here).`);
+console.log(`${wanted.length} marks to take (${already.size} group marks already here).`);
 if (!wanted.length) process.exit(0);
 
 const browser = await chromium.launch();
@@ -409,8 +431,9 @@ function kind(buffer) {
 let saved = 0;
 const report = [];
 
-for (const group of wanted) {
-  const site = SITES[group];
+for (const target of wanted) {
+  const group = target.key;
+  const site = target.site;
   requested.clear();
   try {
     await page.goto(site, { waitUntil: 'load', timeout: 60000 });
@@ -460,10 +483,10 @@ for (const group of wanted) {
         console.warn(`  ${group}: ${address} came back as nothing usable (${answer.status || 'no answer'})`);
         continue;
       }
-      const file = `${slug(group)}.${type}`;
-      if (!has('--probe')) await writeFile(path.join(ROOT, OUT, file), answer.buffer);
-      console.log(`  ${group} -> ${file} (${answer.buffer.length}b, named) ${address}`);
-      report.push({ group, file, from: address, page: page.url() });
+      const file = `${target.file}.${type}`;
+      if (!has('--probe')) await writeFile(path.join(ROOT, target.out, file), answer.buffer);
+      console.log(`  ${group} -> ${target.out}/${file} (${answer.buffer.length}b, named) ${address}`);
+      if (target.group) report.push({ group, file, from: address, page: page.url() });
       saved += 1;
       took = true;
       break;
@@ -505,11 +528,13 @@ for (const group of wanted) {
     }
     if (!type) continue;
 
-    const file = `${slug(group)}.${type}`;
-    if (!has('--probe')) await writeFile(path.join(ROOT, OUT, file), buffer);
-    console.log(`  ${group} -> ${file} (${buffer.length}b, ${entry.points} points) ` +
+    const file = `${target.file}.${type}`;
+    if (!has('--probe')) await writeFile(path.join(ROOT, target.out, file), buffer);
+    console.log(`  ${group} -> ${target.out}/${file} (${buffer.length}b, ${entry.points} points) ` +
       `${item.kind === 'inline' ? page.url() + ' (inline)' : item.url}`);
-    report.push({ group, file, from: item.kind === 'inline' ? page.url() : item.url, page: page.url() });
+    if (target.group) {
+      report.push({ group, file, from: item.kind === 'inline' ? page.url() : item.url, page: page.url() });
+    }
     saved += 1;
     taken = true;
     break;
@@ -539,5 +564,5 @@ if (!has('--probe') && report.length) {
   );
 }
 
-console.log(`\n${saved} of ${wanted.length} group marks ${has('--probe') ? 'found' : 'written'}.`);
+console.log(`\n${saved} of ${wanted.length} marks ${has('--probe') ? 'found' : 'written'}.`);
 process.exit(saved ? 0 : 1);
