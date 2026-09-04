@@ -1262,14 +1262,6 @@
     return '<div class="share" role="group" aria-label="Share this vote">' +
       '<button type="button" class="share-button share-copy" data-copy="' + esc(url) + '">' +
         'Copy link</button>' +
-      // The roll-call as a spreadsheet, and the record itself. Both are the
-      // same figures the page is showing, in the two forms someone writing
-      // about a vote actually wants them in.
-      '<button type="button" class="share-button share-csv"' +
-        ' title="Every member, their country, group, party and vote, as a CSV">' +
-        'Download the roll-call</button>' +
-      '<a class="share-button" href="' + esc(decisionFile(decision)) +
-        '" download title="The record this page is drawn from">JSON</a>' +
       // The picture. On a phone it goes into the share sheet, where Instagram
       // offers Stories; anywhere else it is saved to be posted from one.
       '<button type="button" class="share-button share-story"' +
@@ -1298,57 +1290,6 @@
         }).catch(function () { /* the reader closed the sheet */ });
       };
     });
-  }
-
-  /* Where the open vote's own record lives, as a file to download or link to.
-     The index carries the path, because the file name is derived from the vote
-     and not from anything a reader could guess. */
-  function decisionFile(decision) {
-    const entry = index.decisions.find(function (item) { return item.id === decision.id; });
-    return (entry && entry.file) || ('data/decisions/' + decision.id + '.json');
-  }
-
-  /* The roll-call as a spreadsheet. Every member in the record, with the two
-     things that place them — the country that elected them and the party they
-     stood for — and how they voted. Built from what the page is showing, so a
-     filtered view downloads what is on screen. */
-  function rollCallCSV(decision, rows) {
-    const cell = function (value) {
-      const text = String(value === null || value === undefined ? '' : value);
-      return /[",\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
-    };
-    const lines = [['Member', 'Country', 'Political group', 'National party', 'Vote']
-      .map(cell).join(',')];
-    rows.forEach(function (item) {
-      lines.push([item.name, item.countryName, item.group, item.party || '',
-        Panel.VOTE_LABEL[item.position]].map(cell).join(','));
-    });
-    // A first line naming the vote, so a file opened a month later still says
-    // what it is. Prefixed with # so a spreadsheet keeps it out of the table.
-    return '# ' + cell(decision.title) + ' — ' + decision.bodyLabel + ', ' +
-      Data.formatDate(decision.date) + '\n' +
-      '# ' + cell(shareUrl()) + '\n' + lines.join('\n') + '\n';
-  }
-
-  function downloadRollCall(button) {
-    if (!state.decision) return;
-    const rows = filtered(ballotList());
-    if (!rows.length) return;
-
-    const said = button.textContent;
-    const csv = rollCallCSV(state.decision, rows);
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-    const href = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = href;
-    link.download = state.decision.id + '.csv';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
-
-    button.textContent = rows.length.toLocaleString('en-GB') + ' rows saved';
-    window.setTimeout(function () { button.textContent = said; }, 1400);
   }
 
   /* The vote as a 1080x1920 picture, handed to the phone's own share sheet.
@@ -1638,6 +1579,20 @@
     if (!(options && options.country)) dom['search-input'].focus();
   }
 
+  /* Nothing open: no vote, no member, no country, no neighbour. The start
+     page, however the reader arrived at it. */
+  function atStart() {
+    return !state.decision && !state.member && !state.country && !state.outside;
+  }
+
+  /* The Union drawn as one country, on arriving at the start page — by the
+     name, by Back, or by opening the site. Only where there is nothing else on
+     the map to say: a Back that merely closes a country while a vote stays
+     open has a vote to show, and that comes first. */
+  function greetHome() {
+    if (map && atStart()) map.unite();
+  }
+
   /* True while the way home is unwinding the history, so that the handlers
      watching the address do not read the entries going past as a reader asking
      for them. */
@@ -1688,7 +1643,7 @@
     // And the map says what the name means: for a few seconds the internal
     // frontiers go and the Union is one country, outlined in its own gold.
     // After clearDecision, which stops whatever the map was doing.
-    if (map) map.unite();
+    greetHome();
   }
 
   /* Nothing open: the map is the Union, the list is the way in. */
@@ -1891,6 +1846,9 @@
       // whatever was last looked at.
       const route = readHash();
       await loadDecision(route.decisionId, route.code);
+      // Opening the site on nothing in particular: the Union, once, before the
+      // reader starts. A shared link naming a vote has that to show instead.
+      greetHome();
       if (location.hash) {
         try {
           history.replaceState(null, '', location.pathname + location.search);
@@ -2042,11 +2000,6 @@
           shareStory(story);
           return;
         }
-        const csv = event.target.closest('.share-csv');
-        if (csv) {
-          downloadRollCall(csv);
-          return;
-        }
         const control = event.target.closest('[data-copy]');
         if (!control) return;
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
@@ -2114,6 +2067,9 @@
       window.addEventListener('popstate', function () {
         if (goingHome) return;
         popStep();
+        // Back can close a country and leave the vote up, which has its own
+        // thing to show. Only a Back that lands on the start page is home.
+        greetHome();
       });
 
       window.addEventListener('hashchange', function () {
