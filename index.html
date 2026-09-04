@@ -45,13 +45,15 @@
   </div>
 
   <header class="site-header">
-    <div class="brand">
+    <!-- The name is the way home: whatever is open, this closes it and returns
+         to the map and the list of votes. -->
+    <button type="button" class="brand" id="brand-home" title="Back to the start">
       <span class="brand-mark" aria-hidden="true"></span>
       <span>
         <span class="brand-name">EU Tracker</span>
         <span class="brand-tagline">Every vote of the European Parliament, member by member</span>
       </span>
-    </div>
+    </button>
     <div class="header-meta">
       <span id="header-plenary"></span>
       <a href="about.html" class="header-about">About the data</a>
@@ -79,9 +81,13 @@
       member by member</h1>
     <!-- Left: the map, which stays in view while the record is read. -->
     <section class="map-section" aria-labelledby="map-heading">
-      <div class="layer-tabs" role="tablist" aria-label="What the map shows" hidden>
-        <button role="tab" id="tab-vote" aria-controls="map" data-layer="vote" aria-selected="true">How they voted</button>
-        <button role="tab" id="tab-impact" aria-controls="map" data-layer="impact" aria-selected="false" hidden>What it costs</button>
+      <!-- One step back, and the cost layer where a vote has one. The map says
+           what it is showing in its own heading; a tab repeating it only took
+           up the place a way back belongs in. -->
+      <div class="layer-tabs" aria-label="This vote" hidden>
+        <button type="button" id="map-back" class="layer-back">← Back</button>
+        <button type="button" id="tab-impact" aria-controls="map" data-layer="impact"
+                aria-pressed="false" hidden>What it costs</button>
       </div>
 
       <h2 id="map-heading" class="map-heading">How they voted</h2>

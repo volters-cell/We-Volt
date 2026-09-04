@@ -178,7 +178,25 @@ a:hover { text-decoration-thickness: 2px; }
   border-bottom: 1px solid var(--line);
 }
 
-.brand { display: flex; align-items: center; gap: .8rem; }
+/* The name is a button, and has to keep looking like the masthead: no chrome,
+   just the mark and the words, with the hand and the focus ring a control owes
+   a reader. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font: inherit;
+  text-align: left;
+  padding: .2rem;
+  margin: -.2rem;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+.brand:hover .brand-name { color: var(--eu-blue); }
+.brand:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .brand-mark {
   width: 34px; height: 34px; border-radius: 50%;
   background: var(--eu-blue);
@@ -614,7 +632,12 @@ main {
   color: var(--ink-soft);
   cursor: pointer;
 }
-.layer-tabs button[aria-selected="true"] { background: var(--eu-blue); border-color: var(--eu-blue); color: #fff; }
+.layer-tabs button[aria-pressed="true"] { background: var(--eu-blue); border-color: var(--eu-blue); color: #fff; }
+.layer-tabs button:hover { border-color: var(--ink-faint); color: var(--ink); }
+.layer-tabs button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+/* The way back reads as a way back, not as another thing to switch on. */
+.layer-back { border-style: dashed; }
+.layer-back:hover { background: var(--surface-sunken); }
 
 .map-heading {
   position: absolute;

@@ -86,7 +86,7 @@
    'roll', 'roll-bar', 'roll-summary', 'roll-count', 'roll-body', 'roll-name',
    'roll-group', 'roll-country', 'roll-position', 'roll-reset', 'member-section', 'member-name', 'member-group',
    'member-country', 'member-summary', 'member-totals', 'member-votes', 'member-filter',
-   'member-count', 'back-from-member'].forEach(function (id) {
+   'member-count', 'back-from-member', 'map-back', 'brand-home'].forEach(function (id) {
     dom[id] = document.getElementById(id);
   });
 
@@ -1637,6 +1637,30 @@
     if (!(options && options.country)) dom['search-input'].focus();
   }
 
+  /* The way home, from anywhere: a vote, a member, a country, a search. It
+     undoes every step at once rather than one at a time, and lets the history
+     go back the same number, so Back afterwards leaves the site as it would
+     have from the start page rather than walking back in through the door the
+     reader just came out of. */
+  function goHome() {
+    const steps = backStack.length;
+    backStack.length = 0;
+    if (steps) {
+      try {
+        history.go(-steps);
+      } catch (error) {
+        // a browser that will not move: the page is still put back below
+      }
+    }
+    dom['search-input'].value = '';
+    state.query = '';
+    dom['search-clear'].hidden = true;
+    state.country = null;
+    clearDecision();
+    closeOutside();
+    window.scrollTo({ top: 0, behavior: REDUCED.matches ? 'auto' : 'smooth' });
+  }
+
   /* Nothing open: the map is the Union, the list is the way in. */
   function clearDecision(options) {
     if (map) map.stop();
@@ -1728,8 +1752,10 @@
     }
     state.layer = layer;
     if (chosen) state.layerChosen = true;
-    Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
-      tab.setAttribute('aria-selected', String(tab.getAttribute('data-layer') === layer));
+    // One button now, and it is a switch rather than one of a pair: pressed
+    // means the map is showing what the vote costs.
+    Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (button) {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-layer') === layer));
     });
     dom['map-heading'].textContent = LAYERS[layer].heading;
     dom['map-hint'].textContent = LAYERS[layer].hint;
@@ -1949,9 +1975,21 @@
         if (chip) setIsolate('bloc', chip.getAttribute('data-bloc'));
       });
 
-      Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (tab) {
-        tab.addEventListener('click', function () { setLayer(tab.getAttribute('data-layer'), true); });
+      Array.prototype.forEach.call(document.querySelectorAll('[data-layer]'), function (button) {
+        const layer = button.getAttribute('data-layer');
+        button.addEventListener('click', function () {
+          // A switch: pressing it again puts the vote back on the map.
+          setLayer(state.layer === layer ? 'vote' : layer, true);
+        });
       });
+
+      // One step back, wherever the reader is: the same door Back uses, so the
+      // two can never disagree. With nothing left to undo it goes home.
+      dom['map-back'].addEventListener('click', function () {
+        closeStep(function () { goHome(); });
+      });
+
+      dom['brand-home'].addEventListener('click', function () { goHome(); });
 
 
       dom.legend.addEventListener('click', function (event) {
