@@ -15,9 +15,9 @@
  * the whole of this project's raw material.
  *
  * The Parliament's public website is not used. It answers automated requests
- * with an empty 202 whatever the address, so nothing can be read from it; the
- * annex link kept on each record is for a reader with a browser, not for this
- * importer.
+ * with an empty 202 whatever the address, so nothing can be read from it, and
+ * a record no longer carries a link into it: what each record names as its
+ * source is the open data it was actually read from.
  *
  * A decision belongs to a vote item, and the item names the report and the
  * procedure. That is what turns "Article 3, § 1, point b – Am 16" into a record
@@ -43,10 +43,6 @@ const MEP_CACHE = 'data/reference/meps.json';
    plainly — the decision carries the number it is about — so this is a reading
    of the record rather than a guess at its wording. */
 const AMENDMENT = /\b(am|amendement|amendment)s?\s*\d+/i;
-
-/* A reader's link to the annex. It opens in a browser; it is not fetched. */
-const ANNEX_URL = (term, date) =>
-  `https://www.europarl.europa.eu/doceo/document/PV-${term}-${date}-RCV_EN.xml`;
 
 /* ------------------------------------------------------------------ helpers */
 
@@ -187,7 +183,7 @@ export async function sittingDates(from, until) {
 
 /* ------------------------------------------------------- a sitting's votes */
 
-export function buildRecord(decision, item, members, date, term) {
+export function buildRecord(decision, item, members, date) {
   const ballots = ballotsOf(decision);
   const totals = tallyOf(decision);
 
@@ -238,7 +234,6 @@ export function buildRecord(decision, item, members, date, term) {
     },
     ballots: ballots,
     sources: [
-      { label: 'Vote annex to the minutes', url: ANNEX_URL(term, date) },
       {
         label: 'European Parliament open data',
         url: `${PORTAL}/meetings/MTG-PL-${date}/decisions?format=application%2Fld%2Bjson`
@@ -316,7 +311,6 @@ function requestedDates(args) {
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
-  const term = Number(args.term || TERM);
   const floor = typeof args.from === 'string' ? args.from : TERM_START;
   const outDir = typeof args.out === 'string' ? args.out : 'data/decisions';
 
@@ -345,7 +339,7 @@ async function main() {
         skipped += 1;
         continue;
       }
-      const record = buildRecord(vote.decision, vote.item, members, date, term);
+      const record = buildRecord(vote.decision, vote.item, members, date);
       const counted = record._counted;
       delete record._counted;
 

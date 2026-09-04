@@ -1511,7 +1511,7 @@
 
 
     // Links that open, in one line under the vote: the Parliament's own file
-    // for this procedure, and the annex the record was read from.
+    // for this procedure, and the source the record was read from.
     const links = [];
     const reference = decision.procedure && decision.procedure.reference;
     if (reference) {

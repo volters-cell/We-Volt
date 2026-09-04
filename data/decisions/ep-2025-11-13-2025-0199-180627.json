@@ -2556,10 +2556,6 @@
   ],
   "sources": [
     {
-      "label": "Vote annex to the minutes",
-      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-11-13-RCV_EN.xml"
-    },
-    {
       "label": "European Parliament open data",
       "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2025-11-13/decisions?format=application%2Fld%2Bjson"
     }

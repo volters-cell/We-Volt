@@ -23,8 +23,8 @@ Four things follow from how the Parliament publishes:
 - **The website cannot be read by a machine.** `www.europarl.europa.eu` answers every
   automated request — the roll-call annex, the MEP directory, the session calendar —
   with `202` and an empty body, whatever the address or the user agent. It is a bot
-  wall, not a missing page. The annex link kept on each record is for a reader with a
-  browser; nothing in this project fetches it. `.github/workflows/probe-sources.yml`
+  wall, not a missing page. So a record names as its source the open data it was
+  actually read from, and nothing else. `.github/workflows/probe-sources.yml`
   is the dispatchable job that establishes this, and re-establishes it if the
   behaviour ever changes.
 - **A ballot is a list of ids, not of names.** The portal identifies a voter as

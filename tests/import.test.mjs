@@ -78,7 +78,7 @@ assert.equal(outcomeOf(finalVote), null, 'and did not state this one');
 
 /* --------------------------------------------------------------- a record */
 
-const record = buildRecord(finalVote, item, members, '2026-07-09', 10);
+const record = buildRecord(finalVote, item, members, '2026-07-09');
 
 assert.equal(record.body, 'parliament');
 assert.equal(record.status, 'verified');
@@ -103,7 +103,7 @@ assert.match(record.dataNote, /follows from the totals/);
 assert.equal(record._counted, 5, 'every voter was found in the directory');
 
 // Where the Parliament states the result, its word stands over the arithmetic.
-const stated = buildRecord(amendment, item, members, '2026-07-09', 10);
+const stated = buildRecord(amendment, item, members, '2026-07-09');
 assert.equal(stated.outcome.result, 'rejected');
 assert.doesNotMatch(stated.outcome.headline, /derived/);
 assert.doesNotMatch(stated.dataNote, /follows from the totals/);
@@ -117,13 +117,13 @@ assert.ok(JSON.stringify(record).length < 1400, 'a record stays small');
 assert.equal(record.summary, '');
 assert.deepEqual(record.whatItMeans, []);
 
-// Both sources are named: the annex a reader can open, and the data behind it.
-assert.equal(record.sources.length, 2);
+// The source is named: the open data the record was read from.
+assert.equal(record.sources.length, 1);
 assert.ok(record.sources.every((source) => /^https:\/\//.test(source.url)));
-assert.match(record.sources[1].url, /data\.europarl\.europa\.eu/);
+assert.match(record.sources[0].url, /data\.europarl\.europa\.eu/);
 
 // A member the directory does not know is counted, not silently dropped.
-assert.equal(buildRecord(finalVote, item, {}, '2026-07-09', 10)._counted, 0);
+assert.equal(buildRecord(finalVote, item, {}, '2026-07-09')._counted, 0);
 
 /* ------------------------------------------------------- the plenary calendar */
 
