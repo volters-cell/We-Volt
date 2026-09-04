@@ -58,9 +58,15 @@
       '<th scope="col">Abstain</th></tr></thead><tbody>' +
       groups.map(function (group) {
         const cast = (group.for || 0) + (group.against || 0) + (group.abstain || 0);
+        // The group's name is a door: it opens the list of members, filtered
+        // to that group, the same list the breakdown above opens.
         return '<tr><th scope="row" class="group-cell">' +
-          (global.Groups ? global.Groups.swatch(group.group) : '') +
-          '<span>' + escapeHTML(group.group) + '</span></th>' +
+          '<button type="button" class="group-open" data-group="' +
+            escapeHTML(group.group) + '" title="See the members of this group">' +
+            (global.Groups ? global.Groups.swatch(group.group) : '') +
+            '<span>' + escapeHTML(group.group) + '</span>' +
+            '<span class="group-go" aria-hidden="true">›</span>' +
+          '</button></th>' +
           '<td>' + cast + '</td>' +
           '<td class="cell-for">' + (group.for || 0) + '</td>' +
           '<td class="cell-against">' + (group.against || 0) + '</td>' +

@@ -1027,7 +1027,7 @@ table { width: 100%; border-collapse: collapse; font-size: .85rem; }
   .group-table th, .group-table td { padding: .3rem .22rem; }
   .group-table thead th { font-size: .6rem; letter-spacing: .02em; }
   .group-cell { gap: .35rem; }
-  .bd-tile-swatch { width: .85rem; min-width: .85rem; height: .85rem; }
+  .bd-tile-swatch { width: 1.8rem; min-width: 1.8rem; height: 1.3rem; }
 }
 caption { text-align: left; font-size: .78rem; color: var(--ink-faint); padding-bottom: .4rem; }
 th, td { text-align: left; padding: .35rem .4rem; border-bottom: 1px solid var(--line); }
@@ -1450,8 +1450,9 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   width: 100%;
   display: grid;
   /* Wide enough for a wordmark. Most of these marks are the group's name set
-     in type, and squeezed into a square they shrink to an illegible strip. */
-  grid-template-columns: 4.6rem 1fr;
+     in type, and squeezed into a square they shrink to an illegible strip.
+     The third column is the mark that says the row opens something. */
+  grid-template-columns: 4.6rem 1fr auto;
   align-items: start;
   gap: .75rem;
   font: inherit;
@@ -1464,6 +1465,8 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   color: inherit;
 }
 .breakdown-row:hover { background: var(--surface-sunken); }
+.bd-go { align-self: center; color: var(--ink-faint); font-size: 1.2rem; line-height: 1; padding-right: .2rem; }
+.breakdown-row:hover .bd-go { color: var(--ink); }
 
 /* A plain tile rather than a party logo: it identifies the row without
    borrowing anyone's mark. */
@@ -1503,11 +1506,33 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
    it is, so the mark carries no lettering of its own — it is the group's
    colour, and its logo once one is added. It has to come after .bd-tile: same
    specificity, so the later rule is the one that sets the size. */
-.group-cell { display: flex; align-items: center; gap: .5rem; }
+.group-cell { padding: 0; }
+/* The group's name is a door to its members. */
+.group-open {
+  font: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .5rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.group-open:hover { background: var(--surface-sunken); }
+.group-open:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.group-go { margin-left: auto; color: var(--ink-faint); font-size: 1.1rem; line-height: 1; }
+.group-open:hover .group-go { color: var(--ink); }
+
+/* Big enough for a mark to be a mark. At the size this was, a logo was a
+   smudge and a white one on its group's colour was nothing at all. */
 .bd-tile-swatch {
-  width: 1.1rem;
-  min-width: 1.1rem;
-  height: 1.1rem;
+  width: 2.1rem;
+  min-width: 2.1rem;
+  height: 1.5rem;
   border-radius: 4px;
   padding: 0;
   flex: 0 0 auto;
@@ -1516,7 +1541,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 
 /* The same mark inside a badge, where the line is smaller. */
 .badge-group { display: inline-flex; align-items: center; gap: .35rem; }
-.badge-group .bd-tile-swatch { width: .9rem; min-width: .9rem; height: .9rem; }
+.badge-group .bd-tile-swatch { width: 1.5rem; min-width: 1.5rem; height: 1rem; border-radius: 3px; }
 
 /* ------------------------------------------------------- a party's own line
 

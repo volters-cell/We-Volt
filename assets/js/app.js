@@ -970,8 +970,8 @@
       return '<li' + (kind === 'country' ? ' data-code="' + esc(row.key) + '"' : '') + '>' +
         '<button type="button" class="breakdown-row"' +
           (kind === 'country'
-            ? ' data-country="' + esc(row.key) + '"'
-            : ' data-group="' + esc(row.key) + '"') + '>' +
+            ? ' data-country="' + esc(row.key) + '" title="Open this country\u2019s record"'
+            : ' data-group="' + esc(row.key) + '" title="See the members of this group"') + '>' +
           tile(row, kind) +
           '<span class="bd-main">' +
             '<span class="bd-label">' + esc(row.label) + '</span>' +
@@ -987,6 +987,7 @@
             '</span>' +
             '<span class="bd-bar">' + parts + '</span>' +
           '</span>' +
+          '<span class="bd-go" aria-hidden="true">\u203a</span>' +
         '</button></li>';
     }).join('') + '</ul>';
   }
@@ -1971,6 +1972,12 @@
           showMember(person.getAttribute('data-member'));
           return;
         }
+        const group = event.target.closest('[data-group]');
+        if (group) {
+          setRoll({ group: group.getAttribute('data-group'), tab: 'members' });
+          dom.roll.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
         const chip = event.target.closest('[data-bloc]');
         if (chip) setIsolate('bloc', chip.getAttribute('data-bloc'));
       });
@@ -2059,7 +2066,10 @@
         const country = event.target.closest('[data-country]');
         if (country) selectCountry(country.getAttribute('data-country'));
         const group = event.target.closest('[data-group]');
-        if (group) setRoll({ group: group.getAttribute('data-group'), tab: 'members' });
+        if (group) {
+          setRoll({ group: group.getAttribute('data-group'), tab: 'members' });
+          dom.roll.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
 
       dom['roll-body'].addEventListener('mouseover', function (event) {

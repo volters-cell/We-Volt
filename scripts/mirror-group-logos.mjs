@@ -70,7 +70,18 @@ const SITES = {
    are all article photographs. Its mark is served as a stylesheet background
    from its own theme, so that file is named here rather than guessed at. An
    entry only ever names a file on the group's own site. */
-const MARK = {};
+/* A mark this cannot find by looking, named because the site's own code names
+   it. The EPP's header holds an empty <div name="logo-eppfull">, and the
+   sprite map inside its own script says where that name lives:
+   {"logo-eppmin":{"path":"/themes/.../icons/logo-eppmin.svg", ...}}. So these
+   are the group's own files at the group's own addresses, read out of the
+   group's own code — not guesses. Tried in order; the first real picture wins. */
+const MARK = {
+  'EPP': [
+    'https://www.eppgroup.eu/themes/customs/eppgroup/images/eppgroup2023/icons/logo-eppfull.svg',
+    'https://www.eppgroup.eu/themes/customs/eppgroup/images/eppgroup2023/icons/logo-eppmin.svg'
+  ]
+};
 
 /* Groups whose mark this cannot reach, and must therefore not guess at.
  *
@@ -87,7 +98,7 @@ const MARK = {};
  * which is an article photograph. So it is stopped here: the EPP keeps its
  * lettered tile, which says the right thing, rather than wearing a stock
  * picture. */
-const CANNOT = { 'EPP': 'its mark is drawn from a script, not published as a file' };
+const CANNOT = {};
 
 await mkdir(path.join(ROOT, OUT), { recursive: true });
 
@@ -441,17 +452,23 @@ for (const group of wanted) {
 
   // A named mark is taken as given; everything else is found by looking.
   if (MARK[group]) {
-    const answer = await bytes(MARK[group]);
-    const type = kind(answer.buffer);
-    if (type) {
+    let took = false;
+    for (const address of [].concat(MARK[group])) {
+      const answer = await bytes(address);
+      const type = kind(answer.buffer);
+      if (!type) {
+        console.warn(`  ${group}: ${address} came back as nothing usable (${answer.status || 'no answer'})`);
+        continue;
+      }
       const file = `${slug(group)}.${type}`;
       if (!has('--probe')) await writeFile(path.join(ROOT, OUT, file), answer.buffer);
-      console.log(`  ${group} -> ${file} (${answer.buffer.length}b, named) ${MARK[group]}`);
-      report.push({ group, file, from: MARK[group], page: page.url() });
+      console.log(`  ${group} -> ${file} (${answer.buffer.length}b, named) ${address}`);
+      report.push({ group, file, from: address, page: page.url() });
       saved += 1;
-      continue;
+      took = true;
+      break;
     }
-    console.warn(`  ${group}: the named mark ${MARK[group]} came back as nothing usable`);
+    if (took) continue;
   }
 
   const ranked = (await candidates())
