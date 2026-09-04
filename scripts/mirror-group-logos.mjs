@@ -211,12 +211,19 @@ async function candidates() {
                    alt: node.getAttribute('aria-label') || '', ...place(node) });
     });
 
-    /* A mark set in CSS. Two ways: painted as a background, or cut out as a
-       mask so the site can recolour it. The EPP's own header does the second,
-       and a scan that only looks at backgrounds cannot see its logo at all. */
+    /* A mark set in CSS. Painted as a background, cut out as a mask so the
+       site can recolour it, or drawn on the element's own ::before — all three
+       are marks a scan that only reads background-image cannot see. */
     document.querySelectorAll('a, div, span, h1, i').forEach((node) => {
-      const style = getComputedStyle(node);
-      [style.backgroundImage, style.maskImage, style.webkitMaskImage].forEach((picture) => {
+      // The element itself and what it draws before and after it: a mark is as
+      // often set on a pseudo-element as on the box.
+      const styles = [getComputedStyle(node), getComputedStyle(node, '::before'),
+                      getComputedStyle(node, '::after')];
+      const pictures = [];
+      styles.forEach((style) => {
+        pictures.push(style.backgroundImage, style.maskImage, style.webkitMaskImage);
+      });
+      pictures.forEach((picture) => {
         const match = picture && picture !== 'none' && picture.match(/url\(["']?(.+?)["']?\)/);
         if (!match || match[1].startsWith('data:')) return;
         found.push({ kind: 'css', url: new URL(match[1], location.href).href, alt: '',

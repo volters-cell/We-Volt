@@ -1,49 +1,55 @@
 # Political group logos
 
-Drop a file here named after the group and the site uses it in place of the
-coloured mark — everywhere that group appears: the breakdown of a vote, and the
-group table in a country's panel. Nine files cover the whole Parliament:
+Each political group's own mark, as the group publishes it, used to identify
+that group wherever it appears: the breakdown of a vote, the group table in a
+country's panel, and a member's own record.
 
-```
-assets/groups/epp.svg
-assets/groups/s-d.svg
-assets/groups/pfe.svg
-assets/groups/ecr.svg
-assets/groups/renew.svg
-assets/groups/greens-efa.svg
-assets/groups/the-left.svg
-assets/groups/esn.svg
-assets/groups/ni.svg
-```
+## Where they came from
 
-The name is the group's abbreviation, lowercased, with anything that is not a
-letter or a digit turned into a hyphen — the same slug the code builds, so
-`Greens/EFA` becomes `greens-efa`. SVG is preferred; PNG works. Square artwork
-sits best; anything else is fitted inside the tile without being stretched.
+Not from the Parliament. Ten of its pages were surveyed for them — every member
+page, the members' directory and its advanced search, the page on the political
+groups, the plenary's page on them, the topic page, and the election results
+site — and between them they carry members' portraits, the Parliament's own
+emblem, and interface icons. It does not publish the groups' marks in any
+format.
 
-After adding one, run `node scripts/build-index.mjs` — it rewrites `logos.json`,
-the list of files that exist. The page reads that list rather than guessing, so
-a group with no logo costs no failed request.
+So each mark comes from that group's own site, out of its own header, and
+`sources.json` records the exact address each file was taken from and the page
+it was found on. `scripts/mirror-group-logos.mjs` does the fetching; run it
+through the "The groups' marks" workflow, `probe` first — it prints what it
+found on each site and the score it gave each candidate, and writes nothing.
+That probe is not a formality: it has caught a company that merely shared a
+group's initials, a faded watermark being taken for a logo, and a hero
+photograph winning for want of anything better.
 
-Nothing breaks if a file is absent: that group keeps its coloured mark, and the
-two styles sit together happily while you collect the set. The names, the
-colours and the swap all live in `assets/js/groups.js`, so a group looks the
-same wherever a reader meets it.
+The non-attached members are not a group and have no mark. They keep a
+lettered tile, as does any group whose mark has not been found.
 
-## Before you add them
+## How they are drawn
+
+A mark sits on a light tile in both themes, because it is drawn for the paper
+its group prints it on and not for whichever theme a reader is using. A mark
+published only in white keeps its group's own colour behind it instead — that
+is the field that version is made for. Which marks are white was measured from
+the files, not guessed; `WHITE_INK` in `assets/js/groups.js` holds the answer,
+and it should be re-measured after a re-fetch.
+
+Nothing is recoloured, cropped or redrawn. If a file will not work at the size
+it is shown, the lettered tile is the better answer.
+
+`assets/js/groups.js` holds the names, the fallback colours and the swap, so a
+group looks the same wherever a reader meets it. `logos.json` lists which files
+exist — `node scripts/build-index.mjs` rewrites it — so a group with no mark
+costs no failed request.
+
+## On using them
 
 These are the groups' own trademarks. Using a mark to identify the thing it
-belongs to — which is exactly what a row labelled "European People's Party"
-does — is normally defensible, but it is not a licence, and a publicly funded
-project should be able to say where each file came from:
+belongs to — which is exactly what a row labelled "Renew Europe" does — is the
+ordinary, nominative use of a mark, and every file here records where it came
+from so the question always has an answer. The about page says the same in
+public.
 
-- Take the artwork from the group's own site or press kit, not from another
-  site that has already reprocessed it.
-- Check the terms on that page. Some groups publish brand guidelines that say
-  what is allowed.
-- Do not recolour, crop or redraw a mark. If artwork will not work at 48 pixels
-  square, the coloured tile is the better answer.
-
-The tile colours in `assets/js/app.js` are the conventional ones used for these
-groups in seat charts. They are approximations, not official values, and they
-are in one place so they can be corrected.
+The tile colours in `assets/js/groups.js` are the conventional ones used for
+these groups in seat charts. They are approximations, not official values, and
+they are in one place so they can be corrected.
