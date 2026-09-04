@@ -62,7 +62,7 @@ const SITES = {
   'ECR': 'https://ecrgroup.eu/',
   'PfE': 'https://patriotsforeurope.eu/',
   'The Left': 'https://left.eu/',
-  'ESN': 'https://esngroup.eu/'
+  'ESN': 'https://www.europeofsovereignnations.eu/'
 };
 
 await mkdir(path.join(ROOT, OUT), { recursive: true });
@@ -214,7 +214,9 @@ async function candidates() {
 function score(item) {
   const text = ((item.words || '') + ' ' + item.url).toLowerCase();
   // Not a mark: the things a site's header also carries.
-  if (/sprite|icon-|social|facebook|twitter|instagram|linkedin|youtube|search|menu|burger|arrow|flag/.test(text)) return 0;
+  if (/sprite|icon-|social|facebook|twitter|instagram|linkedin|youtube|search|menu|burger|arrow|flag|favicon/.test(text)) return 0;
+  // A faded copy of a mark is not the mark.
+  if (/opacity|watermark|placeholder|shadow/.test(text)) return 0;
   if (item.width && (item.width < 24 || item.height < 12)) return 0;
   if (item.width && item.width / Math.max(item.height, 1) > 12) return 0;
 
@@ -222,14 +224,31 @@ function score(item) {
   if (/logo|brand|mark/.test(text)) points += 4;
   if (item.inHeader) points += 3;
   if (item.goesHome) points += 4;
+  // Drawn where a reader can see it. A thing with no size is a definition, a
+  // hidden copy, or something a script has not shown yet — never the mark.
+  if (item.width >= 40 && item.height >= 12) points += 5;
+  else points -= 3;
   if (item.top >= 0 && item.top < 200) points += 2;
   if (item.left >= 0 && item.left < 400) points += 1;
-  if (item.kind === 'inline') points += 1;              // an inline mark is the real drawing
   if (/\.svg($|\?)/.test(item.url.toLowerCase())) points += 2;
   return points;
 }
 
 async function bytes(url) {
+  // Straight out of the browser's network stack, which no cross-origin rule
+  // stands in front of. Most marks are served from a CDN, so this is the path
+  // that usually works; the in-page fetch below is the fallback for anything
+  // that needs the page's own session.
+  try {
+    const direct = await context.request.get(url, { timeout: 30000 });
+    if (direct.ok()) {
+      const buffer = await direct.body();
+      if (buffer && buffer.length) return { status: direct.status(), buffer };
+    }
+  } catch (error) {
+    // fall through to asking the page
+  }
+
   const answer = await settled(() => page.evaluate(async (address) => {
     try {
       const response = await fetch(address, { credentials: 'include' });
