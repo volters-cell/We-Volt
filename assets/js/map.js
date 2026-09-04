@@ -147,6 +147,14 @@
     // Neighbours stay visually secondary but are no longer inert: a reader
     // looking at Serbia or Ukraine should be able to click it.
     const contextLayer = el('g', { class: 'context' });
+    /* One stroked copy of every member state, drawn underneath the filled
+       ones. A stroke is centred on its path, so the inner half of each is
+       covered by that country's own fill and the shared half of every internal
+       border is covered by the neighbour's — what is left uncovered is the
+       coastline and the land frontier of the Union itself. That is the whole
+       trick behind the outline: no combined shape has to be computed, and it
+       stays right if a member joins or leaves. */
+    const unionLayer = el('g', { class: 'union', 'aria-hidden': 'true' });
     const shapeLayer = el('g', { class: 'shapes' });
     const labelLayer = el('g', { class: 'labels', 'aria-hidden': 'true' });
 
@@ -192,6 +200,7 @@
         'aria-label': shape.name
       });
 
+      unionLayer.appendChild(el('path', { d: shape.path, class: 'union-edge' }));
       group.appendChild(el('path', { d: shape.path, class: 'country-shape' }));
 
       if (small) {
@@ -247,6 +256,7 @@
     placeLabels(placements, labelLayer);
 
     svg.appendChild(contextLayer);
+    svg.appendChild(unionLayer);
     svg.appendChild(shapeLayer);
     svg.appendChild(labelLayer);
 
@@ -421,7 +431,9 @@
       return;
     }
 
-    this.svg.setAttribute('class', 'eu-map is-revealing ' + resultClass);
+    this.clearReveal();
+    this.resultClass = resultClass;
+    this.svg.classList.add('is-revealing', resultClass);
     Object.keys(this.shapes).forEach(function (code) {
       if (!self.shapes[code].shape.member) return;
       self.revealed[code] = false;
@@ -445,13 +457,63 @@
     });
 
     this.timers.push(window.setTimeout(function () {
-      self.svg.setAttribute('class', 'eu-map');
+      self.clearReveal();
       if (settings.onDone) settings.onDone();
     }, hold + order.length * step + 260));
   };
 
+  /* The Union as one country. For a few seconds the internal borders go, every
+     member takes the same colour, and the outline of the whole lights up —
+     then the frontiers come back and the map is itself again. It is what the
+     name of the site means, said once, on the way home. */
+  EUMap.prototype.unite = function (options) {
+    const self = this;
+    const settings = options || {};
+    if (!this.svg) return;
+
+    window.clearTimeout(this.uniting);
+    window.clearTimeout(this.unitingDone);
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Someone who has asked for less motion still gets the meaning, held still
+    // and let go without the sweep.
+    const hold = settings.hold === undefined ? (reduced ? 900 : 2400) : settings.hold;
+
+    this.svg.classList.add('is-united');
+    // The outline draws itself on in a second pass, so the Union is seen to be
+    // traced rather than simply switched on.
+    this.uniting = window.setTimeout(function () {
+      if (self.svg) self.svg.classList.add('is-united-lit');
+    }, reduced ? 0 : 90);
+
+    this.unitingDone = window.setTimeout(function () {
+      if (!self.svg) return;
+      self.svg.classList.remove('is-united-lit');
+      // The borders come back a moment before the colours, so the return reads
+      // as the Union resolving into its members rather than as a light going
+      // out.
+      self.svg.classList.add('is-parting');
+      self.unitingDone = window.setTimeout(function () {
+        if (!self.svg) return;
+        self.svg.classList.remove('is-united');
+        self.svg.classList.remove('is-parting');
+        if (settings.onDone) settings.onDone();
+      }, reduced ? 0 : 420);
+    }, hold);
+  };
+
+  /* Take the reveal off without rewriting the whole class attribute: anything
+     else the map is doing at the time — the Union drawn as one country, say —
+     has its own classes there and should survive. */
+  EUMap.prototype.clearReveal = function () {
+    if (!this.svg) return;
+    this.svg.classList.remove('is-revealing');
+    if (this.resultClass) this.svg.classList.remove(this.resultClass);
+    this.resultClass = null;
+  };
+
   EUMap.prototype.revealAll = function () {
-    this.svg.setAttribute('class', 'eu-map');
+    this.clearReveal();
     Object.keys(this.shapes).forEach(function (code) {
       if (!this.shapes[code].shape.member) return;
       this.revealed[code] = true;
@@ -462,6 +524,13 @@
   EUMap.prototype.stop = function () {
     (this.timers || []).forEach(window.clearTimeout);
     this.timers = [];
+    window.clearTimeout(this.uniting);
+    window.clearTimeout(this.unitingDone);
+    if (this.svg) {
+      this.svg.classList.remove('is-united');
+      this.svg.classList.remove('is-united-lit');
+      this.svg.classList.remove('is-parting');
+    }
   };
 
   global.EUMap = EUMap;

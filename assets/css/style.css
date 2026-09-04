@@ -693,6 +693,62 @@ main {
 .country:focus { outline: none; }
 .country:focus-visible .country-shape { stroke: var(--focus); stroke-width: 2.4; }
 
+/* ------------------------------------------------- the Union as one country
+
+   On the way home the map says what the site is called. The internal
+   frontiers fade out, every member takes the same colour, and the outline of
+   the whole is traced in the Union's own gold; then the borders come back and
+   the map is itself again.
+
+   The outline is not a computed shape. It is one stroked copy of every member
+   drawn underneath the filled ones: a stroke is centred on its path, so each
+   country's own fill covers the inner half and a neighbour's fill covers the
+   shared half of every border between them. What no fill covers is the
+   Union's own coastline and land frontier. */
+.union-edge {
+  fill: none;
+  stroke: var(--eu-gold);
+  stroke-width: 0;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0;
+}
+.eu-map.is-united .union-edge {
+  stroke-width: 9;
+  opacity: .95;
+  transition: stroke-width .45s cubic-bezier(.2, .8, .3, 1), opacity .3s ease;
+}
+.eu-map.is-united-lit .union-edge { filter: drop-shadow(0 0 6px rgba(246, 199, 0, .75)); }
+.eu-map.is-parting .union-edge { stroke-width: 0; opacity: 0; transition: stroke-width .4s ease, opacity .4s ease; }
+
+/* One body: the frontiers between members go, and with them the difference
+   between one country and the next. */
+.eu-map.is-united .country-shape {
+  fill: var(--eu-blue);
+  stroke: var(--eu-blue);
+  stroke-width: 1.1;
+  transition: fill .5s ease, stroke .5s ease, stroke-width .5s ease;
+}
+.eu-map.is-united .country-dot { fill: var(--eu-blue); stroke: var(--eu-blue); }
+/* The names would be a list of the parts, which is the opposite of the point. */
+.eu-map.is-united .labels { opacity: 0; transition: opacity .35s ease; }
+/* Coming back, the borders return a moment before the colours do, so the map
+   reads as the Union resolving into its members. */
+.eu-map.is-parting .country-shape { stroke: var(--surface); stroke-width: .8; transition: stroke .2s ease, stroke-width .2s ease, fill .45s ease .1s; }
+.eu-map.is-parting .labels { opacity: 1; transition: opacity .4s ease .15s; }
+/* Nothing to hover while the Union is one thing. */
+.eu-map.is-united .country { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .eu-map.is-united .union-edge,
+  .eu-map.is-united .country-shape,
+  .eu-map.is-united .labels,
+  .eu-map.is-parting .union-edge,
+  .eu-map.is-parting .country-shape,
+  .eu-map.is-parting .labels { transition: none; }
+  .eu-map.is-united-lit .union-edge { filter: none; }
+}
+
 /* White with a dark halo: the same label has to read on a dark green fill and
    on the pale grey of a country with nothing recorded. */
 .country-label { font-size: 12px; font-weight: 700; fill: #fff; text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: rgba(0,0,0,.6); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }

@@ -1638,6 +1638,20 @@
     if (!(options && options.country)) dom['search-input'].focus();
   }
 
+  /* True while the way home is unwinding the history, so that the handlers
+     watching the address do not read the entries going past as a reader asking
+     for them. */
+  let goingHome = false;
+
+  function stripHash() {
+    if (!location.hash) return;
+    try {
+      history.replaceState(null, '', location.pathname + location.search);
+    } catch (error) {
+      // a sandbox that refuses history writes: nothing else to do
+    }
+  }
+
   /* The way home, from anywhere: a vote, a member, a country, a search. It
      undoes every step at once rather than one at a time, and lets the history
      go back the same number, so Back afterwards leaves the site as it would
@@ -1646,6 +1660,12 @@
   function goHome() {
     const steps = backStack.length;
     backStack.length = 0;
+    // Going back through those entries can land on one whose address still
+    // names a vote, and the handler that watches the address would then open it
+    // again — which is the opposite of going home. So the way home says so
+    // while it is happening, and the two handlers stand aside.
+    goingHome = true;
+    stripHash();
     if (steps) {
       try {
         history.go(-steps);
@@ -1653,6 +1673,11 @@
         // a browser that will not move: the page is still put back below
       }
     }
+    window.setTimeout(function () {
+      goingHome = false;
+      stripHash();   // whatever the history left in the address, home has none
+    }, 450);
+
     dom['search-input'].value = '';
     state.query = '';
     dom['search-clear'].hidden = true;
@@ -1660,6 +1685,10 @@
     clearDecision();
     closeOutside();
     window.scrollTo({ top: 0, behavior: REDUCED.matches ? 'auto' : 'smooth' });
+    // And the map says what the name means: for a few seconds the internal
+    // frontiers go and the Union is one country, outlined in its own gold.
+    // After clearDecision, which stops whatever the map was doing.
+    if (map) map.unite();
   }
 
   /* Nothing open: the map is the Union, the list is the way in. */
@@ -2083,10 +2112,12 @@
       });
 
       window.addEventListener('popstate', function () {
+        if (goingHome) return;
         popStep();
       });
 
       window.addEventListener('hashchange', function () {
+        if (goingHome) return;
         const next = readHash();
         const current = state.decision ? state.decision.id : null;
         if (next.decisionId !== current) {
