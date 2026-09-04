@@ -71,7 +71,9 @@ const SITES = {
    from its own theme, so that file is named here rather than guessed at. An
    entry only ever names a file on the group's own site. */
 const MARK = {
-  'EPP': 'https://www.eppgroup.eu/themes/customs/eppgroup/images/eppgroup2023/icons/EPP-logo-opacity.svg'
+  // (none yet: the address the EPP's theme serves under a logo-ish name turned
+  // out to be a faded watermark — an outline heart with no lettering, white on
+  // white — so it was fetched, looked at, and rejected rather than shipped.)
 };
 
 await mkdir(path.join(ROOT, OUT), { recursive: true });
@@ -320,6 +322,17 @@ for (const group of wanted) {
     continue;
   }
 
+  if (has('--probe') && only.length) {
+    // Asked about one group: show what its header is actually made of, which is
+    // the only way to see a mark the scoring cannot — printed before anything
+    // else decides, so a named mark does not hide it.
+    const head = await settled(() => page.evaluate(() => {
+      const bar = document.querySelector('header, [role="banner"], .header, #header, .site-header');
+      return bar ? bar.innerHTML.replace(/\s+/g, ' ').slice(0, 2600) : '(no header element)';
+    }));
+    console.log(`\n${group} header: ${head}\n`);
+  }
+
   // A named mark is taken as given; everything else is found by looking.
   if (MARK[group]) {
     const answer = await bytes(MARK[group]);
@@ -350,15 +363,7 @@ for (const group of wanted) {
         `${item.url.slice(0, 90)}${item.alt ? '  [' + item.alt.slice(0, 40) + ']' : ''}`);
     });
     console.log(`  ${ranked.length} of ${(await candidates()).length} pictures scored above zero`);
-    if (only.length) {
-      // Asked about one group: show what its header is actually made of, which
-      // is the only way to see a mark the scoring cannot.
-      const head = await settled(() => page.evaluate(() => {
-        const bar = document.querySelector('header, [role="banner"], .header, #header, .site-header');
-        return bar ? bar.innerHTML.replace(/\s+/g, ' ').slice(0, 2600) : '(no header element)';
-      }));
-      console.log(`  header: ${head}`);
-    }
+
   }
 
   let taken = false;

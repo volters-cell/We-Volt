@@ -98,6 +98,14 @@
   /* Which logo files exist, asked for once. scripts/build-index.mjs writes the
      list; guessing instead would mean a failed request for every group nobody
      has added a logo for yet. */
+  /* Artwork drawn in white. A group that sets its mark in white publishes only
+     that version — it lives on the group's own colour on their site — so here
+     it keeps the group's colour behind it rather than vanishing into the page.
+     Measured from the files themselves, not guessed: every mark was rendered
+     and its ink read, and these are the ones with no ink darker than white.
+     Re-measure after a re-fetch; scripts/mirror-group-logos.mjs says so. */
+  const WHITE_INK = { 'greens-efa': true };
+
   let available = null;
 
   function logoList() {
@@ -128,8 +136,14 @@
           if (node.querySelector('img')) return;
           node.textContent = '';
           node.classList.add('has-logo');
-          node.style.background = '';
-          node.style.borderColor = '';
+          if (WHITE_INK[key]) {
+            // Keep the group's colour under white artwork; the tile already
+            // carries it.
+            node.classList.add('has-logo-on-colour');
+          } else {
+            node.style.background = '';
+            node.style.borderColor = '';
+          }
           image.alt = '';
           node.appendChild(image);
         };

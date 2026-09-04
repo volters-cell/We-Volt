@@ -1461,8 +1461,17 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 }
 .bd-tile-country { font-size: .82rem; letter-spacing: .04em; }
 .bd-tile-group { border-width: 0; font-weight: 700; }
-/* A logo replaces the colour rather than sitting on it. */
-.bd-tile.has-logo { background: var(--surface); border: 1px solid var(--line); padding: .2rem; }
+/* A logo replaces the colour rather than sitting on it — on a light tile in
+   both themes, because a mark is drawn for the paper its group prints it on,
+   not for whichever theme a reader happens to be using. */
+.bd-tile.has-logo {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: .2rem;
+}
+/* Unless the mark itself is white, in which case the group's own colour stays
+   behind it — which is where that version of the mark is meant to sit. */
+.bd-tile.has-logo.has-logo-on-colour { padding: .15rem; }
 .bd-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 /* A group's mark next to its name in a table. The row already says which group
