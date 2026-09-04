@@ -95,10 +95,10 @@ jobs:
         run: |
           git config user.name "eu-tracker"
           git config user.email "actions@users.noreply.github.com"
-          if [ -z "$(git status --porcelain assets/groups)" ]; then
+          if [ -z "$(git status --porcelain assets/groups assets/brand)" ]; then
             echo "Nothing new."
             exit 0
           fi
-          git add assets/groups
-          git commit -m "Take the political groups' marks from the Parliament"
+          git add assets/groups assets/brand
+          git commit -m "Take the marks from the sites that publish them"
           git push
