@@ -61,8 +61,8 @@ const SITES = {
   'Greens/EFA': 'https://www.greens-efa.eu/en/',
   'ECR': 'https://ecrgroup.eu/',
   'PfE': 'https://patriotsforeurope.eu/',
-  'The Left': 'https://left.eu/',
-  'ESN': 'https://www.europeofsovereignnations.eu/'
+  'The Left': 'https://left.eu/the-group/',
+  'ESN': 'https://esn-group.eu/'
 };
 
 await mkdir(path.join(ROOT, OUT), { recursive: true });
@@ -214,7 +214,10 @@ async function candidates() {
 function score(item) {
   const text = ((item.words || '') + ' ' + item.url).toLowerCase();
   // Not a mark: the things a site's header also carries.
-  if (/sprite|icon-|social|facebook|twitter|instagram|linkedin|youtube|search|menu|burger|arrow|flag|favicon/.test(text)) return 0;
+  // Whole words: the group whose name begins "Socialists" must not be thrown
+  // out for looking like a share button.
+  if (/(^|[^a-z])(sprite|social(s|-|_|$)|share|facebook|twitter|instagram|linkedin|youtube|search|menu|burger|arrow|flag|favicon)/.test(text) ||
+      /icon[-_/]/.test(text)) return 0;
   // A faded copy of a mark is not the mark.
   if (/opacity|watermark|placeholder|shadow/.test(text)) return 0;
   if (item.width && (item.width < 24 || item.height < 12)) return 0;
