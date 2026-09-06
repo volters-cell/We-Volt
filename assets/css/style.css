@@ -2155,6 +2155,29 @@ button.permalink {
 .join-arrow { transition: transform .18s ease; }
 .join-button:hover .join-arrow { transform: translateX(2px); }
 
+/* Where the party can be found, under the invitation and quieter than it: a
+   reader not ready to join can still follow. Named rather than drawn as icons,
+   because eight unlabelled glyphs are a puzzle and eight words are not. */
+.join-social {
+  max-width: 1560px;
+  margin: 1.15rem auto 0;
+  padding-top: .95rem;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.35rem;
+}
+.join-social a {
+  font-size: .84rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .78);
+  text-decoration: none;
+  padding: .15rem 0;
+  border-bottom: 1px solid transparent;
+}
+.join-social a:hover { color: #fff; border-bottom-color: rgba(255, 255, 255, .6); }
+.join-social a:focus-visible { outline: 2px solid #f6c700; outline-offset: 3px; }
+
 @media (prefers-reduced-motion: reduce) {
   .join-button, .join-arrow { transition: none; }
   .join-button:hover .join-arrow { transform: none; }
