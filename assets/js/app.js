@@ -1447,6 +1447,29 @@
     selectCountry(null, { replaceStep: true });
   }
 
+  /* Put the country's record where the reader can see it.
+
+     On a narrow screen the panel is far below the map and always has to be
+     brought up. On a wide one it sits beside the map, and jumping the page
+     when the answer is already on screen would be rude — but the map is tall,
+     and a reader who has scrolled down to reach Portugal has left the top of
+     that column behind. Then clicking a country changes something they cannot
+     see. So the test is not the width of the screen but the simple question of
+     whether the answer is actually in front of them. */
+  function bringPanelIntoView() {
+    const panel = document.getElementById('country-panel');
+    if (!panel) return;
+    const box = panel.getBoundingClientRect();
+    const height = window.innerHeight || document.documentElement.clientHeight;
+    // Enough of it to read: its top on screen, and a few lines of it showing.
+    const seen = box.top >= 0 && box.top <= height - Math.min(160, box.height);
+    if (seen) return;
+    panel.scrollIntoView({
+      behavior: REDUCED.matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
+  }
+
   function selectCountry(code, options) {
     const opening = Boolean(code && statesByCode[code]) && code !== state.country;
     state.country = code && statesByCode[code] ? code : null;
@@ -1482,12 +1505,7 @@
           shareUrl(state.country));
       }
       if (state.isolate) applyIsolation();
-      // On a narrow screen the panel is far below the map, so bring it into
-      // view; on a wide one it is already beside the map and must not jump.
-      const narrow = window.matchMedia('(max-width: 62rem)').matches;
-      if (narrow && (!options || options.scroll !== false)) {
-        dom['panel-body'].scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (!options || options.scroll !== false) bringPanelIntoView();
     }
 
     Array.prototype.forEach.call(dom['roll-body'].querySelectorAll('[data-code]'), function (row) {
