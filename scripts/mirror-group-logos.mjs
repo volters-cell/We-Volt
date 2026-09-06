@@ -193,6 +193,22 @@ if (has('--dig')) {
     return node.outerHTML.replace(/\s+/g, ' ').slice(0, 1200);
   }));
 
+  // Where the site says it can be found. Read rather than guessed: a handle
+  // typed from memory is how a link ends up pointing at nobody.
+  const social = await page.evaluate(() => {
+    const hosts = /(instagram|twitter|x\.com|facebook|linkedin|tiktok|youtube|mastodon|bsky|threads|discord|telegram|whatsapp)\./i;
+    const found = [];
+    document.querySelectorAll('a[href]').forEach((link) => {
+      if (!hosts.test(link.href)) return;
+      const label = (link.getAttribute('aria-label') || link.title ||
+        link.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40);
+      found.push(link.href + '   [' + label + ']');
+    });
+    return [...new Set(found)];
+  });
+  console.log(`\nwhere it says it can be found (${social.length}):`);
+  social.forEach((one) => console.log('   ' + one));
+
   const sources = await page.evaluate(() =>
     [...document.querySelectorAll('script[src], link[rel="stylesheet"]')]
       .map((node) => node.src || node.href).filter(Boolean));
