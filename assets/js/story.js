@@ -94,6 +94,50 @@
 
   /* The dashed circle of stars, small enough that a ring of dashes reads as
      the flag without pretending to be it. */
+  /* Volt's own mark, for the foot of the card.
+
+     The file has no colour of its own — its site fills it from the surrounding
+     text, and the page does the same with a mask — so the copy rendered here
+     is given white, which is the colour it takes on a dark ground. The file on
+     disk is untouched; this only says what to paint it with, and asks for it
+     at the size it will be drawn so it rasterises sharp rather than being
+     scaled up from 230 pixels.
+
+     If it cannot be had — the single-file build, an offline copy — the name is
+     set in type instead, and the line beside it is the point either way. */
+  let voltMark = null;
+
+  function volt(height) {
+    if (voltMark) return voltMark;
+    voltMark = fetch('assets/brand/volt.svg')
+      .then(function (response) {
+        if (!response.ok) throw new Error('no mark');
+        return response.text();
+      })
+      .then(function (text) {
+        const opening = text.match(/<svg\b[^>]*>/i);
+        if (!opening) throw new Error('not a drawing');
+        const wide = Math.round(height * (230 / 96));
+        /* The site's own size and class come off the opening tag before ours
+           go on. Leaving them would give the drawing two widths and two
+           heights, which is not a drawing any more — the browser refuses it
+           and the mark silently becomes the word. */
+        const root = opening[0]
+          .replace(/\s(?:class|width|height)="[^"]*"/gi, '')
+          .replace(/<svg\b/i, '<svg width="' + wide * 3 + '" height="' + height * 3 + '"');
+        const painted = (root + text.slice(opening[0].length))
+          .replace(/fill="inherit"/g, 'fill="#ffffff"');
+        return new Promise(function (resolve, reject) {
+          const image = new Image();
+          image.onload = function () { resolve(image); };
+          image.onerror = function () { reject(new Error('would not draw')); };
+          image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(painted);
+        });
+      })
+      .catch(function () { return null; });
+    return voltMark;
+  }
+
   function brandMark(ctx, x, y, r) {
     ctx.save();
     ctx.beginPath();
@@ -346,19 +390,43 @@
 
     const pillX = drawn ? pad + CODE + 28 : pad;
     const pillW = WIDTH - pad - pillX;
-    const pillH = 104;
-    const pillY = y + (CODE - pillH) / 2;
+    const pillH = 96;
 
     ctx.fillStyle = INK.gold;
-    roundRect(ctx, pillX, pillY, pillW, pillH, pillH / 2);
+    roundRect(ctx, pillX, y + 2, pillW, pillH, pillH / 2);
     ctx.fill();
 
     ctx.fillStyle = '#12203f';
     ctx.font = font(700, 38);
     ctx.textAlign = 'center';
-    ctx.fillText('Open the full record', pillX + pillW / 2, pillY + 66);
+    ctx.fillText('Open the full record', pillX + pillW / 2, y + 64);
     ctx.textAlign = 'left';
 
+    /* Who is asking, and why: under the way in, beside the code, in the room
+       that row already has. Putting it below would have cost the map eighty
+       pixels, and the map is the reason anyone stops on this card at all.
+
+       The record above is the Parliament's. This line is the only thing here
+       that is not, so it is said plainly and kept apart from the figures. */
+    const markH = 30;
+    const mark = await volt(markH);
+    const line = 'Someone has to shape Europe.';
+    const lineY = y + CODE - 14;
+    let voltX = pillX + 6;
+
+    if (mark) {
+      const markW = markH * (230 / 96);
+      ctx.drawImage(mark, voltX, lineY - markH + 6, markW, markH);
+      voltX += markW + 20;
+    } else {
+      ctx.fillStyle = INK.text;
+      ctx.font = font(700, 30);
+      ctx.fillText('Volt', voltX, lineY);
+      voltX += ctx.measureText('Volt').width + 20;
+    }
+    ctx.fillStyle = INK.soft;
+    ctx.font = font(600, 30);
+    ctx.fillText(line, voltX, lineY);
 
     return await new Promise(function (resolve) {
       if (canvas.toBlob) {

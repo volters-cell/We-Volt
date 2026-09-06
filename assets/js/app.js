@@ -2096,15 +2096,21 @@
         greetHome();
       });
 
-      window.addEventListener('hashchange', function () {
+      window.addEventListener('hashchange', async function () {
         if (goingHome) return;
         const next = readHash();
         const current = state.decision ? state.decision.id : null;
         if (next.decisionId !== current) {
-          loadDecision(next.decisionId, next.code);
+          await loadDecision(next.decisionId, next.code);
         } else if (next.code !== state.country) {
           selectCountry(next.code, { scroll: false });
         }
+        // A shared link is cleared out of the address once it has been opened,
+        // the same as one opened in a fresh tab. Otherwise the second link a
+        // reader follows in the same tab leaves its vote behind in the address,
+        // and a reload weeks later reopens it — which is the thing the clearing
+        // on load exists to prevent.
+        stripHash();
       });
     } catch (error) {
       document.body.classList.remove('is-loading');
