@@ -66,11 +66,6 @@ const SITES = {
   'ESN': 'https://esn-group.eu/'
 };
 
-/* One site defeats the heuristic: the EPP's home page carries no mark as an
-   image and no drawn one in its header — 47 pictures, and the ten that score
-   are all article photographs. Its mark is served as a stylesheet background
-   from its own theme, so that file is named here rather than guessed at. An
-   entry only ever names a file on the group's own site. */
 /* A mark this cannot find by looking, named because the site's own code names
    it. The EPP's header holds an empty <div name="logo-eppfull">, and the
    sprite map inside its own script says where that name lives:
@@ -86,19 +81,11 @@ const MARK = {
 
 /* Groups whose mark this cannot reach, and must therefore not guess at.
  *
- * The EPP. Its header holds an empty <div name="logo-eppfull" alt="EPP Group
- * logo"> and fills it in from its own script bundle, so the mark is in none of
- * the places a page can be asked about it: not an image, not a background, not
- * a mask, not a pseudo-element, not content:url(), not an inline drawing, and
- * not in the traffic — of the fourteen pictures the page fetches, the three
- * that are not photographs are two background textures and a translucent
- * watermark heart with no lettering, which was taken once, rendered, and
- * rejected.
- *
- * Left to itself the scoring would then settle on the best of what remains,
- * which is an article photograph. So it is stopped here: the EPP keeps its
- * lettered tile, which says the right thing, rather than wearing a stock
- * picture. */
+ * Empty, and worth keeping empty rather than deleting: the scoring will always
+ * settle on the best of whatever a page happens to carry, and on a site with no
+ * mark to find that is an article photograph — which is what nearly happened to
+ * the EPP before its own code was read for the address. Naming a group here
+ * stops that: it keeps its lettered tile, which says the right thing. */
 const CANNOT = {};
 
 /* Marks that are not a political group of the Parliament, and do not belong in
@@ -175,7 +162,12 @@ if (has('--survey')) {
    looking for the name — and prints what it finds around it. */
 if (has('--dig')) {
   const group = (process.env.ONLY_GROUPS || 'EPP').split(',')[0].trim();
-  const site = SITES[group];
+  // A group's site or a party's: dig should reach whatever the run names.
+  const site = SITES[group] || (PARTIES[group] && PARTIES[group].site);
+  if (!site) {
+    console.error(`${group}: no site is known for that name.`);
+    process.exit(1);
+  }
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'en-GB' });
   const page = await context.newPage();
