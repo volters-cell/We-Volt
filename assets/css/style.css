@@ -511,6 +511,7 @@ main {
   .decision-brief { display: flex; flex-direction: column; }
   .decision-brief #outcome { order: 1; }
   .decision-brief #vote-links { order: 2; }
+  .decision-brief #vote-share { order: 3; }
 
   .decision-brief, #member-section { order: 1; }
   .map-section { order: 2; }
@@ -1672,31 +1673,113 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .dg-name { min-width: 0; margin-right: auto; }
 .dg-note { margin: 0; padding: 0 .8rem .7rem; font-size: .8rem; color: var(--ink-faint); }
 
-/* ------------------------------------------------------------------ sharing */
-.share {
+/* ------------------------------------------------------------------ sharing
+
+   One vote, one card, at the foot of the brief. It was a row of bare word
+   pills, which read as a row of tabs and told a reader nothing about where
+   their link was going. Now the address is shown before it is sent, the
+   picture and the phone's own sheet lead, and each place carries its own mark
+   beside its name. */
+.share-card {
+  margin-top: 1.4rem;
+  padding: .95rem 1.05rem 1.05rem;
+  background: var(--surface-sunken);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.share-card-title {
+  margin: 0 0 .7rem;
+  font-family: var(--font);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* The address, spelled out. Seeing the link before sending it is what makes
+   the card trustworthy; it is short enough now to be read at a glance. */
+.share-address { display: flex; gap: .45rem; align-items: stretch; }
+.share-address-field {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font: inherit;
+  font-size: .82rem;
+  padding: .5rem .7rem;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  text-overflow: ellipsis;
+}
+
+.share-acts { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .55rem; }
+
+.share-places {
   display: flex;
   flex-wrap: wrap;
-  gap: .4rem;
-  align-items: center;
-  margin-top: .2rem;
+  gap: .45rem;
+  margin: .55rem 0 0;
+  padding: 0;
+  list-style: none;
 }
-.share-button {
+
+.share-act {
+  display: inline-flex;
+  align-items: center;
+  gap: .42rem;
+  flex: none;
   font: inherit;
-  font-size: .8rem;
-  font-weight: 500;
+  font-size: .82rem;
+  font-weight: 600;
   line-height: 1;
-  padding: .42rem .7rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  padding: .5rem .8rem;
+  color: var(--ink);
   background: var(--surface);
-  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 9px;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
 }
-.share-button:hover { border-color: var(--ink-faint); color: var(--ink); }
-.share-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.share-copy { font-weight: 600; color: var(--ink); border-color: var(--ink-faint); }
+.share-act svg { width: 1rem; height: 1rem; flex: none; color: var(--ink-faint); }
+.share-act:hover { border-color: var(--ink-faint); }
+.share-act:hover svg { color: var(--ink); }
+.share-act:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.share-act[disabled] { opacity: .6; cursor: default; }
+
+/* The picture leads: it is the one thing here that cannot be got any other
+   way, and it is what a story is made of. */
+.share-act.is-primary {
+  color: #fff;
+  background: var(--eu-blue);
+  border-color: var(--eu-blue);
+}
+.share-act.is-primary svg { color: rgba(255, 255, 255, .8); }
+.share-act.is-primary:hover { background: #0a3078; border-color: #0a3078; }
+.share-act.is-primary:hover svg { color: #fff; }
+
+.share-place { font-weight: 500; color: var(--ink-soft); }
+.share-place:hover { color: var(--ink); }
+
+/* What the picture does, and what to do with it once it is made. It says the
+   same thing before and after, so nobody has to remember the step they are
+   on; it only goes brighter while it is fresh. */
+.share-note {
+  margin: .7rem 0 0;
+  font-size: .78rem;
+  line-height: 1.45;
+  color: var(--ink-faint);
+}
+.share-note.is-live { color: var(--ink); font-weight: 500; }
+
+/* Where the card is narrow the address takes the whole line: half an address
+   with the vote's own number cut off the end is worse than none. */
+@media (max-width: 26rem) {
+  .share-address { flex-wrap: wrap; }
+  .share-address-field { flex: 1 1 100%; }
+  .share-address-copy { flex: 1 1 auto; justify-content: center; }
+}
 
 /* --------------------------------------------------------------- motion
 
@@ -1800,7 +1883,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   body { background: #fff; color: #000; }
   .site-header .header-meta,
   .join, .volt-strip,
-  .map-section, .layer-tabs, .filters, .roll-filters, .share, .skip-link,
+  .map-section, .layer-tabs, .filters, .roll-filters, .share-card, .skip-link,
   .decision-list, #session-list, .search-form, .back-to-votes, .roll-reset,
   #sample-banner { display: none !important; }
   main { display: block; max-width: none; padding: 0; }
@@ -1847,7 +1930,6 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   border-bottom: 1px solid color-mix(in srgb, var(--focus) 35%, transparent);
 }
 .vote-source:hover { border-bottom-color: var(--focus); }
-.vote-share { color: var(--ink-soft); border-bottom-color: var(--line-strong); }
 
 a.permalink { font-size: .8rem; }
 
@@ -2352,7 +2434,7 @@ button.permalink {
 button,
 summary,
 [role="button"],
-.share-button,
+.share-act,
 .button-link,
 .vote-source,
 .permalink {
@@ -2376,7 +2458,7 @@ input:focus-visible {
    finger would read as the map sliding. */
 @media (prefers-reduced-motion: no-preference) {
   button:not(.country):not(.seg),
-  .share-button,
+  .share-act,
   .button-link,
   .decision-card,
   .roll-member,
@@ -2386,7 +2468,7 @@ input:focus-visible {
                 color .12s ease, transform .08s ease, box-shadow .12s ease;
   }
 
-  .share-button:active,
+  .share-act:active,
   .button-link:active,
   .tracker-filters button:active,
   .layer-tabs button:active,
@@ -2418,7 +2500,7 @@ input:focus-visible {
   /* Boxed controls grow to a comfortable height. */
   .legend li button,
   .layer-tabs button,
-  .share-button,
+  .share-act,
   .tracker-filters button,
   .bloc,
   #unfold-all {

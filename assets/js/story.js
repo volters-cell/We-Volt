@@ -378,11 +378,17 @@
       y += MAP;
     }
 
-    /* The foot: the way in. The code carries this vote's own address, for a
-       phone held up to the screen or a screenshot passed on; the pill beside
-       it says what that is for. No address is printed — a line of raw URL
-       tells a reader nothing the words do not, and reads as clutter at the
-       distance a story is looked at. */
+    /* The foot: the way in. Three of them, because a story is watched in three
+       ways. The code is for a phone held up to a screen, or a screenshot
+       passed on. The pill says what the code is for. And the address is
+       printed under it in words, because a story is often watched on the very
+       phone that would have to scan it — and because an address a reader can
+       simply type is the only way in that survives being screenshotted,
+       re-posted, or filmed off somebody else's screen.
+
+       It is printed now because it is short enough to be printed: the vote is
+       named by the Parliament's own number for it, so the line is an address
+       rather than the paragraph of slug it used to be. */
     const drawn = vote.url && global.QR &&
       QR.draw(ctx, vote.url, pad, y, CODE, {
         ink: INK.ground, background: '#ffffff', quiet: 3
@@ -390,19 +396,38 @@
 
     const pillX = drawn ? pad + CODE + 28 : pad;
     const pillW = WIDTH - pad - pillX;
-    const pillH = 96;
+    const pillH = 88;
 
     ctx.fillStyle = INK.gold;
-    roundRect(ctx, pillX, y + 2, pillW, pillH, pillH / 2);
+    roundRect(ctx, pillX, y, pillW, pillH, pillH / 2);
     ctx.fill();
 
     ctx.fillStyle = '#12203f';
     ctx.font = font(700, 38);
     ctx.textAlign = 'center';
-    ctx.fillText('Open the full record', pillX + pillW / 2, y + 64);
+    ctx.fillText('Open the full record', pillX + pillW / 2, y + 58);
+
     ctx.textAlign = 'left';
 
-    /* Who is asking, and why: under the way in, beside the code, in the room
+    /* No scheme and no www: what is left is what a reader would type. It hangs
+       from the same left edge as the line below it, so the foot reads as one
+       column under the pill rather than three things at three alignments. */
+    const address = String(vote.url || '')
+      .replace(/^https?:\/\//i, '')
+      .replace(/^www\./i, '');
+    const footX = pillX + 6;
+    if (address) {
+      let size = 30;
+      ctx.font = font(600, size);
+      while (size > 21 && ctx.measureText(address).width > pillW - 12) {
+        size -= 2;
+        ctx.font = font(600, size);
+      }
+      ctx.fillStyle = INK.faint;
+      ctx.fillText(address, footX, y + 126);
+    }
+
+    /* Who is asking, and why: under the address, beside the code, in the room
        that row already has. Putting it below would have cost the map eighty
        pixels, and the map is the reason anyone stops on this card at all.
 
@@ -411,8 +436,8 @@
     const markH = 30;
     const mark = await volt(markH);
     const line = 'Someone has to shape Europe.';
-    const lineY = y + CODE - 14;
-    let voltX = pillX + 6;
+    const lineY = y + CODE - 8;   // sat on the code's own baseline, under the address
+    let voltX = footX;
 
     if (mark) {
       const markW = markH * (230 / 96);

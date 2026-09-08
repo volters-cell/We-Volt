@@ -78,7 +78,7 @@
   }
 
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
-   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links',
+   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links', 'vote-share',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-clear', 'search-status',
    'member-face', 'member-party',
@@ -1226,15 +1226,45 @@
 
   /* ---------------------------------------------------------------- routing */
 
+  /* A vote's address.
+
+     The Parliament gives every roll-call its own number, and that number is
+     the tail of every id held here, so a link can carry the number alone:
+     "#/195719" rather than "#/ep-2026-07-09-2023-0212-cod-195719". Short
+     enough to read out, to print on a picture and to type back in; and the
+     code drawn on the story card has half as much to carry, so it stays
+     coarse enough to scan from a phone held up to a screen.
+
+     The long form still opens, so every link shared before this keeps
+     working. */
+  function shortId(decision) {
+    if (!decision) return '';
+    return decision.sourceId ? String(decision.sourceId) : decision.id;
+  }
+
+  /* ...and back again: the number first, then the full id. */
+  function resolveId(token) {
+    if (!token) return null;
+    const wanted = String(token);
+    if (!index || !index.decisions) return wanted;
+    const found = index.decisions.find(function (item) {
+      return item.id === wanted || String(item.sourceId) === wanted;
+    });
+    return found ? found.id : wanted;
+  }
+
   function permalink(code) {
-    const id = state.decision ? state.decision.id : '';
+    const id = shortId(state.decision);
     return '#/' + id + (code ? '/' + code : '');
   }
 
   /* An address someone can paste somewhere, not a fragment that only means
      something inside this page. */
   function shareUrl(code) {
-    return location.origin + location.pathname + location.search + permalink(code);
+    // "index.html" is how a folder is served, not part of the address anyone
+    // would write down; the site's own share menu drops it too.
+    const path = location.pathname.replace(/index\.html$/, '');
+    return location.origin + path + location.search + permalink(code);
   }
 
   /* Sharing a vote. The address carries the vote, so anyone opening it lands
@@ -1247,38 +1277,112 @@
       ' in the European Parliament';
   }
 
-  function shareRow(decision) {
+  const STORY_HINT = 'Story image draws this vote as a picture and copies the link at the ' +
+    'same time \u2014 paste it into Instagram\u2019s link sticker so anyone watching lands ' +
+    'on this vote.';
+  const STORY_DONE = 'Link copied. In Instagram: Sticker \u2192 Link \u2192 paste, ' +
+    'and the story opens this vote.';
+  const STORY_SAVED = 'Picture saved, link copied. Post the picture as a story, then ' +
+    'paste the link into its link sticker.';
+
+  function plainUrl(url) {
+    return String(url).replace(/^https?:\/\//i, '').replace(/^www\./i, '');
+  }
+
+  /* Everything one vote can be shared as, in one card: the address itself,
+     spelled out so a reader can see what they are about to send and one press
+     from the clipboard; the picture, for a story; the phone's own share sheet
+     where there is one; and the places people actually post.
+
+     Each place is a mark and a word. Eight unlabelled glyphs are a puzzle. */
+  function shareCard(decision) {
     const url = shareUrl();
     const text = shareText(decision);
     const e = encodeURIComponent;
+    // The marks the header's own share menu uses, so one hand drew both.
+    const mark = function (key) {
+      return (window.ShareMarks && window.ShareMarks[key]) || '';
+    };
     const targets = [
-      { label: 'Bluesky', href: 'https://bsky.app/intent/compose?text=' + e(text + ' ' + url) },
-      { label: 'X', href: 'https://x.com/intent/tweet?text=' + e(text) + '&url=' + e(url) },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + e(url) },
-      { label: 'WhatsApp', href: 'https://wa.me/?text=' + e(text + ' ' + url) },
-      { label: 'Email', href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
+      { key: 'bluesky', label: 'Bluesky',
+        href: 'https://bsky.app/intent/compose?text=' + e(text + ' ' + url) },
+      { key: 'x', label: 'X',
+        href: 'https://x.com/intent/tweet?text=' + e(text) + '&url=' + e(url) },
+      { key: 'linkedin', label: 'LinkedIn',
+        href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + e(url) },
+      { key: 'whatsapp', label: 'WhatsApp',
+        href: 'https://wa.me/?text=' + e(text + ' ' + url) },
+      { key: 'telegram', label: 'Telegram',
+        href: 'https://t.me/share/url?url=' + e(url) + '&text=' + e(text) },
+      { key: 'email', label: 'Email', aria: 'Send this vote by email',
+        href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
     ];
 
-    return '<div class="share" role="group" aria-label="Share this vote">' +
-      '<button type="button" class="share-button share-copy" data-copy="' + esc(url) + '">' +
-        'Copy link</button>' +
-      // The picture. On a phone it goes into the share sheet, where Instagram
-      // offers Stories; anywhere else it is saved to be posted from one.
-      '<button type="button" class="share-button share-story"' +
-        ' title="Opens the phone\u2019s share sheet with a picture of this vote.' +
-        ' Choose Instagram, then Add to story.">Instagram</button>' +
-      '<button type="button" class="share-button share-native" hidden' +
-        ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">Share…</button>' +
-      targets.map(function (target) {
-        return '<a class="share-button" href="' + esc(target.href) +
-          '" target="_blank" rel="noopener noreferrer">' + esc(target.label) + '</a>';
-      }).join('') +
-      '</div>';
+    return '<section class="share-card" aria-labelledby="share-card-title">' +
+      '<h3 class="share-card-title" id="share-card-title">Share this vote</h3>' +
+
+      /* The address is shown without its scheme, which is the form a reader
+         would say out loud and the form printed on the story card. Copy puts
+         the whole thing on the clipboard; a reader who selects the line by
+         hand gets the scheme-less form, which every browser and every chat app
+         resolves to the same page. */
+      '<div class="share-address">' +
+        '<input class="share-address-field" type="text" readonly spellcheck="false"' +
+          ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
+        '<button type="button" class="share-act share-address-copy" data-copy="' + esc(url) + '">' +
+          mark('copy') + '<span>Copy link</span></button>' +
+      '</div>' +
+
+      '<div class="share-acts">' +
+        // The picture. On a phone it goes into the share sheet, where Instagram
+        // offers Stories; anywhere else it is saved to be posted from one.
+        '<button type="button" class="share-act is-primary share-story"' +
+          ' title="Draws this vote as a 1080\u00d71920 picture and opens the share sheet.">' +
+          mark('instagram') + '<span>Story image</span></button>' +
+        '<button type="button" class="share-act share-native" hidden' +
+          ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
+          mark('device') + '<span>Share\u2026</span></button>' +
+      '</div>' +
+
+      '<ul class="share-places">' + targets.map(function (target) {
+        return '<li><a class="share-act share-place" href="' + esc(target.href) +
+          '" target="_blank" rel="noopener noreferrer" aria-label="' +
+          esc(target.aria || ('Share this vote on ' + target.label)) + '">' +
+          mark(target.key) + '<span>' + esc(target.label) + '</span></a></li>';
+      }).join('') + '</ul>' +
+
+      '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
+      '</section>';
   }
 
-  /* The system share sheet, where the browser has one — a phone, mostly. It is
+  /* The line under the card, which says what just happened. It is a status
+     rather than an alert: nothing has gone wrong, there is only something to
+     read before switching to the other app. */
+  let noteTimer = 0;
+  function shareNote(words) {
+    const note = document.getElementById('share-note');
+    if (!note) return;
+    window.clearTimeout(noteTimer);
+    note.textContent = words;
+    note.classList.add('is-live');
+    noteTimer = window.setTimeout(function () {
+      note.textContent = STORY_HINT;
+      note.classList.remove('is-live');
+    }, 14000);
+  }
+
+  /* The card, once it is in the page: the address selects itself when it is
+     touched, so copying it by hand is one gesture; and the system share sheet
+     appears where the browser has one — a phone, mostly. The sheet button is
      revealed rather than rendered conditionally so the markup stays the same. */
-  function armNativeShare(root) {
+  function armShareCard(root) {
+    const field = root.querySelector('.share-address-field');
+    if (field) {
+      const all = function () { field.select(); };
+      field.addEventListener('focus', all);
+      field.addEventListener('click', all);
+    }
+
     if (!navigator.share) return;
     Array.prototype.forEach.call(root.querySelectorAll('.share-native'), function (button) {
       button.hidden = false;
@@ -1306,10 +1410,12 @@
   async function shareStory(button) {
     if (!window.Story || !state.decision) return;
     const decision = state.decision;
-    const said = button.textContent;
-    const say = function (words) { button.textContent = words; };
+    // The button carries a mark beside its words, so only the words change.
+    const label = button.querySelector('span') || button;
+    const said = label.textContent;
+    const say = function (words) { label.textContent = words; };
     const restore = function () {
-      window.setTimeout(function () { say(said); button.disabled = false; }, 1400);
+      window.setTimeout(function () { say(said); button.disabled = false; }, 1600);
     };
 
     button.disabled = true;
@@ -1355,18 +1461,43 @@
       return;
     }
 
-    const name = 'eu-tracker-' + decision.date + '.png';
+    // Named for the vote as well as the day, so a folder of these can be told
+    // apart and matched back to what it shows.
+    const name = 'eu-tracker-' + decision.date + '-' + shortId(decision) + '.png';
     const file = new File([blob], name, { type: 'image/png' });
 
-    if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+    /* The address travels with the picture wherever the phone will carry it.
+       Most apps that take a story take the image and drop the words — that is
+       the app's choice, not ours — but the ones that keep them get a link the
+       reader can follow, and nothing is lost by offering it. So the fuller
+       payload is tried first and a bare picture second, because a browser that
+       will not take files beside text refuses the whole call rather than
+       trimming it. */
+    const sheet = [
+      // The address as its own field, so an app that has a place for a link
+      // puts it there rather than at the end of a sentence...
+      { files: [file], text: shareText(decision), url: url },
+      // ...and written into the words for one that has not.
+      { files: [file], text: shareText(decision) + ' ' + url },
+      { files: [file] }
+    ];
+
+    for (let i = 0; navigator.share && i < sheet.length; i++) {
+      if (navigator.canShare && !navigator.canShare(sheet[i])) continue;
       try {
-        await navigator.share({ files: [file], text: shareText(decision) + ' ' + url });
-        say('Link copied too');
+        await navigator.share(sheet[i]);
+        say('Shared');
+        shareNote(STORY_DONE);
         restore();
         return;
       } catch (error) {
-        // The sheet was closed, or the browser refused it: fall through and
-        // save the file, which always works.
+        // AbortError is the reader closing the sheet, and re-opening it would
+        // be rude; anything else is the browser refusing this shape of call,
+        // so the next one down is worth a try.
+        if (error && error.name === 'AbortError') {
+          restore();
+          return;
+        }
       }
     }
 
@@ -1379,12 +1510,15 @@
     document.body.removeChild(link);
     window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
     say('Image saved');
+    shareNote(STORY_SAVED);
     restore();
   }
 
   async function copyLink(button) {
     const text = button.getAttribute('data-copy');
-    const original = button.textContent;
+    // Where the control carries a mark beside its words, only the words move.
+    const label = button.querySelector('span') || button;
+    const original = label.textContent;
     let copied = false;
     try {
       await navigator.clipboard.writeText(text);
@@ -1400,13 +1534,16 @@
       copied = document.execCommand && document.execCommand('copy');
       field.remove();
     }
-    button.textContent = copied ? 'Link copied' : text;
-    window.setTimeout(function () { button.textContent = original; }, copied ? 1600 : 6000);
+    label.textContent = copied ? 'Link copied' : text;
+    window.setTimeout(function () { label.textContent = original; }, copied ? 1600 : 6000);
   }
 
   function readHash() {
     const parts = (location.hash || '').replace(/^#\/?/, '').split('/').filter(Boolean);
-    return { decisionId: parts[0] || null, code: (parts[1] || '').toUpperCase() || null };
+    return {
+      decisionId: resolveId(parts[0]),
+      code: (parts[1] || '').toUpperCase() || null
+    };
   }
 
   /* The address bar is deliberately NOT a running record of what you clicked.
@@ -1550,9 +1687,14 @@
       return '<a class="vote-source" href="' + esc(link.url) +
         '" target="_blank" rel="noopener noreferrer">' + esc(link.label) +
         '<span aria-hidden="true"> ↗</span></a>';
-    }).join('') + shareRow(decision);
-    armNativeShare(dom['vote-links']);
-    dom['vote-links'].hidden = false;
+    }).join('');
+    dom['vote-links'].hidden = links.length === 0;
+
+    // Sharing is its own card, below the outcome: the last thing on the brief,
+    // where a reader who has read the result is ready to pass it on.
+    dom['vote-share'].innerHTML = shareCard(decision);
+    armShareCard(dom['vote-share']);
+    dom['vote-share'].hidden = false;
 
     const isSample = decision.status === 'sample';
     dom['decision-status'].hidden = !isSample;
@@ -1707,7 +1849,9 @@
         }
       });
     }
-    const entry = index.decisions.find(function (item) { return item.id === id; });
+    const entry = index.decisions.find(function (item) {
+      return item.id === id || String(item.sourceId) === String(id);
+    });
     if (!entry) {
       clearDecision({ country: code });
       return;

@@ -87,18 +87,27 @@ country row to narrow to it, or any name to follow that member across every vote
 The header says when the last plenary session ran and where, and when the next one
 starts, from the Parliament's own calendar.
 
-Links are made on demand: **Copy link to this vote**, and one in every country panel,
-put a real pasteable address on the clipboard. **Instagram** draws the open vote as a
-1080x1920 picture — the question, the title, the result, the split, the totals, and the
-Union itself painted by that vote — and opens the phone's own share sheet with it, where
-Instagram offers Add to story. The way back is a QR code carrying that vote's own
-address, beside a button reading "Open the full record". The link goes on the clipboard
-at the same time, so Instagram's link sticker offers it with one paste.
-No web page can post into Stories by itself; on a desktop the image is saved instead.
+Under every vote is a card for sharing that one vote. It shows the address before it is
+sent — the Parliament's own number for the roll-call is the whole of it, so a link reads
+`…/#/195719` and not a line of slug — with **Copy link** beside it, and the same
+address in every country panel. Long links made before that shortening still open.
+
+**Story image** draws the open vote as a 1080x1920 picture — the question, the title,
+the result, the split, the totals, and the Union itself painted by that vote — and opens
+the phone's own share sheet with it, where Instagram offers Add to story. Three ways back
+are printed on it: a QR code carrying that vote's own address, the button reading "Open
+the full record", and the address itself in words, for a story watched on the very phone
+that would otherwise have to scan it. The link goes on the clipboard at the same time, so
+Instagram's link sticker offers it with one paste, and it is handed to the share sheet as
+its own field so any app with a place for a link fills it in. No web page can attach
+Instagram's link sticker itself — that is an app-to-app call Instagram accepts only from a
+registered native app — so the paste is the last step, and the card says so. On a desktop
+the picture is saved instead.
+
 The QR code is generated in the page (`assets/js/qr.js`), not fetched from an image
-service, and the map is drawn from the same outline file and projection as the site. Browsing does not write to the address
-bar, so reopening the site brings you back to the search page rather than to whatever
-you last clicked.
+service, and the map is drawn from the same outline file and projection as the site.
+Browsing does not write to the address bar, so reopening the site brings you back to the
+search page rather than to whatever you last clicked.
 
 It works with a keyboard: arrow keys walk between neighbouring countries, Enter opens
 one, Escape closes. Malta and Luxembourg have click targets as big as everyone else's.

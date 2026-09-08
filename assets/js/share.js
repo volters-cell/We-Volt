@@ -183,4 +183,9 @@
   } else {
     start();
   }
+
+  /* The marks are lent out. Sharing one vote is a different card in a
+     different place, but it reaches the same handful of apps, and two sets of
+     hand-drawn glyphs for the same six services would be one set too many. */
+  global.ShareMarks = MARKS;
 })(window);
