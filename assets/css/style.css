@@ -1613,8 +1613,9 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 /* ------------------------------------------------------- a party's own line
 
    How one national party's members voted, on every vote, under the outcome.
-   Folded shut: the summary is the answer, the names are for the reader who
-   wants to check it. */
+   Open: the summary is the count and the rows are the members themselves,
+   each with their face and how they voted. It folds, for a reader who wants
+   the outcome without them. */
 .delegation {
   margin: .9rem 0 0;
   border: 1px solid var(--line);

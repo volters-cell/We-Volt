@@ -1156,7 +1156,12 @@
           esc(Panel.VOTE_LABEL[member.position]) + '</span></button></li>';
       }).join('');
 
-      return '<details class="delegation">' +
+      /* Open on every vote, not folded away behind a summary. This is the
+         one delegation the site follows, it is five people, and how they
+         voted is the thing a reader came for — not a footnote to be
+         unfolded once they have read everything else. The fold stays, for
+         anyone who wants the outcome without the faces. */
+      return '<details class="delegation" open>' +
         '<summary>' +
           '<span class="dg-mark" style="background:' + esc(delegation.colour || '#444') + '"></span>' +
           '<span class="dg-label">' + esc(delegation.name) + '</span>' +

@@ -236,10 +236,14 @@ The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md).
 
 **Following a party across every vote.** The Parliament records a member's country and
 political group but not the party they were elected for, so parties worth following as a
-bloc are listed by person id in `data/reference/delegations.json`. Each one gets a line
+bloc are listed by person id in `data/reference/delegations.json`. Each one gets a block
 under the outcome of every vote — Volt's five members, for instance — read from that
-vote's own ballots, so nothing is inferred: a member with no ballot did not vote. Adding
-a party is adding its members' ids to that file.
+vote's own ballots, so nothing is inferred: a member with no ballot did not vote. The
+block is open: every member is there by face and name with how they voted beside them,
+because that is the thing a reader came for rather than a footnote to unfold once they
+have read everything else. It still folds, for anyone who wants the outcome without the
+faces, and it opens again on the next vote. Adding a party is adding its members' ids to
+that file.
 
 **One rule for every number on the page.** Denominators come from seats, never from the
 ballots a record happens to carry: the chamber has 720, a delegation has what its member
