@@ -1,5 +1,12 @@
 /* A vote as a picture, 1080x1920, for Instagram and every other story.
 
+   Composed inside the middle 1080x1350 of that frame. Instagram will not put
+   the picture in one place — it offers a story, a reel, a feed post and a
+   message, and crops each of them differently — and the middle four-by-five
+   is the one box every one of them keeps. So that box holds the whole card
+   and the margins hold nothing, which is also where the app draws its own
+   furniture over a story. One picture, whole wherever it lands.
+
    A web page cannot post into Instagram Stories: that is an app-to-app call
    Instagram only accepts from a registered native app. What a page can do is
    hand the phone a finished image, and the phone's own share sheet offers
@@ -189,11 +196,15 @@
 
     // The neighbours first, dark and quiet: they place the Union without
     // competing with it.
-    layout.shapes.forEach(function (shape) {
-      if (shape.member) return;
-      ctx.fillStyle = '#16274b';
-      ctx.fill(new Path2D(shape.path));
-    });
+    /* The neighbours are not drawn here, and the page's are not missed.
+
+       On the page they place the Union inside a continent a reader can pan
+       around. On a card there is nothing to pan: the frame ends where the
+       picture does, so every neighbour is cut off mid-country and the largest
+       of them — Russia across the whole top corner — reads as a pale slab
+       laid over the picture rather than as land. The Union's own outline is
+       the thing anyone recognises, and on its own, on the ground colour, it
+       is unmistakable. */
 
     layout.shapes.forEach(function (shape) {
       if (!shape.member) return;
@@ -249,44 +260,64 @@
        known until it is wrapped, and the map, which should take whatever is
        left. The map is the reason to stop scrolling, so it is promised its
        share first and the title takes what remains. */
-    const BRAND = 80;        // the mark and the name
-    const META = 84;         // institution and date
-    const HOOK = 66;         // the question the picture answers
+    const HEAD_IN = 44;      // the mark hangs above its own baseline
+    const BRAND = 78;        // the mark and the name
+    const META = 78;         // institution and date
+    const HOOK = 62;         // the question the picture answers
     /* The verdict is drawn on its baseline, so its own height sits above that
        line: the block has to carry the air before it, the letters themselves,
        and the gap to the bar, or a long title runs into the word. */
-    const LEAD = 46;         // air between the title and the verdict
-    const VERDICT_TOP = 80;  // the cap height of the word below
-    const VERDICT = LEAD + VERDICT_TOP + 40;
+    const LEAD = 54;         // air between the title and the verdict
+    const VERDICT_TOP = 78;  // the cap height of the word below
+    const VERDICT = LEAD + VERDICT_TOP + 34;
     const BAR = 42 + 54;
-    const NUMBERS = 58;      // the three counts, in one line
-    const SEATS = vote.seats ? 44 : 0;
-    const CODE = 180;        // the square beside the link
-    const FOOT = CODE + 24;
+    const NUMBERS = 56;      // the three counts, in one line
+    const SEATS = vote.seats ? 42 : 0;
+    const CODE = 180;        // the square beside the link, big enough to scan
+    const FOOT = CODE + 22;
 
-    const MAP_MAX = 520;
-    const MAP_MIN = 260;     // below this the Union is a smudge; better none
+    const MAP_MAX = 560;
+    const MAP_MIN = 220;     // below this the Union is a smudge; better none
 
-    // Instagram draws its own controls over the top and bottom of a story.
-    const TOP_SAFE = 230;
-    const BOTTOM_SAFE = HEIGHT - 240;
+    /* Where the card is allowed to be.
+
+       Instagram will not put this picture in one place. Offer it a story and
+       it fills the screen behind the app's own furniture — the poster's name
+       across the top, the reply bar across the foot. Offer it to the feed and
+       it is cropped to four-by-five. Offer it as a reel and it is the story
+       again. One picture went to all of them and looked composed for none.
+
+       So the card is composed inside the one box every destination keeps:
+       1080x1350 in the middle of 1080x1920, which leaves exactly 285 above
+       and 285 below. Nothing but ground goes in those margins. Shared to a
+       story it reads as a poster with air where the app's own controls sit;
+       shared to the feed, the crop *is* the composition. */
+    const FRAME = Math.round(WIDTH * 5 / 4);
+    const TOP_SAFE = Math.round((HEIGHT - FRAME) / 2);
+    const BOTTOM_SAFE = HEIGHT - TOP_SAFE;
     const band = BOTTOM_SAFE - TOP_SAFE;
 
     const canMap = Boolean(vote.geo && global.Projection && global.Path2D);
-    const fixed = BRAND + META + HOOK + VERDICT + BAR + NUMBERS + SEATS + FOOT;
+    const fixed = HEAD_IN + BRAND + META + HOOK + VERDICT + BAR + NUMBERS + SEATS + FOOT;
 
-    const title = layoutTitle(ctx, vote.title, inner,
-      [92, 82, 72, 64, 56, 48], band - fixed - (canMap ? MAP_MIN : 0));
-    // The first line is drawn on its baseline, so the block has to carry the
-    // height of the letters above it or the hook line runs into the title.
+    /* The title is measured by its lines alone, but drawn from a baseline, so
+       the block it costs is a cap height taller than the room it was given.
+       The allowance below is that cap height at the largest size on offer. */
+    const title = layoutTitle(ctx, vote.title, inner, [92, 82, 72, 64, 56, 48],
+      band - fixed - (canMap ? MAP_MIN : 0) - 76);
+    /* A block of type is its cap height, the leading between its lines, and a
+       descender — not a whole empty line under the last one. Counting that
+       last line in full put a hole between a one-line title and the verdict
+       below it, which on a card this size read as a mistake. */
     const TITLE_TOP = title.size * 0.82;
-    const TITLE = TITLE_TOP + title.lines.length * title.size * 1.14;
+    const TITLE = TITLE_TOP + (title.lines.length - 1) * title.size * 1.14 +
+      title.size * 0.26;
 
     const spare = band - fixed - TITLE;
     const MAP = canMap && spare >= MAP_MIN ? Math.min(MAP_MAX, spare) : 0;
 
     const block = fixed + TITLE + MAP;
-    let y = TOP_SAFE + Math.max(0, (band - block) / 2);
+    let y = TOP_SAFE + HEAD_IN + Math.max(0, (band - block) / 2);
 
     brandMark(ctx, pad + 24, y - 12, 24);
     ctx.fillStyle = INK.text;
@@ -313,7 +344,7 @@
       const last = title.clipped && i === title.lines.length - 1;
       ctx.fillText(last ? line + '…' : line, pad, y + i * title.size * 1.14);
     });
-    y += TITLE - TITLE_TOP + title.size * 0.2;
+    y += TITLE - TITLE_TOP;
 
     // The verdict.
     y += LEAD + VERDICT_TOP;

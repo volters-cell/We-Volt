@@ -1277,13 +1277,16 @@
       ' in the European Parliament';
   }
 
-  const STORY_HINT = 'Story image draws this vote as a picture and copies the link at the ' +
-    'same time \u2014 paste it into Instagram\u2019s link sticker so anyone watching lands ' +
-    'on this vote.';
+  /* One picture, and it fits wherever Instagram offers to put it: the card is
+     composed inside the middle four-by-five, which is the story's safe area
+     and the feed's crop at once. */
+  const STORY_HINT = 'Makes a picture of this vote that fits a story, a reel or a feed ' +
+    'post, and copies the link at the same time \u2014 paste it into Instagram\u2019s link ' +
+    'sticker so anyone watching lands on this vote.';
   const STORY_DONE = 'Link copied. In Instagram: Sticker \u2192 Link \u2192 paste, ' +
     'and the story opens this vote.';
-  const STORY_SAVED = 'Picture saved, link copied. Post the picture as a story, then ' +
-    'paste the link into its link sticker.';
+  const STORY_SAVED = 'Picture saved, link copied. Post it, then paste the link into ' +
+    'the story\u2019s link sticker.';
 
   function plainUrl(url) {
     return String(url).replace(/^https?:\/\//i, '').replace(/^www\./i, '');
@@ -1337,8 +1340,9 @@
         // The picture. On a phone it goes into the share sheet, where Instagram
         // offers Stories; anywhere else it is saved to be posted from one.
         '<button type="button" class="share-act is-primary share-story"' +
-          ' title="Draws this vote as a 1080\u00d71920 picture and opens the share sheet.">' +
-          mark('instagram') + '<span>Story image</span></button>' +
+          ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
+          ' and opens the share sheet.">' +
+          mark('instagram') + '<span>Story or post</span></button>' +
         '<button type="button" class="share-act share-native" hidden' +
           ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
           mark('device') + '<span>Share\u2026</span></button>' +
