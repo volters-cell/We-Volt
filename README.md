@@ -144,6 +144,24 @@ npm run backfill  # import every sitting since the 2024 elections
 npm run bundle    # dist/eu-tracker.html — the whole site as one file
 ```
 
+## Publishing
+
+Pushing to the default branch publishes the site, because it is static files and
+publishing is a copy (`.github/workflows/pages.yml`).
+
+One step in that copy is worth knowing about. GitHub Pages sends its own cache
+lifetime with every file and gives us no way to set one, so a plain
+`<script src="assets/js/app.js">` tells a returning browser nothing about whether that
+file has changed — and a phone that has been here before will happily keep running the
+JavaScript it already has. A change can ship, pass its checks, deploy green, and still
+not be on the screen of the person who asked for it. So `scripts/stamp-assets.mjs` puts
+the published commit into every asset's address — `app.js?v=36d694b6` — on the checkout
+being uploaded, never in the repository. A browser cannot serve a cached copy of an
+address it has never seen.
+
+The same stamp is written into each page as `<meta name="build">`, so *view source* on
+the live site says which commit you are looking at.
+
 [about.html](about.html) documents the sources: where each vote comes from, what
 processing is applied to it, what the dataset does and does not cover, and the licence
 on each part.

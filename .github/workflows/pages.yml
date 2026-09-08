@@ -48,6 +48,14 @@ jobs:
       - name: Rebuild the single-file bundle
         run: node scripts/build-single-file.mjs
 
+      # Every asset gets the commit's number in its address, so a browser that
+      # has been here before cannot serve yesterday's JavaScript for today's
+      # page. Pages sends its own cache lifetime and gives us no way to set
+      # one, so the address is the only lever there is. After the bundle,
+      # which reads the same tags. Stamped on the checkout, never committed.
+      - name: Version the assets against stale caches
+        run: node scripts/stamp-assets.mjs
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
