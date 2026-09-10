@@ -1177,6 +1177,46 @@
     }).join('');
   }
 
+  /* Where to check this vote, at the Parliament's own address.
+
+     This used to be a row of loose links, and the one it called "the source"
+     went to data.europarl.europa.eu — the front door, with nothing behind it
+     for this vote. 603 of the 718 records cited that. A citation nobody can
+     follow is not a citation, and on a site whose only claim is that every
+     number here came from the Parliament, that was the weakest part of it.
+
+     Now each record names the documents it can actually be checked against.
+     The roll-call results come first because that is the document this vote
+     is recorded in — the Parliament's own list of who voted which way at that
+     sitting. The rest is context: the minutes, the procedure file, and the
+     machine-readable data these figures were counted from.
+
+     Every address was tried against the Parliament's servers, across five
+     sittings spanning the term, before any of it was written down. */
+  const SOURCE_NOTE = {
+    record: 'The Parliament\u2019s own record of who voted which way',
+    minutes: 'What the House did that day, in order',
+    procedure: 'The whole legislative file, stage by stage',
+    data: 'The same sitting as data, to count the figures again'
+  };
+
+  function sourceBlock(decision) {
+    const sources = (decision.sources || []).filter(function (source) { return source.url; });
+    if (!sources.length) return '';
+
+    return '<section class="sources" aria-labelledby="sources-title">' +
+      '<h3 class="sources-title" id="sources-title">Check it at the European Parliament</h3>' +
+      '<ul class="source-list">' + sources.map(function (source) {
+        const note = SOURCE_NOTE[source.role] || '';
+        return '<li><a class="source-link' + (source.role === 'record' ? ' is-record' : '') +
+          '" href="' + esc(source.url) + '" target="_blank" rel="noopener noreferrer">' +
+          '<span class="source-label">' + esc(source.label) +
+          '<span class="source-out" aria-hidden="true">\u2197</span></span>' +
+          (note ? '<span class="source-note">' + esc(note) + '</span>' : '') +
+          '</a></li>';
+      }).join('') + '</ul></section>';
+  }
+
   const DELEGATION_WORD = { for: 'in favour', against: 'against', abstain: 'abstained' };
 
   function renderOutcome() {
@@ -1751,30 +1791,8 @@
 
 
 
-    // Links that open, in one line under the vote: the Parliament's own file
-    // for this procedure, and the source the record was read from.
-    const links = [];
-    const reference = decision.procedure && decision.procedure.reference;
-    if (reference) {
-      links.push({
-        url: decision.procedure.url ||
-          // The slash belongs in a procedure reference; encoding it breaks the
-          // lookup on the Parliament's side.
-          'https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=' +
-          encodeURIComponent(reference).replace(/%2F/g, '/'),
-        label: 'Procedure file ' + reference
-      });
-    }
-    (decision.sources || []).forEach(function (source) {
-      if (source.url) links.push({ url: source.url, label: source.label });
-    });
-
-    dom['vote-links'].innerHTML = links.map(function (link) {
-      return '<a class="vote-source" href="' + esc(link.url) +
-        '" target="_blank" rel="noopener noreferrer">' + esc(link.label) +
-        '<span aria-hidden="true"> ↗</span></a>';
-    }).join('');
-    dom['vote-links'].hidden = links.length === 0;
+    dom['vote-links'].innerHTML = sourceBlock(decision);
+    dom['vote-links'].hidden = false;
 
     // Sharing is its own card, below the outcome: the last thing on the brief,
     // where a reader who has read the result is ready to pass it on.

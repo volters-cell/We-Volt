@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2024/2877(RSP)",
-    "url": null
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2877(RSP)"
   },
   "summary": "Proposition de résolution (ensemble du texte)",
   "whatItMeans": [],
@@ -2900,8 +2900,24 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/"
+      "label": "Roll-call results, 27 November 2024",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-11-27-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-11-27-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Procedure file 2024/2877(RSP)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2877(RSP)",
+      "role": "procedure"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2024-11-27/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2023/0226(COD)",
-    "url": null
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0226(COD)"
   },
   "summary": "Proposition de rejet de la position du Conseil - Am 17= 25=",
   "whatItMeans": [],
@@ -2900,8 +2900,24 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/"
+      "label": "Roll-call results, 17 June 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-17-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-17-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Procedure file 2023/0226(COD)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0226(COD)",
+      "role": "procedure"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-06-17/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

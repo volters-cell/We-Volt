@@ -1920,12 +1920,66 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .roll-members li.is-hovered .roll-member { background: var(--surface-sunken); }
 .breakdown li.is-dimmed, .roll-members li.is-dimmed { opacity: .35; }
 
-.vote-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .3rem .9rem;
-  margin: 0 0 1rem;
+.vote-links { margin: 0 0 1rem; }
+
+/* ------------------------------------------------- where to check the vote
+
+   The claim this whole site rests on is that every figure came from the
+   Parliament. So the addresses that prove it are given a block of their own,
+   with the document each one opens said in plain words — not a row of bare
+   links, and never again a link to a homepage that holds nothing about this
+   vote in particular. */
+.sources {
+  margin: 1.1rem 0 0;
+  padding: .9rem 1rem 1rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--eu-blue);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
+.sources-title {
+  margin: 0 0 .6rem;
+  font-family: var(--font);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.source-list {
+  display: grid;
+  gap: .15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.source-link {
+  display: block;
+  padding: .4rem .5rem;
+  margin-inline: -.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.source-link:hover { background: var(--surface-sunken); }
+.source-link:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.source-label {
+  display: block;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--focus);
+}
+/* The document the vote is actually recorded in leads, and looks like it. */
+.source-link.is-record .source-label { font-size: .95rem; }
+.source-out { margin-left: .3rem; font-size: .78em; opacity: .75; }
+.source-note {
+  display: block;
+  margin-top: .05rem;
+  font-size: .78rem;
+  line-height: 1.4;
+  color: var(--ink-faint);
+}
+.source-link:hover .source-label { text-decoration: underline; text-underline-offset: .18em; }
 .vote-source {
   font-size: .82rem;
   font-weight: 500;

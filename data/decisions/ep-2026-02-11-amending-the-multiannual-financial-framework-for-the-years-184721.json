@@ -2632,8 +2632,19 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-02-11/decisions?format=application%2Fld%2Bjson"
+      "label": "Roll-call results, 11 February 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-02-11-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-02-11-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-02-11/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

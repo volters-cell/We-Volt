@@ -1904,8 +1904,19 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-04-27/decisions?format=application%2Fld%2Bjson"
+      "label": "Roll-call results, 27 April 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-04-27-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-04-27-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-04-27/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

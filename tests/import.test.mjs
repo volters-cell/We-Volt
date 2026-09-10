@@ -114,16 +114,30 @@ assert.match(stated.subtitle, /Article 3/, 'an amendment says which part it chan
 
 // The identities live in the directory; a record stores only [id, position].
 assert.deepEqual(record.countries, {}, 'identities are not repeated per record');
-assert.ok(JSON.stringify(record).length < 1400, 'a record stays small');
+/* A record stays small because the identities live in the directory and the
+   ballots are [id, position] pairs — not because it is shy about saying where
+   it came from. The four provenance links cost about 450 characters once, per
+   record; the guard is here to catch a name or a country creeping in beside
+   every ballot, and at this size it still does. */
+assert.ok(JSON.stringify(record).length < 1900, 'a record stays small');
+assert.ok(!/\bname\b/.test(JSON.stringify(record.ballots)), 'ballots carry no names');
 
 // The importer never invents the parts that are editorial.
 assert.equal(record.summary, '');
 assert.deepEqual(record.whatItMeans, []);
 
 // The source is named: the open data the record was read from.
-assert.equal(record.sources.length, 1);
+/* A record names the documents it can be checked against, not the portal's
+   front door. The roll-call results lead — that is the document the vote is
+   recorded in — and the machine-readable data this project counted from is
+   still there, at the end, for anyone recounting it. */
+assert.ok(record.sources.length >= 3, 'a record cites at least three places');
 assert.ok(record.sources.every((source) => /^https:\/\//.test(source.url)));
-assert.match(record.sources[0].url, /data\.europarl\.europa\.eu/);
+assert.equal(record.sources[0].role, 'record');
+assert.match(record.sources[0].url, /europarl\.europa\.eu\/doceo\/document\/PV-\d+-\d{4}-\d{2}-\d{2}-RCV_EN\.html/);
+assert.ok(record.sources.some((source) => /data\.europarl\.europa\.eu/.test(source.url)),
+  'the data it was read from is still cited');
+assert.ok(record.sources.every((source) => source.label && source.role));
 
 // A member the directory does not know is counted, not silently dropped.
 assert.equal(buildRecord(finalVote, item, {}, '2026-07-09')._counted, 0);

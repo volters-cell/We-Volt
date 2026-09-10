@@ -35,6 +35,7 @@ import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers,
   isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
+import { sourcesFor, procedureUrl } from './lib/ep-sources.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -224,7 +225,10 @@ export function buildRecord(decision, item, members, date) {
     date: date,
     voteRule: rule.rule,
     voteRuleLabel: rule.label,
-    procedure: { reference: procedure || report, url: null },
+    procedure: {
+      reference: procedure || report,
+      url: procedureUrl(procedure || report)
+    },
     summary: '',
     whatItMeans: [],
     outcome: {
@@ -236,12 +240,12 @@ export function buildRecord(decision, item, members, date) {
         (stated ? '' : ' Result derived from the totals.')
     },
     ballots: ballots,
-    sources: [
-      {
-        label: 'European Parliament open data',
-        url: `${PORTAL}/meetings/MTG-PL-${date}/decisions?format=application%2Fld%2Bjson`
-      }
-    ],
+    // Where a reader can check this vote at the Parliament: the roll-call
+    // results it is recorded in, the minutes of the sitting, the procedure
+    // file where there is one, and the data this was read from. Every shape
+    // was tried against the Parliament's servers before it was written here —
+    // see scripts/probe-vote-links.mjs.
+    sources: sourcesFor(date, procedure || report),
     countries: {},
     _counted: counted
   };

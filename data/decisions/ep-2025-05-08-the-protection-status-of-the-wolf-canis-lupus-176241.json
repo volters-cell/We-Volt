@@ -2304,8 +2304,19 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2025-05-08/decisions?format=application%2Fld%2Bjson"
+      "label": "Roll-call results, 8 May 2025",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-05-08-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-05-08-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2025-05-08/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

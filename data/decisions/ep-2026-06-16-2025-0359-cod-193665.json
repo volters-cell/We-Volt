@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2025/0359(COD)",
-    "url": null
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0359(COD)"
   },
   "summary": "Accord provisoire - Am 118",
   "whatItMeans": [],
@@ -2896,8 +2896,24 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/"
+      "label": "Roll-call results, 16 June 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-16-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-06-16-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Procedure file 2025/0359(COD)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0359(COD)",
+      "role": "procedure"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-06-16/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

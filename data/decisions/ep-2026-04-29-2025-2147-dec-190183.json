@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2025/2147(DEC)",
-    "url": null
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2147(DEC)"
   },
   "summary": "Proposition de résolution (ensemble du texte)",
   "whatItMeans": [],
@@ -2900,8 +2900,24 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/"
+      "label": "Roll-call results, 29 April 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-04-29-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-04-29-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Procedure file 2025/2147(DEC)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2147(DEC)",
+      "role": "procedure"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-04-29/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

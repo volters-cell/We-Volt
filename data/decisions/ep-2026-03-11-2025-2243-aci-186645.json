@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2025/2243(ACI)",
-    "url": null
+    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2243(ACI)"
   },
   "summary": "Proposition de décision (ensemble du texte)",
   "whatItMeans": [],
@@ -2896,8 +2896,24 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/"
+      "label": "Roll-call results, 11 March 2026",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-03-11-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2026-03-11-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Procedure file 2025/2243(ACI)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2243(ACI)",
+      "role": "procedure"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2026-03-11/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}

@@ -1960,8 +1960,19 @@
   ],
   "sources": [
     {
-      "label": "European Parliament open data",
-      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2024-10-21/decisions?format=application%2Fld%2Bjson"
+      "label": "Roll-call results, 21 October 2024",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-10-21-RCV_EN.html",
+      "role": "record"
+    },
+    {
+      "label": "Minutes of the sitting",
+      "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2024-10-21-TOC_EN.html",
+      "role": "minutes"
+    },
+    {
+      "label": "Open data record for the sitting",
+      "url": "https://data.europarl.europa.eu/api/v2/meetings/MTG-PL-2024-10-21/decisions?format=application%2Fld%2Bjson",
+      "role": "data"
     }
   ],
   "countries": {}
