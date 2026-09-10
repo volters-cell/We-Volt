@@ -1328,9 +1328,9 @@
   /* One picture, and it fits wherever Instagram offers to put it: the card is
      composed inside the middle four-by-five, which is the story's safe area
      and the feed's crop at once. */
-  const STORY_HINT = 'Makes a picture of this vote that fits a story, a reel or a feed ' +
-    'post, and copies the link at the same time \u2014 paste it into Instagram\u2019s link ' +
-    'sticker so anyone watching lands on this vote.';
+  /* Short, because the picture beside it now says most of this. */
+  const STORY_HINT = 'Fits a story, a reel or a feed post. The link is copied at the same ' +
+    'time \u2014 paste it into Instagram\u2019s link sticker.';
   const STORY_DONE = 'Link copied. In Instagram: Sticker \u2192 Link \u2192 paste, ' +
     'and the story opens this vote.';
   const STORY_SAVED = 'Picture saved, link copied. Post it, then paste the link into ' +
@@ -1384,16 +1384,33 @@
           mark('copy') + '<span>Copy link</span></button>' +
       '</div>' +
 
-      '<div class="share-acts">' +
-        // The picture. On a phone it goes into the share sheet, where Instagram
-        // offers Stories; anywhere else it is saved to be posted from one.
-        '<button type="button" class="share-act is-primary share-story"' +
-          ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
-          ' and opens the share sheet.">' +
-          mark('instagram') + '<span>Story or post</span></button>' +
-        '<button type="button" class="share-act share-native" hidden' +
-          ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
-          mark('device') + '<span>Share\u2026</span></button>' +
+      /* The picture, shown before it is sent.
+
+         It is already drawn by the time anyone looks at this — that is what
+         makes the share sheet open instantly — so showing it costs nothing and
+         answers the question every one of these blocks leaves hanging: what
+         exactly am I about to post? The frame keeps the story's own shape, so
+         what is on screen is what lands. */
+      '<div class="share-make">' +
+        '<figure class="story-preview" data-result="' +
+          esc((decision.outcome && decision.outcome.result) || 'recorded') + '">' +
+          '<img alt="" hidden>' +
+          '<figcaption>Preparing\u2026</figcaption>' +
+        '</figure>' +
+        '<div class="share-make-side">' +
+          '<div class="share-acts">' +
+            // On a phone this goes into the share sheet, where Instagram offers
+            // Stories; anywhere else it is saved to be posted from one.
+            '<button type="button" class="share-act is-primary share-story"' +
+              ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
+              ' and opens the share sheet.">' +
+              mark('instagram') + '<span>Story or post</span></button>' +
+            '<button type="button" class="share-act share-native" hidden' +
+              ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
+              mark('device') + '<span>Share\u2026</span></button>' +
+          '</div>' +
+          '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
+        '</div>' +
       '</div>' +
 
       '<ul class="share-places">' + targets.map(function (target) {
@@ -1403,7 +1420,6 @@
           mark(target.key) + '<span>' + esc(target.label) + '</span></a></li>';
       }).join('') + '</ul>' +
 
-      '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
       '</section>';
   }
 
@@ -1522,16 +1538,48 @@
     if (story.key === key) return;
 
     story = { key: key, file: null, url: shareUrl() };
+    if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
     const soon = window.requestIdleCallback ||
       function (fn) { return window.setTimeout(fn, 300); };
     soon(function () {
       if (story.key !== key) return;
       drawStory(decision, story.url).then(function (file) {
-        if (story.key === key) story.file = file;
+        if (story.key !== key) return;
+        story.file = file;
+        showPreview(file);
       }, function () {
         // Nothing to do: the tap will draw it the slow way and say so.
+        showPreview(null);
       });
     });
+  }
+
+  /* The drawn card, put on screen at the size of a thumbnail. The address it
+     was drawn from is released when it is replaced: one of these is a couple
+     of hundred kilobytes, and a reader working through a sitting would collect
+     one per vote otherwise. */
+  let previewUrl = null;
+
+  function showPreview(file) {
+    const figure = document.querySelector('.story-preview');
+    if (!figure) return;
+    const image = figure.querySelector('img');
+    const caption = figure.querySelector('figcaption');
+
+    if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
+
+    if (!file) {
+      figure.classList.add('is-empty');
+      caption.textContent = 'Drawn when you share it';
+      return;
+    }
+    previewUrl = URL.createObjectURL(file);
+    image.src = previewUrl;
+    image.hidden = false;
+    image.alt = 'The picture this vote makes: its title, its result, the ' +
+      'numbers, and the Union painted by the vote.';
+    figure.classList.add('is-ready');
+    caption.textContent = 'What gets posted';
   }
 
   /* Hands one payload to the sheet, synchronously, inside the tap.
