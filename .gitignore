@@ -1,7 +1,17 @@
-node_modules/
+node_modules
 .DS_Store
 *.log
 .venv/
 dist/
 .cache/
 __pycache__/
+
+# Built at publish time from the records, never committed.
+#   v/            one real page per vote, for link previews and crawlers
+#   assets/og/    the 1200x630 preview picture each of those pages serves
+# Seven hundred pictures is sixty-odd megabytes; the records they are drawn
+# from are seventeen. Derived data in a repository is data that goes stale.
+/v/
+/assets/og/
+# Written by build-vote-pages.mjs alongside them, listing all 718.
+/sitemap.xml

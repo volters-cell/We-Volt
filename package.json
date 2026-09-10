@@ -2,7 +2,7 @@
   "name": "eu-tracker",
   "version": "0.1.0",
   "private": true,
-  "description": "An interactive map of the European Union: one decision at a time, country by country \u2014 who voted how, and what it costs.",
+  "description": "An interactive map of the European Union: one decision at a time, country by country — who voted how, and what it costs.",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8000",
@@ -16,7 +16,8 @@
     "backfill": "node scripts/fetch-plenary.mjs --since 2024-07-16",
     "members": "node scripts/build-members.mjs",
     "profiles": "node scripts/fetch-profiles.mjs",
-    "faces": "node scripts/mirror-faces.mjs"
+    "faces": "node scripts/mirror-faces.mjs",
+    "previews": "node scripts/build-og-cards.mjs && node scripts/build-vote-pages.mjs"
   },
   "license": "AGPL-3.0-or-later"
 }

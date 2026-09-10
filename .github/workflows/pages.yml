@@ -48,6 +48,30 @@ jobs:
       - name: Rebuild the single-file bundle
         run: node scripts/build-single-file.mjs
 
+      # A vote shared to Bluesky, X, LinkedIn, WhatsApp or Telegram unfurls as
+      # whatever its address serves — and an address ending in "#/195719" tells
+      # a server nothing, because a browser never sends the part after the hash.
+      # So every vote gets a real page carrying its own preview picture. Both
+      # are built here and uploaded with the site; neither is committed, since
+      # seven hundred pictures would be sixty-odd megabytes of derived data in
+      # a repository whose records are seventeen.
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+
+      - name: Draw a preview picture for every vote
+        run: node scripts/build-og-cards.mjs
+
+      - name: Build a page for every vote, and the sitemap
+        run: node scripts/build-vote-pages.mjs
+
       # Every asset gets the commit's number in its address, so a browser that
       # has been here before cannot serve yesterday's JavaScript for today's
       # page. Pages sends its own cache lifetime and gives us no way to set

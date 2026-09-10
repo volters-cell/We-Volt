@@ -1308,11 +1308,29 @@
 
   /* An address someone can paste somewhere, not a fragment that only means
      something inside this page. */
+  /* The address a vote is shared at.
+
+     Not "#/195719". A browser never sends the part of a URL after the hash, so
+     no server can know which vote it names — which meant every vote shared to
+     Bluesky, X, LinkedIn, WhatsApp or Telegram unfurled as the same generic
+     card, whatever it was about. Those buttons are ordinary links and a link
+     carries no picture; the only thing that reaches a feed is what the address
+     itself serves.
+
+     So a vote is shared at a real path, "v/195719/", which is a real page
+     carrying that vote's own preview picture and its own headline, and which
+     hands the reader straight into the tracker. A country carries on the end
+     as a hash, and the page passes it along.
+
+     Old "#/195719" links still open: the app has always read them and still
+     does. */
   function shareUrl(code) {
     // "index.html" is how a folder is served, not part of the address anyone
     // would write down; the site's own share menu drops it too.
     const path = location.pathname.replace(/index\.html$/, '');
-    return location.origin + path + location.search + permalink(code);
+    const id = shortId(state.decision);
+    if (!id) return location.origin + path + location.search;
+    return location.origin + path + location.search + 'v/' + id + '/' + (code ? '#' + code : '');
   }
 
   /* Sharing a vote. The address carries the vote, so anyone opening it lands

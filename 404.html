@@ -22,6 +22,23 @@
     </div>
   </header>
 
+  <!-- A vote's address is a real page now — /v/195719/ — built at publish time
+       from the records. Two things can send someone here instead: a checkout
+       that has been served without running that build, and a vote id that no
+       longer exists. The first is not an error and should not look like one,
+       so the vote is recovered from the path and opened in the tracker, which
+       has always been able to open it. GitHub Pages serves this file for any
+       path it does not have, which is what makes the rescue possible. -->
+  <script>
+    (function () {
+      var vote = (location.pathname.match(/\/v\/(\d+)\/?$/) || [])[1];
+      if (!vote) return;
+      var root = location.pathname.replace(/\/v\/\d+\/?$/, '/');
+      var where = location.hash ? '/' + location.hash.slice(1) : '';
+      location.replace(root + '#/' + vote + where);
+    }());
+  </script>
+
   <main class="prose">
     <h1>There is nothing at this address</h1>
     <p class="prose-lead">The page you asked for does not exist here — most likely a link that was

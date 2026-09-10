@@ -117,6 +117,15 @@ service, and the map is drawn from the same outline file and projection as the s
 Browsing does not write to the address bar, so reopening the site brings you back to the
 search page rather than to whatever you last clicked.
 
+**A shared vote looks like that vote.** Bluesky, X, LinkedIn, WhatsApp, Telegram, Slack
+and every other unfurler fetches the address you posted and renders the `og:image` it is
+served — and a browser never sends the part of a URL after `#`, so while a vote lived at
+`#/195719` no server could know which vote that was, and all 718 of them previewed as the
+same generic card. Each vote is now a real page at `v/195719/`, carrying its own 1200×630
+picture — the title, the result, the split, and the Union painted by that vote — its own
+headline and its own description. Following the link hands you straight into the tracker,
+with any country on the end (`v/195719/#DE`) carried along.
+
 It works with a keyboard: arrow keys walk between neighbouring countries, Enter opens
 one, Escape closes. Malta and Luxembourg have click targets as big as everyone else's.
 
@@ -142,7 +151,16 @@ npm run validate  # data validation on its own
 npm run sessions  # fetch the plenary calendar
 npm run backfill  # import every sitting since the 2024 elections
 npm run bundle    # dist/eu-tracker.html — the whole site as one file
+npm run previews  # v/<id>/ and assets/og/<id>.png — one per vote (needs playwright)
 ```
+
+The last one is what the publish runs. It is not needed to work on the site: clone
+it, serve it, and everything works, because the tracker has always opened a vote from
+`#/195719` and still does. What the build adds is the other half — a real page at
+`v/195719/` carrying that vote's own preview picture, so a link posted to Bluesky, X,
+LinkedIn, WhatsApp or Telegram shows *that vote* rather than the site's generic card.
+A checkout served without it still hands out `v/…` links, and the 404 page turns them
+back into `#/…` rather than showing anybody an error.
 
 ## Publishing
 
