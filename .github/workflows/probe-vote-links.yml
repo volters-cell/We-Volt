@@ -1,0 +1,37 @@
+# Ask the Parliament which address it publishes for ONE vote.
+#
+# Every record cites the portal's front door or the JSON of a whole sitting,
+# and neither is a citation a reader can follow. Before writing a new link into
+# 718 files, this tries every candidate shape against the Parliament's own
+# servers and prints what came back — in a real browser, because
+# www.europarl.europa.eu answers a plain HTTP client with an empty 202.
+#
+# Writes nothing. Read the table, then change the importer.
+
+name: Probe the vote links
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+
+      - name: Ask each address what it returns
+        run: node scripts/probe-vote-links.mjs
