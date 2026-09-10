@@ -15,7 +15,7 @@
   --surface-sunken: #eceef3;
   --ink: #131a24;
   --ink-soft: #4d5666;
-  --ink-faint: #6f7787;
+  --ink-faint: #656c7b;   /* 4.54:1 on the page, not 3.88 */
   --line: #d6dae3;
   --line-strong: #b3bac7;
   --focus: #0b57d0;
@@ -26,6 +26,37 @@
   --vote-absent: #9aa2b1;
   --vote-na: #c3c8d2;
 
+  /* The same four answers, as ink.
+
+     A vote colour has two jobs and they pull in opposite directions. Filling
+     a country on the map it should be saturated enough to read across a
+     continent at a glance. Set as words — a pill, a count, the result line —
+     it has to clear 4.5:1 against whatever is behind it, and a pill puts the
+     colour on a 16% tint of ITSELF, which is the least forgiving ground it
+     will ever have. Abstain was the worst of them at 2.18:1.
+
+     So the fill keeps its saturation and the ink is darkened until it clears
+     4.5:1 on all five grounds it actually appears on: surface, sunken, page,
+     and its own tint over each. Nothing on the map moves. */
+  --ink-for: #136a54;
+  --ink-against: #a73429;
+  --ink-abstain: #835a0c;
+  --ink-absent: #60656f;
+
+  /* The brand blue reads beautifully as text on white and is invisible on the
+     dark theme's surface — 1.63:1 — because it was never given a dark value.
+     It is a background colour in most places, so the background keeps it and
+     the text uses this. */
+  --eu-ink: #0b3a8f;
+
+  /* Words set ON a vote's own fill: the bar segments. Which of white or
+     near-black wins depends on the fill, and the fills differ between themes,
+     so the answer is stated per theme rather than guessed once. */
+  --on-for: #ffffff;
+  --on-against: #ffffff;
+  --on-abstain: #1c1400;
+  --on-absent: #14181f;
+
   --cost-1: #f6d3b8;
   --cost-2: #e5a06a;
   --cost-3: #c26224;
@@ -35,6 +66,7 @@
   --zero: #e4e7ee;
 
   --nato: #8459c4;
+  --nato-ink: #744eac;   /* the chip sets it on a 14% tint of itself */
 
   --context: #dcdfe6;
   --context-line: #ccd1da;
@@ -68,6 +100,21 @@
     --vote-abstain: #d8a53a;
     --vote-absent: #6b7385;
     --vote-na: #3a4351;
+
+    /* Lightened rather than darkened, for the same reason and to the same
+       threshold. Abstain already cleared it and is left alone. */
+    --ink-for: #50ac92;
+    --ink-against: #e07e72;
+    --ink-abstain: #d8a53a;
+    --ink-absent: #9298a5;
+
+    --eu-ink: #7aa7ff;      /* 7.10:1 on the dark surface */
+
+    /* The dark theme's fills are lighter, so the answers invert. */
+    --on-for: #0d1117;
+    --on-against: #0d1117;
+    --on-abstain: #1c1400;
+    --on-absent: #ffffff;
     --cost-1: #5c4331;
     --cost-2: #96602f;
     --cost-3: #d1793a;
@@ -76,6 +123,7 @@
     --gain-3: #5fc0aa;
     --zero: #262d38;
     --nato: #a37fe0;
+    --nato-ink: #aa89e2;
 
     --body-parliament: #9b8ff0;
     --body-council: #6f9ae8;
@@ -109,6 +157,7 @@
     --gain-3: #5fc0aa;
     --zero: #262d38;
     --nato: #a37fe0;
+    --nato-ink: #aa89e2;
 
     --body-parliament: #9b8ff0;
     --body-council: #6f9ae8;
@@ -198,7 +247,7 @@ a:hover { text-decoration-thickness: 2px; }
   color: inherit;
   cursor: pointer;
 }
-.brand:hover .brand-name { color: var(--eu-blue); }
+.brand:hover .brand-name { color: var(--eu-ink); }
 .brand:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .brand-mark {
   width: 34px; height: 34px; border-radius: 50%;
@@ -298,7 +347,7 @@ a:hover { text-decoration-thickness: 2px; }
 .error-message {
   background: color-mix(in srgb, var(--vote-against) 15%, var(--surface));
   border: 1px solid var(--vote-against);
-  color: var(--vote-against);
+  color: var(--ink-against);
   padding: 0.75rem 1rem;
   border-radius: var(--radius);
   font-size: 0.875rem;
@@ -578,8 +627,8 @@ main {
   align-self: start;
 }
 .outcome-result { margin: 0 0 .9rem; font-weight: 650; font-size: 1.05rem; }
-.outcome-adopted { color: var(--vote-for); }
-.outcome-rejected, .outcome-blocked { color: var(--vote-against); }
+.outcome-adopted { color: var(--ink-for); }
+.outcome-rejected, .outcome-blocked { color: var(--ink-against); }
 .outcome-note { font-size: .85rem; color: var(--ink-soft); margin: .8rem 0 0; }
 
 .tally { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
@@ -863,19 +912,19 @@ tbody tr.is-dimmed { opacity: .35; }
 /* ---------------------------------------------------------------- numbers */
 
 /* A vote count reads faster in the colour of the vote it counts. */
-.n-for { color: var(--vote-for); font-weight: 600; }
-.n-against { color: var(--vote-against); font-weight: 600; }
-.n-abstain { color: var(--vote-abstain); font-weight: 600; }
+.n-for { color: var(--ink-for); font-weight: 600; }
+.n-against { color: var(--ink-against); font-weight: 600; }
+.n-abstain { color: var(--ink-abstain); font-weight: 600; }
 .n-absent { color: var(--ink-faint); font-weight: 600; }
 .n-for, .n-against, .n-abstain, .n-absent { font-variant-numeric: tabular-nums; }
 
-.tally-for .tally-number { color: var(--vote-for); }
-.tally-against .tally-number { color: var(--vote-against); }
-.tally-abstain .tally-number { color: var(--vote-abstain); }
+.tally-for .tally-number { color: var(--ink-for); }
+.tally-against .tally-number { color: var(--ink-against); }
+.tally-abstain .tally-number { color: var(--ink-abstain); }
 .tally-absent .tally-number { color: var(--ink-faint); }
 
-.meter.met .meter-value strong { color: var(--vote-for); }
-.meter.unmet .meter-value strong { color: var(--vote-against); }
+.meter.met .meter-value strong { color: var(--ink-for); }
+.meter.unmet .meter-value strong { color: var(--ink-against); }
 .meter-value strong { font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* The legend is a control, not a caption: each entry isolates its group. */
@@ -1032,8 +1081,8 @@ tbody tr.is-dimmed { opacity: .35; }
 span.bloc { cursor: default; }
 .bloc-in { background: color-mix(in srgb, var(--eu-blue) 12%, transparent); color: var(--eu-blue); border-color: color-mix(in srgb, var(--eu-blue) 30%, transparent); }
 .bloc-out { background: transparent; color: var(--ink-faint); border-color: var(--line-strong); border-style: dashed; }
-.bloc-in.bloc-euro { background: color-mix(in srgb, var(--vote-for) 12%, transparent); color: var(--vote-for); border-color: color-mix(in srgb, var(--vote-for) 32%, transparent); }
-.bloc-in.bloc-nato { background: color-mix(in srgb, var(--nato) 14%, transparent); color: var(--nato); border-color: color-mix(in srgb, var(--nato) 32%, transparent); }
+.bloc-in.bloc-euro { background: color-mix(in srgb, var(--vote-for) 12%, transparent); color: var(--ink-for); border-color: color-mix(in srgb, var(--vote-for) 32%, transparent); }
+.bloc-in.bloc-nato { background: color-mix(in srgb, var(--nato) 14%, transparent); color: var(--nato-ink); border-color: color-mix(in srgb, var(--nato) 32%, transparent); }
 .bloc-in.bloc-candidate { background: color-mix(in srgb, var(--eu-gold) 24%, transparent); color: var(--ink); border-color: color-mix(in srgb, var(--eu-gold) 60%, transparent); }
 button.bloc:hover { filter: brightness(.94); }
 button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); border-style: solid; }
@@ -1042,21 +1091,21 @@ button.bloc[aria-pressed="true"] { background: var(--ink); color: var(--surface)
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .bloc-in { color: var(--focus); }
-  :root:not([data-theme="light"]) .bloc-in.bloc-euro { color: var(--vote-for); }
-  :root:not([data-theme="light"]) .bloc-in.bloc-nato { color: var(--nato); }
+  :root:not([data-theme="light"]) .bloc-in.bloc-euro { color: var(--ink-for); }
+  :root:not([data-theme="light"]) .bloc-in.bloc-nato { color: var(--nato-ink); }
 }
 :root[data-theme="dark"] .bloc-in { color: var(--focus); }
-:root[data-theme="dark"] .bloc-in.bloc-euro { color: var(--vote-for); }
-:root[data-theme="dark"] .bloc-in.bloc-nato { color: var(--nato); }
+:root[data-theme="dark"] .bloc-in.bloc-euro { color: var(--ink-for); }
+:root[data-theme="dark"] .bloc-in.bloc-nato { color: var(--nato-ink); }
 
 .card { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 1rem; }
 .card:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
 .card h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 0 0 .6rem; }
 
 .position { font-size: 1.3rem; font-weight: 700; margin: 0 0 .35rem; }
-.position-for { color: var(--vote-for); }
-.position-against { color: var(--vote-against); }
-.position-abstain { color: var(--vote-abstain); }
+.position-for { color: var(--ink-for); }
+.position-against { color: var(--ink-against); }
+.position-abstain { color: var(--ink-abstain); }
 .position-absent, .position-unknown { color: var(--ink-faint); }
 .position-detail { margin: 0 0 .8rem; font-size: .88rem; color: var(--ink-soft); }
 .no-vote { margin: 0; font-size: .92rem; color: var(--ink-soft); }
@@ -1103,9 +1152,9 @@ caption { text-align: left; font-size: .78rem; color: var(--ink-faint); padding-
 th, td { text-align: left; padding: .35rem .4rem; border-bottom: 1px solid var(--line); }
 thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); font-weight: 600; }
 .group-table td, .mep-table td { font-variant-numeric: tabular-nums; }
-.cell-for { color: var(--vote-for); font-weight: 600; }
-.cell-against { color: var(--vote-against); font-weight: 600; }
-.cell-abstain { color: var(--vote-abstain); }
+.cell-for { color: var(--ink-for); font-weight: 600; }
+.cell-against { color: var(--ink-against); font-weight: 600; }
+.cell-abstain { color: var(--ink-abstain); }
 .cell-absent { color: var(--ink-faint); }
 
 .vote-pill {
@@ -1113,9 +1162,9 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   padding: .12rem .5rem; border-radius: 999px;
   background: var(--surface-sunken); color: var(--ink-soft); border: 1px solid var(--line);
 }
-.vote-pill.vote-for { background: color-mix(in srgb, var(--vote-for) 16%, transparent); color: var(--vote-for); border-color: color-mix(in srgb, var(--vote-for) 40%, transparent); }
-.vote-pill.vote-against { background: color-mix(in srgb, var(--vote-against) 16%, transparent); color: var(--vote-against); border-color: color-mix(in srgb, var(--vote-against) 40%, transparent); }
-.vote-pill.vote-abstain { background: color-mix(in srgb, var(--vote-abstain) 18%, transparent); color: var(--vote-abstain); border-color: color-mix(in srgb, var(--vote-abstain) 40%, transparent); }
+.vote-pill.vote-for { background: color-mix(in srgb, var(--vote-for) 16%, transparent); color: var(--ink-for); border-color: color-mix(in srgb, var(--vote-for) 40%, transparent); }
+.vote-pill.vote-against { background: color-mix(in srgb, var(--vote-against) 16%, transparent); color: var(--ink-against); border-color: color-mix(in srgb, var(--vote-against) 40%, transparent); }
+.vote-pill.vote-abstain { background: color-mix(in srgb, var(--vote-abstain) 18%, transparent); color: var(--ink-abstain); border-color: color-mix(in srgb, var(--vote-abstain) 40%, transparent); }
 
 .impact-value { font-size: 1.5rem; font-weight: 700; margin: 0 0 .3rem; font-variant-numeric: tabular-nums; }
 .impact-cost { color: var(--cost-3); }
@@ -1434,10 +1483,10 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   white-space: nowrap;
 }
 @media (max-width: 34rem) { .roll-bar .seg-label { display: none; } }
-.roll-bar .seg-for { background: var(--vote-for); }
-.roll-bar .seg-against { background: var(--vote-against); }
-.roll-bar .seg-abstain { background: var(--vote-abstain); color: #1c1400; }
-.roll-bar .seg-absent { background: var(--vote-absent); color: #14181f; flex: 0 0 auto; }
+.roll-bar .seg-for { background: var(--vote-for); color: var(--on-for); }
+.roll-bar .seg-against { background: var(--vote-against); color: var(--on-against); }
+.roll-bar .seg-abstain { background: var(--vote-abstain); color: var(--on-abstain); }
+.roll-bar .seg-absent { background: var(--vote-absent); color: var(--on-absent); flex: 0 0 auto; }
 /* One segment chosen: the others step back rather than disappear. */
 .roll-bar:has(.is-active) .seg:not(.is-active) { opacity: .45; }
 .roll-bar .seg.is-active { box-shadow: inset 0 0 0 2px var(--ink); }
@@ -1459,7 +1508,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   cursor: pointer;
 }
 .roll-tabs button:hover { color: var(--ink); }
-.roll-tabs button[aria-selected="true"] { color: var(--eu-blue); border-bottom-color: var(--eu-blue); }
+.roll-tabs button[aria-selected="true"] { color: var(--eu-ink); border-bottom-color: var(--eu-ink); }
 
 .roll-filters {
   display: flex;
@@ -2169,8 +2218,8 @@ button.permalink {
 .badge-commission { color: var(--body-commission); }
 
 .result { font-weight: 600; }
-.result-adopted { color: var(--vote-for); }
-.result-blocked, .result-rejected { color: var(--vote-against); }
+.result-adopted { color: var(--ink-for); }
+.result-blocked, .result-rejected { color: var(--ink-against); }
 
 .panel-close {
   float: right;

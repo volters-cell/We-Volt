@@ -51,7 +51,10 @@
     'PfE': { fill: '#1b3a6b', ink: '#ffffff' },
     'ECR': { fill: '#0054a5', ink: '#ffffff' },
     'Renew': { fill: '#ffd200', ink: '#3a2f00' },
-    'Greens/EFA': { fill: '#4aa64a', ink: '#ffffff' },
+    // White on this green is 3.07:1 — the one group whose letters could not be
+    // read. The green is theirs and stays; the lettering goes dark, at 5.80:1.
+    // Their logo is drawn in white and still sits on the green, untouched.
+    'Greens/EFA': { fill: '#4aa64a', ink: '#14181f' },
     'The Left': { fill: '#8b1a1a', ink: '#ffffff' },
     'ESN': { fill: '#4b5b6b', ink: '#ffffff' },
     'NI': { fill: '#9aa2b1', ink: '#14181f' }
