@@ -1415,11 +1415,122 @@
      already has, with every app on it. Choosing Instagram there offers Add to
      story, and the picture arrives as the story.
 
-     The link is put on the clipboard first, every time. Instagram's own link
-     sticker offers whatever the clipboard holds, so adding a tappable link to
-     the story is one paste rather than a hunt; and the picture carries a code
-     for the same address, for anyone reading a story that has none. */
-  async function shareStory(button) {
+     The picture is drawn BEFORE anybody asks for it, and that is the whole
+     trick. navigator.share() may only be called while the tap that triggered
+     it is still live — "transient activation" — and drawing this card is not
+     quick: it waits for the fonts, loads the Volt mark as an image, and paints
+     a canvas the size of a phone screen. Doing that between the tap and the
+     sheet spent the tap. iOS Safari then refused the call outright, the
+     refusal was mistaken for "this browser dislikes this payload", and the
+     tap ended by quietly saving a file instead — which on a phone is no use
+     to anyone. That was the bug.
+
+     So the card is drawn when the vote opens, while nobody is waiting, and the
+     tap does nothing but hand the finished file over. It is also the version
+     that feels instant, which is the same thing as easier. */
+  let story = { key: null, file: null, url: null };
+
+  function storyKey(decision) {
+    return decision ? decision.id + '|' + shareUrl() : null;
+  }
+
+  function storyTotals(decision) {
+    const totals = tally(ballotList());
+    const seats = chamberSeats();
+    // The same arithmetic as the line under the bar: the seats are the
+    // denominator, the ballots are what was cast, and the rest did not vote.
+    totals.absent = Math.max(0, seats - castOf(totals));
+    return { totals: totals, seats: seats };
+  }
+
+  async function drawStory(decision, url) {
+    const counted = storyTotals(decision);
+
+    // The Union painted by this vote, from the same outline and the same
+    // reading of the record as the map on the page.
+    const positions = {};
+    Object.keys(statesByCode).forEach(function (code) {
+      positions[code] = Data.countryPosition(decision, code).position;
+    });
+
+    const blob = await Story.card({
+      title: decision.title,
+      subtitle: decision.subtitle,
+      bodyLabel: decision.bodyLabel,
+      dateLabel: Data.formatDate(decision.date),
+      result: (decision.outcome && decision.outcome.result) || 'recorded',
+      totals: counted.totals,
+      seats: counted.seats,
+      url: url,
+      geo: geoData,
+      positions: positions
+    });
+    if (!blob) return null;
+
+    // Named for the vote as well as the day, so a folder of these can be told
+    // apart and matched back to what it shows.
+    return new File([blob], 'eu-tracker-' + decision.date + '-' + shortId(decision) + '.png',
+      { type: 'image/png' });
+  }
+
+  /* Drawn in the gaps, when the vote opens. If the reader moves on first the
+     result is thrown away: the key it was drawn for no longer matches. */
+  function primeStory() {
+    const decision = state.decision;
+    if (!decision || !window.Story || !geoData) return;
+    const key = storyKey(decision);
+    if (story.key === key) return;
+
+    story = { key: key, file: null, url: shareUrl() };
+    const soon = window.requestIdleCallback ||
+      function (fn) { return window.setTimeout(fn, 300); };
+    soon(function () {
+      if (story.key !== key) return;
+      drawStory(decision, story.url).then(function (file) {
+        if (story.key === key) story.file = file;
+      }, function () {
+        // Nothing to do: the tap will draw it the slow way and say so.
+      });
+    });
+  }
+
+  /* Hands one payload to the sheet, synchronously, inside the tap.
+
+     One payload, not three tried in turn: activation is spent by the first
+     call, so a retry after a refusal is refused again for a different reason
+     and only muddies what went wrong. The shape is chosen up front instead,
+     by asking the browser which it will take. */
+  function offerStory(file, decision, url) {
+    if (!navigator.share) return null;
+    const shapes = [
+      // The address as its own field, so an app with a place for a link fills
+      // it in rather than trailing it after a sentence...
+      { files: [file], text: shareText(decision), url: url },
+      // ...and written into the words for one that has not.
+      { files: [file], text: shareText(decision) + ' ' + url },
+      { files: [file] }
+    ];
+    let payload = null;
+    for (let i = 0; i < shapes.length && !payload; i++) {
+      if (!navigator.canShare || navigator.canShare(shapes[i])) payload = shapes[i];
+    }
+    if (!payload) return null;
+    return navigator.share(payload);
+  }
+
+  /* The file, saved. What a laptop gets, and the last resort on a phone. */
+  function keepStory(file) {
+    const href = URL.createObjectURL(file);
+    const link = document.createElement('a');
+    link.href = href;
+    link.download = file.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
+  }
+
+  function shareStory(button) {
     if (!window.Story || !state.decision) return;
     const decision = state.decision;
     // The button carries a mark beside its words, so only the words change.
@@ -1429,101 +1540,64 @@
     const restore = function () {
       window.setTimeout(function () { say(said); button.disabled = false; }, 1600);
     };
+    const failed = function () {
+      say('Could not draw it');
+      restore();
+    };
 
-    button.disabled = true;
-    say('Drawing…');
+    const ready = story.file && story.key === storyKey(decision) ? story.file : null;
+    const url = ready ? story.url : shareUrl();
 
-    const totals = tally(ballotList());
-    const seats = chamberSeats();
-    // The same arithmetic as the line under the bar: the seats are the
-    // denominator, the ballots are what was cast, and the rest did not vote.
-    totals.absent = Math.max(0, seats - castOf(totals));
-
-    const url = shareUrl();
-    try { await navigator.clipboard.writeText(url); } catch (error) { /* no clipboard */ }
-
-    // The Union painted by this vote, from the same outline and the same
-    // reading of the record as the map on the page.
-    const positions = {};
-    Object.keys(statesByCode).forEach(function (code) {
-      positions[code] = Data.countryPosition(decision, code).position;
-    });
-
-    let blob = null;
-    try {
-      blob = await Story.card({
-        title: decision.title,
-        subtitle: decision.subtitle,
-        bodyLabel: decision.bodyLabel,
-        dateLabel: Data.formatDate(decision.date),
-        result: (decision.outcome && decision.outcome.result) || 'recorded',
-        totals: totals,
-        seats: seats,
-        url: url,
-        geo: geoData,
-        positions: positions
-      });
-    } catch (error) {
-      blob = null;
+    /* Primed, never awaited. Waiting on the clipboard here would spend the
+       same tap that the share sheet still needs. */
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        const written = navigator.clipboard.writeText(url);
+        if (written && written.catch) written.catch(function () { /* refused */ });
+      } catch (error) { /* no clipboard */ }
     }
 
-    if (!blob) {
-      say('Could not draw it');
+    if (ready) {
+      const shared = offerStory(ready, decision, url);
+      if (shared) {
+        button.disabled = true;
+        shared.then(function () {
+          say('Shared');
+          shareNote(STORY_DONE);
+          restore();
+        }, function (error) {
+          // The reader closing the sheet is not a failure and re-opening it
+          // would be rude. Anything else means the sheet never came: save the
+          // picture, which always works.
+          if (!error || error.name === 'AbortError') { restore(); return; }
+          keepStory(ready);
+          say('Image saved');
+          shareNote(STORY_SAVED);
+          restore();
+        });
+        return;
+      }
+      // No share sheet here — a laptop, mostly.
+      keepStory(ready);
+      say('Image saved');
+      shareNote(STORY_SAVED);
       restore();
       return;
     }
 
-    // Named for the vote as well as the day, so a folder of these can be told
-    // apart and matched back to what it shows.
-    const name = 'eu-tracker-' + decision.date + '-' + shortId(decision) + '.png';
-    const file = new File([blob], name, { type: 'image/png' });
-
-    /* The address travels with the picture wherever the phone will carry it.
-       Most apps that take a story take the image and drop the words — that is
-       the app's choice, not ours — but the ones that keep them get a link the
-       reader can follow, and nothing is lost by offering it. So the fuller
-       payload is tried first and a bare picture second, because a browser that
-       will not take files beside text refuses the whole call rather than
-       trimming it. */
-    const sheet = [
-      // The address as its own field, so an app that has a place for a link
-      // puts it there rather than at the end of a sentence...
-      { files: [file], text: shareText(decision), url: url },
-      // ...and written into the words for one that has not.
-      { files: [file], text: shareText(decision) + ' ' + url },
-      { files: [file] }
-    ];
-
-    for (let i = 0; navigator.share && i < sheet.length; i++) {
-      if (navigator.canShare && !navigator.canShare(sheet[i])) continue;
-      try {
-        await navigator.share(sheet[i]);
-        say('Shared');
-        shareNote(STORY_DONE);
-        restore();
-        return;
-      } catch (error) {
-        // AbortError is the reader closing the sheet, and re-opening it would
-        // be rude; anything else is the browser refusing this shape of call,
-        // so the next one down is worth a try.
-        if (error && error.name === 'AbortError') {
-          restore();
-          return;
-        }
-      }
-    }
-
-    const href = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = href;
-    link.download = name;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
-    say('Image saved');
-    shareNote(STORY_SAVED);
-    restore();
+    /* Not drawn yet — the reader was faster than the idle callback. Draw it
+       now. The sheet cannot be opened from here on iOS, for the reason above,
+       so this saves the picture and says so rather than pretending. */
+    button.disabled = true;
+    say('Drawing…');
+    drawStory(decision, url).then(function (file) {
+      if (!file) { failed(); return; }
+      story = { key: storyKey(decision), file: file, url: url };
+      keepStory(file);
+      say('Image saved');
+      shareNote(STORY_SAVED);
+      restore();
+    }, failed);
   }
 
   async function copyLink(button) {
@@ -1707,6 +1781,9 @@
     dom['vote-share'].innerHTML = shareCard(decision);
     armShareCard(dom['vote-share']);
     dom['vote-share'].hidden = false;
+    // Draw the picture now, while nobody is waiting for it, so the tap that
+    // shares it has nothing left to do but open the sheet.
+    primeStory();
 
     const isSample = decision.status === 'sample';
     dom['decision-status'].hidden = !isSample;

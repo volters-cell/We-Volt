@@ -25,7 +25,9 @@ const TERM = 10;
    this month's sitting is caught here rather than after 718 files are written. */
 const VOTES = [
   { id: 195719, date: '2026-07-09', procedure: '2023/0212(COD)', title: 'Establishment of the digital euro' },
+  { id: 194546, date: '2026-06-18', procedure: '2026/0099(COD)', title: 'Shipments of waste' },
   { id: 189599, date: '2026-03-26', procedure: '2023/0135(COD)', title: 'Combating corruption' },
+  { id: 182511, date: '2025-12-17', procedure: null,             title: 'Military Mobility' },
   { id: 169401, date: '2024-09-16', procedure: null,             title: 'an early sitting of the term' }
 ];
 
@@ -58,6 +60,26 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 
+/* europarl.europa.eu challenges the first request from a new client and answers
+   it 202 with an empty body, then sets a cookie and behaves. The first run of
+   this probe read those 202s as "the page does not exist" for the whole first
+   vote, which would have been a wrong answer written into 718 files. So the
+   wall is walked into deliberately, once, before anything is measured. */
+console.log('warming up: europarl.europa.eu sets its cookie on first contact');
+for (let i = 0; i < 3; i++) {
+  try {
+    const r = await page.goto('https://www.europarl.europa.eu/portal/en',
+      { waitUntil: 'domcontentloaded', timeout: 40000 });
+    const text = await page.evaluate(() => document.body ? document.body.innerText : '');
+    console.log('  attempt ' + (i + 1) + ': ' + (r ? r.status() : '?') +
+      ', ' + text.replace(/\s/g, '').length + ' chars');
+    if (text.replace(/\s/g, '').length > 500) break;
+    await page.waitForTimeout(2500);
+  } catch (error) {
+    console.log('  attempt ' + (i + 1) + ': ' + String(error.message).split('\n')[0].slice(0, 50));
+  }
+}
+
 for (const vote of VOTES) {
   console.log('\n' + '='.repeat(78));
   console.log(`VOTE ${vote.id} — ${vote.date} — ${vote.title}`);
@@ -67,10 +89,16 @@ for (const vote of VOTES) {
   for (const [name, url] of candidates(vote)) {
     let line = '  ' + name.padEnd(26);
     try {
-      const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 40000 });
+      let response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 40000 });
+      let body = await page.evaluate(() => document.body ? document.body.innerText : '');
+      // An empty 202 is the wall, not an answer. Ask once more before believing it.
+      if (response && response.status() === 202 && body.replace(/\s/g, '').length < 200) {
+        await page.waitForTimeout(3000);
+        response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 40000 });
+        body = await page.evaluate(() => document.body ? document.body.innerText : '');
+      }
       const status = response ? response.status() : 0;
       const type = ((response && response.headers()['content-type']) || '').split(';')[0];
-      const body = await page.evaluate(() => document.body ? document.body.innerText : '');
       const title = (await page.title() || '').replace(/\s+/g, ' ').trim().slice(0, 54);
 
       // A bot wall answers 200 with nothing in it; a real page has text.
