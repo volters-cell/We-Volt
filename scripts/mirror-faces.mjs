@@ -22,7 +22,10 @@
  *
  * © European Union. The Parliament's portraits are reusable under its reuse
  * notice with attribution, which the about page carries.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';

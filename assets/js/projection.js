@@ -1,6 +1,9 @@
 /* Lambert azimuthal equal-area, the projection the EU uses for its own maps
    (ETRS89-LAEA, EPSG:3035: centred on 52N 10E). Spherical form — the flattening
-   error is far below the simplification already baked into the outlines. */
+   error is far below the simplification already baked into the outlines. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 

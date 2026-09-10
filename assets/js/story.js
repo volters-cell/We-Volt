@@ -16,7 +16,10 @@
 
    Everything on the card comes from the vote already open on the page. No
    figure is computed here, so nothing on the picture can disagree with the
-   page it came from. */
+   page it came from. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 

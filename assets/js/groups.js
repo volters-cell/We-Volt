@@ -4,7 +4,10 @@
    One file because a group has to look the same everywhere it appears — in the
    roll-call breakdown, in the country panel, in a member's profile. Two copies
    of this table would drift, and a reader would meet two different marks for
-   the same group on one page. */
+   the same group on one page. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 

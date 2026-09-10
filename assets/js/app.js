@@ -1,5 +1,8 @@
 /* Wiring: load the data, keep one piece of state (decision, layer, country),
-   and let the URL carry it so a journalist can link straight to a country. */
+   and let the URL carry it so a journalist can link straight to a country. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function () {
   'use strict';
 

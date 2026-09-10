@@ -1,0 +1,67 @@
+EU Tracker
+An interactive record of how the European Parliament votes, member by member.
+
+Copyright (C) 2026 EU Tracker contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+details.
+
+You should have received a copy of the GNU Affero General Public License along
+with this program. If not, see <https://www.gnu.org/licenses/>.
+
+The full licence is in the file LICENSE.
+
+
+WHAT THE LICENCE COVERS
+
+The AGPL covers the work done here: the code, the design, the writing, the
+map rendering, the story card, the import and validation scripts, and the
+structure the records are held in.
+
+Section 13 is the one that matters for a website. Anyone who runs a modified
+version of this program where other people can reach it over a network must
+offer those people the source of their version. Publishing a changed copy of
+EU Tracker without publishing the changes is not permitted by this licence.
+Neither is removing this notice, or the attribution the site carries.
+
+
+WHAT THE LICENCE DOES NOT COVER
+
+The votes are not ours to license, and nobody's permission is needed to read
+them. They are the European Parliament's public record, and this project has
+never claimed anything else.
+
+  The votes and members
+    (C) European Union, europarl.europa.eu — reused under the Parliament's
+    reuse notice, which allows reproduction with the source acknowledged.
+    Roll-call records, member directory, plenary calendar and portraits.
+
+  Data files authored here
+    The reference files written for this project — delegations, blocs, the
+    built indexes — are published under Creative Commons Attribution 4.0
+    International (CC BY 4.0). Reuse them; say where they came from.
+
+  Country boundaries
+    Public-domain geometry derived from Natural Earth and TM World Borders,
+    simplified for display. They imply no position on any border.
+
+  The political groups' marks
+    Each group's own trademark, taken from that group's own site and shown to
+    identify the group. Not licensed by this project, and not ours to license.
+
+  The Volt wordmark
+    Volt Europa's trademark, used to identify Volt. Not licensed by this
+    project.
+
+  Typefaces
+    IBM Plex Sans and Source Serif 4, under the SIL Open Font License.
+
+Reusing this work means honouring those terms too. The AGPL grants what is
+ours to grant, and nothing more.

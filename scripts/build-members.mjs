@@ -14,7 +14,10 @@
  * Each entry is [vote id, position] against the member directory, which keeps a
  * member's whole term at a few kilobytes and the whole Parliament at a few
  * megabytes of static files.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, mkdir, readdir, rm } from 'node:fs/promises';
 import path from 'node:path';

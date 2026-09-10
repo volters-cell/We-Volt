@@ -1,5 +1,8 @@
 /* EU Tracker — colours live here so the three map layers, the legend and the
-   panel always agree, and so the whole thing follows the reader's theme. */
+   panel always agree, and so the whole thing follows the reader's theme. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 :root {
   color-scheme: light dark;

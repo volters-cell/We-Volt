@@ -20,7 +20,10 @@
  * or they are not.
  *
  * Exits non-zero if anything is missing or disagrees, so it can guard a build.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';

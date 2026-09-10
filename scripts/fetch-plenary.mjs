@@ -24,7 +24,10 @@
  * headed "Establishment of the digital euro", filed under 2023/0212.
  *
  * Nothing editorial is ever generated: a record arrives with an empty summary.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';

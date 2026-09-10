@@ -18,7 +18,10 @@
  *
  * Writes data/reference/plenary-calendar.json, which the site reads to say when
  * the last session was and when the next one starts.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';

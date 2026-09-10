@@ -4,7 +4,10 @@
  * is published. Run it locally, and let CI run it on every pull request:
  *
  *   node scripts/validate-data.mjs
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';

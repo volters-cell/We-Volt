@@ -10,7 +10,10 @@
  * that have actually been added. Without it the page has to guess, and a guess
  * means a browser console full of 404s for the eight groups whose logo nobody
  * has dropped in yet.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';

@@ -8,7 +8,10 @@
    error correction level M, versions 1 to 10, which covers any address this
    site produces with room for the code to survive a logo over its middle.
 
-   The algorithm is ISO/IEC 18004. The tables below are from it. */
+   The algorithm is ISO/IEC 18004. The tables below are from it. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 

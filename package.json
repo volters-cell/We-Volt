@@ -18,5 +18,5 @@
     "profiles": "node scripts/fetch-profiles.mjs",
     "faces": "node scripts/mirror-faces.mjs"
   },
-  "license": "MIT"
+  "license": "AGPL-3.0-or-later"
 }

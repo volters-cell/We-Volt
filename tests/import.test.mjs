@@ -1,7 +1,10 @@
 /* Checks the one piece of logic that turns the Parliament's records into this
    project's. The fixtures are cut down from real answers of the open data
    portal, so a change in its shape shows up here rather than on the site.
-   Run with `npm test`. No framework — node is enough. */
+   Run with `npm test`. No framework — node is enough. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';

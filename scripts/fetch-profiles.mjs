@@ -24,7 +24,10 @@
  *
  * Organisations are read once and remembered: seven hundred members share
  * about two hundred parties, so the second member of a party costs nothing.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

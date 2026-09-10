@@ -27,7 +27,10 @@
  * the header actually carries, and takes the picture the site itself uses as
  * its mark — an <img>, a CSS background, or an inline <svg> serialised as one.
  * --probe prints what it found and its reasoning without writing anything.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';

@@ -21,7 +21,10 @@
  *   node scripts/stamp-assets.mjs --check    # say what would be stamped
  *
  * Run it after the single-file bundle, which reads these same tags.
- */
+ 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import path from 'node:path';

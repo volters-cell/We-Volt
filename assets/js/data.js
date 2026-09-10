@@ -1,5 +1,8 @@
 /* Loading and the derived numbers: delegation tallies, the Council
-   qualified-majority arithmetic, and the buckets each map layer colours by. */
+   qualified-majority arithmetic, and the buckets each map layer colours by. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 

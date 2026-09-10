@@ -10,7 +10,10 @@
    over: initials on the colour of the member's political group underneath, and
    the photograph on top of it. If the photograph never arrives the initials
    stay, which is a face-shaped thing with the right name on it rather than a
-   broken image. */
+   broken image. 
+
+   SPDX-License-Identifier: AGPL-3.0-or-later
+*/
 (function (global) {
   'use strict';
 
