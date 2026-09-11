@@ -1752,14 +1752,59 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 
 /* The address, spelled out. Seeing the link before sending it is what makes
    the card trustworthy; it is short enough now to be read at a glance. */
-.share-address { display: flex; gap: .45rem; align-items: stretch; }
+/* Every way of sharing, in one line, in the order people reach for them.
+
+   It scrolls when it does not fit. On a phone the places that take a link sit
+   past the right edge and are pushed into view, which is how every app does
+   this — rather than wrapping into a block three rows deep that shoves the
+   rest of the vote off the screen. The fade at the right edge is the only
+   thing that says there is more; it goes when you reach the end. */
+.share-scroller { position: relative; }
+.share-scroller::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  right: -1px;
+  width: 2.2rem;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, var(--surface-sunken) 70%);
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+.share-scroller.has-more::after { opacity: 1; }
+
+.share-choices {
+  display: flex;
+  gap: .45rem;
+  margin: 0;
+  padding: 0 0 .15rem;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  /* No snap points. They re-aligned the row after the browser had scrolled a
+     focused choice into view, which left two of them half off the edge for
+     anyone tabbing through — a keyboard user aimed at a control they could
+     only half see. The padding is what replaces them: it keeps a focused
+     choice clear of both edges instead of flush against one. */
+  scroll-padding-inline: 1rem;
+  scrollbar-width: thin;
+}
+.share-choices::-webkit-scrollbar { height: 5px; }
+.share-choices::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+}
+.share-choice { flex: 0 0 auto; }
+
 .share-address-field {
-  flex: 1 1 12rem;
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
   min-width: 0;
   font: inherit;
-  font-size: .82rem;
-  padding: .5rem .7rem;
-  color: var(--ink-soft);
+  font-size: .78rem;
+  padding: .42rem .6rem;
+  color: var(--ink-faint);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 9px;
@@ -1824,17 +1869,7 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   @keyframes preview-in { from { opacity: 0; transform: translateY(3px); } }
 }
 
-.share-acts { display: flex; flex-wrap: wrap; gap: .45rem; }
-.share-make .share-note { margin-top: .5rem; }
-
-.share-places {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .45rem;
-  margin: .55rem 0 0;
-  padding: 0;
-  list-style: none;
-}
+.share-make .share-note { margin-top: 0; }
 
 .share-act {
   display: inline-flex;
@@ -1885,13 +1920,6 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 }
 .share-note.is-live { color: var(--ink); font-weight: 500; }
 
-/* Where the card is narrow the address takes the whole line: half an address
-   with the vote's own number cut off the end is worse than none. */
-@media (max-width: 26rem) {
-  .share-address { flex-wrap: wrap; }
-  .share-address-field { flex: 1 1 100%; }
-  .share-address-copy { flex: 1 1 auto; justify-content: center; }
-}
 
 /* --------------------------------------------------------------- motion
 

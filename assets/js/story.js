@@ -432,36 +432,37 @@
     const pillW = WIDTH - pad - pillX;
     const pillH = 88;
 
+    /* The pill and the line below it, centred against the code beside them. */
+    const pillY = y + Math.round((CODE - (pillH + 28 + 30)) / 2);
+
     ctx.fillStyle = INK.gold;
-    roundRect(ctx, pillX, y, pillW, pillH, pillH / 2);
+    roundRect(ctx, pillX, pillY, pillW, pillH, pillH / 2);
     ctx.fill();
 
     ctx.fillStyle = '#12203f';
     ctx.font = font(700, 38);
     ctx.textAlign = 'center';
-    ctx.fillText('Open the full record', pillX + pillW / 2, y + 58);
+    ctx.fillText('Open the full record', pillX + pillW / 2, pillY + 58);
 
     ctx.textAlign = 'left';
 
-    /* No scheme and no www: what is left is what a reader would type. It hangs
-       from the same left edge as the line below it, so the foot reads as one
-       column under the pill rather than three things at three alignments. */
-    const address = String(vote.url || '')
-      .replace(/^https?:\/\//i, '')
-      .replace(/^www\./i, '');
-    const footX = pillX + 6;
-    if (address) {
-      let size = 30;
-      ctx.font = font(600, size);
-      while (size > 21 && ctx.measureText(address).width > pillW - 12) {
-        size -= 2;
-        ctx.font = font(600, size);
-      }
-      ctx.fillStyle = INK.faint;
-      ctx.fillText(address, footX, y + 126);
-    }
+    /* The address is not printed.
 
-    /* Who is asking, and why: under the address, beside the code, in the room
+       It was, for a while, and the reasoning was sound: a story is often
+       watched on the very phone that would otherwise have to scan the code,
+       and words survive a screenshot. What the reasoning missed is what the
+       words actually said. The site is hosted on GitHub Pages, so the address
+       reads "volters-cell.github.io/..." — and a card carrying somebody's
+       repository host across the bottom looks like a draft, not like a record
+       of how the Parliament voted.
+
+       So the two ways in are the code and the pill, both of which say what
+       they are without naming anyone's hosting. If this ever gets a domain of
+       its own, printing it here again would be worth doing: the line is one
+       fillText, and its place is still free. */
+    const footX = pillX + 6;
+
+    /* Who is asking, and why: under the way in, beside the code, in the room
        that row already has. Putting it below would have cost the map eighty
        pixels, and the map is the reason anyone stops on this card at all.
 
@@ -470,7 +471,7 @@
     const markH = 30;
     const mark = await volt(markH);
     const line = 'Someone has to shape Europe.';
-    const lineY = y + CODE - 8;   // sat on the code's own baseline, under the address
+    const lineY = pillY + pillH + 28 + 24;   // under the pill, on the code's own line
     let voltX = footX;
 
     if (mark) {

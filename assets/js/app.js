@@ -1387,19 +1387,53 @@
         href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
     ];
 
+    /* Every way of sharing this vote, in one row, in the order people reach
+       for them: the picture first, then the phone's own sheet, then the
+       clipboard, then the places that take a link.
+
+       One row rather than three stacked groups, because choosing was the slow
+       part: an address field, then a pair of buttons, then a list of six meant
+       reading three separate things before deciding. Now it is one line, left
+       to right, and the first thing on it is the one most people want.
+
+       It scrolls when it does not fit. On a narrow phone the six places sit
+       past the right edge and are reached by pushing the row along, which is
+       how every app does this; nothing wraps into a block that pushes the rest
+       of the vote off the screen. */
+    const choice = function (inner, extra, attrs) {
+      return '<li class="share-choice' + (extra ? ' ' + extra : '') + '"' +
+        (attrs || '') + '>' + inner + '</li>';
+    };
+
     return '<section class="share-card" aria-labelledby="share-card-title">' +
       '<h3 class="share-card-title" id="share-card-title">Share this vote</h3>' +
 
-      /* The address is shown without its scheme, which is the form a reader
-         would say out loud and the form printed on the story card. Copy puts
-         the whole thing on the clipboard; a reader who selects the line by
-         hand gets the scheme-less form, which every browser and every chat app
-         resolves to the same page. */
-      '<div class="share-address">' +
-        '<input class="share-address-field" type="text" readonly spellcheck="false"' +
-          ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
-        '<button type="button" class="share-act share-address-copy" data-copy="' + esc(url) + '">' +
-          mark('copy') + '<span>Copy link</span></button>' +
+      '<div class="share-scroller">' +
+        '<ul class="share-choices">' +
+
+          // The picture. On a phone it goes into the share sheet, where
+          // Instagram offers Stories; anywhere else it is saved to post from.
+          choice('<button type="button" class="share-act is-primary share-story"' +
+            ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
+            ' and opens the share sheet.">' +
+            mark('instagram') + '<span>Story or post</span></button>') +
+
+          choice('<button type="button" class="share-act share-native"' +
+            ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
+            mark('device') + '<span>Share…</span></button>', 'share-choice-native', ' hidden') +
+
+          choice('<button type="button" class="share-act share-address-copy"' +
+            ' data-copy="' + esc(url) + '">' +
+            mark('copy') + '<span>Copy link</span></button>') +
+
+          targets.map(function (target) {
+            return choice('<a class="share-act share-place" href="' + esc(target.href) +
+              '" target="_blank" rel="noopener noreferrer" aria-label="' +
+              esc(target.aria || ('Share this vote on ' + target.label)) + '">' +
+              mark(target.key) + '<span>' + esc(target.label) + '</span></a>');
+          }).join('') +
+
+        '</ul>' +
       '</div>' +
 
       /* The picture, shown before it is sent.
@@ -1413,30 +1447,19 @@
         '<figure class="story-preview" data-result="' +
           esc((decision.outcome && decision.outcome.result) || 'recorded') + '">' +
           '<img alt="" hidden>' +
-          '<figcaption>Preparing\u2026</figcaption>' +
+          '<figcaption>Preparing…</figcaption>' +
         '</figure>' +
         '<div class="share-make-side">' +
-          '<div class="share-acts">' +
-            // On a phone this goes into the share sheet, where Instagram offers
-            // Stories; anywhere else it is saved to be posted from one.
-            '<button type="button" class="share-act is-primary share-story"' +
-              ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
-              ' and opens the share sheet.">' +
-              mark('instagram') + '<span>Story or post</span></button>' +
-            '<button type="button" class="share-act share-native" hidden' +
-              ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
-              mark('device') + '<span>Share\u2026</span></button>' +
-          '</div>' +
           '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
+
+          /* The address, under everything, for a reader who wants to see what
+             they are about to send before they send it. Shown without its
+             scheme, which is the form anyone would say out loud. Copy puts the
+             whole thing on the clipboard. */
+          '<input class="share-address-field" type="text" readonly spellcheck="false"' +
+            ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
         '</div>' +
       '</div>' +
-
-      '<ul class="share-places">' + targets.map(function (target) {
-        return '<li><a class="share-act share-place" href="' + esc(target.href) +
-          '" target="_blank" rel="noopener noreferrer" aria-label="' +
-          esc(target.aria || ('Share this vote on ' + target.label)) + '">' +
-          mark(target.key) + '<span>' + esc(target.label) + '</span></a></li>';
-      }).join('') + '</ul>' +
 
       '</section>';
   }
@@ -1461,7 +1484,49 @@
      touched, so copying it by hand is one gesture; and the system share sheet
      appears where the browser has one — a phone, mostly. The sheet button is
      revealed rather than rendered conditionally so the markup stays the same. */
+  /* The fade at the right edge of the row of choices means "there is more this
+     way". It is only true while there is, so it is asked rather than assumed —
+     on a wide screen everything fits and nothing is faded. */
+  function armScroller(root) {
+    const scroller = root.querySelector('.share-scroller');
+    const row = scroller && scroller.querySelector('.share-choices');
+    if (!row) return;
+
+    const look = function () {
+      const more = row.scrollWidth - row.clientWidth - row.scrollLeft > 4;
+      scroller.classList.toggle('has-more', more);
+    };
+    row.addEventListener('scroll', look, { passive: true });
+
+    /* Tabbing into a choice brings it fully into view.
+
+       The browser is supposed to do this and mostly does, but measured across
+       the row it left two of the nine sticking out past the right edge without
+       scrolling at all — so a keyboard user was aimed at a control they could
+       only half see. Rather than argue with the heuristic, the row is moved
+       here, by the smallest amount that clears both edges. */
+    row.addEventListener('focusin', function (event) {
+      const item = event.target.closest('.share-choice');
+      if (!item) return;
+      const edge = 12;
+      const box = item.getBoundingClientRect();
+      const frame = row.getBoundingClientRect();
+      let by = 0;
+      if (box.right > frame.right - edge) by = box.right - frame.right + edge;
+      else if (box.left < frame.left + edge) by = box.left - frame.left - edge;
+      if (!by) return;
+      if (row.scrollBy) row.scrollBy({ left: by, behavior: REDUCED.matches ? 'auto' : 'smooth' });
+      else row.scrollLeft += by;
+    });
+    if (window.ResizeObserver) new ResizeObserver(look).observe(row);
+    else window.addEventListener('resize', look);
+    // After layout, and again once the marks have drawn.
+    look();
+    window.setTimeout(look, 60);
+  }
+
   function armShareCard(root) {
+    armScroller(root);
     const field = root.querySelector('.share-address-field');
     if (field) {
       const all = function () { field.select(); };
@@ -1471,6 +1536,10 @@
 
     if (!navigator.share) return;
     Array.prototype.forEach.call(root.querySelectorAll('.share-native'), function (button) {
+      // The row is what is hidden, so that a browser without a share sheet
+      // leaves no gap in the line rather than an empty slot.
+      const row = button.closest('.share-choice');
+      if (row) row.hidden = false;
       button.hidden = false;
       button.onclick = function () {
         navigator.share({
