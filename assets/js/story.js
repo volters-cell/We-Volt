@@ -26,32 +26,47 @@
   const WIDTH = 1080;
   const HEIGHT = 1920;
 
+  /* Light, like the site.
+
+     This card was navy, and navy is what Instagram's own chrome is: in the
+     picker that offers Story, Reel and Send a message, a dark card sat inside
+     dark buttons on a dark sheet and the three previews ran together into one
+     smudge. A light card is a page of paper in that picker — it reads as one
+     thing, at a glance, every time.
+
+     The values are the site's own light theme rather than a second palette
+     invented for the card, so the picture and the page it links to cannot
+     drift apart. */
   const INK = {
-    ground: '#0b1b3a',
-    panel: '#132549',
-    text: '#ffffff',
-    soft: '#c3d0e8',
-    faint: '#8fa6cc',
-    gold: '#ffd617',
-    for: '#1a7f5a',
-    against: '#b3372c',
-    abstain: '#b8860b',
-    absent: '#5b6b86'
+    ground: '#ffffff',
+    panel: '#eceef3',
+    text: '#131a24',
+    soft: '#4d5666',
+    faint: '#656c7b',
+    gold: '#f6c700',
+    blue: '#0b3a8f',
+    // The bar's three blocks: the same fills the map uses below it.
+    for: '#15785f',
+    against: '#b3382c',
+    abstain: '#c88a12',
+    absent: '#9aa2b1'
   };
-  // The map's colours, the same four the page uses.
+  // The map's colours, the same four the page uses in its light theme.
   const VOTE = {
-    for: '#2f9c7d',
-    against: '#d75b4c',
-    abstain: '#d8a53a',
+    for: '#15785f',
+    against: '#b3382c',
+    abstain: '#c88a12',
     split: '#7c8ba1',
-    absent: '#3a4351',
-    unknown: '#3a4351'
+    absent: '#d6dae3',
+    unknown: '#d6dae3'
   };
 
+  /* Deep enough to carry a hundred-pixel word on white. These are the inks the
+     page sets a result in, not the fills. */
   const RESULT = {
-    adopted: { word: 'Adopted', ink: '#38c08a' },
-    rejected: { word: 'Rejected', ink: '#ff7a6b' },
-    recorded: { word: 'Recorded', ink: '#c3d0e8' }
+    adopted: { word: 'Adopted', ink: '#136a54' },
+    rejected: { word: 'Rejected', ink: '#a73429' },
+    recorded: { word: 'Recorded', ink: '#4d5666' }
   };
 
   function font(weight, size, family) {
@@ -108,7 +123,7 @@
 
      The file has no colour of its own — its site fills it from the surrounding
      text, and the page does the same with a mask — so the copy rendered here
-     is given white, which is the colour it takes on a dark ground. The file on
+     is given the ink colour, which is what it takes on a light ground. The file on
      disk is untouched; this only says what to paint it with, and asks for it
      at the size it will be drawn so it rasterises sharp rather than being
      scaled up from 230 pixels.
@@ -136,7 +151,7 @@
           .replace(/\s(?:class|width|height)="[^"]*"/gi, '')
           .replace(/<svg\b/i, '<svg width="' + wide * 3 + '" height="' + height * 3 + '"');
         const painted = (root + text.slice(opening[0].length))
-          .replace(/fill="inherit"/g, 'fill="#ffffff"');
+          .replace(/fill="inherit"/g, 'fill="#131a24"');
         return new Promise(function (resolve, reject) {
           const image = new Image();
           image.onload = function () { resolve(image); };
@@ -336,7 +351,8 @@
 
     // The question the picture answers, in the Union's own gold: the reason to
     // look at the map below rather than scroll past it.
-    ctx.fillStyle = INK.gold;
+    // Gold on white is 1.7:1 and unreadable; the Union's other colour is not.
+    ctx.fillStyle = INK.blue;
     ctx.font = font(700, 40);
     ctx.fillText('How did your country vote?', pad, y);
     y += HOOK + TITLE_TOP;
@@ -425,7 +441,7 @@
        rather than the paragraph of slug it used to be. */
     const drawn = vote.url && global.QR &&
       QR.draw(ctx, vote.url, pad, y, CODE, {
-        ink: INK.ground, background: '#ffffff', quiet: 3
+        ink: INK.text, background: INK.ground, quiet: 3
       });
 
     const pillX = drawn ? pad + CODE + 28 : pad;

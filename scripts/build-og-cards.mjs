@@ -88,10 +88,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; box-sizing: border-box; }
-  body { width: 1200px; height: 630px; background: #0b1b3a; color: #fff; overflow: hidden;
+  /* Light, like the site and like the story card. A preview card is a small
+     bright rectangle in somebody's feed; it should look like a page, not like
+     a hole. The values are the site's own light theme. */
+  body { width: 1200px; height: 630px; background: #ffffff; color: #131a24; overflow: hidden;
          font-family: 'IBM Plex Sans', system-ui, sans-serif;
          display: grid; grid-template-columns: 1fr 430px; }
-  #edge { position: absolute; inset: 0 0 auto 0; height: 9px; background: #c3d0e8; }
+  #edge { position: absolute; inset: 0 0 auto 0; height: 9px; background: #4d5666; }
   /* Centred as a block, so a two-word title and a four-line one both sit
      balanced rather than one of them leaving a hole in the middle. */
   .words { padding: 50px 0 46px 64px; display: flex; flex-direction: column;
@@ -99,24 +102,24 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   /* The masthead is pinned to the top; the vote itself is centred below it. */
   .head { position: absolute; top: 50px; left: 64px; }
   .mark { display: flex; align-items: center; gap: 12px; }
-  .dot { width: 26px; height: 26px; border-radius: 50%; background: #0b3a8f; border: 3px dashed #ffd617; }
+  .dot { width: 26px; height: 26px; border-radius: 50%; background: #0b3a8f; border: 3px dashed #f6c700; }
   .name { font-weight: 700; font-size: 22px; letter-spacing: .02em; }
   .meta { margin-top: 16px; font-size: 17px; font-weight: 600; letter-spacing: .07em;
-          text-transform: uppercase; color: #8fa6cc; }
+          text-transform: uppercase; color: #656c7b; }
   h1 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; letter-spacing: -.015em;
        line-height: 1.08; overflow: hidden; }
   .verdict { font-size: 60px; font-weight: 700; line-height: 1; margin-top: 30px; }
   .bar { display: flex; height: 24px; border-radius: 4px; overflow: hidden; margin-top: 20px;
-         width: 100%; background: #16274b; }
+         width: 100%; background: #eceef3; }
   .bar span { display: block; }
   .counts { margin-top: 18px; font-size: 25px; font-weight: 700; display: flex;
             gap: 10px; align-items: baseline; flex-wrap: wrap; }
-  .counts i { font-style: normal; font-size: 18px; font-weight: 600; color: #c3d0e8; }
-  .counts em { font-style: normal; color: #5b6b86; font-weight: 400; }
-  .seats { margin-top: 10px; font-size: 17px; color: #8fa6cc; }
+  .counts i { font-style: normal; font-size: 18px; font-weight: 600; color: #4d5666; }
+  .counts em { font-style: normal; color: #9aa2b1; font-weight: 400; }
+  .seats { margin-top: 10px; font-size: 17px; color: #656c7b; }
   .map { display: flex; align-items: center; justify-content: center; height: 630px; }
   svg { width: 400px; height: 470px; }
-  path { stroke: #0b1b3a; stroke-width: .9; }
+  path { stroke: #ffffff; stroke-width: .9; }
 </style></head><body>
   <div id="edge"></div>
   <div class="words">
@@ -133,10 +136,11 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
   <div class="map" id="map"></div>
 <script>${projection}</script>
 <script>
-  const VOTE = { for: '#2f9c7d', against: '#d75b4c', abstain: '#d8a53a',
-                 split: '#7c8ba1', absent: '#3a4351', unknown: '#3a4351' };
-  const RESULT = { adopted: ['Adopted', '#38c08a'], rejected: ['Rejected', '#ff7a6b'],
-                   recorded: ['Recorded', '#c3d0e8'] };
+  // The light theme's map fills, and the inks the page sets a result in.
+  const VOTE = { for: '#15785f', against: '#b3382c', abstain: '#c88a12',
+                 split: '#7c8ba1', absent: '#d6dae3', unknown: '#d6dae3' };
+  const RESULT = { adopted: ['Adopted', '#136a54'], rejected: ['Rejected', '#a73429'],
+                   recorded: ['Recorded', '#4d5666'] };
   const geo = ${geo};
 
   /* Framed on the member states alone, and the neighbours are not drawn: on a
@@ -185,13 +189,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     document.getElementById('bar').innerHTML = ['for', 'against', 'abstain'].map(function (k) {
       const pct = cast ? (vote.totals[k] / cast) * 100 : 0;
       return pct > 0 ? '<span style="width:' + pct.toFixed(2) + '%;background:' +
-        ({ for: '#1a7f5a', against: '#b3372c', abstain: '#b8860b' })[k] + '"></span>' : '';
+        ({ for: '#15785f', against: '#b3382c', abstain: '#c88a12' })[k] + '"></span>' : '';
     }).join('');
 
     document.getElementById('counts').innerHTML =
-      '<span style="color:#38c08a">' + vote.totals.for + '</span><i>for</i><em>·</em>' +
-      '<span style="color:#ff7a6b">' + vote.totals.against + '</span><i>against</i><em>·</em>' +
-      '<span style="color:#e8b93f">' + vote.totals.abstain + '</span><i>abstained</i>';
+      '<span style="color:#136a54">' + vote.totals.for + '</span><i>for</i><em>·</em>' +
+      '<span style="color:#a73429">' + vote.totals.against + '</span><i>against</i><em>·</em>' +
+      '<span style="color:#835a0c">' + vote.totals.abstain + '</span><i>abstained</i>';
     document.getElementById('seats').textContent =
       cast + ' of ' + vote.seats + ' members voted · ' + (vote.seats - cast) + ' did not';
 

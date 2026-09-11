@@ -2,6 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+<script>
+  /* The theme, before anything paints.
+
+     The site's default is light. It was applied by assets/js/theme.js, which
+     arrives at the bottom of the page — so a phone set to dark painted the
+     dark theme first and flipped to light when the script finally ran. On a
+     slow connection that flash is most of the visit, and it is why the site
+     looked dark to somebody whose phone is. The About page never flipped at
+     all: it carries no script.
+
+     So the default is applied here, in the head, before the stylesheet has
+     anything to say. theme.js agrees with this and takes over the toggle. */
+  (function () {
+    var theme = 'light';
+    try {
+      var saved = localStorage.getItem('eu-tracker-theme');
+      if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+    } catch (error) { /* storage refused; the default stands */ }
+    if (theme !== 'system') document.documentElement.setAttribute('data-theme', theme);
+  }());
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EU Tracker — every vote of the European Parliament, member by member</title>
   <meta name="description" content="Every vote of the European Parliament since July 2024, member by member: search a vote, see how each country and each political group split, and follow any MEP across every vote. Built from the Parliament's own open data.">

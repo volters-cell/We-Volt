@@ -5,7 +5,11 @@
 */
 
 :root {
-  color-scheme: light dark;
+  /* The site's own default, not the machine's. An explicit dark choice sets
+     this back below, so scrollbars, form controls and the space behind the
+     page follow the theme actually on screen rather than the one the phone
+     would have chosen. */
+  color-scheme: light;
 
   --eu-blue: #0b3a8f;
   --eu-gold: #f6c700;
@@ -86,6 +90,7 @@
    data-theme on the root and must win over the operating system either way. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #10141b;
     --surface: #171d26;
     --surface-sunken: #1e2530;
@@ -135,6 +140,7 @@
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
     --bg: #10141b;
     --surface: #171d26;
     --surface-sunken: #1e2530;
@@ -1837,22 +1843,24 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   aspect-ratio: 9 / 16;
   border-radius: 8px;
   border: 1px solid var(--line);
-  background: #0b1b3a;
+  /* The card's own ground, so the frame before it arrives is the same colour
+     as the picture that fills it. */
+  background: #ffffff;
   object-fit: cover;
 }
-/* Until it is drawn, the frame is there in the vote's own colour rather than a
-   hole that appears to be broken. */
+/* Until it is drawn, the frame carries the vote's own colour along its top
+   edge rather than being a hole that appears to be broken. */
 .story-preview:not(.is-ready)::before {
   content: "";
   background:
-    linear-gradient(180deg, var(--vote-absent) 0 3px, transparent 3px) ,
-    #0b1b3a;
+    linear-gradient(180deg, var(--vote-absent) 0 3px, transparent 3px),
+    #ffffff;
 }
 .story-preview[data-result="adopted"]:not(.is-ready)::before {
-  background: linear-gradient(180deg, var(--vote-for) 0 3px, transparent 3px), #0b1b3a;
+  background: linear-gradient(180deg, var(--ink-for) 0 3px, transparent 3px), #ffffff;
 }
 .story-preview[data-result="rejected"]:not(.is-ready)::before {
-  background: linear-gradient(180deg, var(--vote-against) 0 3px, transparent 3px), #0b1b3a;
+  background: linear-gradient(180deg, var(--ink-against) 0 3px, transparent 3px), #ffffff;
 }
 .story-preview figcaption {
   /* Wider than the picture it sits under, so the two words stay on one line

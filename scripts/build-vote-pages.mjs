@@ -75,6 +75,17 @@ for (const entry of index.decisions) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  /* Light before anything paints, as everywhere else on the site. */
+  (function () {
+    var theme = 'light';
+    try {
+      var saved = localStorage.getItem('eu-tracker-theme');
+      if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+    } catch (error) { /* storage refused */ }
+    if (theme !== 'system') document.documentElement.setAttribute('data-theme', theme);
+  }());
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(record.title)} — ${esc(word)} — EU Tracker</title>
 <meta name="description" content="${esc(summary)}">
