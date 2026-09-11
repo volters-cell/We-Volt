@@ -1390,13 +1390,24 @@
     /* One button, and everything else folded away behind it.
 
        A web page cannot hand a picture straight to Instagram Stories the way
-       the X app does. That is not a missing feature here: X does it from a
-       native app, through Instagram's instagram-stories:// scheme, which only
-       answers a caller holding a registered Facebook App ID and only finds the
-       picture if it has been written to the iOS pasteboard under Instagram's
-       own proprietary UTIs. A browser can put image/png on the clipboard; it
-       cannot write Apple UTIs and has no App ID, so the deep link would open
-       the story camera empty. The share sheet is as direct as the web gets.
+       the X app does, and this is settled rather than assumed — read off
+       Instagram's own Sharing to Stories documentation by
+       scripts/probe-story-share.mjs, which can be re-run if the platform ever
+       moves. It asks for three things at once:
+
+         an Info.plist  "Add instagram-stories to the LSApplicationQueriesSchemes
+                        key in your app's Info.plist" — so, an app bundle
+         an App ID      "Facebook App ID — Your Facebook App ID"; without a
+                        valid one Instagram tells the user the app "doesn't
+                        currently support sharing to Stories"
+         a pasteboard   the picture set on UIPasteboard under the proprietary
+                        key com.instagram.sharedSticker.backgroundImage
+
+       navigator.share takes a fixed list of MIME types and Clipboard.write
+       writes MIME types; neither can produce an Apple UTI, and a website has
+       no Info.plist and no App ID. The deep link would open the story camera
+       empty. So the share sheet is as direct as the web gets, and reaching the
+       story composer in one tap needs a native wrapper around this site.
 
        So the sheet is what the one button opens, with the picture already
        drawn and the link already copied, and it is the only thing on offer
