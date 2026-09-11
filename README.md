@@ -92,16 +92,18 @@ sent — the Parliament's own number for the roll-call is the whole of it, so a 
 `…/#/195719` and not a line of slug — with **Copy link** beside it, and the same
 address in every country panel. Long links made before that shortening still open.
 
-**Story or post** draws the open vote as a 1080x1350 picture — the question, the title,
+**Story or post** draws the open vote as a 1080x1920 picture — the question, the title,
 the result, the split, the totals, and the Union itself painted by that vote — and opens
 the phone's own share sheet with it, where Instagram offers Add to story.
 
-Four-by-five, because no single picture fills both of the shapes Instagram uses. A tall
-1080x1920 card is letterboxed into the feed between black bars, and shown edge to edge in
-a story — where, composed for the feed's crop, it carried two bands of empty white. This
-one fills the feed exactly and sits centred in a story, with the app's own furniture above
-and below the card rather than on top of it. Every vote's card is the same height to the
-pixel, so a run of them posts as a series rather than a pile of different shapes.
+It is a white card on a tinted ground, and the ground fills the frame. Stories are what
+this is for and a story is nine-by-sixteen, so that is the shape; the card sits in the
+middle with the ground showing as a margin, and the app's own furniture lands on the
+margin rather than on the card. A four-by-five card was tried and was worse: Instagram
+does not letterbox a short picture into a story, it scales it until it covers the screen,
+which crops about 450 pixels off the width and takes the side off every line of the title.
+The feed still letterboxes a tall picture, but it letterboxes a whole card. Every vote's
+card has its content in the same place to the pixel, so a run of them posts as a series.
 
 Three ways back are printed on it: a QR code carrying that vote's own address, the button reading "Open
 the full record", and the address itself in words, for a story watched on the very phone

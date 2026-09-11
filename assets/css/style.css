@@ -1839,14 +1839,13 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .story-preview::before {
   display: block;
   width: 5.4rem;
-  /* The card's own shape, so what is on screen is what lands. Four-by-five:
-     the feed takes it whole and a story centres it. */
-  aspect-ratio: 4 / 5;
+  /* The card's own shape, so what is on screen is what lands. */
+  aspect-ratio: 9 / 16;
   border-radius: 8px;
   border: 1px solid var(--line);
-  /* The card's own ground, so the frame before it arrives is the same colour
-     as the picture that fills it. */
-  background: #ffffff;
+  /* The picture's own ground, so the frame before it arrives is the same
+     colour as the picture that fills it. */
+  background: #e7eaf1;
   object-fit: cover;
 }
 /* Until it is drawn, the frame carries the vote's own colour along its top
@@ -1855,13 +1854,13 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   content: "";
   background:
     linear-gradient(180deg, var(--vote-absent) 0 3px, transparent 3px),
-    #ffffff;
+    #e7eaf1;
 }
 .story-preview[data-result="adopted"]:not(.is-ready)::before {
-  background: linear-gradient(180deg, var(--ink-for) 0 3px, transparent 3px), #ffffff;
+  background: linear-gradient(180deg, var(--ink-for) 0 3px, transparent 3px), #e7eaf1;
 }
 .story-preview[data-result="rejected"]:not(.is-ready)::before {
-  background: linear-gradient(180deg, var(--ink-against) 0 3px, transparent 3px), #ffffff;
+  background: linear-gradient(180deg, var(--ink-against) 0 3px, transparent 3px), #e7eaf1;
 }
 .story-preview figcaption {
   /* Wider than the picture it sits under, so the two words stay on one line

@@ -1,15 +1,19 @@
-/* A vote as a picture, 1080x1350, for Instagram and everywhere else.
+/* A vote as a picture, 1080x1920, for Instagram and everywhere else.
 
-   Four-by-five, and the composition fills it. It was 1080x1920 with the
-   content held inside the middle four-by-five, on the theory that Instagram
-   crops a tall picture for the feed. It letterboxes it instead — so the feed
-   showed the card inset between black bars while a story showed it edge to
-   edge with two bands of empty white inside it, and Instagram's own picker
-   offered three previews that disagreed about what this was.
+   A white card on a tinted ground, and the ground fills the frame.
 
-   No single picture fills both shapes; that is geometry. This one fills the
-   feed exactly and sits centred in a story, with the app's furniture above
-   and below the card instead of on top of it.
+   Two other shapes were tried first and each broke somewhere. Nine-by-sixteen
+   with the content held inside the middle four-by-five left two bands of empty
+   paper, which read as a mistake. Four-by-five was worse: Instagram does not
+   letterbox a short picture into a story, it aspect-FILLS it — scaling until
+   it covers the screen, which cropped four hundred and fifty pixels off the
+   width and took the side off every line of the title.
+
+   Stories are what this is for, and a story is nine-by-sixteen, so that is the
+   frame — and all of it is painted. The card sits in the middle with the
+   ground showing as a margin, so the app's own furniture lands on the margin
+   rather than on the card. The feed still letterboxes a tall picture, but it
+   letterboxes a whole card: smaller, complete, the same object.
 
    A web page cannot post into Instagram Stories: that is an app-to-app call
    Instagram only accepts from a registered native app. What a page can do is
@@ -28,7 +32,7 @@
   'use strict';
 
   const WIDTH = 1080;
-  const HEIGHT = 1350;
+  const HEIGHT = 1920;
 
   /* Light, like the site.
 
@@ -42,8 +46,8 @@
      invented for the card, so the picture and the page it links to cannot
      drift apart. */
   const INK = {
-    ground: '#ffffff',
-    panel: '#eceef3',
+    ground: '#ffffff',      // the card itself
+    behind: '#e7eaf1',      // the ground it sits on, which fills the frame
     text: '#131a24',
     soft: '#4d5666',
     faint: '#656c7b',
@@ -263,17 +267,47 @@
     const ctx = canvas.getContext('2d');
     if (!ctx) return null;
 
-    const pad = 88;
-    const inner = WIDTH - pad * 2;
+    /* A card on a ground, filling the whole nine-by-sixteen.
 
-    ctx.fillStyle = INK.ground;
+       Two shapes have been tried and each broke somewhere. A tall picture is
+       letterboxed into the feed between black bars. A four-by-five one is
+       aspect-FILLED into a story — Instagram scales it until it covers the
+       screen, which on a 1080x1350 card crops four hundred and fifty pixels
+       off the width and took the side off every line of the title.
+
+       Stories are what this is for, and a story is nine-by-sixteen, so that is
+       the frame. The old version composed inside the middle of it and left the
+       rest as empty paper, which read as a mistake. This one paints all of it:
+       a white card on a tinted ground, with the ground showing as a margin.
+       The app's own furniture — the poster's name across the top, the reply
+       bar across the foot — now lands on that margin instead of on the card.
+       Nothing is empty and nothing is covered. */
+    const PANEL = { x: 36, y: 250, w: WIDTH - 72, h: 1420, r: 44 };
+    const pad = PANEL.x + 56;
+    const inner = PANEL.w - 112;
+    const right = PANEL.x + PANEL.w - 56;
+
+    ctx.fillStyle = INK.behind;
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-    // A band of the vote's own colour along the top, so the result is legible
-    // before a word is read.
+    ctx.save();
+    ctx.shadowColor = 'rgba(19, 26, 36, .16)';
+    ctx.shadowBlur = 44;
+    ctx.shadowOffsetY = 10;
+    ctx.fillStyle = INK.ground;
+    roundRect(ctx, PANEL.x, PANEL.y, PANEL.w, PANEL.h, PANEL.r);
+    ctx.fill();
+    ctx.restore();
+
+    // A band of the vote's own colour along the top of the card, so the result
+    // is legible before a word is read. Clipped, so it keeps the card's corners.
     const outcome = RESULT[vote.result] || RESULT.recorded;
+    ctx.save();
+    roundRect(ctx, PANEL.x, PANEL.y, PANEL.w, PANEL.h, PANEL.r);
+    ctx.clip();
     ctx.fillStyle = outcome.ink;
-    ctx.fillRect(0, 0, WIDTH, 14);
+    ctx.fillRect(PANEL.x, PANEL.y, PANEL.w, 14);
+    ctx.restore();
     ctx.textBaseline = 'alphabetic';
 
     /* Measured before it is drawn. A story is a fixed frame with the app's own
@@ -298,7 +332,7 @@
     const CODE = 164;        // the square beside the link, big enough to scan
     const FOOT = CODE + 20;
 
-    const MAP_MAX = 470;
+    const MAP_MAX = 520;
     const MAP_MIN = 180;     // below this the Union is a smudge; better none
 
     /* The picture is four-by-five, and that is the whole of it.
@@ -321,8 +355,8 @@
        And it is denser. The margins that existed to be covered by somebody
        else's interface are gone, so the same content has a smaller frame to
        fill, and every destination shows a full card. */
-    const MARGIN = 30;
-    const band = HEIGHT - MARGIN * 2;
+    const MARGIN = 36;                       // inside the card, not the frame
+    const band = PANEL.h - MARGIN * 2;
 
     const canMap = Boolean(vote.geo && global.Projection && global.Path2D);
     const fixed = HEAD_IN + BRAND + META + HOOK + VERDICT + BAR + NUMBERS + SEATS + FOOT;
@@ -344,7 +378,7 @@
     const MAP = canMap && spare >= MAP_MIN ? Math.min(MAP_MAX, spare) : 0;
 
     const block = fixed + TITLE + MAP;
-    let y = MARGIN + HEAD_IN + Math.max(0, (band - block) / 2);
+    let y = PANEL.y + MARGIN + HEAD_IN + Math.max(0, (band - block) / 2);
 
     brandMark(ctx, pad + 24, y - 12, 24);
     ctx.fillStyle = INK.text;
@@ -433,7 +467,8 @@
       // The Union is nearly square in this projection, so a square is what it
       // is given, centred: a wide box would only pad it with empty sea.
       const side = Math.min(inner, MAP - 16);
-      drawMap(ctx, vote.geo, vote.positions || {}, (WIDTH - side) / 2, y, side, MAP - 16);
+      drawMap(ctx, vote.geo, vote.positions || {},
+        PANEL.x + (PANEL.w - side) / 2, y, side, MAP - 16);
       y += MAP;
     }
 
@@ -454,7 +489,7 @@
       });
 
     const pillX = drawn ? pad + CODE + 28 : pad;
-    const pillW = WIDTH - pad - pillX;
+    const pillW = right - pillX;
     const pillH = 88;
 
     /* The pill and the line below it, centred against the code beside them. */

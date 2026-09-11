@@ -1551,7 +1551,7 @@
     });
   }
 
-  /* The vote as a 1080x1350 picture, handed to the phone's own share sheet.
+  /* The vote as a 1080x1920 picture, handed to the phone's own share sheet.
 
      No web page can post into Instagram Stories by itself — Instagram accepts
      that only from a registered native app — so this opens the sheet the phone
