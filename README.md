@@ -92,16 +92,16 @@ sent — the Parliament's own number for the roll-call is the whole of it, so a 
 `…/#/195719` and not a line of slug — with **Copy link** beside it, and the same
 address in every country panel. Long links made before that shortening still open.
 
-**Story or post** draws the open vote as a 1080x1920 picture — the question, the title,
+**Story or post** draws the open vote as a 1080x1350 picture — the question, the title,
 the result, the split, the totals, and the Union itself painted by that vote — and opens
 the phone's own share sheet with it, where Instagram offers Add to story.
 
-Instagram will not put that picture in one place: it offers a story, a reel, a feed post
-and a message, and crops each of them differently. So the card is composed inside the
-middle 1080x1350 of the frame — the one box every destination keeps — and the margins
-hold nothing but ground, which is also where the app draws its own furniture over a
-story. Every vote's card fills that box to the same height, so a run of them posts as a
-series rather than as a pile of different shapes.
+Four-by-five, because no single picture fills both of the shapes Instagram uses. A tall
+1080x1920 card is letterboxed into the feed between black bars, and shown edge to edge in
+a story — where, composed for the feed's crop, it carried two bands of empty white. This
+one fills the feed exactly and sits centred in a story, with the app's own furniture above
+and below the card rather than on top of it. Every vote's card is the same height to the
+pixel, so a run of them posts as a series rather than a pile of different shapes.
 
 Three ways back are printed on it: a QR code carrying that vote's own address, the button reading "Open
 the full record", and the address itself in words, for a story watched on the very phone

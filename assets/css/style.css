@@ -1839,8 +1839,9 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .story-preview::before {
   display: block;
   width: 5.4rem;
-  /* The story's own shape, so what is on screen is what lands. */
-  aspect-ratio: 9 / 16;
+  /* The card's own shape, so what is on screen is what lands. Four-by-five:
+     the feed takes it whole and a story centres it. */
+  aspect-ratio: 4 / 5;
   border-radius: 8px;
   border: 1px solid var(--line);
   /* The card's own ground, so the frame before it arrives is the same colour
