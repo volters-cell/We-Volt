@@ -1,0 +1,33 @@
+# Ask whether a web page can post straight to an Instagram Story.
+#
+# The answer has been given from memory twice. This reads Instagram's own
+# documentation and the relevant web platform specs and prints what they say,
+# so the answer is sourced rather than remembered — and so that if the platform
+# ever changes, this is where it shows up.
+#
+# Writes nothing.
+
+name: Probe the story hand-off
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+      - name: Read what the platforms say
+        run: node scripts/probe-story-share.mjs
