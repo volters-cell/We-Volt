@@ -1823,11 +1823,55 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
    anyone is reading, it is already drawn. */
 .share-make {
   display: flex;
-  gap: .8rem;
+  gap: .85rem;
   align-items: flex-start;
   margin-top: .7rem;
 }
-.share-make-side { flex: 1 1 auto; min-width: 0; }
+.share-make-side {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* The one button. A web page cannot hand a picture straight to Instagram
+   Stories — that needs a native app with a Facebook App ID — so the share
+   sheet is as direct as this gets, and it is the only thing offered until
+   somebody asks for more. It is sized to say so. */
+.share-act.is-lead {
+  width: 100%;
+  justify-content: center;
+  font-size: .95rem;
+  padding: .8rem 1rem;
+  border-radius: 11px;
+}
+.share-act.is-lead svg { width: 1.15rem; height: 1.15rem; }
+
+/* Everything else, folded. */
+.share-more { margin-top: .8rem; }
+.share-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  width: fit-content;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  cursor: pointer;
+  list-style: none;
+  padding: .25rem 0;
+}
+.share-more > summary::-webkit-details-marker { display: none; }
+.share-more > summary::after {
+  content: "▸";
+  font-size: .75em;
+  transition: transform .15s ease;
+}
+.share-more[open] > summary::after { transform: rotate(90deg); }
+.share-more > summary:hover { color: var(--ink); }
+.share-more > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.share-more .share-scroller { margin-top: .45rem; }
 
 .story-preview {
   flex: 0 0 auto;

@@ -1347,8 +1347,8 @@
      composed inside the middle four-by-five, which is the story's safe area
      and the feed's crop at once. */
   /* Short, because the picture beside it now says most of this. */
-  const STORY_HINT = 'Fits a story, a reel or a feed post. The link is copied at the same ' +
-    'time \u2014 paste it into Instagram\u2019s link sticker.';
+  const STORY_HINT = 'Opens the share sheet with the picture. Choose Instagram, then ' +
+    'Story \u2014 the link is copied ready for the sticker.';
   const STORY_DONE = 'Link copied. In Instagram: Sticker \u2192 Link \u2192 paste, ' +
     'and the story opens this vote.';
   const STORY_SAVED = 'Picture saved, link copied. Post it, then paste the link into ' +
@@ -1387,19 +1387,21 @@
         href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
     ];
 
-    /* Every way of sharing this vote, in one row, in the order people reach
-       for them: the picture first, then the phone's own sheet, then the
-       clipboard, then the places that take a link.
+    /* One button, and everything else folded away behind it.
 
-       One row rather than three stacked groups, because choosing was the slow
-       part: an address field, then a pair of buttons, then a list of six meant
-       reading three separate things before deciding. Now it is one line, left
-       to right, and the first thing on it is the one most people want.
+       A web page cannot hand a picture straight to Instagram Stories the way
+       the X app does. That is not a missing feature here: X does it from a
+       native app, through Instagram's instagram-stories:// scheme, which only
+       answers a caller holding a registered Facebook App ID and only finds the
+       picture if it has been written to the iOS pasteboard under Instagram's
+       own proprietary UTIs. A browser can put image/png on the clipboard; it
+       cannot write Apple UTIs and has no App ID, so the deep link would open
+       the story camera empty. The share sheet is as direct as the web gets.
 
-       It scrolls when it does not fit. On a narrow phone the six places sit
-       past the right edge and are reached by pushing the row along, which is
-       how every app does this; nothing wraps into a block that pushes the rest
-       of the vote off the screen. */
+       So the sheet is what the one button opens, with the picture already
+       drawn and the link already copied, and it is the only thing on offer
+       until somebody asks for more. The rest — the sheet without the picture,
+       the clipboard, the six places that take a link — is a fold. */
     const choice = function (inner, extra, attrs) {
       return '<li class="share-choice' + (extra ? ' ' + extra : '') + '"' +
         (attrs || '') + '>' + inner + '</li>';
@@ -1408,58 +1410,55 @@
     return '<section class="share-card" aria-labelledby="share-card-title">' +
       '<h3 class="share-card-title" id="share-card-title">Share this vote</h3>' +
 
-      '<div class="share-scroller">' +
-        '<ul class="share-choices">' +
-
-          // The picture. On a phone it goes into the share sheet, where
-          // Instagram offers Stories; anywhere else it is saved to post from.
-          choice('<button type="button" class="share-act is-primary share-story"' +
-            ' title="Draws this vote as a picture that fits a story, a reel or a feed post,' +
-            ' and opens the share sheet.">' +
-            mark('instagram') + '<span>Story or post</span></button>') +
-
-          choice('<button type="button" class="share-act share-native"' +
-            ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
-            mark('device') + '<span>Share…</span></button>', 'share-choice-native', ' hidden') +
-
-          choice('<button type="button" class="share-act share-address-copy"' +
-            ' data-copy="' + esc(url) + '">' +
-            mark('copy') + '<span>Copy link</span></button>') +
-
-          targets.map(function (target) {
-            return choice('<a class="share-act share-place" href="' + esc(target.href) +
-              '" target="_blank" rel="noopener noreferrer" aria-label="' +
-              esc(target.aria || ('Share this vote on ' + target.label)) + '">' +
-              mark(target.key) + '<span>' + esc(target.label) + '</span></a>');
-          }).join('') +
-
-        '</ul>' +
-      '</div>' +
-
-      /* The picture, shown before it is sent.
-
-         It is already drawn by the time anyone looks at this — that is what
-         makes the share sheet open instantly — so showing it costs nothing and
-         answers the question every one of these blocks leaves hanging: what
-         exactly am I about to post? The frame keeps the story's own shape, so
-         what is on screen is what lands. */
       '<div class="share-make">' +
+        /* The picture, shown before it is sent. It is already drawn by the
+           time anyone looks at this — that is what makes the sheet open
+           instantly — so showing it costs nothing and answers the question
+           every one of these blocks leaves hanging: what am I about to post? */
         '<figure class="story-preview" data-result="' +
           esc((decision.outcome && decision.outcome.result) || 'recorded') + '">' +
           '<img alt="" hidden>' +
-          '<figcaption>Preparing…</figcaption>' +
+          '<figcaption>What gets posted</figcaption>' +
         '</figure>' +
-        '<div class="share-make-side">' +
-          '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
 
-          /* The address, under everything, for a reader who wants to see what
-             they are about to send before they send it. Shown without its
-             scheme, which is the form anyone would say out loud. Copy puts the
-             whole thing on the clipboard. */
-          '<input class="share-address-field" type="text" readonly spellcheck="false"' +
-            ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
+        '<div class="share-make-side">' +
+          '<button type="button" class="share-act is-primary is-lead share-story"' +
+            ' title="Draws this vote as a picture and opens the share sheet.' +
+            ' Choose Instagram, then Story.">' +
+            mark('instagram') + '<span>Share to Story</span></button>' +
+          '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
         '</div>' +
       '</div>' +
+
+      '<details class="share-more">' +
+        '<summary>Other ways to share</summary>' +
+        '<div class="share-scroller">' +
+          '<ul class="share-choices">' +
+
+            choice('<button type="button" class="share-act share-native"' +
+              ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
+              mark('device') + '<span>Share…</span></button>', 'share-choice-native', ' hidden') +
+
+            choice('<button type="button" class="share-act share-address-copy"' +
+              ' data-copy="' + esc(url) + '">' +
+              mark('copy') + '<span>Copy link</span></button>') +
+
+            targets.map(function (target) {
+              return choice('<a class="share-act share-place" href="' + esc(target.href) +
+                '" target="_blank" rel="noopener noreferrer" aria-label="' +
+                esc(target.aria || ('Share this vote on ' + target.label)) + '">' +
+                mark(target.key) + '<span>' + esc(target.label) + '</span></a>');
+            }).join('') +
+
+          '</ul>' +
+        '</div>' +
+
+        /* The address, for a reader who wants to see what they are about to
+           send. Shown without its scheme, which is the form anyone would say
+           out loud; Copy link puts the whole thing on the clipboard. */
+        '<input class="share-address-field" type="text" readonly spellcheck="false"' +
+          ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
+      '</details>' +
 
       '</section>';
   }
@@ -1497,6 +1496,12 @@
       scroller.classList.toggle('has-more', more);
     };
     row.addEventListener('scroll', look, { passive: true });
+
+    /* The row lives inside a fold now, so it has no width until the fold is
+       opened. Measuring it while it is shut says "nothing to scroll" and the
+       edge never fades. */
+    const fold = scroller.closest('details');
+    if (fold) fold.addEventListener('toggle', function () { window.setTimeout(look, 0); });
 
     /* Tabbing into a choice brings it fully into view.
 
