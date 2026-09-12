@@ -335,12 +335,7 @@
     const NUMBERS = 52;      // the three counts, in one line
     const SEATS = vote.seats ? 38 : 0;
     const CODE = 164;        // the square beside the link, big enough to scan
-    /* The code and the pill, then the line that signs the card, on its own
-       row beneath them both. That row is what the extra 66 buys. Beside the
-       code the signature cost the map nothing, but it was stranded in the
-       middle of the card with white space either side of it; on its own row
-       it can start at the same left margin as every other line here. */
-    const FOOT = CODE + 66;
+    const FOOT = CODE + 20;
 
     const MAP_MAX = 520;
     const MAP_MIN = 180;     // below this the Union is a smudge; better none
@@ -538,34 +533,49 @@
        its own, printing it here again would be worth doing: the line is one
        fillText, and its place is still free. */
     /* Who is asking, and why: under the way in, beside the code, in the room
-       that row already has.
+       that row already has. Putting it below would have cost the map eighty
+       pixels, and the map is the reason anyone stops on this card at all.
 
        The record above is the Parliament's. This line is the only thing here
        that is not, so it is said plainly and kept apart from the figures.
 
-       It starts at the card's left margin, which is where the mark, the date,
-       the question, the title, the verdict, the bar and the counts all start.
-       Every line on this card is hung from that edge. The signature was the
-       one thing that was not — first at the pill's left edge, then at the
-       right margin — and both times it read as floating rather than placed.
-       Sitting it on its own row under the code and the pill is what lets it
-       have that edge, and it is still not the row above: the pill begins two
-       hundred pixels in, this begins at the margin, so the two cannot stack
-       into one block.
+       It hangs from the right rather than starting where the pill starts.
+       Sharing a left edge with the pill made the two into one stacked block —
+       same beginning, same rough width, a soft rectangle under the map, and
+       the eye read them as one thing said twice. Hung from the right they
+       share the edge that is actually ruled (the pill's, and the card's own
+       margin) and differ on the edge that is not, so the pair reads as a
+       button with a signature beneath it rather than as two rows of a table.
 
        The rule between the mark and the words is the site's own: the footer
        sets the same hairline between the same two things. */
     const markH = 34;
     const mark = await volt(markH);
     const line = 'Someone has to shape Europe.';
-    const lineY = y + CODE + 46;             // its own row, clear of the code
+    const lineY = pillY + pillH + 28 + 24;   // under the pill, on the code's own line
     const GAP = 20;
     const RULE = 26;
 
+    ctx.font = font(600, 29);
+    const lineW = ctx.measureText(line).width;
     ctx.font = font(700, 30);
     const markW = mark ? markH * (230 / 96) : ctx.measureText('Volt').width;
 
-    let voltX = pad;
+    /* Hung from the right, then eased 40px back off it.
+
+       Flush to the right margin the line ended exactly where the pill ends,
+       and that much agreement between two rows of different lengths read as
+       an attempt at a column that had not quite worked. Forty pixels is
+       enough that the two edges are plainly not trying to be the same edge,
+       and little enough that the line still belongs to the right-hand side of
+       the card rather than starting a new one.
+
+       Never further left than the pill, whatever the arithmetic says: the
+       code is beside this line, not above it, and words that reached it would
+       sit on top of a thing meant to be scanned. */
+    const NUDGE = 40;
+    const footW = markW + GAP + 1 + GAP + lineW;
+    let voltX = Math.max(pillX, right - footW - NUDGE);
 
     if (mark) {
       ctx.drawImage(mark, voltX, lineY - markH + 7, markW, markH);
