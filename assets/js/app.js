@@ -1387,7 +1387,7 @@
         href: 'mailto:?subject=' + e(text) + '&body=' + e(text + '\n\n' + url) }
     ];
 
-    /* One button, and everything else folded away behind it.
+    /* One button first, and every other way of sending it in plain sight.
 
        A web page cannot hand a picture straight to Instagram Stories the way
        the X app does, and this is settled rather than assumed — read off
@@ -1410,9 +1410,11 @@
        story composer in one tap needs a native wrapper around this site.
 
        So the sheet is what the one button opens, with the picture already
-       drawn and the link already copied, and it is the only thing on offer
-       until somebody asks for more. The rest — the sheet without the picture,
-       the clipboard, the six places that take a link — is a fold. */
+       drawn and the link already copied. But it is not the only thing on
+       offer: Bluesky, X, LinkedIn, WhatsApp, Telegram and email each take the
+       link straight away, and asking for them behind "Other ways to share"
+       was a click charged for something that was never advanced. They sit in
+       the open now, under the button, in one line that scrolls. */
     const choice = function (inner, extra, attrs) {
       return '<li class="share-choice' + (extra ? ' ' + extra : '') + '"' +
         (attrs || '') + '>' + inner + '</li>';
@@ -1441,10 +1443,10 @@
         '</div>' +
       '</div>' +
 
-      '<details class="share-more">' +
-        '<summary>Other ways to share</summary>' +
+      '<div class="share-rest">' +
+        '<p class="share-rest-label" id="share-rest-label">Or send it as a link</p>' +
         '<div class="share-scroller">' +
-          '<ul class="share-choices">' +
+          '<ul class="share-choices" aria-labelledby="share-rest-label">' +
 
             choice('<button type="button" class="share-act share-native"' +
               ' data-share-url="' + esc(url) + '" data-share-text="' + esc(text) + '">' +
@@ -1469,7 +1471,7 @@
            out loud; Copy link puts the whole thing on the clipboard. */
         '<input class="share-address-field" type="text" readonly spellcheck="false"' +
           ' aria-label="Link to this vote" value="' + esc(plainUrl(url)) + '">' +
-      '</details>' +
+      '</div>' +
 
       '</section>';
   }
@@ -1507,12 +1509,6 @@
       scroller.classList.toggle('has-more', more);
     };
     row.addEventListener('scroll', look, { passive: true });
-
-    /* The row lives inside a fold now, so it has no width until the fold is
-       opened. Measuring it while it is shut says "nothing to scroll" and the
-       edge never fades. */
-    const fold = scroller.closest('details');
-    if (fold) fold.addEventListener('toggle', function () { window.setTimeout(look, 0); });
 
     /* Tabbing into a choice brings it fully into view.
 

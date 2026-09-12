@@ -1849,29 +1849,24 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .share-act.is-lead svg { width: 1.15rem; height: 1.15rem; }
 
 /* Everything else, folded. */
-.share-more { margin-top: .8rem; }
-.share-more > summary {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  width: fit-content;
-  font-size: .8rem;
-  font-weight: 600;
+/* The other ways to send it, in the open. These used to be behind a fold
+   labelled "Other ways to share", which charged a click for something that
+   was never advanced: six places that each take a link, and the clipboard.
+   The label stays, as a quiet heading rather than a button, so the row still
+   reads as the alternative to the picture above it. */
+.share-rest {
+  margin-top: .9rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--line);
+}
+.share-rest-label {
+  margin: 0 0 .45rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
   color: var(--ink-faint);
-  cursor: pointer;
-  list-style: none;
-  padding: .25rem 0;
 }
-.share-more > summary::-webkit-details-marker { display: none; }
-.share-more > summary::after {
-  content: "▸";
-  font-size: .75em;
-  transition: transform .15s ease;
-}
-.share-more[open] > summary::after { transform: rotate(90deg); }
-.share-more > summary:hover { color: var(--ink); }
-.share-more > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
-.share-more .share-scroller { margin-top: .45rem; }
 
 .story-preview {
   flex: 0 0 auto;
