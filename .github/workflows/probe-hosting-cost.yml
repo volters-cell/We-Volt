@@ -1,0 +1,36 @@
+# What does it cost to run this site for a year?
+#
+# The figure goes into a grant application, so it is read off GitHub's own
+# published limits and billing terms rather than remembered, and the site is
+# measured against them in the same run.
+#
+# Writes nothing.
+
+name: Probe the hosting cost
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+      - name: Build what a publish uploads
+        run: |
+          node scripts/build-og-cards.mjs
+          node scripts/build-vote-pages.mjs
+      - name: Read the limits, measure the site
+        run: node scripts/probe-hosting-cost.mjs
