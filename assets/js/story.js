@@ -532,32 +532,56 @@
        they are without naming anyone's hosting. If this ever gets a domain of
        its own, printing it here again would be worth doing: the line is one
        fillText, and its place is still free. */
-    const footX = pillX + 6;
-
     /* Who is asking, and why: under the way in, beside the code, in the room
        that row already has. Putting it below would have cost the map eighty
        pixels, and the map is the reason anyone stops on this card at all.
 
        The record above is the Parliament's. This line is the only thing here
-       that is not, so it is said plainly and kept apart from the figures. */
-    const markH = 30;
+       that is not, so it is said plainly and kept apart from the figures.
+
+       It hangs from the right rather than starting where the pill starts.
+       Sharing a left edge with the pill made the two into one stacked block —
+       same beginning, same rough width, a soft rectangle under the map, and
+       the eye read them as one thing said twice. Hung from the right they
+       share the edge that is actually ruled (the pill's, and the card's own
+       margin) and differ on the edge that is not, so the pair reads as a
+       button with a signature beneath it rather than as two rows of a table.
+
+       The rule between the mark and the words is the site's own: the footer
+       sets the same hairline between the same two things. */
+    const markH = 34;
     const mark = await volt(markH);
     const line = 'Someone has to shape Europe.';
     const lineY = pillY + pillH + 28 + 24;   // under the pill, on the code's own line
-    let voltX = footX;
+    const GAP = 20;
+    const RULE = 26;
+
+    ctx.font = font(600, 29);
+    const lineW = ctx.measureText(line).width;
+    ctx.font = font(700, 30);
+    const markW = mark ? markH * (230 / 96) : ctx.measureText('Volt').width;
+
+    /* Right-aligned, but never further left than the pill: the code is beside
+       this line, not above it, and words that reached it would sit on top of
+       a thing meant to be scanned. */
+    const footW = markW + GAP + 1 + GAP + lineW;
+    let voltX = Math.max(pillX, right - footW);
 
     if (mark) {
-      const markW = markH * (230 / 96);
-      ctx.drawImage(mark, voltX, lineY - markH + 6, markW, markH);
-      voltX += markW + 20;
+      ctx.drawImage(mark, voltX, lineY - markH + 7, markW, markH);
     } else {
       ctx.fillStyle = INK.text;
       ctx.font = font(700, 30);
       ctx.fillText('Volt', voltX, lineY);
-      voltX += ctx.measureText('Volt').width + 20;
     }
+    voltX += markW + GAP;
+
+    ctx.fillStyle = '#c9ced9';
+    ctx.fillRect(Math.round(voltX), lineY - RULE + 4, 1, RULE);
+    voltX += GAP + 1;
+
     ctx.fillStyle = INK.soft;
-    ctx.font = font(600, 30);
+    ctx.font = font(600, 29);
     ctx.fillText(line, voltX, lineY);
 
     return await new Promise(function (resolve) {
