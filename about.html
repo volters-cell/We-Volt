@@ -13,13 +13,25 @@
      all: it carries no script.
 
      So the default is applied here, in the head, before the stylesheet has
-     anything to say. theme.js agrees with this and takes over the toggle. */
+     anything to say. theme.js agrees with this and takes over the switch.
+
+     On a phone there is no choice to apply: the site is light, the switch is
+     not shown, and a dark theme saved from a desktop does not follow you onto
+     the small screen. The width is the same 40rem at which the header becomes
+     the phone header, so "the phone version" means one thing across the site.
+     The saved choice is left alone — it is waiting on the desktop. */
   (function () {
     var theme = 'light';
+    var phone = false;
     try {
-      var saved = localStorage.getItem('eu-tracker-theme');
-      if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
-    } catch (error) { /* storage refused; the default stands */ }
+      phone = window.matchMedia('(max-width: 40rem)').matches;
+    } catch (error) { phone = window.innerWidth <= 640; }
+    if (!phone) {
+      try {
+        var saved = localStorage.getItem('eu-tracker-theme');
+        if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+      } catch (error) { /* storage refused; the default stands */ }
+    }
     if (theme !== 'system') document.documentElement.setAttribute('data-theme', theme);
   }());
 </script>

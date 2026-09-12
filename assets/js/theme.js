@@ -9,6 +9,15 @@
    had chosen it still has it in storage; that is read once, resolved to
    whatever the machine says at that moment, and written back as a real choice.
 
+   On a phone there is no switch and no choice: the site is light. The width
+   that decides this is the same 40rem at which the header becomes the phone
+   header, so "the phone version" means one thing across the site. A dark
+   theme chosen on a desktop is not forgotten when you open the site on a
+   phone — it is left in storage, unapplied, and is there again on the
+   desktop. Narrowing a desktop window past 40rem does the same thing, which
+   is what keeps the rule honest: the switch is never hidden while the theme
+   it controls is still dark.
+
    The choice is remembered. Storage can be refused outright (a private window,
    a browser set to block it), so every read and write is guarded: the site
    works without memory, it just forgets.
@@ -20,6 +29,8 @@
 
   const KEY = 'eu-tracker-theme';
   const THEMES = ['light', 'dark'];
+  // The width at which the header becomes the phone header.
+  const PHONE = '(max-width: 40rem)';
 
   const LABEL = {
     light: { aria: 'Dark theme', title: 'Switch to the dark theme' },
@@ -27,6 +38,14 @@
   };
 
   let current = null;
+
+  function phone() {
+    try {
+      return global.matchMedia(PHONE).matches;
+    } catch (error) {
+      return global.innerWidth <= 640;   // no matchMedia: fall back to the width
+    }
+  }
 
   function machine() {
     try {
@@ -64,6 +83,11 @@
 
   function apply(theme, options) {
     if (THEMES.indexOf(theme) === -1) theme = machine();
+    /* The phone has one theme. Asking for another is answered with light
+       rather than refused, so every caller — the switch, the keyboard
+       shortcut, EUTheme.set — behaves the same way and none of them has to
+       know about the width. */
+    if (phone()) theme = 'light';
     document.documentElement.setAttribute('data-theme', theme);
     current = theme;
 
@@ -91,16 +115,29 @@
     const saved = stored();
     /* The site's default is light, and the inline script in the page head has
        already painted it. Applying it quietly keeps that true without writing
-       a choice nobody made. */
-    apply(saved || 'light', { quiet: !saved });
+       a choice nobody made. On a phone the saved choice is not applied at all
+       and not written back either: it belongs to the desktop and is left
+       where it is. */
+    apply(saved || 'light', { quiet: !saved || phone() });
     // An older "system" has just been resolved; write it back as a real choice
     // so it is not resolved again on the next visit.
-    if (saved) remember(saved);
+    if (saved && !phone()) remember(saved);
 
     const control = button();
     // A button already answers Enter and Space by firing click. Handling those
     // keys as well is how a control ends up switching twice on one press.
     if (control) control.addEventListener('click', cycle);
+
+    /* Crossing the width — a rotated phone, a resized window — moves the
+       switch in or out of the page, so the theme moves with it: light while
+       the switch is gone, the saved choice again once it is back. */
+    try {
+      global.matchMedia(PHONE).addEventListener('change', function () {
+        apply(phone() ? 'light' : (stored() || 'light'), { quiet: true });
+      });
+    } catch (error) {
+      // an older browser without matchMedia listeners: the theme holds
+    }
   }
 
   if (document.readyState === 'loading') {

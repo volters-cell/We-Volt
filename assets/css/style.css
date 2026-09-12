@@ -382,6 +382,15 @@ a:hover { text-decoration-thickness: 2px; }
   .theme-toggle-icon { transition: color .22s ease; }
 }
 
+/* No switch on a phone. The site is light there and there is nothing to
+   choose, so the control would be a lever attached to nothing. The width is
+   the same one at which the header becomes the phone header, and theme.js
+   holds the theme to light across exactly this range — the switch is never
+   hidden while the theme it controls is still dark. */
+@media (max-width: 40rem) {
+  .theme-toggle { display: none; }
+}
+
 .is-loaded {
   opacity: 1;
 }
