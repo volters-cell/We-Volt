@@ -556,26 +556,25 @@
     const GAP = 20;
     const RULE = 26;
 
-    ctx.font = font(600, 29);
-    const lineW = ctx.measureText(line).width;
     ctx.font = font(700, 30);
     const markW = mark ? markH * (230 / 96) : ctx.measureText('Volt').width;
 
-    /* Hung from the right, then eased 40px back off it.
+    /* Where the line starts was chosen on a real story rather than here.
 
-       Flush to the right margin the line ended exactly where the pill ends,
-       and that much agreement between two rows of different lengths read as
-       an attempt at a column that had not quite worked. Forty pixels is
-       enough that the two edges are plainly not trying to be the same edge,
-       and little enough that the line still belongs to the right-hand side of
-       the card rather than starting a new one.
+       A card was posted, marked on the phone at the point the signature should
+       begin, and the mark measured back into this canvas: the pill and the
+       code have known positions on the card, so the two of them calibrate the
+       screenshot, and the mark lands 55px right of where the pill begins.
+       That is the number below. It is not derived from anything — nothing in
+       the layout implies it — which is exactly why it is written as a
+       constant with this note attached rather than dressed up as arithmetic.
 
-       Never further left than the pill, whatever the arithmetic says: the
-       code is beside this line, not above it, and words that reached it would
-       sit on top of a thing meant to be scanned. */
-    const NUDGE = 40;
-    const footW = markW + GAP + 1 + GAP + lineW;
-    let voltX = Math.max(pillX, right - footW - NUDGE);
+       Hung from the left, not the right. The mark fixes the beginning of the
+       line, so the beginning is what is held; the sentence is a fixed length
+       and ends where it ends, short of the pill's right edge, which keeps the
+       two rows from reading as one column. */
+    const FROM_PILL = 55;                    // measured off a marked-up story
+    let voltX = pillX + FROM_PILL;
 
     if (mark) {
       ctx.drawImage(mark, voltX, lineY - markH + 7, markW, markH);
