@@ -76,13 +76,20 @@ for (const entry of index.decisions) {
 <head>
 <meta charset="utf-8">
 <script>
-  /* Light before anything paints, as everywhere else on the site. */
+  /* Light before anything paints, and on a phone light whatever is saved —
+     the same rule, and the same 40rem, as every other page of the site. */
   (function () {
     var theme = 'light';
+    var phone = false;
     try {
-      var saved = localStorage.getItem('eu-tracker-theme');
-      if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
-    } catch (error) { /* storage refused */ }
+      phone = window.matchMedia('(max-width: 40rem)').matches;
+    } catch (error) { phone = window.innerWidth <= 640; }
+    if (!phone) {
+      try {
+        var saved = localStorage.getItem('eu-tracker-theme');
+        if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+      } catch (error) { /* storage refused */ }
+    }
     if (theme !== 'system') document.documentElement.setAttribute('data-theme', theme);
   }());
 </script>
@@ -108,6 +115,17 @@ for (const entry of index.decisions) {
 <meta name="twitter:description" content="${esc(summary)}">
 <meta name="twitter:image" content="${BASE}assets/og/${id}.png">
 <meta name="theme-color" content="#0b3a8f">
+
+<!-- A vote is where most people arrive, so it is where Add to Home Screen has
+     to work. Everything in the manifest is relative to the manifest's own
+     address, so installing from here still opens the app at the site's root
+     rather than at this one vote. -->
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EU Tracker">
+<meta name="application-name" content="EU Tracker">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
 <style>

@@ -1,0 +1,32 @@
+# What does a browser require before it offers "Add to Home Screen"?
+#
+# The manifest and the icons are the known part. Whether a service worker is
+# still required is the part that is remembered wrongly, because the answer has
+# moved. This reads what Chrome, MDN and Apple currently publish.
+#
+# Writes nothing.
+
+name: Probe what makes the site installable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+      - name: Read what the browsers require
+        run: node scripts/probe-install.mjs
