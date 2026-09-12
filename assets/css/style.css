@@ -1931,6 +1931,16 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
    was never advanced: six places that each take a link, and the clipboard.
    The label stays, as a quiet heading rather than a button, so the row still
    reads as the alternative to the picture above it. */
+/* The way into Instagram, shown only when the share sheet did not come. It is
+   a link rather than a button because that is what it is: it leaves the site.
+   Quieter than the story button above it — it is the second thing to press,
+   never the first. */
+.share-open-ig {
+  margin-top: .5rem;
+  width: 100%;
+  justify-content: center;
+}
+
 .share-rest {
   margin-top: .9rem;
   padding-top: .8rem;

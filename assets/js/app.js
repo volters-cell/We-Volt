@@ -1351,8 +1351,8 @@
     'Story \u2014 the link is copied ready for the sticker.';
   const STORY_DONE = 'Link copied. In Instagram: Sticker \u2192 Link \u2192 paste, ' +
     'and the story opens this vote.';
-  const STORY_SAVED = 'Picture saved, link copied. Post it, then paste the link into ' +
-    'the story\u2019s link sticker.';
+  const STORY_SAVED = 'Picture saved, link copied. Open Instagram, swipe up in the ' +
+    'story camera to pick it, then paste the link into the link sticker.';
 
   function plainUrl(url) {
     return String(url).replace(/^https?:\/\//i, '').replace(/^www\./i, '');
@@ -1439,6 +1439,12 @@
             ' title="Draws this vote as a picture and opens the share sheet.' +
             ' Choose Instagram, then Story.">' +
             mark('instagram') + '<span>Share to Story</span></button>' +
+          /* Hidden until the sheet has failed to come. Rendered rather than
+             built on demand, so the card is one shape and revealing it moves
+             nothing around it. */
+          '<a class="share-act share-open-ig" href="https://www.instagram.com/"' +
+            ' target="_blank" rel="noopener noreferrer" hidden>' +
+            mark('instagram') + '<span>Open Instagram</span></a>' +
           '<p class="share-note" id="share-note">' + esc(STORY_HINT) + '</p>' +
         '</div>' +
       '</div>' +
@@ -1717,6 +1723,31 @@
     window.setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
   }
 
+  /* Asked for, never waited on. A refusal is not worth a message: the reader
+     is on their way to another app and the address is on the page behind
+     them. */
+  function copyQuietly(url) {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+    try {
+      const written = navigator.clipboard.writeText(url);
+      if (written && written.catch) written.catch(function () { /* refused */ });
+    } catch (error) { /* no clipboard */ }
+  }
+
+  /* When the sheet did not come and the picture was saved instead, the reader
+     is holding everything they need and no way to get where they are going.
+     This is that way: it opens Instagram, where the saved picture is one swipe
+     up in the story camera and the link is already on the clipboard.
+
+     www.instagram.com rather than a scheme of the kind instagram://…. Both
+     phones treat the address as a link into the installed app, and it is the
+     only form that also does something sensible when the app is not there —
+     an unhandled scheme opens nothing at all and says nothing about why. */
+  function openInstagram(root) {
+    const way = (root || document).querySelector('.share-open-ig');
+    if (way) way.hidden = false;
+  }
+
   function shareStory(button) {
     if (!window.Story || !state.decision) return;
     const decision = state.decision;
@@ -1735,17 +1766,24 @@
     const ready = story.file && story.key === storyKey(decision) ? story.file : null;
     const url = ready ? story.url : shareUrl();
 
-    /* Primed, never awaited. Waiting on the clipboard here would spend the
-       same tap that the share sheet still needs. */
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      try {
-        const written = navigator.clipboard.writeText(url);
-        if (written && written.catch) written.catch(function () { /* refused */ });
-      } catch (error) { /* no clipboard */ }
-    }
+    /* The clipboard used to be written first. It is written second now, and
+       the order is the whole of the fix.
 
+       Both calls want the transient activation the tap grants, and the first
+       one to ask can spend it. A Safari that treats writeText as spending it
+       leaves navigator.share to throw NotAllowedError, which lands in the
+       branch below that saves the picture — so the button copied a link,
+       downloaded a file, and never opened the sheet where Instagram is. That
+       is exactly what it looked like from the outside: "it copies the link".
+
+       So the sheet is asked for first, inside the tap, and the clipboard is
+       asked for immediately after, in the same turn, before anything is
+       awaited. If the clipboard is refused nothing is lost: the address is in
+       the field under the card, and it rides in the share payload for every
+       app with a place to put it. */
     if (ready) {
       const shared = offerStory(ready, decision, url);
+      copyQuietly(url);
       if (shared) {
         button.disabled = true;
         shared.then(function () {
@@ -1760,14 +1798,17 @@
           keepStory(ready);
           say('Image saved');
           shareNote(STORY_SAVED);
+          openInstagram(button.closest('.share-card'));
           restore();
         });
         return;
       }
-      // No share sheet here — a laptop, mostly.
+      // No share sheet here — a laptop, mostly, where the way into Instagram
+      // is not offered because there is no app for it to open.
       keepStory(ready);
       say('Image saved');
       shareNote(STORY_SAVED);
+      if (navigator.share) openInstagram(button.closest('.share-card'));
       restore();
       return;
     }
@@ -1777,12 +1818,14 @@
        so this saves the picture and says so rather than pretending. */
     button.disabled = true;
     say('Drawing…');
+    copyQuietly(url);
     drawStory(decision, url).then(function (file) {
       if (!file) { failed(); return; }
       story = { key: storyKey(decision), file: file, url: url };
       keepStory(file);
       say('Image saved');
       shareNote(STORY_SAVED);
+      if (navigator.share) openInstagram(button.closest('.share-card'));
       restore();
     }, failed);
   }
