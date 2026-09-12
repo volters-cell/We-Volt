@@ -1,13 +1,17 @@
-/* Light, dark, or whatever the machine says.
+/* Light or dark.
 
-   Three states, one button. The icon shows the state you are in — a sun, a
-   moon, or a half-filled circle for "follow the system" — and the label says
-   what the next press will do, so the control is legible whether you read it
-   or look at it.
+   Two states, one switch. The sun and the moon are both in view and the knob
+   says which one you are in — the control shows its state rather than naming
+   the next one, which is what a switch is for.
+
+   There used to be a third state, "follow the system", reached by pressing a
+   round button twice. A switch has two positions, so it is gone. A visitor who
+   had chosen it still has it in storage; that is read once, resolved to
+   whatever the machine says at that moment, and written back as a real choice.
 
    The choice is remembered. Storage can be refused outright (a private window,
    a browser set to block it), so every read and write is guarded: the site
-   works without memory, it just forgets. 
+   works without memory, it just forgets.
 
    SPDX-License-Identifier: AGPL-3.0-or-later
 */
@@ -15,39 +19,35 @@
   'use strict';
 
   const KEY = 'eu-tracker-theme';
-  const ORDER = ['light', 'dark', 'system'];
+  const THEMES = ['light', 'dark'];
 
-  const ICONS = {
-    light: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
-      '<circle cx="12" cy="12" r="4.4" fill="none"/>' +
-      '<line x1="12" y1="1.9" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.1"/>' +
-      '<line x1="1.9" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.1" y2="12"/>' +
-      '<line x1="4.9" y1="4.9" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.1" y2="19.1"/>' +
-      '<line x1="4.9" y1="19.1" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="19.1" y2="4.9"/></svg>',
-    dark: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
-      '<path d="M20.7 13.5A8.5 8.5 0 0 1 10.5 3.3 8.6 8.6 0 1 0 20.7 13.5z" ' +
-      'fill="currentColor" stroke="none"/></svg>',
-    // A circle with one half filled: neither chosen, the machine decides.
-    system: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
-      '<circle cx="12" cy="12" r="8.2" fill="none"/>' +
-      '<path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor" stroke="none"/></svg>'
-  };
-
-  const NEXT_LABEL = {
-    light: 'Light theme. Switch to dark.',
-    dark: 'Dark theme. Switch to follow the system.',
-    system: 'Following the system. Switch to light.'
+  const LABEL = {
+    light: { aria: 'Dark theme', title: 'Switch to the dark theme' },
+    dark: { aria: 'Light theme', title: 'Switch to the light theme' }
   };
 
   let current = null;
 
-  function stored() {
+  function machine() {
     try {
-      const value = localStorage.getItem(KEY);
-      return ORDER.indexOf(value) === -1 ? null : value;
+      return global.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch (error) {
+      return 'light';   // no matchMedia: the site's own default stands
+    }
+  }
+
+  /* What is in storage, as one of the two states. "system" is what an older
+     visit may have saved; it means "whatever the machine says", so that is
+     what it is worth now. */
+  function stored() {
+    let value = null;
+    try {
+      value = localStorage.getItem(KEY);
     } catch (error) {
       return null;   // storage refused; the default stands
     }
+    if (value === 'system') return machine();
+    return THEMES.indexOf(value) === -1 ? null : value;
   }
 
   function remember(theme) {
@@ -63,17 +63,18 @@
   }
 
   function apply(theme, options) {
-    const root = document.documentElement;
-    if (theme === 'system') root.removeAttribute('data-theme');
-    else root.setAttribute('data-theme', theme);
+    if (THEMES.indexOf(theme) === -1) theme = machine();
+    document.documentElement.setAttribute('data-theme', theme);
     current = theme;
 
+    /* The knob is placed by CSS from data-theme, so nothing here moves it.
+       What the switch needs from this side is the part a screen reader reads:
+       whether it is on, and what turning it does. */
     const control = button();
     if (control) {
-      control.innerHTML = ICONS[theme];
-      control.setAttribute('aria-label', NEXT_LABEL[theme]);
-      control.setAttribute('title', NEXT_LABEL[theme]);
-      control.setAttribute('data-theme-state', theme);
+      control.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+      control.setAttribute('aria-label', LABEL[theme].aria);
+      control.setAttribute('title', LABEL[theme].title);
     }
 
     if (!(options && options.quiet)) {
@@ -83,24 +84,23 @@
   }
 
   function cycle() {
-    apply(ORDER[(ORDER.indexOf(current) + 1) % ORDER.length]);
+    apply(current === 'dark' ? 'light' : 'dark');
   }
 
   function start() {
-    apply(stored() || 'light', { quiet: !stored() });
+    const saved = stored();
+    /* The site's default is light, and the inline script in the page head has
+       already painted it. Applying it quietly keeps that true without writing
+       a choice nobody made. */
+    apply(saved || 'light', { quiet: !saved });
+    // An older "system" has just been resolved; write it back as a real choice
+    // so it is not resolved again on the next visit.
+    if (saved) remember(saved);
 
     const control = button();
     // A button already answers Enter and Space by firing click. Handling those
     // keys as well is how a control ends up switching twice on one press.
     if (control) control.addEventListener('click', cycle);
-
-    try {
-      global.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-        if (current === 'system') apply('system', { quiet: true });
-      });
-    } catch (error) {
-      // an older browser without matchMedia listeners: nothing breaks
-    }
   }
 
   if (document.readyState === 'loading') {

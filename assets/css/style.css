@@ -284,34 +284,102 @@ a:hover { text-decoration-thickness: 2px; }
 .header-tools { display: flex; align-items: center; gap: .4rem; flex: none; }
 
 
+/* Light or dark, as a switch rather than a cycle.
+
+   It used to be one round button that stepped light -> dark -> follow the
+   system. Three states on a control with one position meant you could only
+   learn where you were by reading the label, and "follow the system" was
+   reachable only by pressing twice past the theme you wanted. A switch has
+   two positions and shows both: the sun and the moon are always in view, and
+   the knob says which one you are in.
+
+   The knob is placed from the root attribute, not from the button's state, so
+   it is already in the right position when the inline head script has set the
+   theme and this script has not run yet. */
 .theme-toggle {
-  --size: 2.15rem;
-  width: var(--size);
-  height: var(--size);
+  --track-w: 3.3rem;
+  --track-h: 1.8rem;
+  --knob: 1.4rem;
+  --pad: .2rem;
+  position: relative;
+  width: var(--track-w);
+  height: var(--track-h);
   margin-left: .5rem;
   padding: 0;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-sunken);
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--ink-faint); }
+.theme-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* The white disc. It sits above the icons, so whichever one it covers reads
+   against it rather than against the track. */
+.theme-toggle-knob {
+  position: absolute;
+  top: 50%;
+  left: var(--pad);
+  width: var(--knob);
+  height: var(--knob);
+  margin-top: calc(var(--knob) / -2);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(19, 26, 36, .22);
+  pointer-events: none;
+}
+/* On a dark track a dark disc reads as a shadow rather than a knob, and the
+   drop shadow that separates it in the light theme does nothing against a
+   near-black ground. A hairline is what carries the edge instead. */
+:root[data-theme="dark"] .theme-toggle-knob {
+  box-shadow: 0 0 0 1px var(--line-strong), 0 1px 3px rgba(0, 0, 0, .45);
+}
+:root[data-theme="dark"] .theme-toggle-knob {
+  transform: translateX(calc(var(--track-w) - var(--knob) - var(--pad) * 2 - 2px));
+}
+.theme-toggle-icon {
+  position: relative;
+  z-index: 1;
+  width: var(--knob);
+  height: var(--knob);
+  margin: 0 var(--pad);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink-soft);
-  cursor: pointer;
+  color: var(--ink-faint);
+  pointer-events: none;
 }
-.theme-toggle:hover { color: var(--ink); border-color: var(--ink-faint); }
-.theme-toggle:active { transform: scale(.94); }
-.theme-toggle svg {
-  width: 1.05rem;
-  height: 1.05rem;
+.theme-toggle-icon svg {
+  width: .95rem;
+  height: .95rem;
   stroke: currentColor;
   stroke-width: 1.9;
   stroke-linecap: round;
 }
+/* The icon under the knob is the one you are in, so it is the one that is
+   spelled out; the other stays quiet. */
+:root:not([data-theme="dark"]) .theme-toggle .is-sun,
+:root[data-theme="dark"] .theme-toggle .is-moon { color: var(--ink); }
+
+/* No data-theme at all is a visit that chose "follow the system" back when
+   that was a third position. Such a page is painted from the machine's
+   setting until theme.js resolves the choice, so the switch reads from the
+   same place for those few milliseconds rather than pointing the wrong way. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle-knob {
+    transform: translateX(calc(var(--track-w) - var(--knob) - var(--pad) * 2 - 2px));
+  }
+  :root:not([data-theme]) .theme-toggle .is-sun { color: var(--ink-faint); }
+  :root:not([data-theme]) .theme-toggle .is-moon { color: var(--ink); }
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .theme-toggle svg { transition: transform .25s cubic-bezier(.2,.7,.3,1); }
-  .theme-toggle:hover svg { transform: rotate(18deg); }
-  .theme-toggle[data-theme-state="dark"]:hover svg { transform: rotate(-18deg); }
+  .theme-toggle-knob { transition: transform .22s cubic-bezier(.2, .7, .3, 1); }
+  .theme-toggle-icon { transition: color .22s ease; }
 }
 
 .is-loaded {
