@@ -14,6 +14,8 @@
  */
 import { chromium } from 'playwright';
 import { execSync } from 'node:child_process';
+import { gzipSync } from 'node:zlib';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 
 const PAGES = [
   ['GitHub Pages: limits and what it costs',
@@ -66,7 +68,9 @@ for (const [name, url, tells] of PAGES) {
 }
 
 /* Now the site, against those limits. The first number is what a publish
-   uploads; the second is what one reader's browser pulls down. */
+   uploads — the whole checkout goes up, less the history, the packages and
+   .cache, which is a local scratch of the source dumps and is not in a fresh
+   checkout. The second is what one reader's browser pulls down. */
 console.log('\n' + '='.repeat(78));
 console.log('This site, measured');
 console.log('='.repeat(78));
@@ -75,15 +79,16 @@ const kb = bytes => (bytes / 1024).toFixed(0) + ' KB';
 const mb = bytes => (bytes / 1024 / 1024).toFixed(1) + ' MB';
 
 const uploaded = Number(execSync(
-  "du -sb --exclude=.git --exclude=node_modules . | cut -f1", { encoding: 'utf8' }).trim());
-console.log('  uploaded to Pages          ' + mb(uploaded));
+  "du -sb --exclude=.git --exclude=node_modules --exclude=.cache . | cut -f1", { encoding: 'utf8' }).trim());
+const built = existsSync('assets/og') && existsSync('v');
+console.log('  the checkout               ' + mb(uploaded) +
+  (built ? ' including the previews and the vote pages'
+         : ' — previews and vote pages not built in this run,'));
+if (!built) console.log('  ' + ' '.repeat(26) + 'a publish uploads roughly 75 MB more');
 
 /* One visit: the shell, then the records the tracker boots with, then the
    five portraits and the one vote it opens on. Text is served compressed,
    so the shell is weighed compressed; the portraits are already JPEG. */
-const { gzipSync } = await import('node:zlib');
-const { readFileSync, readdirSync, statSync } = await import('node:fs');
-
 const shell = ['index.html', 'assets/css/style.css',
   ...readdirSync('assets/js').filter(f => f.endsWith('.js')).map(f => 'assets/js/' + f),
   'data/decisions/index.json', 'data/eu-countries.geo.json', 'data/meps/index.json',

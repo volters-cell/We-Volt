@@ -28,9 +28,5 @@ jobs:
         run: |
           npm i --no-save playwright@1.49
           npx playwright install --with-deps chromium
-      - name: Build what a publish uploads
-        run: |
-          node scripts/build-og-cards.mjs
-          node scripts/build-vote-pages.mjs
       - name: Read the limits, measure the site
         run: node scripts/probe-hosting-cost.mjs
