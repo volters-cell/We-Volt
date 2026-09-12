@@ -53,6 +53,11 @@
     faint: '#656c7b',
     gold: '#f6c700',
     blue: '#0b3a8f',
+    /* Volt's own purple, the same #502379 the site's footer and its app icon
+       use. It is on the card once, on the one thing that asks to be pressed,
+       so the mark at the foot and the button above it are the same party
+       speaking. */
+    volt: '#502379',
     // The bar's three blocks: the same fills the map uses below it.
     for: '#15785f',
     against: '#b3382c',
@@ -495,11 +500,18 @@
     /* The pill and the line below it, centred against the code beside them. */
     const pillY = y + Math.round((CODE - (pillH + 28 + 30)) / 2);
 
-    ctx.fillStyle = INK.gold;
+    /* Volt purple rather than the Union's gold. The gold is the card's own
+       voice — it underlines the question at the top and nothing else — and a
+       gold pill read as one more piece of the record rather than as the way
+       out of it. The purple is the only thing on the card that is not the
+       Parliament, which is exactly what a call to action should be.
+
+       White on it, at 11.3:1, rather than the dark navy the gold needed. */
+    ctx.fillStyle = INK.volt;
     roundRect(ctx, pillX, pillY, pillW, pillH, pillH / 2);
     ctx.fill();
 
-    ctx.fillStyle = '#12203f';
+    ctx.fillStyle = '#ffffff';
     ctx.font = font(700, 38);
     ctx.textAlign = 'center';
     ctx.fillText('Open the full record', pillX + pillW / 2, pillY + 58);
