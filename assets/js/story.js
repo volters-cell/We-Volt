@@ -335,7 +335,12 @@
     const NUMBERS = 52;      // the three counts, in one line
     const SEATS = vote.seats ? 38 : 0;
     const CODE = 164;        // the square beside the link, big enough to scan
-    const FOOT = CODE + 20;
+    /* The code and the pill, then the line that signs the card, on its own
+       row beneath them both. That row is what the extra 66 buys. Beside the
+       code the signature cost the map nothing, but it was stranded in the
+       middle of the card with white space either side of it; on its own row
+       it can start at the same left margin as every other line here. */
+    const FOOT = CODE + 66;
 
     const MAP_MAX = 520;
     const MAP_MIN = 180;     // below this the Union is a smudge; better none
@@ -533,39 +538,34 @@
        its own, printing it here again would be worth doing: the line is one
        fillText, and its place is still free. */
     /* Who is asking, and why: under the way in, beside the code, in the room
-       that row already has. Putting it below would have cost the map eighty
-       pixels, and the map is the reason anyone stops on this card at all.
+       that row already has.
 
        The record above is the Parliament's. This line is the only thing here
        that is not, so it is said plainly and kept apart from the figures.
 
-       It hangs from the right rather than starting where the pill starts.
-       Sharing a left edge with the pill made the two into one stacked block —
-       same beginning, same rough width, a soft rectangle under the map, and
-       the eye read them as one thing said twice. Hung from the right they
-       share the edge that is actually ruled (the pill's, and the card's own
-       margin) and differ on the edge that is not, so the pair reads as a
-       button with a signature beneath it rather than as two rows of a table.
+       It starts at the card's left margin, which is where the mark, the date,
+       the question, the title, the verdict, the bar and the counts all start.
+       Every line on this card is hung from that edge. The signature was the
+       one thing that was not — first at the pill's left edge, then at the
+       right margin — and both times it read as floating rather than placed.
+       Sitting it on its own row under the code and the pill is what lets it
+       have that edge, and it is still not the row above: the pill begins two
+       hundred pixels in, this begins at the margin, so the two cannot stack
+       into one block.
 
        The rule between the mark and the words is the site's own: the footer
        sets the same hairline between the same two things. */
     const markH = 34;
     const mark = await volt(markH);
     const line = 'Someone has to shape Europe.';
-    const lineY = pillY + pillH + 28 + 24;   // under the pill, on the code's own line
+    const lineY = y + CODE + 46;             // its own row, clear of the code
     const GAP = 20;
     const RULE = 26;
 
-    ctx.font = font(600, 29);
-    const lineW = ctx.measureText(line).width;
     ctx.font = font(700, 30);
     const markW = mark ? markH * (230 / 96) : ctx.measureText('Volt').width;
 
-    /* Right-aligned, but never further left than the pill: the code is beside
-       this line, not above it, and words that reached it would sit on top of
-       a thing meant to be scanned. */
-    const footW = markW + GAP + 1 + GAP + lineW;
-    let voltX = Math.max(pillX, right - footW);
+    let voltX = pad;
 
     if (mark) {
       ctx.drawImage(mark, voltX, lineY - markH + 7, markW, markH);
