@@ -1536,6 +1536,12 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
    too — but a rule that claims to lay out something invisible is a rule the
    next reader has to test to trust. */
 .term[open] > .term-sessions { display: grid; gap: .4rem; padding-bottom: .4rem; }
+.term-loading {
+  margin: 0;
+  padding: .6rem .2rem .8rem;
+  font-size: .85rem;
+  color: var(--ink-faint);
+}
 
 /* ---------------------------------------------------------------- member */
 

@@ -617,6 +617,22 @@
 
     const latest = byTerm.length ? byTerm[0].term.term : 0;
 
+    /* A term whose index has not been fetched has no groups to show, but the
+       manifest in index.json says it exists and how many votes are in it. It
+       gets a fold of the same shape, empty, which fills itself when opened —
+       so the reader sees what is available before paying to load it. */
+    (index.terms || []).forEach(function (row) {
+      if (!row.file || loadedTerms.has(row.term)) return;
+      if (termKeys[row.term]) return;
+      byTerm.push({
+        term: { term: row.term, label: row.label, span: row.span },
+        groups: [],
+        votes: row.votes,
+        pending: row.file
+      });
+    });
+    byTerm.sort(function (a, b) { return b.term.term - a.term.term; });
+
     dom['session-list'].innerHTML =
       '<p class="session-tools"><button type="button" id="unfold-all" aria-expanded="' +
       (state.unfolded ? 'true' : 'false') + '">' +
@@ -630,7 +646,12 @@
           return group.items.some(function (item) { return item.id === state.decision.id; });
         });
         const open = state.unfolded || unfoldedSessions.has(key) || holds;
+        const inside = row.pending
+          ? '<p class="term-loading">Loading the votes of that Parliament…</p>'
+          : sessions;
         return '<details class="term" data-session="' + esc(key) + '"' +
+          (row.pending ? ' data-term-file="' + esc(row.pending) + '"' +
+            ' data-term="' + esc(String(row.term.term)) + '"' : '') +
           (open ? ' open' : '') + '>' +
           '<summary>' +
             '<span class="term-label">' + esc(row.term.label) + '</span>' +
@@ -638,7 +659,7 @@
             '<span class="session-count">' + row.votes.toLocaleString('en-GB') + ' vote' +
               (row.votes === 1 ? '' : 's') + '</span>' +
           '</summary>' +
-          '<div class="term-sessions">' + sessions + '</div>' +
+          '<div class="term-sessions">' + inside + '</div>' +
           '</details>';
       }).join('');
   }
@@ -868,6 +889,37 @@
      every render, so without this, closing a vote would drop them back to a
      folded list with no memory of where they had been reading. */
   const unfoldedSessions = new Set();
+  /* Which earlier terms have been fetched. index.json carries the sitting term
+     and names the others; opening a fold is what asks for one. */
+  const loadedTerms = new Set();
+  const loadingTerms = new Set();
+
+  /* Fetch an earlier Parliament's votes and fold them into the index.
+
+     Once only, and never on the way in: a reader who never opens the fold
+     never pays for it, which is the whole reason the index was split. */
+  async function loadTerm(term, file) {
+    if (loadedTerms.has(term) || loadingTerms.has(term)) return;
+    loadingTerms.add(term);
+    try {
+      const older = await Data.getJSON(file);
+      const seen = new Set(index.decisions.map(function (item) { return item.id; }));
+      (older.decisions || []).forEach(function (item) {
+        if (!seen.has(item.id)) index.decisions.push(item);
+      });
+      index.decisions.sort(function (a, b) {
+        return a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id);
+      });
+      loadedTerms.add(term);
+      unfoldedSessions.add('term-' + term);
+      renderFeed();
+    } catch (error) {
+      const box = document.querySelector('.term[data-term="' + term + '"] .term-loading');
+      if (box) box.textContent = 'Those votes could not be loaded. Reload the page to try again.';
+    } finally {
+      loadingTerms.delete(term);
+    }
+  }
 
 
   /* Every ballot in the open vote, flattened once, with everything the filters
@@ -2403,6 +2455,9 @@
         const key = details.getAttribute('data-session');
         if (details.open) unfoldedSessions.add(key);
         else unfoldedSessions.delete(key);
+
+        const file = details.getAttribute('data-term-file');
+        if (details.open && file) loadTerm(Number(details.getAttribute('data-term')), file);
       }, true);
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {
