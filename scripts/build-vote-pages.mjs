@@ -59,7 +59,21 @@ rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
 const listed = [];
-for (const entry of index.decisions) {
+/* Every term, not just the sitting one.
+
+   index.json carries only the Parliament now sitting; the others are beside
+   it, named in its manifest. A page is 5 KB, so all of them together are tens
+   of megabytes — worth it, because a shared vote of any term has to open on
+   something, and without a page of its own it would fall through to 404.html.
+   The preview cards are the opposite trade and are drawn for the sitting term
+   alone: at 92 KB each they would be hundreds of megabytes against a 1 GB
+   ceiling, and nine minutes against a ten-minute deploy. */
+const everyDecision = index.decisions.concat(
+  ...(index.terms || [])
+    .filter((row) => row.file)
+    .map((row) => JSON.parse(readFileSync(path.join(ROOT, row.file), 'utf8')).decisions || []));
+
+for (const entry of everyDecision) {
   const record = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions', entry.id + '.json'), 'utf8'));
   const totals = { for: 0, against: 0, abstain: 0 };
   for (const ballot of record.ballots || []) {

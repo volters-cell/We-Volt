@@ -216,6 +216,13 @@ const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 await page.goto('file://' + SCRATCH, { waitUntil: 'networkidle' });
 await page.waitForTimeout(600);
 
+/* index.json carries the sitting Parliament alone — the earlier ones sit in
+   their own files beside it — so this draws cards for the current term and no
+   other, which is the intention and not merely what happens to be in the file.
+   7,676 more cards would be 693 MB against a 1 GB ceiling and nine minutes
+   against a ten-minute deploy; both measured. An older vote shares the site's
+   card in a feed, and its story card is drawn in the reader's own browser, so
+   sharing one to a story still shows that vote. */
 let wanted = index.decisions;
 if (only.length) wanted = wanted.filter(d => only.includes(String(d.sourceId)));
 if (limit) wanted = wanted.slice(0, limit);

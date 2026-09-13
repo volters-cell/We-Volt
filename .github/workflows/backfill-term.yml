@@ -15,12 +15,24 @@
 
 name: Backfill a term
 
+# One at a time. Every run rebuilds the index and commits to the same branch,
+# so two of them at once would race on the push and on the file they both
+# rewrite. Queued, not cancelled: each window still has to be imported.
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
     inputs:
       from:
+        # The ninth term opened in July 2019, but the portal publishes no
+        # decisions before 2020, and the votes before 1 February 2020 were
+        # taken in a 751-seat House with the United Kingdom in it. The site
+        # holds the Union as it is, so the record starts the day after.
         description: "First day to import (YYYY-MM-DD)"
         required: true
+        default: "2020-02-01"
       until:
         description: "Last day to import (YYYY-MM-DD)"
         required: true
