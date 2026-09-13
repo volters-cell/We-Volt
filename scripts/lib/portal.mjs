@@ -198,22 +198,46 @@ export async function fetchMembers(term, options) {
     const id = String(row.identifier || lastSegment(row.id));
     const previous = known[id] || {};
     let country = previous.country || null;
+    let group = previous.group || null;
     try {
       const detail = await get(`/meps/${id}`, {});
       const person = (detail && detail.data && detail.data[0]) || null;
-      const mandate = ((person && person.hasMembership) || []).find(function (membership) {
+      const memberships = [].concat((person && person.hasMembership) || []);
+
+      const mandate = memberships.find(function (membership) {
         return membership.role === 'def/ep-roles/MEMBER_PARLIAMENT' && membership.represents;
       });
       if (mandate) country = countryCode(lastSegment([].concat(mandate.represents)[0])) || country;
+
+      /* And which group they sat with.
+
+         A sitting member's group arrives in the bulk list. A former member's
+         does not, and the cached directory only knows the ones this project
+         has already seen — so backfilling an earlier term would have given
+         every member who has since left a group of null, and "how each
+         political group split" is most of what this site is for.
+
+         It is on the person: a membership in an EP_GROUP organisation, which
+         is the Parliament's own record of where they sat. Someone who changed
+         group mid-term has more than one; the last is the one they ended on,
+         and the label is normalised the same way the bulk list's is. */
+      const seats = memberships.filter(function (membership) {
+        const org = String(membership.organization || '');
+        return /EP_GROUP|political-group/i.test(org) ||
+          /EP_GROUP|political-group/i.test(String(membership.membershipClassification || ''));
+      });
+      const seat = seats[seats.length - 1];
+      if (seat) {
+        group = normaliseGroup(seat['api:political-group'] || seat.label ||
+          lastSegment(String(seat.organization || ''))) || group;
+      }
     } catch (error) {
       // keep whatever was already known about them
     }
     members[id] = {
       name: row.label || previous.name || id,
       country: country,
-      // A former member's group is not in the bulk record; the previous
-      // directory is the only place it survives.
-      group: previous.group || null,
+      group: group,
       party: previous.party || null,
       former: true
     };

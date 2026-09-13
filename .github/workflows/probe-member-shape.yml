@@ -1,0 +1,27 @@
+# What does the portal say about a member who has left?
+#
+# Naming the political group of several hundred former members is most of what
+# makes an earlier term worth reading. This prints the shape rather than
+# guessing at the field names.
+#
+# Writes nothing.
+
+name: Probe a former member
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Member ids, space separated (blank picks two from the ninth term)"
+        default: ""
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/probe-member-shape.mjs ${{ inputs.ids }}
