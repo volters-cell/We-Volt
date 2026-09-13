@@ -471,6 +471,20 @@
   /* Votes belong to sittings, and sittings belong to plenary sessions. Grouping
      them that way is how the Parliament's own week is shaped, and it keeps the
      landing page to a handful of lines instead of a wall of votes. */
+  /* Which Parliament a date belongs to. The same boundaries as
+     scripts/lib/ep-sources.mjs, which uses them to build the address of the
+     minutes a record cites; a vote and its citation must agree about which
+     term they are in. */
+  const TERMS = [
+    { term: 10, from: '2024-07-16', label: 'This Parliament', span: '2024–2029' },
+    { term: 9, from: '2019-07-02', label: 'Previous Parliament', span: '2019–2024' },
+    { term: 8, from: '0000-00-00', label: 'Eighth Parliament', span: '2014–2019' }
+  ];
+
+  function termFor(date) {
+    return TERMS.find(function (term) { return date >= term.from; }) || TERMS[TERMS.length - 1];
+  }
+
   function sessionFor(date) {
     const found = (calendar.sessions || []).find(function (session) {
       return session.start <= date && date <= session.end;
@@ -563,11 +577,7 @@
 
     // Landing folded is the point: the page opens on the search box, and the
     // session headers say what is behind them. A search opens what it found.
-    dom['session-list'].innerHTML =
-      '<p class="session-tools"><button type="button" id="unfold-all" aria-expanded="' +
-      (state.unfolded ? 'true' : 'false') + '">' +
-      (state.unfolded ? 'Fold all sessions' : 'Unfold all sessions') + '</button></p>' +
-      groups.map(function (group) {
+    const sessionHtml = function (group) {
       const open = state.query || state.unfolded || unfoldedSessions.has(group.key);
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
@@ -581,7 +591,56 @@
         '</summary>' +
         '<ul class="decision-list">' + group.items.map(decisionCard).join('') + '</ul>' +
         '</details>';
-    }).join('');
+    };
+
+    /* Sessions belong to a Parliament, and an earlier Parliament is a
+       different subject: those members are gone, those seats were apportioned
+       differently, and a reader who came for how their MEP voted did not come
+       for 2019. So the sitting Parliament's sessions stand where they always
+       have, at the top of the list and unwrapped, and every earlier one is
+       behind a fold of its own that opens on request.
+
+       The fold is never in the way of a search: a search bypasses this branch
+       entirely and answers with one flat list across every term. */
+    const byTerm = [];
+    const termKeys = {};
+    groups.forEach(function (group) {
+      const term = termFor(group.items[0].date);
+      if (!termKeys[term.term]) {
+        termKeys[term.term] = { term: term, groups: [], votes: 0 };
+        byTerm.push(termKeys[term.term]);
+      }
+      termKeys[term.term].groups.push(group);
+      termKeys[term.term].votes += group.items.length;
+    });
+    byTerm.sort(function (a, b) { return b.term.term - a.term.term; });
+
+    const latest = byTerm.length ? byTerm[0].term.term : 0;
+
+    dom['session-list'].innerHTML =
+      '<p class="session-tools"><button type="button" id="unfold-all" aria-expanded="' +
+      (state.unfolded ? 'true' : 'false') + '">' +
+      (state.unfolded ? 'Fold all sessions' : 'Unfold all sessions') + '</button></p>' +
+      byTerm.map(function (row) {
+        const sessions = row.groups.map(sessionHtml).join('');
+        if (row.term.term === latest) return sessions;
+
+        const key = 'term-' + row.term.term;
+        const holds = state.decision && row.groups.some(function (group) {
+          return group.items.some(function (item) { return item.id === state.decision.id; });
+        });
+        const open = state.unfolded || unfoldedSessions.has(key) || holds;
+        return '<details class="term" data-session="' + esc(key) + '"' +
+          (open ? ' open' : '') + '>' +
+          '<summary>' +
+            '<span class="term-label">' + esc(row.term.label) + '</span>' +
+            '<span class="term-span">' + esc(row.term.span) + '</span>' +
+            '<span class="session-count">' + row.votes.toLocaleString('en-GB') + ' vote' +
+              (row.votes === 1 ? '' : 's') + '</span>' +
+          '</summary>' +
+          '<div class="term-sessions">' + sessions + '</div>' +
+          '</details>';
+      }).join('');
   }
 
   /* The cost layer is data-driven: it appears when a decision carries sourced
@@ -2339,7 +2398,7 @@
       // so closing a vote puts them back where they were rather than at the top
       // of a folded list.
       dom['session-list'].addEventListener('toggle', function (event) {
-        const details = event.target.closest('.session');
+        const details = event.target.closest('.session, .term');
         if (!details) return;
         const key = details.getAttribute('data-session');
         if (details.open) unfoldedSessions.add(key);

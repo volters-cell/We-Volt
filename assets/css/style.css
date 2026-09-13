@@ -1493,6 +1493,50 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
 .session-count { font-size: .78rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
 .session .decision-list { padding: 0 .5rem .6rem; }
 
+/* An earlier Parliament, folded.
+
+   It is the same control as a session, one level up and quieter: no border of
+   its own, because the sessions inside it already have one and two nested
+   boxes read as a mistake. The rule above it is what says a different subject
+   begins here — different members, different seats, a term that has ended. */
+.term { margin-top: 1.1rem; border-top: 1px solid var(--line); }
+.term > summary {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .7rem .2rem .6rem;
+  cursor: pointer;
+  list-style: none;
+}
+.term > summary::-webkit-details-marker { display: none; }
+.term > summary::before {
+  content: "▸";
+  color: var(--ink-faint);
+  font-size: .8rem;
+}
+.term[open] > summary::before { content: "▾"; }
+.term > summary:hover .term-label { color: var(--ink); }
+.term > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.term-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.term-span {
+  font-size: .8rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  flex: 1;
+}
+/* Scoped to [open] so the rule only ever describes the state it is for.
+   Chromium hides a shut <details> with content-visibility rather than by
+   setting display on the children, so an unscoped grid here would have worked
+   too — but a rule that claims to lay out something invisible is a rule the
+   next reader has to test to trust. */
+.term[open] > .term-sessions { display: grid; gap: .4rem; padding-bottom: .4rem; }
+
 /* ---------------------------------------------------------------- member */
 
 .member-votes {
