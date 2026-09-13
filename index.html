@@ -99,9 +99,16 @@
   <!-- Whose site this is, said once at the top. The invitation itself waits
        until the foot of the page, where a reader has read something. -->
   <aside class="volt-strip">
+    <!-- The mark and the line are one link, so either half takes you to the
+         party. No aria-label over the top of them: the name a screen reader
+         announces is the mark's own "Volt" and the sentence beside it, which
+         is exactly what a sighted reader is clicking. -->
     <div class="volt-strip-inner">
-      <span class="join-mark" role="img" aria-label="Volt"><span class="join-mark-text">Volt</span></span>
-      <p>Someone has to shape Europe.</p>
+      <a class="volt-strip-link" href="https://volteuropa.org/"
+         target="_blank" rel="noopener noreferrer">
+        <span class="join-mark" role="img" aria-label="Volt"><span class="join-mark-text">Volt</span></span>
+        <p>Someone has to shape Europe.</p>
+      </a>
     </div>
   </aside>
 

@@ -2422,6 +2422,29 @@ button.permalink {
 .prose p { max-width: 66ch; margin: 0 0 .9rem; }
 .prose ul { max-width: 66ch; padding-left: 1.1rem; margin: 0 0 .9rem; }
 .prose li { margin-bottom: .5rem; }
+/* Code on the About page had no styling at all, so the embed snippet rendered
+   at its own 700px and took the whole document sideways with it: on a phone
+   every paragraph of that page scrolled, not just the snippet. The site's rule
+   is that a code block may be wider than the screen only inside a scroller of
+   its own, so here is the scroller — and inline code may break mid-path rather
+   than push, since the paths it holds are longer than a phone is wide. */
+.prose pre {
+  margin: 1rem 0;
+  padding: .8rem .9rem;
+  overflow-x: auto;
+  background: var(--surface-sunken);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+  font: inherit;
+}
+.prose code { overflow-wrap: anywhere; }
+
 .prose-table { width: 100%; margin: 1rem 0; font-size: .9rem; }
 .prose-table th, .prose-table td { padding: .45rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
 .prose-table thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
@@ -2447,10 +2470,8 @@ button.permalink {
 .volt-strip-inner {
   max-width: 1560px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: clamp(.75rem, 2.5vw, 1.25rem);
 }
+
 .volt-strip p {
   margin: 0;
   font-size: .92rem;
@@ -2459,6 +2480,33 @@ button.permalink {
   color: #fff;
 }
 .volt-strip .join-mark { height: 1.15rem; }
+
+/* The row itself is the link, and it is only as wide as its two parts: a link
+   stretched across the whole band would carry a click landing in the empty
+   half of a wide screen, which is not something anybody aimed at.
+
+   It should not announce itself as a link, either — this is a masthead, not a
+   call to action, and the band below the records is where the asking happens
+   — so it keeps the colour it already had and earns its underline on hover
+   instead. The focus ring is white because everything here sits on the
+   party's purple. */
+.volt-strip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(.75rem, 2.5vw, 1.25rem);
+  color: inherit;
+  text-decoration: none;
+}
+.volt-strip-link:hover p,
+.volt-strip-link:focus-visible p {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+.volt-strip-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 
 @supports ((-webkit-mask-image: url("../brand/volt.svg")) or (mask-image: url("../brand/volt.svg"))) {
   .volt-strip .join-mark { width: 2.8rem; height: 1.15rem; margin-right: 0; }
