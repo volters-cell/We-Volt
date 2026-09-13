@@ -57,9 +57,10 @@ for (const id of ids) {
   /* organization is an opaque "org/5575". Something has to turn that into a
      name, and these are the shapes worth trying before one is relied on. */
   const org = wanted.length ? String(wanted[0].organization || '') : '';
-  const id = org.replace(/^org\//, '');
-  if (id) {
-    for (const shape of [`/corporate-bodies/${id}`, `/corporate-bodies/org/${id}`, `/org/${id}`]) {
+  const orgId = org.replace(/^org\//, '');
+  if (orgId) {
+    for (const shape of [`/corporate-bodies/${orgId}`, `/corporate-bodies/org/${orgId}`,
+      `/org/${orgId}`, `/corporate-bodies/${org}`]) {
       try {
         const answer = await get(shape, {});
         const row = (answer && answer.data && answer.data[0]) || answer;
