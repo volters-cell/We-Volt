@@ -1,0 +1,36 @@
+# Why does the amendment filter keep half of one term and a tenth of another?
+#
+# Roll-call activity held level between the terms while the share this project
+# keeps fell from 52% to 11%. Either the Parliament votes differently now or the
+# portal describes it differently. This counts the two reasons a decision is
+# dropped, separately, and prints what is being dropped.
+#
+# Writes nothing.
+
+name: Probe the amendment filter
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "First day of the window"
+        default: "2025-01-01"
+      until:
+        description: "Last day of the window"
+        default: "2025-12-31"
+      days:
+        description: "How many sitting days to sample"
+        default: "6"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: |
+          node scripts/probe-filter.mjs \
+            --from "${{ inputs.from }}" --until "${{ inputs.until }}" --days "${{ inputs.days }}"
