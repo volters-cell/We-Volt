@@ -71,6 +71,23 @@ function checkBallots(file, decision, directory) {
   if (absent.length) {
     note(file, `no member from ${absent.join(', ')} appears in this roll-call`);
   }
+
+  /* A record from before a country left the Union names members it no longer
+     has. The United Kingdom sat until 31 January 2020 in a 751-seat House, so
+     every roll-call before that date carries 73 ballots from a state that is
+     not on this map.
+
+     Those ballots stay. They were cast, they are in the Parliament's own
+     record, and dropping them would mean publishing a total that disagrees
+     with the source — on a site whose whole argument is that every number can
+     be checked. The map paints the Union as it is; the count is the count
+     that was taken. This says so out loud rather than leaving a reader to
+     wonder why the seats do not add up. */
+  const outside = [...represented].filter((code) => !MEMBER_CODES.includes(code)).sort();
+  if (outside.length) {
+    note(file, `${outside.join(', ')} voted in this roll-call and is not a member state today — ` +
+      'the ballots are kept so the totals match the Parliament, and the map shows the Union as it is');
+  }
 }
 
 function checkDecision(file, decision, states) {

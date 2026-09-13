@@ -149,19 +149,32 @@ async function loadMembers(args) {
     return known;
   }
 
-  const sitting = Object.values(members).filter(function (member) { return !member.former; }).length;
+  /* Merged into what was already known, not written over it.
+
+     fetchMembers builds its answer from the sitting members plus the term it
+     was asked for. Asked for the ninth, it does not return a tenth-term member
+     who has since left — and every ballot that names one would become a number
+     with no name. So the fetch adds and corrects; it never removes. */
+  const merged = Object.assign({}, known, members);
+  const added = Object.keys(merged).length - Object.keys(known).length;
+  const terms = [...new Set([].concat((cached && cached.terms) || [],
+    Number(args.term || TERM)))].sort(function (a, b) { return b - a; });
+
+  const sitting = Object.values(merged).filter(function (member) { return !member.former; }).length;
   await writeFile(cachePath, JSON.stringify({
     source: `${PORTAL}/meps/show-current`,
     fetched: new Date().toISOString().slice(0, 10),
     term: Number(args.term || TERM),
+    terms: terms,
     note: 'Every member who has held a seat in this Parliament: name, country and ' +
       'political group, stored once. Vote records reference members by id rather ' +
       'than repeating this, which keeps a whole term of votes at tens of megabytes. ' +
       'Members marked former have left the House; the portal no longer states their group.',
-    members: members
+    members: merged
   }, null, 2) + '\n', 'utf8');
-  console.log(`${MEP_CACHE}: ${sitting} sitting members, ${Object.keys(members).length} in the term.`);
-  return members;
+  console.log(`${MEP_CACHE}: ${sitting} sitting, ${Object.keys(merged).length} known across terms ` +
+    `${terms.join(', ')} (${added >= 0 ? '+' : ''}${added} this run).`);
+  return merged;
 }
 
 /* --------------------------------------------------------- sitting days */

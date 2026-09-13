@@ -1,0 +1,81 @@
+# Import an earlier Parliament, a year at a time.
+#
+# The ninth term is 7,676 final roll-call votes across 223 sitting days —
+# counted by scripts/survey-term.mjs against the portal, not estimated. One run
+# for all of it would be one enormous commit and nothing to resume from, so the
+# window is an input and this is dispatched per year.
+#
+# It is idempotent. fetch-plenary skips any vote whose sourceId is already
+# held, so a re-run after a failure picks up where it stopped.
+#
+# --term 9 is what the member directory is fetched for: 875 members, 548 of
+# whom no longer sit, each needing their country and the group they ended in.
+# The directory is merged, never replaced, so tenth-term members who have since
+# left keep their names.
+
+name: Backfill a term
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "First day to import (YYYY-MM-DD)"
+        required: true
+      until:
+        description: "Last day to import (YYYY-MM-DD)"
+        required: true
+      term:
+        description: "Which Parliament these votes belong to"
+        default: "9"
+      refresh_meps:
+        description: "Re-read the member directory (needed once per term)"
+        type: boolean
+        default: true
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Import the votes
+        run: |
+          node scripts/fetch-plenary.mjs \
+            ${{ inputs.refresh_meps && '--refresh-meps' || '' }} \
+            --term "${{ inputs.term }}" \
+            --from "${{ inputs.from }}" \
+            --since "${{ inputs.from }}" \
+            --until "${{ inputs.until }}"
+
+      - name: Rebuild the index and the member profiles
+        run: |
+          node scripts/build-index.mjs
+          node scripts/build-members.mjs
+
+      - name: Check every record before it goes near the site
+        run: |
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+      - name: Commit what changed
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nothing new in that window."
+            exit 0
+          fi
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git commit -m "Import ${{ inputs.from }} to ${{ inputs.until }} from the European Parliament
+
+          Backfill of term ${{ inputs.term }}, automated by
+          .github/workflows/backfill-term.yml. Records land with an empty
+          summary: writing one is editorial work."
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
