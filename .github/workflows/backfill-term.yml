@@ -15,27 +15,24 @@
 
 name: Backfill a term
 
-# One at a time. Every run rebuilds the index and commits to the same branch,
-# so two of them at once would race on the push and on the file they both
-# rewrite. Queued, not cancelled: each window still has to be imported.
-concurrency:
-  group: backfill
-  cancel-in-progress: false
+# No concurrency group. It was tried and it was wrong: GitHub keeps at most one
+# run pending per group, so dispatching four windows cancelled the two in the
+# middle. The windows are looped inside a single job instead, which is what
+# "one at a time" actually needs.
 
 on:
   workflow_dispatch:
     inputs:
-      from:
+      windows:
+        # Space-separated from:until pairs, imported in the order given.
+        #
         # The ninth term opened in July 2019, but the portal publishes no
         # decisions before 2020, and the votes before 1 February 2020 were
         # taken in a 751-seat House with the United Kingdom in it. The site
         # holds the Union as it is, so the record starts the day after.
-        description: "First day to import (YYYY-MM-DD)"
+        description: "Windows to import, as from:until pairs"
         required: true
-        default: "2020-02-01"
-      until:
-        description: "Last day to import (YYYY-MM-DD)"
-        required: true
+        default: "2023-01-01:2023-12-31 2022-01-01:2022-12-31 2021-01-01:2021-12-31 2020-02-01:2020-12-31"
       term:
         description: "Which Parliament these votes belong to"
         default: "9"
@@ -56,38 +53,46 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Import the votes
+      # One window at a time, each checked and committed before the next
+      # begins, so a failure half way through leaves the windows before it
+      # safely in and the rest simply not yet done.
+      - name: Import the windows
         run: |
-          node scripts/fetch-plenary.mjs \
-            ${{ inputs.refresh_meps && '--refresh-meps' || '' }} \
-            --term "${{ inputs.term }}" \
-            --from "${{ inputs.from }}" \
-            --since "${{ inputs.from }}" \
-            --until "${{ inputs.until }}"
-
-      - name: Rebuild the index and the member profiles
-        run: |
-          node scripts/build-index.mjs
-          node scripts/build-members.mjs
-
-      - name: Check every record before it goes near the site
-        run: |
-          node tests/import.test.mjs
-          node scripts/validate-data.mjs
-
-      - name: Commit what changed
-        run: |
-          if [ -z "$(git status --porcelain data/)" ]; then
-            echo "Nothing new in that window."
-            exit 0
-          fi
+          set -euo pipefail
           git config user.name "eu-tracker-bot"
           git config user.email "actions@github.com"
-          git add data/
-          git commit -m "Import ${{ inputs.from }} to ${{ inputs.until }} from the European Parliament
+          first=1
+          for window in ${{ inputs.windows }}; do
+            from="${window%%:*}"
+            until="${window##*:}"
+            echo "::group::$from to $until"
+
+            refresh=""
+            if [ "$first" = "1" ] && [ "${{ inputs.refresh_meps }}" = "true" ]; then
+              refresh="--refresh-meps"
+            fi
+            first=0
+
+            node scripts/fetch-plenary.mjs $refresh \
+              --term "${{ inputs.term }}" \
+              --from "$from" --since "$from" --until "$until"
+
+            node scripts/build-index.mjs
+            node scripts/build-members.mjs
+            node tests/import.test.mjs
+            node scripts/validate-data.mjs
+
+            if [ -z "$(git status --porcelain data/)" ]; then
+              echo "Nothing new in that window."
+            else
+              git add data/
+              git commit -m "Import $from to $until from the European Parliament
 
           Backfill of term ${{ inputs.term }}, automated by
           .github/workflows/backfill-term.yml. Records land with an empty
           summary: writing one is editorial work."
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+              git pull --rebase origin "${GITHUB_REF_NAME}"
+              git push origin "HEAD:${GITHUB_REF_NAME}"
+            fi
+            echo "::endgroup::"
+          done

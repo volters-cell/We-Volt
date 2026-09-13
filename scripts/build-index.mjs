@@ -22,7 +22,13 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const DIR = 'data/decisions';
 
 const files = (await readdir(path.join(ROOT, DIR)))
-  .filter((name) => name.endsWith('.json') && name !== 'index.json');
+  /* Records only. This directory also holds what this script writes —
+     index.json and a term-N.json for every earlier Parliament — and on the
+     second run it read its own output back as if it were a vote: a file with
+     no id, which took the sort down with "cannot read properties of undefined".
+     Two backfill runs failed that way before the cause was read off the log. */
+  .filter((name) => name.endsWith('.json') && name !== 'index.json' &&
+    !/^term-\d+\.json$/.test(name));
 
 const decisions = [];
 for (const name of files) {
