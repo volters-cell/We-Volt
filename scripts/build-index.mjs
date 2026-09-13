@@ -62,18 +62,74 @@ for (const name of files) {
 
 decisions.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id)));
 
+/* One index per Parliament, not one for all of them.
+
+   The sitting term is about 700 votes and its index is half a megabyte. The
+   ninth is 7,676 — measured against the portal, not guessed — and a single
+   index carrying both would put six megabytes into every first visit, most of
+   it about a Parliament that no longer exists, to render a list that starts
+   folded. So each term gets its own file, index.json carries the sitting one
+   and a manifest of the rest, and the page fetches an earlier term the moment
+   somebody opens its fold.
+
+   The boundaries are the ones scripts/lib/ep-sources.mjs already uses to build
+   the address of the minutes a record cites. A vote and its citation have to
+   agree about which Parliament they belong to. */
+const TERMS = [
+  { term: 10, from: '2024-07-16', label: 'This Parliament', span: '2024–2029' },
+  { term: 9, from: '2019-07-02', label: 'Previous Parliament', span: '2019–2024' },
+  { term: 8, from: '0000-00-00', label: 'Eighth Parliament', span: '2014–2019' }
+];
+const termOf = (date) => TERMS.find((term) => date >= term.from) || TERMS[TERMS.length - 1];
+
+const metadata = {
+  project: 'EU Tracker',
+  updated: new Date().toISOString().slice(0, 10),
+  dataStatus: 'Votes of the European Parliament, from its open data portal. ' +
+    'Summaries are editorial and may be absent. See about.html.'
+};
+
+const byTerm = new Map();
+decisions.forEach((decision) => {
+  const term = termOf(decision.date);
+  if (!byTerm.has(term.term)) byTerm.set(term.term, { term, decisions: [] });
+  byTerm.get(term.term).decisions.push(decision);
+});
+
+const present = [...byTerm.values()].sort((a, b) => b.term.term - a.term.term);
+const latest = present[0];
+
+/* Every term but the newest is written beside index.json under its own name,
+   and index.json names them so the page knows what it can ask for without
+   asking for it. */
+const terms = [];
+for (const row of present) {
+  const file = row === latest ? 'index.json' : `term-${row.term.term}.json`;
+  terms.push({
+    term: row.term.term,
+    label: row.term.label,
+    span: row.term.span,
+    votes: row.decisions.length,
+    from: row.decisions[row.decisions.length - 1].date,
+    until: row.decisions[0].date,
+    file: row === latest ? null : `${DIR}/${file}`
+  });
+  if (row === latest) continue;
+  await writeFile(path.join(ROOT, DIR, file),
+    JSON.stringify({ metadata, term: row.term.term, decisions: row.decisions }, null, 2) + '\n', 'utf8');
+  console.log(`${file} — ${row.decisions.length} decisions, ${row.decisions[row.decisions.length - 1].date} to ${row.decisions[0].date}`);
+}
+
 const index = {
-  metadata: {
-    project: 'EU Tracker',
-    updated: new Date().toISOString().slice(0, 10),
-    dataStatus: 'Votes of the European Parliament, from its open data portal. ' +
-      'Summaries are editorial and may be absent. See about.html.'
-  },
-  decisions
+  metadata,
+  term: latest.term.term,
+  terms,
+  decisions: latest.decisions
 };
 
 await writeFile(path.join(ROOT, DIR, 'index.json'), JSON.stringify(index, null, 2) + '\n', 'utf8');
-console.log(`index.json — ${decisions.length} decisions, newest ${decisions[0].date}`);
+console.log(`index.json — ${latest.decisions.length} decisions of term ${latest.term.term}, ` +
+  `newest ${latest.decisions[0].date}; ${terms.length - 1} earlier term${terms.length === 2 ? '' : 's'} beside it`);
 
 /* Which group logos exist. Drop a file into assets/groups/ and run this. */
 const GROUP_DIR = 'assets/groups';

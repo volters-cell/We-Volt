@@ -4,6 +4,18 @@
     "updated": "2026-09-13",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
+  "term": 10,
+  "terms": [
+    {
+      "term": 10,
+      "label": "This Parliament",
+      "span": "2024–2029",
+      "votes": 718,
+      "from": "2024-07-17",
+      "until": "2026-07-09",
+      "file": null
+    }
+  ],
   "decisions": [
     {
       "id": "ep-2026-07-09-2023-0212-cod-195719",

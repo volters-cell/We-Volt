@@ -174,6 +174,33 @@ export async function getAll(pathname, params, pageSize) {
    group. Then the term's full list, which includes those who have since left —
    they voted, so their ballots need a name too. Those few are looked up one by
    one, where the country is on the parliamentary mandate itself. */
+/* org/5151 -> "GUE/NGL".
+
+   A whole term is a dozen or so of these between several hundred members, so
+   they are looked up once and remembered. A miss is remembered too: a null
+   here means the portal had nothing, and asking it again for every member who
+   sat in that group would cost hundreds of requests to learn the same thing. */
+const groupNames = new Map();
+
+export async function groupName(organization) {
+  const id = lastSegment(String(organization || ''));
+  if (!id) return null;
+  if (groupNames.has(id)) return groupNames.get(id);
+
+  let name = null;
+  try {
+    const answer = await get(`/corporate-bodies/${id}`, {});
+    const row = (answer && answer.data && answer.data[0]) || answer;
+    // label is the short form — "GUE/NGL", "Renew" — which is what the bulk
+    // list gives for a sitting member, so both paths agree.
+    if (row && row.label) name = normaliseGroup(english(row.label));
+  } catch (error) {
+    name = null;
+  }
+  groupNames.set(id, name);
+  return name;
+}
+
 export async function fetchMembers(term, options) {
   const known = (options && options.known) || {};
   const members = {};
@@ -217,20 +244,38 @@ export async function fetchMembers(term, options) {
          every member who has since left a group of null, and "how each
          political group split" is most of what this site is for.
 
-         It is on the person: a membership in an EP_GROUP organisation, which
-         is the Parliament's own record of where they sat. Someone who changed
-         group mid-term has more than one; the last is the one they ended on,
-         and the label is normalised the same way the bulk list's is. */
-      const seats = memberships.filter(function (membership) {
-        const org = String(membership.organization || '');
-        return /EP_GROUP|political-group/i.test(org) ||
-          /EP_GROUP|political-group/i.test(String(membership.membershipClassification || ''));
-      });
+         Three things about this were read off the portal by
+         scripts/probe-member-shape.mjs rather than assumed, and the first
+         guess at all three was wrong:
+
+           the classification is EU_POLITICAL_GROUP, and NATIONAL_POLITICAL_GROUP
+           sits right beside it on the same person — that one is the party they
+           were elected for, not the group they sat with, and matching loosely
+           on "POLITICAL_GROUP" catches both;
+
+           the membership carries no name at all. "organization" is an opaque
+           org/5151, so lifting its last segment would have filed people under
+           the group "5151";
+
+           and org/5151 resolves at /corporate-bodies/5151 — the numeric id
+           alone; three other shapes return nothing — to a record whose label
+           is "GUE/NGL", which is the short form this project already uses.
+
+         A group is versioned by period, so a member who sat through a renaming
+         has more than one membership. The latest start date is the group they
+         ended the term in, which is the one figure a single stored group can
+         honestly be. */
+      const seats = memberships
+        .filter(function (membership) {
+          return /EU_POLITICAL_GROUP/.test(String(membership.membershipClassification || ''));
+        })
+        .sort(function (a, b) {
+          const at = (a.memberDuring && a.memberDuring.startDate) || '';
+          const bt = (b.memberDuring && b.memberDuring.startDate) || '';
+          return at < bt ? -1 : at > bt ? 1 : 0;
+        });
       const seat = seats[seats.length - 1];
-      if (seat) {
-        group = normaliseGroup(seat['api:political-group'] || seat.label ||
-          lastSegment(String(seat.organization || ''))) || group;
-      }
+      if (seat) group = (await groupName(seat.organization)) || group;
     } catch (error) {
       // keep whatever was already known about them
     }
