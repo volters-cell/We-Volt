@@ -1,7 +1,7 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
   "fetched": "2026-09-13",
-  "term": 9,
+  "term": 10,
   "terms": [
     10,
     9
@@ -6337,7 +6337,7 @@
     "256850": {
       "name": "Filip TUREK",
       "country": "CZ",
-      "group": "NI",
+      "group": "PfE",
       "party": "Motoristé sobě",
       "former": true
     },
@@ -6933,7 +6933,8 @@
       "name": "Sebastian EVERDING",
       "country": "DE",
       "group": "The Left",
-      "party": "PARTEI MENSCH KLIMA TIERSCHUTZ"
+      "party": "PARTEI MENSCH KLIMA TIERSCHUTZ",
+      "former": true
     },
     "256962": {
       "name": "Joachim STREIT",
@@ -7076,7 +7077,7 @@
     "256991": {
       "name": "Sebastiaan STÖTELER",
       "country": "NL",
-      "group": "NI",
+      "group": "PfE",
       "party": "Partij voor de Vrijheid",
       "former": true
     },
@@ -7829,7 +7830,7 @@
     "257122": {
       "name": "Antonio DECARO",
       "country": "IT",
-      "group": "NI",
+      "group": "S&D",
       "party": "Partito Democratico",
       "former": true
     },
