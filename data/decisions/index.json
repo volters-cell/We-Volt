@@ -14,6 +14,15 @@
       "from": "2024-07-17",
       "until": "2026-07-09",
       "file": null
+    },
+    {
+      "term": 9,
+      "label": "Previous Parliament",
+      "span": "2019–2024",
+      "votes": 311,
+      "from": "2024-01-15",
+      "until": "2024-04-25",
+      "file": "data/decisions/term-9.json"
     }
   ],
   "decisions": [

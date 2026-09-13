@@ -1,7 +1,10 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-09-12",
-  "term": 10,
+  "fetched": "2026-09-13",
+  "term": 9,
+  "terms": [
+    9
+  ],
   "note": "Every member who has held a seat in this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of votes at tens of megabytes. Members marked former have left the House; the portal no longer states their group.",
   "members": {
     "840": {
@@ -16,11 +19,39 @@
       "group": "S&D",
       "party": "Parti Socialiste"
     },
+    "1394": {
+      "name": "Bill NEWTON DUNN",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "1854": {
+      "name": "Constanze KREHL",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "1892": {
+      "name": "Carlos COELHO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "1909": {
       "name": "Bernd LANGE",
       "country": "DE",
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
+    },
+    "1913": {
+      "name": "Evelyne GEBHARDT",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "1917": {
       "name": "Markus FERBER",
@@ -34,11 +65,32 @@
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
     },
+    "1992": {
+      "name": "José Manuel GARCÍA-MARGALLO Y MARFIL",
+      "country": "ES",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "2054": {
+      "name": "Heidi HAUTALA",
+      "country": "FI",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "2152": {
       "name": "Leoluca ORLANDO",
       "country": "IT",
       "group": "Greens/EFA",
       "party": "Independent"
+    },
+    "2187": {
+      "name": "Antonio TAJANI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "2268": {
       "name": "Jonas SJÖSTEDT",
@@ -46,11 +98,46 @@
       "group": "The Left",
       "party": "Vänsterpartiet"
     },
+    "2309": {
+      "name": "Richard CORBETT",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "2323": {
+      "name": "Rainer WIELAND",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "2341": {
       "name": "Michael GAHLER",
       "country": "DE",
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
+    },
+    "4246": {
+      "name": "Othmar KARAS",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "4253": {
+      "name": "Frédérique RIES",
+      "country": "BE",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "4260": {
+      "name": "Eija-Riitta KORHOLA",
+      "country": "FI",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "4267": {
       "name": "Udo BULLMANN",
@@ -64,11 +151,88 @@
       "group": "EPP",
       "party": "Christlich-Soziale Union in Bayern e.V."
     },
+    "4344": {
+      "name": "María Soraya RODRÍGUEZ RAMOS",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "4391": {
+      "name": "Silvio BERLUSCONI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "4395": {
       "name": "Mario MANTOVANI",
       "country": "IT",
       "group": "ECR",
       "party": "FRATELLI D' ITALIA"
+    },
+    "4465": {
+      "name": "Raffaele FITTO",
+      "country": "IT",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "4513": {
+      "name": "Geoffrey VAN ORDEN",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "4519": {
+      "name": "Claude MORAES",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "4525": {
+      "name": "Nigel FARAGE",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "4533": {
+      "name": "Neena GILL",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "4550": {
+      "name": "Jill EVANS",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "4554": {
+      "name": "Chris DAVIES",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "4555": {
+      "name": "Daniel HANNAN",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "4560": {
+      "name": "Antonius MANDERS",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "4746": {
       "name": "Sergio BERLATO",
@@ -81,6 +245,13 @@
       "country": "NL",
       "group": "S&D",
       "party": "Progressief Nederland"
+    },
+    "5565": {
+      "name": "Brice HORTEFEUX",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "5729": {
       "name": "Kathleen VAN BREMPT",
@@ -112,6 +283,20 @@
       "group": "NI",
       "party": "Komunistická strana Čech a Moravy"
     },
+    "23712": {
+      "name": "Jan ZAHRADIL",
+      "country": "CZ",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "23768": {
+      "name": "Bogusław LIBERADZKI",
+      "country": "PL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "23781": {
       "name": "Janusz LEWANDOWSKI",
       "country": "PL",
@@ -130,11 +315,32 @@
       "group": "PfE",
       "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt"
     },
+    "23821": {
+      "name": "József SZÁJER",
+      "country": "HU",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "23868": {
       "name": "Monika BEŇOVÁ",
       "country": "SK",
       "group": "NI",
       "party": "SMER-Sociálna demokracia"
+    },
+    "24505": {
+      "name": "Emmanuel MAUREL",
+      "country": "FR",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "24594": {
+      "name": "Anne SANDER",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "24922": {
       "name": "Pascal ARIMONT",
@@ -154,17 +360,52 @@
       "group": "NI",
       "party": "Bündnis Sahra Wagenknecht – Vernunft und Gerechtigkeit"
     },
+    "26837": {
+      "name": "Lefteris CHRISTOFOROU",
+      "country": "CY",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "27714": {
+      "name": "Edina TÓTH",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "28115": {
+      "name": "Mairead MCGUINNESS",
+      "country": "IE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "28122": {
       "name": "David CASA",
       "country": "MT",
       "group": "EPP",
       "party": "Partit Nazzjonalista"
     },
+    "28141": {
+      "name": "Lívia JÁRÓKA",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "28150": {
       "name": "Kinga GÁL",
       "country": "HU",
       "group": "PfE",
       "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt"
+    },
+    "28161": {
+      "name": "Margrete AUKEN",
+      "country": "DK",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "28219": {
       "name": "Daniel CASPARY",
@@ -179,6 +420,13 @@
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
     },
+    "28224": {
+      "name": "Markus PIEPER",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "28226": {
       "name": "Christian EHLER",
       "country": "DE",
@@ -190,6 +438,41 @@
       "country": "DE",
       "group": "EPP",
       "party": "Christlich-Soziale Union in Bayern e.V."
+    },
+    "28266": {
+      "name": "Sophia IN 'T VELD",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "28269": {
+      "name": "Jerzy BUZEK",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "28288": {
+      "name": "Jan OLBRYCHT",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "28294": {
+      "name": "Ljudmila NOVAK",
+      "country": "SI",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "28297": {
+      "name": "Jacek SARYUSZ-WOLSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "28298": {
       "name": "Iratxe GARCÍA PÉREZ",
@@ -203,11 +486,46 @@
       "group": "S&D",
       "party": "Partido Socialista"
     },
+    "28340": {
+      "name": "Patrizia TOIA",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "28346": {
+      "name": "Mercedes BRESSO",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "28347": {
       "name": "Javier MORENO SÁNCHEZ",
       "country": "ES",
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
+    },
+    "28353": {
+      "name": "Anna FOTYGA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "28372": {
+      "name": "Ryszard CZARNECKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "28389": {
+      "name": "Zbigniew KUŹMIUK",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "28390": {
       "name": "Pilar DEL CASTILLO VERA",
@@ -233,6 +551,27 @@
       "group": "S&D",
       "party": "Partito Democratico"
     },
+    "28429": {
+      "name": "Alessandra MUSSOLINI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "28508": {
+      "name": "Alyn SMITH",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "28586": {
+      "name": "Dimitrios PAPADIMOULIS",
+      "country": "GR",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "28615": {
       "name": "Roberts ZĪLE",
       "country": "LV",
@@ -244,6 +583,20 @@
       "country": "LV",
       "group": "EPP",
       "party": "Jaunā Vienotība"
+    },
+    "28619": {
+      "name": "Tatjana ŽDANOKA",
+      "country": "LV",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "29579": {
+      "name": "Marc TARABELLA",
+      "country": "BE",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "30123": {
       "name": "Guillaume PELTIER",
@@ -257,6 +610,27 @@
       "group": "The Left",
       "party": "La France Insoumise"
     },
+    "30490": {
+      "name": "Aileen MCLEOD",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "33982": {
+      "name": "Marian-Jean MARINESCU",
+      "country": "RO",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "33997": {
+      "name": "Corina CREȚU",
+      "country": "RO",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "33998": {
       "name": "Vasile DÎNCU",
       "country": "RO",
@@ -269,11 +643,32 @@
       "group": "S&D",
       "party": "Bulgarian Socialist Party"
     },
+    "34578": {
+      "name": "Robert HAJŠEL",
+      "country": "SK",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "35016": {
+      "name": "Marco CAMPOMENOSI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
     "36392": {
       "name": "Aldo PATRICIELLO",
       "country": "IT",
       "group": "PfE",
       "party": "Lega"
+    },
+    "37229": {
+      "name": "Kati PIRI",
+      "country": "NL",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "37312": {
       "name": "Christel SCHALDEMOSE",
@@ -287,6 +682,20 @@
       "group": "EPP",
       "party": "Partidul Naţional Liberal"
     },
+    "38398": {
+      "name": "Esther DE LANGE",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "38420": {
+      "name": "Cristian-Silviu BUŞOI",
+      "country": "RO",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "38511": {
       "name": "Georg MAYER",
       "country": "AT",
@@ -298,6 +707,13 @@
       "country": "SE",
       "group": "S&D",
       "party": "Arbetarepartiet- Socialdemokraterna"
+    },
+    "38595": {
+      "name": "Rovana PLUMB",
+      "country": "RO",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "39725": {
       "name": "Iuliu WINKLER",
@@ -323,6 +739,13 @@
       "group": "Greens/EFA",
       "party": "Independent"
     },
+    "58789": {
+      "name": "Jan HUITEMA",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "72779": {
       "name": "Nadine MORANO",
       "country": "FR",
@@ -347,6 +770,13 @@
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "88715": {
+      "name": "José GUSMÃO",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "88882": {
       "name": "Victor NEGRESCU",
       "country": "RO",
@@ -370,6 +800,20 @@
       "country": "NL",
       "group": "EPP",
       "party": "Christen Democratisch Appèl"
+    },
+    "96646": {
+      "name": "Helmut SCHOLZ",
+      "country": "DE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "96648": {
+      "name": "Philippe LAMBERTS",
+      "country": "BE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "96653": {
       "name": "Katarína ROTH NEVEĎALOVÁ",
@@ -401,6 +845,27 @@
       "group": "ECR",
       "party": "Lietuvos lenkų rinkimų akcija – Krikščioniškų šeimų sąjunga"
     },
+    "96698": {
+      "name": "Viktor USPASKICH",
+      "country": "LT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "96706": {
+      "name": "João FERREIRA",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "96708": {
+      "name": "Oriol JUNQUERAS I VIES",
+      "country": "ES",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "96709": {
       "name": "Morten LØKKEGAARD",
       "country": "DK",
@@ -413,11 +878,67 @@
       "group": "Renew",
       "party": "Renaissance"
     },
+    "96713": {
+      "name": "Evžen TOŠENOVSKÝ",
+      "country": "CZ",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "96725": {
       "name": "Bas EICKHOUT",
       "country": "NL",
       "group": "Greens/EFA",
       "party": "GroenLinks-PvdA",
+      "former": true
+    },
+    "96730": {
+      "name": "Sven GIEGOLD",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96734": {
+      "name": "Ska KELLER",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96739": {
+      "name": "Reinhard BÜTIKOFER",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96740": {
+      "name": "Yannick JADOT",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96743": {
+      "name": "Michèle RIVASI",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96747": {
+      "name": "Arnaud DANJEAN",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96750": {
+      "name": "François ALFONSI",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
       "former": true
     },
     "96752": {
@@ -438,6 +959,41 @@
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
     },
+    "96771": {
+      "name": "Jarosław KALINOWSKI",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96772": {
+      "name": "Peter JAHR",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96775": {
+      "name": "Lara COMI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96776": {
+      "name": "Róża THUN UND HOHENSTEIN",
+      "country": "PL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "96779": {
+      "name": "Danuta Maria HÜBNER",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "96780": {
       "name": "Monika HOHLMEIER",
       "country": "DE",
@@ -456,11 +1012,32 @@
       "group": "EPP",
       "party": "Koalicja Obywatelska"
     },
+    "96796": {
+      "name": "Ryszard Antoni LEGUTKO",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "96801": {
+      "name": "Tomasz Piotr PORĘBA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "96808": {
       "name": "Pablo ARIAS ECHEVERRÍA",
       "country": "ES",
       "group": "EPP",
       "party": "Partido Popular"
+    },
+    "96809": {
+      "name": "Peter VAN DALEN",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "96810": {
       "name": "Carlo FIDANZA",
@@ -480,11 +1057,25 @@
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
     },
+    "96820": {
+      "name": "Marisa MATIAS",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "96826": {
       "name": "Tamás DEUTSCH",
       "country": "HU",
       "group": "PfE",
       "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt"
+    },
+    "96829": {
+      "name": "Ádám KÓSA",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "96830": {
       "name": "Enikő GYŐRI",
@@ -497,6 +1088,111 @@
       "country": "DE",
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
+    },
+    "96837": {
+      "name": "Petra KAMMEREVERT",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96842": {
+      "name": "Ismail ERTUG",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96844": {
+      "name": "Norbert NEUSER",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96852": {
+      "name": "Cornelia ERNST",
+      "country": "DE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "96864": {
+      "name": "David Maria SASSOLI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96867": {
+      "name": "Maria da Graça CARVALHO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96868": {
+      "name": "Karima DELLI",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "96880": {
+      "name": "Andrea COZZOLINO",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "96885": {
+      "name": "Dominique RIQUET",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "96891": {
+      "name": "Paolo DE CASTRO",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96892": {
+      "name": "Roberto GUALTIERI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96899": {
+      "name": "José Manuel FERNANDES",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96903": {
+      "name": "Paulo RANGEL",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96911": {
+      "name": "Tanja FAJON",
+      "country": "SI",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96922": {
+      "name": "Izaskun BILBAO BARANDICA",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "96932": {
       "name": "Birgit SIPPEL",
@@ -528,11 +1224,67 @@
       "group": "Renew",
       "party": "Democraten 66"
     },
+    "96951": {
+      "name": "Diane DODDS",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "96952": {
+      "name": "Sylvie GUILLAUME",
+      "country": "FR",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "96955": {
+      "name": "Catherine BEARDER",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "96978": {
+      "name": "Nuno MELO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "96991": {
+      "name": "Eider GARDIAZABAL RUBIAL",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "96998": {
       "name": "Evelyn REGNER",
       "country": "AT",
       "group": "S&D",
       "party": "Sozialdemokratische Partei Österreichs"
+    },
+    "97058": {
+      "name": "Guy VERHOFSTADT",
+      "country": "BE",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "97133": {
+      "name": "Derk Jan EPPINK",
+      "country": "NL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "97198": {
+      "name": "Mara BIZZOTTO",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
     },
     "97236": {
       "name": "Marie TOUSSAINT",
@@ -570,6 +1322,20 @@
       "group": "EPP",
       "party": "Uniunea Democrată Maghiară din România"
     },
+    "99283": {
+      "name": "Alessandro PANZA",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "99461": {
+      "name": "Alexandra Lesley PHILLIPS",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "99878": {
       "name": "Waldemar BUDA",
       "country": "PL",
@@ -606,6 +1372,13 @@
       "group": "Greens/EFA",
       "party": "Bündnis 90/Die Grünen"
     },
+    "103746": {
+      "name": "Michal ŠIMEČKA",
+      "country": "SK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "106936": {
       "name": "Daniel FREUND",
       "country": "DE",
@@ -624,11 +1397,32 @@
       "group": "EPP",
       "party": "Partido do Centro Democrático Social-Partido Popular"
     },
+    "111011": {
+      "name": "Anthea MCINTYRE",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "111412": {
       "name": "Villy SØVNDAL",
       "country": "DK",
       "group": "Greens/EFA",
       "party": "Socialistisk Folkeparti"
+    },
+    "112014": {
+      "name": "Phil BENNION",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "112611": {
+      "name": "Petri SARVAMAA",
+      "country": "FI",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "112744": {
       "name": "Tonino PICULA",
@@ -654,6 +1448,27 @@
       "group": "EPP",
       "party": "Partit Nazzjonalista"
     },
+    "113892": {
+      "name": "Eric ANDRIEU",
+      "country": "FR",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "113959": {
+      "name": "Martina ANDERSON",
+      "country": null,
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "114268": {
+      "name": "Nils TORVALDS",
+      "country": "FI",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "118859": {
       "name": "Roberta METSOLA",
       "country": "MT",
@@ -665,6 +1480,20 @@
       "country": "CZ",
       "group": "PfE",
       "party": "ANO 2011",
+      "former": true
+    },
+    "119431": {
+      "name": "Ruža TOMAŠIĆ",
+      "country": "HR",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "119434": {
+      "name": "Dubravka ŠUICA",
+      "country": "HR",
+      "group": "EPP",
+      "party": null,
       "former": true
     },
     "119435": {
@@ -679,6 +1508,13 @@
       "group": "S&D",
       "party": "Lietuvos socialdemokratų partija"
     },
+    "120478": {
+      "name": "Martina MICHELS",
+      "country": "DE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "122978": {
       "name": "Alicia HOMS GINEL",
       "country": "ES",
@@ -691,11 +1527,39 @@
       "group": "ECR",
       "party": "Sverigedemokraterna"
     },
+    "124586": {
+      "name": "Balázs HIDVÉGHI",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "124691": {
       "name": "Costas MAVRIDES",
       "country": "CY",
       "group": "S&D",
       "party": "Democratic Party"
+    },
+    "124692": {
+      "name": "Demetris PAPADAKIS",
+      "country": "CY",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124693": {
+      "name": "Pascal DURAND",
+      "country": "FR",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124696": {
+      "name": "Andrus ANSIP",
+      "country": "EE",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "124700": {
       "name": "Jana TOOM",
@@ -709,11 +1573,60 @@
       "group": "EPP",
       "party": "TOP 09"
     },
+    "124704": {
+      "name": "Stanislav POLČÁK",
+      "country": "CZ",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124705": {
+      "name": "István UJHELYI",
+      "country": "HU",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124708": {
+      "name": "Dita CHARANZOVÁ",
+      "country": "CZ",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "124709": {
+      "name": "Martina DLABAJOVÁ",
+      "country": "CZ",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "124710": {
+      "name": "Michaela ŠOJDROVÁ",
+      "country": "CZ",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124712": {
+      "name": "Andrea BOCSKOR",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "124713": {
       "name": "Tomáš ZDECHOVSKÝ",
       "country": "CZ",
       "group": "EPP",
       "party": "Křesťanská a demokratická unie - Československá strana lidová"
+    },
+    "124714": {
+      "name": "Andor DELI",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "124715": {
       "name": "György HÖLVÉNYI",
@@ -734,11 +1647,46 @@
       "party": "Kansallinen Kokoomus",
       "former": true
     },
+    "124734": {
+      "name": "Cláudia MONTEIRO DE AGUIAR",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124735": {
+      "name": "Miapetra KUMPULA-NATRI",
+      "country": "FI",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "124736": {
       "name": "Merja KYLLÖNEN",
       "country": "FI",
       "group": "The Left",
       "party": "Vasemmistoliitto"
+    },
+    "124738": {
+      "name": "Gilles LEBRETON",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "124739": {
+      "name": "Carlos ZORRINHO",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124747": {
+      "name": "Pedro SILVA PEREIRA",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "124760": {
       "name": "Nicolas BAY",
@@ -746,11 +1694,60 @@
       "group": "ECR",
       "party": "Identité Libertés"
     },
+    "124765": {
+      "name": "Joëlle MÉLIN",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
     "124766": {
       "name": "Petras AUŠTREVIČIUS",
       "country": "LT",
       "group": "Renew",
       "party": "Liberalų sąjūdis"
+    },
+    "124770": {
+      "name": "Jean-François JALKH",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "124771": {
+      "name": "Dominique BILDE",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "124777": {
+      "name": "Tiziana BEGHIN",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "124779": {
+      "name": "Eleonora EVI",
+      "country": "IT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "124780": {
+      "name": "Marco ZANNI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "124781": {
+      "name": "Alfred SANT",
+      "country": "MT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "124784": {
       "name": "Dan NICA",
@@ -800,11 +1797,53 @@
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
     },
+    "124809": {
+      "name": "Sven SCHULZE",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124812": {
+      "name": "Fabio Massimo CASTALDO",
+      "country": "IT",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "124813": {
       "name": "Dario TAMBURRANO",
       "country": "IT",
       "group": "The Left",
       "party": "Movimento 5 Stelle"
+    },
+    "124814": {
+      "name": "Simona BONAFÈ",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124818": {
+      "name": "Klaus BUCHNER",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "124821": {
+      "name": "Nicola DANTI",
+      "country": "IT",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "124822": {
+      "name": "Dietmar KÖSTER",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "124828": {
       "name": "Fulvio MARTUSCIELLO",
@@ -812,17 +1851,52 @@
       "group": "EPP",
       "party": "Forza Italia"
     },
+    "124831": {
+      "name": "Isabella ADINOLFI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124833": {
+      "name": "Laura FERRARA",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "124834": {
       "name": "Martin SONNEBORN",
       "country": "DE",
       "group": "NI",
       "party": "Die PARTEI"
     },
+    "124835": {
+      "name": "Rosa D'AMATO",
+      "country": "IT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "124836": {
       "name": "Maria NOICHL",
       "country": "DE",
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
+    },
+    "124837": {
+      "name": "Joachim SCHUSTER",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124844": {
+      "name": "Piernicola PEDICINI",
+      "country": "IT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "124846": {
       "name": "Pina PICIERNO",
@@ -836,6 +1910,20 @@
       "group": "EPP",
       "party": "Citizens for European Development of Bulgaria"
     },
+    "124852": {
+      "name": "Sergei STANISHEV",
+      "country": "BG",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124856": {
+      "name": "Ignazio CORRAO",
+      "country": "IT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "124858": {
       "name": "Fabio DE MASI",
       "country": "DE",
@@ -848,6 +1936,13 @@
       "group": "EPP",
       "party": "Forza Italia"
     },
+    "124862": {
+      "name": "Ulrike MÜLLER",
+      "country": "DE",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "124866": {
       "name": "Ilhan KYUCHYUK",
       "country": "BG",
@@ -859,6 +1954,27 @@
       "country": "IT",
       "group": "S&D",
       "party": "Partito Democratico"
+    },
+    "124870": {
+      "name": "Jeppe KOFOD",
+      "country": "DK",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124872": {
+      "name": "Morten PETERSEN",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "124873": {
+      "name": "Angel DZHAMBAZKI",
+      "country": "BG",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "124875": {
       "name": "Anders VISTISEN",
@@ -879,6 +1995,20 @@
       "group": "ECR",
       "party": "Prawo i Sprawiedliwość"
     },
+    "124887": {
+      "name": "Karol KARSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "124891": {
+      "name": "Zdzisław KRASNODĘBSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "124893": {
       "name": "Bogdan Andrzej ZDROJEWSKI",
       "country": "PL",
@@ -890,6 +2020,83 @@
       "country": "PL",
       "group": "EPP",
       "party": "Polskie Stronnictwo Ludowe"
+    },
+    "124929": {
+      "name": "Ivan ŠTEFANEC",
+      "country": "SK",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124934": {
+      "name": "Monika VANA",
+      "country": "AT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "124936": {
+      "name": "Maria ARENA",
+      "country": "BE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124942": {
+      "name": "Molly SCOTT CATO",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "124952": {
+      "name": "Seb DANCE",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124953": {
+      "name": "Jude KIRTON-DARLING",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124961": {
+      "name": "Theresa GRIFFIN",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124963": {
+      "name": "Julie WARD",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124965": {
+      "name": "Nathan GILL",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "124970": {
+      "name": "Miriam DALLI",
+      "country": "MT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124972": {
+      "name": "Ernest URTASUN",
+      "country": "ES",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "124973": {
       "name": "Gerolf ANNEMANS",
@@ -909,11 +2116,67 @@
       "group": "The Left",
       "party": "Independent"
     },
+    "124986": {
+      "name": "Matt CARTHY",
+      "country": "IE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "124988": {
+      "name": "Deirdre CLUNE",
+      "country": "IE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "124989": {
+      "name": "Fredrick FEDERLEY",
+      "country": "SE",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "124991": {
+      "name": "Jytte GUTELAND",
+      "country": "SE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "124992": {
+      "name": "Malin BJÖRK",
+      "country": "SE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "124996": {
+      "name": "Peter LUNDGREN",
+      "country": "SE",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "125001": {
       "name": "Harald VILIMSKY",
       "country": "AT",
       "group": "PfE",
       "party": "Freiheitliche Partei Österreichs"
+    },
+    "125004": {
+      "name": "Franc BOGOVIČ",
+      "country": "SI",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "125005": {
+      "name": "Javier NART",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "125012": {
       "name": "Daniel BUDA",
@@ -921,11 +2184,32 @@
       "group": "EPP",
       "party": "Partidul Naţional Liberal"
     },
+    "125020": {
+      "name": "Paul TANG",
+      "country": "NL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "125021": {
+      "name": "Agnes JONGERIUS",
+      "country": "NL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "125023": {
       "name": "Anja HAZEKAMP",
       "country": "NL",
       "group": "The Left",
       "party": "Partij voor de Dieren"
+    },
+    "125025": {
+      "name": "Marcel DE GRAAFF",
+      "country": "NL",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "125027": {
       "name": "Esteban GONZÁLEZ PONS",
@@ -933,11 +2217,39 @@
       "group": "EPP",
       "party": "Partido Popular"
     },
+    "125030": {
+      "name": "Annie SCHREIJER-PIERIK",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "125038": {
+      "name": "Maite PAGAZAURTUNDÚA",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "125042": {
       "name": "Javi LÓPEZ",
       "country": "ES",
       "group": "S&D",
       "party": "Partit dels Socialistes de Catalunya (PSC-PSOE)"
+    },
+    "125043": {
+      "name": "Inma RODRÍGUEZ-PIÑERO",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "125045": {
+      "name": "Clara AGUILERA",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "125046": {
       "name": "Jonás FERNÁNDEZ",
@@ -951,11 +2263,32 @@
       "group": "PfE",
       "party": "VOX"
     },
+    "125063": {
+      "name": "Georgios KYRTSOS",
+      "country": "GR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "125064": {
+      "name": "Maria SPYRAKI",
+      "country": "GR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "125065": {
       "name": "Elissavet VOZEMBERG-VRIONIDI",
       "country": "GR",
       "group": "EPP",
       "party": "Nea Demokratia"
+    },
+    "125067": {
+      "name": "Theodoros ZAGORAKIS",
+      "country": "GR",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "125068": {
       "name": "Emmanouil KEFALOGIANNIS",
@@ -981,11 +2314,46 @@
       "group": "ECR",
       "party": "Nieuw-Vlaamse Alliantie"
     },
+    "125109": {
+      "name": "Eva KAILI",
+      "country": "GR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "125110": {
+      "name": "Nikos ANDROULAKIS",
+      "country": "GR",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "125128": {
+      "name": "Iskra MIHAYLOVA",
+      "country": "BG",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "125204": {
       "name": "Borja GIMÉNEZ LARRAZ",
       "country": "ES",
       "group": "EPP",
       "party": "Partido Popular"
+    },
+    "125214": {
+      "name": "Bronis ROPĖ",
+      "country": "LT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "125237": {
+      "name": "Marco ZULLO",
+      "country": "IT",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "125325": {
       "name": "Sander SMIT",
@@ -999,11 +2367,32 @@
       "group": "EPP",
       "party": "Forza Italia"
     },
+    "125706": {
+      "name": "Jiří POSPÍŠIL",
+      "country": "CZ",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "126644": {
+      "name": "Jordi CAÑAS",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "126699": {
       "name": "Gilles PENNELLE",
       "country": "FR",
       "group": "PfE",
       "party": "Rassemblement national"
+    },
+    "127096": {
+      "name": "Domènec RUIZ DEVESA",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "127766": {
       "name": "Jussi SARAMO",
@@ -1023,11 +2412,39 @@
       "group": "Renew",
       "party": "Eesti Reformierakond"
     },
+    "129141": {
+      "name": "Frans TIMMERMANS",
+      "country": "NL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "129164": {
+      "name": "Tom VANDENKENDELAERE",
+      "country": "BE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "130100": {
       "name": "Hilde VAUTMANS",
       "country": "BE",
       "group": "Renew",
       "party": "Anders"
+    },
+    "130256": {
+      "name": "Dace MELBĀRDE",
+      "country": "LV",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "130833": {
+      "name": "Stelios KOULOGLOU",
+      "country": "GR",
+      "group": "The Left",
+      "party": null,
+      "former": true
     },
     "130881": {
       "name": "Mieke ANDRIESE",
@@ -1035,17 +2452,73 @@
       "group": "PfE",
       "party": "Partij voor de Vrijheid"
     },
+    "131507": {
+      "name": "Miguel URBÁN CRESPO",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "131580": {
       "name": "Jordan BARDELLA",
       "country": "FR",
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "132191": {
+      "name": "Gunnar BECK",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "132366": {
+      "name": "Pirkko RUOHONEN-LERNER",
+      "country": "FI",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "134605": {
+      "name": "Ramona STRUGARIU",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "135511": {
       "name": "Valérie HAYER",
       "country": "FR",
       "group": "Renew",
       "party": "Renaissance"
+    },
+    "136236": {
+      "name": "João PIMENTA LOPES",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "182995": {
+      "name": "Annika BRUNA",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "183338": {
+      "name": "Jakop G. DALUNDE",
+      "country": "SE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "183793": {
+      "name": "Angelo CIOCCA",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
     },
     "183916": {
       "name": "Alexandra GEESE",
@@ -1071,6 +2544,13 @@
       "group": "PfE",
       "party": "Vlaams Belang"
     },
+    "185974": {
+      "name": "Jordi SOLÉ",
+      "country": "ES",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "187917": {
       "name": "Marc BOTENGA",
       "country": "BE",
@@ -1082,6 +2562,20 @@
       "country": "EE",
       "group": "EPP",
       "party": "Isamaa"
+    },
+    "188636": {
+      "name": "John HOWARTH",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "188733": {
+      "name": "Jonathan BULLOCK",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "188945": {
       "name": "Dennis RADTKE",
@@ -1095,6 +2589,27 @@
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "189391": {
+      "name": "Nosheena MOBARIK",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "189525": {
+      "name": "Asim ADEMOV",
+      "country": "BG",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "190099": {
+      "name": "Rory PALMER",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "190464": {
       "name": "Thomas WAITZ",
       "country": "AT",
@@ -1106,6 +2621,20 @@
       "country": "DE",
       "group": "The Left",
       "party": "DIE LINKE."
+    },
+    "190518": {
+      "name": "Jörg MEUTHEN",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "190519": {
+      "name": "Caroline NAGTEGAAL",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "190574": {
       "name": "Tomasz FROELICH",
@@ -1119,6 +2648,13 @@
       "group": "EPP",
       "party": "Österreichische Volkspartei"
     },
+    "190774": {
+      "name": "Geoffroy DIDIER",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "191693": {
       "name": "Elsi KATAINEN",
       "country": "FI",
@@ -1130,6 +2666,27 @@
       "country": "NL",
       "group": "PfE",
       "party": "Partij voor de Vrijheid"
+    },
+    "192634": {
+      "name": "Giuseppe FERRANDINO",
+      "country": "IT",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "192635": {
+      "name": "Danilo Oscar LANCINI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "193273": {
+      "name": "Romeo FRANZ",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "193292": {
       "name": "Tilly METZ",
@@ -1144,6 +2701,13 @@
       "party": "Parti chrétien social luxembourgeois",
       "former": true
     },
+    "197390": {
+      "name": "Sara SKYTTEDAL",
+      "country": "SE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197391": {
       "name": "Heléne FRITZON",
       "country": "SE",
@@ -1156,17 +2720,45 @@
       "group": "S&D",
       "party": "Arbetarepartiet- Socialdemokraterna"
     },
+    "197393": {
+      "name": "David LEGA",
+      "country": "SE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197394": {
+      "name": "Josianne CUTAJAR",
+      "country": "MT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197395": {
       "name": "Alice KUHNKE",
       "country": "SE",
       "group": "Greens/EFA",
       "party": "Miljöpartiet de gröna"
     },
+    "197396": {
+      "name": "Erik BERGKVIST",
+      "country": "SE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197398": {
       "name": "Pär HOLMGREN",
       "country": "SE",
       "group": "Greens/EFA",
       "party": "Miljöpartiet de gröna"
+    },
+    "197399": {
+      "name": "Jessica STEGRUD",
+      "country": "SE",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "197400": {
       "name": "Abir AL-SAHLANI",
@@ -1240,6 +2832,13 @@
       "group": "EPP",
       "party": "Democratic Rally"
     },
+    "197415": {
+      "name": "Niyazi KIZILYÜREK",
+      "country": "CY",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "197416": {
       "name": "Giorgos GEORGIOU",
       "country": "CY",
@@ -1251,6 +2850,27 @@
       "country": "HR",
       "group": "EPP",
       "party": "Hrvatska demokratska zajednica"
+    },
+    "197418": {
+      "name": "Monica SEMEDO",
+      "country": "LU",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197419": {
+      "name": "Valter FLEGO",
+      "country": "HR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197420": {
+      "name": "Kris PEETERS",
+      "country": "BE",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "197421": {
       "name": "Isabel WISELER-LIMA",
@@ -1265,6 +2885,13 @@
       "party": "Christlich Demokratische Union Deutschlands",
       "former": true
     },
+    "197423": {
+      "name": "Nico SEMSROTT",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "197425": {
       "name": "Ralf SEEKATZ",
       "country": "DE",
@@ -1276,6 +2903,20 @@
       "country": "DE",
       "group": "EPP",
       "party": "Christlich Demokratische Union Deutschlands"
+    },
+    "197427": {
+      "name": "Marlene MORTLER",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197428": {
+      "name": "Nicolas SCHMIT",
+      "country": "LU",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197429": {
       "name": "Marion WALSMANN",
@@ -1289,6 +2930,13 @@
       "group": "Renew",
       "party": "Freie Wähler"
     },
+    "197431": {
+      "name": "Patrick BREYER",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "197432": {
       "name": "Jan-Christoph OETJEN",
       "country": "DE",
@@ -1301,11 +2949,39 @@
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
     },
+    "197434": {
+      "name": "Martin BUSCHMANN",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197435": {
       "name": "Gabriele BISCHOFF",
       "country": "DE",
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
+    },
+    "197436": {
+      "name": "Helmut GEUKING",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197437": {
+      "name": "Nicola BEER",
+      "country": "DE",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197438": {
+      "name": "Mislav KOLAKUŠIĆ",
+      "country": "HR",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "197439": {
       "name": "Damian BOESELAGER",
@@ -1344,6 +3020,13 @@
       "group": "Renew",
       "party": "Freie Demokratische Partei"
     },
+    "197446": {
+      "name": "Milan BRGLEZ",
+      "country": "SI",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197447": {
       "name": "Irena JOVEVA",
       "country": "SI",
@@ -1361,6 +3044,55 @@
       "country": "DE",
       "group": "Greens/EFA",
       "party": "Bündnis 90/Die Grünen"
+    },
+    "197451": {
+      "name": "Viola VON CRAMON-TAUBADEL",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197452": {
+      "name": "Klemen GROŠELJ",
+      "country": "SI",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197453": {
+      "name": "Anna DEPARNAY-GRUNENBERG",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197455": {
+      "name": "Cindy FRANSSEN",
+      "country": "BE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197457": {
+      "name": "Henrike HAHN",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197458": {
+      "name": "Benoît LUTGEN",
+      "country": "BE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197459": {
+      "name": "Pierrette HERZBERGER-FOFANA",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "197460": {
       "name": "Sergey LAGODINSKY",
@@ -1392,11 +3124,25 @@
       "group": "Greens/EFA",
       "party": "Bündnis 90/Die Grünen"
     },
+    "197465": {
+      "name": "Niklas NIENASS",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "197466": {
       "name": "Jutta PAULUS",
       "country": "DE",
       "group": "Greens/EFA",
       "party": "Bündnis 90/Die Grünen"
+    },
+    "197467": {
+      "name": "Geert BOURGEOIS",
+      "country": "BE",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "197468": {
       "name": "Özlem DEMIREL",
@@ -1416,6 +3162,20 @@
       "group": "Greens/EFA",
       "party": "Ecologistes Confédérés pour l'Organisation de Luttes Originales"
     },
+    "197471": {
+      "name": "Petra DE SUTTER",
+      "country": "BE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197472": {
+      "name": "Filip DE MAN",
+      "country": "BE",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
     "197473": {
       "name": "Christian DOLESCHAL",
       "country": "DE",
@@ -1428,11 +3188,53 @@
       "group": "ESN",
       "party": "Alternative für Deutschland"
     },
+    "197478": {
+      "name": "Lars Patrick BERG",
+      "country": "DE",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197480": {
+      "name": "Nicolaus FEST",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197481": {
       "name": "Maximilian KRAH",
       "country": "DE",
       "group": "NI",
       "party": "Alternative für Deutschland",
+      "former": true
+    },
+    "197482": {
+      "name": "Joachim KUHS",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197483": {
+      "name": "Sylvia LIMMER",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197488": {
+      "name": "Guido REIL",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197489": {
+      "name": "Bernhard ZIMNIOK",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
       "former": true
     },
     "197490": {
@@ -1465,6 +3267,20 @@
       "group": "Renew",
       "party": "Horizons"
     },
+    "197495": {
+      "name": "Marek Paweł BALT",
+      "country": "PL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197496": {
+      "name": "Marek BELKA",
+      "country": "PL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197497": {
       "name": "Sven MIKSER",
       "country": "EE",
@@ -1476,6 +3292,13 @@
       "country": "PL",
       "group": "S&D",
       "party": "Nowa Lewica"
+    },
+    "197499": {
+      "name": "Chrysoula ZACHAROPOULOU",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197500": {
       "name": "Mounir SATOURI",
@@ -1508,11 +3331,74 @@
       "group": "Renew",
       "party": "Renaissance"
     },
+    "197505": {
+      "name": "Catherine CHABAUD",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197506": {
+      "name": "Caroline ROOSE",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197507": {
+      "name": "Włodzimierz CIMOSZEWICZ",
+      "country": "PL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197508": {
+      "name": "Stéphane SÉJOURNÉ",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197510": {
+      "name": "Jarosław DUDA-LATOSZEWSKI",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197511": {
+      "name": "Salima YENBOU",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197512": {
+      "name": "Benoît BITEAU",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197513": {
+      "name": "Tomasz FRANKOWSKI",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197514": {
       "name": "Andrzej HALICKI",
       "country": "PL",
       "group": "EPP",
       "party": "Koalicja Obywatelska"
+    },
+    "197515": {
+      "name": "Pernille WEISS-EHLER",
+      "country": "DK",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "197516": {
       "name": "Patryk JAKI",
@@ -1525,6 +3411,41 @@
       "country": "PL",
       "group": "EPP",
       "party": "Polskie Stronnictwo Ludowe"
+    },
+    "197518": {
+      "name": "Krzysztof JURGIEL",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197519": {
+      "name": "Beata KEMPA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197520": {
+      "name": "Izabela-Helena KLOC",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197521": {
+      "name": "Manuel BOMPARD",
+      "country": "FR",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "197522": {
+      "name": "Radka MAXOVÁ",
+      "country": "CZ",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197523": {
       "name": "Łukasz KOHUT",
@@ -1545,6 +3466,13 @@
       "party": "ANO 2011",
       "former": true
     },
+    "197527": {
+      "name": "Anne-Sophie PELLETIER",
+      "country": "FR",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "197528": {
       "name": "Ondřej KNOTEK",
       "country": "CZ",
@@ -1556,6 +3484,27 @@
       "country": "FR",
       "group": "The Left",
       "party": "La France Insoumise"
+    },
+    "197530": {
+      "name": "Joanna KOPCIŃSKA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197531": {
+      "name": "Gwendoline DELBOS-CORFIELD",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197532": {
+      "name": "Elżbieta KRUK",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "197533": {
       "name": "Manon AUBRY",
@@ -1569,11 +3518,60 @@
       "group": "EPP",
       "party": "Les Républicains"
     },
+    "197535": {
+      "name": "Agnès EVREN",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197536": {
+      "name": "Nathalie COLIN-OESTERLÉ",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197537": {
       "name": "Alexandr VONDRA",
       "country": "CZ",
       "group": "ECR",
       "party": "Občanská demokratická strana"
+    },
+    "197538": {
+      "name": "Beata MAZUREK",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197539": {
+      "name": "Mikuláš PEKSA",
+      "country": "CZ",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197540": {
+      "name": "Leszek MILLER",
+      "country": "PL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197541": {
+      "name": "Andżelika Anna MOŻDŻANOWSKA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197542": {
+      "name": "Janina OCHOJSKA",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "197543": {
       "name": "Bernard GUETTA",
@@ -1581,17 +3579,59 @@
       "group": "Renew",
       "party": "Sans parti"
     },
+    "197544": {
+      "name": "Elżbieta RAFALSKA",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "197545": {
       "name": "Bogdan RZOŃCA",
       "country": "PL",
       "group": "ECR",
       "party": "Prawo i Sprawiedliwość"
     },
+    "197546": {
+      "name": "Marcel KOLAJA",
+      "country": "CZ",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197547": {
+      "name": "Irène TOLLERET",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197548": {
+      "name": "Radosław SIKORSKI",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197549": {
       "name": "Markéta GREGOROVÁ",
       "country": "CZ",
       "group": "Greens/EFA",
       "party": "PIRÁTI"
+    },
+    "197550": {
+      "name": "Sylwia SPUREK",
+      "country": "PL",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197551": {
+      "name": "Stéphane BIJOUX",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197552": {
       "name": "Veronika VRECIONOVÁ",
@@ -1604,6 +3644,20 @@
       "country": "PL",
       "group": "ECR",
       "party": "Prawo i Sprawiedliwość"
+    },
+    "197554": {
+      "name": "Luis GARICANO",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197555": {
+      "name": "Søren GADE",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197556": {
       "name": "Ivan DAVID",
@@ -1623,6 +3677,55 @@
       "group": "Renew",
       "party": "Venstre, Danmarks Liberale Parti"
     },
+    "197559": {
+      "name": "Grzegorz TOBISZOWSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197563": {
+      "name": "Mauri PEKKARINEN",
+      "country": "FI",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197564": {
+      "name": "Hynek BLAŠKO",
+      "country": "CZ",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197566": {
+      "name": "Witold Jan WASZCZYKOWSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197567": {
+      "name": "Karen MELCHIOR",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197570": {
+      "name": "Peter KOFOD",
+      "country": "DK",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197571": {
+      "name": "Nikolaj VILLUMSEN",
+      "country": "DK",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "197572": {
       "name": "Anna ZALEWSKA",
       "country": "PL",
@@ -1640,6 +3743,13 @@
       "country": "FR",
       "group": "The Left",
       "party": "La France Insoumise"
+    },
+    "197576": {
+      "name": "Sylvie BRUNET",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197577": {
       "name": "Gilles BOYER",
@@ -1671,17 +3781,150 @@
       "group": "Renew",
       "party": "Renaissance"
     },
+    "197582": {
+      "name": "Gianna GANCIA",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197584": {
+      "name": "Sándor RÓNAI",
+      "country": "HU",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197585": {
+      "name": "Pierre KARLESKIND",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197586": {
+      "name": "Stefania ZAMBELLI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197587": {
+      "name": "Attila ARA-KOVÁCS",
+      "country": "HU",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197588": {
+      "name": "Katalin CSEH",
+      "country": "HU",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "197589": {
       "name": "Laurence FARRENG",
       "country": "FR",
       "group": "Renew",
       "party": "Mouvement Démocrate"
     },
+    "197590": {
+      "name": "Giuliano PISAPIA",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197591": {
       "name": "Irene TINAGLI",
       "country": "IT",
       "group": "S&D",
       "party": "Partito Democratico"
+    },
+    "197592": {
+      "name": "Pierfrancesco MAJORINO",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197593": {
+      "name": "Véronique TRILLET-LENOIR",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197594": {
+      "name": "Laura HUHTASAARI",
+      "country": "FI",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197595": {
+      "name": "Anna Júlia DONÁTH",
+      "country": "HU",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197596": {
+      "name": "Teuvo HAKKARAINEN",
+      "country": "FI",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197597": {
+      "name": "Hélène LAPORTE",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197599": {
+      "name": "Richard TICE",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197600": {
+      "name": "Barbara Ann GIBSON",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197601": {
+      "name": "Michael HEAVER",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197602": {
+      "name": "Catherine ROWETT",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197603": {
+      "name": "June Alison MUMMERY",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197604": {
+      "name": "Lucy NETHSINGHA",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197606": {
       "name": "Javier ZARZALEJOS",
@@ -1695,11 +3938,88 @@
       "group": "ECR",
       "party": "FRATELLI D' ITALIA"
     },
+    "197608": {
+      "name": "Gianantonio DA RE",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197610": {
+      "name": "Alessandra BASSO",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197611": {
+      "name": "Elena LIZZI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197612": {
+      "name": "Annunziata Mary REES-MOGG",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197613": {
+      "name": "Gina DOWDING",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197614": {
+      "name": "Marco DREOSTO",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197615": {
+      "name": "Jérôme RIVIÈRE",
+      "country": "FR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197616": {
+      "name": "Rosanna CONTE",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197617": {
+      "name": "Carlo CALENDA",
+      "country": "IT",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "197618": {
       "name": "Elisabetta GUALMINI",
       "country": "IT",
       "group": "Renew",
       "party": "Azione"
+    },
+    "197619": {
+      "name": "Sabrina PIGNEDOLI",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197620": {
+      "name": "Matthew PATTEN",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "197621": {
       "name": "Juan Ignacio ZOIDO ÁLVAREZ",
@@ -1719,6 +4039,20 @@
       "group": "Renew",
       "party": "Latvijas attīstībai"
     },
+    "197625": {
+      "name": "Irina VON WIESE",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197626": {
+      "name": "Hervé JUVIN",
+      "country": "FR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197627": {
       "name": "Virginie JORON",
       "country": "FR",
@@ -1731,11 +4065,102 @@
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "197629": {
+      "name": "Maxette PIRBAKAS",
+      "country": "FR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197631": {
+      "name": "Dacian CIOLOŞ",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197632": {
+      "name": "Claudia GAMON",
+      "country": "AT",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197634": {
+      "name": "Pedro MARQUES",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197635": {
+      "name": "Maria-Manuel LEITÃO-MARQUES",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197636": {
       "name": "Ioan-Rareş BOGDAN",
       "country": "RO",
       "group": "EPP",
       "party": "Partidul Naţional Liberal"
+    },
+    "197637": {
+      "name": "Vasile BLAGA",
+      "country": "RO",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197638": {
+      "name": "Margarida MARQUES",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197640": {
+      "name": "André Jorge DIONÍSIO BRADFORD",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197641": {
+      "name": "Sara CERDAS",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197642": {
+      "name": "Ben HABIB",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197643": {
+      "name": "Karoline EDTSTADLER",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197644": {
+      "name": "Christian ALLARD",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197645": {
+      "name": "Francisco GUERREIRO",
+      "country": "PT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "197646": {
       "name": "Mircea-Gheorghe HAVA",
@@ -1761,6 +4186,20 @@
       "group": "EPP",
       "party": "Partidul Naţional Liberal"
     },
+    "197650": {
+      "name": "Isabel SANTOS",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197651": {
+      "name": "Carmen AVRAM",
+      "country": "RO",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197652": {
       "name": "Angelika WINZIG",
       "country": "AT",
@@ -1773,11 +4212,32 @@
       "group": "S&D",
       "party": "Partidul Social Democrat"
     },
+    "197654": {
+      "name": "Ciarán CUFFE",
+      "country": "IE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "197655": {
       "name": "Cristian TERHEŞ",
       "country": "RO",
       "group": "ECR",
       "party": "Partidului Național Conservator Român (PNCR)"
+    },
+    "197656": {
+      "name": "Simone SCHMIEDTBAUER",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197657": {
+      "name": "Tudor CIUHODARU",
+      "country": "RO",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "197658": {
       "name": "Dragoş BENEA",
@@ -1785,11 +4245,53 @@
       "group": "S&D",
       "party": "Partidul Social Democrat"
     },
+    "197661": {
+      "name": "Cristian GHINEA",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "197662": {
       "name": "Vangelis MEIMARAKIS",
       "country": "GR",
       "group": "EPP",
       "party": "Nea Demokratia"
+    },
+    "197663": {
+      "name": "Dragoş PÎSLARU",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197664": {
+      "name": "Clotilde ARMAND",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197665": {
+      "name": "Dragoş TUDORACHE",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197667": {
+      "name": "Barbara THALER",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197668": {
+      "name": "Vlad-Marius BOTOŞ",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197670": {
       "name": "Andreas SCHIEDER",
@@ -1797,11 +4299,25 @@
       "group": "S&D",
       "party": "Sozialdemokratische Partei Österreichs"
     },
+    "197671": {
+      "name": "Traian BĂSESCU",
+      "country": "RO",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197672": {
       "name": "Eugen TOMAC",
       "country": "RO",
       "group": "Renew",
       "party": "Partidul Mișcarea Populară"
+    },
+    "197675": {
+      "name": "Sarah WIENER",
+      "country": "AT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "197677": {
       "name": "Günther SIDL",
@@ -1809,11 +4325,32 @@
       "group": "S&D",
       "party": "Sozialdemokratische Partei Österreichs"
     },
+    "197678": {
+      "name": "Bettina VOLLATH",
+      "country": "AT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197679": {
       "name": "Isabel BENJUMEA BENJUMEA",
       "country": "ES",
       "group": "EPP",
       "party": "Partido Popular"
+    },
+    "197680": {
+      "name": "Aurélia BEIGNEUX",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197681": {
+      "name": "Sira REGO",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
     },
     "197682": {
       "name": "Hannes HEIDE",
@@ -1821,11 +4358,25 @@
       "group": "S&D",
       "party": "Sozialdemokratische Partei Österreichs"
     },
+    "197683": {
+      "name": "Gilbert COLLARD",
+      "country": "FR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197684": {
       "name": "Pernando BARRENA ARZA",
       "country": "ES",
       "group": "The Left",
       "party": "EH BILDU"
+    },
+    "197686": {
+      "name": "Julie LECHANTEUX",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
     },
     "197687": {
       "name": "Philippe OLIVIER",
@@ -1845,11 +4396,39 @@
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "197692": {
+      "name": "Stelios KYMPOUROPOULOS",
+      "country": "GR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197693": {
+      "name": "Dinesh DHAMIJA",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "197694": {
       "name": "Raphaël GLUCKSMANN",
       "country": "FR",
       "group": "S&D",
       "party": "Place publique"
+    },
+    "197695": {
+      "name": "Anna-Michelle ASIMAKOPOULOU",
+      "country": "GR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197696": {
+      "name": "Scott AINSLIE",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "197697": {
       "name": "Aurore LALUCQ",
@@ -1857,11 +4436,25 @@
       "group": "S&D",
       "party": "Place publique"
     },
+    "197698": {
+      "name": "Pierre LARROUTUROU",
+      "country": "FR",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197699": {
       "name": "Elena KOUNTOURA",
       "country": "GR",
       "group": "The Left",
       "party": "Coalition of the Radical Left"
+    },
+    "197700": {
+      "name": "Luisa PORRITT",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "197701": {
       "name": "Konstantinos ARVANITIS",
@@ -1875,11 +4468,88 @@
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
     },
+    "197703": {
+      "name": "Lance FORMAN",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197704": {
+      "name": "Brian MONTEITH",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197705": {
+      "name": "John David Edward TENNANT",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197708": {
+      "name": "Claire FOX",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197709": {
+      "name": "Robert ROOS",
+      "country": "NL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197710": {
+      "name": "Alexandra Louise Rosenfield PHILLIPS",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "197711": {
       "name": "Dolors MONTSERRAT",
       "country": "ES",
       "group": "EPP",
       "party": "Partido Popular"
+    },
+    "197712": {
+      "name": "Henrik OVERGAARD NIELSEN",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197714": {
+      "name": "Ellie CHOWNS",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197715": {
+      "name": "David BULL",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197716": {
+      "name": "Jane BROPHY",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197717": {
+      "name": "Ibán GARCÍA DEL BLANCO",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197718": {
       "name": "Nicolás GONZÁLEZ CASARES",
@@ -1893,6 +4563,13 @@
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
     },
+    "197720": {
+      "name": "Frances FITZGERALD",
+      "country": "IE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197721": {
       "name": "César LUENA",
       "country": "ES",
@@ -1905,11 +4582,67 @@
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
     },
+    "197728": {
+      "name": "Mónica Silvana GONZÁLEZ",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197730": {
+      "name": "Antony HOOK",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197731": {
+      "name": "Clare DALY",
+      "country": "IE",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "197732": {
+      "name": "Manuel PIZARRO",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197733": {
+      "name": "Robert ROWLAND",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197734": {
       "name": "Lefteris NIKOLAOU-ALAVANOS",
       "country": "GR",
       "group": "NI",
       "party": "Communist Party of Greece"
+    },
+    "197735": {
+      "name": "Adriana MALDONADO LÓPEZ",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197736": {
+      "name": "Belinda DE LUCY",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197737": {
+      "name": "Ioannis LAGOS",
+      "country": "GR",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "197738": {
       "name": "Lídia PEREIRA",
@@ -1917,11 +4650,165 @@
       "group": "EPP",
       "party": "Partido Social Democrata"
     },
+    "197739": {
+      "name": "Judith BUNTING",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197740": {
+      "name": "Athanasios KONSTANTINOU",
+      "country": "GR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197742": {
+      "name": "Isabel GARCÍA MUÑOZ",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197743": {
+      "name": "Petros KOKKALIS",
+      "country": "GR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197744": {
+      "name": "Ann WIDDECOMBE",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197746": {
+      "name": "Álvaro AMARO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197747": {
+      "name": "Kyriakos VELOPOULOS",
+      "country": "GR",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197749": {
+      "name": "Caroline VOADEN",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197751": {
+      "name": "James Alexander GLANCY",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197752": {
+      "name": "Christina Sheila JORDAN",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197754": {
+      "name": "Sandra PEREIRA",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "197755": {
+      "name": "Martin HORWOOD",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197756": {
+      "name": "Vera TAX",
+      "country": "NL",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197757": {
+      "name": "James WELLS",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197758": {
+      "name": "Jackie JONES",
+      "country": null,
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197759": {
+      "name": "Rupert LOWE",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197760": {
+      "name": "Martin Edward DAUBNEY",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197761": {
+      "name": "Miroslav ČÍŽ",
+      "country": "SK",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197763": {
       "name": "Milan UHRÍK",
       "country": "SK",
       "group": "ESN",
       "party": "Hnutie Republika"
+    },
+    "197764": {
+      "name": "Miroslav RADAČOVSKÝ",
+      "country": "SK",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197765": {
+      "name": "Peter POLLÁK",
+      "country": "SK",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197766": {
+      "name": "Lucia ĎURIŠ NICHOLSONOVÁ",
+      "country": "SK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197767": {
+      "name": "Eugen JURZYCA",
+      "country": "SK",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "197769": {
       "name": "Michal WIEZIK",
@@ -1935,6 +4822,13 @@
       "group": "Renew",
       "party": "Progresívne Slovensko"
     },
+    "197771": {
+      "name": "Vladimír BILČÍK",
+      "country": "SK",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197772": {
       "name": "Tineke STRIK",
       "country": "NL",
@@ -1947,11 +4841,32 @@
       "group": "ECR",
       "party": "Staatkundig Gereformeerde Partij"
     },
+    "197776": {
+      "name": "Rob ROOKEN",
+      "country": "NL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197777": {
+      "name": "Leopoldo LÓPEZ GIL",
+      "country": "ES",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "197778": {
       "name": "Tom BERENDSEN",
       "country": "NL",
-      "group": "NI",
+      "group": "EPP",
       "party": "Christen Democratisch Appèl",
+      "former": true
+    },
+    "197779": {
+      "name": "José Ramón BAUZÁ DÍAZ",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
       "former": true
     },
     "197780": {
@@ -1972,17 +4887,73 @@
       "group": "S&D",
       "party": "Progressief Nederland"
     },
+    "197783": {
+      "name": "Andris AMERIKS",
+      "country": "LV",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197784": {
       "name": "Susana SOLÍS PÉREZ",
       "country": "ES",
       "group": "EPP",
       "party": "Partido Popular"
     },
+    "197785": {
+      "name": "Eugenia RODRÍGUEZ PALOP",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
     "197786": {
       "name": "Susanna CECCARDI",
       "country": "IT",
       "group": "PfE",
       "party": "Lega"
+    },
+    "197787": {
+      "name": "Antonio Maria RINALDI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197788": {
+      "name": "Anna BONFRISCO",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197789": {
+      "name": "Simona BALDASSARRE",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197790": {
+      "name": "Luisa REGIMENTI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197791": {
+      "name": "Massimiliano SMERIGLIO",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197792": {
+      "name": "Daniela RONDINELLI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197794": {
       "name": "Chiara GEMMA",
@@ -1996,11 +4967,46 @@
       "group": "The Left",
       "party": "Movimento 5 Stelle"
     },
+    "197796": {
+      "name": "Massimo CASANOVA",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197797": {
+      "name": "Andrea CAROPPO",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197798": {
+      "name": "Lucia VUOLO",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197799": {
+      "name": "Valentino GRANT",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
     "197800": {
       "name": "Eero HEINÄLUOMA",
       "country": "FI",
       "group": "S&D",
       "party": "Suomen Sosialidemokraattinen Puolue/Finlands Socialdemokratiska Parti"
+    },
+    "197801": {
+      "name": "Franco ROBERTI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197802": {
       "name": "Ville NIINISTÖ",
@@ -2008,11 +5014,109 @@
       "group": "Greens/EFA",
       "party": "Vihreä liitto"
     },
+    "197803": {
+      "name": "Andrew ENGLAND KERR",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197804": {
+      "name": "Dino GIARRUSSO",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197805": {
+      "name": "Silvia MODIG",
+      "country": "FI",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "197806": {
+      "name": "Annalisa TARDINO",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197807": {
+      "name": "John LONGWORTH",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "197808": {
+      "name": "Pietro BARTOLO",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197809": {
+      "name": "Lucy Elizabeth HARRIS",
+      "country": null,
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "197810": {
       "name": "Nils UŠAKOVS",
       "country": "LV",
       "group": "S&D",
       "party": "\"Saskaņa\" sociāldemokrātiskā partija"
+    },
+    "197811": {
+      "name": "Shaffaq MOHAMMED",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197812": {
+      "name": "Magid MAGID",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197813": {
+      "name": "Jake PUGH",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197814": {
+      "name": "Louis STEDMAN-BRYCE",
+      "country": null,
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197815": {
+      "name": "Sheila RITCHIE",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197816": {
+      "name": "Naomi LONG",
+      "country": null,
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197817": {
+      "name": "Mick WALLACE",
+      "country": "IE",
+      "group": "The Left",
+      "party": null,
+      "former": true
     },
     "197818": {
       "name": "Billy KELLEHER",
@@ -2020,11 +5124,25 @@
       "group": "Renew",
       "party": "Fianna Fáil Party"
     },
+    "197819": {
+      "name": "Alexis GEORGOULIS",
+      "country": "GR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "197820": {
       "name": "Nicola PROCACCINI",
       "country": "IT",
       "group": "ECR",
       "party": "FRATELLI D' ITALIA"
+    },
+    "197822": {
+      "name": "Francesca DONATO",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "197824": {
       "name": "Giuseppe MILAZZO",
@@ -2037,6 +5155,27 @@
       "country": "IT",
       "group": "PfE",
       "party": "Lega"
+    },
+    "197826": {
+      "name": "Matteo ADINOLFI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "197827": {
+      "name": "Idoia VILLANUEVA RUIZ",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "197828": {
+      "name": "Manu PINEDA",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
     },
     "197829": {
       "name": "Jorge BUXADÉ VILLALBA",
@@ -2055,6 +5194,34 @@
       "country": "ES",
       "group": "Greens/EFA",
       "party": "Esquerra Republicana de Catalunya"
+    },
+    "197835": {
+      "name": "Aušra SEIBUTYTĖ",
+      "country": "LT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197836": {
+      "name": "Alexander ALEXANDROV YORDANOV",
+      "country": "BG",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "197837": {
+      "name": "Stasys JAKELIŪNAS",
+      "country": "LT",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197838": {
+      "name": "Juozas OLEKAS",
+      "country": "LT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "197839": {
       "name": "Radan KANEV",
@@ -2087,11 +5254,39 @@
       "party": "Tėvynės sąjunga-Lietuvos krikščionys demokratai",
       "former": true
     },
+    "197844": {
+      "name": "Petar VITANOV",
+      "country": "BG",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
     "197845": {
       "name": "Tsvetelina PENKOVA",
       "country": "BG",
       "group": "S&D",
       "party": "Bulgarian Socialist Party"
+    },
+    "197846": {
+      "name": "Ivo HRISTOV",
+      "country": "BG",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "197848": {
+      "name": "Atidzhe ALIEVA-VELI",
+      "country": "BG",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197849": {
+      "name": "Andrey SLABAKOV",
+      "country": "BG",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "197863": {
       "name": "Maria WALSH",
@@ -2099,11 +5294,53 @@
       "group": "EPP",
       "party": "Fine Gael Party"
     },
+    "197868": {
+      "name": "Samira RAFAELA",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "197869": {
+      "name": "Liesje SCHREINEMACHER",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "197870": {
       "name": "Kim VAN SPARRENTAK",
       "country": "NL",
       "group": "Greens/EFA",
       "party": "Progressief Nederland"
+    },
+    "197889": {
+      "name": "Grace O'SULLIVAN",
+      "country": "IE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "197894": {
+      "name": "László TRÓCSÁNYI",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "197935": {
+      "name": "Ivan Vilibor SINČIĆ",
+      "country": "HR",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "198063": {
+      "name": "Márton GYÖNGYÖSI",
+      "country": "HU",
+      "group": "NI",
+      "party": null,
+      "former": true
     },
     "198073": {
       "name": "Anna-Maja HENRIKSSON",
@@ -2123,6 +5360,13 @@
       "group": "Renew",
       "party": "Suomen Keskusta"
     },
+    "198096": {
+      "name": "Mazaly AGUILAR",
+      "country": "ES",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
     "198176": {
       "name": "Roman HAIDER",
       "country": "AT",
@@ -2134,6 +5378,13 @@
       "country": "RO",
       "group": "S&D",
       "party": "Partidul Social Democrat"
+    },
+    "198329": {
+      "name": "Estrella DURÁ FERRANDIS",
+      "country": "ES",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "198373": {
       "name": "Judita LAŠŠÁKOVÁ",
@@ -2152,6 +5403,13 @@
       "country": "DK",
       "group": "S&D",
       "party": "Socialdemokratiet"
+    },
+    "199996": {
+      "name": "Isabel CARVALHAIS",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
     },
     "200345": {
       "name": "Pierre-Romain THIONNET",
@@ -2177,11 +5435,39 @@
       "group": "S&D",
       "party": "Parti ouvrier socialiste luxembourgeois"
     },
+    "202112": {
+      "name": "Gheorghe-Vlad NISTOR",
+      "country": "RO",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "202351": {
+      "name": "Carles PUIGDEMONT I CASAMAJÓ",
+      "country": "ES",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "202352": {
+      "name": "Antoni COMÍN I OLIVERES",
+      "country": "ES",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "204129": {
       "name": "Nikolina BRNJAC",
       "country": "HR",
       "group": "EPP",
       "party": "Hrvatska demokratska zajednica"
+    },
+    "204331": {
+      "name": "Linea SØGAARD-LIDELL",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "204332": {
       "name": "Barry ANDREWS",
@@ -2195,6 +5481,20 @@
       "group": "EPP",
       "party": "Forza Italia"
     },
+    "204334": {
+      "name": "Vincenzo SOFO",
+      "country": "IT",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "204335": {
+      "name": "Alviina ALAMETSÄ",
+      "country": "FI",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "204336": {
       "name": "Miriam LEXMANN",
       "country": "SK",
@@ -2206,6 +5506,20 @@
       "country": "PL",
       "group": "ECR",
       "party": "Prawo i Sprawiedliwość"
+    },
+    "204368": {
+      "name": "Christian SAGARTZ",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "204371": {
+      "name": "Heather ANDERSON",
+      "country": null,
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
     },
     "204400": {
       "name": "Adrián VÁZQUEZ LÁZARA",
@@ -2225,6 +5539,13 @@
       "group": "PfE",
       "party": "VOX"
     },
+    "204416": {
+      "name": "Ilana CICUREL",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "204418": {
       "name": "Nora MEBAREK",
       "country": "FR",
@@ -2237,11 +5558,46 @@
       "group": "Renew",
       "party": "Mouvement Démocrate"
     },
+    "204420": {
+      "name": "Claude GRUFFAT",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "204421": {
+      "name": "Jean-Lin LACAPELLE",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "204443": {
+      "name": "Clara PONSATÍ OBIOLS",
+      "country": "ES",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "204449": {
       "name": "Riho TERRAS",
       "country": "EE",
       "group": "EPP",
       "party": "Isamaa"
+    },
+    "204733": {
+      "name": "Dorien ROOKMAKER",
+      "country": "NL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "205452": {
+      "name": "Chris MACMANUS",
+      "country": "IE",
+      "group": "The Left",
+      "party": null,
+      "former": true
     },
     "206158": {
       "name": "Manuela RIPA",
@@ -2255,11 +5611,39 @@
       "group": "Greens/EFA",
       "party": "Groen"
     },
+    "209091": {
+      "name": "Cyrus ENGERER",
+      "country": "MT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "209140": {
+      "name": "Vlad GHEORGHE",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "209896": {
+      "name": "Colm MARKEY",
+      "country": "IE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "210480": {
       "name": "Marta TEMIDO",
       "country": "PT",
       "group": "S&D",
       "party": "Partido Socialista"
+    },
+    "212855": {
+      "name": "Alin MITUȚA",
+      "country": "RO",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "213330": {
       "name": "Ernő SCHALLER-BAROSS",
@@ -2278,6 +5662,13 @@
       "country": "NL",
       "group": "S&D",
       "party": "Progressief Nederland"
+    },
+    "218349": {
+      "name": "Michiel HOOGEVEEN",
+      "country": "NL",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "219652": {
       "name": "Matej TONIN",
@@ -2321,6 +5712,48 @@
       "group": "NI",
       "party": "Slovenska demokratska stranka"
     },
+    "221463": {
+      "name": "Ladislav ILČIĆ",
+      "country": "HR",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "226260": {
+      "name": "Karolin BRAUNSBERGER-REINHOLD",
+      "country": "DE",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "228286": {
+      "name": "Karsten LUCKE",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "228604": {
+      "name": "Ilan DE BASSO",
+      "country": "SE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "229352": {
+      "name": "Malte GALLÉE",
+      "country": "DE",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "229519": {
+      "name": "Catharina RINZEMA",
+      "country": "NL",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "229839": {
       "name": "René REPASI",
       "country": "DE",
@@ -2333,11 +5766,25 @@
       "group": "S&D",
       "party": "Partito Democratico"
     },
+    "232843": {
+      "name": "Jan OVELGÖNNE",
+      "country": "DE",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
     "233862": {
       "name": "Matjaž NEMEC",
       "country": "SI",
       "group": "S&D",
       "party": "Socialni demokrati"
+    },
+    "234344": {
+      "name": "Max ORVILLE",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "236050": {
       "name": "Marie DAUCHY",
@@ -2345,11 +5792,39 @@
       "group": "PfE",
       "party": "Rassemblement national"
     },
+    "236051": {
+      "name": "Eric MINARDI",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "236052": {
+      "name": "Patricia CHAGNON",
+      "country": "FR",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
     "236053": {
       "name": "Marina MESURE",
       "country": "FR",
       "group": "The Left",
       "party": "La France Insoumise"
+    },
+    "237224": {
+      "name": "João ALBUQUERQUE",
+      "country": "PT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "237320": {
+      "name": "Eva-Maria Alexandrova POPTCHEVA",
+      "country": "ES",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "237465": {
       "name": "Matthias ECKE",
@@ -2357,11 +5832,109 @@
       "group": "S&D",
       "party": "Sozialdemokratische Partei Deutschlands"
     },
+    "237779": {
+      "name": "Carina OHLSSON",
+      "country": "SE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "238639": {
+      "name": "Johan NISSINEN",
+      "country": "SE",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "238674": {
+      "name": "Theresa BIELOWSKI",
+      "country": "AT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "239255": {
+      "name": "Matteo GAZZINI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "239256": {
+      "name": "Paola GHIDONI",
+      "country": "IT",
+      "group": "ID",
+      "party": null,
+      "former": true
+    },
+    "239257": {
+      "name": "Achille VARIATI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "239258": {
+      "name": "Maria Angela DANZÌ",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
     "239260": {
       "name": "Denis NESCI",
       "country": "IT",
       "group": "ECR",
       "party": "FRATELLI D' ITALIA"
+    },
+    "239262": {
+      "name": "Elisabetta DE BLASIS",
+      "country": "IT",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "239271": {
+      "name": "Eleni STAVROU",
+      "country": "CY",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "239972": {
+      "name": "Erik POULSEN",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "239973": {
+      "name": "Bergur Løkke RASMUSSEN",
+      "country": "DK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "240478": {
+      "name": "Beatrice COVASSI",
+      "country": "IT",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "243912": {
+      "name": "Maria Veronica ROSSI",
+      "country": "IT",
+      "group": "NI",
+      "party": null,
+      "former": true
+    },
+    "243979": {
+      "name": "Francesca PEPPUCCI",
+      "country": "IT",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "244571": {
       "name": "Nikos PAPANDREOU",
@@ -2381,11 +5954,60 @@
       "group": "The Left",
       "party": "PODEMOS"
     },
+    "245858": {
+      "name": "Thomas RUDNER",
+      "country": "DE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "247122": {
+      "name": "Catherine AMALRIC",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
+    "247709": {
+      "name": "Anja HAGA",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
     "247735": {
       "name": "Laura BALLARÍN CEREZA",
       "country": "ES",
       "group": "S&D",
       "party": "Partido Socialista Obrero Español"
+    },
+    "247737": {
+      "name": "Ana COLLADO JIMÉNEZ",
+      "country": "ES",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "249284": {
+      "name": "Laurence SAILLIET",
+      "country": "FR",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "249285": {
+      "name": "Lydie MASSARD",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "249443": {
+      "name": "Wolfram PIRCHNER",
+      "country": "AT",
+      "group": "EPP",
+      "party": null,
+      "former": true
     },
     "249603": {
       "name": "Martine KEMP",
@@ -2393,11 +6015,67 @@
       "group": "EPP",
       "party": "Parti chrétien social luxembourgeois"
     },
+    "249826": {
+      "name": "Jozef MIHÁL",
+      "country": "SK",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "249982": {
       "name": "Milan MAZUREK",
       "country": "SK",
       "group": "ESN",
       "party": "Hnutie Republika"
+    },
+    "250235": {
+      "name": "Witold PAHL",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "250237": {
+      "name": "Włodzimierz KARPIŃSKI",
+      "country": "PL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "250538": {
+      "name": "Rafał ROMANOWSKI",
+      "country": "PL",
+      "group": "ECR",
+      "party": null,
+      "former": true
+    },
+    "250572": {
+      "name": "Patricia CARO MAYA",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "250918": {
+      "name": "François THIOLLET",
+      "country": "FR",
+      "group": "Greens/EFA",
+      "party": null,
+      "former": true
+    },
+    "251249": {
+      "name": "Esther SANZ SELVA",
+      "country": "ES",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "251268": {
+      "name": "Michael KAUCH",
+      "country": "DE",
+      "group": "Renew",
+      "party": null,
+      "former": true
     },
     "251324": {
       "name": "Krzysztof BREJZA",
@@ -2405,11 +6083,81 @@
       "group": "EPP",
       "party": "Koalicja Obywatelska"
     },
+    "251859": {
+      "name": "Guy LAVOCAT",
+      "country": "FR",
+      "group": "Renew",
+      "party": null,
+      "former": true
+    },
     "251874": {
       "name": "Niels GEUKING",
       "country": "DE",
       "group": "EPP",
       "party": "Familien-Partei Deutschlands"
+    },
+    "253008": {
+      "name": "Linus GLANZELIUS",
+      "country": "SE",
+      "group": "S&D",
+      "party": null,
+      "former": true
+    },
+    "253043": {
+      "name": "Henk Jan ORMEL",
+      "country": "NL",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "254718": {
+      "name": "Anabela RODRIGUES",
+      "country": "PT",
+      "group": "The Left",
+      "party": null,
+      "former": true
+    },
+    "254719": {
+      "name": "Vasco BECKER-WEINBERG",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "254720": {
+      "name": "Ana Miguel DOS SANTOS",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "254721": {
+      "name": "Vânia NETO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "254722": {
+      "name": "Teófilo SANTOS",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "254876": {
+      "name": "Ricardo MORGADO",
+      "country": "PT",
+      "group": "EPP",
+      "party": null,
+      "former": true
+    },
+    "256134": {
+      "name": "Ansis PŪPOLS",
+      "country": "LV",
+      "group": "ECR",
+      "party": null,
+      "former": true
     },
     "256803": {
       "name": "Maria GUZENINA",
