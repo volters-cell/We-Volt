@@ -1,0 +1,32 @@
+# How much is the ninth term, before importing it?
+#
+# Backfilling 2019-2024 is however many thousand votes the Parliament took in
+# five years, each one a file and a preview card, on a site with a 1 GB ceiling
+# and a ten-minute deploy timeout. This asks the portal for the count rather
+# than guessing at it.
+#
+# Writes nothing.
+
+name: Survey a term
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "First day to walk"
+        default: "2019-07-02"
+      until:
+        description: "Last day to walk"
+        default: "2024-07-15"
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Count what is there
+        run: node scripts/survey-term.mjs --from "${{ inputs.from }}" --until "${{ inputs.until }}"
