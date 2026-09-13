@@ -35,8 +35,40 @@ for (const id of ids) {
   console.log(`${id}  ${person.label || ''}`);
   console.log('top-level keys:', Object.keys(person).join(', '));
   const memberships = [].concat(person.hasMembership || []);
-  console.log(`${memberships.length} memberships\n`);
-  memberships.slice(0, 12).forEach(function (m, i) {
+  console.log(`${memberships.length} memberships; classifications seen:`);
+  const kinds = {};
+  memberships.forEach(function (m) {
+    const k = String(m.membershipClassification || '(none)');
+    kinds[k] = (kinds[k] || 0) + 1;
+  });
+  Object.entries(kinds).forEach(([k, n]) => console.log(`   ${n}x ${k}`));
+
+  /* The two that matter: the European political group they sat with, and the
+     national party they were elected for. Printed whole, because these are the
+     entries the import will read. */
+  const wanted = memberships.filter(function (m) {
+    return /EP_GROUP|POLITICAL_GROUP/i.test(String(m.membershipClassification || ''));
+  });
+  console.log(`\n${wanted.length} political-group memberships:`);
+  wanted.forEach(function (m, i) {
     console.log(`  [${i}] ` + JSON.stringify(m, null, 2).split('\n').join('\n      '));
   });
+
+  /* organization is an opaque "org/5575". Something has to turn that into a
+     name, and these are the shapes worth trying before one is relied on. */
+  const org = wanted.length ? String(wanted[0].organization || '') : '';
+  const id = org.replace(/^org\//, '');
+  if (id) {
+    for (const shape of [`/corporate-bodies/${id}`, `/corporate-bodies/org/${id}`, `/org/${id}`]) {
+      try {
+        const answer = await get(shape, {});
+        const row = (answer && answer.data && answer.data[0]) || answer;
+        console.log(`\n  ${shape} -> ` + (row
+          ? JSON.stringify(row, null, 2).slice(0, 700).split('\n').join('\n    ')
+          : 'nothing'));
+      } catch (error) {
+        console.log(`\n  ${shape} -> FAILED ${String(error.message).slice(0, 80)}`);
+      }
+    }
+  }
 }
