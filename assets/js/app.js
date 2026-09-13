@@ -977,8 +977,31 @@
      on the next, for no reason a reader could see. So the seats decide, the
      votes cast are counted, and what is left is what it says: members who did
      not vote. */
-  function chamberSeats() {
-    return states.reduce(function (sum, item) { return sum + item.seats; }, 0);
+  /* How many seats the House held when this vote was taken.
+
+     member-states.json describes the sitting Parliament: 27 states, 720 seats,
+     cited to the Council decision that set them. It says nothing about any
+     earlier one, and earlier ones were different — the ninth term sat 705 from
+     February 2020 and 751 before that, when the United Kingdom was still in it.
+
+     So for a vote outside the term that file describes, this returns null, and
+     everywhere the House size is printed says only what the record supports:
+     how many members voted. "532 of 720 members voted; 188 did not" on a vote
+     of the ninth term was a true number, a wrong number and a number invented
+     by subtracting them, and this site's whole claim is that its figures can
+     be checked against the Parliament's.
+
+     Giving the earlier terms their own seat tables would be better than
+     silence, and needs the Council decisions that set them — a sourced number,
+     not one typed from memory. Until then, silence. */
+  function chamberSeats(date) {
+    const current = states.reduce(function (sum, item) { return sum + item.seats; }, 0);
+    if (!date) return current;
+    const latest = (index.terms || []).reduce(function (top, row) {
+      return !top || row.term > top.term ? row : top;
+    }, null);
+    const sitting = latest ? latest.term : 10;
+    return termFor(date).term === sitting ? current : null;
   }
 
   function seatsOf(code) {
@@ -1014,16 +1037,18 @@
 
     const decision = state.decision;
     const result = (decision.outcome && decision.outcome.result) || 'recorded';
-    const seats = chamberSeats();
-    const silent = Math.max(0, seats - cast);
+    const seats = chamberSeats(decision.date);
+    const silent = seats === null ? null : Math.max(0, seats - cast);
     dom['roll-summary'].innerHTML =
       '<span class="result result-' + esc(result) + '">' +
         esc(RESULT_LABEL[result] || result) + '</span> · ' +
       '<span class="n-for">' + totals.for + '</span> in favour, ' +
       '<span class="n-against">' + totals.against + '</span> against, ' +
       '<span class="n-abstain">' + totals.abstain + '</span> abstained. ' +
-      cast + ' of ' + seats + ' members voted; ' +
-      '<span class="n-absent">' + silent + '</span> did not.';
+      (seats === null
+        ? cast + ' members voted.'
+        : cast + ' of ' + seats + ' members voted; ' +
+          '<span class="n-absent">' + silent + '</span> did not.');
   }
 
   function renderMembersTab(list) {
@@ -1708,10 +1733,12 @@
 
   function storyTotals(decision) {
     const totals = tally(ballotList());
-    const seats = chamberSeats();
+    const seats = chamberSeats(decision && decision.date);
     // The same arithmetic as the line under the bar: the seats are the
     // denominator, the ballots are what was cast, and the rest did not vote.
-    totals.absent = Math.max(0, seats - castOf(totals));
+    // Where the House size is not known for that term the card says neither,
+    // and story.js drops the line rather than printing a guess.
+    totals.absent = seats === null ? 0 : Math.max(0, seats - castOf(totals));
     return { totals: totals, seats: seats };
   }
 

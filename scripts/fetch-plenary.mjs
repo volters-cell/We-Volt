@@ -157,8 +157,12 @@ async function loadMembers(args) {
      with no name. So the fetch adds and corrects; it never removes. */
   const merged = Object.assign({}, known, members);
   const added = Object.keys(merged).length - Object.keys(known).length;
+  /* Which terms this directory covers. Seeded from the single "term" the file
+     used to carry as well as the list, or the first merge would claim the file
+     holds only the term just fetched — it holds both. */
   const terms = [...new Set([].concat((cached && cached.terms) || [],
-    Number(args.term || TERM)))].sort(function (a, b) { return b - a; });
+    (cached && cached.term) || [], Number(args.term || TERM)))]
+    .sort(function (a, b) { return b - a; });
 
   const sitting = Object.values(merged).filter(function (member) { return !member.former; }).length;
   await writeFile(cachePath, JSON.stringify({

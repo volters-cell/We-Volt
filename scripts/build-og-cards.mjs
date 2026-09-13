@@ -196,8 +196,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
       '<span style="color:#136a54">' + vote.totals.for + '</span><i>for</i><em>·</em>' +
       '<span style="color:#a73429">' + vote.totals.against + '</span><i>against</i><em>·</em>' +
       '<span style="color:#835a0c">' + vote.totals.abstain + '</span><i>abstained</i>';
-    document.getElementById('seats').textContent =
-      cast + ' of ' + vote.seats + ' members voted · ' + (vote.seats - cast) + ' did not';
+    document.getElementById('seats').textContent = vote.seats
+      ? cast + ' of ' + vote.seats + ' members voted · ' + (vote.seats - cast) + ' did not'
+      : cast + ' members voted';
 
     Object.keys(paths).forEach(function (code) {
       const fill = VOTE[vote.positions[code]] || VOTE.unknown;
@@ -237,7 +238,9 @@ for (let i = 0; i < wanted.length; i++) {
     title: record.title,
     dateLabel: spoken(record.date),
     result: (record.outcome && record.outcome.result) || 'recorded',
-    totals, seats: SEATS,
+    // Null for a term whose seat count this reference does not describe; the
+    // card drops the line rather than printing a denominator that is not its.
+    totals, seats: record.date >= '2024-07-16' ? SEATS : null,
     positions: countryPositions(record)
   });
   const file = path.join(OUT, entry.sourceId + '.png');

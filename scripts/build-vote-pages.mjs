@@ -39,6 +39,12 @@ const index = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions/index.json
 const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
 const states = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8')).states;
 const SEATS = states.reduce((sum, s) => sum + s.seats, 0);
+/* member-states.json describes the sitting Parliament and no earlier one. A
+   vote of the ninth term was taken in a House of a different size, so these
+   pages say how many members voted and stop there rather than dividing by a
+   number that does not apply to it. The same rule as the tracker's own. */
+const TERM_START = '2024-07-16';
+const houseOf = (date) => (date >= TERM_START ? SEATS : null);
 
 const MONTHS = ['January','February','March','April','May','June','July','August',
   'September','October','November','December'];
@@ -68,7 +74,9 @@ for (const entry of index.decisions) {
 
   const summary = word + ' by the European Parliament on ' + day + ' — ' +
     totals.for + ' in favour, ' + totals.against + ' against, ' + totals.abstain +
-    ' abstained. ' + cast + ' of ' + SEATS + ' members voted. See how every country ' +
+    ' abstained. ' + (houseOf(record.date) === null
+      ? cast + ' members voted.'
+      : cast + ' of ' + houseOf(record.date) + ' members voted.') + ' See how every country ' +
     'and every MEP split.';
 
   const page = `<!doctype html>
@@ -159,7 +167,9 @@ for (const entry of index.decisions) {
   <h1>${esc(record.title)}</h1>
   <p class="vote-word ${esc(result)}">${esc(word)}</p>
   <p class="vote-numbers">${totals.for} in favour · ${totals.against} against ·
-     ${totals.abstain} abstained. ${cast} of ${SEATS} members voted; ${SEATS - cast} did not.</p>
+     ${totals.abstain} abstained. ${houseOf(record.date) === null
+       ? `${cast} members voted.`
+       : `${cast} of ${houseOf(record.date)} members voted; ${houseOf(record.date) - cast} did not.`}</p>
   <p><a class="vote-open" href="../../#/${id}">See how every country and every MEP voted</a></p>
   <h2>Check it at the European Parliament</h2>
   <ul>

@@ -3,6 +3,7 @@
   "fetched": "2026-09-13",
   "term": 9,
   "terms": [
+    10,
     9
   ],
   "note": "Every member who has held a seat in this Parliament: name, country and political group, stored once. Vote records reference members by id rather than repeating this, which keeps a whole term of votes at tens of megabytes. Members marked former have left the House; the portal no longer states their group.",
