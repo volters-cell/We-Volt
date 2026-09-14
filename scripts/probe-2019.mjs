@@ -1,53 +1,67 @@
 #!/usr/bin/env node
 /*
- * Can the ninth term's first months be read at all?
+ * The ninth term's first months are readable after all.
  *
- * An earlier survey walked 2019 and found no sitting day carrying decisions,
- * and this project reported that the portal publishes none before 2020.
- * HowTheyVote lists votes from 18 July 2019, so either that report was wrong
- * or those votes come from somewhere else. This asks the portal several ways.
+ * An earlier run of this probe settled that: 18 July 2019 answers with nine
+ * roll-call decisions, and every other day asked about answered too. What it
+ * also showed is why this project had reported the opposite — the meeting list
+ * for 2019 returns 52 plenary meetings and not one of them carries an
+ * activity_date, and both fetchers drop a meeting with no date. The days were
+ * always there; the index that points at them is what is missing.
+ *
+ * So this asks what a 2019 meeting row does carry, and whether the sitting
+ * days can be recovered from it.
  *
  * Reads and prints. Writes nothing.
  
    SPDX-License-Identifier: AGPL-3.0-or-later
  */
-import { get, getAll, isRollCall } from './lib/portal.mjs';
+import { getAll, isRollCall } from './lib/portal.mjs';
 
-/* The dates HowTheyVote shows as its oldest, so the question is asked about
-   days that certainly held votes. */
-const DAYS = ['2019-07-18', '2019-09-18', '2019-09-19', '2019-10-10', '2019-11-14'];
+const DATE = /(\d{4})-(\d{2})-(\d{2})/;
 
-console.log('does the meeting list know about 2019?');
-for (const year of [2019, 2020]) {
-  const meetings = await getAll('/meetings', { year: year }, 400);
-  const plenary = meetings.filter((m) => !m.had_activity_type ||
-    String(m.had_activity_type).indexOf('PLENARY') !== -1);
-  const dates = plenary.map((m) => m.activity_date).filter(Boolean).sort();
-  console.log(`  ${year}: ${meetings.length} meetings, ${plenary.length} plenary, ` +
-    (dates.length ? `${dates[0]} .. ${dates[dates.length - 1]}` : 'no dates'));
+console.log('what does a 2019 meeting row look like?');
+const meetings = await getAll('/meetings', { year: 2019 }, 400);
+console.log(`  ${meetings.length} rows`);
+for (const row of meetings.slice(0, 2)) {
+  console.log(`  keys: ${Object.keys(row).join(', ')}`);
+  console.log(`  ${JSON.stringify(row).slice(0, 600)}`);
 }
 
-console.log('\nand the days themselves?');
-for (const date of DAYS) {
-  const shapes = [
-    ['decisions', `/meetings/MTG-PL-${date}/decisions`],
-    ['vote-results', `/meetings/MTG-PL-${date}/vote-results`],
-    ['the meeting', `/meetings/MTG-PL-${date}`]
-  ];
-  console.log(`\n  ${date}`);
-  for (const [name, path] of shapes) {
-    try {
-      const rows = await getAll(path, {}, 500);
-      const list = Array.isArray(rows) ? rows : [];
-      const rollCalls = list.filter(isRollCall).length;
-      console.log(`    ${name.padEnd(13)} ${list.length} row${list.length === 1 ? '' : 's'}` +
-        (name === 'decisions' ? `, ${rollCalls} roll-call` : ''));
-      if (list.length && name === 'decisions') {
-        const first = list.find(isRollCall) || list[0];
-        console.log(`      e.g. ${JSON.stringify(first.activity_label || first.id).slice(0, 90)}`);
-      }
-    } catch (error) {
-      console.log(`    ${name.padEnd(13)} FAILED ${String(error.message).slice(0, 60)}`);
-    }
+/* If the identifier names the day, the sitting days are recoverable without
+   the field that is missing. */
+const dated = meetings
+  .map((row) => ({ row: row, date: (DATE.exec(String(row.id || '')) || [])[0] }))
+  .filter((entry) => entry.date);
+const days = [...new Set(dated.map((entry) => entry.date))].sort();
+console.log(`\n  ${days.length} of ${meetings.length} rows name a day in their id`);
+if (days.length) console.log(`  ${days[0]} .. ${days[days.length - 1]}`);
+
+/* And compare with 2020, where the field is present, to be sure the id is not
+   telling a different story from activity_date where both exist. */
+const twenty = await getAll('/meetings', { year: 2020 }, 400);
+const disagreeing = twenty.filter(function (row) {
+  const fromId = (DATE.exec(String(row.id || '')) || [])[0];
+  return row.activity_date && fromId && fromId !== row.activity_date;
+});
+console.log(`  2020: ${twenty.length} rows, ${disagreeing.length} where the id and the date disagree`);
+
+/* Then the real question: how many roll-call votes does the whole of the
+   ninth term's 2019 hold? */
+console.log('\nhow much is there, in 2019?');
+let total = 0;
+let sat = 0;
+for (const date of days.filter((day) => day >= '2019-07-02')) {
+  let rows = [];
+  try {
+    rows = await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500);
+  } catch (error) {
+    console.log(`  ${date}  FAILED ${String(error.message).slice(0, 50)}`);
+    continue;
   }
+  const rollCalls = (Array.isArray(rows) ? rows : []).filter(isRollCall).length;
+  if (rollCalls) sat += 1;
+  total += rollCalls;
+  console.log(`  ${date}  ${String(rollCalls).padStart(4)} roll-call`);
 }
+console.log(`\n  ${total} roll-call decisions across ${sat} sitting days in 2019`);
