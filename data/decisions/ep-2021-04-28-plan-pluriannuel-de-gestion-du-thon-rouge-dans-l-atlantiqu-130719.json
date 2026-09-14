@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Plan pluriannuel de gestion du thon rouge dans l’Atlantique Est et la mer Méditerranée - A9-0149/2021 - Giuseppe Ferrandino - Proposition de la Commission 28/04/2021 15:22:12.763",
+  "title": "Plan pluriannuel de gestion du thon rouge dans l’Atlantique Est et la mer Méditerranée - A9-0149/2021 - Giuseppe Ferrandino - Proposition de la Commission",
   "subtitle": "vote in plenary",
   "date": "2021-04-28",
   "voteRule": "simple-majority",

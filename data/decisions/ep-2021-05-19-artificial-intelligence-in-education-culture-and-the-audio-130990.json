@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Artificial intelligence in education, culture and the audiovisual sector - A9-0127/2021 - Sabine Verheyen - Single vote 19/05/2021 15:37:44.576",
+  "title": "Artificial intelligence in education, culture and the audiovisual sector - A9-0127/2021 - Sabine Verheyen - Single vote",
   "subtitle": "vote in plenary",
   "date": "2021-05-19",
   "voteRule": "simple-majority",

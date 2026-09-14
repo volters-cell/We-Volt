@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Ressource propre fondée sur les déchets d’emballages en plastique non recyclés et certains aspects de la ressource propre fondée sur le RNB - Own resource based on non-recycled plastic packaging waste and certain aspects of the GNI-based own resource - Eigenmittel, die auf nicht wiederverwerteten Verpackungsabfällen aus Kunststoff basieren, sowie bestimmte Aspekte der BNE-Eigenmittel - A9-0048/2021 - José Manuel Fernandes, Valérie Hayer - Commisson proposal 25/03/2021 18:27:43.987",
+  "title": "Ressource propre fondée sur les déchets d’emballages en plastique non recyclés et certains aspects de la ressource propre fondée sur le RNB - Own resource based on non-recycled plastic packaging waste and certain aspects of the GNI-based own resource - Eigenmittel, die auf nicht wiederverwerteten Verpackungsabfällen aus Kunststoff basieren, sowie bestimmte Aspekte der BNE-Eigenmittel - A9-0048/2021 - José Manuel Fernandes, Valérie Hayer - Commisson proposal",
   "subtitle": "vote in plenary",
   "date": "2021-03-25",
   "voteRule": "simple-majority",

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "EU/Thailand Agreement: modification of concessions on all the tariff-rate quotas included in the EU Schedule CLXXV as a consequence of the United Kingdom's withdrawal from the European Union - A9-0180/2021 - Heidi Hautala - Consent procedure 23/06/2021 19:50:12.439",
+  "title": "EU/Thailand Agreement: modification of concessions on all the tariff-rate quotas included in the EU Schedule CLXXV as a consequence of the United Kingdom's withdrawal from the European Union - A9-0180/2021 - Heidi Hautala - Consent procedure",
   "subtitle": "vote in plenary",
   "date": "2021-06-23",
   "voteRule": "simple-majority",
