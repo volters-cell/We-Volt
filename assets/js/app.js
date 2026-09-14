@@ -591,11 +591,19 @@
        opens its own newest year rather than an empty one. */
     const newestYear = (index.decisions[0] && index.decisions[0].date || '').slice(0, 4);
 
+    /* Three levels, each one a press: a year, the plenaries in it, the votes
+       in one of those.
+
+       A plenary week is four days and can be two hundred votes, and a year is
+       a dozen of those. Opening a year straight onto its votes buries the
+       thing the reader is choosing between — which week — under the thing they
+       have not chosen yet. So a year opens onto its plenaries and stops there,
+       and a plenary is what opens onto votes.
+
+       The current year is open on landing, because that is the one somebody
+       came for; its plenaries are listed and all of them are shut. */
     const sessionHtml = function (group) {
-      const thisYear = Boolean(newestYear) &&
-        group.items.some(function (item) { return item.date.slice(0, 4) === newestYear; });
-      const open = state.query || state.unfolded || unfoldedSessions.has(group.key) ||
-        (thisYear && !foldedSessions.has(group.key));
+      const open = state.query || state.unfolded || unfoldedSessions.has(group.key);
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
       });
@@ -607,6 +615,43 @@
             (group.items.length === 1 ? '' : 's') + '</span>' +
         '</summary>' +
         '<ul class="decision-list">' + group.items.map(decisionCard).join('') + '</ul>' +
+        '</details>';
+    };
+
+    /* The years of one Parliament, newest first, each holding its plenaries. */
+    const yearsOf = function (sessions) {
+      const years = [];
+      const byYear = {};
+      sessions.forEach(function (group) {
+        const year = group.items[0].date.slice(0, 4);
+        if (!byYear[year]) {
+          byYear[year] = { year: year, groups: [], votes: 0 };
+          years.push(byYear[year]);
+        }
+        byYear[year].groups.push(group);
+        byYear[year].votes += group.items.length;
+      });
+      years.sort(function (a, b) { return a.year < b.year ? 1 : -1; });
+      return years;
+    };
+
+    const yearHtml = function (row) {
+      const key = 'year-' + row.year;
+      const holds = state.decision && row.groups.some(function (group) {
+        return group.items.some(function (item) { return item.id === state.decision.id; });
+      });
+      const open = state.query || state.unfolded || unfoldedSessions.has(key) || holds ||
+        (row.year === newestYear && !foldedSessions.has(key));
+      return '<details class="year" data-session="' + esc(key) + '"' +
+        (open ? ' open' : '') + '>' +
+        '<summary>' +
+          '<span class="year-label">' + esc(row.year) + '</span>' +
+          '<span class="year-count">' + row.groups.length + ' plenar' +
+            (row.groups.length === 1 ? 'y' : 'ies') + ' · ' +
+            row.votes.toLocaleString('en-GB') + ' vote' +
+            (row.votes === 1 ? '' : 's') + '</span>' +
+        '</summary>' +
+        '<div class="year-sessions">' + row.groups.map(sessionHtml).join('') + '</div>' +
         '</details>';
     };
 
@@ -655,7 +700,7 @@
       (state.unfolded ? 'true' : 'false') + '">' +
       (state.unfolded ? 'Fold all sessions' : 'Unfold all sessions') + '</button></p>' +
       byTerm.map(function (row) {
-        const sessions = row.groups.map(sessionHtml).join('');
+        const sessions = yearsOf(row.groups).map(yearHtml).join('');
         if (row.term.term === latest) return sessions;
 
         const key = 'term-' + row.term.term;
@@ -2523,7 +2568,7 @@
       // so closing a vote puts them back where they were rather than at the top
       // of a folded list.
       dom['session-list'].addEventListener('toggle', function (event) {
-        const details = event.target.closest('.session, .term');
+        const details = event.target.closest('.session, .year, .term');
         if (!details) return;
         const key = details.getAttribute('data-session');
         if (details.open) {
