@@ -33,7 +33,7 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers, meetingDate,
-  isRollCall, ballotsOf, tallyOf
+  documentTitle, isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
 import { sourcesFor, procedureUrl, isPartOfAText } from './lib/ep-sources.mjs';
 
@@ -81,6 +81,34 @@ export function procedureReference(uri) {
 export function documentReference(uri) {
   const match = String(uri || '').match(/doc\/([AB])-(\d{1,2})-(\d{4})-(\d{4})/);
   return match ? `${match[1]}${match[2]}-${match[4]}/${match[3]}` : null;
+}
+
+/* The report a decision was taken on, read off its own label.
+
+   A ninth-term decision is labelled "A9-0018/2021 - Lara Wolters - Recital O/2
+   09/03/2021 16:47:58.618". It carries no field pointing at the vote-result
+   item that names the subject, and the item carries none pointing back — every
+   string on each side was compared against the other's keys, and nothing
+   matched. What both do carry is the report: the decision opens with its code,
+   and the item names it as a document. So the code is the join.
+
+   Only at the head of the label, where the Parliament writes it. A code
+   appearing later belongs to something the vote mentions, not to the vote. */
+export function documentCode(label) {
+  const match = /^\s*([A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4})/.exec(String(label || ''));
+  return match ? match[1] : null;
+}
+
+/* A document title as the Parliament files it — "RECOMMENDATION on the draft
+   Council decision on the conclusion..." — set in the case a sentence is
+   written in. The shouting is a filing convention, not emphasis. */
+export function plainSubject(title) {
+  const text = String(title || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  const match = /^([A-Z]{4,}(?:\s+[A-Z]{4,})*)\b/.exec(text);
+  if (!match) return text;
+  const head = match[1];
+  return head.charAt(0) + head.slice(1).toLowerCase() + text.slice(head.length);
 }
 
 /* The portal returns a link either as a bare string or as an object with an
@@ -208,18 +236,26 @@ export async function sittingDates(from, until) {
 
 /* ------------------------------------------------------- a sitting's votes */
 
-export function buildRecord(decision, item, members, date) {
+export function buildRecord(decision, item, members, date, subject, code) {
   const ballots = ballotsOf(decision);
   const totals = tallyOf(decision);
 
   const itemTitle = plainTitle(english(item && item.activity_label).replace(/\s+/g, ' '));
   const decisionTitle = plainTitle(english(decision.activity_label).replace(/\s+/g, ' '));
-  const title = itemTitle || decisionTitle || 'Roll-call vote';
-  const detail = itemTitle && decisionTitle && decisionTitle !== itemTitle ? decisionTitle : '';
+  // The report's own title, where the sitting's items reach neither this
+  // decision nor its report. It is the last thing that names a subject, and
+  // without it a ninth-term vote is titled by its filing reference.
+  const documentSubject = plainTitle(String(subject || '').replace(/\s+/g, ' '));
+  const title = itemTitle || documentSubject || decisionTitle || 'Roll-call vote';
+  const detail = title !== decisionTitle ? decisionTitle : '';
 
   const structured = english(item && item.structuredLabel);
   const rule = voteRuleOf(structured);
-  const report = idsOf(item && item.based_on_a_realization_of).map(documentReference).find(Boolean) || null;
+  // The report, from the item where there is one and otherwise from the code
+  // the decision's own label opens with. This is what gives a ninth-term vote
+  // a procedure link at all.
+  const report = idsOf(item && item.based_on_a_realization_of).map(documentReference).find(Boolean) ||
+    code || null;
   const procedure = idsOf(item && item.inverse_consists_of).map(procedureReference).find(Boolean) || null;
 
   const stated = outcomeOf(decision);
@@ -280,7 +316,7 @@ export function isFinalVote(decision) {
   return !AMENDMENT.test(english(decision.activity_label));
 }
 
-async function sittingVotes(date) {
+export async function sittingVotes(date) {
   const decisions = await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500);
   if (!decisions.length) return null;
 
@@ -288,12 +324,33 @@ async function sittingVotes(date) {
   const byId = new Map();
   items.forEach(function (item) { byId.set(String(item.activity_id || lastSegment(item.id)), item); });
 
-  return decisions.filter(isRollCall).map(function (decision) {
+  // The same items, reached by the report they are about, for the decisions
+  // that do not point at them.
+  const byDocument = new Map();
+  items.forEach(function (item) {
+    idsOf(item.based_on_a_realization_of).forEach(function (uri) {
+      const reference = documentReference(uri);
+      if (reference && !byDocument.has(reference)) byDocument.set(reference, item);
+    });
+  });
+
+  const votes = decisions.filter(isRollCall).map(function (decision) {
+    const code = documentCode(english(decision.activity_label));
     const parent = idsOf(decision.inverse_consists_of)
       .map(function (id) { return byId.get(lastSegment(id)) || byId.get(String(id).replace(/^.*event\//, '')); })
-      .find(Boolean) || null;
-    return { decision: decision, item: parent };
+      .find(Boolean) || (code ? byDocument.get(code) || null : null);
+    return { decision: decision, item: parent, code: code };
   });
+
+  /* Where neither route reaches an item, the report itself still has a title,
+     and a sitting turns on a handful of reports between a hundred votes — so
+     this is a few requests, cached across the whole run, not one per vote. */
+  for (const vote of votes) {
+    if (vote.item || !vote.code) continue;
+    vote.subject = plainSubject(await documentTitle(vote.code));
+  }
+
+  return votes;
 }
 
 /* Every voting id already on file, and the record that holds it. The
@@ -367,18 +424,22 @@ async function main() {
         skipped += 1;
         continue;
       }
-      const record = buildRecord(vote.decision, vote.item, members, date);
+      /* And the decision's own label decides the rest. isFinalVote reads the
+         decision's fields, which is enough for the tenth term because its
+         decisions carry decisionAboutId; the ninth term's do not, and mark a
+         paragraph vote only by appending it — "- Recital O/2" — to the label.
 
-      /* And the title decides the rest. isFinalVote reads the decision, which
-         is enough for the tenth term because its decisions carry
-         decisionAboutId; the ninth term's do not, and mark a paragraph vote
-         only by appending it to the title. Checked here rather than there
-         because the title is built from the vote item and the decision
-         together, and neither alone. */
-      if (!args.all && isPartOfAText(record.title)) {
+         The label, not the record's title. They used to be the same thing for
+         a ninth-term vote and are not any more: the title is now the report's
+         subject where the label had only a filing code, and a subject never
+         carries the mark. Reading the title here would let every paragraph
+         vote of the term back in. */
+      if (!args.all && isPartOfAText(english(vote.decision.activity_label))) {
         skipped += 1;
         continue;
       }
+
+      const record = buildRecord(vote.decision, vote.item, members, date, vote.subject, vote.code);
       const counted = record._counted;
       delete record._counted;
 

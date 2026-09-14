@@ -229,6 +229,46 @@ export async function groupName(organization) {
   return name;
 }
 
+/* A9-0203/2020 -> the title of the report it names.
+
+   The ninth term's decisions are labelled "A9-0018/2021 - Lara Wolters -
+   Recital O/2 09/03/2021 16:47:58.618" — the report, the rapporteur, the part
+   voted on and the second it happened, and nothing about the subject. The
+   subject is published, but on the document, not the vote.
+
+   A sitting turns on a handful of reports between a hundred or more votes, so
+   these are looked up once and remembered, misses included, exactly as the
+   group names are.
+
+   title_dcterms, not title: the portal has no "title" field here, and reading
+   the one that does not exist is why an earlier probe reported the documents
+   as untitled. */
+const documentTitles = new Map();
+
+export function documentPath(reference) {
+  // A joint motion is written RC-B9-0006/2019, so the kind may carry a prefix.
+  const match = /^([A-Z]+(?:-[A-Z]+)?)(\d{1,2})-(\d{4})\/(\d{4})$/
+    .exec(String(reference || '').trim());
+  return match ? `${match[1]}-${match[2]}-${match[4]}-${match[3]}` : null;
+}
+
+export async function documentTitle(reference) {
+  const pathname = documentPath(reference);
+  if (!pathname) return null;
+  if (documentTitles.has(pathname)) return documentTitles.get(pathname);
+
+  let title = null;
+  try {
+    const answer = await get(`/documents/${pathname}`, {});
+    const row = (answer && answer.data && answer.data[0]) || null;
+    title = (row && english(row.title_dcterms)) || null;
+  } catch (error) {
+    title = null;
+  }
+  documentTitles.set(pathname, title);
+  return title;
+}
+
 export async function fetchMembers(term, options) {
   const known = (options && options.known) || {};
   const members = {};
