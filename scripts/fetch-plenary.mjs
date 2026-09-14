@@ -92,10 +92,20 @@ export function documentReference(uri) {
    matched. What both do carry is the report: the decision opens with its code,
    and the item names it as a document. So the code is the join.
 
-   Only at the head of the label, where the Parliament writes it. A code
-   appearing later belongs to something the vote mentions, not to the vote. */
+   Wherever it falls in the label, not only at its head. An earlier version of
+   this looked only at the start, on the reasoning that a code written later
+   belongs to something the vote mentions rather than to the vote. 18 April
+   2023 disproved it: "Revision of the EU Emissions Trading System –
+   A9-0162/2022 – Peter Liese – Rejection – Am 682" and "A9-0162/2022 – Peter
+   Liese – Provisional agreement – Am 680" are the same file voted on twice,
+   and reading only the head gave the first of them no code at all. They then
+   grouped as two texts, and the day showed thirteen where the Parliament
+   decided ten.
+
+   The first code in the label, because that is the file being voted on; a
+   second one, where it appears, is a text this one refers to. */
 export function documentCode(label) {
-  const match = /^\s*([A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4})/.exec(String(label || ''));
+  const match = /([A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4})/.exec(String(label || ''));
   return match ? match[1] : null;
 }
 
