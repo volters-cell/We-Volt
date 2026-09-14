@@ -2912,5 +2912,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "TRAN",
+    "label": "Transport and Tourism",
+    "short": "Transport"
+  }
 }

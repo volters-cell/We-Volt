@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "DEVE",
+    "label": "Development",
+    "short": "Development"
+  }
 }

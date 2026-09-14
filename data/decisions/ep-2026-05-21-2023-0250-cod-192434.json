@@ -2912,5 +2912,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "FEMM",
+    "label": "Women's Rights and Gender Equality",
+    "short": "Gender Equality"
+  }
 }

@@ -2916,5 +2916,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "HOUS",
+    "label": "the Housing Crisis",
+    "short": "Housing"
+  }
 }

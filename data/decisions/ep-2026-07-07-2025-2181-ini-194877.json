@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
+  }
 }

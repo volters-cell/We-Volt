@@ -2916,5 +2916,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "IMCO",
+    "label": "Internal Market and Consumer Protection",
+    "short": "Single Market"
+  }
 }

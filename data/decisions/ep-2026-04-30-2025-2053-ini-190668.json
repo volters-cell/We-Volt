@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "AGRI",
+    "label": "Agriculture and Rural Development",
+    "short": "Agriculture"
+  }
 }

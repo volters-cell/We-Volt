@@ -2916,5 +2916,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "PETI",
+    "label": "Petitions",
+    "short": "Petitions"
+  }
 }

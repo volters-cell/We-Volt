@@ -2916,5 +2916,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "ITRE",
+    "label": "Industry, Research and Energy",
+    "short": "Industry and Energy"
+  }
 }

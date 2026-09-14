@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "PECH",
+    "label": "Fisheries",
+    "short": "Fisheries"
+  }
 }

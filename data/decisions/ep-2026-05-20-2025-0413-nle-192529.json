@@ -2912,5 +2912,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "SEDE",
+    "label": "Security and Defence",
+    "short": "Security and Defence"
+  }
 }

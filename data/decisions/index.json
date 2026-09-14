@@ -52,7 +52,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -86,7 +90,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -154,7 +162,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -171,7 +183,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -188,7 +204,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -205,7 +225,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -222,7 +246,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -239,7 +267,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -256,7 +288,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -273,7 +309,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -290,7 +330,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -307,7 +351,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -324,7 +372,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "FEMM",
+        "label": "Women's Rights and Gender Equality",
+        "short": "Gender Equality"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -341,7 +393,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -375,7 +431,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -392,7 +452,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -426,7 +490,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -443,7 +511,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -460,7 +532,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -494,7 +570,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -511,7 +591,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -528,7 +612,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CULT",
+        "label": "Culture and Education",
+        "short": "Culture and Education"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -545,7 +633,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -562,7 +654,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -579,7 +675,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "DEVE",
+        "label": "Development",
+        "short": "Development"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -596,7 +696,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -613,7 +717,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -630,7 +738,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -698,7 +810,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -715,7 +831,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -851,7 +971,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -868,7 +992,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -885,7 +1013,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -902,7 +1034,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -919,7 +1055,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -936,7 +1076,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -953,7 +1097,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -970,7 +1118,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -987,7 +1139,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1004,7 +1160,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1021,7 +1181,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1038,7 +1202,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1055,7 +1223,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1072,7 +1244,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1106,7 +1282,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1140,7 +1320,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1174,7 +1358,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1191,7 +1379,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -1208,7 +1400,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1225,7 +1421,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -1242,7 +1442,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1259,7 +1463,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1276,7 +1484,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "DEVE",
+        "label": "Development",
+        "short": "Development"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1310,7 +1522,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1327,7 +1543,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1344,7 +1564,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1395,7 +1619,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "FEMM",
+        "label": "Women's Rights and Gender Equality",
+        "short": "Gender Equality"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1412,7 +1640,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1429,7 +1661,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1446,7 +1682,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1463,7 +1703,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1497,7 +1741,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1599,7 +1847,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1616,7 +1868,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1633,7 +1889,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1667,7 +1927,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1701,7 +1965,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1718,7 +1986,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1735,7 +2007,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1786,7 +2062,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1803,7 +2083,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1905,7 +2189,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AGRI",
+        "label": "Agriculture and Rural Development",
+        "short": "Agriculture"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1922,7 +2210,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1939,7 +2231,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -1956,7 +2252,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2075,7 +2375,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2092,7 +2396,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2109,7 +2417,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2126,7 +2438,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2143,7 +2459,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2160,7 +2480,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2177,7 +2501,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2194,7 +2522,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2211,7 +2543,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -2228,7 +2564,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2245,7 +2585,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2262,7 +2606,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2279,7 +2627,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2296,7 +2648,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2313,7 +2669,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2330,7 +2690,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2347,7 +2711,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2364,7 +2732,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2381,7 +2753,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2398,7 +2774,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2432,7 +2812,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2449,7 +2833,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2466,7 +2854,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2483,7 +2875,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2500,7 +2896,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2517,7 +2917,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2534,7 +2938,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2551,7 +2959,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2568,7 +2980,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2585,7 +3001,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -2602,7 +3022,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AGRI",
+        "label": "Agriculture and Rural Development",
+        "short": "Agriculture"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2619,7 +3043,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2636,7 +3064,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2653,7 +3085,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2670,7 +3106,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2687,7 +3127,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2704,7 +3148,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2721,7 +3169,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2738,7 +3190,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2755,7 +3211,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -2772,7 +3232,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2789,7 +3253,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2857,7 +3325,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -2874,7 +3346,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2891,7 +3367,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2908,7 +3388,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2925,7 +3409,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2942,7 +3430,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2959,7 +3451,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -2976,7 +3472,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -2993,7 +3493,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3010,7 +3514,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3027,7 +3535,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3044,7 +3556,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3061,7 +3577,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3078,7 +3598,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3095,7 +3619,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3129,7 +3657,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3146,7 +3678,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3214,7 +3750,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3265,7 +3805,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "PETI",
+        "label": "Petitions",
+        "short": "Petitions"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3333,7 +3877,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3350,7 +3898,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3367,7 +3919,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3384,7 +3940,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3401,7 +3961,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3418,7 +3982,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3435,7 +4003,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3452,7 +4024,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3469,7 +4045,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3486,7 +4066,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3503,7 +4087,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3520,7 +4108,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3537,7 +4129,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3554,7 +4150,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3571,7 +4171,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3588,7 +4192,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3605,7 +4213,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -3622,7 +4234,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3639,7 +4255,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "DEVE",
+        "label": "Development",
+        "short": "Development"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3656,7 +4276,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3673,7 +4297,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3690,7 +4318,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3707,7 +4339,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "HOUS",
+        "label": "the Housing Crisis",
+        "short": "Housing"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3724,7 +4360,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3741,7 +4381,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3809,7 +4453,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3843,7 +4491,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "FEMM",
+        "label": "Women's Rights and Gender Equality",
+        "short": "Gender Equality"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3928,7 +4580,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3945,7 +4601,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -3962,7 +4622,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4013,7 +4677,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4030,7 +4698,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4047,7 +4719,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4064,7 +4740,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4098,7 +4778,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4115,7 +4799,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AGRI",
+        "label": "Agriculture and Rural Development",
+        "short": "Agriculture"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4132,7 +4820,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4149,7 +4841,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4166,7 +4862,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -4183,7 +4883,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4200,7 +4904,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -4217,7 +4925,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4234,7 +4946,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4251,7 +4967,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -4268,7 +4988,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4319,7 +5043,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4336,7 +5064,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4353,7 +5085,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4455,7 +5191,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4472,7 +5212,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4489,7 +5233,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4506,7 +5254,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4523,7 +5275,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4591,7 +5347,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4608,7 +5368,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
@@ -4625,7 +5389,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4642,7 +5410,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4659,7 +5431,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4676,7 +5452,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "DEVE",
+        "label": "Development",
+        "short": "Development"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
@@ -4693,7 +5473,11 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",

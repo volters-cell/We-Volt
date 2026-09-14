@@ -2916,5 +2916,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "AFET",
+    "label": "Foreign Affairs",
+    "short": "Foreign Affairs"
+  }
 }

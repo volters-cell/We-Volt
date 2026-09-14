@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "JURI",
+    "label": "Legal Affairs",
+    "short": "Legal Affairs"
+  }
 }

@@ -2920,5 +2920,10 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "committee": {
+    "code": "EMPL",
+    "label": "Employment and Social Affairs",
+    "short": "Employment"
+  }
 }
