@@ -26,10 +26,17 @@ on:
       windows:
         # Space-separated from:until pairs, imported in the order given.
         #
-        # The ninth term opened in July 2019, but the portal publishes no
-        # decisions before 2020, and the votes before 1 February 2020 were
-        # taken in a 751-seat House with the United Kingdom in it. The site
-        # holds the Union as it is, so the record starts the day after.
+        # The record starts on 1 February 2020 because the votes before it
+        # were taken in a 751-seat House with the United Kingdom in it, and
+        # this site holds the Union as it is.
+        #
+        # Not because 2019 is unreadable. This file used to say the portal
+        # publishes no decisions before 2020; that was wrong. It publishes 518
+        # roll-call decisions across 21 sitting days from the term's opening on
+        # 2 July 2019, and they were invisible only because the meeting list
+        # spells a 2019 meeting's date under its JSON-LD name and this project
+        # read the plain one. Adding "2019-07-02:2020-01-31" here would import
+        # them, in the House of the time.
         description: "Windows to import, as from:until pairs"
         required: true
         default: "2023-01-01:2023-12-31 2022-01-01:2022-12-31 2021-01-01:2021-12-31 2020-02-01:2020-12-31"
@@ -40,6 +47,15 @@ on:
         description: "Re-read the member directory (needed once per term)"
         type: boolean
         default: true
+      forget_first:
+        # The importer never revisits a vote it already holds, which is right
+        # for filling a gap and wrong for correcting one. Turn this on to
+        # delete the records in the windows first so they are read again —
+        # needed after a fix to how a record is built, not for a plain
+        # backfill. Records carrying editorial writing are never deleted.
+        description: "Delete the records in these windows first, then read them again"
+        type: boolean
+        default: false
 
 jobs:
   backfill:
@@ -72,6 +88,10 @@ jobs:
               refresh="--refresh-meps"
             fi
             first=0
+
+            if [ "${{ inputs.forget_first }}" = "true" ]; then
+              node scripts/forget-votes.mjs --from "$from" --until "$until"
+            fi
 
             node scripts/fetch-plenary.mjs $refresh \
               --term "${{ inputs.term }}" \

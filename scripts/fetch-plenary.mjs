@@ -345,11 +345,16 @@ export async function sittingVotes(date) {
     return { decision: decision, item: parent, code: code };
   });
 
-  /* Where neither route reaches an item, the report itself still has a title,
-     and a sitting turns on a handful of reports between a hundred votes — so
-     this is a few requests, cached across the whole run, not one per vote. */
+  /* Where neither route reaches a usable title, the report itself still has
+     one, and a sitting turns on a handful of reports between a hundred votes —
+     so this is a few requests, cached across the whole run, not one per vote.
+
+     "No usable title", not "no item". An item can be published with an empty
+     label, and testing for the item rather than for the title left those votes
+     titled by their filing code with the answer one request away. */
   for (const vote of votes) {
-    if (vote.item || !vote.code) continue;
+    if (!vote.code) continue;
+    if (english(vote.item && vote.item.activity_label).trim()) continue;
     vote.subject = plainSubject(await documentTitle(vote.code));
   }
 
