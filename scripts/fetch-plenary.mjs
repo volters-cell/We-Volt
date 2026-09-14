@@ -35,7 +35,7 @@ import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers, meetingDate,
   documentTitle, isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
-import { sourcesFor, procedureUrl, isPartOfAText } from './lib/ep-sources.mjs';
+import { sourcesFor, procedureUrl, isPartOfAText, STAMPED } from './lib/ep-sources.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -125,6 +125,9 @@ function idsOf(value) {
    reader, and the record keeps the procedure in its own field anyway. */
 export function plainTitle(text) {
   return String(text || '')
+    // "09/03/2021 16:47:58.618" is when the vote was taken, not part of its
+    // name, and the date is already on the record.
+    .replace(STAMPED, '')
     .replace(/(^|\s)\*{1,3}(I{1,3})?(?=\s|$)/g, '$1')
     .replace(/\s{2,}/g, ' ')
     .replace(/\s+([–—-])\s*$/, '')

@@ -104,13 +104,25 @@ const PART_OF_A_TEXT = new RegExp([
   '^§',
   '^am(?:s|endements?|endments?)?\\s*\\d',
   '^(?:consid(?:é|e)rant|recital)\\b',
-  '^(?:article|art\\.)\\s*\\d+\\s*(?:/\\d+)?$',
-  '^(?:annexe|annex)\\s*[ivx0-9]',
+  '^(?:visa|citation)\\s*\\d',
+  // "Article 4, § 3/2" and "Article 10, § 5" are parts; "Article 7 procedure
+  // on Hungary" is a subject. The comma or slash is what separates them, so a
+  // bare article number ends the tail or is followed by one.
+  '^(?:article|art\\.)\\s*\\d+\\s*(?:[,/].*)?$',
+  '^(?:annexe|annex)\\b[\\s,]*(?:part(?:ie)?\\s*)?[ivx0-9]',
+  '^(?:partie|part)\\s+[ivx0-9]',
   '^point\\s+[a-z0-9]+\\s*(?:/\\d+)?$',
   '^[a-z]?\\d+\\s*/\\s*\\d+$'
 ].join('|'), 'i');
 
+/* The Parliament stamps most of its ninth-term labels with the moment the vote
+   was taken — "09/03/2021 16:47:58.618" — and a few with the date alone. Every
+   pattern above that ends the tail would fail against it, which is not a small
+   matter: on 9 March 2021 it hid all eleven part votes of the sitting behind
+   an anchor that could never match, and they were imported as whole texts. */
+export const STAMPED = /\s+\d{2}\/\d{2}\/\d{4}(?:\s+\d{2}:\d{2}:\d{2}(?:\.\d+)?)?\s*$/;
+
 export function isPartOfAText(title) {
-  const tail = String(title || '').split(/\s[–—-]\s/).pop().trim();
+  const tail = String(title || '').replace(STAMPED, '').split(/\s[–—-]\s/).pop().trim();
   return PART_OF_A_TEXT.test(tail);
 }
