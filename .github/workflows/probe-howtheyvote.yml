@@ -1,0 +1,24 @@
+# How many votes does HowTheyVote hold, and which ones?
+#
+# This project keeps 40% of the ninth term's roll-calls and 12% of the tenth's
+# under the same rule, so one of them is wrong. Their published count of 2,421
+# decides which — it is 13% of the ninth term and 41% of the tenth. This looks
+# for their open data rather than guessing at their method.
+#
+# Writes nothing.
+
+name: Probe HowTheyVote
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/probe-howtheyvote.mjs
