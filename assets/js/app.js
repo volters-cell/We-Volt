@@ -577,8 +577,25 @@
 
     // Landing folded is the point: the page opens on the search box, and the
     // session headers say what is behind them. A search opens what it found.
+    /* The current year opens by itself; every earlier one waits to be asked.
+
+       Somebody arriving wants this year's votes, and making them open the
+       newest session before they can read anything is a click charged for the
+       obvious. Everything older is still one press away, which is what the
+       folds are for.
+
+       "The current year" is the year of the newest vote held, not the year on
+       the clock. That way it follows the data: when 2027 arrives and the first
+       votes of it are imported, they are the ones that open, with no date
+       written into this file to go stale. And a site serving an old checkout
+       opens its own newest year rather than an empty one. */
+    const newestYear = (index.decisions[0] && index.decisions[0].date || '').slice(0, 4);
+
     const sessionHtml = function (group) {
-      const open = state.query || state.unfolded || unfoldedSessions.has(group.key);
+      const thisYear = Boolean(newestYear) &&
+        group.items.some(function (item) { return item.date.slice(0, 4) === newestYear; });
+      const open = state.query || state.unfolded || unfoldedSessions.has(group.key) ||
+        (thisYear && !foldedSessions.has(group.key));
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
       });
@@ -891,6 +908,10 @@
   const unfoldedSessions = new Set();
   /* Which earlier terms have been fetched. index.json carries the sitting term
      and names the others; opening a fold is what asks for one. */
+  /* Sessions the reader has explicitly closed. Needed only because some now
+     open by themselves: without it, closing one would last until the next
+     render and then spring back open. */
+  const foldedSessions = new Set();
   const loadedTerms = new Set();
   const loadingTerms = new Set();
 
@@ -2493,6 +2514,7 @@
         if (event.target.closest('#unfold-all')) {
           state.unfolded = !state.unfolded;
           unfoldedSessions.clear();
+          foldedSessions.clear();
           renderFeed();
         }
       });
@@ -2504,8 +2526,13 @@
         const details = event.target.closest('.session, .term');
         if (!details) return;
         const key = details.getAttribute('data-session');
-        if (details.open) unfoldedSessions.add(key);
-        else unfoldedSessions.delete(key);
+        if (details.open) {
+          unfoldedSessions.add(key);
+          foldedSessions.delete(key);
+        } else {
+          unfoldedSessions.delete(key);
+          foldedSessions.add(key);
+        }
 
         const file = details.getAttribute('data-term-file');
         if (details.open && file) loadTerm(Number(details.getAttribute('data-term')), file);
