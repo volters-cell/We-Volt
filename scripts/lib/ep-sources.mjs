@@ -102,7 +102,9 @@ export function sourcesFor(date, procedureReference) {
    Parliament, the same site, two different meanings of "a vote". */
 const PART_OF_A_TEXT = new RegExp([
   '^§',
-  '^am(?:s|endements?|endments?)?\\s*\\d',
+  // "am § 43/2" as well as "am 12": the Parliament writes the amendment
+  // marker before a paragraph sign as readily as before a number.
+  '^am(?:s|endements?|endments?)?\\s*[§\\d]',
   '^(?:consid(?:é|e)rant|recital)\\b',
   '^(?:visa|citation)\\s*\\d',
   // "Article 4, § 3/2" and "Article 10, § 5" are parts; "Article 7 procedure
