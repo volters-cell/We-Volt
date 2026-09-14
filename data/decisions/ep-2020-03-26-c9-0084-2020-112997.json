@@ -5,8 +5,8 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "C9-0084/2020 - Vote final",
-  "subtitle": "vote in plenary",
+  "title": "Demande d'application de la procédure d'urgence: Aide financière aux États membres et aux pays dont l’adhésion à l’Union est en cours de négociation qui sont gravement touchés par une urgence de santé publique majeure",
+  "subtitle": "C9-0084/2020 - Vote final — vote in plenary",
   "date": "2020-03-26",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -20,6 +20,7 @@
     "result": "adopted",
     "headline": "Adopted — 671 in favour, 3 against, 14 abstained. Result derived from the totals."
   },
+  "rollCalls": 4,
   "ballots": [
     [
       840,
