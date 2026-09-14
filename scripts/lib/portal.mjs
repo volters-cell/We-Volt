@@ -105,8 +105,24 @@ export function meetingDate(meeting) {
    one — these become the titles a reader sees. */
 export function english(value) {
   if (!value) return '';
-  if (typeof value === 'string') return value;
-  return String(value.en || value.mul || value.fr || Object.values(value)[0] || '');
+  if (typeof value === 'string') return absent(value) ? '' : value;
+  // A language whose label says "null" is not an answer, so the next one gets
+  // its turn — an English "null" beside a real French title should not throw
+  // the French title away.
+  const spoken = [value.en, value.mul, value.fr, ...Object.values(value)]
+    .map(function (entry) { return typeof entry === 'string' ? entry.trim() : ''; })
+    .find(function (entry) { return entry && !absent(entry); });
+  return spoken || '';
+}
+
+/* The portal sometimes serves the word "null" where a label should be, as text
+   rather than as an empty field. Fifty-eight votes reached the site titled
+   "null" that way — their real subject sitting in the subtitle, because the
+   decision's own label had it all along and the item's label won by being
+   first. A label that says "null" is a missing label, and saying so here lets
+   every fallback behind it work as intended. */
+function absent(text) {
+  return /^(?:null|undefined)$/i.test(String(text).trim());
 }
 
 /* The portal answers 429 to a client that asks as fast as a script can. One
