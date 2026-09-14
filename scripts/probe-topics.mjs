@@ -1,72 +1,80 @@
 #!/usr/bin/env node
 /*
- * Can a vote be labelled with its subject, from the Parliament's own data?
+ * A label for a vote, from the Parliament and nowhere else.
  *
- * HowTheyVote puts a chip on every entry — Venezuela, Economy and budget,
- * United Kingdom, Gender equality — and this site has nothing like it. The
- * Parliament does publish the subjects: a document carries is_about, a list of
- * EuroVoc concept URIs such as http://eurovoc.europa.eu/121. What it has not
- * yet given up is a name for one. Four addresses were guessed at and all four
- * were empty, which says nothing except that four guesses were wrong.
+ * The API's own index settles the first question: it publishes no vocabulary.
+ * /openapi.json, /swagger.json and /api-docs all answer 404, and so does every
+ * spelling of a concept — eurovoc-concepts, concepts, subject-matters,
+ * thesaurus, eurovoc-domains. A document says it is_about
+ * http://eurovoc.europa.eu/121 and the Parliament will not tell you what 121
+ * is. So "Gender equality" is not available here, and this project does not go
+ * elsewhere for data.
  *
- * So this stops guessing and reads the API's own index. Whatever collections
- * data.europarl.europa.eu publishes, it should be willing to list them, and
- * one of them either names a concept or none does. If none does, the fallback
- * is the committee that wrote the report — EP_ENVI, EP_AFCO, INTA — which is
- * also a subject, in the Parliament's own words, and is already on the
- * document.
+ * What is available is on the document already: creator, which holds the
+ * committee that wrote the report — EP_ENVI, EP_AFCO, org/INTA. A committee is
+ * a subject in the Parliament's own words, and the one it chose for this text.
+ *
+ * Two things have to hold before that becomes a chip on every card. The code
+ * has to resolve to a name, or be nameable without inventing one, and it has
+ * to be there often enough to be worth a reader's attention. Both are measured
+ * here across four years, rather than assumed from three documents.
  *
  * Reads and prints. Writes nothing.
  
    SPDX-License-Identifier: AGPL-3.0-or-later
  */
-const BASE = 'https://data.europarl.europa.eu/api/v2';
-const AGENT = 'EU-Tracker/1.0 (+https://github.com/volters-cell/We-Volt) probe';
+import { get, getAll, english, isRollCall } from './lib/portal.mjs';
+import { documentCode } from './fetch-plenary.mjs';
 
-async function look(url, accept) {
+const DAYS = ['2020-02-12', '2021-03-09', '2023-04-18', '2024-10-22', '2025-09-09'];
+
+function committeeOf(creator) {
+  for (const entry of [].concat(creator || [])) {
+    const text = String(typeof entry === 'string' ? entry : entry.id || '');
+    if (/person\//.test(text)) continue;
+    const code = text.split('/').pop().replace(/^EP_/, '');
+    if (/^[A-Z]{3,6}\d?$/.test(code)) return code;
+  }
+  return null;
+}
+
+console.log('how often does a vote reach a committee?');
+const codes = new Map();
+let withCommittee = 0;
+let total = 0;
+for (const date of DAYS) {
+  let decisions = [];
   try {
-    const response = await fetch(url, {
-      headers: { accept: accept || 'application/ld+json', 'user-agent': AGENT },
-      redirect: 'follow'
-    });
-    const body = await response.text();
-    return { status: response.status, type: response.headers.get('content-type') || '', body: body };
+    decisions = (await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500)).filter(isRollCall);
   } catch (error) {
-    return { status: 0, type: '', body: String(error.message) };
+    console.log(`  ${date}: the portal would not answer`);
+    continue;
   }
-}
-
-console.log('what does the API say it publishes?');
-for (const url of [
-  `${BASE}/`,
-  `${BASE}/openapi.json`,
-  `${BASE}/swagger.json`,
-  'https://data.europarl.europa.eu/api/v2/api-docs',
-  'https://data.europarl.europa.eu/en/developer-corner/opendata-api'
-]) {
-  const answer = await look(url, 'application/json');
-  console.log(`\n  ${url}`);
-  console.log(`    ${answer.status}  ${answer.type}  ${answer.body.length} bytes`);
-  if (answer.status !== 200) continue;
-
-  // Names of paths, whatever shape the document takes.
-  const paths = answer.body.match(/"\/[a-z0-9\-_\/{}]+"/gi);
-  if (paths) {
-    const unique = [...new Set(paths.map((p) => p.replace(/"/g, '')))]
-      .filter((p) => p.length > 2 && !p.includes('{'));
-    console.log(`    paths: ${unique.slice(0, 60).join(' ')}`);
-    const subjecty = unique.filter((p) => /eurovoc|concept|subject|topic|theme|vocab|taxonom/i.test(p));
-    if (subjecty.length) console.log(`    ** subject-like: ${subjecty.join(' ')}`);
-  } else {
-    const links = answer.body.match(/href="[^"]*api\/v2[^"]*"/g);
-    if (links) console.log(`    links: ${[...new Set(links)].slice(0, 25).join(' ')}`);
+  const documents = [...new Set(decisions.map((d) => documentCode(english(d.activity_label))).filter(Boolean))];
+  let hit = 0;
+  for (const code of documents) {
+    const path = code.replace(/^([A-Z]+(?:-[A-Z]+)?)(\d{1,2})-(\d{4})\/(\d{4})$/, '$1-$2-$4-$3');
+    const payload = await get(`/documents/${path}`, {});
+    const row = (payload && payload.data && payload.data[0]) || null;
+    const committee = row ? committeeOf(row.creator) : null;
+    if (committee) { hit += 1; codes.set(committee, (codes.get(committee) || 0) + 1); }
   }
+  withCommittee += hit;
+  total += documents.length;
+  console.log(`  ${date}  ${hit} of ${documents.length} texts name a committee`);
 }
+console.log(`  ${withCommittee} of ${total} overall`);
+console.log(`  committees seen: ${[...codes.keys()].sort().join(' ')}`);
 
-/* And whether the concept URI answers for itself, at the Parliament. */
-console.log('\n\ndoes the portal proxy a concept?');
-for (const path of ['/eurovoc-concepts/121', '/eurovoc_concepts/121', '/concepts/121',
-  '/subject-matters/121', '/thesaurus/121', '/eurovoc-domains/121']) {
-  const answer = await look(`${BASE}${path}?format=application%2Fld%2Bjson`);
-  console.log(`  ${path.padEnd(24)} ${answer.status}  ${answer.body.slice(0, 90).replace(/\s+/g, ' ')}`);
+console.log('\ndoes a committee code have a name at the Parliament?');
+for (const code of [...codes.keys()].slice(0, 4)) {
+  for (const shape of [`/corporate-bodies/${code}`, `/corporate-bodies/EP_${code}`]) {
+    try {
+      const answer = await get(shape, {});
+      const row = (answer && answer.data && answer.data[0]) || null;
+      console.log(`  ${shape.padEnd(34)} ${row ? JSON.stringify(english(row.label)).slice(0, 70) : 'nothing'}`);
+    } catch (error) {
+      console.log(`  ${shape.padEnd(34)} ${String(error.message).slice(0, 40)}`);
+    }
+  }
 }
