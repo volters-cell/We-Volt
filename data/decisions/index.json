@@ -10,9 +10,9 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 718,
+      "votes": 719,
       "from": "2024-07-17",
-      "until": "2026-07-09",
+      "until": "2026-09-14",
       "file": null
     },
     {
@@ -26,6 +26,21 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-09-14-ordre-du-jour-de-lundi-demande-du-groupe-the-left-bce-mond-196475",
+      "sourceId": 196475,
+      "title": "Ordre du jour de lundi - Demande du groupe The Left - BCE - Monday’s Agenda - Request from The Left Group - ECB - Tagesordnung für Montag - Antrag der Fraktion The Left - EZB",
+      "subtitle": "Ordre du jour de lundi - Demande du groupe The Left - BCE — vote in plenary",
+      "date": "2026-09-14",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 455,
+      "keywords": "ordre du jour de lundi - demande du groupe the left - bce - monday’s agenda - request from the left group - ecb - tagesordnung für montag - antrag der fraktion the left - ezb ordre du jour de lundi - demande du groupe the left - bce — vote in plenary",
+      "file": "data/decisions/ep-2026-09-14-ordre-du-jour-de-lundi-demande-du-groupe-the-left-bce-mond-196475.json"
+    },
     {
       "id": "ep-2026-07-09-2023-0212-cod-195719",
       "sourceId": 195719,
