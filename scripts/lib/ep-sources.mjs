@@ -79,3 +79,38 @@ export function sourcesFor(date, procedureReference) {
 
   return sources;
 }
+
+/* A vote on part of a text, rather than on the text.
+
+   The Parliament writes one by appending the part to the title:
+
+     A9-0001/2021 - Gilles Lebreton - § 22/1
+     A9-0379/2023 – Robert Hajšel – Recital K/2
+     B9-0499/2023 – § 13/6
+
+   so the marker is the tail, after the last dash. Matching anywhere in the
+   words instead would throw away real votes: "Ongoing hearings under Article
+   7(1) TEU regarding Hungary" and "Objection pursuant to Rule 111(3):
+   Deleting Gibraltar from the table in Point I" are both votes on a whole
+   text whose subject happens to name an article and a point. Both were
+   dropped by a looser rule before this one was written.
+
+   Why it matters: the tenth term's decisions carry decisionAboutId, which the
+   importer already reads, so amendments and splits are marked there and never
+   reach the site. The ninth term's do not — the split is only in the title —
+   so 5,196 of its 7,558 imported records were paragraph votes. The same
+   Parliament, the same site, two different meanings of "a vote". */
+const PART_OF_A_TEXT = new RegExp([
+  '^§',
+  '^am(?:s|endements?|endments?)?\\s*\\d',
+  '^(?:consid(?:é|e)rant|recital)\\b',
+  '^(?:article|art\\.)\\s*\\d+\\s*(?:/\\d+)?$',
+  '^(?:annexe|annex)\\s*[ivx0-9]',
+  '^point\\s+[a-z0-9]+\\s*(?:/\\d+)?$',
+  '^[a-z]?\\d+\\s*/\\s*\\d+$'
+].join('|'), 'i');
+
+export function isPartOfAText(title) {
+  const tail = String(title || '').split(/\s[–—-]\s/).pop().trim();
+  return PART_OF_A_TEXT.test(tail);
+}

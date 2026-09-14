@@ -35,7 +35,7 @@ import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers,
   isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
-import { sourcesFor, procedureUrl } from './lib/ep-sources.mjs';
+import { sourcesFor, procedureUrl, isPartOfAText } from './lib/ep-sources.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -364,6 +364,17 @@ async function main() {
         continue;
       }
       const record = buildRecord(vote.decision, vote.item, members, date);
+
+      /* And the title decides the rest. isFinalVote reads the decision, which
+         is enough for the tenth term because its decisions carry
+         decisionAboutId; the ninth term's do not, and mark a paragraph vote
+         only by appending it to the title. Checked here rather than there
+         because the title is built from the vote item and the decision
+         together, and neither alone. */
+      if (!args.all && isPartOfAText(record.title)) {
+        skipped += 1;
+        continue;
+      }
       const counted = record._counted;
       delete record._counted;
 
