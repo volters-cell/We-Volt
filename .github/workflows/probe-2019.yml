@@ -1,0 +1,22 @@
+# Can the ninth term's first months be read at all?
+#
+# This project reported that the portal publishes no decisions before 2020.
+# HowTheyVote lists votes from 18 July 2019. One of those is wrong.
+#
+# Writes nothing.
+
+name: Probe 2019
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/probe-2019.mjs
