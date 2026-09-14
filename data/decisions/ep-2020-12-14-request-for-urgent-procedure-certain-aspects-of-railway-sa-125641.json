@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Request for urgent procedure: Certain aspects of railway safety and connectivity with regard to the Channel Tunnel - C9-0379/2020 - 2020/0347(COD) 14/12/2020 20:42:37.289",
+  "title": "Request for urgent procedure: Certain aspects of railway safety and connectivity with regard to the Channel Tunnel - C9-0379/2020 - 2020/0347(COD)",
   "subtitle": "vote in plenary",
   "date": "2020-12-14",
   "voteRule": "simple-majority",

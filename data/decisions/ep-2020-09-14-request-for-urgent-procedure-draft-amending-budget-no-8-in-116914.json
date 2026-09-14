@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Request for urgent procedure: Draft amending budget No 8: Increase of payment appropriations for the Emergency Support Instrument to finance the COVID-19 vaccines strategy and for the impact of the Corona Response Investment Initiative Plus - 2020/1997(BUD) 14/09/2020 21:54:46.666",
+  "title": "Request for urgent procedure: Draft amending budget No 8: Increase of payment appropriations for the Emergency Support Instrument to finance the COVID-19 vaccines strategy and for the impact of the Corona Response Investment Initiative Plus - 2020/1997(BUD)",
   "subtitle": "vote in plenary",
   "date": "2020-09-14",
   "voteRule": "simple-majority",

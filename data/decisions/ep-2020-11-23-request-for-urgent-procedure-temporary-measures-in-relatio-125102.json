@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Request for urgent procedure: temporary measures in relation to value added tax for COVID‑19 vaccines and in vitro diagnostic medical devices in response to the COVID‑19 pandemic - C9‑0352/2020 - 2020/0311(CNS) 23/11/2020 20:48:03.645",
+  "title": "Request for urgent procedure: temporary measures in relation to value added tax for COVID‑19 vaccines and in vitro diagnostic medical devices in response to the COVID‑19 pandemic - C9‑0352/2020 - 2020/0311(CNS)",
   "subtitle": "vote in plenary",
   "date": "2020-11-23",
   "voteRule": "simple-majority",
