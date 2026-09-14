@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Décision d'enquête européenne en matière pénale: alignement sur les règles de l’UE relatives à la protection des données à caractère personnel",
+  "title": "Amending Directive 2014/41/EU, as regards its alignment with EU rules on the protection of personal data",
   "subtitle": "A9-0237/2021 - Marina Kaljurand - Referral (Rule 59(4)) — vote in plenary",
   "date": "2021-09-15",
   "voteRule": "simple-majority",
@@ -20,6 +20,7 @@
     "result": "adopted",
     "headline": "Adopted — 658 in favour, 8 against, 22 abstained. Result derived from the totals."
   },
+  "rollCalls": 2,
   "ballots": [
     [
       840,

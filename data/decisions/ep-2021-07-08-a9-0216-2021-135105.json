@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a regulation of the European Parliament and of the Council on a reinforced role for the European Medicines Agency in crisis preparedness and management for medicinal products and medical devices",
+  "title": "European Medicines Agency",
   "subtitle": "A9-0216/2021 – Nicolás González Casares – Referral back (Rule 59(4)) — vote in plenary",
   "date": "2021-07-08",
   "voteRule": "simple-majority",
@@ -20,6 +20,7 @@
     "result": "adopted",
     "headline": "Adopted — 665 in favour, 20 against, 11 abstained. Result derived from the totals."
   },
+  "rollCalls": 2,
   "ballots": [
     [
       840,

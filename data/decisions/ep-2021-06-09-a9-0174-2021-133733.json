@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Statut et conditions générales d’exercice des fonctions du Médiateur européen",
+  "title": "Regulations and general conditions governing the performance of the Ombudsman’s duties",
   "subtitle": "A9-0174/2021 - Paulo Rangel - Postponement of the vote (Rule 46(3)) — vote in plenary",
   "date": "2021-06-09",
   "voteRule": "simple-majority",
@@ -20,6 +20,7 @@
     "result": "adopted",
     "headline": "Adopted — 658 in favour, 12 against, 22 abstained. Result derived from the totals."
   },
+  "rollCalls": 2,
   "ballots": [
     [
       840,

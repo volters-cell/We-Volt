@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2017/625 as regards official controls on animals and products of animal origin exported from third countries to the Union to ensure compliance with the prohibition of certain uses of antimicrobials",
+  "title": "Official controls on animals and products of animal origin in order to ensure compliance with the prohibition of certain uses of antimicrobials",
   "subtitle": "A9-0195/2021 - Pascal Canfin - Referal (Rule 59(4)) — vote in plenary",
   "date": "2021-06-24",
   "voteRule": "simple-majority",
@@ -20,6 +20,7 @@
     "result": "adopted",
     "headline": "Adopted — 673 in favour, 6 against, 12 abstained. Result derived from the totals."
   },
+  "rollCalls": 2,
   "ballots": [
     [
       840,
