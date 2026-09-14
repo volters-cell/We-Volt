@@ -48,6 +48,26 @@ function arg(name) {
 const FROM = arg('from');
 const UNTIL = arg('until');
 
+/* A lookup that gives up.
+
+   The shared fetcher retries five times with a rising wait, which is right for
+   an import: a vote that does not load is a vote missing from the record, and
+   it is worth being patient for. A committee is not that. It is a label, and a
+   label that costs five minutes of a flaky afternoon is worth less than the
+   run finishing. One document on a bad day burned four minutes of retries, and
+   four hundred of them burned ninety minutes and committed nothing.
+
+   So each lookup here is given a budget. Past it the vote simply goes
+   unlabelled, and can be labelled on a better day by running the pass again. */
+const PATIENCE = 20000;
+
+function within(promise, budget) {
+  return Promise.race([
+    promise,
+    new Promise(function (resolve) { setTimeout(function () { resolve(null); }, budget || PATIENCE); })
+  ]);
+}
+
 /* Which document a vote was about, worked out from the sitting rather than
    from the record.
 
@@ -143,12 +163,15 @@ for (const name of files) {
   // The record's own reference where it is a document, the sitting otherwise.
   const stated = record.document ||
     (record.procedure && record.procedure.reference);
+  const fromSitting = documentPath(stated)
+    ? null
+    : await within(documentsOf(record.date), 40000);
   const reference = documentPath(stated)
     ? stated
-    : (await documentsOf(record.date)).get(String(record.sourceId));
+    : (fromSitting && fromSitting.get(String(record.sourceId))) || null;
   if (!reference) { noReference += 1; continue; }
 
-  const code = await committeeFor(reference);
+  const code = await within(committeeFor(reference));
   if (!code) { noCommittee += 1; continue; }
 
   record.committee = { code: code, label: committeeName(code), short: committeeShort(code) };
