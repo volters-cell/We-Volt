@@ -1,0 +1,65 @@
+# Put the committee on every vote.
+#
+# The subject vocabulary the Parliament tags its documents with cannot be read
+# back — it publishes the tags and no names for them — so the label on a card
+# is the committee that wrote the text, which is on the document as creator.
+#
+# A window, because a backfill rewriting the other term at the same time would
+# undo this work and this would undo the backfill's.
+
+name: Label votes with their committee
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "Earliest vote to label (YYYY-MM-DD)"
+        default: "2024-07-16"
+      until:
+        description: "Latest vote to label (YYYY-MM-DD), blank for no limit"
+        default: ""
+      again:
+        description: "Re-read records that already carry a committee"
+        type: boolean
+        default: false
+
+jobs:
+  topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Read the committees
+        run: |
+          set -euo pipefail
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+
+          until=""
+          if [ -n "${{ inputs.until }}" ]; then until="--until ${{ inputs.until }}"; fi
+          again=""
+          if [ "${{ inputs.again }}" = "true" ]; then again="--again"; fi
+
+          node scripts/fetch-topics.mjs --from "${{ inputs.from }}" $until $again
+
+          node scripts/build-index.mjs
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nothing to label."
+          else
+            git add data/
+            git commit -m "Label votes with the committee that wrote the text
+
+          Read from each document's creator on the Parliament's open data
+          portal, by .github/workflows/topics.yml."
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

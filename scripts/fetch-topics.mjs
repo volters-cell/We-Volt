@@ -5,6 +5,7 @@
  *   node scripts/fetch-topics.mjs --dry-run
  *   node scripts/fetch-topics.mjs
  *   node scripts/fetch-topics.mjs --again      # re-read records already done
+ *   node scripts/fetch-topics.mjs --from 2024-07-16   # only part of the record
  *
  * HowTheyVote puts a chip on every entry — Venezuela, Economy and budget,
  * Gender equality — drawn from EuroVoc, the EU's subject vocabulary. The
@@ -36,6 +37,15 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const DIR = 'data/decisions';
 const DRY = process.argv.includes('--dry-run');
 const AGAIN = process.argv.includes('--again');
+
+/* A window, so this can label one Parliament while a backfill is rewriting the
+   other. Two jobs writing the same files would each undo the other's work. */
+function arg(name) {
+  const at = process.argv.indexOf(`--${name}`);
+  return at === -1 ? null : process.argv[at + 1];
+}
+const FROM = arg('from');
+const UNTIL = arg('until');
 
 /* One document is voted on several times across a term, and a term's worth of
    records asks for the same handful of files over and over. */
@@ -71,6 +81,8 @@ for (const name of files) {
   const file = path.join(ROOT, DIR, name);
   const record = JSON.parse(await readFile(file, 'utf8'));
 
+  if (FROM && record.date < FROM) continue;
+  if (UNTIL && record.date > UNTIL) continue;
   if (record.committee && !AGAIN) { already += 1; continue; }
   const reference = record.procedure && record.procedure.reference;
   if (!reference) { noReference += 1; continue; }
