@@ -29,9 +29,10 @@
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { get } from './lib/portal.mjs';
+import { get, getAll, english, lastSegment, isRollCall } from './lib/portal.mjs';
 import { documentPath } from './lib/portal.mjs';
 import { committeeOf, committeeName, committeeShort } from './lib/committees.mjs';
+import { documentCode, documentReference } from './fetch-plenary.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -46,6 +47,60 @@ function arg(name) {
 }
 const FROM = arg('from');
 const UNTIL = arg('until');
+
+/* Which document a vote was about, worked out from the sitting rather than
+   from the record.
+
+   The record does not reliably say. A ninth-term vote carries the report code
+   — A9-0162/2022 — because that is all it had; a tenth-term vote carries the
+   procedure instead, 2024/2721(RSP), because its vote item offered one. The
+   document lookup needs the first shape, so reading procedure.reference alone
+   labelled precisely nothing in the tenth term, which is how this shipped once
+   already and showed no chips at all.
+
+   Asking the sitting works for both, and for anything the Parliament changes
+   its mind about later: the decision's label names the file where the label
+   has one, and the vote item names it as a document where it does not. One
+   fetch per sitting day, held for the rest of the run. */
+const sittings = new Map();
+
+async function documentsOf(date) {
+  if (sittings.has(date)) return sittings.get(date);
+
+  const found = new Map();
+  try {
+    const decisions = (await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500)).filter(isRollCall);
+    let items = [];
+    try {
+      items = await getAll(`/meetings/MTG-PL-${date}/vote-results`, {}, 500);
+    } catch (error) {
+      items = [];
+    }
+    const byId = new Map();
+    items.forEach(function (item) {
+      byId.set(String(item.activity_id || lastSegment(item.id)), item);
+    });
+
+    decisions.forEach(function (decision) {
+      const key = String(decision.notation_votingId || lastSegment(decision.activity_id));
+      const fromLabel = documentCode(english(decision.activity_label));
+      if (fromLabel) { found.set(key, fromLabel); return; }
+
+      const item = [].concat(decision.inverse_consists_of || [])
+        .map(function (entry) { return typeof entry === 'string' ? entry : (entry && entry.id) || ''; })
+        .map(function (id) { return byId.get(lastSegment(id)); })
+        .find(Boolean);
+      const fromItem = item && [].concat(item.based_on_a_realization_of || [])
+        .map(function (entry) { return typeof entry === 'string' ? entry : (entry && entry.id) || ''; })
+        .map(documentReference).find(Boolean);
+      if (fromItem) found.set(key, fromItem);
+    });
+  } catch (error) {
+    // A sitting the portal will not serve labels nothing, and says so below.
+  }
+  sittings.set(date, found);
+  return found;
+}
 
 /* One document is voted on several times across a term, and a term's worth of
    records asks for the same handful of files over and over. */
@@ -84,7 +139,13 @@ for (const name of files) {
   if (FROM && record.date < FROM) continue;
   if (UNTIL && record.date > UNTIL) continue;
   if (record.committee && !AGAIN) { already += 1; continue; }
-  const reference = record.procedure && record.procedure.reference;
+
+  // The record's own reference where it is a document, the sitting otherwise.
+  const stated = record.document ||
+    (record.procedure && record.procedure.reference);
+  const reference = documentPath(stated)
+    ? stated
+    : (await documentsOf(record.date)).get(String(record.sourceId));
   if (!reference) { noReference += 1; continue; }
 
   const code = await committeeFor(reference);
@@ -99,7 +160,7 @@ for (const name of files) {
 console.log(`${files.length} records: ${labelled} labelled` +
   (already ? `, ${already} already had one` : '') +
   `, ${noCommittee} whose document names no committee` +
-  `, ${noReference} with no document at all.`);
+  `, ${noReference} whose document could not be found.`);
 [...tally.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12).forEach(function (entry) {
   console.log(`  ${entry[0].padEnd(6)} ${String(entry[1]).padStart(4)}  ${committeeName(entry[0])}`);
 });

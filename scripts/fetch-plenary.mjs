@@ -320,6 +320,12 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
       reference: procedure || report,
       url: procedureUrl(procedure || report)
     },
+    // The document itself, kept beside the procedure rather than behind it.
+    // procedure.reference holds whichever of the two the portal offered, so a
+    // tenth-term vote records 2024/2721(RSP) and a ninth-term one A9-0162/2022,
+    // and anything needing the document — the committee that wrote it — could
+    // not tell which it had been given.
+    document: report || null,
     summary: '',
     whatItMeans: [],
     outcome: {
