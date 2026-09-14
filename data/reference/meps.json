@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-09-13",
+  "fetched": "2026-09-14",
   "term": 10,
   "terms": [
     10,
@@ -6370,7 +6370,8 @@
       "name": "Pál SZEKERES",
       "country": "HU",
       "group": "PfE",
-      "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt"
+      "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt",
+      "former": true
     },
     "256857": {
       "name": "Viktória FERENC",
