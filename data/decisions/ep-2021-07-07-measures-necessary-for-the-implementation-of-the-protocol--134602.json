@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Measures necessary for the implementation of the Protocol on the financial consequences of the expiry of the ECSC Treaty and on the Research Fund for Coal and Steel – A9-0229/2021 – Johan Van Overtveldt – Consent procedure 07/07/2021 15:27:27.551",
+  "title": "Measures necessary for the implementation of the Protocol on the financial consequences of the expiry of the ECSC Treaty and on the Research Fund for Coal and Steel – A9-0229/2021 – Johan Van Overtveldt – Consent procedure",
   "subtitle": "vote in plenary",
   "date": "2021-07-07",
   "voteRule": "simple-majority",

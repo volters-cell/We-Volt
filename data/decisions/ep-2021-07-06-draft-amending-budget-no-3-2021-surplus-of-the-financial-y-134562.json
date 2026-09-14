@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Draft amending budget No 3/2021: surplus of the financial year 2020 – A9-0218/2021 – Pierre Larrouturou – Single vote 06/07/2021 15:36:08.447",
+  "title": "Draft amending budget No 3/2021: surplus of the financial year 2020 – A9-0218/2021 – Pierre Larrouturou – Single vote",
   "subtitle": "vote in plenary",
   "date": "2021-07-06",
   "voteRule": "simple-majority",

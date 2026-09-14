@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Railway safety and signalling: assessing the state of play of the ERTMS deployment – A9-0181/2021 – Izaskun Bilbao Barandica – Single vote 06/07/2021 22:11:22.727",
+  "title": "Railway safety and signalling: assessing the state of play of the ERTMS deployment – A9-0181/2021 – Izaskun Bilbao Barandica – Single vote",
   "subtitle": "vote in plenary",
   "date": "2021-07-06",
   "voteRule": "simple-majority",
