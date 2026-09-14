@@ -25,7 +25,7 @@
 
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { PORTAL, getAll, english, lastSegment } from './lib/portal.mjs';
+import { PORTAL, getAll, english, lastSegment, meetingDate } from './lib/portal.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const OUT = 'data/reference/plenary-calendar.json';
@@ -85,7 +85,7 @@ export async function fetchSittings(term, from, until) {
   for (let year = Number(from.slice(0, 4)); year <= Number(until.slice(0, 4)); year += 1) {
     const meetings = await getAll('/meetings', { year: year }, 400);
     meetings.forEach(function (meeting) {
-      const date = meeting.activity_date;
+      const date = meetingDate(meeting);
       if (!date || date < from || date > until) return;
       if (meeting.had_activity_type && meeting.had_activity_type.indexOf('PLENARY') === -1) return;
       if (meeting.parliamentary_term && termNumber(meeting.parliamentary_term) !== term) return;

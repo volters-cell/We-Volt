@@ -32,7 +32,7 @@
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import {
-  PORTAL, get, getAll, english, lastSegment, fetchMembers,
+  PORTAL, get, getAll, english, lastSegment, fetchMembers, meetingDate,
   isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
 import { sourcesFor, procedureUrl, isPartOfAText } from './lib/ep-sources.mjs';
@@ -184,7 +184,11 @@ async function loadMembers(args) {
 /* --------------------------------------------------------- sitting days */
 
 /* Which days the Parliament sat, from the portal's own meeting list. Cheaper
-   and truer than trying every weekday and collecting 404s. */
+   and truer than trying every weekday and collecting 404s.
+
+   The day comes from meetingDate rather than straight off the field, because
+   the portal spells that field differently in different years and the plain
+   spelling is absent for the whole of 2019. See the note there. */
 export async function sittingDates(from, until) {
   const years = [];
   for (let year = Number(from.slice(0, 4)); year <= Number(until.slice(0, 4)); year += 1) years.push(year);
@@ -193,7 +197,7 @@ export async function sittingDates(from, until) {
   for (const year of years) {
     const meetings = await getAll('/meetings', { year: year }, 400);
     meetings.forEach(function (meeting) {
-      const date = meeting.activity_date;
+      const date = meetingDate(meeting);
       if (!date || date < from || date > until) return;
       if (meeting.had_activity_type && meeting.had_activity_type.indexOf('PLENARY') === -1) return;
       dates.add(date);

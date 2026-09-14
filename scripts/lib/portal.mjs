@@ -73,6 +73,34 @@ export function lastSegment(value) {
   return cut === -1 ? text : text.slice(cut + 1);
 }
 
+/* The day a meeting sat.
+
+   Not simply meeting.activity_date. The portal spells that field two ways and
+   which one it uses depends on the year: a 2020 meeting carries a plain
+   activity_date, a 2019 meeting carries the same value under its JSON-LD name,
+   "eli-dl:activity_date", wrapped in an object. Reading only the plain
+   spelling makes every one of the 52 plenary meetings of 2019 look undated,
+   and a fetcher that drops undated meetings then reports that the Parliament
+   did not sit that year. This project made exactly that report, and repeated
+   it, until HowTheyVote's archive contradicted it.
+
+   So the identifier is the last word. A meeting is addressed MTG-PL-YYYY-MM-DD
+   and names its own day; across the 51 meetings of 2020, where both the field
+   and the identifier are present, the two never disagree. */
+export function meetingDate(meeting) {
+  if (!meeting) return null;
+
+  const plain = meeting.activity_date;
+  if (typeof plain === 'string' && plain.length >= 10) return plain.slice(0, 10);
+
+  const tagged = meeting['eli-dl:activity_date'];
+  const value = tagged && typeof tagged === 'object' ? tagged['@value'] : tagged;
+  if (typeof value === 'string' && value.length >= 10) return value.slice(0, 10);
+
+  const named = /\d{4}-\d{2}-\d{2}/.exec(String(meeting.activity_id || meeting.id || ''));
+  return named ? named[0] : null;
+}
+
 /* One language out of the two dozen the portal returns. English where there is
    one — these become the titles a reader sees. */
 export function english(value) {
