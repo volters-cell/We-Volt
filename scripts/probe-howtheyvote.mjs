@@ -1,30 +1,34 @@
 #!/usr/bin/env node
 /*
- * What counts as one vote, and where does a topic come from?
+ * Is decisionAboutId the wrong rule?
  *
- * The same days, counted both ways, say the difference is not one thing:
+ * 18 April 2023 says it is. The portal records sixteen roll-calls, HowTheyVote
+ * keeps ten, this project keeps four — and the six it throws away are texts,
+ * not amendments:
  *
- *   2019-07-18   portal   9    them  1
- *   2020-02-12   portal  49    them  7      this site: 9 votes on 7 texts
- *   2021-03-09   portal 130    them  0      this site: 0
- *   2023-04-18   portal  16    them 10      this site: 4
+ *   dropped   Revision of the EU Emissions Trading System for aviation
+ *             – A9-0155/2022 – Sunčana Glavak – Provisional agreement
+ *   dropped   Machinery products – A9-0141/2022 – Ivan Štefanec – Provisional…
+ *   dropped   Social Climate Fund – A9-0157/2022 – David Casa, Esther de Lange…
  *
- * On two of those days "one vote per text" lands exactly on their number, and
- * 2021-03-09 — a sitting that is entirely amendments — is empty for both. So
- * the unit is the text, not the ballot, and this project is close to that
- * already. But 18 April 2023 is the other way round: they keep ten and this
- * keeps four, so something here is throwing away whole texts. That is the
- * question worth answering before any rule is rewritten, because a rule that
- * makes the count agree by dropping more would be wrong in the same direction.
+ * Each was dropped for carrying decisionAboutId, which this project reads as
+ * "this is an amendment to something". It is not: the portal sets it on a vote
+ * on a provisional agreement too, which is the final vote on a file. The real
+ * amendments that day say so in the label — "Am 680", "§ 29 – Am 6", "Recital
+ * P – Am 2" — and the part filter already catches every one of them.
  *
- * So this prints that sitting decision by decision and says, for each, what
- * this project decides about it and why.
+ * Count the distinct texts in that sitting and the answer is ten, exactly what
+ * HowTheyVote holds. On 12 February 2020 the same rule gives seven, exactly
+ * what they hold. On 9 March 2021 it gives none, exactly what they hold,
+ * because every roll-call that day amends a report whose final vote fell on
+ * another day.
  *
- * The second half is the topic. A document carries is_about — EuroVoc concept
- * URIs, the Parliament's own subject vocabulary — but only one of three
- * documents tried had the field, so its coverage has to be measured rather
- * than hoped for. And a concept is a number until something names it, so this
- * asks where a name for one lives.
+ * So the label is the rule and decisionAboutId is noise. The danger in acting
+ * on that is the tenth term, which has leaned on decisionAboutId since it was
+ * written and whose labels carry subjects rather than markers. If dropping the
+ * rule floods it with amendments, the rule is load-bearing there and the fix
+ * has to be narrower. That is what this measures, against their count on the
+ * same days rather than against an expectation.
  *
  * Reads and prints. Writes nothing.
  
@@ -32,51 +36,58 @@
  */
 import { get, getAll, english, isRollCall } from './lib/portal.mjs';
 import { isPartOfAText } from './lib/ep-sources.mjs';
-import { documentCode, isFinalVote } from './fetch-plenary.mjs';
 
-console.log('18 April 2023, decision by decision');
-const decisions = (await getAll('/meetings/MTG-PL-2023-04-18/decisions', {}, 500)).filter(isRollCall);
-for (const decision of decisions) {
-  const label = english(decision.activity_label);
-  const about = decision.decisionAboutId ? 'about another text' : '';
-  const part = isPartOfAText(label) ? 'part of a text' : '';
-  const verdict = !isFinalVote(decision) ? `dropped (${about || 'amendment'})`
-    : part ? 'dropped (part of a text)' : 'KEPT';
-  console.log(`  ${verdict.padEnd(28)} ${documentCode(label) || '—'}  ${label.slice(0, 62)}`);
+const AGENT = 'EU-Tracker/1.0 (+https://github.com/volters-cell/We-Volt) probe';
+const DAYS = ['2020-02-12', '2021-03-09', '2023-04-18',
+  '2024-10-22', '2025-04-01', '2025-09-09', '2024-11-13'];
+
+async function theirs(date) {
+  try {
+    const response = await fetch(`https://howtheyvote.eu/api/votes?date=${date}`,
+      { headers: { accept: 'application/json', 'user-agent': AGENT } });
+    if (!response.ok) return null;
+    const json = JSON.parse(await response.text());
+    const rows = json.results || json.data || json.votes || (Array.isArray(json) ? json : []);
+    return json.total !== undefined ? json.total : rows.length;
+  } catch (error) {
+    return null;
+  }
 }
 
-console.log('\nhow widely is is_about published?');
-let carried = 0;
-const codes = [];
-for (const decision of decisions) {
-  const code = documentCode(english(decision.activity_label));
-  if (code && codes.indexOf(code) === -1) codes.push(code);
+console.log('date         portal   aboutId   label   both   |  them');
+for (const date of DAYS) {
+  let decisions = [];
+  try {
+    decisions = (await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500)).filter(isRollCall);
+  } catch (error) {
+    console.log(`  ${date}  the portal would not answer`);
+    continue;
+  }
+  // Three rules, side by side on the same sitting.
+  const byAboutId = decisions.filter((d) => !d.decisionAboutId).length;
+  const byLabel = decisions.filter((d) => !isPartOfAText(english(d.activity_label))).length;
+  const byBoth = decisions.filter((d) => !d.decisionAboutId &&
+    !isPartOfAText(english(d.activity_label))).length;
+  const them = await theirs(date);
+  console.log(`  ${date}  ${String(decisions.length).padStart(5)}   ` +
+    `${String(byAboutId).padStart(6)}  ${String(byLabel).padStart(6)} ` +
+    `${String(byBoth).padStart(6)}   |  ${them === null ? '   ?' : String(them).padStart(4)}`);
 }
-for (const code of codes.slice(0, 8)) {
-  const path = code.replace(/^([A-Z]+(?:-[A-Z]+)?)(\d{1,2})-(\d{4})\/(\d{4})$/, '$1-$2-$4-$3');
-  const payload = await get(`/documents/${path}`, {});
-  const row = (payload && payload.data && payload.data[0]) || null;
-  const about = row && row.is_about ? [].concat(row.is_about) : [];
-  if (about.length) carried += 1;
-  console.log(`  ${code.padEnd(16)} ${about.length ? `${about.length} concepts` : 'none'}`);
-}
-console.log(`  ${carried} of ${Math.min(codes.length, 8)} documents carry a subject`);
 
-console.log('\nwhat names a concept?');
+/* And a name for a concept, which nothing on the portal would give up. */
+console.log('\nwhat names a EuroVoc concept?');
 for (const shape of [
+  '/documents/A-9-2023-0056?include=is_about',
   '/eurovoc-concepts/5420',
-  '/eurovoc/5420',
-  '/concepts/5420',
-  '/eurovoc-concepts?limit=2'
+  '/subjects/5420',
+  '/corporate-bodies/5420'
 ]) {
   try {
     const payload = await get(shape, {});
     const row = (payload && payload.data && payload.data[0]) || payload;
-    if (!row) { console.log(`  ${shape.padEnd(28)} nothing`); continue; }
-    console.log(`  ${shape.padEnd(28)} ${Object.keys(row).slice(0, 12).join(', ')}`);
-    const named = row.label || row.prefLabel || row.title;
-    if (named) console.log(`      -> ${JSON.stringify(english(named)).slice(0, 90)}`);
+    if (!row) { console.log(`  ${shape.padEnd(42)} nothing`); continue; }
+    console.log(`  ${shape.padEnd(42)} ${Object.keys(row).slice(0, 10).join(', ')}`);
   } catch (error) {
-    console.log(`  ${shape.padEnd(28)} ${String(error.message).slice(0, 50)}`);
+    console.log(`  ${shape.padEnd(42)} ${String(error.message).slice(0, 44)}`);
   }
 }
