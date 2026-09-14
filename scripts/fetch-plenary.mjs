@@ -99,6 +99,24 @@ export function documentCode(label) {
   return match ? match[1] : null;
 }
 
+/* The subject the Parliament writes before the filing code.
+
+   A decision's label often opens with what the vote was about:
+
+     Revision of the EU Emissions Trading System – A9-0162/2022 – Peter Liese
+       – Rejection – Am 682
+
+   and everything before the code is the text's own name. It is the closest
+   thing the portal has to the title a reader would give this vote, and it
+   costs nothing to read. Where the label opens with the code instead, there
+   is no subject here and some other route has to supply it. */
+export function subjectFromLabel(label) {
+  const text = String(label || '').replace(/\s+/g, ' ').trim();
+  const at = text.search(/[A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4}/);
+  if (at <= 0) return '';
+  return text.slice(0, at).replace(/\s*[–—-]\s*$/, '').trim();
+}
+
 /* A document title as the Parliament files it — "RECOMMENDATION on the draft
    Council decision on the conclusion..." — set in the case a sentence is
    written in. The shouting is a filing convention, not emphasis. */
@@ -239,7 +257,7 @@ export async function sittingDates(from, until) {
 
 /* ------------------------------------------------------- a sitting's votes */
 
-export function buildRecord(decision, item, members, date, subject, code) {
+export function buildRecord(decision, item, members, date, subject, code, rollCalls) {
   const ballots = ballotsOf(decision);
   const totals = tallyOf(decision);
 
@@ -249,7 +267,9 @@ export function buildRecord(decision, item, members, date, subject, code) {
   // decision nor its report. It is the last thing that names a subject, and
   // without it a ninth-term vote is titled by its filing reference.
   const documentSubject = plainTitle(String(subject || '').replace(/\s+/g, ' '));
-  const title = itemTitle || documentSubject || decisionTitle || 'Roll-call vote';
+  // The subject first. It is the name of the text, which is what this record
+  // now stands for; the item's label and the decision's own come after it.
+  const title = documentSubject || itemTitle || decisionTitle || 'Roll-call vote';
   const detail = title !== decisionTitle ? decisionTitle : '';
 
   const structured = english(item && item.structuredLabel);
@@ -299,6 +319,10 @@ export function buildRecord(decision, item, members, date, subject, code) {
         `${totals.against} against, ${totals.abstain} abstained.` +
         (stated ? '' : ' Result derived from the totals.')
     },
+    // How many times the Parliament went to a roll-call on this text that day.
+    // One record stands for all of them, and a text voted on fourteen times is
+    // a different thing from one voted on once.
+    rollCalls: Number(rollCalls) || 1,
     ballots: ballots,
     // Where a reader can check this vote at the Parliament: the roll-call
     // results it is recorded in, the minutes of the sitting, the procedure
@@ -319,7 +343,60 @@ export function isFinalVote(decision) {
   return !AMENDMENT.test(english(decision.activity_label));
 }
 
-export async function sittingVotes(date) {
+/* One card per text, which is what a sitting actually decided.
+
+   A plenary day is dozens or hundreds of roll-calls on a handful of files. 18
+   April 2023 is sixteen roll-calls on ten texts: the Emissions Trading System
+   twice over, machinery products, the Social Climate Fund, sustainable carbon
+   cycles — each voted on several times, as amendments, as rejections, and
+   finally as a whole. Counting the ballots says sixteen. Counting what the
+   Parliament decided says ten, and ten is what a reader means by "votes that
+   day". HowTheyVote lists exactly those ten; this project listed four, having
+   thrown away every text whose only roll-call that day was an amendment.
+
+   So the roll-calls on one text collapse into one record. The record is built
+   from the decision that best represents the text — the vote on the whole,
+   where there was one, and otherwise the last roll-call taken on it — and it
+   keeps every ballot of that decision, so nobody's vote is invented or
+   averaged. rollCalls says how many there were, because a text voted on
+   fourteen times is a different thing from one voted on once, and the record
+   should not hide that.
+
+   Texts are told apart by the document the Parliament files them under. A
+   decision with no document code stands alone under its own label, which is
+   right: an agenda request is its own text and shares nothing. */
+export function oneVotePerText(rollCalls) {
+  const groups = new Map();
+
+  rollCalls.forEach(function (vote, index) {
+    const key = vote.code || `label:${vote.subject || vote.label || index}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(vote);
+  });
+
+  const chosen = [];
+  groups.forEach(function (members) {
+    // The vote on the text as a whole, where the sitting held one; otherwise
+    // the last roll-call on it, which is as close as the day came to deciding.
+    const whole = members.filter(function (vote) { return !vote.part; });
+    const pick = (whole.length ? whole : members)[(whole.length ? whole : members).length - 1];
+
+    // The subject may be written on any of the sibling roll-calls: the label
+    // that opens "Sustainable carbon cycles – A9-0066/2023 – …" names the text
+    // that "A9-0066/2023 – Alexander Bernhuber – Motion for a resolution"
+    // leaves unnamed. They are the same file, so either may speak for it.
+    const named = members.map(function (vote) { return vote.subject; }).find(Boolean) || '';
+
+    chosen.push(Object.assign({}, pick, {
+      subject: pick.subject || named,
+      rollCalls: members.length
+    }));
+  });
+
+  return chosen;
+}
+
+export async function sittingVotes(date, everyRollCall) {
   const decisions = await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500);
   if (!decisions.length) return null;
 
@@ -352,13 +429,25 @@ export async function sittingVotes(date) {
     });
   });
 
-  const votes = decisions.filter(isRollCall).map(function (decision) {
-    const code = documentCode(english(decision.activity_label));
+  const rollCalls = decisions.filter(isRollCall).map(function (decision) {
+    const label = english(decision.activity_label);
+    const code = documentCode(label);
     const parent = idsOf(decision.inverse_consists_of)
       .map(function (id) { return byId.get(lastSegment(id)) || byId.get(String(id).replace(/^.*event\//, '')); })
       .find(Boolean) || (code ? byDocument.get(code) || null : null);
-    return { decision: decision, item: parent, code: code };
+    return {
+      decision: decision,
+      item: parent,
+      code: code,
+      label: label,
+      subject: subjectFromLabel(label),
+      part: isPartOfAText(label)
+    };
   });
+
+  const votes = everyRollCall
+    ? rollCalls.map(function (vote) { return Object.assign({}, vote, { rollCalls: 1 }); })
+    : oneVotePerText(rollCalls);
 
   /* Where neither route reaches a usable title, the report itself still has
      one, and a sitting turns on a handful of reports between a hundred votes —
@@ -368,6 +457,7 @@ export async function sittingVotes(date) {
      label, and testing for the item rather than for the title left those votes
      titled by their filing code with the answer one request away. */
   for (const vote of votes) {
+    if (vote.subject) continue;
     if (!vote.code) continue;
     if (english(vote.item && vote.item.activity_label).trim()) continue;
     vote.subject = plainSubject(await documentTitle(vote.code));
@@ -432,37 +522,26 @@ async function main() {
   const held = await alreadyHeld(outDir);
   const written = [];
   const taken = new Set();
-  let skipped = 0;
+  let collapsed = 0;
   let already = 0;
 
   for (const date of dates) {
-    const votes = await sittingVotes(date);
+    const votes = await sittingVotes(date, Boolean(args.all));
     if (!votes || !votes.length) {
       console.log(`${date}: no roll-call votes recorded.`);
       continue;
     }
 
+    /* No filter here any more. sittingVotes has already collapsed the
+       sitting's roll-calls into one per text, and dropping a text because the
+       roll-call that represents it happens to be an amendment is exactly the
+       mistake that left 18 April 2023 showing four votes where the Parliament
+       decided ten things. --all now means "every roll-call, ungrouped", for
+       anyone who wants the ballots rather than the decisions. */
     for (const vote of votes) {
-      if (!args.all && !isFinalVote(vote.decision)) {
-        skipped += 1;
-        continue;
-      }
-      /* And the decision's own label decides the rest. isFinalVote reads the
-         decision's fields, which is enough for the tenth term because its
-         decisions carry decisionAboutId; the ninth term's do not, and mark a
-         paragraph vote only by appending it — "- Recital O/2" — to the label.
-
-         The label, not the record's title. They used to be the same thing for
-         a ninth-term vote and are not any more: the title is now the report's
-         subject where the label had only a filing code, and a subject never
-         carries the mark. Reading the title here would let every paragraph
-         vote of the term back in. */
-      if (!args.all && isPartOfAText(english(vote.decision.activity_label))) {
-        skipped += 1;
-        continue;
-      }
-
-      const record = buildRecord(vote.decision, vote.item, members, date, vote.subject, vote.code);
+      collapsed += Number(vote.rollCalls) || 1;
+      const record = buildRecord(vote.decision, vote.item, members, date,
+        vote.subject, vote.code, vote.rollCalls);
       const counted = record._counted;
       delete record._counted;
 
@@ -501,9 +580,9 @@ async function main() {
     }
   }
 
-  console.log(`\n${written.length} record${written.length === 1 ? '' : 's'}` +
-    (already ? `, ${already} already held` : '') +
-    (skipped ? `, ${skipped} amendment votes skipped (pass --all to keep them)` : '') + '.');
+  console.log(`\n${written.length} text${written.length === 1 ? '' : 's'}` +
+    (collapsed ? ` from ${collapsed} roll-calls` : '') +
+    (already ? `, ${already} already held` : '') + '.');
   if (written.length && !args['dry-run']) {
     console.log('Next: node scripts/build-index.mjs, then node scripts/validate-data.mjs');
   }
