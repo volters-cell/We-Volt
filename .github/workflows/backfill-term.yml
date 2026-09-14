@@ -59,6 +59,8 @@ on:
 
 jobs:
   backfill:
+    outputs:
+      changed: ${{ steps.windows.outputs.changed }}
     runs-on: ubuntu-latest
     timeout-minutes: 330
     permissions:
@@ -82,6 +84,7 @@ jobs:
       # before the next window starts, and the run ends by naming every window
       # that did not land.
       - name: Import the windows
+        id: windows
         run: |
           set -uo pipefail
           git config user.name "eu-tracker-bot"
@@ -125,6 +128,7 @@ jobs:
             if [ -z "$(git status --porcelain data/)" ]; then
               echo "Nothing new in that window."
             else
+              echo "changed=true" >> "$GITHUB_OUTPUT"
               git add data/
               git commit -m "Import $from to $until from the European Parliament
 
@@ -141,3 +145,16 @@ jobs:
             echo "::error::These windows did not land and are unchanged on file:$failed"
             exit 1
           fi
+
+  # A push made with the built-in token does not trigger other workflows. Every
+  # window of this backfill committed and none of them reached the site, which
+  # is why a rebuilt term could sit in the repository looking finished and
+  # change nothing a reader sees.
+  publish:
+    needs: backfill
+    if: always() && needs.backfill.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

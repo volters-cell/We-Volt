@@ -25,6 +25,8 @@ on:
 
 jobs:
   topics:
+    outputs:
+      changed: ${{ steps.label.outputs.changed }}
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
@@ -36,6 +38,7 @@ jobs:
           node-version: "22"
 
       - name: Read the committees
+        id: label
         run: |
           set -euo pipefail
           git config user.name "eu-tracker-bot"
@@ -54,7 +57,9 @@ jobs:
 
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Nothing to label."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             git add data/
             git commit -m "Label votes with the committee that wrote the text
 
@@ -63,3 +68,15 @@ jobs:
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+
+  # A push made with the built-in token does not trigger other workflows, so the
+  # labels would otherwise sit in the repository and never reach the site. This
+  # is exactly how the chips were committed twice and shown never.
+  publish:
+    needs: topics
+    if: needs.topics.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
