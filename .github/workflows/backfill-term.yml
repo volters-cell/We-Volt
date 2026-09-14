@@ -72,12 +72,22 @@ jobs:
       # One window at a time, each checked and committed before the next
       # begins, so a failure half way through leaves the windows before it
       # safely in and the rest simply not yet done.
+      #
+      # A window that fails is put back, not carried forward. With
+      # forget_first the records are deleted before they are read again, so a
+      # window that dies between the two leaves deletions in the working tree —
+      # and the next window's "git add data/" would commit them as though the
+      # votes had been removed on purpose. The portal answering 504 must not be
+      # able to quietly empty a month of the record. So the tree is restored
+      # before the next window starts, and the run ends by naming every window
+      # that did not land.
       - name: Import the windows
         run: |
-          set -euo pipefail
+          set -uo pipefail
           git config user.name "eu-tracker-bot"
           git config user.email "actions@github.com"
           first=1
+          failed=""
           for window in ${{ inputs.windows }}; do
             from="${window%%:*}"
             until="${window##*:}"
@@ -89,18 +99,28 @@ jobs:
             fi
             first=0
 
-            if [ "${{ inputs.forget_first }}" = "true" ]; then
-              node scripts/forget-votes.mjs --from "$from" --until "$until"
+            if ! (
+              set -e
+              if [ "${{ inputs.forget_first }}" = "true" ]; then
+                node scripts/forget-votes.mjs --from "$from" --until "$until"
+              fi
+
+              node scripts/fetch-plenary.mjs $refresh \
+                --term "${{ inputs.term }}" \
+                --from "$from" --since "$from" --until "$until"
+
+              node scripts/build-index.mjs
+              node scripts/build-members.mjs
+              node tests/import.test.mjs
+              node scripts/validate-data.mjs
+            ); then
+              echo "::warning::$from to $until did not land. Putting the records back."
+              git checkout -- data/
+              git clean -fd data/
+              failed="$failed $from:$until"
+              echo "::endgroup::"
+              continue
             fi
-
-            node scripts/fetch-plenary.mjs $refresh \
-              --term "${{ inputs.term }}" \
-              --from "$from" --since "$from" --until "$until"
-
-            node scripts/build-index.mjs
-            node scripts/build-members.mjs
-            node tests/import.test.mjs
-            node scripts/validate-data.mjs
 
             if [ -z "$(git status --porcelain data/)" ]; then
               echo "Nothing new in that window."
@@ -116,3 +136,8 @@ jobs:
             fi
             echo "::endgroup::"
           done
+
+          if [ -n "$failed" ]; then
+            echo "::error::These windows did not land and are unchanged on file:$failed"
+            exit 1
+          fi
