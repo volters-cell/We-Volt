@@ -1251,7 +1251,27 @@
       positions.set(String(ballot[0]), POSITIONS[ballot[1]]);
     });
 
-    const members = delegation.members.map(function (member) {
+    /* Only the people who were in the House when this vote was taken.
+
+       Every member was shown on every vote, so a vote of January 2024 listed
+       all five of Volt's members and recorded four of them as "did not vote".
+       They had not abstained: three of them were elected five months later.
+       "Did not vote" is a thing a member does, and saying it of someone who
+       was not a member is simply false.
+
+       The dates are each person's own parliamentary mandates, read from the
+       portal by scripts/fetch-delegation-terms.mjs. A member with none
+       recorded is shown, which is what the site did before this and is the
+       safer way to be wrong: a name too many is visible, a name missing is
+       not. */
+    const sat = delegation.members.filter(function (member) {
+      if (!member.mandates || !member.mandates.length) return true;
+      return member.mandates.some(function (mandate) {
+        return decision.date >= mandate.from && (!mandate.until || decision.date <= mandate.until);
+      });
+    });
+
+    const members = sat.map(function (member) {
       // The directory is the fuller record: it writes the name the way the
       // Parliament writes it, and it knows the group the member sits in now.
       const known = memberById(member.id);
@@ -1296,8 +1316,8 @@
       }).join('');
 
       /* Open on every vote, not folded away behind a summary. This is the
-         one delegation the site follows, it is five people, and how they
-         voted is the thing a reader came for — not a footnote to be
+         one delegation the site follows, it is a handful of people, and how
+         they voted is the thing a reader came for — not a footnote to be
          unfolded once they have read everything else. The fold stays, for
          anyone who wants the outcome without the faces. */
       return '<details class="delegation" open>' +
@@ -1307,8 +1327,12 @@
           '<span class="dg-sum">' + parts.join(', ') + '</span>' +
         '</summary>' +
         '<ul class="dg-members">' + names + '</ul>' +
+        /* The number of people above it, not the number on file: on a vote
+           of the previous Parliament that is one, and saying five under a
+           list of one is the same error in words. */
         '<p class="dg-note">' + esc(delegation.note || '') + ' ' +
-          esc(delegation.members.length) + ' members of the Parliament.</p>' +
+          esc(result.members.length) + ' member' +
+          (result.members.length === 1 ? '' : 's') + ' of the Parliament.</p>' +
         '</details>';
     }).join('');
   }

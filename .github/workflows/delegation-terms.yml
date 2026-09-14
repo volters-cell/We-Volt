@@ -1,0 +1,38 @@
+# When did each member of a followed delegation actually sit?
+#
+# Without this every vote shows every member, so a vote of 2024 recorded four
+# people as "did not vote" who had not yet been elected. The dates come from
+# each person's own parliamentary mandates on the portal.
+
+name: Refresh delegation mandates
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mandates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/fetch-delegation-terms.mjs
+      - name: Commit what changed
+        run: |
+          if [ -z "$(git status --porcelain data/reference/delegations.json)" ]; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+          git add data/reference/delegations.json
+          git commit -m "Record when each delegation member sat
+
+          Automated by .github/workflows/delegation-terms.yml, from the
+          parliamentary mandates on each person's own record."
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
