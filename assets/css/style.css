@@ -252,7 +252,12 @@ a:hover { text-decoration-thickness: 2px; }
   background: none;
   color: inherit;
   cursor: pointer;
+  /* On the home page the name is a button; on every other page it is a link
+     home. Both wear the same face, so neither picks up a link's underline or
+     its visited colour. */
+  text-decoration: none;
 }
+.brand:visited { color: inherit; }
 .brand:hover .brand-name { color: var(--eu-ink); }
 .brand:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .brand-mark {
