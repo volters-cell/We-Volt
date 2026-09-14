@@ -4,8 +4,10 @@
     "asOf": "2026",
     "sources": [
       "Membership: the party's own list of its members of the European Parliament",
-      "Ids and names: data.europarl.europa.eu/api/v2/meps"
-    ]
+      "Ids and names: data.europarl.europa.eu/api/v2/meps",
+      "Mandates: the parliamentary memberships on each person at data.europarl.europa.eu/api/v2/meps/{id}"
+    ],
+    "mandatesFetched": "2026-09-14"
   },
   "delegations": [
     {
@@ -17,11 +19,71 @@
       "site": "https://volteuropa.org/",
       "note": "Volt's members sit within the Greens/European Free Alliance group.",
       "members": [
-        { "id": 197439, "name": "Damian Boeselager", "country": "DE" },
-        { "id": 256964, "name": "Nela Riehl", "country": "DE" },
-        { "id": 256965, "name": "Kai Tegethoff", "country": "DE" },
-        { "id": 256978, "name": "Reinier van Lanschot", "country": "NL" },
-        { "id": 256990, "name": "Anna Strolenberg", "country": "NL" }
+        {
+          "id": 197439,
+          "name": "Damian Boeselager",
+          "country": "DE",
+          "mandates": [
+            {
+              "term": 9,
+              "from": "2019-07-02",
+              "until": "2024-07-15"
+            },
+            {
+              "term": 10,
+              "from": "2024-07-16",
+              "until": null
+            }
+          ]
+        },
+        {
+          "id": 256964,
+          "name": "Nela Riehl",
+          "country": "DE",
+          "mandates": [
+            {
+              "term": 10,
+              "from": "2024-07-16",
+              "until": null
+            }
+          ]
+        },
+        {
+          "id": 256965,
+          "name": "Kai Tegethoff",
+          "country": "DE",
+          "mandates": [
+            {
+              "term": 10,
+              "from": "2024-07-16",
+              "until": null
+            }
+          ]
+        },
+        {
+          "id": 256978,
+          "name": "Reinier van Lanschot",
+          "country": "NL",
+          "mandates": [
+            {
+              "term": 10,
+              "from": "2024-07-16",
+              "until": null
+            }
+          ]
+        },
+        {
+          "id": 256990,
+          "name": "Anna Strolenberg",
+          "country": "NL",
+          "mandates": [
+            {
+              "term": 10,
+              "from": "2024-07-16",
+              "until": null
+            }
+          ]
+        }
       ]
     }
   ]
