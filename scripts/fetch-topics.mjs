@@ -152,6 +152,12 @@ for (const name of files) {
   if (!code) { noCommittee += 1; continue; }
 
   record.committee = { code: code, label: committeeName(code), short: committeeShort(code) };
+  // Something to read while it runs. A pass that prints only when it finishes
+  // is a pass nobody can tell from a hung one, which is exactly how an hour
+  // went by with nothing to say about it.
+  if (labelled % 25 === 0) {
+    console.log(`  ${labelled} labelled so far (${record.date}, ${code})`);
+  }
   tally.set(code, (tally.get(code) || 0) + 1);
   labelled += 1;
   if (!DRY) await writeFile(file, JSON.stringify(record, null, 2) + '\n', 'utf8');
