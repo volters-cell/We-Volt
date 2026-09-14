@@ -745,6 +745,7 @@
           '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
         '</span>' +
         '<span class="card-title">' + esc(item.title) + '</span>' +
+        committeeChip(item) +
         '<span class="card-foot">' +
           '<span class="result result-' + esc(item.result) + '">' +
             esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
@@ -754,6 +755,30 @@
                 ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '')) +
         '</span>' +
       '</button></li>';
+  }
+
+  /* The committee that wrote the text, as a chip under the title.
+
+     This is the Parliament's own answer to "what is this about": it chose the
+     committee, and Environment or Civil Liberties or Budgets tells a reader
+     more in two words than the title's first line does. The subject vocabulary
+     the Parliament tags documents with — EuroVoc — would say "Gender equality"
+     instead, and it publishes the tags but not the words for them, so this is
+     what can be shown without taking data from somewhere it did not come from.
+
+     A text with no committee simply has no chip. Nothing is guessed. */
+  function committeeChip(item) {
+    const committee = item.committee;
+    if (!committee || !committee.code) return '';
+    const full = committee.label || committee.code;
+    const short = committee.short || full;
+    return '<span class="card-chips">' +
+      '<span class="chip" title="' + esc('Committee on ' + full) + '">' +
+        esc(short) + '</span>' +
+      (item.rollCalls > 1
+        ? '<span class="chip chip-quiet">' + item.rollCalls + ' roll-calls</span>'
+        : '') +
+      '</span>';
   }
 
   function shortBody(body) {

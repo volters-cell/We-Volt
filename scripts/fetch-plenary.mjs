@@ -33,9 +33,10 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers, meetingDate,
-  documentTitle, isRollCall, ballotsOf, tallyOf
+  documentTitle, documentCommittee, isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
 import { sourcesFor, procedureUrl, isPartOfAText, STAMPED } from './lib/ep-sources.mjs';
+import { committeeName, committeeShort } from './lib/committees.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -267,7 +268,7 @@ export async function sittingDates(from, until) {
 
 /* ------------------------------------------------------- a sitting's votes */
 
-export function buildRecord(decision, item, members, date, subject, code, rollCalls) {
+export function buildRecord(decision, item, members, date, subject, code, rollCalls, committee) {
   const ballots = ballotsOf(decision);
   const totals = tallyOf(decision);
 
@@ -329,6 +330,13 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
         `${totals.against} against, ${totals.abstain} abstained.` +
         (stated ? '' : ' Result derived from the totals.')
     },
+    // The committee that wrote the text, where the document names one. Which
+    // committee is the Parliament's own record; the readable name is a caption,
+    // because the portal's label for ENVI is "ENVI" and it publishes no
+    // vocabulary that would name the subject instead.
+    committee: committee
+      ? { code: committee, label: committeeName(committee), short: committeeShort(committee) }
+      : null,
     // How many times the Parliament went to a roll-call on this text that day.
     // One record stands for all of them, and a text voted on fourteen times is
     // a different thing from one voted on once.
@@ -473,6 +481,14 @@ export async function sittingVotes(date, everyRollCall) {
     vote.subject = plainSubject(await documentTitle(vote.code));
   }
 
+  /* The committee is on the same document as the subject. Filled here for new
+     imports; scripts/fetch-topics.mjs does the same for records already on
+     file, so a whole term need not be read again to gain one field. */
+  for (const vote of votes) {
+    if (!vote.code) continue;
+    vote.committee = await documentCommittee(vote.code);
+  }
+
   return votes;
 }
 
@@ -551,7 +567,7 @@ async function main() {
     for (const vote of votes) {
       collapsed += Number(vote.rollCalls) || 1;
       const record = buildRecord(vote.decision, vote.item, members, date,
-        vote.subject, vote.code, vote.rollCalls);
+        vote.subject, vote.code, vote.rollCalls, vote.committee);
       const counted = record._counted;
       delete record._counted;
 

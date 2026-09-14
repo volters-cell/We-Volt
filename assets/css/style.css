@@ -2455,6 +2455,21 @@ button.permalink {
 .card-top time { font-variant-numeric: tabular-nums; }
 .card-title { font-weight: 600; font-size: .95rem; line-height: 1.3; }
 .decision-card.is-current .card-title { color: var(--eu-blue); }
+/* The committee that wrote the text, under the title. It reuses .chip, which
+   this interface already uses for a labelled scrap of fact, so a chip means
+   the same thing wherever it appears. Smaller here, because a card is a list
+   item and the title has to stay the thing the eye lands on. */
+.card-chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+.card-chips .chip {
+  max-width: 100%;
+  padding: .1rem .45rem;
+  font-size: .7rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-chips .chip-quiet { background: none; border-color: transparent; color: var(--ink-faint); }
 .card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; font-size: .74rem; color: var(--ink-faint); }
 .card-rule { color: var(--ink-faint); }
 
@@ -2462,6 +2477,7 @@ button.permalink {
   :root:not([data-theme="light"]) .decision-card.is-current .card-title { color: var(--ink); }
 }
 :root[data-theme="dark"] .decision-card.is-current .card-title { color: var(--ink); }
+
 
 /* The institution is the first thing to know about a decision, so it is the
    one place in the interface where colour is used for identity, not state. */

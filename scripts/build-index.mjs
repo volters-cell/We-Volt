@@ -55,6 +55,9 @@ for (const name of files) {
     body: decision.body,
     bodyLabel: decision.bodyLabel,
     voteRuleLabel: decision.voteRuleLabel || '',
+    // The chip on the card: the committee that wrote the text.
+    committee: decision.committee || null,
+    rollCalls: decision.rollCalls || 1,
     result: (decision.outcome && decision.outcome.result) || 'recorded',
     status: decision.status,
     mepCount: Array.isArray(decision.ballots)

@@ -24,6 +24,8 @@
  * and a link back to the file it came from.
  */
 
+import { committeeOf } from './committees.mjs';
+
 const BASE = 'https://data.europarl.europa.eu/api/v2';
 const AGENT = 'eu-tracker/0.1 (open data import; https://github.com/volters-cell/We-Volt)';
 
@@ -290,6 +292,26 @@ export async function documentTitle(reference) {
   }
   documentTitles.set(pathname, title);
   return title;
+}
+
+/* Which committee wrote a report, cached like the titles beside it. */
+const documentCommittees = new Map();
+
+export async function documentCommittee(reference) {
+  const pathname = documentPath(reference);
+  if (!pathname) return null;
+  if (documentCommittees.has(pathname)) return documentCommittees.get(pathname);
+
+  let code = null;
+  try {
+    const answer = await get(`/documents/${pathname}`, {});
+    const row = (answer && answer.data && answer.data[0]) || null;
+    code = row ? committeeOf(row.creator) : null;
+  } catch (error) {
+    code = null;
+  }
+  documentCommittees.set(pathname, code);
+  return code;
 }
 
 export async function fetchMembers(term, options) {
