@@ -113,6 +113,7 @@ export function english(value) {
    request at a time, a quarter-second apart, is well inside what it tolerates
    and still walks a whole term in a couple of minutes. */
 const PACE = 250;
+const REQUEST_TIMEOUT = 45000;
 let lastCall = 0;
 
 function sleep(ms) {
@@ -138,7 +139,13 @@ export async function get(pathname, params) {
       await waitTurn();
       const response = await fetch(url, {
         headers: { accept: 'application/ld+json', 'user-agent': AGENT },
-        redirect: 'follow'
+        redirect: 'follow',
+        // A request that hangs is worse than one that fails. The portal's
+        // gateway can take minutes to give up on a slow endpoint, and five
+        // attempts at that is a fifth of an hour spent on one sitting — which
+        // is how a backfill of a whole year died on 5 October 2020. Give up
+        // early and let the retry decide.
+        signal: AbortSignal.timeout(REQUEST_TIMEOUT)
       });
       if (response.status === 404) return null; // nothing recorded there
       if (response.status === 429 || response.status >= 500) {

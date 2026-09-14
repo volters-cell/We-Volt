@@ -323,7 +323,22 @@ export async function sittingVotes(date) {
   const decisions = await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500);
   if (!decisions.length) return null;
 
-  const items = await getAll(`/meetings/MTG-PL-${date}/vote-results`, {}, 500);
+  /* The vote-result items are worth having and not worth losing a year over.
+     They carry a subject where the decision's label carries a filing code, but
+     the decision carries the ballots, the totals and the outcome — everything
+     a record is — and the subject has a second route through the report. So a
+     sitting whose items the portal will not serve is imported without them.
+
+     This tolerance is for the items alone. The decisions above are fetched
+     without it, because a sitting that silently imported as empty would, on a
+     re-read, look like a day the Parliament did not vote. */
+  let items = [];
+  try {
+    items = await getAll(`/meetings/MTG-PL-${date}/vote-results`, {}, 500);
+  } catch (error) {
+    console.warn(`${date}: the portal would not serve the vote items ` +
+      `(${error.message}). Titles for this sitting come from the reports instead.`);
+  }
   const byId = new Map();
   items.forEach(function (item) { byId.set(String(item.activity_id || lastSegment(item.id)), item); });
 
