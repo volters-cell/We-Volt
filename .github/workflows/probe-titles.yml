@@ -1,0 +1,24 @@
+# Why half the ninth term reads as a filing reference.
+#
+# Its votes are titled "A9-0002/2020 - Geert Bourgeois - Consent procedure
+# 12/02/2020 12:09:01.000" — the report, the rapporteur, the kind of vote and
+# the second it was taken, and not what was decided. This asks where the
+# subject could come from instead.
+#
+# Writes nothing.
+
+name: Probe titles
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/probe-titles.mjs
