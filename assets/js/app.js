@@ -2839,11 +2839,22 @@
       });
       manyBodies = Object.keys(counts).filter(function (key) { return counts[key]; }).length > 1;
 
-      // Two numbers, both facts: the votes held, and the seats in the chamber.
+      /* Three facts, and every one of them read from the records rather than
+         written here. The date used to say "since 16 July 2024", which was true
+         when this site held one Parliament and stopped being true the day it
+         gained another — 2,637 votes of the previous term sat behind a line
+         claiming the record began in 2024. */
       const seats = states.reduce(function (sum, item) { return sum + item.seats; }, 0);
+      const terms = (index.terms && index.terms.length ? index.terms : null);
+      const held = terms
+        ? terms.reduce(function (sum, row) { return sum + (row.votes || 0); }, 0)
+        : index.decisions.length;
+      const began = terms
+        ? terms.map(function (row) { return row.from; }).filter(Boolean).sort()[0]
+        : (index.decisions[index.decisions.length - 1] || {}).date;
       document.getElementById('intro-stats').textContent =
-        index.decisions.length.toLocaleString('en-GB') + ' votes · ' + seats + ' seats · ' +
-        'since 16 July 2024';
+        held.toLocaleString('en-GB') + ' votes · ' + seats + ' seats · ' +
+        (began ? 'since ' + Data.formatDate(began) : '');
 
       index.decisions.forEach(function (item) {
         if (item.sourceId) bySourceId[item.sourceId] = item;
