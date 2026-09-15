@@ -69,6 +69,12 @@ jobs:
             ${{ inputs.since && format('--since {0}', inputs.since) || '' }} \
             ${{ inputs.all && '--all' || '' }}
 
+      # What each new vote is about, read from its own title. Cheap, offline,
+      # and it has to run before the index, which carries the topics to the
+      # cards. Without it a newly imported vote arrives with no chip.
+      - name: Say what the new votes are about
+        run: node scripts/tag-topics.mjs
+
       - name: Rebuild the index
         run: node scripts/build-index.mjs
 

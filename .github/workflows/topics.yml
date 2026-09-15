@@ -51,6 +51,7 @@ jobs:
 
           node scripts/fetch-topics.mjs --from "${{ inputs.from }}" $until $again
 
+          node scripts/tag-topics.mjs
           node scripts/build-index.mjs
           node tests/import.test.mjs
           node scripts/validate-data.mjs

@@ -112,6 +112,7 @@ jobs:
                 --term "${{ inputs.term }}" \
                 --from "$from" --since "$from" --until "$until"
 
+              node scripts/tag-topics.mjs
               node scripts/build-index.mjs
               node scripts/build-members.mjs
               node tests/import.test.mjs
