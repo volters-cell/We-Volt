@@ -83,7 +83,7 @@ const THEMES = [
   ['Defence and security', /\bdefence\b|\bdéfense\b|\bmilitary\b|\bmilitaire\b|\bsecurity and defence\b|\bNATO\b|\bOTAN\b|\barms\b|\bweapon\w*|\bammunition\b|\bpeace facility\b/i],
   ['Justice and policing', /\bjustice\b|\bjudicial cooperation\b|\beuropol\b|\beurojust\b|\bterroris\w*|\borganised crime\b|\bmoney laundering\b|\bblanchiment\b|\bpolice\b|\btrafficking\b/i],
   ['Trade', /\btrade\b|\bcommerce\b|\bcommercial\b|\btariff\w*|\bcustoms\b|\bdouane\w*|\bfree trade\b|\blibre-échange\b|\banti-dumping\b|\binvestment protection\b|\bpartnership agreement\b/i],
-  ['Economy and money', /\beconomic\b|\b(?:é|e)conomique\b|\bmonetary\b|\bmon(?:é|e)taire\b|\bbanking\b|\bbancaire\b|\bcentral bank\b|\bbanque centrale\b|\beuro\b|\bfinancial stability\b|\bcapital markets\b|\binflation\b|\bsemester\b/i],
+  ['Economy', /\beconomic\b|\b(?:é|e)conomique\b|\bmonetary\b|\bmon(?:é|e)taire\b|\bbanking\b|\bbancaire\b|\bcentral bank\b|\bbanque centrale\b|\beuro\b|\bfinancial stability\b|\bcapital markets\b|\binflation\b|\bsemester\b/i],
   ['Tax', /\btaxation\b|\bfiscal\w*|\btax\b|\bVAT\b|\bTVA\b|\bimpôt\w*/i],
   ['The EU budget', /\bdischarge\b|\bdécharge\b|\bbudget\w*|\bbudgétaire\b|\bmobilisation of the\b|\bmobilisation du fonds\b|\bglobalisation adjustment fund\b|\bown resources\b|\bressources propres\b|\bmultiannual financial framework\b|\bcadre financier pluriannuel\b|\bCFP\b|\b(?:é|e)tat pr(?:é|e)visionnel des recettes\b|\bplan de relance\b|\brecovery plan\b|\bbudget rectificatif\b/i],
   ['Jobs and workers', /\bemployment\b|\bemploi\b|\bworker\w*|\btravailleurs?\b|\blabour\b|\bsocial fund\b|\bworking conditions\b|\bminimum wage\b|\bplatform work\b/i],
@@ -105,13 +105,32 @@ function firstMatch(table, title) {
 
 /* At most one place and one theme, place first: "Ukraine" before "Defence and
    security" is how a reader would say what the vote was about. */
+/* A text about the economy and about the budget at once is about both, and
+   naming only the first of them reads as a choice the title did not make. So
+   the two are joined rather than ranked: "Economy and Budget". No other pair
+   is treated this way, because no other pair runs together so often — a
+   recovery plan, an amending budget, the monetary side of a financial
+   framework are all one subject in the Parliament's own hands. */
+function economyAndBudget(text) {
+  // A discharge is a vote on whether a body spent its money properly, and the
+  // body's own name is not the subject: "Discharge 2018: European Banking
+  // Authority" is budget, not economy, however many economic words its title
+  // happens to contain. Every joined label this rule produced at first was one
+  // of these.
+  if (/\bdischarge\b|\bd(?:é|e)charge\b/i.test(text)) return false;
+
+  const economy = THEMES.find(function (row) { return row[0] === 'Economy'; });
+  const budget = THEMES.find(function (row) { return row[0] === 'The EU budget'; });
+  return economy && budget && economy[1].test(text) && budget[1].test(text);
+}
+
 export function topicsFor(title) {
   const text = String(title || '');
   if (!text.trim()) return [];
   const found = [];
   const place = firstMatch(PLACES, text);
   if (place) found.push(place);
-  const theme = firstMatch(THEMES, text);
+  const theme = economyAndBudget(text) ? 'Economy and Budget' : firstMatch(THEMES, text);
   if (theme && theme !== place) found.push(theme);
   return found;
 }
