@@ -3408,3 +3408,122 @@ button,
 
 
 
+
+
+/* ------------------------------------------------------------- the filters */
+
+/* Two questions a reader actually has about a list of votes: when, and what
+   about. They sit beside the search box because they narrow the same list. */
+.search-tools { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .5rem 0 0; }
+.filter-open, .filter-clear {
+  font: inherit;
+  font-size: .82rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.filter-open:hover, .filter-clear:hover { color: var(--eu-ink); border-color: var(--eu-blue); }
+.filter-open:focus-visible, .filter-clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.filter-count {
+  display: inline-block;
+  min-width: 1.15rem;
+  margin-left: .4rem;
+  padding: 0 .3rem;
+  border-radius: 999px;
+  background: var(--eu-blue);
+  color: #fff;
+  font-size: .72rem;
+  text-align: center;
+}
+.filter-clear { border-style: dashed; }
+
+.filter-panel {
+  width: min(34rem, calc(100vw - 2rem));
+  max-height: min(42rem, calc(100vh - 3rem));
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.filter-panel::backdrop { background: rgba(10, 14, 30, .45); }
+.filter-panel form { display: flex; flex-direction: column; max-height: inherit; }
+.filter-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 1rem 1.1rem .6rem;
+}
+.filter-head h2 { margin: 0; font-size: 1.1rem; }
+.filter-close {
+  font: inherit; font-size: 1.3rem; line-height: 1;
+  border: 0; background: none; color: var(--ink-faint); cursor: pointer; padding: .2rem .4rem;
+}
+.filter-close:hover { color: var(--ink); }
+
+.filter-section { padding: .6rem 1.1rem; border-top: 1px solid var(--line); overflow: auto; }
+.filter-section h3 { margin: 0 0 .5rem; font-size: .88rem; }
+.filter-dates { display: flex; flex-wrap: wrap; gap: .8rem; }
+.filter-dates p { flex: 1 1 11rem; margin: 0; }
+.filter-dates label { display: block; font-size: .78rem; color: var(--ink-faint); margin-bottom: .2rem; }
+.filter-dates input,
+#filter-topic-search {
+  width: 100%;
+  font: inherit;
+  font-size: .9rem;
+  padding: .45rem .6rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.filter-presets { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+.filter-presets button {
+  font: inherit; font-size: .78rem;
+  padding: .28rem .6rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-sunken);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.filter-presets button:hover { color: var(--eu-ink); border-color: var(--eu-blue); }
+
+.filter-topics { margin-top: .5rem; max-height: 16rem; overflow: auto; }
+.filter-topic {
+  display: flex; align-items: center; gap: .55rem;
+  padding: .3rem .2rem;
+  font-size: .88rem;
+  cursor: pointer;
+}
+.filter-topic:hover { color: var(--eu-ink); }
+.filter-topic-name { flex: 1 1 auto; }
+.filter-topic-count { color: var(--ink-faint); font-variant-numeric: tabular-nums; font-size: .82rem; }
+.filter-empty { color: var(--ink-faint); font-size: .85rem; margin: .4rem 0; }
+
+.filter-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .8rem 1.1rem 1rem; border-top: 1px solid var(--line);
+}
+.filter-reset {
+  font: inherit; font-size: .84rem;
+  border: 0; background: none; color: var(--ink-faint);
+  cursor: pointer; padding: .3rem 0; text-decoration: underline;
+}
+.filter-reset:hover { color: var(--ink); }
+.filter-apply {
+  font: inherit; font-size: .9rem; font-weight: 600;
+  padding: .5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--eu-blue);
+  background: var(--eu-blue);
+  color: #fff;
+  cursor: pointer;
+}
+.filter-apply:hover { background: var(--eu-ink); border-color: var(--eu-ink); }
+
+@media (max-width: 40rem) {
+  .filter-panel { width: calc(100vw - 1.2rem); }
+  .filter-topics { max-height: 12rem; }
+}

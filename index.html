@@ -207,6 +207,52 @@
           <button type="button" id="search-clear" hidden aria-label="Clear the search">Clear</button>
         </div>
 
+        <div class="search-tools">
+          <button type="button" id="filter-open" class="filter-open" aria-haspopup="dialog">
+            Filter results<span id="filter-count" class="filter-count" hidden></span>
+          </button>
+          <button type="button" id="filter-clear" class="filter-clear" hidden>Clear filters</button>
+        </div>
+
+        <!-- The filters a reader actually reaches for: when it happened, and
+             what it was about. Both narrow the same list the search narrows,
+             so they compose rather than compete. -->
+        <dialog id="filter-panel" class="filter-panel" aria-labelledby="filter-title">
+          <form method="dialog" id="filter-form">
+            <header class="filter-head">
+              <h2 id="filter-title">Filter results</h2>
+              <button type="button" id="filter-close" class="filter-close" aria-label="Close">&times;</button>
+            </header>
+
+            <section class="filter-section">
+              <h3>Date</h3>
+              <div class="filter-dates">
+                <p><label for="filter-from">From</label>
+                   <input type="date" id="filter-from"></p>
+                <p><label for="filter-until">Until</label>
+                   <input type="date" id="filter-until"></p>
+              </div>
+              <div class="filter-presets" role="group" aria-label="Quick date ranges">
+                <button type="button" data-range="term">Current term</button>
+                <button type="button" data-range="year">This year</button>
+                <button type="button" data-range="30">Last 30 days</button>
+              </div>
+            </section>
+
+            <section class="filter-section">
+              <h3>Topics</h3>
+              <label class="visually-hidden" for="filter-topic-search">Filter topics</label>
+              <input type="search" id="filter-topic-search" autocomplete="off" placeholder="Filter topics">
+              <div id="filter-topics" class="filter-topics"></div>
+            </section>
+
+            <footer class="filter-foot">
+              <button type="button" id="filter-reset" class="filter-reset">Clear all</button>
+              <button type="submit" id="filter-apply" class="filter-apply">Apply filters</button>
+            </footer>
+          </form>
+        </dialog>
+
         <div class="tracker-filters" role="group" aria-label="Filter by institution">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="parliament" aria-pressed="false">Parliament</button>

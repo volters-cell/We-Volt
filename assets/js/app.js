@@ -11,6 +11,8 @@
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
     country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null,
+    // The filter panel's two questions: when, and about what.
+    from: '', until: '', topics: [],
     // The neighbour whose record is open, if any. It is not `country`: a
     // neighbour has no seats and never narrows the roll-call.
     outside: null
@@ -163,6 +165,24 @@
     return state.query.split(/\s+/).every(function (word) {
       return wordTest(word).test(item.keywords);
     });
+  }
+
+  /* The filter panel, applied to the same list the search narrows, so the two
+     compose: a search inside a date range inside a set of topics.
+
+     A vote carries at most two topics, so "any of the chosen" is the only
+     sensible reading of several — asking for votes that are about both Ukraine
+     and Migration would answer with almost nothing and look broken. */
+  function withinFilters(item) {
+    if (state.from && item.date < state.from) return false;
+    if (state.until && item.date > state.until) return false;
+    if (!state.topics.length) return true;
+    const carried = item.topics || [];
+    return state.topics.some(function (topic) { return carried.indexOf(topic) !== -1; });
+  }
+
+  function filtersOn() {
+    return Boolean(state.from || state.until || state.topics.length);
   }
 
   /* Members are searched across the whole term, not only inside whatever vote
@@ -527,7 +547,8 @@
     }
 
     const items = index.decisions.filter(function (item) {
-      return (state.filter === 'all' || item.body === state.filter) && matches(item);
+      return (state.filter === 'all' || item.body === state.filter) &&
+        matches(item) && withinFilters(item);
     });
 
     if (state.query) {
@@ -807,6 +828,156 @@
 
   function shortBody(body) {
     return { parliament: 'Parliament', council: 'Council', commission: 'Commission' }[body] || body;
+  }
+
+/* ------------------------------------------------------------- the filters */
+
+  /* How many votes each topic holds, counted over everything currently loaded
+     — which grows when a reader opens an earlier Parliament, so the counts
+     follow what is actually searchable rather than promising votes that are
+     not there yet. */
+  function topicCounts() {
+    const counts = new Map();
+    index.decisions.forEach(function (item) {
+      (item.topics || []).forEach(function (topic) {
+        counts.set(topic, (counts.get(topic) || 0) + 1);
+      });
+    });
+    return [...counts.entries()].sort(function (a, b) {
+      return b[1] - a[1] || a[0].localeCompare(b[0]);
+    });
+  }
+
+  /* The panel edits its own copy and writes nothing until Apply is pressed:
+     ticking six boxes should not redraw the list six times underneath. */
+  let draft = { from: '', until: '', topics: [] };
+
+  function paintTopics() {
+    const box = document.getElementById('filter-topics');
+    if (!box) return;
+    const needle = String((document.getElementById('filter-topic-search') || {}).value || '')
+      .trim().toLowerCase();
+    const rows = topicCounts().filter(function (row) {
+      return !needle || row[0].toLowerCase().indexOf(needle) !== -1;
+    });
+    box.innerHTML = rows.length ? rows.map(function (row) {
+      const id = 'topic-' + row[0].replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+      return '<label class="filter-topic" for="' + id + '">' +
+        '<input type="checkbox" id="' + id + '" value="' + esc(row[0]) + '"' +
+        (draft.topics.indexOf(row[0]) !== -1 ? ' checked' : '') + '>' +
+        '<span class="filter-topic-name">' + esc(row[0]) + '</span>' +
+        '<span class="filter-topic-count">' + row[1] + '</span>' +
+        '</label>';
+    }).join('') : '<p class="filter-empty">No topic matches that.</p>';
+  }
+
+  function openFilters() {
+    const panel = document.getElementById('filter-panel');
+    if (!panel) return;
+    draft = { from: state.from, until: state.until, topics: state.topics.slice() };
+    document.getElementById('filter-from').value = draft.from;
+    document.getElementById('filter-until').value = draft.until;
+    const search = document.getElementById('filter-topic-search');
+    if (search) search.value = '';
+    paintTopics();
+    if (typeof panel.showModal === 'function') panel.showModal();
+    else panel.setAttribute('open', '');
+  }
+
+  function closeFilters() {
+    const panel = document.getElementById('filter-panel');
+    if (!panel) return;
+    if (typeof panel.close === 'function' && panel.open) panel.close();
+    else panel.removeAttribute('open');
+  }
+
+  function applyFilters() {
+    state.from = document.getElementById('filter-from').value || '';
+    state.until = document.getElementById('filter-until').value || '';
+    state.topics = draft.topics.slice();
+    showFilterCount();
+    closeFilters();
+    renderFeed();
+  }
+
+  function clearFilters() {
+    state.from = '';
+    state.until = '';
+    state.topics = [];
+    showFilterCount();
+    renderFeed();
+  }
+
+  function showFilterCount() {
+    const badge = document.getElementById('filter-count');
+    const clear = document.getElementById('filter-clear');
+    const many = state.topics.length + (state.from || state.until ? 1 : 0);
+    if (badge) {
+      badge.hidden = !many;
+      badge.textContent = many;
+    }
+    if (clear) clear.hidden = !filtersOn();
+  }
+
+  /* The quick ranges, as dates rather than as a mode, so they land in the two
+     boxes a reader can then adjust. */
+  function presetRange(which) {
+    const today = new Date();
+    const iso = function (date) { return date.toISOString().slice(0, 10); };
+    if (which === 'term') {
+      const term = TERMS && TERMS[0];
+      return { from: (term && term.from) || '2024-07-16', until: iso(today) };
+    }
+    if (which === 'year') {
+      return { from: today.getFullYear() + '-01-01', until: iso(today) };
+    }
+    return { from: iso(new Date(today.getTime() - 30 * 86400000)), until: iso(today) };
+  }
+
+  function wireFilters() {
+    const open = document.getElementById('filter-open');
+    if (!open) return;
+    open.addEventListener('click', openFilters);
+
+    const close = document.getElementById('filter-close');
+    if (close) close.addEventListener('click', closeFilters);
+
+    const clear = document.getElementById('filter-clear');
+    if (clear) clear.addEventListener('click', clearFilters);
+
+    const reset = document.getElementById('filter-reset');
+    if (reset) reset.addEventListener('click', function () {
+      draft = { from: '', until: '', topics: [] };
+      document.getElementById('filter-from').value = '';
+      document.getElementById('filter-until').value = '';
+      paintTopics();
+    });
+
+    const form = document.getElementById('filter-form');
+    if (form) form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      applyFilters();
+    });
+
+    const search = document.getElementById('filter-topic-search');
+    if (search) search.addEventListener('input', paintTopics);
+
+    const topics = document.getElementById('filter-topics');
+    if (topics) topics.addEventListener('change', function (event) {
+      const box = event.target;
+      if (!box || box.type !== 'checkbox') return;
+      const at = draft.topics.indexOf(box.value);
+      if (box.checked && at === -1) draft.topics.push(box.value);
+      if (!box.checked && at !== -1) draft.topics.splice(at, 1);
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-range]'), function (button) {
+      button.addEventListener('click', function () {
+        const range = presetRange(button.getAttribute('data-range'));
+        document.getElementById('filter-from').value = range.from;
+        document.getElementById('filter-until').value = range.until;
+      });
+    });
   }
 
   function setFilter(filter) {
@@ -2637,6 +2808,8 @@
           setFilter(button.getAttribute('data-filter'));
         });
       });
+
+      wireFilters();
 
       dom['search-input'].addEventListener('input', function (event) {
         setQuery(event.target.value);
