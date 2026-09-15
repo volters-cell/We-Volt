@@ -2949,7 +2949,13 @@
       /* Typing already searches. The button is for the reader who has typed and
          is waiting to be asked — and on a phone it takes the keyboard away,
          which is the difference between seeing two results and seeing none. */
-      dom['search-go'].addEventListener('click', function () {
+      /* Guarded, because everything below runs inside the try that shows "The
+         votes could not be loaded". A control that is absent — an older
+         index.html served from a cache beside a newer script, say — used to
+         throw here and take the whole site down with a message about the
+         records, which were fine. A missing button should cost its own
+         button. */
+      if (dom['search-go']) dom['search-go'].addEventListener('click', function () {
         setQuery(dom['search-input'].value);
         dom['search-input'].blur();
         const list = dom['session-list'];

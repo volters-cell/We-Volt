@@ -3206,28 +3206,47 @@ input:focus-visible {
   color: var(--ink-faint);
 }
 
-/* The search button sits in the row beside the box, not on top of it. What
-   was here before was the word "Clear" inside a 28px circle pinned over the
-   native clear cross that input[type=search] already draws — two controls in
-   one place, one of them unreadable. The cross still clears the field; this
-   says what the box is for. */
-/* Scoped to the row, because a bare .search button rule higher up carries
-   more weight than a lone class and would otherwise win. */
+/* The search button sits in the row beside the box, not on top of it. What was
+   here before was the word "Clear" inside a 28px circle pinned over the native
+   clear cross that input[type=search] already draws — two controls in one
+   place, one of them unreadable.
+
+   It is sized from the box rather than from itself: the same border radius,
+   the same vertical padding, so the two read as one control split in two
+   rather than as a button that happened to land nearby. Scoped to .search
+   because a bare ".search button" rule higher in the file outweighs a lone
+   class and would otherwise win. */
 .search .search-go {
   flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
   margin-left: .5rem;
+  align-self: stretch;
   font: inherit;
   font-size: .9rem;
   font-weight: 600;
-  padding: .55rem 1.1rem;
+  letter-spacing: .01em;
+  padding: 0 1.05rem;
   border-radius: var(--radius, 8px);
   border: 1px solid var(--eu-blue);
   background: var(--eu-blue);
   color: #fff;
   cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease;
 }
+.search .search-go svg { flex: none; opacity: .9; }
 .search .search-go:hover { background: var(--eu-ink); border-color: var(--eu-ink); }
+.search .search-go:active { transform: translateY(0.5px); }
 .search .search-go:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* On a narrow screen the word goes and the glass stays, so the box keeps the
+   width it needs to show a placeholder worth reading. */
+@media (max-width: 26rem) {
+  .search .search-go { padding: 0 .75rem; }
+  .search .search-go span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
 
 
 .search-icon {

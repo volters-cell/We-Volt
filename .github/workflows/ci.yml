@@ -14,6 +14,6 @@ jobs:
         with:
           node-version: "22"
       - name: Import logic
-        run: node tests/ingest.test.mjs
+        run: node tests/import.test.mjs
       - name: Records and reference data
         run: node scripts/validate-data.mjs
