@@ -14,12 +14,19 @@
     "reference": "2025/2004",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2004"
   },
+  "document": "A10-0101/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 282 in favour, 340 against, 26 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "DEVE",
+    "label": "Development",
+    "short": "Development"
+  },
+  "rollCalls": 19,
   "ballots": [
     [
       840,

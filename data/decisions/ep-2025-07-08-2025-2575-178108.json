@@ -14,12 +14,19 @@
     "reference": "2025/2575",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2575"
   },
+  "document": "B10-0322/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 278 in favour, 352 against, 21 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "PETI",
+    "label": "Petitions",
+    "short": "Petitions"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

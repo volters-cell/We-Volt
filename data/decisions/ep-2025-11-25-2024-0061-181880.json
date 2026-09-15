@@ -14,12 +14,19 @@
     "reference": "2024/0061",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0061"
   },
+  "document": "A10-0084/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 87 in favour, 542 against, 15 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ITRE",
+    "label": "Industry, Research and Energy",
+    "short": "Industry and Energy"
+  },
+  "rollCalls": 3,
   "ballots": [
     [
       840,

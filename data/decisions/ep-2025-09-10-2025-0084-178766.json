@@ -14,12 +14,19 @@
     "reference": "2025/0084",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0084"
   },
+  "document": "A10-0129/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 151 in favour, 495 against, 19 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "REGI",
+    "label": "Regional Development",
+    "short": "Regional Development"
+  },
+  "rollCalls": 3,
   "ballots": [
     [
       840,
