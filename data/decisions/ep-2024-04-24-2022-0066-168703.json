@@ -14,12 +14,19 @@
     "reference": "2022/0066",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0066"
   },
+  "document": "A9-0234/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 90 in favour, 518 against, 15 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "LIBE",
+    "label": "Civil Liberties, Justice and Home Affairs",
+    "short": "Civil Liberties"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,

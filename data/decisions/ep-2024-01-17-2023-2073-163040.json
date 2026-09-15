@@ -14,12 +14,19 @@
     "reference": "2023/2073",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2073"
   },
+  "document": "A9-0441/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 366 in favour, 41 against, 220 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "DEVE",
+    "label": "Development",
+    "short": "Development"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

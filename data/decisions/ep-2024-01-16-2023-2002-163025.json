@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Implementation of the Erasmus+ programme 2021-2027",
+  "title": "Exécution du programme Erasmus+ 2021-2027 - Implementation of the Erasmus+ programme 2021-2027 - Durchführung des Programms Erasmus+ 2021-2027",
   "subtitle": "A9-0413/2023 - Milan Zver - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-01-16",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/2002",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2002"
   },
+  "document": "A9-0413/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 62 against, 61 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
+  },
+  "rollCalls": 4,
   "ballots": [
     [
       840,

@@ -14,12 +14,19 @@
     "reference": "2023/2028",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2028"
   },
+  "document": "A9-0376/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 391 in favour, 130 against, 20 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "LIBE",
+    "label": "Civil Liberties, Justice and Home Affairs",
+    "short": "Civil Liberties"
+  },
+  "rollCalls": 28,
   "ballots": [
     [
       840,

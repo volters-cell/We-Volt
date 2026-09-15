@@ -14,12 +14,19 @@
     "reference": "2024/0003",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0003"
   },
+  "document": "A9-0173/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 547 in favour, 33 against, 49 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "BUDG",
+    "label": "Budgets",
+    "short": "Budgets"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

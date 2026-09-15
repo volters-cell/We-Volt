@@ -14,12 +14,19 @@
     "reference": "2023/2001",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2001"
   },
+  "document": "A9-0400/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 391 in favour, 157 against, 83 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

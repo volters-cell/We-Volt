@@ -14,12 +14,19 @@
     "reference": "2023/2112",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2112"
   },
+  "document": "A9-0402/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 165 against, 35 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

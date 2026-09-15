@@ -14,12 +14,19 @@
     "reference": "2024/0016",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0016"
   },
+  "document": "A9-0161/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 525 in favour, 32 against, 21 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ITRE",
+    "label": "Industry, Research and Energy",
+    "short": "Industry and Energy"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

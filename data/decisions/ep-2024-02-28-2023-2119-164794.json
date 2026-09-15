@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Implementation of the common security and defence policy – annual report 2023",
+  "title": "Mise en œuvre de la politique de sécurité et de défense commune - rapport annuel 2023 - Implementation of the common security and defence policy – annual report 2023 - Umsetzung der Gemeinsamen Sicherheits- und Verteidigungspolitik – Jahresbericht 2023",
   "subtitle": "A9-0403/2023 - Sven Mikser - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-02-28",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/2119",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2119"
   },
+  "document": "A9-0403/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 350 in favour, 91 against, 96 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "AFET",
+    "label": "Foreign Affairs",
+    "short": "Foreign Affairs"
+  },
+  "rollCalls": 49,
   "ballots": [
     [
       840,

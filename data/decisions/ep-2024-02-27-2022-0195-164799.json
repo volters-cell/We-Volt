@@ -14,12 +14,19 @@
     "reference": "2022/0195",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0195"
   },
+  "document": "A9-0220/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 201 in favour, 414 against, 12 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ENVI",
+    "label": "Environment, Public Health and Food Safety",
+    "short": "Environment"
+  },
+  "rollCalls": 4,
   "ballots": [
     [
       840,

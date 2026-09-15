@@ -14,12 +14,15 @@
     "reference": "2024/2512",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2512"
   },
+  "document": "B9-0086/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 345 in favour, 104 against, 29 abstained. Result derived from the totals."
   },
+  "committee": null,
+  "rollCalls": 5,
   "ballots": [
     [
       840,

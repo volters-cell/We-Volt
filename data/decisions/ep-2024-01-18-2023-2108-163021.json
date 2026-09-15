@@ -14,12 +14,19 @@
     "reference": "2023/2108",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2108"
   },
+  "document": "A9-0421/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 426 in favour, 43 against, 86 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "AFET",
+    "label": "Foreign Affairs",
+    "short": "Foreign Affairs"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

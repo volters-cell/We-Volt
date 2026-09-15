@@ -14,12 +14,19 @@
     "reference": "2023/2027",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2027"
   },
+  "document": "A9-0433/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 5 against, 3 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "PECH",
+    "label": "Fisheries",
+    "short": "Fisheries"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

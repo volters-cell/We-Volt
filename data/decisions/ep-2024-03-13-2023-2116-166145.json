@@ -14,12 +14,19 @@
     "reference": "2023/2116",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2116"
   },
+  "document": "A9-0050/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 256 in favour, 262 against, 58 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "EMPL",
+    "label": "Employment and Social Affairs",
+    "short": "Employment"
+  },
+  "rollCalls": 27,
   "ballots": [
     [
       840,

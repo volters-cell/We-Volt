@@ -14,12 +14,19 @@
     "reference": "2024/2006",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2006"
   },
+  "document": "A9-0163/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 473 in favour, 89 against, 53 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "AFCO",
+    "label": "Constitutional Affairs",
+    "short": "Constitutional Affairs"
+  },
+  "rollCalls": 10,
   "ballots": [
     [
       840,

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the Commission’s 2023 Rule of Law report",
+  "title": "Rapport sur le rapport 2023 de la Commission sur l’état de droit - Report on the Commission’s 2023 Rule of Law report - Bericht über den Bericht der Kommission über die Rechtsstaatlichkeit 2023",
   "subtitle": "A9-0025/2024 - Sophia in 't Veld - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-02-28",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/2113",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2113"
   },
+  "document": "A9-0025/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 374 in favour, 113 against, 45 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "LIBE",
+    "label": "Civil Liberties, Justice and Home Affairs",
+    "short": "Civil Liberties"
+  },
+  "rollCalls": 25,
   "ballots": [
     [
       840,

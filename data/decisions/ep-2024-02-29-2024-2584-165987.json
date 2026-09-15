@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Critical situation in Cuba",
+  "title": "Situation critique à Cuba - Critical situation in Cuba - Kritische Lage in Kuba - Situation critique à Cuba - Critical situation in Cuba - Kritische Lage in Kuba",
   "subtitle": "RC-B9-0144/2024 - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-02-29",
   "voteRule": "simple-majority",
@@ -14,12 +14,15 @@
     "reference": "2024/2584",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2584"
   },
+  "document": "B9-0148/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 285 in favour, 172 against, 46 abstained. Result derived from the totals."
   },
+  "committee": null,
+  "rollCalls": 17,
   "ballots": [
     [
       840,

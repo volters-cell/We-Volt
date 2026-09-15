@@ -14,12 +14,19 @@
     "reference": "2023/0356",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0356"
   },
+  "document": "A9-0037/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 1 against, 2 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ENVI",
+    "label": "Environment, Public Health and Food Safety",
+    "short": "Environment"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

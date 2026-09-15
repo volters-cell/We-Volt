@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Competition policy – annual report 2023",
+  "title": "Politique de concurrence – rapport annuel 2023 - Competition policy – annual report 2023 - Wettbewerbspolitik – Jahresbericht 2023",
   "subtitle": "A9-0427/2023 - Stéphanie Yon-Courtin - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-01-16",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/2077",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2077"
   },
+  "document": "A9-0427/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 481 in favour, 42 against, 93 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ECON",
+    "label": "Economic and Monetary Affairs",
+    "short": "Economy"
+  },
+  "rollCalls": 8,
   "ballots": [
     [
       840,

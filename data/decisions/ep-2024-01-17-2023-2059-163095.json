@@ -14,12 +14,19 @@
     "reference": "2023/2059",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2059"
   },
+  "document": "A9-0443/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 585 in favour, 21 against, 26 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "TRAN",
+    "label": "Transport and Tourism",
+    "short": "Transport"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

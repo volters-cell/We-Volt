@@ -14,12 +14,15 @@
     "reference": null,
     "url": null
   },
+  "document": null,
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 42 in favour, 273 against, 7 abstained. Result derived from the totals."
   },
+  "committee": null,
+  "rollCalls": 1,
   "ballots": [
     [
       1892,

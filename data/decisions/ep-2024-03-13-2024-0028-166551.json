@@ -14,12 +14,19 @@
     "reference": "2024/0028",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0028"
   },
+  "document": "A9-0077/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 347 in favour, 117 against, 99 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
+  },
+  "rollCalls": 9,
   "ballots": [
     [
       840,

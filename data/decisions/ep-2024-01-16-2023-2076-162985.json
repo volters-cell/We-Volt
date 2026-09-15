@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Current and future challenges regarding cross-border cooperation with neighbouring countries",
+  "title": "Les enjeux actuels et futurs en matière de coopération transfrontalière avec les pays voisins - Current and future challenges regarding cross-border cooperation with neighbouring countries - Derzeitige und künftige Herausforderungen bei der grenzübergreifenden Zusammenarbeit mit Nachbarländern",
   "subtitle": "Les enjeux actuels et futurs en matière de coopération transfrontalière avec les pays voisins - Current and future challenges regarding cross-border cooperation with neighbouring countries - Derzeitige und künftige Herausforderungen bei der grenzübergreifenden Zusammenarbeit mit Nachbarländern - A9-0415/2023 - Daniel Buda - Proposition de résolution — vote in plenary",
   "date": "2024-01-16",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/2076",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2076"
   },
+  "document": "A9-0415/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 559 in favour, 20 against, 36 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "REGI",
+    "label": "Regional Development",
+    "short": "Regional Development"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

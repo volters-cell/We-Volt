@@ -14,12 +14,19 @@
     "reference": "2022/0277",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0277"
   },
+  "document": "A9-0264/2023",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 56 in favour, 535 against, 18 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,

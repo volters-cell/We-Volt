@@ -14,12 +14,19 @@
     "reference": "2023/0379",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0379"
   },
+  "document": "A9-0076/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 530 in favour, 36 against, 14 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "ECON",
+    "label": "Economic and Monetary Affairs",
+    "short": "Economy"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,

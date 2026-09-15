@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "EU/Chile Advanced Framework Agreement (resolution)",
+  "title": "Accord-cadre avancé UE/Chili (résolution) - EU/Chile Advanced Framework Agreement (Resolution) - Fortgeschrittenes Rahmenabkommen EU/Chile (Entschließung)",
   "subtitle": "A9-0017/2024 - María Soraya Rodríguez Ramos, Samira Rafaela - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-02-29",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2023/0260",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0260"
   },
+  "document": "A9-0017/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 319 in favour, 113 against, 121 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
+  },
+  "rollCalls": 11,
   "ballots": [
     [
       840,

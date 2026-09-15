@@ -14,12 +14,19 @@
     "reference": "2023/2166",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/2166"
   },
+  "document": "A9-0115/2024",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 536 in favour, 32 against, 37 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "CONT",
+    "label": "Budgetary Control",
+    "short": "Budget Control"
+  },
+  "rollCalls": 1,
   "ballots": [
     [
       840,
