@@ -3537,3 +3537,20 @@ button,
 @media (max-width: 40rem) {
   .filter-panel { width: calc(100vw - 1.2rem); }
 }
+
+
+/* The plenary happening today. It is a state, not a category, so it is the one
+   badge in the list that carries colour of its own. */
+.session-now {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .1rem .45rem;
+  border-radius: 999px;
+  background: var(--eu-gold);
+  color: #241c00;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  vertical-align: .05em;
+}

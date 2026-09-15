@@ -428,11 +428,39 @@
 
   /* ------------------------------------------------------- plenary sessions */
 
+  /* The Parliament is sitting today, or it is not. A session runs several days
+     and the site has no way of knowing whether the chamber is in the room at
+     this minute, so "ongoing" means the day falls inside the session — which is
+     what a reader means when they ask whether the plenary is happening. */
+  function ongoingSession() {
+    const today = new Date().toISOString().slice(0, 10);
+    return (calendar.sessions || []).find(function (session) {
+      return session.start <= today && today <= session.end;
+    }) || null;
+  }
+
+  function isOngoing(session) {
+    const now = ongoingSession();
+    return Boolean(session && now && session.start === now.start);
+  }
+
   function renderPlenary() {
     const today = new Date().toISOString().slice(0, 10);
     const sessions = calendar.sessions || [];
     const past = sessions.filter(function (session) { return session.end < today; });
-    const next = sessions.filter(function (session) { return session.end >= today; })[0];
+    const now = ongoingSession();
+    // A session that has begun is not the next one, it is this one.
+    const next = sessions.filter(function (session) {
+      return session.end >= today && (!now || session.start !== now.start);
+    })[0];
+
+    if (now) {
+      setHeaderPlenary(
+        'Plenary sitting now · ' + sessionLabel(now),
+        'Sitting now · ' + sessionLabel(now, true)
+      );
+      return;
+    }
 
     if (past.length) {
       const last = past[past.length - 1];
@@ -657,6 +685,8 @@
         (open || current ? ' open' : '') + '>' +
         '<summary>' +
           '<span class="session-label">' + esc(sessionLabelFor(group)) + '</span>' +
+          (isOngoing(group.session)
+            ? '<span class="session-now">Ongoing</span>' : '') +
           '<span class="session-count">' + group.items.length + ' vote' +
             (group.items.length === 1 ? '' : 's') + '</span>' +
         '</summary>' +
