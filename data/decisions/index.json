@@ -355,7 +355,7 @@
       "id": "ep-2026-09-14-monday-s-agenda-request-by-the-left-group-ecb-196475",
       "sourceId": 196475,
       "title": "Monday’s agenda – Request by The Left Group – ECB",
-      "subtitle": "Ordre du jour de lundi - Demande du groupe The Left - BCE — vote in plenary",
+      "subtitle": "vote in plenary",
       "date": "2026-09-14",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -368,7 +368,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 455,
-      "keywords": "monday’s agenda – request by the left group – ecb ordre du jour de lundi - demande du groupe the left - bce — vote in plenary",
+      "keywords": "monday’s agenda – request by the left group – ecb vote in plenary",
       "file": "data/decisions/ep-2026-09-14-monday-s-agenda-request-by-the-left-group-ecb-196475.json"
     },
     {
@@ -2000,30 +2000,6 @@
       "file": "data/decisions/ep-2026-06-16-2025-0260-cod-193515.json"
     },
     {
-      "id": "ep-2026-06-16-2025-0261-193973",
-      "sourceId": 193973,
-      "title": "Adjustment of customs duties and opening of tariff quotas for the import of certain goods originating in the United States of America",
-      "subtitle": "A10-0069/2026 – Bernd Lange – Proposal to vote on amendments — vote in plenary",
-      "date": "2026-06-16",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "Trade"
-      ],
-      "committee": {
-        "code": "INTA",
-        "label": "International Trade",
-        "short": "Trade"
-      },
-      "rollCalls": 2,
-      "result": "rejected",
-      "status": "verified",
-      "mepCount": 634,
-      "keywords": "adjustment of customs duties and opening of tariff quotas for the import of certain goods originating in the united states of america a10-0069/2026 – bernd lange – proposal to vote on amendments — vote in plenary 2025/0261",
-      "file": "data/decisions/ep-2026-06-16-2025-0261-193973.json"
-    },
-    {
       "id": "ep-2026-06-16-2025-0261-cod-193474",
       "sourceId": 193474,
       "title": "Adjustment of customs duties and opening of tariff quotas for the import of certain goods originating in the United States of America",
@@ -2046,30 +2022,6 @@
       "mepCount": 718,
       "keywords": "adjustment of customs duties and opening of tariff quotas for the import of certain goods originating in the united states of america 2025/0261(cod) — vote in plenary accord provisoire - am 62 2025/0261(cod)",
       "file": "data/decisions/ep-2026-06-16-2025-0261-cod-193474.json"
-    },
-    {
-      "id": "ep-2026-06-16-2025-0359-193848",
-      "sourceId": 193848,
-      "title": "Simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)",
-      "subtitle": "A10-0073/2026 – Arba Kokalari, Michael McNamara – Proposal to vote on amendments — vote in plenary",
-      "date": "2026-06-16",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "Digital and tech"
-      ],
-      "committee": {
-        "code": "IMCO",
-        "label": "Internal Market and Consumer Protection",
-        "short": "Single Market"
-      },
-      "rollCalls": 2,
-      "result": "rejected",
-      "status": "verified",
-      "mepCount": 654,
-      "keywords": "simplification of the implementation of harmonised rules on artificial intelligence (digital omnibus on ai) a10-0073/2026 – arba kokalari, michael mcnamara – proposal to vote on amendments — vote in plenary 2025/0359",
-      "file": "data/decisions/ep-2026-06-16-2025-0359-193848.json"
     },
     {
       "id": "ep-2026-06-16-2025-0359-cod-193665",
@@ -2228,6 +2180,54 @@
       "mepCount": 718,
       "keywords": "european political parties and foundations – 2026 report on the application of regulation (eu, euratom) no 2025/2445 and on the activities funded 2026/2013(ini) — vote in plenary proposition de résolution (ensemble du texte) 2026/2013(ini)",
       "file": "data/decisions/ep-2026-06-16-2026-2013-ini-193542.json"
+    },
+    {
+      "id": "ep-2026-06-16-a10-0069-2026-193973",
+      "sourceId": 193973,
+      "title": "Report on the proposal for a regulation of the European Parliament and of the Council on the adjustment of customs duties on the import of certain goods originating in the United States of America and opening of tariff quotas for imports of certain goods originating in the United States of America",
+      "subtitle": "A10-0069/2026 – Bernd Lange – Proposal to vote on amendments — vote in plenary",
+      "date": "2026-06-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Trade"
+      ],
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 634,
+      "keywords": "report on the proposal for a regulation of the european parliament and of the council on the adjustment of customs duties on the import of certain goods originating in the united states of america and opening of tariff quotas for imports of certain goods originating in the united states of america a10-0069/2026 – bernd lange – proposal to vote on amendments — vote in plenary a10-0069/2026",
+      "file": "data/decisions/ep-2026-06-16-a10-0069-2026-193973.json"
+    },
+    {
+      "id": "ep-2026-06-16-a10-0073-2026-193848",
+      "sourceId": 193848,
+      "title": "Report on the proposal for a regulation of the European Parliament and of the Council amending Regulations (EU) 2024/1689 and (EU) 2018/1139 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)",
+      "subtitle": "A10-0073/2026 – Arba Kokalari, Michael McNamara – Proposal to vote on amendments — vote in plenary",
+      "date": "2026-06-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Digital and tech"
+      ],
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 654,
+      "keywords": "report on the proposal for a regulation of the european parliament and of the council amending regulations (eu) 2024/1689 and (eu) 2018/1139 as regards the simplification of the implementation of harmonised rules on artificial intelligence (digital omnibus on ai) a10-0073/2026 – arba kokalari, michael mcnamara – proposal to vote on amendments — vote in plenary a10-0073/2026",
+      "file": "data/decisions/ep-2026-06-16-a10-0073-2026-193848.json"
     },
     {
       "id": "ep-2026-06-15-tuesday-s-agenda-request-by-the-renew-group-middle-east-193975",
@@ -5844,19 +5844,21 @@
     {
       "id": "ep-2026-02-11-c10-0023-2026-184721",
       "sourceId": 184721,
-      "title": "C10-0023/2026 – Proposal for a Council regulation",
-      "subtitle": "vote in plenary",
+      "title": "Amending the multiannual financial framework for the years 2021 to 2027",
+      "subtitle": "C10-0023/2026 – Proposal for a Council regulation — vote in plenary",
       "date": "2026-02-11",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "voteRuleLabel": "Majority of Parliament's component members",
+      "topics": [
+        "The EU budget"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 652,
-      "keywords": "c10-0023/2026 – proposal for a council regulation vote in plenary c10-0023/2026",
+      "keywords": "amending the multiannual financial framework for the years 2021 to 2027 c10-0023/2026 – proposal for a council regulation — vote in plenary c10-0023/2026",
       "file": "data/decisions/ep-2026-02-11-c10-0023-2026-184721.json"
     },
     {
@@ -6701,9 +6703,9 @@
       "file": "data/decisions/ep-2026-01-20-2025-2131-inl-183122.json"
     },
     {
-      "id": "ep-2026-01-20-b10-0057-2026-183539",
+      "id": "ep-2026-01-20-2025-3020-183539",
       "sourceId": 183539,
-      "title": "Motion FOR A RESOLUTION on the murder of Mehdi Kessaci: urgent need for ambitious European action against drug trafficking",
+      "title": "Murder of Mehdi Kessaci – urgent need for ambitious European action against drug trafficking",
       "subtitle": "B10-0057/2026 – § 3 – Am 5 — vote in plenary",
       "date": "2026-01-20",
       "body": "parliament",
@@ -6717,8 +6719,8 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 648,
-      "keywords": "motion for a resolution on the murder of mehdi kessaci: urgent need for ambitious european action against drug trafficking b10-0057/2026 – § 3 – am 5 — vote in plenary b10-0057/2026",
-      "file": "data/decisions/ep-2026-01-20-b10-0057-2026-183539.json"
+      "keywords": "murder of mehdi kessaci – urgent need for ambitious european action against drug trafficking b10-0057/2026 – § 3 – am 5 — vote in plenary 2025/3020",
+      "file": "data/decisions/ep-2026-01-20-2025-3020-183539.json"
     },
     {
       "id": "ep-2025-12-18-2024-2123-ini-182388",
