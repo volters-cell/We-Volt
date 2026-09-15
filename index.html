@@ -224,6 +224,7 @@
               <button type="button" id="filter-close" class="filter-close" aria-label="Close">&times;</button>
             </header>
 
+            <div class="filter-body">
             <section class="filter-section">
               <h3>Date</h3>
               <div class="filter-dates">
@@ -240,11 +241,26 @@
             </section>
 
             <section class="filter-section">
+              <h3>Country</h3>
+              <label class="visually-hidden" for="filter-country-search">Filter countries</label>
+              <input type="search" id="filter-country-search" autocomplete="off" placeholder="Filter countries">
+              <div id="filter-countries" class="filter-topics" data-facet="countries"></div>
+            </section>
+
+            <section class="filter-section">
               <h3>Topics</h3>
               <label class="visually-hidden" for="filter-topic-search">Filter topics</label>
               <input type="search" id="filter-topic-search" autocomplete="off" placeholder="Filter topics">
-              <div id="filter-topics" class="filter-topics"></div>
+              <div id="filter-topics" class="filter-topics" data-facet="topics"></div>
             </section>
+
+            <section class="filter-section">
+              <h3>Responsible committee</h3>
+              <label class="visually-hidden" for="filter-committee-search">Filter committees</label>
+              <input type="search" id="filter-committee-search" autocomplete="off" placeholder="Filter committees">
+              <div id="filter-committees" class="filter-topics" data-facet="committees"></div>
+            </section>
+            </div>
 
             <footer class="filter-foot">
               <button type="button" id="filter-reset" class="filter-reset">Clear all</button>

@@ -11,8 +11,8 @@
   const state = {
     decision: null, layer: 'vote', layerChosen: false,
     country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null,
-    // The filter panel's two questions: when, and about what.
-    from: '', until: '', topics: [],
+    // The filter panel's questions: when, where, about what, and by whom.
+    from: '', until: '', topics: [], countries: [], committees: [],
     // The neighbour whose record is open, if any. It is not `country`: a
     // neighbour has no seats and never narrows the roll-call.
     outside: null
@@ -176,13 +176,27 @@
   function withinFilters(item) {
     if (state.from && item.date < state.from) return false;
     if (state.until && item.date > state.until) return false;
-    if (!state.topics.length) return true;
+
     const carried = item.topics || [];
-    return state.topics.some(function (topic) { return carried.indexOf(topic) !== -1; });
+    const anyOf = function (chosen) {
+      return !chosen.length || chosen.some(function (name) { return carried.indexOf(name) !== -1; });
+    };
+    // Within a heading, any of the chosen; between headings, all of them. A
+    // reader asking for Ukraine and for Migration means either subject; a
+    // reader who also picks a committee means that committee as well.
+    if (!anyOf(state.countries)) return false;
+    if (!anyOf(state.topics)) return false;
+
+    if (state.committees.length) {
+      const committee = item.committee && item.committee.code;
+      if (!committee || state.committees.indexOf(committee) === -1) return false;
+    }
+    return true;
   }
 
   function filtersOn() {
-    return Boolean(state.from || state.until || state.topics.length);
+    return Boolean(state.from || state.until ||
+      state.topics.length || state.countries.length || state.committees.length);
   }
 
   /* Members are searched across the whole term, not only inside whatever vote
@@ -832,54 +846,111 @@
 
 /* ------------------------------------------------------------- the filters */
 
-  /* How many votes each topic holds, counted over everything currently loaded
-     — which grows when a reader opens an earlier Parliament, so the counts
-     follow what is actually searchable rather than promising votes that are
-     not there yet. */
-  function topicCounts() {
+  /* The three lists a reader can narrow by, counted over everything currently
+     loaded — which grows when an earlier Parliament is opened, so the numbers
+     follow what is actually searchable rather than promising votes that have
+     not been fetched. */
+  const FACETS = {
+    countries: { list: 'filter-countries', search: 'filter-country-search' },
+    topics: { list: 'filter-topics', search: 'filter-topic-search' },
+    committees: { list: 'filter-committees', search: 'filter-committee-search' }
+  };
+
+  const SHOWN = 5;   // as many as fit before a list stops being scannable
+
+  function isPlace(name) {
+    const places = (index && index.metadata && index.metadata.places) || [];
+    return places.indexOf(name) !== -1;
+  }
+
+  function facetCounts(facet) {
     const counts = new Map();
+    const labels = new Map();
     index.decisions.forEach(function (item) {
+      if (facet === 'committees') {
+        const committee = item.committee;
+        if (!committee || !committee.code) return;
+        counts.set(committee.code, (counts.get(committee.code) || 0) + 1);
+        labels.set(committee.code, (committee.label || committee.code) + ' (' + committee.code + ')');
+        return;
+      }
       (item.topics || []).forEach(function (topic) {
+        const place = isPlace(topic);
+        if ((facet === 'countries') !== place) return;
         counts.set(topic, (counts.get(topic) || 0) + 1);
+        labels.set(topic, topic);
       });
     });
-    return [...counts.entries()].sort(function (a, b) {
-      return b[1] - a[1] || a[0].localeCompare(b[0]);
-    });
+    return [...counts.entries()]
+      .sort(function (a, b) { return b[1] - a[1] || a[0].localeCompare(b[0]); })
+      .map(function (row) { return { value: row[0], count: row[1], label: labels.get(row[0]) }; });
   }
 
   /* The panel edits its own copy and writes nothing until Apply is pressed:
      ticking six boxes should not redraw the list six times underneath. */
-  let draft = { from: '', until: '', topics: [] };
+  let draft = { from: '', until: '', topics: [], countries: [], committees: [] };
+  const expanded = {};
 
-  function paintTopics() {
-    const box = document.getElementById('filter-topics');
+  function paintFacet(facet) {
+    const wiring = FACETS[facet];
+    const box = document.getElementById(wiring.list);
     if (!box) return;
-    const needle = String((document.getElementById('filter-topic-search') || {}).value || '')
+
+    const needle = String((document.getElementById(wiring.search) || {}).value || '')
       .trim().toLowerCase();
-    const rows = topicCounts().filter(function (row) {
-      return !needle || row[0].toLowerCase().indexOf(needle) !== -1;
+    const rows = facetCounts(facet).filter(function (row) {
+      return !needle || row.label.toLowerCase().indexOf(needle) !== -1;
     });
-    box.innerHTML = rows.length ? rows.map(function (row) {
-      const id = 'topic-' + row[0].replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+
+    if (!rows.length) {
+      box.innerHTML = '<p class="filter-empty">Nothing matches that.</p>';
+      return;
+    }
+
+    // A search shows everything it found; otherwise the long tail waits behind
+    // one press, because five is as many as a reader takes in at a glance.
+    const open = expanded[facet] || needle;
+    const shown = open ? rows : rows.slice(0, SHOWN);
+    const hidden = rows.length - shown.length;
+
+    box.innerHTML = shown.map(function (row) {
+      const id = 'facet-' + facet + '-' + row.value.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
       return '<label class="filter-topic" for="' + id + '">' +
-        '<input type="checkbox" id="' + id + '" value="' + esc(row[0]) + '"' +
-        (draft.topics.indexOf(row[0]) !== -1 ? ' checked' : '') + '>' +
-        '<span class="filter-topic-name">' + esc(row[0]) + '</span>' +
-        '<span class="filter-topic-count">' + row[1] + '</span>' +
+        '<input type="checkbox" id="' + id + '" value="' + esc(row.value) + '"' +
+        (draft[facet].indexOf(row.value) !== -1 ? ' checked' : '') + '>' +
+        '<span class="filter-topic-name">' + esc(row.label) + '</span>' +
+        '<span class="filter-topic-count">' + row.count + '</span>' +
         '</label>';
-    }).join('') : '<p class="filter-empty">No topic matches that.</p>';
+    }).join('') +
+      (hidden > 0
+        ? '<button type="button" class="filter-more" data-more="' + facet + '">Show ' +
+            hidden + ' more</button>'
+        : (open && !needle && rows.length > SHOWN
+            ? '<button type="button" class="filter-more" data-more="' + facet + '">Show fewer</button>'
+            : ''));
+  }
+
+  function paintFilters() {
+    Object.keys(FACETS).forEach(paintFacet);
   }
 
   function openFilters() {
     const panel = document.getElementById('filter-panel');
     if (!panel) return;
-    draft = { from: state.from, until: state.until, topics: state.topics.slice() };
+    draft = {
+      from: state.from, until: state.until,
+      topics: state.topics.slice(),
+      countries: state.countries.slice(),
+      committees: state.committees.slice()
+    };
     document.getElementById('filter-from').value = draft.from;
     document.getElementById('filter-until').value = draft.until;
-    const search = document.getElementById('filter-topic-search');
-    if (search) search.value = '';
-    paintTopics();
+    Object.keys(FACETS).forEach(function (facet) {
+      const search = document.getElementById(FACETS[facet].search);
+      if (search) search.value = '';
+      expanded[facet] = false;
+    });
+    paintFilters();
     if (typeof panel.showModal === 'function') panel.showModal();
     else panel.setAttribute('open', '');
   }
@@ -895,6 +966,8 @@
     state.from = document.getElementById('filter-from').value || '';
     state.until = document.getElementById('filter-until').value || '';
     state.topics = draft.topics.slice();
+    state.countries = draft.countries.slice();
+    state.committees = draft.committees.slice();
     showFilterCount();
     closeFilters();
     renderFeed();
@@ -904,6 +977,8 @@
     state.from = '';
     state.until = '';
     state.topics = [];
+    state.countries = [];
+    state.committees = [];
     showFilterCount();
     renderFeed();
   }
@@ -911,7 +986,8 @@
   function showFilterCount() {
     const badge = document.getElementById('filter-count');
     const clear = document.getElementById('filter-clear');
-    const many = state.topics.length + (state.from || state.until ? 1 : 0);
+    const many = state.topics.length + state.countries.length + state.committees.length +
+      (state.from || state.until ? 1 : 0);
     if (badge) {
       badge.hidden = !many;
       badge.textContent = many;
@@ -947,10 +1023,10 @@
 
     const reset = document.getElementById('filter-reset');
     if (reset) reset.addEventListener('click', function () {
-      draft = { from: '', until: '', topics: [] };
+      draft = { from: '', until: '', topics: [], countries: [], committees: [] };
       document.getElementById('filter-from').value = '';
       document.getElementById('filter-until').value = '';
-      paintTopics();
+      paintFilters();
     });
 
     const form = document.getElementById('filter-form');
@@ -959,16 +1035,27 @@
       applyFilters();
     });
 
-    const search = document.getElementById('filter-topic-search');
-    if (search) search.addEventListener('input', paintTopics);
+    Object.keys(FACETS).forEach(function (facet) {
+      const search = document.getElementById(FACETS[facet].search);
+      if (search) search.addEventListener('input', function () { paintFacet(facet); });
 
-    const topics = document.getElementById('filter-topics');
-    if (topics) topics.addEventListener('change', function (event) {
-      const box = event.target;
-      if (!box || box.type !== 'checkbox') return;
-      const at = draft.topics.indexOf(box.value);
-      if (box.checked && at === -1) draft.topics.push(box.value);
-      if (!box.checked && at !== -1) draft.topics.splice(at, 1);
+      const list = document.getElementById(FACETS[facet].list);
+      if (!list) return;
+
+      list.addEventListener('change', function (event) {
+        const box = event.target;
+        if (!box || box.type !== 'checkbox') return;
+        const at = draft[facet].indexOf(box.value);
+        if (box.checked && at === -1) draft[facet].push(box.value);
+        if (!box.checked && at !== -1) draft[facet].splice(at, 1);
+      });
+
+      list.addEventListener('click', function (event) {
+        const button = event.target.closest && event.target.closest('[data-more]');
+        if (!button) return;
+        expanded[facet] = !expanded[facet];
+        paintFacet(facet);
+      });
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('[data-range]'), function (button) {

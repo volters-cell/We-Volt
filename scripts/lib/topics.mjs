@@ -135,4 +135,10 @@ export function topicsFor(title) {
   return found;
 }
 
+/* Which labels are places, so a reader can be offered "Country" and "Topic"
+   as the two different questions they are. The vocabulary already keeps them
+   apart; this is only the list of names, for anything that has a label in hand
+   and no way to tell which kind it is. */
+export const PLACE_NAMES = PLACES.map(function (row) { return row[0]; });
+
 export const TOPIC_COUNT = PLACES.length + THEMES.length;

@@ -17,6 +17,7 @@
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { PLACE_NAMES } from './lib/topics.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -95,6 +96,10 @@ const termOf = (date) => TERMS.find((term) => date >= term.from) || TERMS[TERMS.
 
 const metadata = {
   project: 'EU Tracker',
+  // Which topic labels name a place, so the filter panel can offer "Country"
+  // and "Topic" as the two different questions they are. Written here rather
+  // than repeated in the browser, so the vocabulary has one home.
+  places: PLACE_NAMES,
   updated: new Date().toISOString().slice(0, 10),
   dataStatus: 'Votes of the European Parliament, from its open data portal. ' +
     'Summaries are editorial and may be absent. See about.html.'
