@@ -136,7 +136,24 @@ jobs:
           Backfill of term ${{ inputs.term }}, automated by
           .github/workflows/backfill-term.yml. Records land with an empty
           summary: writing one is editorial work."
-              git pull --rebase origin "${GITHUB_REF_NAME}"
+              # Somebody else may have pushed while this window was reading the
+              # portal — a sibling workflow, or a person. Rebase onto them, and
+              # where the conflict is in data/ take the files this run just
+              # generated: they were built from the portal minutes ago, and the
+              # alternative is throwing away a window's work over a regenerated
+              # index. A run lost twenty-five minutes of 2022 to exactly this,
+              # because data/meps/index.json had been committed by hand
+              # meanwhile.
+              if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
+                if git diff --name-only --diff-filter=U | grep -qv '^data/'; then
+                  echo "::error::Conflict outside data/ — stopping rather than guessing."
+                  git rebase --abort || true
+                  exit 1
+                fi
+                git checkout --theirs -- data/ 2>/dev/null || true
+                git add data/
+                GIT_EDITOR=true git rebase --continue
+              fi
               git push origin "HEAD:${GITHUB_REF_NAME}"
             fi
             echo "::endgroup::"
