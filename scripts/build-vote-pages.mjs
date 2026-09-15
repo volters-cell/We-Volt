@@ -23,7 +23,7 @@
  
    SPDX-License-Identifier: AGPL-3.0-or-later
  */
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -73,6 +73,17 @@ const everyDecision = index.decisions.concat(
     .filter((row) => row.file)
     .map((row) => JSON.parse(readFileSync(path.join(ROOT, row.file), 'utf8')).decisions || []));
 
+/* The card for this vote where one was drawn, and the site's own card where it
+   was not. Only the sitting term gets a card of its own — the comment above
+   says why — and every page pointed at one regardless, so a shared ninth-term
+   vote unfurled with a missing image and carried a broken one on the page
+   itself. 2,637 of the 3,356 pages were in that state. */
+function previewFor(id) {
+  return existsSync(path.join(ROOT, 'assets/og', id + '.png'))
+    ? { url: `${BASE}assets/og/${id}.png`, src: `../../assets/og/${id}.png`, own: true }
+    : { url: `${BASE}assets/social-card.png`, src: `../../assets/social-card.png`, own: false };
+}
+
 for (const entry of everyDecision) {
   const record = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions', entry.id + '.json'), 'utf8'));
   const totals = { for: 0, against: 0, abstain: 0 };
@@ -84,6 +95,7 @@ for (const entry of everyDecision) {
   const result = (record.outcome && record.outcome.result) || 'recorded';
   const word = RESULT[result] || 'Recorded';
   const id = record.sourceId;
+  const preview = previewFor(id);
   const day = spoken(record.date);
 
   const summary = word + ' by the European Parliament on ' + day + ' — ' +
@@ -125,7 +137,7 @@ for (const entry of everyDecision) {
 <meta property="og:url" content="${BASE}v/${id}/">
 <meta property="og:title" content="${esc(record.title)} — ${esc(word)}">
 <meta property="og:description" content="${esc(summary)}">
-<meta property="og:image" content="${BASE}assets/og/${id}.png">
+<meta property="og:image" content="${preview.url}">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -135,7 +147,7 @@ for (const entry of everyDecision) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(record.title)} — ${esc(word)}">
 <meta name="twitter:description" content="${esc(summary)}">
-<meta name="twitter:image" content="${BASE}assets/og/${id}.png">
+<meta name="twitter:image" content="${preview.url}">
 <meta name="theme-color" content="#0b3a8f">
 
 <!-- A vote is where most people arrive, so it is where Add to Home Screen has
@@ -175,8 +187,8 @@ for (const entry of everyDecision) {
   location.replace('../../#/${id}' + where);
 </script>
 <main class="vote-shell">
-  <img src="../../assets/og/${id}.png" width="1200" height="630"
-       alt="${esc(record.title)}: ${esc(word)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained.">
+  ${preview.own ? `<img src="${preview.src}" width="1200" height="630"
+       alt="${esc(record.title)}: ${esc(word)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained.">` : ''}
   <p class="vote-day">European Parliament · ${esc(day)}</p>
   <h1>${esc(record.title)}</h1>
   <p class="vote-word ${esc(result)}">${esc(word)}</p>
