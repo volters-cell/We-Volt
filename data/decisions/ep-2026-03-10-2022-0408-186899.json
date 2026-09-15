@@ -14,12 +14,19 @@
     "reference": "2022/0408",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0408"
   },
+  "document": "A10-0126/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 164 in favour, 447 against, 7 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "JURI",
+    "label": "Legal Affairs",
+    "short": "Legal Affairs"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,
@@ -2516,10 +2523,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "committee": {
-    "code": "JURI",
-    "label": "Legal Affairs",
-    "short": "Legal Affairs"
-  }
+  "countries": {}
 }

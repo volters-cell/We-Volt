@@ -14,12 +14,19 @@
     "reference": "2025/0322",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0322"
   },
+  "document": "A10-0254/2025",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 206 in favour, 430 against, 12 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,
@@ -2637,11 +2644,6 @@
     }
   ],
   "countries": {},
-  "committee": {
-    "code": "INTA",
-    "label": "International Trade",
-    "short": "Trade"
-  },
   "topics": [
     "Food and farming"
   ]

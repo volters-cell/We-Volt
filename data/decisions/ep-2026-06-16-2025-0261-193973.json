@@ -14,12 +14,19 @@
     "reference": "2025/0261",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0261"
   },
+  "document": "A10-0069/2026",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 120 in favour, 509 against, 5 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,
@@ -2581,11 +2588,6 @@
     }
   ],
   "countries": {},
-  "committee": {
-    "code": "INTA",
-    "label": "International Trade",
-    "short": "Trade"
-  },
   "topics": [
     "Trade"
   ]

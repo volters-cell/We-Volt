@@ -50,7 +50,7 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 1097,
+      "votes": 1108,
       "from": "2024-07-17",
       "until": "2026-09-15",
       "file": null
@@ -352,9 +352,9 @@
       "file": "data/decisions/ep-2026-09-15-a10-0230-2026-196438.json"
     },
     {
-      "id": "ep-2026-09-14-ordre-du-jour-de-lundi-demande-du-groupe-the-left-bce-mond-196475",
+      "id": "ep-2026-09-14-monday-s-agenda-request-by-the-left-group-ecb-196475",
       "sourceId": 196475,
-      "title": "Ordre du jour de lundi - Demande du groupe The Left - BCE - Monday’s Agenda - Request from The Left Group - ECB - Tagesordnung für Montag - Antrag der Fraktion The Left - EZB",
+      "title": "Monday’s agenda – Request by The Left Group – ECB",
       "subtitle": "Ordre du jour de lundi - Demande du groupe The Left - BCE — vote in plenary",
       "date": "2026-09-14",
       "body": "parliament",
@@ -368,8 +368,8 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 455,
-      "keywords": "ordre du jour de lundi - demande du groupe the left - bce - monday’s agenda - request from the left group - ecb - tagesordnung für montag - antrag der fraktion the left - ezb ordre du jour de lundi - demande du groupe the left - bce — vote in plenary",
-      "file": "data/decisions/ep-2026-09-14-ordre-du-jour-de-lundi-demande-du-groupe-the-left-bce-mond-196475.json"
+      "keywords": "monday’s agenda – request by the left group – ecb ordre du jour de lundi - demande du groupe the left - bce — vote in plenary",
+      "file": "data/decisions/ep-2026-09-14-monday-s-agenda-request-by-the-left-group-ecb-196475.json"
     },
     {
       "id": "ep-2026-07-09-2023-0212-cod-195719",
@@ -438,6 +438,28 @@
       "file": "data/decisions/ep-2026-07-09-2025-2211-ini-194869.json"
     },
     {
+      "id": "ep-2026-07-09-2026-2734-195609",
+      "sourceId": 195609,
+      "title": "Joint communication on humanitarian aid (JOIN(2026)0025)",
+      "subtitle": "B10-0339/2026 – After § 1 – Am 2 — vote in plenary",
+      "date": "2026-07-09",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": {
+        "code": "DEVE",
+        "label": "Development",
+        "short": "Development"
+      },
+      "rollCalls": 5,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 589,
+      "keywords": "joint communication on humanitarian aid (join(2026)0025) b10-0339/2026 – after § 1 – am 2 — vote in plenary 2026/2734",
+      "file": "data/decisions/ep-2026-07-09-2026-2734-195609.json"
+    },
+    {
       "id": "ep-2026-07-09-2026-2799-rsp-195769",
       "sourceId": 195769,
       "title": "The threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in El-Obeid, Sudan",
@@ -479,7 +501,25 @@
       "file": "data/decisions/ep-2026-07-09-2026-2800-rsp-195749.json"
     },
     {
-      "id": "ep-2026-07-09-temporary-derogation-from-the-eprivacy-directive-ii-195807",
+      "id": "ep-2026-07-09-2026-2801-195774",
+      "sourceId": 195774,
+      "title": "The abduction, forced conversion and child marriage of Maria Shahbaz and the protection of girls in Pakistan",
+      "subtitle": "RC-B10-0346/2026 – After recital D – Am 4 — vote in plenary",
+      "date": "2026-07-09",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": null,
+      "rollCalls": 5,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 589,
+      "keywords": "the abduction, forced conversion and child marriage of maria shahbaz and the protection of girls in pakistan rc-b10-0346/2026 – after recital d – am 4 — vote in plenary 2026/2801",
+      "file": "data/decisions/ep-2026-07-09-2026-2801-195774.json"
+    },
+    {
+      "id": "ep-2026-07-09-c10-0178-2026-195807",
       "sourceId": 195807,
       "title": "Temporary derogation from the ePrivacy directive",
       "subtitle": "C10-0178/2026 – Proposal for rejection — vote in plenary",
@@ -489,12 +529,12 @@
       "voteRuleLabel": "Majority of Parliament's component members",
       "topics": [],
       "committee": null,
-      "rollCalls": 1,
+      "rollCalls": 28,
       "result": "rejected",
       "status": "verified",
       "mepCount": 592,
-      "keywords": "temporary derogation from the eprivacy directive c10-0178/2026 – proposal for rejection — vote in plenary",
-      "file": "data/decisions/ep-2026-07-09-temporary-derogation-from-the-eprivacy-directive-ii-195807.json"
+      "keywords": "temporary derogation from the eprivacy directive c10-0178/2026 – proposal for rejection — vote in plenary c10-0178/2026",
+      "file": "data/decisions/ep-2026-07-09-c10-0178-2026-195807.json"
     },
     {
       "id": "ep-2026-07-08-2023-0142-nle-194919",
@@ -1192,6 +1232,26 @@
       "file": "data/decisions/ep-2026-07-07-2026-0150-cod-194993.json"
     },
     {
+      "id": "ep-2026-07-07-2026-2807-195411",
+      "sourceId": 195411,
+      "title": "Amending the decision of 18 December 2024 on setting up a special committee on the Housing Crisis in the European Union, extending its term of office and adjusting its responsibilities",
+      "subtitle": "B10-0343/2026 – § 2, point p – Am 7 — vote in plenary",
+      "date": "2026-07-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Housing"
+      ],
+      "committee": null,
+      "rollCalls": 6,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 652,
+      "keywords": "amending the decision of 18 december 2024 on setting up a special committee on the housing crisis in the european union, extending its term of office and adjusting its responsibilities b10-0343/2026 – § 2, point p – am 7 — vote in plenary 2026/2807",
+      "file": "data/decisions/ep-2026-07-07-2026-2807-195411.json"
+    },
+    {
       "id": "ep-2026-07-06-monday-s-agenda-request-by-the-ecr-group-italy-and-denmark-195333",
       "sourceId": 195333,
       "title": "Monday’s agenda – Request by the ECR Group – Italy and Denmark",
@@ -1316,6 +1376,26 @@
       "file": "data/decisions/ep-2026-06-18-2026-2652-rsp-194461.json"
     },
     {
+      "id": "ep-2026-06-18-2026-2725-194407",
+      "sourceId": 194407,
+      "title": "Recruitment of children by organised crime",
+      "subtitle": "B10-0275/2026 – After § 15 – Am 8 — vote in plenary",
+      "date": "2026-06-18",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Justice and policing"
+      ],
+      "committee": null,
+      "rollCalls": 10,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 566,
+      "keywords": "recruitment of children by organised crime b10-0275/2026 – after § 15 – am 8 — vote in plenary 2026/2725",
+      "file": "data/decisions/ep-2026-06-18-2026-2725-194407.json"
+    },
+    {
       "id": "ep-2026-06-18-2026-2735-rsp-194562",
       "sourceId": 194562,
       "title": "Political repression and humanitarian situation in Cuba",
@@ -1334,6 +1414,27 @@
       "mepCount": 719,
       "keywords": "political repression and humanitarian situation in cuba 2026/2735(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2735(rsp)",
       "file": "data/decisions/ep-2026-06-18-2026-2735-rsp-194562.json"
+    },
+    {
+      "id": "ep-2026-06-18-2026-2765-194628",
+      "sourceId": 194628,
+      "title": "Political prisoners in Nicaragua – the cases of Carlos Brenes, Salvadora del Socorro Martínez Aburto and Brooklyn Rivera",
+      "subtitle": "B10-0292/2026 – After § 3 – Am 1 — vote in plenary",
+      "date": "2026-06-18",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Nicaragua",
+        "Human rights"
+      ],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 559,
+      "keywords": "political prisoners in nicaragua – the cases of carlos brenes, salvadora del socorro martínez aburto and brooklyn rivera b10-0292/2026 – after § 3 – am 1 — vote in plenary 2026/2765",
+      "file": "data/decisions/ep-2026-06-18-2026-2765-194628.json"
     },
     {
       "id": "ep-2026-06-18-2026-2766-rsp-194644",
@@ -1417,6 +1518,30 @@
       "file": "data/decisions/ep-2026-06-17-2021-0042-nle-193573.json"
     },
     {
+      "id": "ep-2026-06-17-2023-0226-194434",
+      "sourceId": 194434,
+      "title": "Plants obtained by certain new genomic techniques and their food and feed",
+      "subtitle": "A10-0175/2026 – Jessica Polfjärd – After Article 37 – Am 15,16= 24= 36= — vote in plenary",
+      "date": "2026-06-17",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
+      "topics": [
+        "Food and farming"
+      ],
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 18,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 663,
+      "keywords": "plants obtained by certain new genomic techniques and their food and feed a10-0175/2026 – jessica polfjärd – after article 37 – am 15,16= 24= 36= — vote in plenary 2023/0226",
+      "file": "data/decisions/ep-2026-06-17-2023-0226-194434.json"
+    },
+    {
       "id": "ep-2026-06-17-2023-0226-cod-194424",
       "sourceId": 194424,
       "title": "Plants obtained by certain new genomic techniques and their food and feed",
@@ -1455,7 +1580,7 @@
         "label": "Civil Liberties, Justice and Home Affairs",
         "short": "Civil Liberties"
       },
-      "rollCalls": 1,
+      "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
       "mepCount": 658,
@@ -1891,7 +2016,7 @@
         "label": "International Trade",
         "short": "Trade"
       },
-      "rollCalls": 1,
+      "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
       "mepCount": 634,
@@ -1939,7 +2064,7 @@
         "label": "Internal Market and Consumer Protection",
         "short": "Single Market"
       },
-      "rollCalls": 1,
+      "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
       "mepCount": 654,
@@ -2876,6 +3001,50 @@
       "file": "data/decisions/ep-2026-04-30-2025-2247-bui-191944.json"
     },
     {
+      "id": "ep-2026-04-30-2026-2596-192348",
+      "sourceId": 192348,
+      "title": "Enforcement of the Digital Markets Act",
+      "subtitle": "B10-0190/2026 – After § 14 – Am 6 — vote in plenary",
+      "date": "2026-04-30",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Digital and tech"
+      ],
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 6,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 578,
+      "keywords": "enforcement of the digital markets act b10-0190/2026 – after § 14 – am 6 — vote in plenary 2026/2596",
+      "file": "data/decisions/ep-2026-04-30-2026-2596-192348.json"
+    },
+    {
+      "id": "ep-2026-04-30-2026-2693-192305",
+      "sourceId": 192305,
+      "title": "The need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment",
+      "subtitle": "RC-B10-0206/2026 – Recital I/2 — vote in plenary",
+      "date": "2026-04-30",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Digital and tech"
+      ],
+      "committee": null,
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 551,
+      "keywords": "the need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment rc-b10-0206/2026 – recital i/2 — vote in plenary 2026/2693",
+      "file": "data/decisions/ep-2026-04-30-2026-2693-192305.json"
+    },
+    {
       "id": "ep-2026-04-30-2026-2700-rsp-192341",
       "sourceId": 192341,
       "title": "Ensuring accountability and justice in response to Russia’s continued attacks against the civilian population in Ukraine",
@@ -3131,7 +3300,7 @@
         "label": "Environment, Public Health and Food Safety",
         "short": "Environment"
       },
-      "rollCalls": 1,
+      "rollCalls": 12,
       "result": "adopted",
       "status": "verified",
       "mepCount": 634,
@@ -3659,30 +3828,6 @@
       "file": "data/decisions/ep-2026-04-29-2026-2651-rsp-191320.json"
     },
     {
-      "id": "ep-2026-04-28-2021-0297-190404",
-      "sourceId": 190404,
-      "title": "Generalised scheme of tariff preferences",
-      "subtitle": "A9-0147/2022 – Bernd Lange – Proposal to vote on amendments — vote in plenary",
-      "date": "2026-04-28",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "Trade"
-      ],
-      "committee": {
-        "code": "INTA",
-        "label": "International Trade",
-        "short": "Trade"
-      },
-      "rollCalls": 1,
-      "result": "adopted",
-      "status": "verified",
-      "mepCount": 650,
-      "keywords": "generalised scheme of tariff preferences a9-0147/2022 – bernd lange – proposal to vote on amendments — vote in plenary 2021/0297",
-      "file": "data/decisions/ep-2026-04-28-2021-0297-190404.json"
-    },
-    {
       "id": "ep-2026-04-28-2021-0297-cod-190095",
       "sourceId": 190095,
       "title": "Generalised scheme of tariff preferences",
@@ -4083,7 +4228,7 @@
         "label": "Civil Liberties, Justice and Home Affairs",
         "short": "Civil Liberties"
       },
-      "rollCalls": 1,
+      "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
       "mepCount": 641,
@@ -4206,30 +4351,6 @@
       "file": "data/decisions/ep-2026-03-26-2025-0233-nle-189250.json"
     },
     {
-      "id": "ep-2026-03-26-2025-0260-189902",
-      "sourceId": 189902,
-      "title": "Non-application of customs duties on imports of certain goods",
-      "subtitle": "A10-0070/2026 – Bernd Lange – Motion for adjournment of vote — vote in plenary",
-      "date": "2026-03-26",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "Trade"
-      ],
-      "committee": {
-        "code": "INTA",
-        "label": "International Trade",
-        "short": "Trade"
-      },
-      "rollCalls": 1,
-      "result": "rejected",
-      "status": "verified",
-      "mepCount": 640,
-      "keywords": "non-application of customs duties on imports of certain goods a10-0070/2026 – bernd lange – motion for adjournment of vote — vote in plenary 2025/0260",
-      "file": "data/decisions/ep-2026-03-26-2025-0260-189902.json"
-    },
-    {
       "id": "ep-2026-03-26-2025-0260-cod-189313",
       "sourceId": 189313,
       "title": "Non-application of customs duties on imports of certain goods",
@@ -4294,7 +4415,7 @@
         "label": "International Trade",
         "short": "Trade"
       },
-      "rollCalls": 1,
+      "rollCalls": 17,
       "result": "rejected",
       "status": "verified",
       "mepCount": 638,
@@ -4631,6 +4752,28 @@
       "file": "data/decisions/ep-2026-03-12-2025-2138-ini-186166.json"
     },
     {
+      "id": "ep-2026-03-12-2025-2875-188897",
+      "sourceId": 188897,
+      "title": "Multilateral negotiations in view of the WTO’s 14th Ministerial Conference in Yaoundé, 26 to 29 March 2026",
+      "subtitle": "B10-0155/2026 – After § 12 – Am 1 — vote in plenary",
+      "date": "2026-03-12",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 543,
+      "keywords": "multilateral negotiations in view of the wto’s 14th ministerial conference in yaoundé, 26 to 29 march 2026 b10-0155/2026 – after § 12 – am 1 — vote in plenary 2025/2875",
+      "file": "data/decisions/ep-2026-03-12-2025-2875-188897.json"
+    },
+    {
       "id": "ep-2026-03-12-2026-2641-rsp-189169",
       "sourceId": 189169,
       "title": "Human trafficking and grave human rights violations linked to the recruitment of non-Russian nationals, in particular from Africa, for Russia’s war of aggression in Ukraine",
@@ -4896,7 +5039,7 @@
         "label": "Foreign Affairs",
         "short": "Foreign Affairs"
       },
-      "rollCalls": 1,
+      "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
       "mepCount": 632,
@@ -5012,7 +5155,7 @@
         "label": "Legal Affairs",
         "short": "Legal Affairs"
       },
-      "rollCalls": 1,
+      "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
       "mepCount": 618,
@@ -5056,7 +5199,7 @@
         "label": "Civil Liberties, Justice and Home Affairs",
         "short": "Civil Liberties"
       },
-      "rollCalls": 1,
+      "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
       "mepCount": 624,
@@ -5394,6 +5537,26 @@
       "file": "data/decisions/ep-2026-02-12-2025-2240-ini-184379.json"
     },
     {
+      "id": "ep-2026-02-12-2026-2586-185228",
+      "sourceId": 185228,
+      "title": "World Cancer Day",
+      "subtitle": "RC-B10-0112/2026 – § 13/4 — vote in plenary",
+      "date": "2026-02-12",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Public health"
+      ],
+      "committee": null,
+      "rollCalls": 6,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 544,
+      "keywords": "world cancer day rc-b10-0112/2026 – § 13/4 — vote in plenary 2026/2586",
+      "file": "data/decisions/ep-2026-02-12-2026-2586-185228.json"
+    },
+    {
       "id": "ep-2026-02-12-2026-2602-rsp-185339",
       "sourceId": 185339,
       "title": "Situation in Northeast Syria, the violence against civilians and the need to maintain a sustainable ceasefire",
@@ -5679,24 +5842,22 @@
       "file": "data/decisions/ep-2026-02-11-2026-2535-rsp-184690.json"
     },
     {
-      "id": "ep-2026-02-11-amending-the-multiannual-financial-framework-for-the-years-184721",
+      "id": "ep-2026-02-11-c10-0023-2026-184721",
       "sourceId": 184721,
-      "title": "Amending the multiannual financial framework for the years 2021 to 2027",
-      "subtitle": "C10-0023/2026 – Proposal for a Council regulation — vote in plenary",
+      "title": "C10-0023/2026 – Proposal for a Council regulation",
+      "subtitle": "vote in plenary",
       "date": "2026-02-11",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [
-        "The EU budget"
-      ],
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 652,
-      "keywords": "amending the multiannual financial framework for the years 2021 to 2027 c10-0023/2026 – proposal for a council regulation — vote in plenary",
-      "file": "data/decisions/ep-2026-02-11-amending-the-multiannual-financial-framework-for-the-years-184721.json"
+      "keywords": "c10-0023/2026 – proposal for a council regulation vote in plenary c10-0023/2026",
+      "file": "data/decisions/ep-2026-02-11-c10-0023-2026-184721.json"
     },
     {
       "id": "ep-2026-02-10-2024-0311-cod-184174",
@@ -5849,7 +6010,7 @@
         "label": "International Trade",
         "short": "Trade"
       },
-      "rollCalls": 1,
+      "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
       "mepCount": 648,
@@ -6121,6 +6282,24 @@
       "file": "data/decisions/ep-2026-01-22-2026-2568-rsp-184065.json"
     },
     {
+      "id": "ep-2026-01-22-2026-2571-184070",
+      "sourceId": 184070,
+      "title": "Presidential elections in Honduras, the non-recognition of the outcome by the incumbent administration and the attacks on opposition members of the National Assembly",
+      "subtitle": "RC-B10-0064/2026 – After recital A – Am 5 — vote in plenary",
+      "date": "2026-01-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": null,
+      "rollCalls": 3,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 616,
+      "keywords": "presidential elections in honduras, the non-recognition of the outcome by the incumbent administration and the attacks on opposition members of the national assembly rc-b10-0064/2026 – after recital a – am 5 — vote in plenary 2026/2571",
+      "file": "data/decisions/ep-2026-01-22-2026-2571-184070.json"
+    },
+    {
       "id": "ep-2026-01-22-2026-2572-rsp-184066",
       "sourceId": 184066,
       "title": "Case of Joseph Figueira Martin in the Central African Republic",
@@ -6157,6 +6336,28 @@
       "mepCount": 719,
       "keywords": "conviction and imminent sentencing of jimmy lai in hong kong 2026/2573(rsp) — vote in plenary proposition de résolution 2026/2573(rsp)",
       "file": "data/decisions/ep-2026-01-22-2026-2573-rsp-184067.json"
+    },
+    {
+      "id": "ep-2026-01-21-2013-0072-183557",
+      "sourceId": 183557,
+      "title": "Air passenger rights",
+      "subtitle": "A10-0001/2026 – Andrey Novakov – Amendments by the committee responsible – put to the vote collectively – Am 1-243 — vote in plenary",
+      "date": "2026-01-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
+      "topics": [],
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 656,
+      "keywords": "air passenger rights a10-0001/2026 – andrey novakov – amendments by the committee responsible – put to the vote collectively – am 1-243 — vote in plenary 2013/0072",
+      "file": "data/decisions/ep-2026-01-21-2013-0072-183557.json"
     },
     {
       "id": "ep-2026-01-21-2024-0305-nle-183058",
@@ -6318,7 +6519,7 @@
       "file": "data/decisions/ep-2026-01-21-2026-2560-rsp-183885.json"
     },
     {
-      "id": "ep-2026-01-21-enhanced-cooperation-on-the-establishment-of-a-loan-for-uk-183870",
+      "id": "ep-2026-01-21-c10-0004-2026-183870",
       "sourceId": 183870,
       "title": "Enhanced cooperation on the establishment of a Loan for Ukraine",
       "subtitle": "C10-0004/2026 – Proposal for a Council decision — vote in plenary",
@@ -6334,8 +6535,8 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 658,
-      "keywords": "enhanced cooperation on the establishment of a loan for ukraine c10-0004/2026 – proposal for a council decision — vote in plenary",
-      "file": "data/decisions/ep-2026-01-21-enhanced-cooperation-on-the-establishment-of-a-loan-for-uk-183870.json"
+      "keywords": "enhanced cooperation on the establishment of a loan for ukraine c10-0004/2026 – proposal for a council decision — vote in plenary c10-0004/2026",
+      "file": "data/decisions/ep-2026-01-21-c10-0004-2026-183870.json"
     },
     {
       "id": "ep-2026-01-20-2025-0102-cod-183050",
@@ -6498,6 +6699,26 @@
       "mepCount": 719,
       "keywords": "just transition directive in the world of work: ensuring the creation of jobs and revitalising local economies 2025/2131(inl) — vote in plenary proposition de résolution (ensemble du texte) 2025/2131(inl)",
       "file": "data/decisions/ep-2026-01-20-2025-2131-inl-183122.json"
+    },
+    {
+      "id": "ep-2026-01-20-b10-0057-2026-183539",
+      "sourceId": 183539,
+      "title": "Motion FOR A RESOLUTION on the murder of Mehdi Kessaci: urgent need for ambitious European action against drug trafficking",
+      "subtitle": "B10-0057/2026 – § 3 – Am 5 — vote in plenary",
+      "date": "2026-01-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Justice and policing"
+      ],
+      "committee": null,
+      "rollCalls": 12,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 648,
+      "keywords": "motion for a resolution on the murder of mehdi kessaci: urgent need for ambitious european action against drug trafficking b10-0057/2026 – § 3 – am 5 — vote in plenary b10-0057/2026",
+      "file": "data/decisions/ep-2026-01-20-b10-0057-2026-183539.json"
     },
     {
       "id": "ep-2025-12-18-2024-2123-ini-182388",

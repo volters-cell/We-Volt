@@ -14,12 +14,19 @@
     "reference": "2025/0359",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0359"
   },
+  "document": "A10-0073/2026",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 135 in favour, 468 against, 51 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "IMCO",
+    "label": "Internal Market and Consumer Protection",
+    "short": "Single Market"
+  },
+  "rollCalls": 2,
   "ballots": [
     [
       840,
@@ -2661,11 +2668,6 @@
     }
   ],
   "countries": {},
-  "committee": {
-    "code": "IMCO",
-    "label": "Internal Market and Consumer Protection",
-    "short": "Single Market"
-  },
   "topics": [
     "Digital and tech"
   ]

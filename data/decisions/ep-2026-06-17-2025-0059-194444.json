@@ -14,12 +14,19 @@
     "reference": "2025/0059",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0059"
   },
+  "document": "A10-0048/2026",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 258 in favour, 394 against, 6 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "LIBE",
+    "label": "Civil Liberties, Justice and Home Affairs",
+    "short": "Civil Liberties"
+  },
+  "rollCalls": 3,
   "ballots": [
     [
       840,
@@ -2676,10 +2683,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "committee": {
-    "code": "LIBE",
-    "label": "Civil Liberties, Justice and Home Affairs",
-    "short": "Civil Liberties"
-  }
+  "countries": {}
 }
