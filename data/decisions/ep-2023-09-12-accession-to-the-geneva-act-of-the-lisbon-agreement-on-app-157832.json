@@ -2551,5 +2551,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Enlargement"
+  ]
 }

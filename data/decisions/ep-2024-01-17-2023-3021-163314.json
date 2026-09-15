@@ -2564,5 +2564,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Slovakia",
+    "Rule of law"
+  ]
 }

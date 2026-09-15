@@ -2409,5 +2409,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Malta",
+    "Rule of law"
+  ]
 }

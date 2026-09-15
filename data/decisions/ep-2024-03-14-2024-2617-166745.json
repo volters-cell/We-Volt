@@ -2228,5 +2228,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Afghanistan",
+    "Environment"
+  ]
 }

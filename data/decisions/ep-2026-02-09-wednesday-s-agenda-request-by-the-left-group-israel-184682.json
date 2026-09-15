@@ -1727,5 +1727,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Israel and Palestine",
+    "How Parliament works"
+  ]
 }

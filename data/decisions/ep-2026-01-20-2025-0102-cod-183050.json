@@ -2925,5 +2925,8 @@
     "code": "SANT",
     "label": "Public Health",
     "short": "Public Health"
-  }
+  },
+  "topics": [
+    "Public health"
+  ]
 }

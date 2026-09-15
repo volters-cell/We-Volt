@@ -2925,5 +2925,8 @@
     "code": "SEDE",
     "label": "Security and Defence",
     "short": "Security and Defence"
-  }
+  },
+  "topics": [
+    "Defence and security"
+  ]
 }

@@ -2068,5 +2068,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Syria"
+  ]
 }

@@ -2435,5 +2435,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Digital and tech"
+  ]
 }

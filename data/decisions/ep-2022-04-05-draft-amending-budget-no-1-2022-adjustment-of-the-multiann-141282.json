@@ -2563,5 +2563,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "The EU budget"
+  ]
 }

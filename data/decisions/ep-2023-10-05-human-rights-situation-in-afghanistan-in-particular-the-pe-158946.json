@@ -2247,5 +2247,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Afghanistan",
+    "Human rights"
+  ]
 }

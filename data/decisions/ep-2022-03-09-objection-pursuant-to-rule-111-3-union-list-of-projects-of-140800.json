@@ -2823,5 +2823,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Energy"
+  ]
 }

@@ -2775,5 +2775,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Iran",
+    "Human rights"
+  ]
 }

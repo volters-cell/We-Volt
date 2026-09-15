@@ -2921,5 +2921,8 @@
     "code": "BUDG",
     "label": "Budgets",
     "short": "Budgets"
-  }
+  },
+  "topics": [
+    "The EU budget"
+  ]
 }

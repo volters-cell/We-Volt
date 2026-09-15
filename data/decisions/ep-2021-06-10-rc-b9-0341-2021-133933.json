@@ -2769,5 +2769,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Cuba",
+    "Human rights"
+  ]
 }

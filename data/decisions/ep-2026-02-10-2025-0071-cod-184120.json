@@ -2925,5 +2925,8 @@
     "code": "AGRI",
     "label": "Agriculture and Rural Development",
     "short": "Agriculture"
-  }
+  },
+  "topics": [
+    "Food and farming"
+  ]
 }

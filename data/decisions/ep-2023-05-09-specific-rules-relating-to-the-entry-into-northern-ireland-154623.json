@@ -2547,5 +2547,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "United Kingdom",
+    "Environment"
+  ]
 }

@@ -2368,5 +2368,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Moldova",
+    "Energy"
+  ]
 }

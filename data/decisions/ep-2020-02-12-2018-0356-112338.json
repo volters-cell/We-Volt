@@ -2633,5 +2633,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Vietnam",
+    "Trade"
+  ]
 }

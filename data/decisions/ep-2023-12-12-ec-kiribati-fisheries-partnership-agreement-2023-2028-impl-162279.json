@@ -2487,5 +2487,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Fisheries"
+  ]
 }

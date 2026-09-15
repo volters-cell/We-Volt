@@ -2271,5 +2271,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Human rights"
+  ]
 }

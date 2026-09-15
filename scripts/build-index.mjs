@@ -55,7 +55,9 @@ for (const name of files) {
     body: decision.body,
     bodyLabel: decision.bodyLabel,
     voteRuleLabel: decision.voteRuleLabel || '',
-    // The chip on the card: the committee that wrote the text.
+    // The chips on the card: what the vote is about, read from its title,
+    // and the committee that wrote the text where the portal gave one.
+    topics: decision.topics || [],
     committee: decision.committee || null,
     rollCalls: decision.rollCalls || 1,
     result: (decision.outcome && decision.outcome.result) || 'recorded',

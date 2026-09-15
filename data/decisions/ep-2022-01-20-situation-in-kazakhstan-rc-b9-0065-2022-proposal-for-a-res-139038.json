@@ -2723,5 +2723,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Kazakhstan"
+  ]
 }

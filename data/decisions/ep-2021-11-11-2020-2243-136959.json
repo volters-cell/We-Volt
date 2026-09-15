@@ -2285,5 +2285,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Education and culture"
+  ]
 }

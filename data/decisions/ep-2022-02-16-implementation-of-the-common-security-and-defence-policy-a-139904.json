@@ -2795,5 +2795,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Defence and security"
+  ]
 }

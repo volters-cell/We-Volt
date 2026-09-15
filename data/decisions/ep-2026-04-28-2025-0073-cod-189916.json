@@ -2925,5 +2925,8 @@
     "code": "EMPL",
     "label": "Employment and Social Affairs",
     "short": "Employment"
-  }
+  },
+  "topics": [
+    "The EU budget"
+  ]
 }

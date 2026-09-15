@@ -2813,5 +2813,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Hungary",
+    "The EU budget"
+  ]
 }

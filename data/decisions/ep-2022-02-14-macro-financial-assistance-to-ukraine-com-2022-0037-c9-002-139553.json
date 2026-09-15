@@ -2815,5 +2815,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine",
+    "How Parliament works"
+  ]
 }

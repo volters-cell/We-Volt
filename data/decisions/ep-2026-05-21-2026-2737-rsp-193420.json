@@ -2912,5 +2912,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Afghanistan",
+    "Gender equality"
+  ]
 }

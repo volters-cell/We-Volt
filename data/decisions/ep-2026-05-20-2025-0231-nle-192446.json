@@ -2917,5 +2917,8 @@
     "code": "LIBE",
     "label": "Civil Liberties, Justice and Home Affairs",
     "short": "Civil Liberties"
-  }
+  },
+  "topics": [
+    "Digital and tech"
+  ]
 }

@@ -2325,5 +2325,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Slovakia"
+  ]
 }

@@ -2773,5 +2773,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine",
+    "Defence and security"
+  ]
 }

@@ -2381,5 +2381,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Hungary"
+  ]
 }

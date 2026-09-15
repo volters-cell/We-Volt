@@ -2272,5 +2272,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Western Balkans"
+  ]
 }

@@ -2229,5 +2229,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Rule of law"
+  ]
 }

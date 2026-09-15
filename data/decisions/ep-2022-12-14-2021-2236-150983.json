@@ -2477,5 +2477,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Georgia"
+  ]
 }

@@ -2456,5 +2456,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Armenia and Azerbaijan",
+    "Justice and policing"
+  ]
 }

@@ -2775,5 +2775,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Gender equality"
+  ]
 }

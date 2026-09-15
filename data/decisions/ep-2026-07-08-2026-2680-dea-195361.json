@@ -2925,5 +2925,8 @@
     "code": "ITRE",
     "label": "Industry, Research and Energy",
     "short": "Industry and Energy"
-  }
+  },
+  "topics": [
+    "Energy"
+  ]
 }

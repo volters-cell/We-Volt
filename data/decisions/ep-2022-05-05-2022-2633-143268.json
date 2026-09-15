@@ -2324,5 +2324,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine",
+    "Gender equality"
+  ]
 }

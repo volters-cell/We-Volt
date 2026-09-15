@@ -2821,5 +2821,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Egypt",
+    "Human rights"
+  ]
 }

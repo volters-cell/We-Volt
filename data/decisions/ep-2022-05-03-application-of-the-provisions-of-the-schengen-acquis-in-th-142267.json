@@ -2159,5 +2159,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Cyprus",
+    "Migration"
+  ]
 }

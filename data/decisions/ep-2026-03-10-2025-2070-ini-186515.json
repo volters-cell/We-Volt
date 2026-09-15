@@ -2921,5 +2921,8 @@
     "code": "HOUS",
     "label": "the Housing Crisis",
     "short": "Housing"
-  }
+  },
+  "topics": [
+    "Housing"
+  ]
 }

@@ -2665,5 +2665,8 @@
     "code": "IMCO",
     "label": "Internal Market and Consumer Protection",
     "short": "Single Market"
-  }
+  },
+  "topics": [
+    "Digital and tech"
+  ]
 }

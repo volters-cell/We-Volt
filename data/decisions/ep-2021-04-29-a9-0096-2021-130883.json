@@ -2809,5 +2809,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Justice and policing"
+  ]
 }

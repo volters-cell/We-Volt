@@ -2296,5 +2296,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine",
+    "Energy"
+  ]
 }

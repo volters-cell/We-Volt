@@ -2305,5 +2305,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Public health"
+  ]
 }

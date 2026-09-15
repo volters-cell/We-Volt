@@ -2925,5 +2925,8 @@
     "code": "ECON",
     "label": "Economic and Monetary Affairs",
     "short": "Economy"
-  }
+  },
+  "topics": [
+    "Single market"
+  ]
 }

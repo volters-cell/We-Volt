@@ -2925,5 +2925,8 @@
     "code": "PECH",
     "label": "Fisheries",
     "short": "Fisheries"
-  }
+  },
+  "topics": [
+    "Fisheries"
+  ]
 }

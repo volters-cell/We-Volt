@@ -2220,5 +2220,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Hungary",
+    "Rule of law"
+  ]
 }

@@ -2925,5 +2925,9 @@
     "code": "BUDG",
     "label": "Budgets",
     "short": "Budgets"
-  }
+  },
+  "topics": [
+    "Cyprus",
+    "The EU budget"
+  ]
 }

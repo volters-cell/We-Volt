@@ -2499,5 +2499,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Disinformation"
+  ]
 }

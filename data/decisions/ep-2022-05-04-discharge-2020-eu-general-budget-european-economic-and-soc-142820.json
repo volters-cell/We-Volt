@@ -2571,5 +2571,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Economy and money"
+  ]
 }

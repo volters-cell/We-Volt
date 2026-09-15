@@ -2755,5 +2755,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Armenia and Azerbaijan",
+    "Education and culture"
+  ]
 }

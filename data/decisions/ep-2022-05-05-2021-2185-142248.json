@@ -2448,5 +2448,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Single market"
+  ]
 }

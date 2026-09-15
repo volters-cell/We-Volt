@@ -2655,5 +2655,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Jobs and workers"
+  ]
 }

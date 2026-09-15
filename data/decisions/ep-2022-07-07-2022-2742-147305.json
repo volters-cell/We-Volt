@@ -2113,5 +2113,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "United States",
+    "Public health"
+  ]
 }

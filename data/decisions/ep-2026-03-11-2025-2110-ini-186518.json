@@ -2921,5 +2921,8 @@
     "code": "AFET",
     "label": "Foreign Affairs",
     "short": "Foreign Affairs"
-  }
+  },
+  "topics": [
+    "Enlargement"
+  ]
 }

@@ -2701,5 +2701,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Russia",
+    "Human rights"
+  ]
 }

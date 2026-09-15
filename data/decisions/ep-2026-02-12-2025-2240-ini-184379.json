@@ -2925,5 +2925,8 @@
     "code": "FEMM",
     "label": "Women's Rights and Gender Equality",
     "short": "Gender Equality"
-  }
+  },
+  "topics": [
+    "Gender equality"
+  ]
 }

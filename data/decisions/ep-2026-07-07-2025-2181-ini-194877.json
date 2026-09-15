@@ -2925,5 +2925,8 @@
     "code": "CULT",
     "label": "Culture and Education",
     "short": "Culture and Education"
-  }
+  },
+  "topics": [
+    "Digital and tech"
+  ]
 }

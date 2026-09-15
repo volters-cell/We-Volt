@@ -2056,5 +2056,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Cuba"
+  ]
 }

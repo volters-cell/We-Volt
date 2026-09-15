@@ -2805,5 +2805,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "United Kingdom",
+    "Digital and tech"
+  ]
 }

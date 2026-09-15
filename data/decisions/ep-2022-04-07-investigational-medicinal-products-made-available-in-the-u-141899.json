@@ -2271,5 +2271,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "United Kingdom",
+    "Public health"
+  ]
 }

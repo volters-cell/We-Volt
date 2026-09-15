@@ -2329,5 +2329,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ethiopia",
+    "Human rights"
+  ]
 }

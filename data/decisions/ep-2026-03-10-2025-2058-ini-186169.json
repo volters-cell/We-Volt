@@ -2921,5 +2921,8 @@
     "code": "JURI",
     "label": "Legal Affairs",
     "short": "Legal Affairs"
-  }
+  },
+  "topics": [
+    "Digital and tech"
+  ]
 }

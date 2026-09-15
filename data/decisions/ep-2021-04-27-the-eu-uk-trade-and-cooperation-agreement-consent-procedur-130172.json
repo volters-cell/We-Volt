@@ -2828,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "United Kingdom",
+    "Trade"
+  ]
 }

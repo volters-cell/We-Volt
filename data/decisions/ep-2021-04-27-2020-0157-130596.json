@@ -2841,5 +2841,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Trade"
+  ]
 }

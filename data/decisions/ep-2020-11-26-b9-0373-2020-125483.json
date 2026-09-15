@@ -2729,5 +2729,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Poland"
+  ]
 }

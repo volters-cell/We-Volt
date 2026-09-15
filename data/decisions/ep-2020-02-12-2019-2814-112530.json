@@ -2561,5 +2561,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Animal welfare"
+  ]
 }

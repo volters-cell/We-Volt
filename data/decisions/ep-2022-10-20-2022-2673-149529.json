@@ -2357,5 +2357,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Egypt",
+    "Climate"
+  ]
 }

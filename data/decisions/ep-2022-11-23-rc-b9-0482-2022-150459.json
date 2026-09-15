@@ -2429,5 +2429,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Russia",
+    "Justice and policing"
+  ]
 }

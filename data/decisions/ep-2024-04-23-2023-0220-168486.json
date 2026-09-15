@@ -2440,5 +2440,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Egypt",
+    "Economy and money"
+  ]
 }

@@ -2297,5 +2297,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Sahel"
+  ]
 }

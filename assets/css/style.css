@@ -2470,6 +2470,8 @@ button.permalink {
   white-space: nowrap;
 }
 .card-chips .chip-quiet { background: none; border-color: transparent; color: var(--ink-faint); }
+/* The subject carries the weight; the committee and the count sit behind it. */
+.card-chips .chip-topic { font-weight: 600; color: var(--ink); }
 .card-foot { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; font-size: .74rem; color: var(--ink-faint); }
 .card-rule { color: var(--ink-faint); }
 

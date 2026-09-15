@@ -2800,5 +2800,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Kazakhstan",
+    "Human rights"
+  ]
 }

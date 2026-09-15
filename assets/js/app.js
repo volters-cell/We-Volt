@@ -768,17 +768,29 @@
 
      A text with no committee simply has no chip. Nothing is guessed. */
   function committeeChip(item) {
+    const chips = [];
+
+    /* What the vote is about, first, because that is what a reader is
+       scanning for: Ukraine, Migration, Public health. It is read from the
+       title the Parliament gave the text, so it says only what the title
+       says. */
+    (item.topics || []).forEach(function (topic) {
+      chips.push('<span class="chip chip-topic">' + esc(topic) + '</span>');
+    });
+
+    /* Then who wrote it, where the portal named a committee. */
     const committee = item.committee;
-    if (!committee || !committee.code) return '';
-    const full = committee.label || committee.code;
-    const short = committee.short || full;
-    return '<span class="card-chips">' +
-      '<span class="chip" title="' + esc('Committee on ' + full) + '">' +
-        esc(short) + '</span>' +
-      (item.rollCalls > 1
-        ? '<span class="chip chip-quiet">' + item.rollCalls + ' roll-calls</span>'
-        : '') +
-      '</span>';
+    if (committee && committee.code) {
+      const full = committee.label || committee.code;
+      chips.push('<span class="chip chip-quiet" title="' +
+        esc('Committee on ' + full) + '">' + esc(committee.short || full) + '</span>');
+    }
+
+    if (item.rollCalls > 1) {
+      chips.push('<span class="chip chip-quiet">' + item.rollCalls + ' roll-calls</span>');
+    }
+
+    return chips.length ? '<span class="card-chips">' + chips.join('') + '</span>' : '';
   }
 
   function shortBody(body) {

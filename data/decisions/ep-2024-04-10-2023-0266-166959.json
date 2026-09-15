@@ -2460,5 +2460,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Climate"
+  ]
 }

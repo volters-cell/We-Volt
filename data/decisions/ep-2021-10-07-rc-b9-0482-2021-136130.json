@@ -2741,5 +2741,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Belarus"
+  ]
 }

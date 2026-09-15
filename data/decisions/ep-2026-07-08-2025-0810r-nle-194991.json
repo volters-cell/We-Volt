@@ -2925,5 +2925,9 @@
     "code": "INTA",
     "label": "International Trade",
     "short": "Trade"
-  }
+  },
+  "topics": [
+    "Mexico",
+    "Trade"
+  ]
 }

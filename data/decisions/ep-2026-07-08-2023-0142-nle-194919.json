@@ -2925,5 +2925,9 @@
     "code": "TRAN",
     "label": "Transport and Tourism",
     "short": "Transport"
-  }
+  },
+  "topics": [
+    "Morocco",
+    "Economy and money"
+  ]
 }
