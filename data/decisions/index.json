@@ -50,9 +50,9 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 719,
+      "votes": 731,
       "from": "2024-07-17",
-      "until": "2026-09-14",
+      "until": "2026-09-15",
       "file": null
     },
     {
@@ -66,6 +66,291 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-09-15-a10-0039-2026-195833",
+      "sourceId": 195833,
+      "title": "Transposition dans le droit de l’Union de mesures adoptées par des organisations régionales de gestion des pêches - Implementation into Union law of measures adopted by regional fisheries management organisations - Umsetzung von Maßnahmen mehrerer regionaler Fischereiorganisationen in Unionsrecht",
+      "subtitle": "A10-0039/2026 - Thomas Bajada - Accord provisoire - Am 292 — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Fisheries"
+      ],
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 669,
+      "keywords": "transposition dans le droit de l’union de mesures adoptées par des organisations régionales de gestion des pêches - implementation into union law of measures adopted by regional fisheries management organisations - umsetzung von maßnahmen mehrerer regionaler fischereiorganisationen in unionsrecht a10-0039/2026 - thomas bajada - accord provisoire - am 292 — vote in plenary a10-0039/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0039-2026-195833.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0098-2026-196227",
+      "sourceId": 196227,
+      "title": "Réserve de stabilité du marché pour les secteurs du bâtiment, du transport routier et d’autres secteurs - Market stability reserve for the buildings, road transport and additional sectors - Marktstabilitätsreserve für den Gebäude- und den Straßenverkehrssektor sowie für andere Sektoren",
+      "subtitle": "A10-0098/2026 - Danuše Nerudová - Accord provisoire - Am 30 — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Transport"
+      ],
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 666,
+      "keywords": "réserve de stabilité du marché pour les secteurs du bâtiment, du transport routier et d’autres secteurs - market stability reserve for the buildings, road transport and additional sectors - marktstabilitätsreserve für den gebäude- und den straßenverkehrssektor sowie für andere sektoren a10-0098/2026 - danuše nerudová - accord provisoire - am 30 — vote in plenary a10-0098/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0098-2026-196227.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0150-2025-195835",
+      "sourceId": 195835,
+      "title": "Commission générale des pêches pour la Méditerranée (CGPM): pêche dans la zone couverte par l’accord de la CGPM - General Fisheries Commission for the Mediterranean (GFCM): fishing in the GFCM Agreement area - Allgemeine Kommission für die Fischerei im Mittelmeer (GFCM): Fischerei im Übereinkommensgebiet der GFCM",
+      "subtitle": "A10-0150/2025 - Željana Zovko - Accord provisoire - Am 130 — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Fisheries"
+      ],
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 670,
+      "keywords": "commission générale des pêches pour la méditerranée (cgpm): pêche dans la zone couverte par l’accord de la cgpm - general fisheries commission for the mediterranean (gfcm): fishing in the gfcm agreement area - allgemeine kommission für die fischerei im mittelmeer (gfcm): fischerei im übereinkommensgebiet der gfcm a10-0150/2025 - željana zovko - accord provisoire - am 130 — vote in plenary a10-0150/2025",
+      "file": "data/decisions/ep-2026-09-15-a10-0150-2025-195835.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0199-2026-195987",
+      "sourceId": 195987,
+      "title": "Conclusions et recommandations de la commission spéciale sur le bouclier européen de la démocratie - Findings and recommendations of the Special Committee on the European Democracy Shield - Feststellungen und Empfehlungen des Sonderausschusses für den Europäischen Schutzschild für die Demokratie",
+      "subtitle": "A10-0199/2026 - Tomas Tobé - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": {
+        "code": "EUDS",
+        "label": "the European Democracy Shield",
+        "short": "Democracy Shield"
+      },
+      "rollCalls": 85,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 666,
+      "keywords": "conclusions et recommandations de la commission spéciale sur le bouclier européen de la démocratie - findings and recommendations of the special committee on the european democracy shield - feststellungen und empfehlungen des sonderausschusses für den europäischen schutzschild für die demokratie a10-0199/2026 - tomas tobé - proposition de résolution (ensemble du texte) — vote in plenary a10-0199/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0199-2026-195987.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0201-2026-196071",
+      "sourceId": 196071,
+      "title": "Mécanisme d’ajustement carbone aux frontières: extension de son champ d’application aux marchandises en aval et renforcement des mesures anticontournement - Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures - CO2-Grenzausgleichssystem: Ausweitung des Anwendungsbereichs auf nachgelagerte Waren sowie auf Maßnahmen zur Bekämpfung von Umgehungspraktiken",
+      "subtitle": "A10-0201/2026 - Mohammed Chahim - Proposition de la Commission — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Climate"
+      ],
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 18,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 673,
+      "keywords": "mécanisme d’ajustement carbone aux frontières: extension de son champ d’application aux marchandises en aval et renforcement des mesures anticontournement - carbon border adjustment mechanism: extension of its scope to downstream goods and anti-circumvention measures - co2-grenzausgleichssystem: ausweitung des anwendungsbereichs auf nachgelagerte waren sowie auf maßnahmen zur bekämpfung von umgehungspraktiken a10-0201/2026 - mohammed chahim - proposition de la commission — vote in plenary a10-0201/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0201-2026-196071.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0202-2026-196109",
+      "sourceId": 196109,
+      "title": "Établissement du Fonds temporaire pour la décarbonation - Establishing the Temporary Decarbonisation Fund - Einrichtung des Temporären Dekarbonisierungsfonds",
+      "subtitle": "A10-0202/2026 - Pascal Canfin - Proposition de la Commission — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [],
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 10,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 676,
+      "keywords": "établissement du fonds temporaire pour la décarbonation - establishing the temporary decarbonisation fund - einrichtung des temporären dekarbonisierungsfonds a10-0202/2026 - pascal canfin - proposition de la commission — vote in plenary a10-0202/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0202-2026-196109.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0214-2026-195850",
+      "sourceId": 195850,
+      "title": "Rôle mondial de l’euro - Global role of the euro - Globale Rolle des Euro",
+      "subtitle": "A10-0214/2026 - Rasmus Andresen - Proposition de résolution — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Economy"
+      ],
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 611,
+      "keywords": "rôle mondial de l’euro - global role of the euro - globale rolle des euro a10-0214/2026 - rasmus andresen - proposition de résolution — vote in plenary a10-0214/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0214-2026-195850.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0218-2026-195849",
+      "sourceId": 195849,
+      "title": "Mise en œuvre de la recommandation du Conseil du 30 octobre 2020 relative à «Un pont vers l’emploi – Renforcer la garantie pour la jeunesse» et remplaçant la recommandation du Conseil du 22 avril 2013 sur l’établissement d’une garantie pour la jeunesse - Implementation of the Council Recommendation on a Bridge to Jobs – Reinforcing the Youth Guarantee - Umsetzung der Empfehlung des Rates zu dem Thema „Eine Brücke ins Arbeitsleben – Stärkung der Jugendgarantie“",
+      "subtitle": "A10-0218/2026 - Hristo Petrov - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Jobs and workers"
+      ],
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 14,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 668,
+      "keywords": "mise en œuvre de la recommandation du conseil du 30 octobre 2020 relative à «un pont vers l’emploi – renforcer la garantie pour la jeunesse» et remplaçant la recommandation du conseil du 22 avril 2013 sur l’établissement d’une garantie pour la jeunesse - implementation of the council recommendation on a bridge to jobs – reinforcing the youth guarantee - umsetzung der empfehlung des rates zu dem thema „eine brücke ins arbeitsleben – stärkung der jugendgarantie“ a10-0218/2026 - hristo petrov - proposition de résolution (ensemble du texte) — vote in plenary a10-0218/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0218-2026-195849.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0219-2026-195890",
+      "sourceId": 195890,
+      "title": "Stratégie de l’UE en faveur de la jeunesse 2019-2027 - The EU Youth Strategy 2019-2027 - EU-Jugendstrategie 2019-2027",
+      "subtitle": "A10-0219/2026 - Sabrina Repp - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Education and culture"
+      ],
+      "committee": {
+        "code": "CULT",
+        "label": "Culture and Education",
+        "short": "Culture and Education"
+      },
+      "rollCalls": 7,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 667,
+      "keywords": "stratégie de l’ue en faveur de la jeunesse 2019-2027 - the eu youth strategy 2019-2027 - eu-jugendstrategie 2019-2027 a10-0219/2026 - sabrina repp - proposition de résolution (ensemble du texte) — vote in plenary a10-0219/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0219-2026-195890.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0224-2026-195870",
+      "sourceId": 195870,
+      "title": "Projet de budget rectificatif nº 2/2026: mise à jour des recettes (ressources propres) et ajustements relatifs aux dépenses - Draft amending budget No 2/2026: update of revenue (own resources) and adjustments to expenditure - Entwurf des Berichtigungshaushaltsplans Nr. 2/2026: Aktualisierung der Einnahmen (Eigenmittel) und Anpassungen der Ausgaben",
+      "subtitle": "A10-0224/2026 - Andrzej Halicki - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "The EU budget"
+      ],
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 12,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 671,
+      "keywords": "projet de budget rectificatif nº 2/2026: mise à jour des recettes (ressources propres) et ajustements relatifs aux dépenses - draft amending budget no 2/2026: update of revenue (own resources) and adjustments to expenditure - entwurf des berichtigungshaushaltsplans nr. 2/2026: aktualisierung der einnahmen (eigenmittel) und anpassungen der ausgaben a10-0224/2026 - andrzej halicki - proposition de résolution (ensemble du texte) — vote in plenary a10-0224/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0224-2026-195870.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0226-2026-195891",
+      "sourceId": 195891,
+      "title": "Temporary trade-liberalisation measures applicable to Armenian products - Vorübergehende Maßnahmen zur Liberalisierung des Handels für armenische Waren",
+      "subtitle": "A10-0226/2026 - Bogdan Andrzej Zdrojewski - Proposition de la Commission — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Armenia and Azerbaijan",
+        "Trade"
+      ],
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 671,
+      "keywords": "temporary trade-liberalisation measures applicable to armenian products - vorübergehende maßnahmen zur liberalisierung des handels für armenische waren a10-0226/2026 - bogdan andrzej zdrojewski - proposition de la commission — vote in plenary a10-0226/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0226-2026-195891.json"
+    },
+    {
+      "id": "ep-2026-09-15-a10-0230-2026-196438",
+      "sourceId": 196438,
+      "title": "Réserve de stabilité du marché pour le système d’échange de quotas d’émission de l’UE (SEQE-UE): cessation de l’invalidation de quotas - Market stability reserve for the EU Emissions Trading System (EU ETS): ceasing the invalidation of allowances - Marktstabilitätsreserve für das Emissionshandelssystem der EU (EU-EHS): Gültigkeitsverfall von Zertifikaten",
+      "subtitle": "A10-0230/2026 - Pierfrancesco Maran - Proposition de la Commission — vote in plenary",
+      "date": "2026-09-15",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Climate"
+      ],
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 4,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 666,
+      "keywords": "réserve de stabilité du marché pour le système d’échange de quotas d’émission de l’ue (seqe-ue): cessation de l’invalidation de quotas - market stability reserve for the eu emissions trading system (eu ets): ceasing the invalidation of allowances - marktstabilitätsreserve für das emissionshandelssystem der eu (eu-ehs): gültigkeitsverfall von zertifikaten a10-0230/2026 - pierfrancesco maran - proposition de la commission — vote in plenary a10-0230/2026",
+      "file": "data/decisions/ep-2026-09-15-a10-0230-2026-196438.json"
+    },
     {
       "id": "ep-2026-09-14-ordre-du-jour-de-lundi-demande-du-groupe-the-left-bce-mond-196475",
       "sourceId": 196475,
