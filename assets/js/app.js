@@ -778,12 +778,24 @@
       chips.push('<span class="chip chip-topic">' + esc(topic) + '</span>');
     });
 
-    /* Then who wrote it, where the portal named a committee. */
+    /* Then who wrote it, where the portal named a committee — unless it would
+       say what the subject already said. A card reading "Trade  Trade", or
+       "Transport  Transport", spends a second chip telling a reader nothing:
+       the committee on transport writes about transport, so its name only
+       earns the space when it adds something the subject did not. */
     const committee = item.committee;
     if (committee && committee.code) {
       const full = committee.label || committee.code;
-      chips.push('<span class="chip chip-quiet" title="' +
-        esc('Committee on ' + full) + '">' + esc(committee.short || full) + '</span>');
+      const short = committee.short || full;
+      const said = (item.topics || []).map(function (topic) { return topic.toLowerCase(); });
+      const echoes = said.some(function (topic) {
+        const name = short.toLowerCase();
+        return topic === name || topic.indexOf(name) !== -1 || name.indexOf(topic) !== -1;
+      });
+      if (!echoes) {
+        chips.push('<span class="chip chip-quiet" title="' +
+          esc('Committee on ' + full) + '">' + esc(short) + '</span>');
+      }
     }
 
     if (item.rollCalls > 1) {
