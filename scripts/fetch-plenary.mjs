@@ -393,7 +393,24 @@ export function oneVotePerText(rollCalls) {
   const groups = new Map();
 
   rollCalls.forEach(function (vote, index) {
-    const key = vote.code || `label:${vote.subject || vote.label || index}`;
+    /* Three ways to say which text this is, in the order they can be trusted.
+
+       The document code first, where the label carries one. Then the vote
+       item, which is the Parliament's own unit for "the thing being voted on"
+       and the only identity a tenth-term roll-call has: its decisions carry no
+       code in the label, so on 23 October 2024 a hundred amendments to the 2025
+       budget each fell into a group of their own and the site showed a hundred
+       cards, every one of them titled "General budget of the European Union for
+       the financial year 2025". They share one item; keyed on it they are one
+       text, which is what they are.
+
+       Only then the label, and only then the position in the sitting — which
+       groups nothing with nothing, and is right for a vote that genuinely
+       stands alone, like an agenda request. */
+    const item = vote.item && (vote.item.activity_id || vote.item.id);
+    const key = vote.code ||
+      (item ? `item:${lastSegment(String(item))}` : '') ||
+      `label:${vote.subject || vote.label || index}`;
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(vote);
   });
