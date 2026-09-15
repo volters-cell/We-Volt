@@ -551,7 +551,7 @@
     // Reading one vote should not mean scrolling past every other one. The list
     // steps aside while a vote or a member is open, and comes back the moment
     // you search or ask for all votes again.
-    const browsing = Boolean(state.query) || !(state.decision || state.member);
+    const browsing = Boolean(state.query) || filtersOn() || !(state.decision || state.member);
     dom['session-list'].hidden = !browsing;
     document.querySelector('.tracker-filters').hidden = !browsing || !manyBodies;
     document.getElementById('intro').hidden = !browsing;
@@ -565,18 +565,29 @@
         matches(item) && withinFilters(item);
     });
 
-    if (state.query) {
+    /* Asking a question — by typing one, by ticking one, or both — deserves an
+       answer in words as well as in the list. Applying a filter used to close
+       the panel and leave the calendar looking untouched: the votes were
+       narrowed from 719 to 26, and every one of them sat folded behind a year
+       and a plenary, with nothing on screen saying anything had happened. */
+    const asked = Boolean(state.query) || filtersOn();
+    if (asked) {
+      const about = [];
+      if (state.query) about.push('“' + state.query + '”');
+      if (filtersOn()) about.push('your filters');
+      const what = about.join(' and ');
       dom['search-status'].hidden = false;
       dom['search-status'].textContent = items.length
-        ? items.length + ' vote' + (items.length === 1 ? ' matches' : 's match') + ' “' + state.query + '”'
-        : 'No vote matches “' + state.query + '”';
+        ? items.length + ' vote' + (items.length === 1 ? ' matches ' : 's match ') + what
+        : 'No vote matches ' + what;
     } else {
       dom['search-status'].hidden = true;
     }
 
-    // A search is a search, not a tour of the calendar: results come back as a
-    // flat list, newest first, rather than unfolding every session they touch.
-    if (state.query) {
+    // A question is a question, not a tour of the calendar: results come back
+    // as a flat list, newest first, rather than unfolding every session they
+    // touch.
+    if (asked) {
       const shown = items.slice(0, 50);
       dom['session-list'].innerHTML = shown.length
         ? '<ul class="decision-list">' + shown.map(function (item) {
@@ -584,10 +595,10 @@
           }).join('') + '</ul>' +
           (items.length > shown.length
             ? '<p class="feed-empty">Showing the first ' + shown.length + ' of ' +
-              items.length + '. Add a word to narrow it down.</p>'
+              items.length + '. Narrow it down with a word or another filter.</p>'
             : '')
         : '<p class="feed-empty">Nothing here matches that. Try a procedure reference, ' +
-          'or a word from the title.</p>';
+          'a word from the title, or fewer filters.</p>';
       return;
     }
 
