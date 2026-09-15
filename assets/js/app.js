@@ -85,7 +85,7 @@
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
    'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links', 'vote-share',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
-   'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-clear', 'search-status',
+   'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-go', 'search-status',
    'member-face', 'member-party',
    'mep-results', 'decision-section', 'back-to-votes', 'session-list',
    'roll', 'roll-bar', 'roll-summary', 'roll-count', 'roll-body', 'roll-name',
@@ -421,7 +421,6 @@
 
   function setQuery(value) {
     state.query = String(value || '').trim().toLowerCase();
-    dom['search-clear'].hidden = !state.query;
     renderFeed();
     renderMepResults();
   }
@@ -2605,7 +2604,6 @@
     }
     dom['search-input'].value = '';
     state.query = '';
-    dom['search-clear'].hidden = true;
     // Carries options.country through, so coming back from a member returns to
     // the country whose list they were opened from.
     clearDecision(options);
@@ -2668,7 +2666,6 @@
 
     dom['search-input'].value = '';
     state.query = '';
-    dom['search-clear'].hidden = true;
     state.country = null;
     clearDecision();
     closeOutside();
@@ -2949,10 +2946,14 @@
           setQuery('');
         }
       });
-      dom['search-clear'].addEventListener('click', function () {
-        dom['search-input'].value = '';
-        setQuery('');
-        dom['search-input'].focus();
+      /* Typing already searches. The button is for the reader who has typed and
+         is waiting to be asked — and on a phone it takes the keyboard away,
+         which is the difference between seeing two results and seeing none. */
+      dom['search-go'].addEventListener('click', function () {
+        setQuery(dom['search-input'].value);
+        dom['search-input'].blur();
+        const list = dom['session-list'];
+        if (list && list.scrollIntoView) list.scrollIntoView({ block: 'nearest' });
       });
 
       dom['mep-results'].addEventListener('click', function (event) {

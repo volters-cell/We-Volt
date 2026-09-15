@@ -3206,32 +3206,29 @@ input:focus-visible {
   color: var(--ink-faint);
 }
 
-#search-clear {
-  position: absolute;
-  right: 0.5rem;
-  background: none;
-  border: none;
-  padding: 0.25rem;
+/* The search button sits in the row beside the box, not on top of it. What
+   was here before was the word "Clear" inside a 28px circle pinned over the
+   native clear cross that input[type=search] already draws — two controls in
+   one place, one of them unreadable. The cross still clears the field; this
+   says what the box is for. */
+/* Scoped to the row, because a bare .search button rule higher up carries
+   more weight than a lone class and would otherwise win. */
+.search .search-go {
+  flex: none;
+  margin-left: .5rem;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  padding: .55rem 1.1rem;
+  border-radius: var(--radius, 8px);
+  border: 1px solid var(--eu-blue);
+  background: var(--eu-blue);
+  color: #fff;
   cursor: pointer;
-  color: var(--ink-soft);
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
+.search .search-go:hover { background: var(--eu-ink); border-color: var(--eu-ink); }
+.search .search-go:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
-#search-clear:hover {
-  background: var(--surface-sunken);
-  color: var(--ink);
-}
-
-#search-clear:focus {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
 
 .search-icon {
   position: absolute;
@@ -3415,22 +3412,39 @@ button,
 /* Two questions a reader actually has about a list of votes: when, and what
    about. They sit beside the search box because they narrow the same list. */
 .search-tools { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .5rem 0 0; }
-.filter-open, .filter-clear {
+/* A quiet control, not a button competing with the search box beside it: the
+   word and a chevron, which is what a reader reads as "there is more here". */
+.filter-open {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
   font: inherit;
-  font-size: .82rem;
-  padding: .35rem .7rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface);
+  font-size: .88rem;
+  padding: .3rem .1rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
   color: var(--ink-soft);
   cursor: pointer;
 }
-.filter-open:hover, .filter-clear:hover { color: var(--eu-ink); border-color: var(--eu-blue); }
+.filter-open:hover { color: var(--eu-ink); }
+.filter-chevron { flex: none; opacity: .75; }
+
+.filter-clear {
+  font: inherit;
+  font-size: .82rem;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  border: 1px dashed var(--line);
+  background: var(--surface);
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.filter-clear:hover { color: var(--eu-ink); border-color: var(--eu-blue); }
 .filter-open:focus-visible, .filter-clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .filter-count {
   display: inline-block;
   min-width: 1.15rem;
-  margin-left: .4rem;
   padding: 0 .3rem;
   border-radius: 999px;
   background: var(--eu-blue);
@@ -3438,7 +3452,6 @@ button,
   font-size: .72rem;
   text-align: center;
 }
-.filter-clear { border-style: dashed; }
 
 .filter-panel {
   width: min(34rem, calc(100vw - 2rem));
