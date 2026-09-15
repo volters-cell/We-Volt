@@ -14,11 +14,17 @@
     "reference": "2021/2189",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/2189"
   },
+  "document": "A9-0215/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 105 against, 27 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "PECH",
+    "label": "Fisheries",
+    "short": "Fisheries"
   },
   "rollCalls": 1,
   "ballots": [

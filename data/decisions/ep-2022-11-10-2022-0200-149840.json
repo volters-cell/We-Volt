@@ -14,11 +14,17 @@
     "reference": "2022/0200",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0200"
   },
+  "document": "A9-0263/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 586 in favour, 1 against, 7 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "TRAN",
+    "label": "Transport and Tourism",
+    "short": "Transport"
   },
   "rollCalls": 1,
   "ballots": [

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Droit à la réparation",
+  "title": "Right to repair",
   "subtitle": "B9-0175/2022 - Motion for resolution (text as a whole) — vote in plenary",
   "date": "2022-04-07",
   "voteRule": "simple-majority",
@@ -14,12 +14,19 @@
     "reference": "2022/2515",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2515"
   },
+  "document": "B9-0175/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 509 in favour, 3 against, 13 abstained. Result derived from the totals."
   },
+  "committee": {
+    "code": "IMCO",
+    "label": "Internal Market and Consumer Protection",
+    "short": "Single Market"
+  },
+  "rollCalls": 3,
   "ballots": [
     [
       840,

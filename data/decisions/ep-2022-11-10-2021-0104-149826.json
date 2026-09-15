@@ -14,11 +14,17 @@
     "reference": "2021/0104",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/0104"
   },
+  "document": "A9-0059/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 525 in favour, 60 against, 28 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "JURI",
+    "label": "Legal Affairs",
+    "short": "Legal Affairs"
   },
   "rollCalls": 1,
   "ballots": [

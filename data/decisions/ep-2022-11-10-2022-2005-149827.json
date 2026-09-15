@@ -14,11 +14,17 @@
     "reference": "2022/2005",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2005"
   },
+  "document": "A9-0254/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 442 in favour, 114 against, 42 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "LIBE",
+    "label": "Civil Liberties, Justice and Home Affairs",
+    "short": "Civil Liberties"
   },
   "rollCalls": 1,
   "ballots": [

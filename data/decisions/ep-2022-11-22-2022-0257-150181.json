@@ -14,11 +14,17 @@
     "reference": "2022/0257",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0257"
   },
+  "document": "A9-0277/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 609 in favour, 6 against, 18 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "INTA",
+    "label": "International Trade",
+    "short": "Trade"
   },
   "rollCalls": 1,
   "ballots": [

@@ -5,8 +5,8 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "RC-B9-0331/2022 – Motion for a resolution (text as a whole)",
-  "subtitle": "vote in plenary",
+  "title": "Candidate status of Ukraine, the Republic of Moldova and Georgia",
+  "subtitle": "RC-B9-0331/2022 – Motion for a resolution (text as a whole) — vote in plenary",
   "date": "2022-06-23",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -14,12 +14,15 @@
     "reference": "RC-B9-0331/2022",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=RC-B9-0331/2022"
   },
+  "document": "RC-B9-0331/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 529 in favour, 45 against, 14 abstained. Result derived from the totals."
   },
+  "committee": null,
+  "rollCalls": 14,
   "ballots": [
     [
       840,
@@ -2396,5 +2399,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine"
+  ]
 }

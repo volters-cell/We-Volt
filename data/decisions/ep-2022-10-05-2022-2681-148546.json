@@ -14,11 +14,17 @@
     "reference": "2022/2681",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2681"
   },
+  "document": "B9-0414/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 549 in favour, 28 against, 50 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "ENVI",
+    "label": "Environment, Public Health and Food Safety",
+    "short": "Environment"
   },
   "rollCalls": 2,
   "ballots": [

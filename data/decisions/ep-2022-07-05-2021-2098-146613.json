@@ -14,11 +14,17 @@
     "reference": "2021/2098",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/2098"
   },
+  "document": "A9-0184/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 501 in favour, 47 against, 85 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "EMPL",
+    "label": "Employment and Social Affairs",
+    "short": "Employment"
   },
   "rollCalls": 11,
   "ballots": [

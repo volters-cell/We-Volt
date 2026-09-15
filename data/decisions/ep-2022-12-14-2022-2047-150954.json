@@ -14,11 +14,17 @@
     "reference": "2022/2047",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2047"
   },
+  "document": "A9-0279/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 455 in favour, 114 against, 44 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
   },
   "rollCalls": 5,
   "ballots": [

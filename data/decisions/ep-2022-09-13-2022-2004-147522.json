@@ -14,11 +14,17 @@
     "reference": "2022/2004",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2004"
   },
+  "document": "A9-0216/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 522 in favour, 12 against, 79 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "CULT",
+    "label": "Culture and Education",
+    "short": "Culture and Education"
   },
   "rollCalls": 1,
   "ballots": [

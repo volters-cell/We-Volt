@@ -14,11 +14,17 @@
     "reference": "2021/2146",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/2146"
   },
+  "document": "A9-0235/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 345 in favour, 284 against, 8 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "CONT",
+    "label": "Budgetary Control",
+    "short": "Budget Control"
   },
   "rollCalls": 2,
   "ballots": [

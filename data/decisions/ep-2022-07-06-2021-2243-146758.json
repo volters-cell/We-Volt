@@ -14,11 +14,17 @@
     "reference": "2021/2243",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/2243"
   },
+  "document": "A9-0190/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 438 in favour, 133 against, 58 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "FEMM",
+    "label": "Women's Rights and Gender Equality",
+    "short": "Gender Equality"
   },
   "rollCalls": 1,
   "ballots": [

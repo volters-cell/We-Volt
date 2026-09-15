@@ -14,11 +14,17 @@
     "reference": "2022/0337",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0337"
   },
+  "document": "A9-0282/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 7 against, 4 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "BUDG",
+    "label": "Budgets",
+    "short": "Budgets"
   },
   "rollCalls": 1,
   "ballots": [

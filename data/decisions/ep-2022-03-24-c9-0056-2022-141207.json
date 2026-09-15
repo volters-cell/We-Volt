@@ -5,8 +5,8 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "C9-0056/2022 – Commission proposal",
-  "subtitle": "vote in plenary",
+  "title": "More flexible use of funds under the AMIF Regulations in light of the war in Ukraine",
+  "subtitle": "C9-0056/2022 – Commission proposal — vote in plenary",
   "date": "2022-03-24",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -14,12 +14,15 @@
     "reference": "C9-0056/2022",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=C9-0056/2022"
   },
+  "document": "C9-0056/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 575 in favour, 4 against, 3 abstained. Result derived from the totals."
   },
+  "committee": null,
+  "rollCalls": 6,
   "ballots": [
     [
       840,
@@ -2372,5 +2375,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Ukraine"
+  ]
 }

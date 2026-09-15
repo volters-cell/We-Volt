@@ -14,11 +14,17 @@
     "reference": "2022/0021",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0021"
   },
+  "document": "A9-0205/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 626 in favour, 4 against, 5 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "IMCO",
+    "label": "Internal Market and Consumer Protection",
+    "short": "Single Market"
   },
   "rollCalls": 1,
   "ballots": [

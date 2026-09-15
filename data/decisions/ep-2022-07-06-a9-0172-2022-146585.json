@@ -14,11 +14,17 @@
     "reference": "A9-0172/2022",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0172/2022"
   },
+  "document": "A9-0172/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 73 against, 112 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "AFET",
+    "label": "Foreign Affairs",
+    "short": "Foreign Affairs"
   },
   "rollCalls": 1,
   "ballots": [

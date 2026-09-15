@@ -14,11 +14,17 @@
     "reference": "2022/2024",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2024"
   },
+  "document": "A9-0271/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 408 in favour, 44 against, 31 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "PETI",
+    "label": "Petitions",
+    "short": "Petitions"
   },
   "rollCalls": 1,
   "ballots": [

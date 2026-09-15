@@ -14,11 +14,17 @@
     "reference": "2021/0020",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/0020"
   },
+  "document": "A9-0285/2021",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 42 against, 23 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "AGRI",
+    "label": "Agriculture and Rural Development",
+    "short": "Agriculture"
   },
   "rollCalls": 1,
   "ballots": [

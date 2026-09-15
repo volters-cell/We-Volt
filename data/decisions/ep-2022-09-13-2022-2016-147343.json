@@ -14,11 +14,17 @@
     "reference": "2022/2016",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2016"
   },
+  "document": "A9-0225/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 417 in favour, 144 against, 67 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "AGRI",
+    "label": "Agriculture and Rural Development",
+    "short": "Agriculture"
   },
   "rollCalls": 1,
   "ballots": [

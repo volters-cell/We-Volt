@@ -14,11 +14,17 @@
     "reference": "2022/2662",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2662"
   },
+  "document": "B9-0413/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 109 against, 38 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "EMPL",
+    "label": "Employment and Social Affairs",
+    "short": "Employment"
   },
   "rollCalls": 5,
   "ballots": [

@@ -14,11 +14,17 @@
     "reference": "B9-0338/2022",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0338/2022"
   },
+  "document": "B9-0338/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 278 in favour, 328 against, 33 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "ECON",
+    "label": "Economic and Monetary Affairs",
+    "short": "Economy"
   },
   "rollCalls": 1,
   "ballots": [

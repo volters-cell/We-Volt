@@ -14,11 +14,17 @@
     "reference": "2022/2899",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2899"
   },
+  "document": "B9-0490/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 445 in favour, 102 against, 24 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "ECON",
+    "label": "Economic and Monetary Affairs",
+    "short": "Economy"
   },
   "rollCalls": 1,
   "ballots": [

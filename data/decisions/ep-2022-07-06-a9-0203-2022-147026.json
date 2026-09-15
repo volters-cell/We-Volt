@@ -14,11 +14,17 @@
     "reference": "A9-0203/2022",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0203/2022"
   },
+  "document": "A9-0203/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 20 against, 63 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "AFCO",
+    "label": "Constitutional Affairs",
+    "short": "Constitutional Affairs"
   },
   "rollCalls": 7,
   "ballots": [

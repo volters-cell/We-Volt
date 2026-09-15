@@ -14,11 +14,17 @@
     "reference": "2022/2641",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2641"
   },
+  "document": "B9-0423/2022",
   "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 78 in favour, 487 against, 11 abstained. Result derived from the totals."
+  },
+  "committee": {
+    "code": "ITRE",
+    "label": "Industry, Research and Energy",
+    "short": "Industry and Energy"
   },
   "rollCalls": 2,
   "ballots": [
