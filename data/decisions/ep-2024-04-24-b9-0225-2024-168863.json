@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Objection pursuant to Rule 111(3): Novel foods – the definition of ‘engineered nanomaterials’",
+  "title": "Objection: Novel foods – the definition of ‘engineered nanomaterials’",
   "subtitle": "B9-0225/2024 - Proposition de résolution — vote in plenary",
   "date": "2024-04-24",
   "voteRule": "absolute-majority",
@@ -2544,7 +2544,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "How Parliament works"
-  ]
+  "topics": []
 }

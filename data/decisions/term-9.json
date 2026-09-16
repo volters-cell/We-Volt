@@ -514,7 +514,7 @@
     {
       "id": "ep-2024-04-24-2021-0428-168272",
       "sourceId": 168272,
-      "title": "Regulation (EU) 2016/399 on a Union Code on the rules governing the movement of persons across borders",
+      "title": "Amending Regulation (EU) 2016/399 on a Union Code on the rules governing the movement of persons across borders",
       "subtitle": "A9-0280/2023 - Sylvie Guillaume - Accord provisoire - Am 163 — vote in plenary",
       "date": "2024-04-24",
       "body": "parliament",
@@ -530,7 +530,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 631,
-      "keywords": "regulation (eu) 2016/399 on a union code on the rules governing the movement of persons across borders a9-0280/2023 - sylvie guillaume - accord provisoire - am 163 — vote in plenary 2021/0428",
+      "keywords": "amending regulation (eu) 2016/399 on a union code on the rules governing the movement of persons across borders a9-0280/2023 - sylvie guillaume - accord provisoire - am 163 — vote in plenary 2021/0428",
       "file": "data/decisions/ep-2024-04-24-2021-0428-168272.json"
     },
     {
@@ -976,7 +976,7 @@
     {
       "id": "ep-2024-04-24-2023-0108-168286",
       "sourceId": 168286,
-      "title": "Regulation (EU) 2019/881 as regards managed security services",
+      "title": "Amending Regulation (EU) 2019/881 as regards managed security services",
       "subtitle": "A9-0307/2023 - Josianne Cutajar - Accord provisoire - Am 2 — vote in plenary",
       "date": "2024-04-24",
       "body": "parliament",
@@ -992,7 +992,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 588,
-      "keywords": "regulation (eu) 2019/881 as regards managed security services a9-0307/2023 - josianne cutajar - accord provisoire - am 2 — vote in plenary 2023/0108",
+      "keywords": "amending regulation (eu) 2019/881 as regards managed security services a9-0307/2023 - josianne cutajar - accord provisoire - am 2 — vote in plenary 2023/0108",
       "file": "data/decisions/ep-2024-04-24-2023-0108-168286.json"
     },
     {
@@ -1527,15 +1527,13 @@
     {
       "id": "ep-2024-04-24-b9-0225-2024-168863",
       "sourceId": 168863,
-      "title": "Objection pursuant to Rule 111(3): Novel foods – the definition of ‘engineered nanomaterials’",
+      "title": "Objection: Novel foods – the definition of ‘engineered nanomaterials’",
       "subtitle": "B9-0225/2024 - Proposition de résolution — vote in plenary",
       "date": "2024-04-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -1545,7 +1543,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 623,
-      "keywords": "objection pursuant to rule 111(3): novel foods – the definition of ‘engineered nanomaterials’ b9-0225/2024 - proposition de résolution — vote in plenary b9-0225/2024",
+      "keywords": "objection: novel foods – the definition of ‘engineered nanomaterials’ b9-0225/2024 - proposition de résolution — vote in plenary b9-0225/2024",
       "file": "data/decisions/ep-2024-04-24-b9-0225-2024-168863.json"
     },
     {
@@ -2125,42 +2123,39 @@
     {
       "id": "ep-2024-04-23-2024-2688-168724",
       "sourceId": 168724,
-      "title": "Objection pursuant to Rule 111(3): Deleting Gibraltar from the table in Point I of the Annex to Delegated Regulation (EU) 2016/1675",
+      "title": "Objection: Deleting Gibraltar from the table in Point I of the Annex to Delegated Regulation (EU) 2016/1675",
       "subtitle": "B9-0210/2024 – Motion for a resolution — vote in plenary",
       "date": "2024-04-23",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
       "topics": [
-        "United Kingdom",
-        "How Parliament works"
+        "United Kingdom"
       ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 610,
-      "keywords": "objection pursuant to rule 111(3): deleting gibraltar from the table in point i of the annex to delegated regulation (eu) 2016/1675 b9-0210/2024 – motion for a resolution — vote in plenary 2024/2688",
+      "keywords": "objection: deleting gibraltar from the table in point i of the annex to delegated regulation (eu) 2016/1675 b9-0210/2024 – motion for a resolution — vote in plenary 2024/2688",
       "file": "data/decisions/ep-2024-04-23-2024-2688-168724.json"
     },
     {
       "id": "ep-2024-04-23-2024-2694-168697",
       "sourceId": 168697,
-      "title": "Objection pursuant to Rule 111(3): Feedstock for the production of biofuels and biogas",
+      "title": "Objection: Feedstock for the production of biofuels and biogas",
       "subtitle": "B9-0218/2024 – Motion for a resolution — vote in plenary",
       "date": "2024-04-23",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 607,
-      "keywords": "objection pursuant to rule 111(3): feedstock for the production of biofuels and biogas b9-0218/2024 – motion for a resolution — vote in plenary 2024/2694",
+      "keywords": "objection: feedstock for the production of biofuels and biogas b9-0218/2024 – motion for a resolution — vote in plenary 2024/2694",
       "file": "data/decisions/ep-2024-04-23-2024-2694-168697.json"
     },
     {
@@ -3782,7 +3777,7 @@
     {
       "id": "ep-2024-04-11-2023-3040-168229",
       "sourceId": 168229,
-      "title": "Objection pursuant to Rule 111(3): Specific hygiene requirements for certain meat, fishery products, dairy products and eggs",
+      "title": "Objection: Specific hygiene requirements for certain meat, fishery products, dairy products and eggs",
       "subtitle": "B9-0211/2024 – Motion for a resolution — vote in plenary",
       "date": "2024-04-11",
       "body": "parliament",
@@ -3796,7 +3791,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 610,
-      "keywords": "objection pursuant to rule 111(3): specific hygiene requirements for certain meat, fishery products, dairy products and eggs b9-0211/2024 – motion for a resolution — vote in plenary 2023/3040",
+      "keywords": "objection: specific hygiene requirements for certain meat, fishery products, dairy products and eggs b9-0211/2024 – motion for a resolution — vote in plenary 2023/3040",
       "file": "data/decisions/ep-2024-04-11-2023-3040-168229.json"
     },
     {
@@ -3954,7 +3949,7 @@
     {
       "id": "ep-2024-04-10-a9-0002-2024-166924",
       "sourceId": 166924,
-      "title": "Regulation (EU) 2017/852 of the European Parliament and of the Council of 17 May 2017 on mercury as regards dental amalgam and other mercury-added products subject to manufacturing, import and export restrictions",
+      "title": "Amending Regulation (EU) 2017/852 of the European Parliament and of the Council of 17 May 2017 on mercury as regards dental amalgam and other mercury-added products subject to manufacturing, import and export restrictions",
       "subtitle": "A9-0002/2024 – Marlene Mortler – Provisional agreement – Am 19 — vote in plenary",
       "date": "2024-04-10",
       "body": "parliament",
@@ -3970,7 +3965,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 625,
-      "keywords": "regulation (eu) 2017/852 of the european parliament and of the council of 17 may 2017 on mercury as regards dental amalgam and other mercury-added products subject to manufacturing, import and export restrictions a9-0002/2024 – marlene mortler – provisional agreement – am 19 — vote in plenary a9-0002/2024",
+      "keywords": "amending regulation (eu) 2017/852 of the european parliament and of the council of 17 may 2017 on mercury as regards dental amalgam and other mercury-added products subject to manufacturing, import and export restrictions a9-0002/2024 – marlene mortler – provisional agreement – am 19 — vote in plenary a9-0002/2024",
       "file": "data/decisions/ep-2024-04-10-a9-0002-2024-166924.json"
     },
     {
@@ -4022,7 +4017,7 @@
     {
       "id": "ep-2024-04-10-a9-0021-2024-167712",
       "sourceId": 167712,
-      "title": "Regulation (EU) 2021/1232 of the European Parliament and of the Council on a temporary derogation from certain provisions of Directive 2002/58/EC for the purpose of combating online child sexual abuse",
+      "title": "Amending Regulation (EU) 2021/1232 of the European Parliament and of the Council on a temporary derogation from certain provisions of Directive 2002/58/EC for the purpose of combating online child sexual abuse",
       "subtitle": "A9-0021/2024 – Birgit Sippel – Provisional agreement – Am 13 — vote in plenary",
       "date": "2024-04-10",
       "body": "parliament",
@@ -4038,7 +4033,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 618,
-      "keywords": "regulation (eu) 2021/1232 of the european parliament and of the council on a temporary derogation from certain provisions of directive 2002/58/ec for the purpose of combating online child sexual abuse a9-0021/2024 – birgit sippel – provisional agreement – am 13 — vote in plenary a9-0021/2024",
+      "keywords": "amending regulation (eu) 2021/1232 of the european parliament and of the council on a temporary derogation from certain provisions of directive 2002/58/ec for the purpose of combating online child sexual abuse a9-0021/2024 – birgit sippel – provisional agreement – am 13 — vote in plenary a9-0021/2024",
       "file": "data/decisions/ep-2024-04-10-a9-0021-2024-167712.json"
     },
     {
@@ -4490,7 +4485,7 @@
     {
       "id": "ep-2024-04-10-a9-0148-2023-166802",
       "sourceId": 166802,
-      "title": "Regulation (EU) 2019/816 establishing a centralised system for the identification of Member States holding conviction information on third-country nationals and stateless persons (ECRIS-TCN) to supplement the European Criminal Records Information System and Regulation (EU) 2019/818 on establishing a framework for interoperability between EU information systems in the field of police and judicial cooperation, asylum and migration and amending Regulations (EU) 2018/1726, (EU) 2018/1862 and (EU) 2019/816 for the purpose of introducing a screening of third country nationals at the external borders",
+      "title": "Amending Regulation (EU) 2019/816 establishing a centralised system for the identification of Member States holding conviction information on third-country nationals and stateless persons (ECRIS-TCN) to supplement the European Criminal Records Information System and Regulation (EU) 2019/818 on establishing a framework for interoperability between EU information systems in the field of police and judicial cooperation, asylum and migration and amending Regulations (EU) 2018/1726, (EU) 2018/1862 and (EU) 2019/816 for the purpose of introducing a screening of third country nationals at the external borders",
       "subtitle": "A9-0148/2023 – Birgit Sippel – Provisional agreement – Am 21 — vote in plenary",
       "date": "2024-04-10",
       "body": "parliament",
@@ -4508,7 +4503,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 625,
-      "keywords": "regulation (eu) 2019/816 establishing a centralised system for the identification of member states holding conviction information on third-country nationals and stateless persons (ecris-tcn) to supplement the european criminal records information system and regulation (eu) 2019/818 on establishing a framework for interoperability between eu information systems in the field of police and judicial cooperation, asylum and migration and amending regulations (eu) 2018/1726, (eu) 2018/1862 and (eu) 2019/816 for the purpose of introducing a screening of third country nationals at the external borders a9-0148/2023 – birgit sippel – provisional agreement – am 21 — vote in plenary a9-0148/2023",
+      "keywords": "amending regulation (eu) 2019/816 establishing a centralised system for the identification of member states holding conviction information on third-country nationals and stateless persons (ecris-tcn) to supplement the european criminal records information system and regulation (eu) 2019/818 on establishing a framework for interoperability between eu information systems in the field of police and judicial cooperation, asylum and migration and amending regulations (eu) 2018/1726, (eu) 2018/1862 and (eu) 2019/816 for the purpose of introducing a screening of third country nationals at the external borders a9-0148/2023 – birgit sippel – provisional agreement – am 21 — vote in plenary a9-0148/2023",
       "file": "data/decisions/ep-2024-04-10-a9-0148-2023-166802.json"
     },
     {
@@ -4723,7 +4718,7 @@
     {
       "id": "ep-2024-04-10-a9-0296-2023-166852",
       "sourceId": 166852,
-      "title": "Regulation (EU) No 691/2011 as regards introducing new environmental economic accounts modules",
+      "title": "Amending Regulation (EU) No 691/2011 as regards introducing new environmental economic accounts modules",
       "subtitle": "A9-0296/2023 – Pascal Canfin – Provisional agreement – Am 44 — vote in plenary",
       "date": "2024-04-10",
       "body": "parliament",
@@ -4741,13 +4736,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 622,
-      "keywords": "regulation (eu) no 691/2011 as regards introducing new environmental economic accounts modules a9-0296/2023 – pascal canfin – provisional agreement – am 44 — vote in plenary a9-0296/2023",
+      "keywords": "amending regulation (eu) no 691/2011 as regards introducing new environmental economic accounts modules a9-0296/2023 – pascal canfin – provisional agreement – am 44 — vote in plenary a9-0296/2023",
       "file": "data/decisions/ep-2024-04-10-a9-0296-2023-166852.json"
     },
     {
       "id": "ep-2024-04-10-a9-0313-2023-167788",
       "sourceId": 167788,
-      "title": "Regulation (EU) 2019/1242 as regards strengthening the CO₂ emission performance standards for new heavy-duty vehicles and integrating reporting obligations, and repealing Regulation (EU) 2018/956",
+      "title": "Amending Regulation (EU) 2019/1242 as regards strengthening the CO₂ emission performance standards for new heavy-duty vehicles and integrating reporting obligations, and repealing Regulation (EU) 2018/956",
       "subtitle": "A9-0313/2023 – Bas Eickhout – Request to vote on the amendments to the draft legislative act — vote in plenary",
       "date": "2024-04-10",
       "body": "parliament",
@@ -4765,7 +4760,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 621,
-      "keywords": "regulation (eu) 2019/1242 as regards strengthening the co₂ emission performance standards for new heavy-duty vehicles and integrating reporting obligations, and repealing regulation (eu) 2018/956 a9-0313/2023 – bas eickhout – request to vote on the amendments to the draft legislative act — vote in plenary a9-0313/2023",
+      "keywords": "amending regulation (eu) 2019/1242 as regards strengthening the co₂ emission performance standards for new heavy-duty vehicles and integrating reporting obligations, and repealing regulation (eu) 2018/956 a9-0313/2023 – bas eickhout – request to vote on the amendments to the draft legislative act — vote in plenary a9-0313/2023",
       "file": "data/decisions/ep-2024-04-10-a9-0313-2023-167788.json"
     },
     {
@@ -6228,21 +6223,19 @@
     {
       "id": "ep-2024-03-12-2023-3007-166379",
       "sourceId": 166379,
-      "title": "Objection pursuant to Rule 111(3): Union list of projects of common interest and projects of mutual interest",
+      "title": "Objection: Union list of projects of common interest and projects of mutual interest",
       "subtitle": "B9-0161/2024 – Motion for a resolution — vote in plenary",
       "date": "2024-03-12",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 597,
-      "keywords": "objection pursuant to rule 111(3): union list of projects of common interest and projects of mutual interest b9-0161/2024 – motion for a resolution — vote in plenary 2023/3007",
+      "keywords": "objection: union list of projects of common interest and projects of mutual interest b9-0161/2024 – motion for a resolution — vote in plenary 2023/3007",
       "file": "data/decisions/ep-2024-03-12-2023-3007-166379.json"
     },
     {
@@ -6388,7 +6381,7 @@
     {
       "id": "ep-2024-02-29-2021-0136-165862",
       "sourceId": 165862,
-      "title": "Regulation (EU) No 910/2014 as regards establishing a framework for a European Digital Identity",
+      "title": "Amending Regulation (EU) No 910/2014 as regards establishing a framework for a European Digital Identity",
       "subtitle": "A9-0038/2023 - Romana Jerković - Demande de mettre aux voix les amendements au projet d'acte législatif — vote in plenary",
       "date": "2024-02-29",
       "body": "parliament",
@@ -6406,21 +6399,19 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 553,
-      "keywords": "regulation (eu) no 910/2014 as regards establishing a framework for a european digital identity a9-0038/2023 - romana jerković - demande de mettre aux voix les amendements au projet d'acte législatif — vote in plenary 2021/0136",
+      "keywords": "amending regulation (eu) no 910/2014 as regards establishing a framework for a european digital identity a9-0038/2023 - romana jerković - demande de mettre aux voix les amendements au projet d'acte législatif — vote in plenary 2021/0136",
       "file": "data/decisions/ep-2024-02-29-2021-0136-165862.json"
     },
     {
       "id": "ep-2024-02-29-2022-0358-164584",
       "sourceId": 164584,
-      "title": "Collecte et partage des données relatives aux services de location de logements à court terme - Data collection and sharing relating to short-term accommodation rental services - Erhebung und Austausch von Daten im Zusammenhang mit Dienstleistungen im Bereich der kurzfristigen Vermietung von Unterkünften",
+      "title": "Data collection and sharing relating to short-term accommodation rental services",
       "subtitle": "Collecte et partage des données relatives aux services de location de logements à court terme - Data collection and sharing relating to short-term accommodation rental services - Erhebung und Austausch von Daten im Zusammenhang mit Dienstleistungen im Bereich der kurzfristigen Vermietung von Unterkünften - A9-0270/2023 - Kim Van Sparrentak - Accord provisoire - Am 84 — vote in plenary",
       "date": "2024-02-29",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "Digital and tech"
-      ],
+      "topics": [],
       "committee": {
         "code": "IMCO",
         "label": "Internal Market and Consumer Protection",
@@ -6430,7 +6421,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 540,
-      "keywords": "collecte et partage des données relatives aux services de location de logements à court terme - data collection and sharing relating to short-term accommodation rental services - erhebung und austausch von daten im zusammenhang mit dienstleistungen im bereich der kurzfristigen vermietung von unterkünften collecte et partage des données relatives aux services de location de logements à court terme - data collection and sharing relating to short-term accommodation rental services - erhebung und austausch von daten im zusammenhang mit dienstleistungen im bereich der kurzfristigen vermietung von unterkünften - a9-0270/2023 - kim van sparrentak - accord provisoire - am 84 — vote in plenary 2022/0358",
+      "keywords": "data collection and sharing relating to short-term accommodation rental services collecte et partage des données relatives aux services de location de logements à court terme - data collection and sharing relating to short-term accommodation rental services - erhebung und austausch von daten im zusammenhang mit dienstleistungen im bereich der kurzfristigen vermietung von unterkünften - a9-0270/2023 - kim van sparrentak - accord provisoire - am 84 — vote in plenary 2022/0358",
       "file": "data/decisions/ep-2024-02-29-2022-0358-164584.json"
     },
     {
@@ -6685,7 +6676,7 @@
     {
       "id": "ep-2024-02-28-2022-0089-164532",
       "sourceId": 164532,
-      "title": "Indications géographiques pour les vins, les boissons spiritueuses et les produits agricoles - Geographical Indications for wine, spirit drinks and agricultural products - Geografische Angaben für Wein, Spirituosen und landwirtschaftliche Erzeugnisse",
+      "title": "Geographical Indications for wine, spirit drinks and agricultural products",
       "subtitle": "Indications géographiques pour les vins, les boissons spiritueuses et les produits agricoles - Geographical Indications for wine, spirit drinks and agricultural products - Geografische Angaben für Wein, Spirituosen und landwirtschaftliche Erzeugnisse - A9-0173/2023 - Paolo De Castro - Accord provisoire - Am 286 — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6703,7 +6694,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 603,
-      "keywords": "indications géographiques pour les vins, les boissons spiritueuses et les produits agricoles - geographical indications for wine, spirit drinks and agricultural products - geografische angaben für wein, spirituosen und landwirtschaftliche erzeugnisse indications géographiques pour les vins, les boissons spiritueuses et les produits agricoles - geographical indications for wine, spirit drinks and agricultural products - geografische angaben für wein, spirituosen und landwirtschaftliche erzeugnisse - a9-0173/2023 - paolo de castro - accord provisoire - am 286 — vote in plenary 2022/0089",
+      "keywords": "geographical indications for wine, spirit drinks and agricultural products indications géographiques pour les vins, les boissons spiritueuses et les produits agricoles - geographical indications for wine, spirit drinks and agricultural products - geografische angaben für wein, spirituosen und landwirtschaftliche erzeugnisse - a9-0173/2023 - paolo de castro - accord provisoire - am 286 — vote in plenary 2022/0089",
       "file": "data/decisions/ep-2024-02-28-2022-0089-164532.json"
     },
     {
@@ -6731,7 +6722,7 @@
     {
       "id": "ep-2024-02-28-2023-0126-164705",
       "sourceId": 164705,
-      "title": "Certificat complémentaire de protection unitaire pour les produits phytopharmaceutiques - Unitary supplementary protection certificate for plant protection products - Einheitliches ergänzendes Schutzzertifikat für Pflanzenschutzmittel",
+      "title": "Unitary supplementary protection certificate for plant protection products",
       "subtitle": "Certificat complémentaire de protection unitaire pour les produits phytopharmaceutiques - Unitary supplementary protection certificate for plant protection products - Einheitliches ergänzendes Schutzzertifikat für Pflanzenschutzmittel - A9-0020/2024 - Tiemo Wölken - Proposition de la Commission — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6747,7 +6738,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 616,
-      "keywords": "certificat complémentaire de protection unitaire pour les produits phytopharmaceutiques - unitary supplementary protection certificate for plant protection products - einheitliches ergänzendes schutzzertifikat für pflanzenschutzmittel certificat complémentaire de protection unitaire pour les produits phytopharmaceutiques - unitary supplementary protection certificate for plant protection products - einheitliches ergänzendes schutzzertifikat für pflanzenschutzmittel - a9-0020/2024 - tiemo wölken - proposition de la commission — vote in plenary 2023/0126",
+      "keywords": "unitary supplementary protection certificate for plant protection products certificat complémentaire de protection unitaire pour les produits phytopharmaceutiques - unitary supplementary protection certificate for plant protection products - einheitliches ergänzendes schutzzertifikat für pflanzenschutzmittel - a9-0020/2024 - tiemo wölken - proposition de la commission — vote in plenary 2023/0126",
       "file": "data/decisions/ep-2024-02-28-2023-0126-164705.json"
     },
     {
@@ -6777,7 +6768,7 @@
     {
       "id": "ep-2024-02-28-2023-0128-164605",
       "sourceId": 164605,
-      "title": "Certificat complémentaire de protection pour les produits phytopharmaceutiques (refonte) - Supplementary protection certificate for plant protection products (recast) - Ergänzendes Schutzzertifikat für Pflanzenschutzmittel (Neufassung)",
+      "title": "Supplementary protection certificate for plant protection products",
       "subtitle": "Certificat complémentaire de protection pour les produits phytopharmaceutiques (refonte) - Supplementary protection certificate for plant protection products (recast) - Ergänzendes Schutzzertifikat für Pflanzenschutzmittel (Neufassung) - A9-0023/2024 - Tiemo Wölken - Proposition de la Commission — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6793,7 +6784,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 618,
-      "keywords": "certificat complémentaire de protection pour les produits phytopharmaceutiques (refonte) - supplementary protection certificate for plant protection products (recast) - ergänzendes schutzzertifikat für pflanzenschutzmittel (neufassung) certificat complémentaire de protection pour les produits phytopharmaceutiques (refonte) - supplementary protection certificate for plant protection products (recast) - ergänzendes schutzzertifikat für pflanzenschutzmittel (neufassung) - a9-0023/2024 - tiemo wölken - proposition de la commission — vote in plenary 2023/0128",
+      "keywords": "supplementary protection certificate for plant protection products certificat complémentaire de protection pour les produits phytopharmaceutiques (refonte) - supplementary protection certificate for plant protection products (recast) - ergänzendes schutzzertifikat für pflanzenschutzmittel (neufassung) - a9-0023/2024 - tiemo wölken - proposition de la commission — vote in plenary 2023/0128",
       "file": "data/decisions/ep-2024-02-28-2023-0128-164605.json"
     },
     {
@@ -6823,7 +6814,7 @@
     {
       "id": "ep-2024-02-28-2023-0133-165167",
       "sourceId": 165167,
-      "title": "Brevets essentiels liés à une norme - Standard essential patents - Standardessenzielle Patente",
+      "title": "Standard essential patents and amending Regulation (EU) 2017/1001",
       "subtitle": "Brevets essentiels liés à une norme - Standard essential patents - Standardessenzielle Patente - A9-0016/2024 - Marion Walsmann - Proposition de la Commission — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6839,7 +6830,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 615,
-      "keywords": "brevets essentiels liés à une norme - standard essential patents - standardessenzielle patente brevets essentiels liés à une norme - standard essential patents - standardessenzielle patente - a9-0016/2024 - marion walsmann - proposition de la commission — vote in plenary 2023/0133",
+      "keywords": "standard essential patents and amending regulation (eu) 2017/1001 brevets essentiels liés à une norme - standard essential patents - standardessenzielle patente - a9-0016/2024 - marion walsmann - proposition de la commission — vote in plenary 2023/0133",
       "file": "data/decisions/ep-2024-02-28-2023-0133-165167.json"
     },
     {
@@ -6867,7 +6858,7 @@
     {
       "id": "ep-2024-02-28-2023-0370-164601",
       "sourceId": 164601,
-      "title": "Regulation (EU) No 1379/2013, Regulation (EU) No 167/2013 and Regulation (EU) No 168/2013 of the European Parliament and of the Council as regards certain reporting requirements",
+      "title": "Amending Regulation (EU) No 1379/2013, Regulation (EU) No 167/2013 and Regulation (EU) No 168/2013 of the European Parliament and of the Council as regards certain reporting requirements",
       "subtitle": "Exigences en matière d’obligations d’information - Reporting requirements - Berichtspflichten - A9-0009/2024 - Anna Cavazzini - Proposition de la Commission — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6883,13 +6874,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 601,
-      "keywords": "regulation (eu) no 1379/2013, regulation (eu) no 167/2013 and regulation (eu) no 168/2013 of the european parliament and of the council as regards certain reporting requirements exigences en matière d’obligations d’information - reporting requirements - berichtspflichten - a9-0009/2024 - anna cavazzini - proposition de la commission — vote in plenary 2023/0370",
+      "keywords": "amending regulation (eu) no 1379/2013, regulation (eu) no 167/2013 and regulation (eu) no 168/2013 of the european parliament and of the council as regards certain reporting requirements exigences en matière d’obligations d’information - reporting requirements - berichtspflichten - a9-0009/2024 - anna cavazzini - proposition de la commission — vote in plenary 2023/0370",
       "file": "data/decisions/ep-2024-02-28-2023-0370-164601.json"
     },
     {
       "id": "ep-2024-02-28-2023-2052-164839",
       "sourceId": 164839,
-      "title": "Recommandation au Conseil, à la Commission et au SEAE sur la situation en Syrie - Recommendation to the Council, the Commission and the EEAS on the situation in Syria - Empfehlung an den Rat, die Kommission und den EAD zur Lage in Syrien",
+      "title": "Recommendation to the Council, the Commission and the EEAS on the situation in Syria",
       "subtitle": "A9-0041/2024 - Nathalie Loiseau - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2024-02-28",
       "body": "parliament",
@@ -6907,7 +6898,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 506,
-      "keywords": "recommandation au conseil, à la commission et au seae sur la situation en syrie - recommendation to the council, the commission and the eeas on the situation in syria - empfehlung an den rat, die kommission und den ead zur lage in syrien a9-0041/2024 - nathalie loiseau - proposition de résolution (ensemble du texte) — vote in plenary 2023/2052",
+      "keywords": "recommendation to the council, the commission and the eeas on the situation in syria a9-0041/2024 - nathalie loiseau - proposition de résolution (ensemble du texte) — vote in plenary 2023/2052",
       "file": "data/decisions/ep-2024-02-28-2023-2052-164839.json"
     },
     {
@@ -7867,7 +7858,7 @@
     {
       "id": "ep-2024-02-07-2023-0452-164216",
       "sourceId": 164216,
-      "title": "Regulation (EU) 2021/1232 of the European Parliament and of the Council on a temporary derogation from certain provisions of Directive 2002/58/EC for the purpose of combating online child sexual abuse",
+      "title": "Amending Regulation (EU) 2021/1232 of the European Parliament and of the Council on a temporary derogation from certain provisions of Directive 2002/58/EC for the purpose of combating online child sexual abuse",
       "subtitle": "A9-0021/2024 – Birgit Sippel – Decision to enter into interinstitutional negotiations — vote in plenary",
       "date": "2024-02-07",
       "body": "parliament",
@@ -7883,7 +7874,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 629,
-      "keywords": "regulation (eu) 2021/1232 of the european parliament and of the council on a temporary derogation from certain provisions of directive 2002/58/ec for the purpose of combating online child sexual abuse a9-0021/2024 – birgit sippel – decision to enter into interinstitutional negotiations — vote in plenary 2023/0452",
+      "keywords": "amending regulation (eu) 2021/1232 of the european parliament and of the council on a temporary derogation from certain provisions of directive 2002/58/ec for the purpose of combating online child sexual abuse a9-0021/2024 – birgit sippel – decision to enter into interinstitutional negotiations — vote in plenary 2023/0452",
       "file": "data/decisions/ep-2024-02-07-2023-0452-164216.json"
     },
     {
@@ -8943,15 +8934,13 @@
     {
       "id": "ep-2024-01-17-b9-0057-2024-163315",
       "sourceId": 163315,
-      "title": "Objection pursuant to Rule 112(2) and (3), and (4)(c): Maximum residue levels for thiacloprid",
+      "title": "Objection: Maximum residue levels for thiacloprid",
       "subtitle": "B9-0057/2024 – Motion for a resolution — vote in plenary",
       "date": "2024-01-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -8961,13 +8950,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 624,
-      "keywords": "objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for thiacloprid b9-0057/2024 – motion for a resolution — vote in plenary b9-0057/2024",
+      "keywords": "objection: maximum residue levels for thiacloprid b9-0057/2024 – motion for a resolution — vote in plenary b9-0057/2024",
       "file": "data/decisions/ep-2024-01-17-b9-0057-2024-163315.json"
     },
     {
       "id": "ep-2024-01-16-2021-0384-163072",
       "sourceId": 163072,
-      "title": "Modification de la directive concernant les marchés d’instruments financiers (MiFID II) - Amendments to the Markets in Financial Instruments Directive (MiFID II) - Änderung der Richtlinie über Märkte für Finanzinstrumente (MiFID II)",
+      "title": "Amendments to the Markets in Financial Instruments Directive (MiFID II)",
       "subtitle": "Modification de la directive concernant les marchés d’instruments financiers (MiFID II) - Amendments to the Markets in Financial Instruments Directive (MiFID II) - Änderung der Richtlinie über Märkte für Finanzinstrumente (MiFID II) - A9-0039/2023 - Danuta Maria Hübner - Accord provisoire - Am 2 — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -8983,13 +8972,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 597,
-      "keywords": "modification de la directive concernant les marchés d’instruments financiers (mifid ii) - amendments to the markets in financial instruments directive (mifid ii) - änderung der richtlinie über märkte für finanzinstrumente (mifid ii) modification de la directive concernant les marchés d’instruments financiers (mifid ii) - amendments to the markets in financial instruments directive (mifid ii) - änderung der richtlinie über märkte für finanzinstrumente (mifid ii) - a9-0039/2023 - danuta maria hübner - accord provisoire - am 2 — vote in plenary 2021/0384",
+      "keywords": "amendments to the markets in financial instruments directive (mifid ii) modification de la directive concernant les marchés d’instruments financiers (mifid ii) - amendments to the markets in financial instruments directive (mifid ii) - änderung der richtlinie über märkte für finanzinstrumente (mifid ii) - a9-0039/2023 - danuta maria hübner - accord provisoire - am 2 — vote in plenary 2021/0384",
       "file": "data/decisions/ep-2024-01-16-2021-0384-163072.json"
     },
     {
       "id": "ep-2024-01-16-2021-0385-163074",
       "sourceId": 163074,
-      "title": "Modification du règlement sur les marchés d’instruments financiers (MiFIR) - Amendments to the Markets in Financial Instruments Regulation (MiFIR) - Änderung der Verordnung über Märkte für Finanzinstrumente (MiFIR)",
+      "title": "Amendments to the Markets in Financial Instruments Regulation (MiFIR)",
       "subtitle": "Modification du règlement sur les marchés d’instruments financiers (MiFIR) - Amendments to the Markets in Financial Instruments Regulation (MiFIR) - Änderung der Verordnung über Märkte für Finanzinstrumente (MiFIR) - A9-0040/2023 - Danuta Maria Hübner - Accord provisoire - Am 2 — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9005,20 +8994,20 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 598,
-      "keywords": "modification du règlement sur les marchés d’instruments financiers (mifir) - amendments to the markets in financial instruments regulation (mifir) - änderung der verordnung über märkte für finanzinstrumente (mifir) modification du règlement sur les marchés d’instruments financiers (mifir) - amendments to the markets in financial instruments regulation (mifir) - änderung der verordnung über märkte für finanzinstrumente (mifir) - a9-0040/2023 - danuta maria hübner - accord provisoire - am 2 — vote in plenary 2021/0385",
+      "keywords": "amendments to the markets in financial instruments regulation (mifir) modification du règlement sur les marchés d’instruments financiers (mifir) - amendments to the markets in financial instruments regulation (mifir) - änderung der verordnung über märkte für finanzinstrumente (mifir) - a9-0040/2023 - danuta maria hübner - accord provisoire - am 2 — vote in plenary 2021/0385",
       "file": "data/decisions/ep-2024-01-16-2021-0385-163074.json"
     },
     {
       "id": "ep-2024-01-16-2022-0099-162974",
       "sourceId": 162974,
-      "title": "Règlement sur les gaz fluorés - Fluorinated gases regulation - Verordnung über fluorierte Gase",
+      "title": "Fluorinated greenhouse gases, amending Directive (EU) 2019/1937 and repealing Regulation (EU) No 517/2014",
       "subtitle": "Règlement sur les gaz fluorés - Fluorinated gases regulation - Verordnung über fluorierte Gase - A9-0048/2023 - Bas Eickhout - Accord provisoire - Am 189 — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
       "topics": [
-        "Energy"
+        "Climate"
       ],
       "committee": {
         "code": "ENVI",
@@ -9029,7 +9018,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 581,
-      "keywords": "règlement sur les gaz fluorés - fluorinated gases regulation - verordnung über fluorierte gase règlement sur les gaz fluorés - fluorinated gases regulation - verordnung über fluorierte gase - a9-0048/2023 - bas eickhout - accord provisoire - am 189 — vote in plenary 2022/0099",
+      "keywords": "fluorinated greenhouse gases, amending directive (eu) 2019/1937 and repealing regulation (eu) no 517/2014 règlement sur les gaz fluorés - fluorinated gases regulation - verordnung über fluorierte gase - a9-0048/2023 - bas eickhout - accord provisoire - am 189 — vote in plenary 2022/0099",
       "file": "data/decisions/ep-2024-01-16-2022-0099-162974.json"
     },
     {
@@ -9057,7 +9046,7 @@
     {
       "id": "ep-2024-01-16-2022-0154-163120",
       "sourceId": 163120,
-      "title": "Abattement pour la réduction de la distorsion fiscale en faveur de l’endettement et limitation de la déductibilité des intérêts aux fins de l’impôt sur les sociétés - Debt-equity bias reduction allowance and limiting the deductibility of interest for corporate income tax purposes - Freibetrag zur Reduzierung der steuerlichen Begünstigung von Fremd- gegenüber Eigenkapitalfinanzierungen und Begrenzung der Abzugsfähigkeit von Zinsen für Körperschaftsteuerzwecke",
+      "title": "Debt-equity bias reduction allowance and limiting the deductibility of interest for corporate income tax purposes",
       "subtitle": "A9-0387/2023 - Luděk Niedermayer - Proposition de la Commission — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9075,7 +9064,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 611,
-      "keywords": "abattement pour la réduction de la distorsion fiscale en faveur de l’endettement et limitation de la déductibilité des intérêts aux fins de l’impôt sur les sociétés - debt-equity bias reduction allowance and limiting the deductibility of interest for corporate income tax purposes - freibetrag zur reduzierung der steuerlichen begünstigung von fremd- gegenüber eigenkapitalfinanzierungen und begrenzung der abzugsfähigkeit von zinsen für körperschaftsteuerzwecke a9-0387/2023 - luděk niedermayer - proposition de la commission — vote in plenary 2022/0154",
+      "keywords": "debt-equity bias reduction allowance and limiting the deductibility of interest for corporate income tax purposes a9-0387/2023 - luděk niedermayer - proposition de la commission — vote in plenary 2022/0154",
       "file": "data/decisions/ep-2024-01-16-2022-0154-163120.json"
     },
     {
@@ -9105,7 +9094,7 @@
     {
       "id": "ep-2024-01-16-2023-2002-163025",
       "sourceId": 163025,
-      "title": "Exécution du programme Erasmus+ 2021-2027 - Implementation of the Erasmus+ programme 2021-2027 - Durchführung des Programms Erasmus+ 2021-2027",
+      "title": "Implementation of the Erasmus+ programme 2021-2027",
       "subtitle": "A9-0413/2023 - Milan Zver - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9123,7 +9112,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 609,
-      "keywords": "exécution du programme erasmus+ 2021-2027 - implementation of the erasmus+ programme 2021-2027 - durchführung des programms erasmus+ 2021-2027 a9-0413/2023 - milan zver - proposition de résolution (ensemble du texte) — vote in plenary 2023/2002",
+      "keywords": "implementation of the erasmus+ programme 2021-2027 a9-0413/2023 - milan zver - proposition de résolution (ensemble du texte) — vote in plenary 2023/2002",
       "file": "data/decisions/ep-2024-01-16-2023-2002-163025.json"
     },
     {
@@ -9151,7 +9140,7 @@
     {
       "id": "ep-2024-01-16-2023-2004-163077",
       "sourceId": 163077,
-      "title": "Mise en œuvre du programme «Citoyens, égalité, droits et valeurs» 2021-2027 - Engagement et participation des citoyens - Implementation of the Citizens, Equality, Rights and Values programme 2021-2027",
+      "title": "Implementation of the Citizens, Equality, Rights and Values programme 2021-2027",
       "subtitle": "Mise en œuvre du programme «Citoyens, égalité, droits et valeurs» 2021-2027 - Engagement et participation des citoyens - Implementation of the Citizens, Equality, Rights and Values programme 2021-2027 – citizens' engagement and participation - Durchführung des Programms „Bürgerinnen und Bürger, Gleichstellung, Rechte und Werte“ 2021-2027 – Bürgerbeteiligung und Teilhabe - A9-0392/2023 - Łukasz Kohut - Proposition de résolution — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9167,13 +9156,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 620,
-      "keywords": "mise en œuvre du programme «citoyens, égalité, droits et valeurs» 2021-2027 - engagement et participation des citoyens - implementation of the citizens, equality, rights and values programme 2021-2027 mise en œuvre du programme «citoyens, égalité, droits et valeurs» 2021-2027 - engagement et participation des citoyens - implementation of the citizens, equality, rights and values programme 2021-2027 – citizens' engagement and participation - durchführung des programms „bürgerinnen und bürger, gleichstellung, rechte und werte“ 2021-2027 – bürgerbeteiligung und teilhabe - a9-0392/2023 - łukasz kohut - proposition de résolution — vote in plenary 2023/2004",
+      "keywords": "implementation of the citizens, equality, rights and values programme 2021-2027 mise en œuvre du programme «citoyens, égalité, droits et valeurs» 2021-2027 - engagement et participation des citoyens - implementation of the citizens, equality, rights and values programme 2021-2027 – citizens' engagement and participation - durchführung des programms „bürgerinnen und bürger, gleichstellung, rechte und werte“ 2021-2027 – bürgerbeteiligung und teilhabe - a9-0392/2023 - łukasz kohut - proposition de résolution — vote in plenary 2023/2004",
       "file": "data/decisions/ep-2024-01-16-2023-2004-163077.json"
     },
     {
       "id": "ep-2024-01-16-2023-2048-163075",
       "sourceId": 163075,
-      "title": "Mise en œuvre du développement territorial (RDC, titre III, chapitre II) et son application dans l’agenda territorial européen 2030 - Implementation of territorial development (CPR, Title III, Chapter II) and its application in the European Territorial agenda 2030 - Umsetzung der territorialen Entwicklung (Dachverordnung, Titel III, Kapitel II) und deren Anwendung in der Territorialen Agenda der Europäischen Union 2030",
+      "title": "Implementation of territorial development (CPR, Title III, Chapter II) and its application in the European Territorial agenda 2030",
       "subtitle": "Mise en œuvre du développement territorial (RDC, titre III, chapitre II) et son application dans l’agenda territorial européen 2030 - Implementation of territorial development (CPR, Title III, Chapter II) and its application in the European Territorial agenda 2030 - Umsetzung der territorialen Entwicklung (Dachverordnung, Titel III, Kapitel II) und deren Anwendung in der Territorialen Agenda der Europäischen Union 2030 - A9-0420/2023 - Marcos Ros Sempere - Proposition de résolution — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9191,13 +9180,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 612,
-      "keywords": "mise en œuvre du développement territorial (rdc, titre iii, chapitre ii) et son application dans l’agenda territorial européen 2030 - implementation of territorial development (cpr, title iii, chapter ii) and its application in the european territorial agenda 2030 - umsetzung der territorialen entwicklung (dachverordnung, titel iii, kapitel ii) und deren anwendung in der territorialen agenda der europäischen union 2030 mise en œuvre du développement territorial (rdc, titre iii, chapitre ii) et son application dans l’agenda territorial européen 2030 - implementation of territorial development (cpr, title iii, chapter ii) and its application in the european territorial agenda 2030 - umsetzung der territorialen entwicklung (dachverordnung, titel iii, kapitel ii) und deren anwendung in der territorialen agenda der europäischen union 2030 - a9-0420/2023 - marcos ros sempere - proposition de résolution — vote in plenary 2023/2048",
+      "keywords": "implementation of territorial development (cpr, title iii, chapter ii) and its application in the european territorial agenda 2030 mise en œuvre du développement territorial (rdc, titre iii, chapitre ii) et son application dans l’agenda territorial européen 2030 - implementation of territorial development (cpr, title iii, chapter ii) and its application in the european territorial agenda 2030 - umsetzung der territorialen entwicklung (dachverordnung, titel iii, kapitel ii) und deren anwendung in der territorialen agenda der europäischen union 2030 - a9-0420/2023 - marcos ros sempere - proposition de résolution — vote in plenary 2023/2048",
       "file": "data/decisions/ep-2024-01-16-2023-2048-163075.json"
     },
     {
       "id": "ep-2024-01-16-2023-2060-162984",
       "sourceId": 162984,
-      "title": "L’aviation électrique - une solution pour les vols court et moyen-courriers - Electric aviation",
+      "title": "Electric aviation – a solution for short and mid-range flights",
       "subtitle": "A9-0438/2023 - Erik Bergkvist - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2024-01-16",
       "body": "parliament",
@@ -9215,7 +9204,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 625,
-      "keywords": "l’aviation électrique - une solution pour les vols court et moyen-courriers - electric aviation a9-0438/2023 - erik bergkvist - proposition de résolution (ensemble du texte) — vote in plenary 2023/2060",
+      "keywords": "electric aviation – a solution for short and mid-range flights a9-0438/2023 - erik bergkvist - proposition de résolution (ensemble du texte) — vote in plenary 2023/2060",
       "file": "data/decisions/ep-2024-01-16-2023-2060-162984.json"
     },
     {
@@ -9545,15 +9534,13 @@
     {
       "id": "ep-2023-12-14-2023-2945-162715",
       "sourceId": 162715,
-      "title": "Objection pursuant to Rule 112(2) and (3), and (4)(c): Maximum residue levels for fipronil",
+      "title": "Objection: Maximum residue levels for fipronil",
       "subtitle": "Objection pursuant to Rule 112(2) and (3), and (4)(c): Maximum residue levels for fipronil – B9-0488/2023 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2023-12-14",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -9563,13 +9550,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 542,
-      "keywords": "objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for fipronil objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for fipronil – b9-0488/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2945",
+      "keywords": "objection: maximum residue levels for fipronil objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for fipronil – b9-0488/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2945",
       "file": "data/decisions/ep-2023-12-14-2023-2945-162715.json"
     },
     {
       "id": "ep-2023-12-14-2023-2993-162729",
       "sourceId": 162729,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations",
+      "title": "Objection: Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations – B9-0492/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-12-14",
       "body": "parliament",
@@ -9587,13 +9574,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 552,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize bt11 × mir162 × mir604 × mon 89034 × 5307 × ga21 and thirty sub-combinations objection pursuant to rule 112(2) and (3): genetically modified maize bt11 × mir162 × mir604 × mon 89034 × 5307 × ga21 and thirty sub-combinations – b9-0492/2023 – motion for a resolution — vote in plenary 2023/2993",
+      "keywords": "objection: genetically modified maize bt11 × mir162 × mir604 × mon 89034 × 5307 × ga21 and thirty sub-combinations objection pursuant to rule 112(2) and (3): genetically modified maize bt11 × mir162 × mir604 × mon 89034 × 5307 × ga21 and thirty sub-combinations – b9-0492/2023 – motion for a resolution — vote in plenary 2023/2993",
       "file": "data/decisions/ep-2023-12-14-2023-2993-162729.json"
     },
     {
       "id": "ep-2023-12-14-2023-2995-162716",
       "sourceId": 162716,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape Ms8, Rf3 and Ms8 × Rf3",
+      "title": "Objection: Genetically modified oilseed rape Ms8, Rf3 and Ms8 × Rf3",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape Ms8, Rf3 and Ms8 × Rf3 – B9-0490/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-12-14",
       "body": "parliament",
@@ -9611,21 +9598,19 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 546,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified oilseed rape ms8, rf3 and ms8 × rf3 objection pursuant to rule 112(2) and (3): genetically modified oilseed rape ms8, rf3 and ms8 × rf3 – b9-0490/2023 – motion for a resolution — vote in plenary 2023/2995",
+      "keywords": "objection: genetically modified oilseed rape ms8, rf3 and ms8 × rf3 objection pursuant to rule 112(2) and (3): genetically modified oilseed rape ms8, rf3 and ms8 × rf3 – b9-0490/2023 – motion for a resolution — vote in plenary 2023/2995",
       "file": "data/decisions/ep-2023-12-14-2023-2995-162716.json"
     },
     {
       "id": "ep-2023-12-14-2023-2998-162728",
       "sourceId": 162728,
-      "title": "Objection pursuant to Rule 112(2) and (3), and (4)(c): Maximum residue levels for tricyclazole",
+      "title": "Objection: Maximum residue levels for tricyclazole",
       "subtitle": "Objection pursuant to Rule 112(2) and (3), and (4)(c): Maximum residue levels for tricyclazole – B9-0494/2023 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2023-12-14",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -9635,7 +9620,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 546,
-      "keywords": "objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for tricyclazole objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for tricyclazole – b9-0494/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2998",
+      "keywords": "objection: maximum residue levels for tricyclazole objection pursuant to rule 112(2) and (3), and (4)(c): maximum residue levels for tricyclazole – b9-0494/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2998",
       "file": "data/decisions/ep-2023-12-14-2023-2998-162728.json"
     },
     {
@@ -10149,7 +10134,7 @@
     {
       "id": "ep-2023-12-12-2023-0155-162295",
       "sourceId": 162295,
-      "title": "Regulation (EC) No 561/2006 as regards minimum requirements on minimum breaks and daily and weekly rest periods in the occasional passenger transport sector",
+      "title": "Amending Regulation (EC) No 561/2006 as regards minimum requirements on minimum breaks and daily and weekly rest periods in the occasional passenger transport sector",
       "subtitle": "A9-0370/2023 – Henna Virkkunen – Commission proposal — vote in plenary",
       "date": "2023-12-12",
       "body": "parliament",
@@ -10167,7 +10152,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 619,
-      "keywords": "regulation (ec) no 561/2006 as regards minimum requirements on minimum breaks and daily and weekly rest periods in the occasional passenger transport sector a9-0370/2023 – henna virkkunen – commission proposal — vote in plenary 2023/0155",
+      "keywords": "amending regulation (ec) no 561/2006 as regards minimum requirements on minimum breaks and daily and weekly rest periods in the occasional passenger transport sector a9-0370/2023 – henna virkkunen – commission proposal — vote in plenary 2023/0155",
       "file": "data/decisions/ep-2023-12-12-2023-0155-162295.json"
     },
     {
@@ -11980,7 +11965,7 @@
     {
       "id": "ep-2023-10-19-2023-2901-159684",
       "sourceId": 159684,
-      "title": "L'état de droit à Malte 6 ans après l'assassinat de Daphne Caruana Galizia et la nécessité de protéger les journalistes - Rule of Law in Malta: 6 years after the assassination of Daphne Caruana Galizia and the need to protect journalists - Rechtsstaatlichkeit in Malta sechs Jahre nach der Ermordung von Daphne Caruana Galizia und die Notwendigkeit, Journalisten zu schützen",
+      "title": "Rule of Law in Malta: 6 years after the assassination of Daphne Caruana Galizia and the need to protect journalists",
       "subtitle": "B9-0449/2023 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2023-10-19",
       "body": "parliament",
@@ -11995,7 +11980,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 517,
-      "keywords": "l'état de droit à malte 6 ans après l'assassinat de daphne caruana galizia et la nécessité de protéger les journalistes - rule of law in malta: 6 years after the assassination of daphne caruana galizia and the need to protect journalists - rechtsstaatlichkeit in malta sechs jahre nach der ermordung von daphne caruana galizia und die notwendigkeit, journalisten zu schützen b9-0449/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2901",
+      "keywords": "rule of law in malta: 6 years after the assassination of daphne caruana galizia and the need to protect journalists b9-0449/2023 – motion for a resolution (text as a whole) — vote in plenary 2023/2901",
       "file": "data/decisions/ep-2023-10-19-2023-2901-159684.json"
     },
     {
@@ -12163,41 +12148,37 @@
     {
       "id": "ep-2023-10-18-2023-2769-159432",
       "sourceId": 159432,
-      "title": "Objection pursuant to Rule 111(3): Additional technical screening criteria",
+      "title": "Objection: Additional technical screening criteria",
       "subtitle": "Objection pursuant to Rule 111(3): Additional technical screening criteria – B9-0431/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-10-18",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 632,
-      "keywords": "objection pursuant to rule 111(3): additional technical screening criteria objection pursuant to rule 111(3): additional technical screening criteria – b9-0431/2023 – motion for a resolution — vote in plenary 2023/2769",
+      "keywords": "objection: additional technical screening criteria objection pursuant to rule 111(3): additional technical screening criteria – b9-0431/2023 – motion for a resolution — vote in plenary 2023/2769",
       "file": "data/decisions/ep-2023-10-18-2023-2769-159432.json"
     },
     {
       "id": "ep-2023-10-18-2023-2816-159433",
       "sourceId": 159433,
-      "title": "Objection pursuant to Rule 111(3): European Sustainability Reporting Standards",
+      "title": "Objection: European Sustainability Reporting Standards",
       "subtitle": "Objection pursuant to Rule 111(3): European Sustainability Reporting Standards – B9-0426/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-10-18",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 631,
-      "keywords": "objection pursuant to rule 111(3): european sustainability reporting standards objection pursuant to rule 111(3): european sustainability reporting standards – b9-0426/2023 – motion for a resolution — vote in plenary 2023/2816",
+      "keywords": "objection: european sustainability reporting standards objection pursuant to rule 111(3): european sustainability reporting standards – b9-0426/2023 – motion for a resolution — vote in plenary 2023/2816",
       "file": "data/decisions/ep-2023-10-18-2023-2816-159433.json"
     },
     {
@@ -12931,7 +12912,7 @@
     {
       "id": "ep-2023-10-17-2022-2148-159016",
       "sourceId": 159016,
-      "title": "Implications of Chinese fishing operations for EU fisheries and the way forward und weiteres Vorgehen",
+      "title": "The implications of Chinese fishing operations on EU fisheries and the way forward",
       "subtitle": "Implications of Chinese fishing operations for EU fisheries and the way forward und weiteres Vorgehen – A9-0282/2023 – Pierre Karleskind – Motion for a resolution — vote in plenary",
       "date": "2023-10-17",
       "body": "parliament",
@@ -12950,7 +12931,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 614,
-      "keywords": "implications of chinese fishing operations for eu fisheries and the way forward und weiteres vorgehen implications of chinese fishing operations for eu fisheries and the way forward und weiteres vorgehen – a9-0282/2023 – pierre karleskind – motion for a resolution — vote in plenary 2022/2148",
+      "keywords": "the implications of chinese fishing operations on eu fisheries and the way forward implications of chinese fishing operations for eu fisheries and the way forward und weiteres vorgehen – a9-0282/2023 – pierre karleskind – motion for a resolution — vote in plenary 2022/2148",
       "file": "data/decisions/ep-2023-10-17-2022-2148-159016.json"
     },
     {
@@ -13146,7 +13127,7 @@
     {
       "id": "ep-2023-10-05-2021-0428-158878",
       "sourceId": 158878,
-      "title": "Regulation (EU) 2016/399 on a Union Code on the rules governing the movement of persons across borders",
+      "title": "Amending Regulation (EU) 2016/399 on a Union Code on the rules governing the movement of persons across borders",
       "subtitle": "Schengen Borders Code – A9-0280/2023 – Sylvie Guillaume – Decision to enter into interinstitutional negotiations — vote in plenary",
       "date": "2023-10-05",
       "body": "parliament",
@@ -13162,7 +13143,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 564,
-      "keywords": "regulation (eu) 2016/399 on a union code on the rules governing the movement of persons across borders schengen borders code – a9-0280/2023 – sylvie guillaume – decision to enter into interinstitutional negotiations — vote in plenary 2021/0428",
+      "keywords": "amending regulation (eu) 2016/399 on a union code on the rules governing the movement of persons across borders schengen borders code – a9-0280/2023 – sylvie guillaume – decision to enter into interinstitutional negotiations — vote in plenary 2021/0428",
       "file": "data/decisions/ep-2023-10-05-2021-0428-158878.json"
     },
     {
@@ -13590,7 +13571,7 @@
     {
       "id": "ep-2023-10-03-2023-2809-158758",
       "sourceId": 158758,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MON 89034 × 1507 × MIR162 × NK603 × DAS-40278-9 and nine sub-combinations",
+      "title": "Objection: Genetically modified maize MON 89034 × 1507 × MIR162 × NK603 × DAS-40278-9 and nine sub-combinations",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MON 89034 × 1507 × MIR162 × NK603 × DAS-40278-9 and nine sub-combinations – B9-0387/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-10-03",
       "body": "parliament",
@@ -13608,13 +13589,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 615,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize mon 89034 × 1507 × mir162 × nk603 × das-40278-9 and nine sub-combinations objection pursuant to rule 112(2) and (3): genetically modified maize mon 89034 × 1507 × mir162 × nk603 × das-40278-9 and nine sub-combinations – b9-0387/2023 – motion for a resolution — vote in plenary 2023/2809",
+      "keywords": "objection: genetically modified maize mon 89034 × 1507 × mir162 × nk603 × das-40278-9 and nine sub-combinations objection pursuant to rule 112(2) and (3): genetically modified maize mon 89034 × 1507 × mir162 × nk603 × das-40278-9 and nine sub-combinations – b9-0387/2023 – motion for a resolution — vote in plenary 2023/2809",
       "file": "data/decisions/ep-2023-10-03-2023-2809-158758.json"
     },
     {
       "id": "ep-2023-10-03-2023-2810-158757",
       "sourceId": 158757,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MIR162",
+      "title": "Objection: Genetically modified maize MIR162",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MIR162 – B9-0388/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-10-03",
       "body": "parliament",
@@ -13632,7 +13613,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 615,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize mir162 objection pursuant to rule 112(2) and (3): genetically modified maize mir162 – b9-0388/2023 – motion for a resolution — vote in plenary 2023/2810",
+      "keywords": "objection: genetically modified maize mir162 objection pursuant to rule 112(2) and (3): genetically modified maize mir162 – b9-0388/2023 – motion for a resolution — vote in plenary 2023/2810",
       "file": "data/decisions/ep-2023-10-03-2023-2810-158757.json"
     },
     {
@@ -14192,7 +14173,7 @@
     {
       "id": "ep-2023-09-12-2021-0218-157788",
       "sourceId": 157788,
-      "title": "Directive (EU) 2018/2001 of the European Parliament and of the Council, Regulation (EU) 2018/1999 of the European Parliament and of the Council and Directive 98/70/EC of the European Parliament and of the Council as regards the promotion of energy from renewable sources, and repealing Council Directive (EU) 2015/652",
+      "title": "Amending Directive (EU) 2018/2001 of the European Parliament and of the Council, Regulation (EU) 2018/1999 of the European Parliament and of the Council and Directive 98/70/EC of the European Parliament and of the Council as regards the promotion of energy from renewable sources, and repealing Council Directive (EU) 2015/652",
       "subtitle": "Renewable Energy Directive – A9-0208/2022 – Markus Pieper – Provisional agreement – Am 81 — vote in plenary",
       "date": "2023-09-12",
       "body": "parliament",
@@ -14210,7 +14191,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 630,
-      "keywords": "directive (eu) 2018/2001 of the european parliament and of the council, regulation (eu) 2018/1999 of the european parliament and of the council and directive 98/70/ec of the european parliament and of the council as regards the promotion of energy from renewable sources, and repealing council directive (eu) 2015/652 renewable energy directive – a9-0208/2022 – markus pieper – provisional agreement – am 81 — vote in plenary 2021/0218",
+      "keywords": "amending directive (eu) 2018/2001 of the european parliament and of the council, regulation (eu) 2018/1999 of the european parliament and of the council and directive 98/70/ec of the european parliament and of the council as regards the promotion of energy from renewable sources, and repealing council directive (eu) 2015/652 renewable energy directive – a9-0208/2022 – markus pieper – provisional agreement – am 81 — vote in plenary 2021/0218",
       "file": "data/decisions/ep-2023-09-12-2021-0218-157788.json"
     },
     {
@@ -14378,7 +14359,7 @@
     {
       "id": "ep-2023-09-12-2023-2760-157977",
       "sourceId": 157977,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize GA21 × T25",
+      "title": "Objection: Genetically modified maize GA21 × T25",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize GA21 × T25 - B9-0363/2023 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2023-09-12",
       "body": "parliament",
@@ -14396,13 +14377,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 615,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize ga21 × t25 objection pursuant to rule 112(2) and (3): genetically modified maize ga21 × t25 - b9-0363/2023 - motion for a resolution (text as a whole) — vote in plenary 2023/2760",
+      "keywords": "objection: genetically modified maize ga21 × t25 objection pursuant to rule 112(2) and (3): genetically modified maize ga21 × t25 - b9-0363/2023 - motion for a resolution (text as a whole) — vote in plenary 2023/2760",
       "file": "data/decisions/ep-2023-09-12-2023-2760-157977.json"
     },
     {
       "id": "ep-2023-09-12-objection-pursuant-to-rule-112-2-and-3-genetically-modifie-157978",
       "sourceId": 157978,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MON 87419",
+      "title": "Objection: Genetically modified maize MON 87419",
       "subtitle": "vote in plenary",
       "date": "2023-09-12",
       "body": "parliament",
@@ -14416,7 +14397,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 627,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize mon 87419 vote in plenary",
+      "keywords": "objection: genetically modified maize mon 87419 vote in plenary",
       "file": "data/decisions/ep-2023-09-12-objection-pursuant-to-rule-112-2-and-3-genetically-modifie-157978.json"
     },
     {
@@ -15346,7 +15327,7 @@
     {
       "id": "ep-2023-07-11-2023-2676-156848",
       "sourceId": 156848,
-      "title": "Objection pursuant to Rule 111(3): Detailed production rules for organic sea salt and other organic salts for food and feed",
+      "title": "Objection: Detailed production rules for organic sea salt and other organic salts for food and feed",
       "subtitle": "Objection pursuant to Rule 111(3): Detailed production rules for organic sea salt and other organic salts for food and feed – B9-0308/2023 – Motion for a resolution — vote in plenary",
       "date": "2023-07-11",
       "body": "parliament",
@@ -15364,7 +15345,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 636,
-      "keywords": "objection pursuant to rule 111(3): detailed production rules for organic sea salt and other organic salts for food and feed objection pursuant to rule 111(3): detailed production rules for organic sea salt and other organic salts for food and feed – b9-0308/2023 – motion for a resolution — vote in plenary 2023/2676",
+      "keywords": "objection: detailed production rules for organic sea salt and other organic salts for food and feed objection pursuant to rule 111(3): detailed production rules for organic sea salt and other organic salts for food and feed – b9-0308/2023 – motion for a resolution — vote in plenary 2023/2676",
       "file": "data/decisions/ep-2023-07-11-2023-2676-156848.json"
     },
     {
@@ -16592,7 +16573,7 @@
     {
       "id": "ep-2023-05-11-2023-2605-155373",
       "sourceId": 155373,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton 281-24-236 x 3006-210-23",
+      "title": "Objection: Genetically modified cotton 281-24-236 x 3006-210-23",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton 281-24-236 x 3006-210-23 - B9-0232/2023 - Motion for a resolution — vote in plenary",
       "date": "2023-05-11",
       "body": "parliament",
@@ -16610,7 +16591,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 580,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified cotton 281-24-236 x 3006-210-23 objection pursuant to rule 112(2) and (3): genetically modified cotton 281-24-236 x 3006-210-23 - b9-0232/2023 - motion for a resolution — vote in plenary 2023/2605",
+      "keywords": "objection: genetically modified cotton 281-24-236 x 3006-210-23 objection pursuant to rule 112(2) and (3): genetically modified cotton 281-24-236 x 3006-210-23 - b9-0232/2023 - motion for a resolution — vote in plenary 2023/2605",
       "file": "data/decisions/ep-2023-05-11-2023-2605-155373.json"
     },
     {
@@ -18140,13 +18121,15 @@
     {
       "id": "ep-2023-05-09-2021-0423-154711",
       "sourceId": 154711,
-      "title": "Réduction des émissions de méthane dans le secteur de l’énergie",
+      "title": "Methane emissions reduction in the energy sector and amending Regulation (EU) 2019/942",
       "subtitle": "A9-0162/2023 - Pascal Canfin, Jutta Paulus - Commission proposal — vote in plenary",
       "date": "2023-05-09",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Climate"
+      ],
       "committee": {
         "code": "ITRE",
         "label": "Industry, Research and Energy",
@@ -18156,13 +18139,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 627,
-      "keywords": "réduction des émissions de méthane dans le secteur de l’énergie a9-0162/2023 - pascal canfin, jutta paulus - commission proposal — vote in plenary 2021/0423",
+      "keywords": "methane emissions reduction in the energy sector and amending regulation (eu) 2019/942 a9-0162/2023 - pascal canfin, jutta paulus - commission proposal — vote in plenary 2021/0423",
       "file": "data/decisions/ep-2023-05-09-2021-0423-154711.json"
     },
     {
       "id": "ep-2023-05-09-2021-2205-154611",
       "sourceId": 154611,
-      "title": "Programme en faveur de la consommation de fruits, de légumes, de lait et de produits laitiers à l’école",
+      "title": "The implementation of the school scheme for fruit, vegetables, milk and dairy products under the Common Market Organisation Regulation",
       "subtitle": "A9-0096/2023 - Carmen Avram - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2023-05-09",
       "body": "parliament",
@@ -18178,7 +18161,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 614,
-      "keywords": "programme en faveur de la consommation de fruits, de légumes, de lait et de produits laitiers à l’école a9-0096/2023 - carmen avram - motion for a resolution (text as a whole) — vote in plenary 2021/2205",
+      "keywords": "the implementation of the school scheme for fruit, vegetables, milk and dairy products under the common market organisation regulation a9-0096/2023 - carmen avram - motion for a resolution (text as a whole) — vote in plenary 2021/2205",
       "file": "data/decisions/ep-2023-05-09-2021-2205-154611.json"
     },
     {
@@ -19331,7 +19314,7 @@
     {
       "id": "ep-2023-03-30-2021-0050-154067",
       "sourceId": 154067,
-      "title": "Renforcer l’application du principe de l’égalité des rémunérations entre hommes et femmes pour un même travail ou un travail de même valeur",
+      "title": "Directive of the European Parliament and of the Council to strengthen the application of the principle of equal pay for equal work or work of equal value between men and women through pay transparency and enforcement mechanisms",
       "subtitle": "A9-0056/2022 – Kira Marie Peter-Hansen, Samira Rafaela – Request to vote on the amendments to the draft legislative act — vote in plenary",
       "date": "2023-03-30",
       "body": "parliament",
@@ -19349,7 +19332,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 576,
-      "keywords": "renforcer l’application du principe de l’égalité des rémunérations entre hommes et femmes pour un même travail ou un travail de même valeur a9-0056/2022 – kira marie peter-hansen, samira rafaela – request to vote on the amendments to the draft legislative act — vote in plenary 2021/0050",
+      "keywords": "directive of the european parliament and of the council to strengthen the application of the principle of equal pay for equal work or work of equal value between men and women through pay transparency and enforcement mechanisms a9-0056/2022 – kira marie peter-hansen, samira rafaela – request to vote on the amendments to the draft legislative act — vote in plenary 2021/0050",
       "file": "data/decisions/ep-2023-03-30-2021-0050-154067.json"
     },
     {
@@ -20177,7 +20160,7 @@
     {
       "id": "ep-2023-03-14-2023-2537-153640",
       "sourceId": 153640,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape MON 94100 (MON-941ØØ-2)",
+      "title": "Objection: Genetically modified oilseed rape MON 94100 (MON-941ØØ-2)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape MON 94100 (MON-941ØØ-2) - B9-0162/2023 - Proposal for a resolution — vote in plenary",
       "date": "2023-03-14",
       "body": "parliament",
@@ -20195,7 +20178,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 629,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified oilseed rape mon 94100 (mon-941øø-2) objection pursuant to rule 112(2) and (3): genetically modified oilseed rape mon 94100 (mon-941øø-2) - b9-0162/2023 - proposal for a resolution — vote in plenary 2023/2537",
+      "keywords": "objection: genetically modified oilseed rape mon 94100 (mon-941øø-2) objection pursuant to rule 112(2) and (3): genetically modified oilseed rape mon 94100 (mon-941øø-2) - b9-0162/2023 - proposal for a resolution — vote in plenary 2023/2537",
       "file": "data/decisions/ep-2023-03-14-2023-2537-153640.json"
     },
     {
@@ -21344,7 +21327,7 @@
     {
       "id": "ep-2023-01-19-2022-2152-151811",
       "sourceId": 151811,
-      "title": "Protection des intérêts financiers de l'Union européenne - lutte contre la fraude - rapport annuel 2021",
+      "title": "The protection of the European Union’s financial interests – combating fraud – annual report 2021",
       "subtitle": "A9-0299/2022 – Sabrina Pignedoli – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2023-01-19",
       "body": "parliament",
@@ -21360,7 +21343,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 548,
-      "keywords": "protection des intérêts financiers de l'union européenne - lutte contre la fraude - rapport annuel 2021 a9-0299/2022 – sabrina pignedoli – motion for a resolution (as a whole) — vote in plenary 2022/2152",
+      "keywords": "the protection of the european union’s financial interests – combating fraud – annual report 2021 a9-0299/2022 – sabrina pignedoli – motion for a resolution (as a whole) — vote in plenary 2022/2152",
       "file": "data/decisions/ep-2023-01-19-2022-2152-151811.json"
     },
     {
@@ -21388,19 +21371,21 @@
     {
       "id": "ep-2023-01-19-2023-2505-152228",
       "sourceId": 152228,
-      "title": "L'assaut contre les institutions démocratiques brésiliennes",
+      "title": "MOTION FOR A RESOLUTION The storming of the Brazilian democratic institutions",
       "subtitle": "B9-0058/2023 – Recital C – Am 4 — vote in plenary",
       "date": "2023-01-19",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Brazil"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 438,
-      "keywords": "l'assaut contre les institutions démocratiques brésiliennes b9-0058/2023 – recital c – am 4 — vote in plenary 2023/2505",
+      "keywords": "motion for a resolution the storming of the brazilian democratic institutions b9-0058/2023 – recital c – am 4 — vote in plenary 2023/2505",
       "file": "data/decisions/ep-2023-01-19-2023-2505-152228.json"
     },
     {
@@ -21577,7 +21562,7 @@
     {
       "id": "ep-2023-01-18-2022-2050-151771",
       "sourceId": 151771,
-      "title": "Mise en œuvre de la politique de sécurité et de défense commune",
+      "title": "The implementation of the common security and defence policy – annual report 2022",
       "subtitle": "A9-0296/2022 - Tom Vandenkendelaere - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2023-01-18",
       "body": "parliament",
@@ -21595,13 +21580,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 637,
-      "keywords": "mise en œuvre de la politique de sécurité et de défense commune a9-0296/2022 - tom vandenkendelaere - proposition de résolution (ensemble du texte) — vote in plenary 2022/2050",
+      "keywords": "the implementation of the common security and defence policy – annual report 2022 a9-0296/2022 - tom vandenkendelaere - proposition de résolution (ensemble du texte) — vote in plenary 2022/2050",
       "file": "data/decisions/ep-2023-01-18-2022-2050-151771.json"
     },
     {
       "id": "ep-2023-01-18-2022-3015-152032",
       "sourceId": 152032,
-      "title": "30e anniversaire du marché unique - 30th Anniversary of the Single Market - 30-jähriges Bestehen des Binnenmarkts",
+      "title": "The 30th anniversary of the single market: celebrating achievements and looking towards future developments",
       "subtitle": "B9-0004/2023 - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2023-01-18",
       "body": "parliament",
@@ -21619,7 +21604,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 638,
-      "keywords": "30e anniversaire du marché unique - 30th anniversary of the single market - 30-jähriges bestehen des binnenmarkts b9-0004/2023 - proposition de résolution (ensemble du texte) — vote in plenary 2022/3015",
+      "keywords": "the 30th anniversary of the single market: celebrating achievements and looking towards future developments b9-0004/2023 - proposition de résolution (ensemble du texte) — vote in plenary 2022/3015",
       "file": "data/decisions/ep-2023-01-18-2022-3015-152032.json"
     },
     {
@@ -22269,7 +22254,7 @@
     {
       "id": "ep-2022-12-13-2022-2930-151088",
       "sourceId": 151088,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean A5547-127 (ACS-GMØØ6-4)",
+      "title": "Objection: Genetically modified soybean A5547-127 (ACS-GMØØ6-4)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean A5547-127 (ACS-GMØØ6-4) – B9-0548/2022 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-12-13",
       "body": "parliament",
@@ -22287,7 +22272,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 627,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified soybean a5547-127 (acs-gmøø6-4) objection pursuant to rule 112(2) and (3): genetically modified soybean a5547-127 (acs-gmøø6-4) – b9-0548/2022 – motion for a resolution (text as a whole) — vote in plenary 2022/2930",
+      "keywords": "objection: genetically modified soybean a5547-127 (acs-gmøø6-4) objection pursuant to rule 112(2) and (3): genetically modified soybean a5547-127 (acs-gmøø6-4) – b9-0548/2022 – motion for a resolution (text as a whole) — vote in plenary 2022/2930",
       "file": "data/decisions/ep-2022-12-13-2022-2930-151088.json"
     },
     {
@@ -24502,15 +24487,13 @@
     {
       "id": "ep-2022-10-18-2022-2785-149085",
       "sourceId": 149085,
-      "title": "Objection pursuant to Rule 112 (2) and (3): Active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole",
+      "title": "Objection: Active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole",
       "subtitle": "Objection pursuant to Rule 112 (2) and (3): Active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole - B9-0460/2022 - Proposal for a resolution — vote in plenary",
       "date": "2022-10-18",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -24520,7 +24503,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 638,
-      "keywords": "objection pursuant to rule 112 (2) and (3): active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole objection pursuant to rule 112 (2) and (3): active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole - b9-0460/2022 - proposal for a resolution — vote in plenary 2022/2785",
+      "keywords": "objection: active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole objection pursuant to rule 112 (2) and (3): active substances, including 8-hydroxyquinoline, chlorotoluron and difenoconazole - b9-0460/2022 - proposal for a resolution — vote in plenary 2022/2785",
       "file": "data/decisions/ep-2022-10-18-2022-2785-149085.json"
     },
     {
@@ -26357,7 +26340,7 @@
     {
       "id": "ep-2022-07-06-b9-0338-2022-146888",
       "sourceId": 146888,
-      "title": "Objection pursuant to Rule 111(3): Amending the Taxonomy Climate Delegated Act and the Taxonomy Disclosures Delegated Act",
+      "title": "Objection: Amending the Taxonomy Climate Delegated Act and the Taxonomy Disclosures Delegated Act",
       "subtitle": "Objection pursuant to Rule 111(3): Amending the Taxonomy Climate Delegated Act and the Taxonomy Disclosures Delegated Act - B9-0338/2022 - Motion for a resolution — vote in plenary",
       "date": "2022-07-06",
       "body": "parliament",
@@ -26375,27 +26358,25 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 639,
-      "keywords": "objection pursuant to rule 111(3): amending the taxonomy climate delegated act and the taxonomy disclosures delegated act objection pursuant to rule 111(3): amending the taxonomy climate delegated act and the taxonomy disclosures delegated act - b9-0338/2022 - motion for a resolution — vote in plenary b9-0338/2022",
+      "keywords": "objection: amending the taxonomy climate delegated act and the taxonomy disclosures delegated act objection pursuant to rule 111(3): amending the taxonomy climate delegated act and the taxonomy disclosures delegated act - b9-0338/2022 - motion for a resolution — vote in plenary b9-0338/2022",
       "file": "data/decisions/ep-2022-07-06-b9-0338-2022-146888.json"
     },
     {
       "id": "ep-2022-07-06-b9-0345-2022-147045",
       "sourceId": 147045,
-      "title": "Objection pursuant to Rule 111(3): Technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits",
+      "title": "Objection: Technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits",
       "subtitle": "Objection pursuant to Rule 111(3): Technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits - B9-0345/2022 - Motion for a resolution (as a whole) — vote in plenary",
       "date": "2022-07-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
       "mepCount": 632,
-      "keywords": "objection pursuant to rule 111(3): technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits objection pursuant to rule 111(3): technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits - b9-0345/2022 - motion for a resolution (as a whole) — vote in plenary b9-0345/2022",
+      "keywords": "objection: technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits objection pursuant to rule 111(3): technical standards for the application of position limits to commodity derivatives and procedures for applying for exemption from position limits - b9-0345/2022 - motion for a resolution (as a whole) — vote in plenary b9-0345/2022",
       "file": "data/decisions/ep-2022-07-06-b9-0345-2022-147045.json"
     },
     {
@@ -26861,7 +26842,7 @@
     {
       "id": "ep-2022-06-23-2022-0030-146392",
       "sourceId": 146392,
-      "title": "Regulation (EU) 2021/954 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) with regard to third-country nationals legally staying or residing in the territories of Member States during the COVID-19 pandemic",
+      "title": "Amending Regulation (EU) 2021/954 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) with regard to third-country nationals legally staying or residing in the territories of Member States during the COVID-19 pandemic",
       "subtitle": "EU Digital COVID Certificate – third-country nationals – A9-0137/2022 – Juan Fernando López Aguilar – Rejection – Am 1 — vote in plenary",
       "date": "2022-06-23",
       "body": "parliament",
@@ -26879,13 +26860,13 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 577,
-      "keywords": "regulation (eu) 2021/954 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) with regard to third-country nationals legally staying or residing in the territories of member states during the covid-19 pandemic eu digital covid certificate – third-country nationals – a9-0137/2022 – juan fernando lópez aguilar – rejection – am 1 — vote in plenary 2022/0030",
+      "keywords": "amending regulation (eu) 2021/954 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) with regard to third-country nationals legally staying or residing in the territories of member states during the covid-19 pandemic eu digital covid certificate – third-country nationals – a9-0137/2022 – juan fernando lópez aguilar – rejection – am 1 — vote in plenary 2022/0030",
       "file": "data/decisions/ep-2022-06-23-2022-0030-146392.json"
     },
     {
       "id": "ep-2022-06-23-2022-0031-146461",
       "sourceId": 146461,
-      "title": "Regulation (EU) 2021/953 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) to facilitate free movement during the COVID-19 pandemic",
+      "title": "Amending Regulation (EU) 2021/953 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) to facilitate free movement during the COVID-19 pandemic",
       "subtitle": "A9-0138/2022 – Juan Fernando López Aguilar – Provisional agreement – Am 36 — vote in plenary",
       "date": "2022-06-23",
       "body": "parliament",
@@ -26903,7 +26884,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 591,
-      "keywords": "regulation (eu) 2021/953 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) to facilitate free movement during the covid-19 pandemic a9-0138/2022 – juan fernando lópez aguilar – provisional agreement – am 36 — vote in plenary 2022/0031",
+      "keywords": "amending regulation (eu) 2021/953 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) to facilitate free movement during the covid-19 pandemic a9-0138/2022 – juan fernando lópez aguilar – provisional agreement – am 36 — vote in plenary 2022/0031",
       "file": "data/decisions/ep-2022-06-23-2022-0031-146461.json"
     },
     {
@@ -26931,7 +26912,7 @@
     {
       "id": "ep-2022-06-23-2022-2694-146358",
       "sourceId": 146358,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize DP4114 × MON 810 × MIR604 × NK603 and genetically modified maize combining two or three of the single events DP4114, MON 810, MIR604 and NK603",
+      "title": "Objection: Genetically modified maize DP4114 × MON 810 × MIR604 × NK603 and genetically modified maize combining two or three of the single events DP4114, MON 810, MIR604 and NK603",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize DP4114 × MON 810 × MIR604 × NK603 and genetically modified maize combining two or three of the single events DP4114, MON 810, MIR604 and NK603 – B9-0328/2022 – Motion for a resolution — vote in plenary",
       "date": "2022-06-23",
       "body": "parliament",
@@ -26949,13 +26930,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 595,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize dp4114 × mon 810 × mir604 × nk603 and genetically modified maize combining two or three of the single events dp4114, mon 810, mir604 and nk603 objection pursuant to rule 112(2) and (3): genetically modified maize dp4114 × mon 810 × mir604 × nk603 and genetically modified maize combining two or three of the single events dp4114, mon 810, mir604 and nk603 – b9-0328/2022 – motion for a resolution — vote in plenary 2022/2694",
+      "keywords": "objection: genetically modified maize dp4114 × mon 810 × mir604 × nk603 and genetically modified maize combining two or three of the single events dp4114, mon 810, mir604 and nk603 objection pursuant to rule 112(2) and (3): genetically modified maize dp4114 × mon 810 × mir604 × nk603 and genetically modified maize combining two or three of the single events dp4114, mon 810, mir604 and nk603 – b9-0328/2022 – motion for a resolution — vote in plenary 2022/2694",
       "file": "data/decisions/ep-2022-06-23-2022-2694-146358.json"
     },
     {
       "id": "ep-2022-06-23-2022-2713-146315",
       "sourceId": 146315,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize NK603 × T25 × DAS-40278-9 and its sub-combination T25 × DAS-40278-9",
+      "title": "Objection: Genetically modified maize NK603 × T25 × DAS-40278-9 and its sub-combination T25 × DAS-40278-9",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize NK603 × T25 × DAS-40278-9 and its sub-combination T25 × DAS-40278-9 – B9-0326/2022 – Motion for a resolution — vote in plenary",
       "date": "2022-06-23",
       "body": "parliament",
@@ -26973,7 +26954,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 593,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize nk603 × t25 × das-40278-9 and its sub-combination t25 × das-40278-9 objection pursuant to rule 112(2) and (3): genetically modified maize nk603 × t25 × das-40278-9 and its sub-combination t25 × das-40278-9 – b9-0326/2022 – motion for a resolution — vote in plenary 2022/2713",
+      "keywords": "objection: genetically modified maize nk603 × t25 × das-40278-9 and its sub-combination t25 × das-40278-9 objection pursuant to rule 112(2) and (3): genetically modified maize nk603 × t25 × das-40278-9 and its sub-combination t25 × das-40278-9 – b9-0326/2022 – motion for a resolution — vote in plenary 2022/2713",
       "file": "data/decisions/ep-2022-06-23-2022-2713-146315.json"
     },
     {
@@ -27122,15 +27103,13 @@
     {
       "id": "ep-2022-06-23-b9-0327-2022-146357",
       "sourceId": 146357,
-      "title": "Objection pursuant to Rule 112(2) and (3): Antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans",
+      "title": "Objection: Antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans – B9-0327/2022 – Motion for a resolution — vote in plenary",
       "date": "2022-06-23",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": {
         "code": "ENVI",
         "label": "Environment, Public Health and Food Safety",
@@ -27140,7 +27119,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 595,
-      "keywords": "objection pursuant to rule 112(2) and (3): antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans objection pursuant to rule 112(2) and (3): antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans – b9-0327/2022 – motion for a resolution — vote in plenary b9-0327/2022",
+      "keywords": "objection: antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans objection pursuant to rule 112(2) and (3): antimicrobials or groups of antimicrobials reserved for treatment of certain infections in humans – b9-0327/2022 – motion for a resolution — vote in plenary b9-0327/2022",
       "file": "data/decisions/ep-2022-06-23-b9-0327-2022-146357.json"
     },
     {
@@ -28378,7 +28357,7 @@
     {
       "id": "ep-2022-05-05-a9-0137-2022-143026",
       "sourceId": 143026,
-      "title": "Regulation (EU) 2021/954 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) with regard to third-country nationals legally staying or residing in the territories of Member States during the COVID-19 pandemic",
+      "title": "Amending Regulation (EU) 2021/954 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) with regard to third-country nationals legally staying or residing in the territories of Member States during the COVID-19 pandemic",
       "subtitle": "EU Digital COVID Certificate - third-country nationals - A9-0137/2022 - Juan Fernando López Aguilar - Decision to enter into interinstitutional negotiations — vote in plenary",
       "date": "2022-05-05",
       "body": "parliament",
@@ -28396,13 +28375,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 593,
-      "keywords": "regulation (eu) 2021/954 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) with regard to third-country nationals legally staying or residing in the territories of member states during the covid-19 pandemic eu digital covid certificate - third-country nationals - a9-0137/2022 - juan fernando lópez aguilar - decision to enter into interinstitutional negotiations — vote in plenary a9-0137/2022",
+      "keywords": "amending regulation (eu) 2021/954 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) with regard to third-country nationals legally staying or residing in the territories of member states during the covid-19 pandemic eu digital covid certificate - third-country nationals - a9-0137/2022 - juan fernando lópez aguilar - decision to enter into interinstitutional negotiations — vote in plenary a9-0137/2022",
       "file": "data/decisions/ep-2022-05-05-a9-0137-2022-143026.json"
     },
     {
       "id": "ep-2022-05-05-a9-0138-2022-143027",
       "sourceId": 143027,
-      "title": "Regulation (EU) 2021/953 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) to facilitate free movement during the COVID-19 pandemic",
+      "title": "Amending Regulation (EU) 2021/953 on a framework for the issuance, verification and acceptance of interoperable COVID-19 vaccination, test and recovery certificates (EU Digital COVID Certificate) to facilitate free movement during the COVID-19 pandemic",
       "subtitle": "EU Digital COVID Certificate - Union citizens - A9-0138/2022 - Juan Fernando López Aguilar - Decision to enter into interinstitutional negotiations — vote in plenary",
       "date": "2022-05-05",
       "body": "parliament",
@@ -28420,7 +28399,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 585,
-      "keywords": "regulation (eu) 2021/953 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) to facilitate free movement during the covid-19 pandemic eu digital covid certificate - union citizens - a9-0138/2022 - juan fernando lópez aguilar - decision to enter into interinstitutional negotiations — vote in plenary a9-0138/2022",
+      "keywords": "amending regulation (eu) 2021/953 on a framework for the issuance, verification and acceptance of interoperable covid-19 vaccination, test and recovery certificates (eu digital covid certificate) to facilitate free movement during the covid-19 pandemic eu digital covid certificate - union citizens - a9-0138/2022 - juan fernando lópez aguilar - decision to enter into interinstitutional negotiations — vote in plenary a9-0138/2022",
       "file": "data/decisions/ep-2022-05-05-a9-0138-2022-143027.json"
     },
     {
@@ -30427,7 +30406,7 @@
     {
       "id": "ep-2022-04-06-2022-2566-141574",
       "sourceId": 141574,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean MON 87769 X MON 89788",
+      "title": "Objection: Genetically modified soybean MON 87769 X MON 89788",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean MON 87769 X MON 89788 - B9-0178/2022 - Motion for resolution — vote in plenary",
       "date": "2022-04-06",
       "body": "parliament",
@@ -30445,7 +30424,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 625,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified soybean mon 87769 x mon 89788 objection pursuant to rule 112(2) and (3): genetically modified soybean mon 87769 x mon 89788 - b9-0178/2022 - motion for resolution — vote in plenary 2022/2566",
+      "keywords": "objection: genetically modified soybean mon 87769 x mon 89788 objection pursuant to rule 112(2) and (3): genetically modified soybean mon 87769 x mon 89788 - b9-0178/2022 - motion for resolution — vote in plenary 2022/2566",
       "file": "data/decisions/ep-2022-04-06-2022-2566-141574.json"
     },
     {
@@ -31420,7 +31399,7 @@
     {
       "id": "ep-2022-03-09-2021-3058-140802",
       "sourceId": 140802,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape 73496 (DP-Ø73496-4)",
+      "title": "Objection: Genetically modified oilseed rape 73496 (DP-Ø73496-4)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified oilseed rape 73496 (DP-Ø73496-4) – B9-0127/2022 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-03-09",
       "body": "parliament",
@@ -31438,7 +31417,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified oilseed rape 73496 (dp-ø73496-4) objection pursuant to rule 112(2) and (3): genetically modified oilseed rape 73496 (dp-ø73496-4) – b9-0127/2022 – motion for a resolution (text as a whole) — vote in plenary 2021/3058",
+      "keywords": "objection: genetically modified oilseed rape 73496 (dp-ø73496-4) objection pursuant to rule 112(2) and (3): genetically modified oilseed rape 73496 (dp-ø73496-4) – b9-0127/2022 – motion for a resolution (text as a whole) — vote in plenary 2021/3058",
       "file": "data/decisions/ep-2022-03-09-2021-3058-140802.json"
     },
     {
@@ -31606,7 +31585,7 @@
     {
       "id": "ep-2022-03-09-b9-0137-2022-140800",
       "sourceId": 140800,
-      "title": "Objection pursuant to Rule 111(3): Union list of projects of common interest for the trans-European energy infrastructure",
+      "title": "Objection: Union list of projects of common interest for the trans-European energy infrastructure",
       "subtitle": "Objection pursuant to Rule 111(3): Union list of projects of common interest for the trans-European energy infrastructure – B9-0137/2022 – Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-03-09",
       "body": "parliament",
@@ -31620,7 +31599,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 696,
-      "keywords": "objection pursuant to rule 111(3): union list of projects of common interest for the trans-european energy infrastructure objection pursuant to rule 111(3): union list of projects of common interest for the trans-european energy infrastructure – b9-0137/2022 – motion for a resolution (text as a whole) — vote in plenary b9-0137/2022",
+      "keywords": "objection: union list of projects of common interest for the trans-european energy infrastructure objection pursuant to rule 111(3): union list of projects of common interest for the trans-european energy infrastructure – b9-0137/2022 – motion for a resolution (text as a whole) — vote in plenary b9-0137/2022",
       "file": "data/decisions/ep-2022-03-09-b9-0137-2022-140800.json"
     },
     {
@@ -32471,7 +32450,7 @@
     {
       "id": "ep-2022-02-15-2021-2947-139815",
       "sourceId": 139815,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean GMB151 (BCS-GM151-6)",
+      "title": "Objection: Genetically modified soybean GMB151 (BCS-GM151-6)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified soybean GMB151 (BCS-GM151-6) - B9-0095/2022 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-02-15",
       "body": "parliament",
@@ -32489,13 +32468,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 699,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified soybean gmb151 (bcs-gm151-6) objection pursuant to rule 112(2) and (3): genetically modified soybean gmb151 (bcs-gm151-6) - b9-0095/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/2947",
+      "keywords": "objection: genetically modified soybean gmb151 (bcs-gm151-6) objection pursuant to rule 112(2) and (3): genetically modified soybean gmb151 (bcs-gm151-6) - b9-0095/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/2947",
       "file": "data/decisions/ep-2022-02-15-2021-2947-139815.json"
     },
     {
       "id": "ep-2022-02-15-2021-2961-139817",
       "sourceId": 139817,
-      "title": "Objection pursuant to Rule 111(3): European Maritime, Fisheries and Aquaculture Fund: time periods for the inadmissibility of applications for support",
+      "title": "Objection: European Maritime, Fisheries and Aquaculture Fund: time periods for the inadmissibility of applications for support",
       "subtitle": "Objection pursuant to Rule 111(3): European Maritime, Fisheries and Aquaculture Fund: time periods for the inadmissibility of applications for support - B9-0090/2022 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-02-15",
       "body": "parliament",
@@ -32513,13 +32492,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 698,
-      "keywords": "objection pursuant to rule 111(3): european maritime, fisheries and aquaculture fund: time periods for the inadmissibility of applications for support objection pursuant to rule 111(3): european maritime, fisheries and aquaculture fund: time periods for the inadmissibility of applications for support - b9-0090/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/2961",
+      "keywords": "objection: european maritime, fisheries and aquaculture fund: time periods for the inadmissibility of applications for support objection pursuant to rule 111(3): european maritime, fisheries and aquaculture fund: time periods for the inadmissibility of applications for support - b9-0090/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/2961",
       "file": "data/decisions/ep-2022-02-15-2021-2961-139817.json"
     },
     {
       "id": "ep-2022-02-15-2021-3006-139816",
       "sourceId": 139816,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton GHB614 (BCS-GHØØ2-5)",
+      "title": "Objection: Genetically modified cotton GHB614 (BCS-GHØØ2-5)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton GHB614 (BCS-GHØØ2-5) - B9-0094/2022 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-02-15",
       "body": "parliament",
@@ -32537,7 +32516,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 699,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 (bcs-ghøø2-5) objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 (bcs-ghøø2-5) - b9-0094/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/3006",
+      "keywords": "objection: genetically modified cotton ghb614 (bcs-ghøø2-5) objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 (bcs-ghøø2-5) - b9-0094/2022 - motion for a resolution (text as a whole) — vote in plenary 2021/3006",
       "file": "data/decisions/ep-2022-02-15-2021-3006-139816.json"
     },
     {
@@ -32637,7 +32616,7 @@
     {
       "id": "ep-2022-02-15-b9-0092-2022-139818",
       "sourceId": 139818,
-      "title": "Objection pursuant to Rule 111(3): Acceptance period of vaccination certificates issued in the EU Digital COVID Certificate format indicating the completion of the primary vaccination series",
+      "title": "Objection: Acceptance period of vaccination certificates issued in the EU Digital COVID Certificate format indicating the completion of the primary vaccination series",
       "subtitle": "Objection pursuant to Rule 111(3): Acceptance period of vaccination certificates issued in the EU Digital COVID Certificate format indicating the completion of the primary vaccination series - B9-0092/2022 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2022-02-15",
       "body": "parliament",
@@ -32651,7 +32630,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 699,
-      "keywords": "objection pursuant to rule 111(3): acceptance period of vaccination certificates issued in the eu digital covid certificate format indicating the completion of the primary vaccination series objection pursuant to rule 111(3): acceptance period of vaccination certificates issued in the eu digital covid certificate format indicating the completion of the primary vaccination series - b9-0092/2022 - motion for a resolution (text as a whole) — vote in plenary b9-0092/2022",
+      "keywords": "objection: acceptance period of vaccination certificates issued in the eu digital covid certificate format indicating the completion of the primary vaccination series objection pursuant to rule 111(3): acceptance period of vaccination certificates issued in the eu digital covid certificate format indicating the completion of the primary vaccination series - b9-0092/2022 - motion for a resolution (text as a whole) — vote in plenary b9-0092/2022",
       "file": "data/decisions/ep-2022-02-15-b9-0092-2022-139818.json"
     },
     {
@@ -37085,21 +37064,19 @@
     {
       "id": "ep-2021-10-05-2021-2869-135953",
       "sourceId": 135953,
-      "title": "Objection pursuant to Rule 112(2) and (3): Active substances, including chlorotoluron and difenoconazole",
+      "title": "Objection: Active substances, including chlorotoluron and difenoconazole",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Active substances, including chlorotoluron and difenoconazole - B9-0481/2021 - Motion for a resolution (as a whole) — vote in plenary",
       "date": "2021-10-05",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 687,
-      "keywords": "objection pursuant to rule 112(2) and (3): active substances, including chlorotoluron and difenoconazole objection pursuant to rule 112(2) and (3): active substances, including chlorotoluron and difenoconazole - b9-0481/2021 - motion for a resolution (as a whole) — vote in plenary 2021/2869",
+      "keywords": "objection: active substances, including chlorotoluron and difenoconazole objection pursuant to rule 112(2) and (3): active substances, including chlorotoluron and difenoconazole - b9-0481/2021 - motion for a resolution (as a whole) — vote in plenary 2021/2869",
       "file": "data/decisions/ep-2021-10-05-2021-2869-135953.json"
     },
     {
@@ -37243,7 +37220,7 @@
     {
       "id": "ep-2021-10-05-b9-0476-2021-135954",
       "sourceId": 135954,
-      "title": "Objection pursuant to Rule 111(3): Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives",
+      "title": "Objection: Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives",
       "subtitle": "Objection pursuant to Rule 111(3): Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - B9-0476/2021 - Motion for a resolution (as a whole) — vote in plenary",
       "date": "2021-10-05",
       "body": "parliament",
@@ -37257,13 +37234,13 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 684,
-      "keywords": "objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - b9-0476/2021 - motion for a resolution (as a whole) — vote in plenary b9-0476/2021",
+      "keywords": "objection: technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - b9-0476/2021 - motion for a resolution (as a whole) — vote in plenary b9-0476/2021",
       "file": "data/decisions/ep-2021-10-05-b9-0476-2021-135954.json"
     },
     {
       "id": "ep-2021-10-05-b9-0477-2021-135955",
       "sourceId": 135955,
-      "title": "Objection pursuant to Rule 111(3): Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives",
+      "title": "Objection: Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives",
       "subtitle": "Objection pursuant to Rule 111(3): Technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - B9-0477/2021 - Motion for a resolution (as a whole) — vote in plenary",
       "date": "2021-10-05",
       "body": "parliament",
@@ -37277,7 +37254,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - b9-0477/2021 - motion for a resolution (as a whole) — vote in plenary b9-0477/2021",
+      "keywords": "objection: technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives objection pursuant to rule 111(3): technical screening criteria for determining the conditions under which an economic activity qualifies as contributing substantially to climate change mitigation or climate change adaptation and for determining whether that economic activity causes no significant harm to any of the other environmental objectives - b9-0477/2021 - motion for a resolution (as a whole) — vote in plenary b9-0477/2021",
       "file": "data/decisions/ep-2021-10-05-b9-0477-2021-135955.json"
     },
     {
@@ -37811,21 +37788,19 @@
     {
       "id": "ep-2021-09-15-b9-0424-2021-135560",
       "sourceId": 135560,
-      "title": "Objection pursuant to Rule 111(3): Criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans",
+      "title": "Objection: Criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans",
       "subtitle": "Objection pursuant to Rule 111(3): Criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans - B9-0424/2021 - Motion for a resolution (text as a whole) — vote in plenary",
       "date": "2021-09-15",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 9,
       "result": "rejected",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "objection pursuant to rule 111(3): criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans objection pursuant to rule 111(3): criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans - b9-0424/2021 - motion for a resolution (text as a whole) — vote in plenary b9-0424/2021",
+      "keywords": "objection: criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans objection pursuant to rule 111(3): criteria for the designation of antimicrobials to be reserved for the treatment of certain infections in humans - b9-0424/2021 - motion for a resolution (text as a whole) — vote in plenary b9-0424/2021",
       "file": "data/decisions/ep-2021-09-15-b9-0424-2021-135560.json"
     },
     {
@@ -38373,7 +38348,7 @@
     {
       "id": "ep-2021-07-07-a9-0207-2021-134613",
       "sourceId": 134613,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council amending Regulations (EC) No 767/2008, (EC) No 810/2009, (EU) 2016/399, (EU) 2017/2226, (EU) 2018/1240, (EU) 2018/1860, (EU) 2018/1861, (EU) 2019/817 and (EU) 2019/1896 of the European Parliament and of the Council and repealing Council Decisions 2004/512/EC and 2008/633/JHA, for the purpose of reforming the Visa Information System",
+      "title": "Amending Regulations (EC) No 767/2008, (EC) No 810/2009, (EU) 2016/399, (EU) 2017/2226, (EU) 2018/1240, (EU) 2018/1860, (EU) 2018/1861, (EU) 2019/817 and (EU) 2019/1896 of the European Parliament and of the Council and repealing Council Decisions 2004/512/EC and 2008/633/JHA, for the purpose of reforming the Visa Information System",
       "subtitle": "Visa Information System (VIS): visa processing – A9-0207/2021 – Paolo Rangel – Am 1 — vote in plenary",
       "date": "2021-07-07",
       "body": "parliament",
@@ -38385,7 +38360,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 696,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council amending regulations (ec) no 767/2008, (ec) no 810/2009, (eu) 2016/399, (eu) 2017/2226, (eu) 2018/1240, (eu) 2018/1860, (eu) 2018/1861, (eu) 2019/817 and (eu) 2019/1896 of the european parliament and of the council and repealing council decisions 2004/512/ec and 2008/633/jha, for the purpose of reforming the visa information system visa information system (vis): visa processing – a9-0207/2021 – paolo rangel – am 1 — vote in plenary a9-0207/2021",
+      "keywords": "amending regulations (ec) no 767/2008, (ec) no 810/2009, (eu) 2016/399, (eu) 2017/2226, (eu) 2018/1240, (eu) 2018/1860, (eu) 2018/1861, (eu) 2019/817 and (eu) 2019/1896 of the european parliament and of the council and repealing council decisions 2004/512/ec and 2008/633/jha, for the purpose of reforming the visa information system visa information system (vis): visa processing – a9-0207/2021 – paolo rangel – am 1 — vote in plenary a9-0207/2021",
       "file": "data/decisions/ep-2021-07-07-a9-0207-2021-134613.json"
     },
     {
@@ -38689,7 +38664,7 @@
     {
       "id": "ep-2021-07-06-2021-2759-134873",
       "sourceId": 134873,
-      "title": "Objection pursuant to Rule 112(2) and (3): genetically modified soybean DAS-81419-2",
+      "title": "Objection: genetically modified soybean DAS-81419-2",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): genetically modified soybean DAS-81419-2 – B9-0372/2021 – Motion for a resolution — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38703,13 +38678,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 692,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 – b9-0372/2021 – motion for a resolution — vote in plenary 2021/2759",
+      "keywords": "objection: genetically modified soybean das-81419-2 objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 – b9-0372/2021 – motion for a resolution — vote in plenary 2021/2759",
       "file": "data/decisions/ep-2021-07-06-2021-2759-134873.json"
     },
     {
       "id": "ep-2021-07-06-2021-2760-134874",
       "sourceId": 134874,
-      "title": "Objection pursuant to Rule 112(2) and (3): genetically modified soybean DAS-81419-2 × DAS–44406–6",
+      "title": "Objection: genetically modified soybean DAS-81419-2 × DAS–44406–6",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): genetically modified soybean DAS-81419-2 × DAS–44406–6 – B9-0373/2021 – Motion for a resolution — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38723,13 +38698,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 692,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 × das–44406–6 objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 × das–44406–6 – b9-0373/2021 – motion for a resolution — vote in plenary 2021/2760",
+      "keywords": "objection: genetically modified soybean das-81419-2 × das–44406–6 objection pursuant to rule 112(2) and (3): genetically modified soybean das-81419-2 × das–44406–6 – b9-0373/2021 – motion for a resolution — vote in plenary 2021/2760",
       "file": "data/decisions/ep-2021-07-06-2021-2760-134874.json"
     },
     {
       "id": "ep-2021-07-06-2021-2761-134905",
       "sourceId": 134905,
-      "title": "Objection pursuant to Rule 112(2) and (3): genetically modified maize Bt 11 (SYN-BTØ11-1)",
+      "title": "Objection: genetically modified maize Bt 11 (SYN-BTØ11-1)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): genetically modified maize Bt 11 (SYN-BTØ11-1) – B9-0375/2021 – Motion for a resolution — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38743,13 +38718,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 692,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize bt 11 (syn-btø11-1) objection pursuant to rule 112(2) and (3): genetically modified maize bt 11 (syn-btø11-1) – b9-0375/2021 – motion for a resolution — vote in plenary 2021/2761",
+      "keywords": "objection: genetically modified maize bt 11 (syn-btø11-1) objection pursuant to rule 112(2) and (3): genetically modified maize bt 11 (syn-btø11-1) – b9-0375/2021 – motion for a resolution — vote in plenary 2021/2761",
       "file": "data/decisions/ep-2021-07-06-2021-2761-134905.json"
     },
     {
       "id": "ep-2021-07-06-2021-2765-134875",
       "sourceId": 134875,
-      "title": "Objection pursuant to Rule 112(2) and (3): genetically modified maize1507 × MIR162 × MON810 × NK603 and genetically modified maize combining two or three of the single events 1507, MIR162, MON810 and NK603",
+      "title": "Objection: genetically modified maize1507 × MIR162 × MON810 × NK603 and genetically modified maize combining two or three of the single events 1507, MIR162, MON810 and NK603",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): genetically modified maize1507 × MIR162 × MON810 × NK603 and genetically modified maize combining two or three of the single events 1507, MIR162, MON810 and NK603 – B9-0374/2021 – Motion for a resolution — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38763,7 +38738,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 692,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize1507 × mir162 × mon810 × nk603 and genetically modified maize combining two or three of the single events 1507, mir162, mon810 and nk603 objection pursuant to rule 112(2) and (3): genetically modified maize1507 × mir162 × mon810 × nk603 and genetically modified maize combining two or three of the single events 1507, mir162, mon810 and nk603 – b9-0374/2021 – motion for a resolution — vote in plenary 2021/2765",
+      "keywords": "objection: genetically modified maize1507 × mir162 × mon810 × nk603 and genetically modified maize combining two or three of the single events 1507, mir162, mon810 and nk603 objection pursuant to rule 112(2) and (3): genetically modified maize1507 × mir162 × mon810 × nk603 and genetically modified maize combining two or three of the single events 1507, mir162, mon810 and nk603 – b9-0374/2021 – motion for a resolution — vote in plenary 2021/2765",
       "file": "data/decisions/ep-2021-07-06-2021-2765-134875.json"
     },
     {
@@ -38903,7 +38878,7 @@
     {
       "id": "ep-2021-07-06-a9-0219-2021-134544",
       "sourceId": 134544,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council establishing the Connecting Europe Facility and repealing Regulations (EU) No 1316/2013 and (EU) No 283/2014",
+      "title": "Establishing the Connecting Europe Facility and repealing Regulations (EU) No 1316/2013 and (EU) No 283/2014",
       "subtitle": "Connecting Europe Facility – A9-0219/2021 – Henna Virkkunen, Marian-Jean Marinescu, Dominique Riquet – Am 1 — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38915,13 +38890,13 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 690,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council establishing the connecting europe facility and repealing regulations (eu) no 1316/2013 and (eu) no 283/2014 connecting europe facility – a9-0219/2021 – henna virkkunen, marian-jean marinescu, dominique riquet – am 1 — vote in plenary a9-0219/2021",
+      "keywords": "establishing the connecting europe facility and repealing regulations (eu) no 1316/2013 and (eu) no 283/2014 connecting europe facility – a9-0219/2021 – henna virkkunen, marian-jean marinescu, dominique riquet – am 1 — vote in plenary a9-0219/2021",
       "file": "data/decisions/ep-2021-07-06-a9-0219-2021-134544.json"
     },
     {
       "id": "ep-2021-07-06-a9-0221-2021-134654",
       "sourceId": 134654,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council establishing the Internal Security Fund",
+      "title": "Establishing the Internal Security Fund",
       "subtitle": "Internal Security Fund – A9-0221/2021 – Monika Hohlmeier – Am 1= 2= — vote in plenary",
       "date": "2021-07-06",
       "body": "parliament",
@@ -38933,7 +38908,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council establishing the internal security fund internal security fund – a9-0221/2021 – monika hohlmeier – am 1= 2= — vote in plenary a9-0221/2021",
+      "keywords": "establishing the internal security fund internal security fund – a9-0221/2021 – monika hohlmeier – am 1= 2= — vote in plenary a9-0221/2021",
       "file": "data/decisions/ep-2021-07-06-a9-0221-2021-134654.json"
     },
     {
@@ -39601,41 +39576,37 @@
     {
       "id": "ep-2021-06-09-2021-2705-133729",
       "sourceId": 133729,
-      "title": "Objection pursuant to Rule 112(2) and (3): Maximum residue limit for imidacloprid",
+      "title": "Objection: Maximum residue limit for imidacloprid",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Maximum residue limit for imidacloprid - B9-0313/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-06-09",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 691,
-      "keywords": "objection pursuant to rule 112(2) and (3): maximum residue limit for imidacloprid objection pursuant to rule 112(2) and (3): maximum residue limit for imidacloprid - b9-0313/2021 - motion for a resolution — vote in plenary 2021/2705",
+      "keywords": "objection: maximum residue limit for imidacloprid objection pursuant to rule 112(2) and (3): maximum residue limit for imidacloprid - b9-0313/2021 - motion for a resolution — vote in plenary 2021/2705",
       "file": "data/decisions/ep-2021-06-09-2021-2705-133729.json"
     },
     {
       "id": "ep-2021-06-09-2021-2706-133730",
       "sourceId": 133730,
-      "title": "Objection pursuant to Rule 112(2) and (3): Active substances, including flumioxazine",
+      "title": "Objection: Active substances, including flumioxazine",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Active substances, including flumioxazine - B9-0312/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-06-09",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 691,
-      "keywords": "objection pursuant to rule 112(2) and (3): active substances, including flumioxazine objection pursuant to rule 112(2) and (3): active substances, including flumioxazine - b9-0312/2021 - motion for a resolution — vote in plenary 2021/2706",
+      "keywords": "objection: active substances, including flumioxazine objection pursuant to rule 112(2) and (3): active substances, including flumioxazine - b9-0312/2021 - motion for a resolution — vote in plenary 2021/2706",
       "file": "data/decisions/ep-2021-06-09-2021-2706-133730.json"
     },
     {
@@ -40575,7 +40546,7 @@
     {
       "id": "ep-2021-05-19-a9-0161-2021-131451",
       "sourceId": 131451,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council establishing the Creative Europe Programme (2021 to 2027) and repealing Regulation (EU) No 1295/2013",
+      "title": "Establishing the Creative Europe Programme (2021 to 2027) and repealing Regulation (EU) No 1295/2013",
       "subtitle": "A9-0161/2021 - Massimiliano Smeriglio - Annex 46/2 — vote in plenary",
       "date": "2021-05-19",
       "body": "parliament",
@@ -40587,7 +40558,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 696,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council establishing the creative europe programme (2021 to 2027) and repealing regulation (eu) no 1295/2013 a9-0161/2021 - massimiliano smeriglio - annex 46/2 — vote in plenary a9-0161/2021",
+      "keywords": "establishing the creative europe programme (2021 to 2027) and repealing regulation (eu) no 1295/2013 a9-0161/2021 - massimiliano smeriglio - annex 46/2 — vote in plenary a9-0161/2021",
       "file": "data/decisions/ep-2021-05-19-a9-0161-2021-131451.json"
     },
     {
@@ -41102,7 +41073,7 @@
     {
       "id": "ep-2021-04-29-a9-0045-2021-129785",
       "sourceId": 129785,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council on rail passengers’ rights and obligations",
+      "title": "Rail passengers’ rights and obligations",
       "subtitle": "A9-0045/2021 - Bogusław Liberadzki - Am 9 — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -41116,7 +41087,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 698,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council on rail passengers’ rights and obligations a9-0045/2021 - bogusław liberadzki - am 9 — vote in plenary a9-0045/2021",
+      "keywords": "rail passengers’ rights and obligations a9-0045/2021 - bogusław liberadzki - am 9 — vote in plenary a9-0045/2021",
       "file": "data/decisions/ep-2021-04-29-a9-0045-2021-129785.json"
     },
     {
@@ -42102,7 +42073,7 @@
     {
       "id": "ep-2021-04-29-a9-0120-2021-129755",
       "sourceId": 129755,
-      "title": "RECOMMENDATION FOR SECOND READING on the Council position at first reading with a view to the adoption of a regulation of the European Parliament and of the Council establishing the European Defence Fund and repealing Regulation (EU) 2018/1092",
+      "title": "Establishing the European Defence Fund and repealing Regulation (EU) 2018/1092",
       "subtitle": "A9-0120/2021 - Zdzisław Krasnodębski - Am 5 — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42116,7 +42087,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 698,
-      "keywords": "recommendation for second reading on the council position at first reading with a view to the adoption of a regulation of the european parliament and of the council establishing the european defence fund and repealing regulation (eu) 2018/1092 a9-0120/2021 - zdzisław krasnodębski - am 5 — vote in plenary a9-0120/2021",
+      "keywords": "establishing the european defence fund and repealing regulation (eu) 2018/1092 a9-0120/2021 - zdzisław krasnodębski - am 5 — vote in plenary a9-0120/2021",
       "file": "data/decisions/ep-2021-04-29-a9-0120-2021-129755.json"
     },
     {
@@ -43291,41 +43262,37 @@
     {
       "id": "ep-2021-04-27-2021-2590-130599",
       "sourceId": 130599,
-      "title": "Objection pursuant to Rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including lufenuron",
+      "title": "Objection: maximum residue levels for certain substances, including lufenuron",
       "subtitle": "Objection pursuant to Rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including lufenuron - B9-0223/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-04-27",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 698,
-      "keywords": "objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including lufenuron objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including lufenuron - b9-0223/2021 - motion for a resolution — vote in plenary 2021/2590",
+      "keywords": "objection: maximum residue levels for certain substances, including lufenuron objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including lufenuron - b9-0223/2021 - motion for a resolution — vote in plenary 2021/2590",
       "file": "data/decisions/ep-2021-04-27-2021-2590-130599.json"
     },
     {
       "id": "ep-2021-04-27-2021-2608-130600",
       "sourceId": 130600,
-      "title": "Objection pursuant to Rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including flonicamid",
+      "title": "Objection: maximum residue levels for certain substances, including flonicamid",
       "subtitle": "Objection pursuant to Rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including flonicamid - B9-0222/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-04-27",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 698,
-      "keywords": "objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including flonicamid objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including flonicamid - b9-0222/2021 - motion for a resolution — vote in plenary 2021/2608",
+      "keywords": "objection: maximum residue levels for certain substances, including flonicamid objection pursuant to rule 112(2) and (3) and (4)(c): maximum residue levels for certain substances, including flonicamid - b9-0222/2021 - motion for a resolution — vote in plenary 2021/2608",
       "file": "data/decisions/ep-2021-04-27-2021-2608-130600.json"
     },
     {
@@ -44701,7 +44668,7 @@
     {
       "id": "ep-2021-03-25-2020-0151-129066",
       "sourceId": 129066,
-      "title": "Cadre général pour la titrisation et cadre spécifique pour les titrisations simples, transparentes et standardisées, afin de favoriser la reprise après la pandémie de COVID-19 - General framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the COVID-19 crisis - Ein allgemeiner Rahmen für Verbriefungen und ein spezifischer Rahmen für einfache, transparente und standardisierte Verbriefung, um die Erholung von der COVID-19-Pandemie zu unterstützen",
+      "title": "General framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the COVID-19 crisis",
       "subtitle": "Cadre général pour la titrisation et cadre spécifique pour les titrisations simples, transparentes et standardisées, afin de favoriser la reprise après la pandémie de COVID-19 - General framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the COVID-19 crisis - Ein allgemeiner Rahmen für Verbriefungen und ein spezifischer Rahmen für einfache, transparente und standardisierte Verbriefung, um die Erholung von der COVID-19-Pandemie zu unterstützen - A9-0215/2020 - Paul Tang - Am 3 — vote in plenary",
       "date": "2021-03-25",
       "body": "parliament",
@@ -44715,13 +44682,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 688,
-      "keywords": "cadre général pour la titrisation et cadre spécifique pour les titrisations simples, transparentes et standardisées, afin de favoriser la reprise après la pandémie de covid-19 - general framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the covid-19 crisis - ein allgemeiner rahmen für verbriefungen und ein spezifischer rahmen für einfache, transparente und standardisierte verbriefung, um die erholung von der covid-19-pandemie zu unterstützen cadre général pour la titrisation et cadre spécifique pour les titrisations simples, transparentes et standardisées, afin de favoriser la reprise après la pandémie de covid-19 - general framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the covid-19 crisis - ein allgemeiner rahmen für verbriefungen und ein spezifischer rahmen für einfache, transparente und standardisierte verbriefung, um die erholung von der covid-19-pandemie zu unterstützen - a9-0215/2020 - paul tang - am 3 — vote in plenary 2020/0151",
+      "keywords": "general framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the covid-19 crisis cadre général pour la titrisation et cadre spécifique pour les titrisations simples, transparentes et standardisées, afin de favoriser la reprise après la pandémie de covid-19 - general framework for securitisation and specific framework for simple, transparent and standardised securitisation to help the recovery from the covid-19 crisis - ein allgemeiner rahmen für verbriefungen und ein spezifischer rahmen für einfache, transparente und standardisierte verbriefung, um die erholung von der covid-19-pandemie zu unterstützen - a9-0215/2020 - paul tang - am 3 — vote in plenary 2020/0151",
       "file": "data/decisions/ep-2021-03-25-2020-0151-129066.json"
     },
     {
       "id": "ep-2021-03-25-2020-0156-129063",
       "sourceId": 129063,
-      "title": "Modification du règlement (UE) nº 575/2013 en ce qui concerne les ajustements à apporter au cadre relatif à la titrisation afin de soutenir la reprise économique en réponse à la crise de la COVID-19 - Amending Regulation (EU) No 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the COVID-19 crisis - Änderung der Verordnung (EU) Nr. 575/2013 mit dem Ziel, die wirtschaftliche Erholung von der COVID-19-Pandemie durch Anpassungen am Verbriefungsrahmen zu unterstützen",
+      "title": "Amending Regulation (EU) No 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the COVID-19 crisis",
       "subtitle": "Modification du règlement (UE) nº 575/2013 en ce qui concerne les ajustements à apporter au cadre relatif à la titrisation afin de soutenir la reprise économique en réponse à la crise de la COVID-19 - Amending Regulation (EU) No 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the COVID-19 crisis - Änderung der Verordnung (EU) Nr. 575/2013 mit dem Ziel, die wirtschaftliche Erholung von der COVID-19-Pandemie durch Anpassungen am Verbriefungsrahmen zu unterstützen - A9-0213/2020 - Othmar Karas - Am 3 — vote in plenary",
       "date": "2021-03-25",
       "body": "parliament",
@@ -44735,13 +44702,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 688,
-      "keywords": "modification du règlement (ue) nº 575/2013 en ce qui concerne les ajustements à apporter au cadre relatif à la titrisation afin de soutenir la reprise économique en réponse à la crise de la covid-19 - amending regulation (eu) no 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the covid-19 crisis - änderung der verordnung (eu) nr. 575/2013 mit dem ziel, die wirtschaftliche erholung von der covid-19-pandemie durch anpassungen am verbriefungsrahmen zu unterstützen modification du règlement (ue) nº 575/2013 en ce qui concerne les ajustements à apporter au cadre relatif à la titrisation afin de soutenir la reprise économique en réponse à la crise de la covid-19 - amending regulation (eu) no 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the covid-19 crisis - änderung der verordnung (eu) nr. 575/2013 mit dem ziel, die wirtschaftliche erholung von der covid-19-pandemie durch anpassungen am verbriefungsrahmen zu unterstützen - a9-0213/2020 - othmar karas - am 3 — vote in plenary 2020/0156",
+      "keywords": "amending regulation (eu) no 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the covid-19 crisis modification du règlement (ue) nº 575/2013 en ce qui concerne les ajustements à apporter au cadre relatif à la titrisation afin de soutenir la reprise économique en réponse à la crise de la covid-19 - amending regulation (eu) no 575/2013 as regards adjustments to the securitisation framework to support the economic recovery in response to the covid-19 crisis - änderung der verordnung (eu) nr. 575/2013 mit dem ziel, die wirtschaftliche erholung von der covid-19-pandemie durch anpassungen am verbriefungsrahmen zu unterstützen - a9-0213/2020 - othmar karas - am 3 — vote in plenary 2020/0156",
       "file": "data/decisions/ep-2021-03-25-2020-0156-129063.json"
     },
     {
       "id": "ep-2021-03-25-2020-2037-129471",
       "sourceId": 129471,
-      "title": "Renforcement du rôle international de l’euro - Strengthening the international role of the euro - Stärkung der internationalen Rolle des Euro",
+      "title": "Strengthening the international role of the euro",
       "subtitle": "Renforcement du rôle international de l’euro - Strengthening the international role of the euro - Stärkung der internationalen Rolle des Euro - A9-0043/2021 - Danuta Maria Hübner - Motion for a resolution — vote in plenary",
       "date": "2021-03-25",
       "body": "parliament",
@@ -44755,7 +44722,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 688,
-      "keywords": "renforcement du rôle international de l’euro - strengthening the international role of the euro - stärkung der internationalen rolle des euro renforcement du rôle international de l’euro - strengthening the international role of the euro - stärkung der internationalen rolle des euro - a9-0043/2021 - danuta maria hübner - motion for a resolution — vote in plenary 2020/2037",
+      "keywords": "strengthening the international role of the euro renforcement du rôle international de l’euro - strengthening the international role of the euro - stärkung der internationalen rolle des euro - a9-0043/2021 - danuta maria hübner - motion for a resolution — vote in plenary 2020/2037",
       "file": "data/decisions/ep-2021-03-25-2020-2037-129471.json"
     },
     {
@@ -44779,7 +44746,7 @@
     {
       "id": "ep-2021-03-25-2020-2074-129456",
       "sourceId": 129456,
-      "title": "Politique de cohésion et stratégies régionales en matière d’environnement dans la lutte contre le changement climatique - Cohesion Policy and regional environment strategies in the fight against climate change - Kohäsionspolitik und regionale Umweltstrategien im Kampf gegen den Klimawandel",
+      "title": "Cohesion Policy and regional environment strategies in the fight against climate change",
       "subtitle": "Politique de cohésion et stratégies régionales en matière d’environnement dans la lutte contre le changement climatique - Cohesion Policy and regional environment strategies in the fight against climate change - Kohäsionspolitik und regionale Umweltstrategien im Kampf gegen den Klimawandel - A9-0034/2021 - Tonino Picula - Single vote — vote in plenary",
       "date": "2021-03-25",
       "body": "parliament",
@@ -44793,7 +44760,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 688,
-      "keywords": "politique de cohésion et stratégies régionales en matière d’environnement dans la lutte contre le changement climatique - cohesion policy and regional environment strategies in the fight against climate change - kohäsionspolitik und regionale umweltstrategien im kampf gegen den klimawandel politique de cohésion et stratégies régionales en matière d’environnement dans la lutte contre le changement climatique - cohesion policy and regional environment strategies in the fight against climate change - kohäsionspolitik und regionale umweltstrategien im kampf gegen den klimawandel - a9-0034/2021 - tonino picula - single vote — vote in plenary 2020/2074",
+      "keywords": "cohesion policy and regional environment strategies in the fight against climate change politique de cohésion et stratégies régionales en matière d’environnement dans la lutte contre le changement climatique - cohesion policy and regional environment strategies in the fight against climate change - kohäsionspolitik und regionale umweltstrategien im kampf gegen den klimawandel - a9-0034/2021 - tonino picula - single vote — vote in plenary 2020/2074",
       "file": "data/decisions/ep-2021-03-25-2020-2074-129456.json"
     },
     {
@@ -44839,7 +44806,7 @@
     {
       "id": "ep-2021-03-25-2020-2717-129472",
       "sourceId": 129472,
-      "title": "Rapport d'évaluation de la Commission relatif à l'application du règlement général sur la protection des données deux ans après son application - Commission evaluation report on the implementation of the General Data Protection Regulation two years after its application - Bewertungsbericht der Kommission über die Durchführung der Datenschutz-Grundverordnung zwei Jahre nach Beginn ihrer Anwendung",
+      "title": "Commission evaluation report on the implementation of the General Data Protection Regulation two years after its application",
       "subtitle": "Rapport d'évaluation de la Commission relatif à l'application du règlement général sur la protection des données deux ans après son application - Commission evaluation report on the implementation of the General Data Protection Regulation two years after its application - Bewertungsbericht der Kommission über die Durchführung der Datenschutz-Grundverordnung zwei Jahre nach Beginn ihrer Anwendung - B9-0211/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-03-25",
       "body": "parliament",
@@ -44853,7 +44820,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 687,
-      "keywords": "rapport d'évaluation de la commission relatif à l'application du règlement général sur la protection des données deux ans après son application - commission evaluation report on the implementation of the general data protection regulation two years after its application - bewertungsbericht der kommission über die durchführung der datenschutz-grundverordnung zwei jahre nach beginn ihrer anwendung rapport d'évaluation de la commission relatif à l'application du règlement général sur la protection des données deux ans après son application - commission evaluation report on the implementation of the general data protection regulation two years after its application - bewertungsbericht der kommission über die durchführung der datenschutz-grundverordnung zwei jahre nach beginn ihrer anwendung - b9-0211/2021 - motion for a resolution — vote in plenary 2020/2717",
+      "keywords": "commission evaluation report on the implementation of the general data protection regulation two years after its application rapport d'évaluation de la commission relatif à l'application du règlement général sur la protection des données deux ans après son application - commission evaluation report on the implementation of the general data protection regulation two years after its application - bewertungsbericht der kommission über die durchführung der datenschutz-grundverordnung zwei jahre nach beginn ihrer anwendung - b9-0211/2021 - motion for a resolution — vote in plenary 2020/2717",
       "file": "data/decisions/ep-2021-03-25-2020-2717-129472.json"
     },
     {
@@ -45053,7 +45020,7 @@
     {
       "id": "ep-2021-03-24-2018-0132-129442",
       "sourceId": 129442,
-      "title": "Système des ressources propres de l'Union européenne - System of own resources of the European Union - Das Eigenmittelsystem der Europäischen Union",
+      "title": "System of own resources of the European Union",
       "subtitle": "Système des ressources propres de l'Union européenne - System of own resources of the European Union - Das Eigenmittelsystem der Europäischen Union - A9-0047/2021 - José Manuel Fernandes, Valérie Hayer - Procédure d'approbation — vote in plenary",
       "date": "2021-03-24",
       "body": "parliament",
@@ -45067,7 +45034,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 690,
-      "keywords": "système des ressources propres de l'union européenne - system of own resources of the european union - das eigenmittelsystem der europäischen union système des ressources propres de l'union européenne - system of own resources of the european union - das eigenmittelsystem der europäischen union - a9-0047/2021 - josé manuel fernandes, valérie hayer - procédure d'approbation — vote in plenary 2018/0132",
+      "keywords": "system of own resources of the european union système des ressources propres de l'union européenne - system of own resources of the european union - das eigenmittelsystem der europäischen union - a9-0047/2021 - josé manuel fernandes, valérie hayer - procédure d'approbation — vote in plenary 2018/0132",
       "file": "data/decisions/ep-2021-03-24-2018-0132-129442.json"
     },
     {
@@ -45419,27 +45386,25 @@
     {
       "id": "ep-2021-03-10-2021-2552-128852",
       "sourceId": 128852,
-      "title": "Objection pursuant to Rule 112(2) and (3): Active substances, including dimoxystrobin",
+      "title": "Objection: Active substances, including dimoxystrobin",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Active substances, including dimoxystrobin - B9-0162/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-03-10",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "How Parliament works"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 695,
-      "keywords": "objection pursuant to rule 112(2) and (3): active substances, including dimoxystrobin objection pursuant to rule 112(2) and (3): active substances, including dimoxystrobin - b9-0162/2021 - motion for a resolution — vote in plenary 2021/2552",
+      "keywords": "objection: active substances, including dimoxystrobin objection pursuant to rule 112(2) and (3): active substances, including dimoxystrobin - b9-0162/2021 - motion for a resolution — vote in plenary 2021/2552",
       "file": "data/decisions/ep-2021-03-10-2021-2552-128852.json"
     },
     {
       "id": "ep-2021-03-10-2021-2553-128853",
       "sourceId": 128853,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton GHB614 × T304-40 × GHB119",
+      "title": "Objection: Genetically modified cotton GHB614 × T304-40 × GHB119",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified cotton GHB614 × T304-40 × GHB119 - B9-0160/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-03-10",
       "body": "parliament",
@@ -45453,13 +45418,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 695,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 × t304-40 × ghb119 objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 × t304-40 × ghb119 - b9-0160/2021 - motion for a resolution — vote in plenary 2021/2553",
+      "keywords": "objection: genetically modified cotton ghb614 × t304-40 × ghb119 objection pursuant to rule 112(2) and (3): genetically modified cotton ghb614 × t304-40 × ghb119 - b9-0160/2021 - motion for a resolution — vote in plenary 2021/2553",
       "file": "data/decisions/ep-2021-03-10-2021-2553-128853.json"
     },
     {
       "id": "ep-2021-03-10-2021-2554-128854",
       "sourceId": 128854,
-      "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MZIR098 (SYN-ØØØ98-3)",
+      "title": "Objection: Genetically modified maize MZIR098 (SYN-ØØØ98-3)",
       "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize MZIR098 (SYN-ØØØ98-3) - B9-0161/2021 - Motion for a resolution — vote in plenary",
       "date": "2021-03-10",
       "body": "parliament",
@@ -45473,7 +45438,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 695,
-      "keywords": "objection pursuant to rule 112(2) and (3): genetically modified maize mzir098 (syn-øøø98-3) objection pursuant to rule 112(2) and (3): genetically modified maize mzir098 (syn-øøø98-3) - b9-0161/2021 - motion for a resolution — vote in plenary 2021/2554",
+      "keywords": "objection: genetically modified maize mzir098 (syn-øøø98-3) objection pursuant to rule 112(2) and (3): genetically modified maize mzir098 (syn-øøø98-3) - b9-0161/2021 - motion for a resolution — vote in plenary 2021/2554",
       "file": "data/decisions/ep-2021-03-10-2021-2554-128854.json"
     },
     {
@@ -52181,21 +52146,19 @@
     {
       "id": "ep-2020-10-19-2020-1996-119685",
       "sourceId": 119685,
-      "title": "Mobilisation du Fonds européen d’ajustement à la mondialisation - EGF/2020/001 ES/Galicia shipbuilding ancillary sectors - Espagne",
+      "title": "EGF/2020/001 ES/Galicia shipbuilding ancillary sectors",
       "subtitle": "A9-0192/2020 - Valérie Hayer - Single vote — vote in plenary",
       "date": "2020-10-19",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [
-        "The EU budget"
-      ],
+      "topics": [],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 687,
-      "keywords": "mobilisation du fonds européen d’ajustement à la mondialisation - egf/2020/001 es/galicia shipbuilding ancillary sectors - espagne a9-0192/2020 - valérie hayer - single vote — vote in plenary 2020/1996",
+      "keywords": "egf/2020/001 es/galicia shipbuilding ancillary sectors a9-0192/2020 - valérie hayer - single vote — vote in plenary 2020/1996",
       "file": "data/decisions/ep-2020-10-19-2020-1996-119685.json"
     },
     {

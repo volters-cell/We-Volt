@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations",
+  "title": "Objection: Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations",
   "subtitle": "Objection pursuant to Rule 112(2) and (3): Genetically modified maize Bt11 × MIR162 × MIR604 × MON 89034 × 5307 × GA21 and thirty sub-combinations – B9-0492/2023 – Motion for a resolution — vote in plenary",
   "date": "2023-12-14",
   "voteRule": "simple-majority",

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Collecte et partage des données relatives aux services de location de logements à court terme - Data collection and sharing relating to short-term accommodation rental services - Erhebung und Austausch von Daten im Zusammenhang mit Dienstleistungen im Bereich der kurzfristigen Vermietung von Unterkünften",
+  "title": "Data collection and sharing relating to short-term accommodation rental services",
   "subtitle": "Collecte et partage des données relatives aux services de location de logements à court terme - Data collection and sharing relating to short-term accommodation rental services - Erhebung und Austausch von Daten im Zusammenhang mit Dienstleistungen im Bereich der kurzfristigen Vermietung von Unterkünften - A9-0270/2023 - Kim Van Sparrentak - Accord provisoire - Am 84 — vote in plenary",
   "date": "2024-02-29",
   "voteRule": "simple-majority",
@@ -2212,7 +2212,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Digital and tech"
-  ]
+  "topics": []
 }

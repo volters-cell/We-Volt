@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament. The record is the annex to the minutes of the sitting, which names every member and how they voted. The summary is editorial and left empty.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Objection pursuant to Rule 114(3): amending Delegated Regulation (EU) 2016/1675 to add certain countries to the list of high-risk third countries, and to remove other countries from that list",
+  "title": "Objection: amending Delegated Regulation (EU) 2016/1675 to add certain countries to the list of high-risk third countries, and to remove other countries from that list",
   "subtitle": "2025/2740(DEA) — vote in plenary",
   "date": "2025-07-09",
   "voteRule": "simple-majority",
@@ -2921,7 +2921,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "How Parliament works"
-  ]
+  "topics": []
 }
