@@ -17,6 +17,7 @@ import {
   plainTitle
 } from '../scripts/fetch-plenary.mjs';
 import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.mjs';
+import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -192,5 +193,29 @@ for (const country of Object.values(expanded.countries)) {
 const orphaned = shim.Data.expandBallots({ ballots: [[999999, 0]], countries: {} }, members);
 assert.equal(orphaned.expanded.unknown, 1);
 assert.deepEqual(Object.keys(orphaned.countries), []);
+
+/* The schedule reads the Parliament's calendar instead of guessing at Monday
+   to Thursday, so the reading has to be right at every edge: the first day, the
+   last day, the grace day after it, and the day past that. And it has to say
+   yes when it cannot tell, because importing on a quiet day writes nothing
+   while missing a sitting loses a day of votes. */
+const calendar = [
+  { start: '2026-09-14', end: '2026-09-17', location: 'Strasbourg' },
+  { start: '2026-10-07', end: '2026-10-08', location: 'Brussels' },
+  { start: '2026-11-03', end: '2026-11-03', location: 'Brussels' }
+];
+assert.equal(sittingOn('2026-09-13', calendar).sitting, false, 'the day before is not a sitting');
+assert.equal(sittingOn('2026-09-14', calendar).sitting, true, 'the first day is');
+assert.equal(sittingOn('2026-09-17', calendar).sitting, true, 'the last day is');
+assert.equal(sittingOn('2026-09-18', calendar).sitting, true, 'the day after is, for the late details');
+assert.equal(sittingOn('2026-09-19', calendar).sitting, false, 'two days after is not');
+assert.equal(sittingOn('2026-11-03', calendar).sitting, true, 'a one-day session is');
+assert.equal(sittingOn('2026-11-04', calendar).sitting, true, 'and its grace day');
+// A month into the future of the last session: the calendar is stale, so import.
+assert.equal(sittingOn('2026-12-20', calendar).sitting, true, 'a stale calendar means yes');
+assert.equal(sittingOn('2026-09-19', []).sitting, true, 'no calendar means yes');
+assert.equal(sittingOn('2026-09-19', null).sitting, true, 'an unreadable calendar means yes');
+assert.equal(dayAfter('2026-12-31'), '2027-01-01', 'the grace day crosses the year');
+assert.equal(dayAfter('2028-02-28'), '2028-02-29', 'and the leap day');
 
 console.log('import.test.mjs: ok');

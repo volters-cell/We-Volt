@@ -5,11 +5,21 @@
 # they voted. The cadence follows what it publishes and when:
 #
 #   - A sitting's decisions appear during the day, shortly after each voting
-#     session. Runs at midday and in the evening on Mon-Thu catch both.
+#     session. So on a day the Parliament sits, this runs every two hours from
+#     morning to night, and a vote reaches the site within about two hours of
+#     being taken.
+#   - Which days those are is read from the Parliament's own calendar, not
+#     guessed at. Every scheduled run asks scripts/sitting-day.mjs first and
+#     stops in seconds if nobody is sitting. Monday to Thursday was the guess
+#     before, and of the 39 sessions the Parliament has published one runs
+#     Tuesday to Friday: a whole sitting day the guess could not see.
 #   - The portal fills in details, among them whether a text carried, over the
-#     following day. A nightly run re-imports the last fortnight, so a result
-#     this project had to derive is replaced by the Parliament's own.
-#   - The plenary calendar and the member directory change slowly. Weekly.
+#     following day. A nightly run re-imports the last fortnight whatever the
+#     calendar says, so a result this project had to derive is replaced by the
+#     Parliament's own.
+#   - The plenary calendar and the member directory change slowly. Weekly —
+#     and the calendar has to be refreshed for the gate above to stay true,
+#     which is why a stale calendar makes the gate answer yes rather than no.
 #
 # Runs are cheap and idempotent: on a day with no sitting the portal records no
 # votes, nothing is written, and nothing is committed.
@@ -21,9 +31,8 @@ name: Plenary sync
 
 on:
   schedule:
-    - cron: "40 12 * * 1-4"   # during the sitting, after the midday votes
-    - cron: "40 18 * * 1-4"   # after the evening votes
-    - cron: "30 21 * * *"     # nightly: pick up the votes lists and any late annex
+    - cron: "5 8-20/2 * * *"  # through a sitting day; stops at once on any other
+    - cron: "30 21 * * *"     # nightly, always: the votes lists and any late annex
     - cron: "0 4 * * 1"       # Monday: refresh the calendar and the members
   workflow_dispatch:
     inputs:
@@ -54,6 +63,25 @@ jobs:
         with:
           node-version: "22"
 
+      # Does the Parliament sit today? The nightly run and the weekly one do
+      # not ask: the first exists to pick up details the portal adds after a
+      # sitting ends, and the second to refresh the calendar this very question
+      # is answered from. Everything else asks, and stops here if the answer is
+      # no, which on most days of the year it is.
+      - name: Is the Parliament sitting today?
+        id: sitting
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" != "schedule" ] || \
+             [ "${{ github.event.schedule }}" = "30 21 * * *" ] || \
+             [ "${{ github.event.schedule }}" = "0 4 * * 1" ]; then
+            echo "Running whatever the calendar says."
+            echo "go=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          answer=$(node scripts/sitting-day.mjs)
+          echo "go=$([ "$answer" = "yes" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
       # The calendar is what the site reads to say when the last session was
       # and when the next one starts. Weekly is enough; a failure is not fatal.
       - name: Refresh the plenary calendar
@@ -64,6 +92,7 @@ jobs:
       # person ids, so a newly seated MEP missing from the cache would appear in
       # a vote as a number with no name and no country.
       - name: Import roll-call votes
+        if: steps.sitting.outputs.go == 'true'
         run: |
           node scripts/fetch-plenary.mjs --refresh-meps \
             ${{ inputs.since && format('--since {0}', inputs.since) || '' }} \
@@ -73,24 +102,29 @@ jobs:
       # and it has to run before the index, which carries the topics to the
       # cards. Without it a newly imported vote arrives with no chip.
       - name: Say what the new votes are about
+        if: steps.sitting.outputs.go == 'true'
         run: node scripts/tag-topics.mjs
 
       - name: Rebuild the index
+        if: steps.sitting.outputs.go == 'true'
         run: node scripts/build-index.mjs
 
       # The same votes seen from the other end: one file per member, so a reader
       # following an MEP sees the new sitting too. Without this the vote pages
       # move and the member pages stay where they were.
       - name: Rebuild the member profiles
+        if: steps.sitting.outputs.go == 'true'
         run: node scripts/build-members.mjs
 
       - name: Check every record before it goes near the site
+        if: steps.sitting.outputs.go == 'true'
         run: |
           node tests/import.test.mjs
           node scripts/validate-data.mjs
 
       - name: Commit what changed
         id: commit
+        if: steps.sitting.outputs.go == 'true'
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Nothing new."
