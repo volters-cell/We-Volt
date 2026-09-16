@@ -27,6 +27,9 @@ const NOT_ENGLISH = /\b(de la|du|des|les|le|la|aux|pour|sur|dans|par|une|et|en|a
 export function looksEnglish(text) {
   const value = String(text || '').trim();
   if (!value) return false;
+  // "(" is a title the Parliament published and it is not English, or any
+  // other language. Anything with no word in it has to be looked up again.
+  if (!/[\p{L}]{3}/u.test(value)) return false;
   if (NOT_ENGLISH.test(value)) return false;
   // Two words or fewer: no grammar to judge, so accept it rather than throw
   // away a perfectly good "InvestEU".
@@ -41,13 +44,18 @@ export function looksEnglish(text) {
    is the title and the other two are a copy of it in a language this site is
    not written in.
 
+   The languages are joined with a plain hyphen; a dash inside one of them is
+   the Parliament separating a subject from its subtitle — "Electric aviation
+   – a solution for short- and mid-range flights" is one title, not two — so
+   only the hyphen splits.
+
    Only halves long enough to be a title count, because the same dash also
    separates a filing code from its rapporteur — "A9-0002/2020 - Geert
    Bourgeois - Consent procedure" — and "Consent procedure" is English and is
    not what the vote was about. And only when exactly one of them is English,
    so nothing is chosen where the test cannot tell. */
 export function englishHalf(title) {
-  const halves = String(title || '').split(/\s+[-–—]\s+/)
+  const halves = String(title || '').split(/\s+-\s+/)
     .map(function (half) { return half.trim(); })
     .filter(function (half) { return half.length >= 40; });
   if (halves.length < 2) return '';
