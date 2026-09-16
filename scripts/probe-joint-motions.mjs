@@ -30,9 +30,13 @@ import { looksEnglish } from './lib/titles.mjs';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
 
+/* get() answers null for a document the portal does not have, rather than
+   throwing, so a probe that reads .error off the answer crashes on exactly the
+   case it was written to investigate. */
 async function tryGet(pathname, params) {
   try {
-    return await get(pathname, params || {});
+    const answer = await get(pathname, params || {});
+    return answer || { missing: true };
   } catch (error) {
     return { error: String(error).slice(0, 120) };
   }
@@ -66,15 +70,15 @@ for (const { record, code } of filing.slice(0, 4)) {
   console.log(`    titled: ${String(record.title).slice(0, 80)}`);
 
   const direct = await tryGet(`/documents/${built}`);
-  const row = direct && direct.data && direct.data[0];
+  const row = direct.data && direct.data[0];
   console.log(`    /documents/${built}: ${direct.error || (row ? titleOf(row) : JSON.stringify(direct).slice(0, 150))}`);
 
   /* The same reference the other way round, in case a joint motion is filed
      under its year first like a report is, or not hyphenated at all. */
   for (const shape of [built.replace(/^RC-/, ''), code.replace(/[/]/g, '-'), `RC-B-9-${code.slice(-4)}-${/(\d{4})\//.exec(code)[1]}`]) {
     const other = await tryGet(`/documents/${shape}`);
-    const found = other && other.data && other.data[0];
-    console.log(`      as ${shape}: ${other.error ? 'error' : (found ? titleOf(found) : 'empty')}`);
+    const found = other.data && other.data[0];
+    console.log(`      as ${shape}: ${other.error ? other.error : (found ? titleOf(found) : (other.missing ? 'not found' : 'empty'))}`);
   }
   console.log('');
 }
