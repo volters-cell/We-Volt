@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "RC-B9-0216/2020 - Am 25",
+  "title": "The EU’s public health strategy post-COVID-19",
   "subtitle": "vote in plenary",
   "date": "2020-07-09",
   "voteRule": "simple-majority",
@@ -2821,5 +2821,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Public health"
+  ]
 }

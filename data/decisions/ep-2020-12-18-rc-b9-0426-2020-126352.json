@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "RC-B9-0426/2020 - Resolution",
+  "title": "The deteriorating situation of human rights in Egypt, in particular the case of the activists of the Egyptian Initiative for Personal Rights (EIPR)",
   "subtitle": "vote in plenary",
   "date": "2020-12-18",
   "voteRule": "simple-majority",
@@ -2785,5 +2785,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Egypt",
+    "Human rights"
+  ]
 }

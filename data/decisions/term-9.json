@@ -21836,19 +21836,21 @@
     {
       "id": "ep-2022-12-15-rc-b9-0558-2022-151460",
       "sourceId": 151460,
-      "title": "RC-B9-0558/2022 – Motion for a resolution (text as a whole)",
+      "title": "The case of human rights defender Abdulhadi Al-Khawaja in Bahrain",
       "subtitle": "vote in plenary",
       "date": "2022-12-15",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Human rights"
+      ],
       "committee": null,
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
       "mepCount": 360,
-      "keywords": "rc-b9-0558/2022 – motion for a resolution (text as a whole) vote in plenary rc-b9-0558/2022",
+      "keywords": "the case of human rights defender abdulhadi al-khawaja in bahrain vote in plenary rc-b9-0558/2022",
       "file": "data/decisions/ep-2022-12-15-rc-b9-0558-2022-151460.json"
     },
     {
@@ -42189,7 +42191,7 @@
     {
       "id": "ep-2021-04-29-rc-b9-0227-2021-130846",
       "sourceId": 130846,
-      "title": "Cinquième anniversaire de l'accord de paix en Colombie",
+      "title": "The fifth anniversary of the Peace Agreement in Colombia",
       "subtitle": "Cinquième anniversaire de l'accord de paix en Colombie - RC-B9-0227/2021 - Proposition de résolution — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42201,13 +42203,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 690,
-      "keywords": "cinquième anniversaire de l'accord de paix en colombie cinquième anniversaire de l'accord de paix en colombie - rc-b9-0227/2021 - proposition de résolution — vote in plenary rc-b9-0227/2021",
+      "keywords": "the fifth anniversary of the peace agreement in colombia cinquième anniversaire de l'accord de paix en colombie - rc-b9-0227/2021 - proposition de résolution — vote in plenary rc-b9-0227/2021",
       "file": "data/decisions/ep-2021-04-29-rc-b9-0227-2021-130846.json"
     },
     {
       "id": "ep-2021-04-29-rc-b9-0236-2021-130845",
       "sourceId": 130845,
-      "title": "La Russie, le cas d’Alexeï Navalny, le déploiement militaire à la frontière ukrainienne et l'attaque russe en République tchèque",
+      "title": "Russia, the case of Alexei Navalny, the military build-up on Ukraine’s border and the Russian attack in the Czech Republic",
       "subtitle": "La Russie, le cas d’Alexeï Navalny, le déploiement militaire à la frontière ukrainienne et l'attaque russe en République tchèque - RC-B9-0236/2021 - Proposition de résolution — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42222,13 +42224,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 682,
-      "keywords": "la russie, le cas d’alexeï navalny, le déploiement militaire à la frontière ukrainienne et l'attaque russe en république tchèque la russie, le cas d’alexeï navalny, le déploiement militaire à la frontière ukrainienne et l'attaque russe en république tchèque - rc-b9-0236/2021 - proposition de résolution — vote in plenary rc-b9-0236/2021",
+      "keywords": "russia, the case of alexei navalny, the military build-up on ukraine’s border and the russian attack in the czech republic la russie, le cas d’alexeï navalny, le déploiement militaire à la frontière ukrainienne et l'attaque russe en république tchèque - rc-b9-0236/2021 - proposition de résolution — vote in plenary rc-b9-0236/2021",
       "file": "data/decisions/ep-2021-04-29-rc-b9-0236-2021-130845.json"
     },
     {
       "id": "ep-2021-04-29-rc-b9-0239-2021-130841",
       "sourceId": 130841,
-      "title": "La pandémie de COVID-19 en Amérique latine",
+      "title": "COVID 19 pandemic in Latin America",
       "subtitle": "La pandémie de COVID-19 en Amérique latine - RC-B9-0239/2021 - Proposition de résolution — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42242,13 +42244,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 691,
-      "keywords": "la pandémie de covid-19 en amérique latine la pandémie de covid-19 en amérique latine - rc-b9-0239/2021 - proposition de résolution — vote in plenary rc-b9-0239/2021",
+      "keywords": "covid 19 pandemic in latin america la pandémie de covid-19 en amérique latine - rc-b9-0239/2021 - proposition de résolution — vote in plenary rc-b9-0239/2021",
       "file": "data/decisions/ep-2021-04-29-rc-b9-0239-2021-130841.json"
     },
     {
       "id": "ep-2021-04-29-rc-b9-0244-2021-130842",
       "sourceId": 130842,
-      "title": "La Bolivie et l'arrestation de l'ancienne présidente Jeanine Añez ainsi que d'autres personnalités politiques",
+      "title": "Bolivia and the arrest of former President Jeanine Añez and other officials",
       "subtitle": "La Bolivie et l'arrestation de l'ancienne présidente Jeanine Añez ainsi que d'autres personnalités politiques - RC-B9-0244/2021 - Proposition de résolution — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42260,13 +42262,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 691,
-      "keywords": "la bolivie et l'arrestation de l'ancienne présidente jeanine añez ainsi que d'autres personnalités politiques la bolivie et l'arrestation de l'ancienne présidente jeanine añez ainsi que d'autres personnalités politiques - rc-b9-0244/2021 - proposition de résolution — vote in plenary rc-b9-0244/2021",
+      "keywords": "bolivia and the arrest of former president jeanine añez and other officials la bolivie et l'arrestation de l'ancienne présidente jeanine añez ainsi que d'autres personnalités politiques - rc-b9-0244/2021 - proposition de résolution — vote in plenary rc-b9-0244/2021",
       "file": "data/decisions/ep-2021-04-29-rc-b9-0244-2021-130842.json"
     },
     {
       "id": "ep-2021-04-29-rc-b9-0254-2021-130843",
       "sourceId": 130843,
-      "title": "Lois sur le blasphème au Pakistan, en particulier le cas de Shagufta Kausar et de Shafqat Emmanuel",
+      "title": "Blasphemy Laws in Pakistan, in Particular the Case Shagufta Kausar and Shafqat Emmanuel",
       "subtitle": "Lois sur le blasphème au Pakistan, en particulier le cas de Shagufta Kausar et de Shafqat Emmanuel - RC-B9-0254/2021 - Proposition de résolution — vote in plenary",
       "date": "2021-04-29",
       "body": "parliament",
@@ -42278,7 +42280,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 690,
-      "keywords": "lois sur le blasphème au pakistan, en particulier le cas de shagufta kausar et de shafqat emmanuel lois sur le blasphème au pakistan, en particulier le cas de shagufta kausar et de shafqat emmanuel - rc-b9-0254/2021 - proposition de résolution — vote in plenary rc-b9-0254/2021",
+      "keywords": "blasphemy laws in pakistan, in particular the case shagufta kausar and shafqat emmanuel lois sur le blasphème au pakistan, en particulier le cas de shagufta kausar et de shafqat emmanuel - rc-b9-0254/2021 - proposition de résolution — vote in plenary rc-b9-0254/2021",
       "file": "data/decisions/ep-2021-04-29-rc-b9-0254-2021-130843.json"
     },
     {
@@ -46507,25 +46509,27 @@
     {
       "id": "ep-2021-01-21-rc-b9-0056-2021-127179",
       "sourceId": 127179,
-      "title": "RC-B9-0056/2021 - Motion for a resolution",
+      "title": "The latest developments in the National Assembly of Venezuela",
       "subtitle": "vote in plenary",
       "date": "2021-01-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Venezuela"
+      ],
       "committee": null,
       "rollCalls": 17,
       "result": "adopted",
       "status": "verified",
       "mepCount": 682,
-      "keywords": "rc-b9-0056/2021 - motion for a resolution vote in plenary rc-b9-0056/2021",
+      "keywords": "the latest developments in the national assembly of venezuela vote in plenary rc-b9-0056/2021",
       "file": "data/decisions/ep-2021-01-21-rc-b9-0056-2021-127179.json"
     },
     {
       "id": "ep-2021-01-21-rc-b9-0057-2021-127181",
       "sourceId": 127181,
-      "title": "RC-B9-0057/2021 - Motion for a resolution",
+      "title": "Mitigating the consequences of earthquakes in Croatia",
       "subtitle": "vote in plenary",
       "date": "2021-01-21",
       "body": "parliament",
@@ -46537,43 +46541,48 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 683,
-      "keywords": "rc-b9-0057/2021 - motion for a resolution vote in plenary rc-b9-0057/2021",
+      "keywords": "mitigating the consequences of earthquakes in croatia vote in plenary rc-b9-0057/2021",
       "file": "data/decisions/ep-2021-01-21-rc-b9-0057-2021-127181.json"
     },
     {
       "id": "ep-2021-01-21-rc-b9-0068-2021-127182",
       "sourceId": 127182,
-      "title": "RC-B9-0068/2021 - Motion for a resolution",
+      "title": "The crackdown on the democratic opposition in Hong Kong",
       "subtitle": "vote in plenary",
       "date": "2021-01-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "China"
+      ],
       "committee": null,
       "rollCalls": 11,
       "result": "adopted",
       "status": "verified",
       "mepCount": 675,
-      "keywords": "rc-b9-0068/2021 - motion for a resolution vote in plenary rc-b9-0068/2021",
+      "keywords": "the crackdown on the democratic opposition in hong kong vote in plenary rc-b9-0068/2021",
       "file": "data/decisions/ep-2021-01-21-rc-b9-0068-2021-127182.json"
     },
     {
       "id": "ep-2021-01-21-rc-b9-0072-2021-127183",
       "sourceId": 127183,
-      "title": "RC-B9-0072/2021 - Motion for a resolution",
+      "title": "Human rights situation in Turkey, notably the case of Selahattin Demirtas and other prisoners of conscience",
       "subtitle": "vote in plenary",
       "date": "2021-01-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Türkiye",
+        "Human rights"
+      ],
       "committee": null,
       "rollCalls": 8,
       "result": "adopted",
       "status": "verified",
       "mepCount": 681,
-      "keywords": "rc-b9-0072/2021 - motion for a resolution vote in plenary rc-b9-0072/2021",
+      "keywords": "human rights situation in turkey, notably the case of selahattin demirtas and other prisoners of conscience vote in plenary rc-b9-0072/2021",
       "file": "data/decisions/ep-2021-01-21-rc-b9-0072-2021-127183.json"
     },
     {
@@ -46597,7 +46606,7 @@
     {
       "id": "ep-2021-01-21-rc-b9-0090-2021-127178",
       "sourceId": 127178,
-      "title": "RC-B9-0090/2021 - Motion for a resolution",
+      "title": "The arrest of Alexei Navalny",
       "subtitle": "vote in plenary",
       "date": "2021-01-21",
       "body": "parliament",
@@ -46609,7 +46618,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 675,
-      "keywords": "rc-b9-0090/2021 - motion for a resolution vote in plenary rc-b9-0090/2021",
+      "keywords": "the arrest of alexei navalny vote in plenary rc-b9-0090/2021",
       "file": "data/decisions/ep-2021-01-21-rc-b9-0090-2021-127178.json"
     },
     {
@@ -47223,19 +47232,22 @@
     {
       "id": "ep-2020-12-18-rc-b9-0426-2020-126352",
       "sourceId": 126352,
-      "title": "RC-B9-0426/2020 - Resolution",
+      "title": "The deteriorating situation of human rights in Egypt, in particular the case of the activists of the Egyptian Initiative for Personal Rights (EIPR)",
       "subtitle": "vote in plenary",
       "date": "2020-12-18",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Egypt",
+        "Human rights"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 685,
-      "keywords": "rc-b9-0426/2020 - resolution vote in plenary rc-b9-0426/2020",
+      "keywords": "the deteriorating situation of human rights in egypt, in particular the case of the activists of the egyptian initiative for personal rights (eipr) vote in plenary rc-b9-0426/2020",
       "file": "data/decisions/ep-2020-12-18-rc-b9-0426-2020-126352.json"
     },
     {
@@ -47642,19 +47654,21 @@
     {
       "id": "ep-2020-12-17-rc-b9-0440-2020-126255",
       "sourceId": 126255,
-      "title": "RC-B9-0440/2020 - Resolution",
+      "title": "Iran, in particular the case of 2012 Sakharov Prize laureate Nasrin Sotoudeh",
       "subtitle": "vote in plenary",
       "date": "2020-12-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Iran"
+      ],
       "committee": null,
       "rollCalls": 5,
       "result": "adopted",
       "status": "verified",
       "mepCount": 689,
-      "keywords": "rc-b9-0440/2020 - resolution vote in plenary rc-b9-0440/2020",
+      "keywords": "iran, in particular the case of 2012 sakharov prize laureate nasrin sotoudeh vote in plenary rc-b9-0440/2020",
       "file": "data/decisions/ep-2020-12-17-rc-b9-0440-2020-126255.json"
     },
     {
@@ -48348,19 +48362,21 @@
     {
       "id": "ep-2020-11-26-rc-b9-0355-2020-125479",
       "sourceId": 125479,
-      "title": "RC-B9-0355/2020 - Resolution",
+      "title": "The escalating tensions in Varosha following the illegal actions by Turkey and the urgent need for the resumption of talks",
       "subtitle": "vote in plenary",
       "date": "2020-11-26",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Türkiye"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 693,
-      "keywords": "rc-b9-0355/2020 - resolution vote in plenary rc-b9-0355/2020",
+      "keywords": "the escalating tensions in varosha following the illegal actions by turkey and the urgent need for the resumption of talks vote in plenary rc-b9-0355/2020",
       "file": "data/decisions/ep-2020-11-26-rc-b9-0355-2020-125479.json"
     },
     {
@@ -48384,37 +48400,42 @@
     {
       "id": "ep-2020-11-26-rc-b9-0383-2020-125477",
       "sourceId": 125477,
-      "title": "RC-B9-0383/2020 - Resolution",
+      "title": "The situation in Ethiopia",
       "subtitle": "vote in plenary",
       "date": "2020-11-26",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Ethiopia"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "rc-b9-0383/2020 - resolution vote in plenary rc-b9-0383/2020",
+      "keywords": "the situation in ethiopia vote in plenary rc-b9-0383/2020",
       "file": "data/decisions/ep-2020-11-26-rc-b9-0383-2020-125477.json"
     },
     {
       "id": "ep-2020-11-26-rc-b9-0389-2020-125478",
       "sourceId": 125478,
-      "title": "RC-B9-0389/2020 - Resolution",
+      "title": "The continuous violations of human rights in Belarus, in particular the murder of Raman Bandarenka",
       "subtitle": "vote in plenary",
       "date": "2020-11-26",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Belarus",
+        "Human rights"
+      ],
       "committee": null,
       "rollCalls": 20,
       "result": "adopted",
       "status": "verified",
       "mepCount": 689,
-      "keywords": "rc-b9-0389/2020 - resolution vote in plenary rc-b9-0389/2020",
+      "keywords": "the continuous violations of human rights in belarus, in particular the murder of raman bandarenka vote in plenary rc-b9-0389/2020",
       "file": "data/decisions/ep-2020-11-26-rc-b9-0389-2020-125478.json"
     },
     {
@@ -48666,19 +48687,21 @@
     {
       "id": "ep-2020-11-25-rc-b9-0355-2020-125304",
       "sourceId": 125304,
-      "title": "RC-B9-0355/2020 - Recital A/2",
+      "title": "The escalating tensions in Varosha following the illegal actions by Turkey and the urgent need for the resumption of talks",
       "subtitle": "vote in plenary",
       "date": "2020-11-25",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Türkiye"
+      ],
       "committee": null,
       "rollCalls": 9,
       "result": "adopted",
       "status": "verified",
       "mepCount": 695,
-      "keywords": "rc-b9-0355/2020 - recital a/2 vote in plenary rc-b9-0355/2020",
+      "keywords": "the escalating tensions in varosha following the illegal actions by turkey and the urgent need for the resumption of talks vote in plenary rc-b9-0355/2020",
       "file": "data/decisions/ep-2020-11-25-rc-b9-0355-2020-125304.json"
     },
     {
@@ -52332,37 +52355,41 @@
     {
       "id": "ep-2020-10-08-rc-b9-0317-2020-118632",
       "sourceId": 118632,
-      "title": "RC-B9-0317/2020 - Resolution",
+      "title": "The \"Foreign Agents\" Law in Nicaragua",
       "subtitle": "vote in plenary",
       "date": "2020-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Nicaragua"
+      ],
       "committee": null,
       "rollCalls": 6,
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "rc-b9-0317/2020 - resolution vote in plenary rc-b9-0317/2020",
+      "keywords": "the \"foreign agents\" law in nicaragua vote in plenary rc-b9-0317/2020",
       "file": "data/decisions/ep-2020-10-08-rc-b9-0317-2020-118632.json"
     },
     {
       "id": "ep-2020-10-08-rc-b9-0325-2020-118633",
       "sourceId": 118633,
-      "title": "RC-B9-0325/2020 - Resolution",
+      "title": "The situation of Ethiopian migrants in detention centres in Saudi Arabia",
       "subtitle": "vote in plenary",
       "date": "2020-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Ethiopia"
+      ],
       "committee": null,
       "rollCalls": 30,
       "result": "adopted",
       "status": "verified",
       "mepCount": 695,
-      "keywords": "rc-b9-0325/2020 - resolution vote in plenary rc-b9-0325/2020",
+      "keywords": "the situation of ethiopian migrants in detention centres in saudi arabia vote in plenary rc-b9-0325/2020",
       "file": "data/decisions/ep-2020-10-08-rc-b9-0325-2020-118633.json"
     },
     {
@@ -53020,91 +53047,101 @@
     {
       "id": "ep-2020-09-17-rc-b9-0246-2020-117282",
       "sourceId": 117282,
-      "title": "RC-B9-0246/2020 - Resolution",
+      "title": "The cultural recovery of Europe",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Education and culture"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "rc-b9-0246/2020 - resolution vote in plenary rc-b9-0246/2020",
+      "keywords": "the cultural recovery of europe vote in plenary rc-b9-0246/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0246-2020-117282.json"
     },
     {
       "id": "ep-2020-09-17-rc-b9-0257-2020-117283",
       "sourceId": 117283,
-      "title": "RC-B9-0257/2020 - Resolution",
+      "title": "COVID-19: EU coordination of health assessments and risk classification, and the consequences for Schengen and the single market",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Migration"
+      ],
       "committee": null,
       "rollCalls": 36,
       "result": "adopted",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "rc-b9-0257/2020 - resolution vote in plenary rc-b9-0257/2020",
+      "keywords": "covid-19: eu coordination of health assessments and risk classification, and the consequences for schengen and the single market vote in plenary rc-b9-0257/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0257-2020-117283.json"
     },
     {
       "id": "ep-2020-09-17-rc-b9-0260-2020-117272",
       "sourceId": 117272,
-      "title": "RC-B9-0260/2020 - Resolution",
+      "title": "The preparation of the special European Council summit focusing on the dangerous escalation and the role of Turkey in the Eastern Mediterranean",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Türkiye"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "rc-b9-0260/2020 - resolution vote in plenary rc-b9-0260/2020",
+      "keywords": "the preparation of the special european council summit focusing on the dangerous escalation and the role of turkey in the eastern mediterranean vote in plenary rc-b9-0260/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0260-2020-117272.json"
     },
     {
       "id": "ep-2020-09-17-rc-b9-0271-2020-117273",
       "sourceId": 117273,
-      "title": "RC-B9-0271/2020 - Resolution",
+      "title": "The situation in Belarus",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Belarus"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 693,
-      "keywords": "rc-b9-0271/2020 - resolution vote in plenary rc-b9-0271/2020",
+      "keywords": "the situation in belarus vote in plenary rc-b9-0271/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0271-2020-117273.json"
     },
     {
       "id": "ep-2020-09-17-rc-b9-0280-2020-117274",
       "sourceId": 117274,
-      "title": "RC-B9-0280/2020 - Resolution",
+      "title": "The situation in Russia: the poisoning of Alexei Navalny",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Russia"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 688,
-      "keywords": "rc-b9-0280/2020 - resolution vote in plenary rc-b9-0280/2020",
+      "keywords": "the situation in russia: the poisoning of alexei navalny vote in plenary rc-b9-0280/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0280-2020-117274.json"
     },
     {
@@ -53128,7 +53165,7 @@
     {
       "id": "ep-2020-09-17-rc-b9-0290-2020-117276",
       "sourceId": 117276,
-      "title": "RC-B9-0290/2020 - Resolution",
+      "title": "The situation in the Philippines, including the case of Maria Ressa",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
@@ -53140,13 +53177,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 685,
-      "keywords": "rc-b9-0290/2020 - resolution vote in plenary rc-b9-0290/2020",
+      "keywords": "the situation in the philippines, including the case of maria ressa vote in plenary rc-b9-0290/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0290-2020-117276.json"
     },
     {
       "id": "ep-2020-09-17-rc-b9-0300-2020-117278",
       "sourceId": 117278,
-      "title": "RC-B9-0300/2020 - Resolution",
+      "title": "The humanitarian situation in Mozambique",
       "subtitle": "vote in plenary",
       "date": "2020-09-17",
       "body": "parliament",
@@ -53158,7 +53195,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "rc-b9-0300/2020 - resolution vote in plenary rc-b9-0300/2020",
+      "keywords": "the humanitarian situation in mozambique vote in plenary rc-b9-0300/2020",
       "file": "data/decisions/ep-2020-09-17-rc-b9-0300-2020-117278.json"
     },
     {
@@ -53415,55 +53452,61 @@
     {
       "id": "ep-2020-09-16-rc-b9-0260-2020-117181",
       "sourceId": 117181,
-      "title": "RC-B9-0260/2020 - § 12/1",
+      "title": "The preparation of the special European Council summit focusing on the dangerous escalation and the role of Turkey in the Eastern Mediterranean",
       "subtitle": "vote in plenary",
       "date": "2020-09-16",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Türkiye"
+      ],
       "committee": null,
       "rollCalls": 10,
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "rc-b9-0260/2020 - § 12/1 vote in plenary rc-b9-0260/2020",
+      "keywords": "the preparation of the special european council summit focusing on the dangerous escalation and the role of turkey in the eastern mediterranean vote in plenary rc-b9-0260/2020",
       "file": "data/decisions/ep-2020-09-16-rc-b9-0260-2020-117181.json"
     },
     {
       "id": "ep-2020-09-16-rc-b9-0271-2020-117165",
       "sourceId": 117165,
-      "title": "RC-B9-0271/2020 - § 28/1",
+      "title": "The situation in Belarus",
       "subtitle": "vote in plenary",
       "date": "2020-09-16",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Belarus"
+      ],
       "committee": null,
       "rollCalls": 14,
       "result": "adopted",
       "status": "verified",
       "mepCount": 690,
-      "keywords": "rc-b9-0271/2020 - § 28/1 vote in plenary rc-b9-0271/2020",
+      "keywords": "the situation in belarus vote in plenary rc-b9-0271/2020",
       "file": "data/decisions/ep-2020-09-16-rc-b9-0271-2020-117165.json"
     },
     {
       "id": "ep-2020-09-16-rc-b9-0280-2020-117172",
       "sourceId": 117172,
-      "title": "RC-B9-0280/2020 - § 15/2",
+      "title": "The situation in Russia: the poisoning of Alexei Navalny",
       "subtitle": "vote in plenary",
       "date": "2020-09-16",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Russia"
+      ],
       "committee": null,
       "rollCalls": 5,
       "result": "adopted",
       "status": "verified",
       "mepCount": 685,
-      "keywords": "rc-b9-0280/2020 - § 15/2 vote in plenary rc-b9-0280/2020",
+      "keywords": "the situation in russia: the poisoning of alexei navalny vote in plenary rc-b9-0280/2020",
       "file": "data/decisions/ep-2020-09-16-rc-b9-0280-2020-117172.json"
     },
     {
@@ -54007,19 +54050,21 @@
     {
       "id": "ep-2020-07-10-rc-b9-0216-2020-116295",
       "sourceId": 116295,
-      "title": "RC-B9-0216/2020 - Resolution",
+      "title": "The EU’s public health strategy post-COVID-19",
       "subtitle": "vote in plenary",
       "date": "2020-07-10",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Public health"
+      ],
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
       "mepCount": 681,
-      "keywords": "rc-b9-0216/2020 - resolution vote in plenary rc-b9-0216/2020",
+      "keywords": "the eu’s public health strategy post-covid-19 vote in plenary rc-b9-0216/2020",
       "file": "data/decisions/ep-2020-07-10-rc-b9-0216-2020-116295.json"
     },
     {
@@ -54256,37 +54301,42 @@
     {
       "id": "ep-2020-07-09-rc-b9-0211-2020-116212",
       "sourceId": 116212,
-      "title": "RC-B9-0211/2020 - Resolution",
+      "title": "The humanitarian situation in Venezuela and the migration and refugee crisis",
       "subtitle": "vote in plenary",
       "date": "2020-07-09",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Venezuela",
+        "Migration"
+      ],
       "committee": null,
       "rollCalls": 4,
       "result": "adopted",
       "status": "verified",
       "mepCount": 685,
-      "keywords": "rc-b9-0211/2020 - resolution vote in plenary rc-b9-0211/2020",
+      "keywords": "the humanitarian situation in venezuela and the migration and refugee crisis vote in plenary rc-b9-0211/2020",
       "file": "data/decisions/ep-2020-07-09-rc-b9-0211-2020-116212.json"
     },
     {
       "id": "ep-2020-07-09-rc-b9-0216-2020-116124",
       "sourceId": 116124,
-      "title": "RC-B9-0216/2020 - Am 25",
+      "title": "The EU’s public health strategy post-COVID-19",
       "subtitle": "vote in plenary",
       "date": "2020-07-09",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Public health"
+      ],
       "committee": null,
       "rollCalls": 47,
       "result": "adopted",
       "status": "verified",
       "mepCount": 694,
-      "keywords": "rc-b9-0216/2020 - am 25 vote in plenary rc-b9-0216/2020",
+      "keywords": "the eu’s public health strategy post-covid-19 vote in plenary rc-b9-0216/2020",
       "file": "data/decisions/ep-2020-07-09-rc-b9-0216-2020-116124.json"
     },
     {
@@ -54776,7 +54826,7 @@
     {
       "id": "ep-2020-06-19-rc-b9-0166-2020-115491",
       "sourceId": 115491,
-      "title": "RC-B9-0166/2020 - Resolution",
+      "title": "The progressive resumption of tourism services in the EU",
       "subtitle": "vote in plenary",
       "date": "2020-06-19",
       "body": "parliament",
@@ -54788,25 +54838,27 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 665,
-      "keywords": "rc-b9-0166/2020 - resolution vote in plenary rc-b9-0166/2020",
+      "keywords": "the progressive resumption of tourism services in the eu vote in plenary rc-b9-0166/2020",
       "file": "data/decisions/ep-2020-06-19-rc-b9-0166-2020-115491.json"
     },
     {
       "id": "ep-2020-06-19-rc-b9-0169-2020-115497",
       "sourceId": 115497,
-      "title": "RC-B9-0169/2020 - Resolution",
+      "title": "The PRC national security law for Hong Kong and the need for the EU to defend Hong Kong’s high degree of autonomy",
       "subtitle": "vote in plenary",
       "date": "2020-06-19",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "China"
+      ],
       "committee": null,
       "rollCalls": 23,
       "result": "adopted",
       "status": "verified",
       "mepCount": 661,
-      "keywords": "rc-b9-0169/2020 - resolution vote in plenary rc-b9-0169/2020",
+      "keywords": "the prc national security law for hong kong and the need for the eu to defend hong kong’s high degree of autonomy vote in plenary rc-b9-0169/2020",
       "file": "data/decisions/ep-2020-06-19-rc-b9-0169-2020-115497.json"
     },
     {
@@ -55106,7 +55158,7 @@
     {
       "id": "ep-2020-06-18-rc-b9-0166-2020-115104",
       "sourceId": 115104,
-      "title": "RC-B9-0166/2020 - § 38/2",
+      "title": "The progressive resumption of tourism services in the EU",
       "subtitle": "vote in plenary",
       "date": "2020-06-18",
       "body": "parliament",
@@ -55118,7 +55170,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 686,
-      "keywords": "rc-b9-0166/2020 - § 38/2 vote in plenary rc-b9-0166/2020",
+      "keywords": "the progressive resumption of tourism services in the eu vote in plenary rc-b9-0166/2020",
       "file": "data/decisions/ep-2020-06-18-rc-b9-0166-2020-115104.json"
     },
     {
@@ -58638,19 +58690,21 @@
     {
       "id": "ep-2020-04-16-rc-b9-0143-2020-113030",
       "sourceId": 113030,
-      "title": "RC-B9-0143/2020 - am 67",
+      "title": "EU coordinated action to combat the COVID---19 pandemic and its consequences",
       "subtitle": "vote in plenary",
       "date": "2020-04-16",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Public health"
+      ],
       "committee": null,
       "rollCalls": 107,
       "result": "rejected",
       "status": "verified",
       "mepCount": 687,
-      "keywords": "rc-b9-0143/2020 - am 67 vote in plenary rc-b9-0143/2020",
+      "keywords": "eu coordinated action to combat the covid---19 pandemic and its consequences vote in plenary rc-b9-0143/2020",
       "file": "data/decisions/ep-2020-04-16-rc-b9-0143-2020-113030.json"
     },
     {
@@ -58817,19 +58871,21 @@
     {
       "id": "ep-2020-02-13-rc-b9-0102-2020-112704",
       "sourceId": 112704,
-      "title": "RC-B9-0102/2020 - Am 4",
+      "title": "Child labour in mines in Madagascar",
       "subtitle": "vote in plenary",
       "date": "2020-02-13",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of votes cast",
-      "topics": [],
+      "topics": [
+        "Jobs and workers"
+      ],
       "committee": null,
       "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
       "mepCount": 627,
-      "keywords": "rc-b9-0102/2020 - am 4 vote in plenary rc-b9-0102/2020",
+      "keywords": "child labour in mines in madagascar vote in plenary rc-b9-0102/2020",
       "file": "data/decisions/ep-2020-02-13-rc-b9-0102-2020-112704.json"
     },
     {
