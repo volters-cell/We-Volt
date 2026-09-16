@@ -23,7 +23,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { documentTitle, documentPath } from './lib/portal.mjs';
-import { looksEnglish, shorten, englishHalf } from './lib/titles.mjs';
+import { looksEnglish, shorten, englishHalf, looksVerbStripped } from './lib/titles.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -79,6 +79,16 @@ for (const name of files) {
   if (!looksEnglish(title)) {
     const half = englishHalf(title);
     if (half) title = half;
+  }
+
+  if (looksEnglish(title) && looksVerbStripped(title)) {
+    if (Date.now() > DEADLINE) { outOfTime = true; leftForNextTime += 1; continue; }
+    const reference = record.document;
+    if (reference) {
+      looked += 1;
+      const english = await within(documentTitle(reference));
+      if (english && looksEnglish(english)) title = english;
+    }
   }
 
   if (!looksEnglish(title)) {

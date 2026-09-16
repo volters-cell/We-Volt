@@ -67,7 +67,7 @@ export function englishHalf(title) {
    the Parliament's own boilerplate, repeated identically across hundreds of
    documents, and what follows it is the subject. */
 const WRAPPERS = [
-  /^(?:draft\s+)?report\s+on\s+the\s+proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing|laying\s+down|as\s+regards)\b\s+/i,
+  /^(?:draft\s+)?report\s+on\s+the\s+proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?=\b(?:on|amending|establishing|laying\s+down|as\s+regards)\b)/i,
   // "…on the conclusion, on behalf of the Union, of the Free Trade Agreement
   // between…" — everything up to that last "of" is the machinery of ratifying
   // a treaty, and the treaty is what the vote was about.
@@ -77,12 +77,12 @@ const WRAPPERS = [
   /^motion\s+for\s+a\s+resolution\s+on\s+/i,
   /^(?:draft\s+)?report\s+on\s+/i,
   /^(?:draft\s+)?recommendation\s+on\s+/i,
-  /^proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing)\b\s+/i,
+  /^proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?=\b(?:on|amending|establishing)\b)/i,
   // "RECOMMENDATION FOR SECOND READING on the Council position at first
   // reading with a view to the adoption of a regulation of the European
   // Parliament and of the Council amending…" — 130 characters of reading
   // stages before the subject is named.
-  /^recommendation\s+for\s+second\s+reading\s+on\s+the\s+council\s+position(?:\s+at\s+first\s+reading)?\s+with\s+a\s+view\s+to\s+the\s+adoption\s+of\s+an?\s+[a-z ]*?\b(?:of\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+)?\b(?:on|amending|establishing|laying\s+down|as\s+regards)\b\s+/i
+  /^recommendation\s+for\s+second\s+reading\s+on\s+the\s+council\s+position(?:\s+at\s+first\s+reading)?\s+with\s+a\s+view\s+to\s+the\s+adoption\s+of\s+an?\s+[a-z ]*?\b(?:of\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+)?(?=\b(?:on|amending|establishing|laying\s+down|as\s+regards)\b)/i
 ];
 
 /* The rule a motion is tabled under is procedure and the objection is the
@@ -91,6 +91,18 @@ const WRAPPERS = [
    objections cites a rule number no reader is looking for. The word
    "Objection" stays, because that is what the vote was. */
 const RULE = /^objection\s+pursuant\s+to\s+rule\s+[\d()\sand,;.\/c-]*?:\s*/i;
+
+/* A title that opens with the bare name of a law is one an earlier version of
+   this shortening damaged: it removed "amending" along with the wrapper in
+   front of it, and left the card claiming to be the regulation rather than the
+   vote that changed it. The verb is not recoverable from what is left, so such
+   a title is read again from the document. */
+const VERB_STRIPPED =
+  /^(?:council\s+|commission\s+)?(?:regulation|directive|decision|recommendation)\b\s*(?:\((?:EU|EC|EEC|Euratom)[^)]*\)|No\b|\(\w+\))/i;
+
+export function looksVerbStripped(title) {
+  return VERB_STRIPPED.test(String(title || '').trim());
+}
 
 /* A clause the Parliament appends to nearly every legislative title, naming
    what the act repeals or amends. True, and never the reason anyone is
@@ -102,7 +114,13 @@ export function shorten(title) {
   if (!text) return '';
 
   for (const wrapper of WRAPPERS) {
-    const trimmed = text.replace(wrapper, '');
+    /* The verb the wrapper ends on is kept, because it is the difference
+       between a vote and the law it acts on: "Amending Regulation (EU)
+       2017/2107 laying down…" is what happened, and "Regulation (EU)
+       2017/2107 laying down…" reads as though the card were the regulation
+       itself. Only a bare "on" goes, which carries nothing once the report it
+       belonged to has been removed. */
+    const trimmed = text.replace(wrapper, '').replace(/^on\s+/i, '');
     if (trimmed !== text && trimmed.length > 12) {
       text = trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
       break;
