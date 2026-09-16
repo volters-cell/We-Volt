@@ -37,7 +37,7 @@ import {
 } from './lib/portal.mjs';
 import { sourcesFor, procedureUrl, isPartOfAText, STAMPED } from './lib/ep-sources.mjs';
 import { committeeName, committeeShort } from './lib/committees.mjs';
-import { looksEnglish, shorten } from './lib/titles.mjs';
+import { looksEnglish, shorten, englishHalf } from './lib/titles.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -283,7 +283,12 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
      ahead of a longer list in another language, because this site is written
      in English and the Parliament publishes the same vote both ways. */
   const candidates = [documentSubject, itemTitle, decisionTitle].filter(Boolean);
-  const title = shorten(candidates.find(looksEnglish) || candidates[0] || 'Roll-call vote');
+  /* A candidate published in three languages at once counts as the English
+     one it contains, not as the paragraph of all three. */
+  const chosen = candidates.find(looksEnglish) ||
+    candidates.map(englishHalf).find(Boolean) ||
+    candidates[0] || 'Roll-call vote';
+  const title = shorten(chosen);
   const detail = title !== decisionTitle ? decisionTitle : '';
 
   const structured = english(item && item.structuredLabel);

@@ -34,6 +34,27 @@ export function looksEnglish(text) {
   return ENGLISH.test(value);
 }
 
+/* The Parliament sometimes publishes one title in three languages at once,
+   joined by dashes: "Modification du règlement (UE) nº 575/2013 … - Amending
+   Regulation (EU) No 575/2013 … - Änderung der Verordnung (EU) Nr. 575/2013 …".
+   All three say the same thing and one of them is English, so the English one
+   is the title and the other two are a copy of it in a language this site is
+   not written in.
+
+   Only halves long enough to be a title count, because the same dash also
+   separates a filing code from its rapporteur — "A9-0002/2020 - Geert
+   Bourgeois - Consent procedure" — and "Consent procedure" is English and is
+   not what the vote was about. And only when exactly one of them is English,
+   so nothing is chosen where the test cannot tell. */
+export function englishHalf(title) {
+  const halves = String(title || '').split(/\s+[-–—]\s+/)
+    .map(function (half) { return half.trim(); })
+    .filter(function (half) { return half.length >= 40; });
+  if (halves.length < 2) return '';
+  const english = halves.filter(looksEnglish);
+  return english.length === 1 ? english[0] : '';
+}
+
 /* The wrapper a formal title carries before it says anything. Each of these is
    the Parliament's own boilerplate, repeated identically across hundreds of
    documents, and what follows it is the subject. */
@@ -69,10 +90,6 @@ export function shorten(title) {
   }
   text = text.replace(TAIL, '').trim();
 
-  /* A title that is still a paragraph gets cut at the last sentence boundary
-     that leaves something readable — a semicolon or a dash, where the
-     Parliament has listed several things — rather than mid-word with an
-     ellipsis, which reads as a bug. */
   /* A title that is still a paragraph is usually the Parliament listing
      several things at once, separated by semicolons. The first of them is the
      one the title leads with; the rest can be read on the vote's own page. Cut
