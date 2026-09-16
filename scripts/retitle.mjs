@@ -53,6 +53,30 @@ function codeInTitle(title) {
   return match && documentPath(match[1]) ? match[1] : null;
 }
 
+/* The title the Parliament holds for a reference, and whether that reference
+   is the vote's own document.
+
+   A joint motion is filed under the motion it was built from. The portal has
+   nothing at all for RC-B-9-2020-0166 and a full English title for
+   B-9-2020-0166 — "MOTION FOR A RESOLUTION on the progressive resumption of
+   tourism services" — which is how fifty-six votes came to be looked up, answer
+   in under a second, and stay titled "RC-B9-0166/2020 - Resolution".
+
+   The subject is the same either way: a joint motion is several motions on one
+   subject merged, so the first of them names it. The document is not the same,
+   though — it is one of the parts, not the text that was voted — so a title
+   found this way is taken and the document is not recorded. A link that is
+   nearly right is worse than no link. */
+async function englishTitleFor(reference) {
+  const direct = await within(documentTitle(reference));
+  if (direct) return { title: direct, document: reference };
+
+  const plain = String(reference).replace(/^RC-/, '');
+  if (plain === reference) return { title: null, document: null };
+  const joint = await within(documentTitle(plain));
+  return { title: joint || null, document: null };
+}
+
 /* A lookup that gives up, for the same reason the committee pass has one: a
    label is not worth stalling a run over. */
 function within(promise, budget) {
@@ -109,12 +133,14 @@ for (const name of files) {
       codeInTitle(title);
     if (reference) {
       looked += 1;
-      const english = await within(documentTitle(reference));
-      /* The document exists, since it answered. A vote still titled by its
-         filing reference usually has no document recorded either, and this is
-         the same one — so the vote's page gets a source link it did not have. */
-      if (english && !record.document && codeInTitle(title) === reference) record.document = reference;
-      if (english && looksEnglish(english)) title = english;
+      const found = await englishTitleFor(reference);
+      /* The document answered, so it exists. A vote still titled by its filing
+         reference usually has no document recorded either, and this is the
+         same one — so the vote's page gets a source link it did not have. */
+      if (found.document && !record.document && codeInTitle(title) === found.document) {
+        record.document = found.document;
+      }
+      if (found.title && looksEnglish(found.title)) title = found.title;
     }
     if (!looksEnglish(title)) stillOther += 1;
   }
