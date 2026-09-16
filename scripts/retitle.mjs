@@ -44,6 +44,15 @@ const UNTIL = arg('until');
 const MINUTES = Number(arg('minutes') || 0);
 const DEADLINE = MINUTES > 0 ? Date.now() + MINUTES * 60000 : Infinity;
 
+/* A vote nobody has named is titled by its filing reference:
+   "RC-B9-0102/2020 - Am 4". The reference is a document the Parliament
+   publishes, and that document has a subject — so the code is taken out of the
+   title and read, for the fifty-six votes that have nothing else. */
+function codeInTitle(title) {
+  const match = /([A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4})/.exec(String(title || ''));
+  return match && documentPath(match[1]) ? match[1] : null;
+}
+
 /* A lookup that gives up, for the same reason the committee pass has one: a
    label is not worth stalling a run over. */
 function within(promise, budget) {
@@ -58,6 +67,7 @@ let looked = 0;
 let rewritten = 0;
 let trimmed = 0;
 let stillOther = 0;
+let linked = 0;
 let leftForNextTime = 0;
 let outOfTime = false;
 
@@ -72,6 +82,7 @@ for (const name of files) {
   }
 
   const before = String(record.title || '');
+  const documentBefore = record.document || null;
   let title = before;
 
   /* Free: the English is already in the title, beside the French and the
@@ -94,10 +105,15 @@ for (const name of files) {
   if (!looksEnglish(title)) {
     if (Date.now() > DEADLINE) { outOfTime = true; leftForNextTime += 1; continue; }
     const reference = record.document ||
-      (record.procedure && documentPath(record.procedure.reference) ? record.procedure.reference : null);
+      (record.procedure && documentPath(record.procedure.reference) ? record.procedure.reference : null) ||
+      codeInTitle(title);
     if (reference) {
       looked += 1;
       const english = await within(documentTitle(reference));
+      /* The document exists, since it answered. A vote still titled by its
+         filing reference usually has no document recorded either, and this is
+         the same one — so the vote's page gets a source link it did not have. */
+      if (english && !record.document && codeInTitle(title) === reference) record.document = reference;
       if (english && looksEnglish(english)) title = english;
     }
     if (!looksEnglish(title)) stillOther += 1;
@@ -108,16 +124,19 @@ for (const name of files) {
   if (short && short !== title) trimmed += 1;
   title = short || title;
 
-  if (title === before) continue;
+  const foundDocument = (record.document || null) !== documentBefore;
+  if (title === before && !foundDocument) continue;
+  if (title !== before) rewritten += 1;
   record.title = title;
-  rewritten += 1;
+  if (foundDocument) linked += 1;
   if (looked % 25 === 0 && looked) console.log(`  ${rewritten} rewritten (${record.date})`);
   if (!DRY) await writeFile(file, JSON.stringify(record, null, 2) + '\n', 'utf8');
 }
 
 console.log(`${files.length} records: ${looked} asked the portal for English, ` +
   `${rewritten} rewritten, ${trimmed} had boilerplate removed, ` +
-  `${stillOther} the Parliament publishes in no English at all.`);
+  `${stillOther} the Parliament publishes in no English at all. ` +
+  `${linked} gained a link to the document they are named after.`);
 if (outOfTime) {
   console.log(`Stopped on the clock after ${MINUTES} minutes with ${leftForNextTime} ` +
     'records unread. What is written here is kept; run the pass again to go on.');
