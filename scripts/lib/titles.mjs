@@ -67,7 +67,7 @@ export function englishHalf(title) {
    the Parliament's own boilerplate, repeated identically across hundreds of
    documents, and what follows it is the subject. */
 const WRAPPERS = [
-  /^(?:draft\s+)?report\s+on\s+the\s+proposal\s+for\s+a[n]?\s+[a-z ]*?of\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing|laying down|as regards)\s+/i,
+  /^(?:draft\s+)?report\s+on\s+the\s+proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing|laying\s+down|as\s+regards)\b\s+/i,
   // "…on the conclusion, on behalf of the Union, of the Free Trade Agreement
   // between…" — everything up to that last "of" is the machinery of ratifying
   // a treaty, and the treaty is what the vote was about.
@@ -77,8 +77,20 @@ const WRAPPERS = [
   /^motion\s+for\s+a\s+resolution\s+on\s+/i,
   /^(?:draft\s+)?report\s+on\s+/i,
   /^(?:draft\s+)?recommendation\s+on\s+/i,
-  /^proposal\s+for\s+a[n]?\s+[a-z ]*?of\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing)\s+/i
+  /^proposal\s+for\s+an?\s+[a-z ]*?\bof\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+(?:on|amending|establishing)\b\s+/i,
+  // "RECOMMENDATION FOR SECOND READING on the Council position at first
+  // reading with a view to the adoption of a regulation of the European
+  // Parliament and of the Council amending…" — 130 characters of reading
+  // stages before the subject is named.
+  /^recommendation\s+for\s+second\s+reading\s+on\s+the\s+council\s+position(?:\s+at\s+first\s+reading)?\s+with\s+a\s+view\s+to\s+the\s+adoption\s+of\s+an?\s+[a-z ]*?\b(?:of\s+the\s+european\s+parliament\s+and\s+of\s+the\s+council\s+)?\b(?:on|amending|establishing|laying\s+down|as\s+regards)\b\s+/i
 ];
+
+/* The rule a motion is tabled under is procedure and the objection is the
+   subject: "Objection pursuant to Rule 112(2) and (3): Genetically modified
+   maize MZIR098" is about the maize, and every one of the ninety-odd
+   objections cites a rule number no reader is looking for. The word
+   "Objection" stays, because that is what the vote was. */
+const RULE = /^objection\s+pursuant\s+to\s+rule\s+[\d()\sand,;.\/c-]*?:\s*/i;
 
 /* A clause the Parliament appends to nearly every legislative title, naming
    what the act repeals or amends. True, and never the reason anyone is
@@ -96,6 +108,7 @@ export function shorten(title) {
       break;
     }
   }
+  text = text.replace(RULE, function () { return 'Objection: '; });
   text = text.replace(TAIL, '').trim();
 
   /* A title that is still a paragraph is usually the Parliament listing
