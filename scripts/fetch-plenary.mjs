@@ -33,10 +33,11 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import {
   PORTAL, get, getAll, english, lastSegment, fetchMembers, meetingDate,
-  documentTitle, documentCommittee, isRollCall, ballotsOf, tallyOf
+  documentTitle, documentCommittee, englishOnly, isRollCall, ballotsOf, tallyOf
 } from './lib/portal.mjs';
 import { sourcesFor, procedureUrl, isPartOfAText, STAMPED } from './lib/ep-sources.mjs';
 import { committeeName, committeeShort } from './lib/committees.mjs';
+import { looksEnglish, shorten } from './lib/titles.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const TERM = 10; // 2024–2029
@@ -278,9 +279,11 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
   // decision nor its report. It is the last thing that names a subject, and
   // without it a ninth-term vote is titled by its filing reference.
   const documentSubject = plainTitle(String(subject || '').replace(/\s+/g, ' '));
-  // The subject first. It is the name of the text, which is what this record
-  // now stands for; the item's label and the decision's own come after it.
-  const title = documentSubject || itemTitle || decisionTitle || 'Roll-call vote';
+  /* The subject first, then the item, then the decision — but an English one
+     ahead of a longer list in another language, because this site is written
+     in English and the Parliament publishes the same vote both ways. */
+  const candidates = [documentSubject, itemTitle, decisionTitle].filter(Boolean);
+  const title = shorten(candidates.find(looksEnglish) || candidates[0] || 'Roll-call vote');
   const detail = title !== decisionTitle ? decisionTitle : '';
 
   const structured = english(item && item.structuredLabel);
@@ -498,10 +501,16 @@ export async function sittingVotes(date, everyRollCall) {
      label, and testing for the item rather than for the title left those votes
      titled by their filing code with the answer one request away. */
   for (const vote of votes) {
-    if (vote.subject) continue;
     if (!vote.code) continue;
-    if (english(vote.item && vote.item.activity_label).trim()) continue;
-    vote.subject = plainSubject(await documentTitle(vote.code));
+    // The document is asked for whenever nothing English is in hand yet — not
+    // only when nothing is in hand at all. A vote item's short name is often
+    // French alone while the document carries a full one in English, and
+    // taking the first title rather than the best English one is what put
+    // 1,088 votes on an English site in another language.
+    if (looksEnglish(vote.subject)) continue;
+    if (looksEnglish(englishOnly(vote.item && vote.item.activity_label))) continue;
+    const found = plainSubject(await documentTitle(vote.code));
+    if (found && (!vote.subject || looksEnglish(found))) vote.subject = found;
   }
 
   /* The committee is on the same document as the subject. Filled here for new

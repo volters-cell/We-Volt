@@ -1,0 +1,77 @@
+# Put the English title on every vote that has one.
+#
+# The subject vocabulary the Parliament tags its documents with cannot be read
+# back — it publishes the tags and no names for them — so the label on a card
+# is the committee that wrote the text, which is on the document as creator.
+#
+# A window, because a backfill rewriting the other term at the same time would
+# undo this work and this would undo the backfill's.
+
+name: Put English titles on the votes
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "Earliest vote to retitle (YYYY-MM-DD)"
+        default: "2020-01-01"
+      until:
+        description: "Latest vote to label (YYYY-MM-DD), blank for no limit"
+        default: ""
+
+jobs:
+  topics:
+    outputs:
+      changed: ${{ steps.label.outputs.changed }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Read the English titles
+        id: label
+        run: |
+          set -euo pipefail
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+
+          until=""
+          if [ -n "${{ inputs.until }}" ]; then until="--until ${{ inputs.until }}"; fi
+          node scripts/retitle.mjs --from "${{ inputs.from }}" $until
+
+          node scripts/tag-topics.mjs
+          node scripts/build-index.mjs
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nothing to label."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git add data/
+            git commit -m "Put the English title on votes published in another language
+
+          Read from each document on the Parliament's open data portal, by
+          .github/workflows/retitle.yml. Nothing is translated: a vote whose
+          document carries no English keeps what the Parliament published."
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+  # A push made with the built-in token does not trigger other workflows, so the
+  # labels would otherwise sit in the repository and never reach the site. This
+  # is exactly how the chips were committed twice and shown never.
+  publish:
+    needs: topics
+    if: needs.topics.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

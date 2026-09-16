@@ -277,6 +277,21 @@ export function documentPath(reference) {
   return match ? `${match[1]}-${match[2]}-${match[4]}-${match[3]}` : null;
 }
 
+/* English if the portal has it, and only then anything else.
+
+   english() falls through to French and then to whatever is first, which is
+   right for a label that must say something and wrong for choosing between two
+   published titles. A vote item often carries its short name in French alone
+   while the document carries a full one in English; taking the first source
+   rather than the best English one is how 1,088 votes came to be titled in a
+   language this site is not written in. */
+export function englishOnly(value) {
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  const found = value.en;
+  return typeof found === 'string' ? found.trim() : '';
+}
+
 export async function documentTitle(reference) {
   const pathname = documentPath(reference);
   if (!pathname) return null;
@@ -286,7 +301,7 @@ export async function documentTitle(reference) {
   try {
     const answer = await get(`/documents/${pathname}`, {});
     const row = (answer && answer.data && answer.data[0]) || null;
-    title = (row && english(row.title_dcterms)) || null;
+    title = (row && (englishOnly(row.title_dcterms) || english(row.title_dcterms))) || null;
   } catch (error) {
     title = null;
   }

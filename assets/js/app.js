@@ -819,7 +819,8 @@
           '<span class="badge badge-' + esc(item.body) + '">' + esc(shortBody(item.body)) + '</span>' +
           '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
         '</span>' +
-        '<span class="card-title">' + esc(item.title) + '</span>' +
+        '<span class="card-title" title="' + esc(item.title) + '">' +
+          esc(item.title) + '</span>' +
         committeeChip(item) +
         '<span class="card-foot">' +
           '<span class="result result-' + esc(item.result) + '">' +
