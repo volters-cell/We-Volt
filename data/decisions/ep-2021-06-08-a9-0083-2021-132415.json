@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "ETIAS consequential amendments: ECRIS-TCN",
+  "title": "Regulations (EU) 2019/816 and (EU) 2019/818 as regards the establishment of the conditions for accessing other EU information systems for the purposes of the European Travel Information and Authorisation System",
   "subtitle": "ETIAS consequential amendments: ECRIS-TCN - A9-0083/2021 - Jeroen Lenaers - Commission proposal — vote in plenary",
   "date": "2021-06-08",
   "voteRule": "simple-majority",

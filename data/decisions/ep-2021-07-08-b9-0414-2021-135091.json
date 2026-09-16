@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Composition numérique des commissions spéciales et de la commission d’enquête",
+  "title": "PROPOSAL FOR A DECISION on the numerical strength of the special committees and the committee of inquiry",
   "subtitle": "Composition numérique des commissions spéciales et de la commission d’enquête – B9-0414/2021 – Proposition de décision — vote in plenary",
   "date": "2021-07-08",
   "voteRule": "simple-majority",
@@ -2798,7 +2798,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Digital and tech"
-  ]
+  "topics": []
 }

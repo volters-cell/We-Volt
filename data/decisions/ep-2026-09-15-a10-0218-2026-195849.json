@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Mise en œuvre de la recommandation du Conseil du 30 octobre 2020 relative à «Un pont vers l’emploi – Renforcer la garantie pour la jeunesse» et remplaçant la recommandation du Conseil du 22 avril 2013 sur l’établissement d’une garantie pour la jeunesse - Implementation of the Council Recommendation on a Bridge to Jobs – Reinforcing the Youth Guarantee - Umsetzung der Empfehlung des Rates zu dem Thema „Eine Brücke ins Arbeitsleben – Stärkung der Jugendgarantie“",
+  "title": "The implementation of the Council Recommendation of 30 October 2020 on A Bridge to Jobs",
   "subtitle": "A10-0218/2026 - Hristo Petrov - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2026-09-15",
   "voteRule": "simple-majority",
@@ -2724,7 +2724,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Jobs and workers"
-  ]
+  "topics": []
 }

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "European Climate Law",
+  "title": "The framework for achieving climate neutrality and amending Regulation (EU) 2018/1999 (European Climate Law)",
   "subtitle": "European Climate Law - A9-0162/2020 - Jytte Guteland - Am 178 — vote in plenary",
   "date": "2021-06-24",
   "voteRule": "simple-majority",

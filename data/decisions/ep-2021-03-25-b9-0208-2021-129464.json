@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Application du règlement (UE, Euratom) 2020/2092, le mécanisme de conditionnalité liée à l'état de droit - Application of Regulation (EC) 2020/2092, the Rule of Law conditionality mechanism - Anwendung der Verordnung (EU, Euratom) 2020/2092 (an die Rechtstaatlichkeit geknüpfter Konditionalitätsmechanismus)",
+  "title": "The application of Regulation (EU, Euratom) 2020/2092, the rule-of-law conditionality mechanism",
   "subtitle": "Application du règlement (UE, Euratom) 2020/2092, le mécanisme de conditionnalité liée à l'état de droit - Application of Regulation (EC) 2020/2092, the Rule of Law conditionality mechanism - Anwendung der Verordnung (EU, Euratom) 2020/2092 (an die Rechtstaatlichkeit geknüpfter Konditionalitätsmechanismus) - B9-0208/2021 - Motion for a resolution — vote in plenary",
   "date": "2021-03-25",
   "voteRule": "simple-majority",

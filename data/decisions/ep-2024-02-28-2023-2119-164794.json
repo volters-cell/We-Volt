@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Mise en œuvre de la politique de sécurité et de défense commune - rapport annuel 2023 - Implementation of the common security and defence policy – annual report 2023 - Umsetzung der Gemeinsamen Sicherheits- und Verteidigungspolitik – Jahresbericht 2023",
+  "title": "REPORT Implementation of the common security and defence policy – annual report 2023",
   "subtitle": "A9-0403/2023 - Sven Mikser - Proposition de résolution (ensemble du texte) — vote in plenary",
   "date": "2024-02-28",
   "voteRule": "simple-majority",

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Système mondial de collecte des données relatives à la consommation de fuel-oil des navires",
+  "title": "Regulation (EU) 2015/757 in order to take appropriate account of the global data collection system for ship fuel oil consumption data",
   "subtitle": "A9-0144/2020 - Jutta Paulus - Am 34 — vote in plenary",
   "date": "2020-09-15",
   "voteRule": "simple-majority",
@@ -2826,7 +2826,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Digital and tech"
-  ]
+  "topics": []
 }

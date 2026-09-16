@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Amélioration de la coopération entre les services publics de l'emploi (SPE)",
+  "title": "Decision No 573/2014/EU on enhanced cooperation between Public Employment Services (PES)",
   "subtitle": "A9-0128/2020 - Manuel Pizarro - Am 28 — vote in plenary",
   "date": "2020-11-11",
   "voteRule": "simple-majority",

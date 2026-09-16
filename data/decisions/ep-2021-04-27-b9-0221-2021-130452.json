@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Protection des sols",
+  "title": "Soil protection",
   "subtitle": "B9-0221/2021 - § 55/1 — vote in plenary",
   "date": "2021-04-27",
   "voteRule": "simple-majority",
@@ -2837,5 +2837,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Environment"
+  ]
 }

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Intelligent Road Transport Systems",
+  "title": "Directive 2010/40/EU on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport",
   "subtitle": "Intelligent Road Transport Systems – A9-0265/2022 – Rovana Plumb – Provisional agreement – Am 63 — vote in plenary",
   "date": "2023-10-03",
   "voteRule": "simple-majority",

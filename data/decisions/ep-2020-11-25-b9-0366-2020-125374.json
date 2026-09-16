@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Objection formulée au titre de l'article 112: Carbendazime en vue de son utilisation dans certains produits biocides",
+  "title": "The draft Commission implementing regulation approving carbendazim as an existing active substance for use in biocidal products of product-types 7 and 10",
   "subtitle": "B9-0366/2020 - Resolution — vote in plenary",
   "date": "2020-11-25",
   "voteRule": "simple-majority",

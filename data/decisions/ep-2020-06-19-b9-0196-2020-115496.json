@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Motion FOR A RESOLUTION on the anti-racism protests following the death of George Floyd",
+  "title": "The anti-racism protests following the death of George Floyd",
   "subtitle": "B9-0196/2020/REV1 - Resolution — vote in plenary",
   "date": "2020-06-19",
   "voteRule": "simple-majority",

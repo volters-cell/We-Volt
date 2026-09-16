@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Policy implications of the development of virtual worlds – civil, company, commercial and intellectual property law issues",
+  "title": "Policy implications of the development of virtual worlds",
   "subtitle": "A9-0442/2023 – Axel Voss, Ibán García del Blanco – Motion for a resolution — vote in plenary",
   "date": "2024-01-17",
   "voteRule": "simple-majority",
@@ -2580,7 +2580,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Trade"
-  ]
+  "topics": []
 }

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a regulation of the European Parliament and of the Council on standards for the qualification of third-country nationals or stateless persons as beneficiaries of international protection, for a uniform status for refugees or for persons eligible for subsidiary protection and for the content of the protection granted and amending Council Directive 2003/109/EC of 25 November 2003 concerning the status of third-country nationals who are long-term residents",
+  "title": "Standards for the qualification of third-country nationals or stateless persons as beneficiaries of international protection, for a uniform status for refugees or for persons eligible for subsidiary protection and for the content of the protection granted and amending Council Directive 2003/109/EC of 25 November 2003 concerning the status of third-country nationals who are long-term residents",
   "subtitle": "A8-0245/2017 – Matjaž Nemec – Request to vote on the amendments to the draft legislative act — vote in plenary",
   "date": "2024-04-10",
   "voteRule": "simple-majority",

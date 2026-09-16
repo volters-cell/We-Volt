@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Distortive foreign subsidies",
+  "title": "Foreign subsidies distorting the internal market",
   "subtitle": "Distortive foreign subsidies - A9-0135/2022 - Christophe Hansen - Provisional agreement - Am 96 — vote in plenary",
   "date": "2022-11-10",
   "voteRule": "simple-majority",
@@ -2499,5 +2499,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Single market"
+  ]
 }

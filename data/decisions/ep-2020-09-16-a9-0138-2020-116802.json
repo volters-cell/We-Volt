@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Constatation d’un risque clair de violation grave par la République de Pologne de l’état de droit",
+  "title": "INTERIM REPORT on the proposal for a Council decision on the determination of a clear risk of a serious breach by the Republic of Poland of the rule of law",
   "subtitle": "A9-0138/2020 - Juan Fernando López Aguilar - Block B — vote in plenary",
   "date": "2020-09-16",
   "voteRule": "simple-majority",
@@ -2715,6 +2715,7 @@
   ],
   "countries": {},
   "topics": [
-    "Poland"
+    "Poland",
+    "Rule of law"
   ]
 }

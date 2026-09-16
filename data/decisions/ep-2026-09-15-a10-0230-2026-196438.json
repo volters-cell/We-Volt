@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Réserve de stabilité du marché pour le système d’échange de quotas d’émission de l’UE (SEQE-UE): cessation de l’invalidation de quotas - Market stability reserve for the EU Emissions Trading System (EU ETS): ceasing the invalidation of allowances - Marktstabilitätsreserve für das Emissionshandelssystem der EU (EU-EHS): Gültigkeitsverfall von Zertifikaten",
+  "title": "Decision (EU) 2015/1814 as regards ceasing the invalidation of allowances in the market stability reserve",
   "subtitle": "A10-0230/2026 - Pierfrancesco Maran - Proposition de la Commission — vote in plenary",
   "date": "2026-09-15",
   "voteRule": "simple-majority",
@@ -2716,7 +2716,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Climate"
-  ]
+  "topics": []
 }

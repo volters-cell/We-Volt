@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Cross-border payments in the Union (codification)",
+  "title": "Cross-border payments in the Union",
   "subtitle": "Cross-border payments in the Union (codification) - A9-0202/2021 - Karen Melchior - Single vote — vote in plenary",
   "date": "2021-06-23",
   "voteRule": "simple-majority",

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Digital Finance: Amending Directive regarding Digital Operational Resilience requirements",
+  "title": "Directives 2006/43/EC, 2009/65/EC, 2009/138/EU, 2011/61/EU, EU/2013/36, 2014/65/EU, (EU) 2015/2366 and EU/2016/2341",
   "subtitle": "Digital Finance: Amending Directive regarding Digital Operational Resilience requirements - A9-0340/2021 - Mikuláš Peksa - Provisional agreement - Am 2 — vote in plenary",
   "date": "2022-11-10",
   "voteRule": "simple-majority",
@@ -2500,7 +2500,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Digital and tech"
-  ]
+  "topics": []
 }

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a directive of the European Parliament and of the Council amending Council Directives 2001/110/EC relating to honey, 2001/112/EC relating to fruit juices and certain similar products intended for human consumption, 2001/113/EC relating to fruit jams, jellies and marmalades and sweetened chestnut purée intended for human consumption, and 2001/114/EC relating to certain partly or wholly dehydrated preserved milk for human consumption",
+  "title": "Council Directives 2001/110/EC relating to honey, 2001/112/EC relating to fruit juices and certain similar products intended for human consumption, 2001/113/EC relating to fruit jams, jellies and marmalades and sweetened chestnut purée intended for human consumption, and 2001/114/EC relating to certain partly or wholly dehydrated preserved milk for human consumption",
   "subtitle": "A9-0385/2023 – Alexander Bernhuber – Provisional agreement – Am 68 — vote in plenary",
   "date": "2024-04-10",
   "voteRule": "simple-majority",

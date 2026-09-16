@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Les Balkans occidentaux à la suite du sommet de 2020",
+  "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on the Western Balkans, following the 2020 summit",
   "subtitle": "A9-0091/2020 - Resolution — vote in plenary",
   "date": "2020-06-19",
   "voteRule": "simple-majority",

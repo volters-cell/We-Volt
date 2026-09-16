@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Instauration de limites de capacité pour le cabillaud de la Baltique orientale, collecte de données et mesures de contrôle en mer Baltique, et arrêt définitif pour les flottes pêchant le cabillaud de la Baltique orientale",
+  "title": "Regulation (EU) 2016/1139 as regards the introduction of capacity limits for Eastern Baltic cod, data collection and control measures in the Baltic Sea, and Regulation (EU) No 508/2014 as regards permanent cessation for fleets fishing for Eastern Baltic cod",
   "subtitle": "A9-0093/2020 - Niclas Herbst - Am 20 — vote in plenary",
   "date": "2020-11-11",
   "voteRule": "simple-majority",
@@ -2791,6 +2791,6 @@
   ],
   "countries": {},
   "topics": [
-    "Digital and tech"
+    "Fisheries"
   ]
 }

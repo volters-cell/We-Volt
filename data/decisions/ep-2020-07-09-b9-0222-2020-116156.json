@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Une stratégie pour la durabilité relative aux produits chimiques",
+  "title": "The Chemicals Strategy for Sustainability",
   "subtitle": "B9-0222/2020 - § 23/2 — vote in plenary",
   "date": "2020-07-09",
   "voteRule": "simple-majority",
@@ -2801,5 +2801,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Environment"
+  ]
 }

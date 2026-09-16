@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Conclusion d'un accord en cours de négociation entre l’Union européenne et la Nouvelle-Zélande sur l’échange de données à caractère personnel pour lutter contre les formes graves de criminalité et le terrorisme",
+  "title": "The European Parliament recommendation to the Council and the Commission concerning the conclusion of an agreement, under negotiation, between the European Union and New Zealand on the exchange of personal data between the European Union Agency for Law Enforcement Cooperation (Europol) and the New Zealand authorities competent for fighting serious crime and terrorism",
   "subtitle": "A9-0131/2020 - Annalisa Tardino - Recital F/1 — vote in plenary",
   "date": "2020-07-09",
   "voteRule": "simple-majority",
@@ -2807,6 +2807,6 @@
   ],
   "countries": {},
   "topics": [
-    "Digital and tech"
+    "Justice and policing"
   ]
 }

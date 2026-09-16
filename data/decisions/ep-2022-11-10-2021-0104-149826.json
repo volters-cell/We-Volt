@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Corporate Sustainability Reporting Directive",
+  "title": "Directive 2013/34/EU, Directive 2004/109/EC, Directive 2006/43/EC and Regulation (EU) No 537/2014, as regards corporate sustainability reporting",
   "subtitle": "Corporate Sustainability Reporting Directive - A9-0059/2022 - Pascal Durand - Provisional agreement - Am 175 — vote in plenary",
   "date": "2022-11-10",
   "voteRule": "simple-majority",

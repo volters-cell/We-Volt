@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a directive of the European Parliament and of the Council on standards for equality bodies in the field of equal treatment and equal opportunities between women and men in matters of employment and occupation, and deleting Article 20 of Directive 2006/54/EC and Article 11 of Directive 2010/41/EU",
+  "title": "Standards for equality bodies in the field of equal treatment and equal opportunities between women and men in matters of employment and occupation, and deleting Article 20 of Directive 2006/54/EC and Article 11 of Directive 2010/41/EU",
   "subtitle": "A9-0354/2023 – Sirpa Pietikäinen, Marc Angel – Provisional agreement – Am 120 — vote in plenary",
   "date": "2024-04-10",
   "voteRule": "simple-majority",

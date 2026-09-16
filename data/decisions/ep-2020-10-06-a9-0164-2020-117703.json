@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Équivalence des inspections sur pied des cultures productrices de semences de céréales effectuées en Ukraine et équivalence des semences de céréales produites en Ukraine",
+  "title": "Council Decision 2003/17/EC as regards the equivalence of field inspections carried out in Ukraine on cereal seed-producing crops and on the equivalence of cereal seed produced in Ukraine",
   "subtitle": "A9-0164/2020 - Veronika Vrecionová - Am 1 — vote in plenary",
   "date": "2020-10-06",
   "voteRule": "simple-majority",
@@ -2823,7 +2823,6 @@
   ],
   "countries": {},
   "topics": [
-    "Ukraine",
-    "Education and culture"
+    "Ukraine"
   ]
 }

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Poursuite de la mise en place de l’union des marchés des capitaux: améliorer l'accès au financement sur le marché des capitaux en particulier pour les PME et accroître la participation des investisseurs de détail",
+  "title": "Further development of the Capital Markets Union (CMU): improving access to capital market finance, in particular by SMEs, and further enabling retail investor participation",
   "subtitle": "A9-0155/2020 - Isabel Benjumea Benjumea - Considérant R — vote in plenary",
   "date": "2020-10-07",
   "voteRule": "simple-majority",
@@ -2829,5 +2829,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Economy"
+  ]
 }

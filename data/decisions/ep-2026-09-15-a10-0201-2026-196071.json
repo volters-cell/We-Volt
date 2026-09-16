@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Mécanisme d’ajustement carbone aux frontières: extension de son champ d’application aux marchandises en aval et renforcement des mesures anticontournement - Carbon Border Adjustment Mechanism: extension of its scope to downstream goods and anti-circumvention measures - CO2-Grenzausgleichssystem: Ausweitung des Anwendungsbereichs auf nachgelagerte Waren sowie auf Maßnahmen zur Bekämpfung von Umgehungspraktiken",
+  "title": "Regulation (EU) 2023/956 as regards the extension of its scope to downstream goods and anti-circumvention measures",
   "subtitle": "A10-0201/2026 - Mohammed Chahim - Proposition de la Commission — vote in plenary",
   "date": "2026-09-15",
   "voteRule": "simple-majority",
@@ -2744,7 +2744,5 @@
     }
   ],
   "countries": {},
-  "topics": [
-    "Climate"
-  ]
+  "topics": []
 }

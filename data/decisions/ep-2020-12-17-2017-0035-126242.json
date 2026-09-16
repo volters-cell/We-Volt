@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) No 182/2011 laying down the rules and general principles concerning mechanisms for control by Member States of the Commission’s exercise of implementing powers",
+  "title": "Regulation (EU) No 182/2011 laying down the rules and general principles concerning mechanisms for control by Member States of the Commission’s exercise of implementing powers",
   "subtitle": "A9-0187/2020 - József Szájer - Referral (Rule 59(4)) — vote in plenary",
   "date": "2020-12-17",
   "voteRule": "simple-majority",

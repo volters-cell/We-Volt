@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Trans-European transport network",
+  "title": "Regulation of the European Parliament and of the Council Guidelines for the development of the trans-European transport network, amending Regulation (EU) 2021/1153 and Regulation (EU) No 913/2010 and repealing Regulation (EU) 1315/2013",
   "subtitle": "A9-0147/2023 - Barbara Thaler, Dominique Riquet - Accord provisoire - Am 549 — vote in plenary",
   "date": "2024-04-24",
   "voteRule": "simple-majority",

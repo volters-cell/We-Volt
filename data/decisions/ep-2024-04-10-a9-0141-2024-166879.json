@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report on the proposal for a regulation of the European Parliament and of the Council laying down Union procedures for the authorisation and supervision of medicinal products for human use and establishing rules governing the European Medicines Agency, amending Regulation (EC) No 1394/2007 and Regulation (EU) No 536/2014 and repealing Regulation (EC) No 726/2004, Regulation (EC) No 141/2000 and Regulation (EC) No 1901/2006",
+  "title": "Union procedures for the authorisation and supervision of medicinal products for human use and establishing rules governing the European Medicines Agency, amending Regulation (EC) No 1394/2007 and Regulation (EU) No 536/2014 and repealing Regulation (EC) No 726/2004, Regulation (EC) No 141/2000 and Regulation (EC) No 1901/2006",
   "subtitle": "A9-0141/2024 – Tiemo Wölken – Commission proposal — vote in plenary",
   "date": "2024-04-10",
   "voteRule": "simple-majority",

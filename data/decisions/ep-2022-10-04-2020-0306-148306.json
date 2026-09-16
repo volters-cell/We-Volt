@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "EU Customs Single Window",
+  "title": "The European Union Single Window Environment for Customs and amending Regulation (EU) No 952/2013",
   "subtitle": "EU Customs Single Window - A9-0279/2021 - Ivan Štefanec - Provisional Agreement - Am 88 — vote in plenary",
   "date": "2022-10-04",
   "voteRule": "simple-majority",
@@ -2545,6 +2545,6 @@
   ],
   "countries": {},
   "topics": [
-    "Trade"
+    "Environment"
   ]
 }
