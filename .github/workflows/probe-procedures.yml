@@ -1,0 +1,25 @@
+# Is there any English left for the votes still titled in French?
+#
+# The retitle pass has taken the archive from 1,089 foreign titles to 492 and
+# stopped: it only knows how to read a document, and these votes have no
+# document recorded. Most carry a procedure reference instead. This asks
+# whether the portal answers for a procedure, and whether what it answers with
+# names a document or a title in English.
+#
+# Writes nothing.
+
+name: Probe procedures
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/probe-procedures.mjs
