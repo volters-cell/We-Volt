@@ -18,6 +18,9 @@ on:
       until:
         description: "Latest vote to label (YYYY-MM-DD), blank for no limit"
         default: ""
+      minutes:
+        description: "Stop reading after this many minutes and commit what was read"
+        default: "80"
 
 jobs:
   topics:
@@ -42,7 +45,8 @@ jobs:
 
           until=""
           if [ -n "${{ inputs.until }}" ]; then until="--until ${{ inputs.until }}"; fi
-          node scripts/retitle.mjs --from "${{ inputs.from }}" $until
+          node scripts/retitle.mjs --from "${{ inputs.from }}" $until \
+            --minutes "${{ inputs.minutes }}"
 
           node scripts/tag-topics.mjs
           node scripts/build-index.mjs
@@ -59,7 +63,10 @@ jobs:
 
           Read from each document on the Parliament's open data portal, by
           .github/workflows/retitle.yml. Nothing is translated: a vote whose
-          document carries no English keeps what the Parliament published."
+          document carries no English keeps what the Parliament published.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          Claude-Session: https://claude.ai/code/session_01Q2GR9PWbYZc6kZnv6W9Gx7"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
