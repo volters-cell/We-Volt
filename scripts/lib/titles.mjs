@@ -16,13 +16,29 @@
  * about this one.
  */
 
-/* Enough English to serve as an English title. A short label of one or two
-   words — "InvestEU", "Erasmus+" — has no grammar to test, so the test is for
-   words that only English uses, and the absence of words only French and
-   German use. It is a heuristic and it is used only to choose between two
-   published titles, never to change one. */
+/* Enough English to serve as an English title.
+
+   The test used to be "does it contain an English function word", and it
+   failed on the titles that need it most: "A Social Climate Fund", "Russian
+   aggression against Ukraine" and "Banking Union – annual report 2019" carry
+   no "the", "of" or "on", and were all read as foreign. So the question is
+   now the other way round — is there any evidence this is not English —
+   because a title with no French or German in it is English, and the ones
+   with no evidence either way are short noun phrases that read the same in
+   no other language.
+
+   Two things still count as no title at all. A filing reference —
+   "RC-B9-0280/2020 - Resolution" — is what a vote is called before anyone has
+   said what it was about, and "Resolution" being an English word does not make
+   it a subject. And a word carrying a French or German accent, where nothing
+   English appears beside it, is the Parliament writing in French or German. */
 const ENGLISH = /\b(the|of|on|and|for|to|in|with|from|by|as|its|European Union)\b/i;
 const NOT_ENGLISH = /\b(de la|du|des|les|le|la|aux|pour|sur|dans|par|une|et|en|ainsi|afin|concernant|relatif|projet|décharge|règlement|accord|rapport|résolution|mise en œuvre|der|die|das|und|für|über|von|zur|Antrag|Fraktion)\b/i;
+const ACCENTED = /[éèêëàâîïôöûüçäÄÖÜßÉÈÊÀÂÎÔÛÇ]/;
+/* "RC-B9-0280/2020", "C9-0161/2020", "A9-0088/202" — the Parliament's filing
+   reference, at the head of a label that names a procedure rather than a
+   subject. */
+const FILING = /^(?:RC-)?[A-Z]{1,3}\d?-\d{3,4}\/\d{3,4}\b/;
 
 export function looksEnglish(text) {
   const value = String(text || '').trim();
@@ -30,11 +46,11 @@ export function looksEnglish(text) {
   // "(" is a title the Parliament published and it is not English, or any
   // other language. Anything with no word in it has to be looked up again.
   if (!/[\p{L}]{3}/u.test(value)) return false;
+  if (FILING.test(value)) return false;
   if (NOT_ENGLISH.test(value)) return false;
-  // Two words or fewer: no grammar to judge, so accept it rather than throw
-  // away a perfectly good "InvestEU".
-  if (value.split(/\s+/).length <= 2) return true;
-  return ENGLISH.test(value);
+  if (ENGLISH.test(value)) return true;
+  if (ACCENTED.test(value)) return false;
+  return true;
 }
 
 /* The Parliament sometimes publishes one title in three languages at once,
