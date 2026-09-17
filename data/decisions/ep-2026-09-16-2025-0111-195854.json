@@ -21,11 +21,7 @@
     "result": "adopted",
     "headline": "Adopted — 640 in favour, 5 against, 26 abstained. Result derived from the totals."
   },
-  "committee": {
-    "code": "ECON",
-    "label": "Economic and Monetary Affairs",
-    "short": "Economy"
-  },
+  "committee": null,
   "rollCalls": 1,
   "ballots": [
     [

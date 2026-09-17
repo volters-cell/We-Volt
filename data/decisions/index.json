@@ -293,11 +293,7 @@
         "United Kingdom",
         "Single market"
       ],
-      "committee": {
-        "code": "ECON",
-        "label": "Economic and Monetary Affairs",
-        "short": "Economy"
-      },
+      "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
