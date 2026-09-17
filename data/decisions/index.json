@@ -50,7 +50,7 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 768,
+      "votes": 770,
       "from": "2024-07-17",
       "until": "2026-09-17",
       "file": null
@@ -306,6 +306,30 @@
       "file": "data/decisions/ep-2026-09-16-2025-0111-195854.json"
     },
     {
+      "id": "ep-2026-09-16-2025-0172-196114",
+      "sourceId": 196114,
+      "title": "Acceleration of permit-granting for defence readiness projects (Omnibus V)",
+      "subtitle": "A10-0271/2025 – Lucia Yar, Henrik Dahl – Provisional agreement – Am 65 — vote in plenary",
+      "date": "2026-09-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Defence and security"
+      ],
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 667,
+      "keywords": "acceleration of permit-granting for defence readiness projects (omnibus v) a10-0271/2025 – lucia yar, henrik dahl – provisional agreement – am 65 — vote in plenary 2025/0172",
+      "file": "data/decisions/ep-2026-09-16-2025-0172-196114.json"
+    },
+    {
       "id": "ep-2026-09-16-2025-0172-196482",
       "sourceId": 196482,
       "title": "Acceleration of permit-granting for defence readiness projects (Omnibus V)",
@@ -352,6 +376,30 @@
       "mepCount": 667,
       "keywords": "defence readiness and facilitating defence investments and conditions for the defence industry (omnibus v) a10-0273/2025 – sven mikser, pierfrancesco maran, aura salla – provisional agreement – am 3 — vote in plenary 2025/0176",
       "file": "data/decisions/ep-2026-09-16-2025-0176-196161.json"
+    },
+    {
+      "id": "ep-2026-09-16-2025-0176-196519",
+      "sourceId": 196519,
+      "title": "Defence readiness and facilitating defence investments and conditions for the defence industry (Omnibus V)",
+      "subtitle": "A10-0273/2025 – Sven Mikser, Pierfrancesco Maran, Aura Salla – Proposal for rejection – Am 2 — vote in plenary",
+      "date": "2026-09-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of votes cast",
+      "topics": [
+        "Defence and security"
+      ],
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "mepCount": 662,
+      "keywords": "defence readiness and facilitating defence investments and conditions for the defence industry (omnibus v) a10-0273/2025 – sven mikser, pierfrancesco maran, aura salla – proposal for rejection – am 2 — vote in plenary 2025/0176",
+      "file": "data/decisions/ep-2026-09-16-2025-0176-196519.json"
     },
     {
       "id": "ep-2026-09-16-2025-0177-196116",
