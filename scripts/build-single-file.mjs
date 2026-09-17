@@ -86,7 +86,14 @@ let body = html.slice(html.indexOf('<body>') + '<body>'.length, html.lastIndexOf
 const names = scriptsOf(body);
 body = body
   .replace(/href="(docs\/[^"]+)"/g, `href="${REPO}/$1"`)
-  .replace(/\s*<script src="assets\/js\/[^"]+"><\/script>/g, '');
+  .replace(/\s*<script src="assets\/js\/[^"]+"><\/script>/g, '')
+  /* The fonts live beside the site and this file has no beside — it is one
+     file, opened by double-clicking, often with no network at all. Inlining
+     744KB of woff2 as data URIs to keep two typefaces is not a trade worth
+     making, so the bundle uses the system's own and asks nobody for anything.
+     Which is also the point: a copy handed to a reviewer should not phone
+     Google either. */
+  .replace(/\s*<link rel="stylesheet" href="assets\/fonts\/fonts\.css">/g, '');
 
 const css = await read('assets/css/style.css');
 const scripts = await Promise.all(names.map((name) => read(`assets/js/${name}`)));

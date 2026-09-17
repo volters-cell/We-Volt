@@ -84,8 +84,7 @@ function countryPositions(record) {
 }
 
 const html = `<!doctype html><html><head><meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
   * { margin: 0; box-sizing: border-box; }
   /* Light, like the site and like the story card. A preview card is a small
