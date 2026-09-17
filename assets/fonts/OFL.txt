@@ -1,0 +1,12 @@
+IBM Plex Sans — Copyright 2017 IBM Corp.
+Source Serif 4 — Copyright 2014-2021 Adobe (http://www.adobe.com/).
+
+Both families are licensed under the SIL Open Font License, Version 1.1.
+The licence permits use, study, modification and redistribution, including
+serving the fonts from your own site, provided the fonts are not sold on
+their own and any modified version is not distributed under the original
+reserved names.
+
+Full text: https://openfontlicense.org/open-font-license-official-text/
+Upstream:  https://github.com/IBM/plex
+           https://github.com/adobe-fonts/source-serif
