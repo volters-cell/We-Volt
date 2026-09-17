@@ -1,0 +1,53 @@
+# Bring the fonts into this repository.
+#
+# Every page used to ask Google for its stylesheet and its font files, which
+# hands a reader's IP address, browser and current page to a third party — on
+# a site whose About page says the records are mirrored on EU infrastructure.
+#
+# IBM Plex Sans and Source Serif 4 are both under the SIL Open Font License,
+# so they can be served from here instead. This fetches them once. It needs to
+# run on Actions rather than anywhere else because fonts.gstatic.com is not
+# reachable from the sandbox this project is developed in.
+#
+# Run it again only to pick up a new weight or a font revision.
+
+name: Self-host the fonts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fonts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch the fonts
+        run: node scripts/fetch-fonts.mjs
+
+      - name: Commit them
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain assets/fonts/)" ]; then
+            echo "The fonts are already current."
+            exit 0
+          fi
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+          git add assets/fonts/
+          git commit -m "Fetch IBM Plex Sans and Source Serif 4 to serve from this site
+
+          Written by scripts/fetch-fonts.mjs, run from
+          .github/workflows/fonts.yml. Both families are under the SIL Open
+          Font License; see assets/fonts/OFL.txt.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          Claude-Session: https://claude.ai/code/session_01Q2GR9PWbYZc6kZnv6W9Gx7"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
