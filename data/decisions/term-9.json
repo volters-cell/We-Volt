@@ -61596,7 +61596,11 @@
       "topics": [
         "The EU budget"
       ],
-      "committee": null,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",

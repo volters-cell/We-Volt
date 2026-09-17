@@ -21,7 +21,11 @@
     "result": "adopted",
     "headline": "Adopted — 516 in favour, 23 against, 17 abstained. Result derived from the totals."
   },
-  "committee": null,
+  "committee": {
+    "code": "EMPL",
+    "label": "Employment and Social Affairs",
+    "short": "Employment"
+  },
   "rollCalls": 1,
   "ballots": [
     [
