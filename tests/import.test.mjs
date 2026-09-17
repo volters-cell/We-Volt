@@ -18,6 +18,7 @@ import {
 } from '../scripts/fetch-plenary.mjs';
 import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.mjs';
 import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
+import { shorten } from '../scripts/lib/titles.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -217,5 +218,19 @@ assert.equal(sittingOn('2026-09-19', []).sitting, true, 'no calendar means yes')
 assert.equal(sittingOn('2026-09-19', null).sitting, true, 'an unreadable calendar means yes');
 assert.equal(dayAfter('2026-12-31'), '2027-01-01', 'the grace day crosses the year');
 assert.equal(dayAfter('2028-02-28'), '2028-02-29', 'and the leap day');
+
+/* A card is read by running down it, so a headline has to start with its
+   subject. These are the openings that stood in the way of that. */
+assert.equal(shorten('Council decision on guidelines for the employment policies of the Member States'),
+  'Guidelines for the employment policies of the Member States', 'the instrument and its preposition go');
+assert.equal(shorten('Council regulation establishing the Instrument for Nuclear Safety Cooperation'),
+  'Establishing the Instrument for Nuclear Safety Cooperation', 'the instrument goes, the verb stays');
+assert.equal(shorten('Regulation amending the Multiannual financial framework 2014-2020'),
+  'Amending the Multiannual financial framework 2014-2020', 'a vote amending a thing is not the thing');
+assert.equal(shorten('The progressive resumption of tourism services in the EU'),
+  'Progressive resumption of tourism services in the EU', 'no headline opens on "The"');
+assert.equal(shorten('Amending Regulation (EU) 2017/2107 laying down management measures'),
+  'Amending Regulation (EU) 2017/2107 laying down management measures', 'a good title is left alone');
+assert.equal(shorten('The EU'), 'The EU', 'and a title with nothing to spare keeps its article');
 
 console.log('import.test.mjs: ok');

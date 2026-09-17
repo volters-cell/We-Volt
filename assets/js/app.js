@@ -810,25 +810,35 @@
     });
   }
 
+  /* Title first, then a single line of labels.
+
+     It used to open on a badge reading PARLIAMENT, which is true of all 3,586
+     votes here and so tells a reader nothing, in the loudest style on the
+     card; and it printed the date twice, once under the badge and again at the
+     foot, on a list already grouped under the date. Four rows where two say
+     more. The subject is what somebody is scanning for, so the subject goes
+     first and everything that qualifies it sits on one line beneath. */
   function decisionCard(item, withDate) {
     const current = state.decision && item.id === state.decision.id;
     return '<li>' +
       '<button type="button" class="decision-card' + (current ? ' is-current' : '') + '"' +
       ' data-id="' + esc(item.id) + '"' + (current ? ' aria-current="true"' : '') + '>' +
-        '<span class="card-top">' +
-          '<span class="badge badge-' + esc(item.body) + '">' + esc(shortBody(item.body)) + '</span>' +
-          '<time datetime="' + esc(item.date) + '">' + esc(Data.formatDate(item.date)) + '</time>' +
-        '</span>' +
         '<span class="card-title" title="' + esc(item.title) + '">' +
           esc(item.title) + '</span>' +
-        committeeChip(item) +
-        '<span class="card-foot">' +
-          '<span class="result result-' + esc(item.result) + '">' +
+        '<span class="card-meta">' +
+          // The institution only earns a word when it is not the one every
+          // other card names.
+          (item.body && item.body !== 'parliament'
+            ? '<span class="chip chip-body">' + esc(shortBody(item.body)) + '</span>' : '') +
+          cardChips(item) +
+          '<span class="chip chip-result chip-' + esc(item.result) + '">' +
             esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
+          // Only where the list is not already grouped under a date heading.
           (withDate
-            ? '<span class="card-rule">' + esc(Data.formatDate(item.date)) + '</span>'
+            ? '<time class="card-when" datetime="' + esc(item.date) + '">' +
+                esc(Data.formatDate(item.date)) + '</time>'
             : (item.voteRuleLabel
-                ? '<span class="card-rule">' + esc(item.voteRuleLabel) + '</span>' : '')) +
+                ? '<span class="card-when">' + esc(item.voteRuleLabel) + '</span>' : '')) +
         '</span>' +
       '</button></li>';
   }
@@ -843,7 +853,7 @@
      what can be shown without taking data from somewhere it did not come from.
 
      A text with no committee simply has no chip. Nothing is guessed. */
-  function committeeChip(item) {
+  function cardChips(item) {
     const chips = [];
 
     /* What the vote is about, first, because that is what a reader is
@@ -878,7 +888,7 @@
       chips.push('<span class="chip chip-quiet">' + item.rollCalls + ' roll-calls</span>');
     }
 
-    return chips.length ? '<span class="card-chips">' + chips.join('') + '</span>' : '';
+    return chips.join('');
   }
 
   function shortBody(body) {

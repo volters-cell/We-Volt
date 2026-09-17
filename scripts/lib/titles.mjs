@@ -120,6 +120,26 @@ export function looksVerbStripped(title) {
   return VERB_STRIPPED.test(String(title || '').trim());
 }
 
+/* The kind of instrument, where the title opens on it. "Council decision on
+   guidelines for the employment policies of the Member States" is a vote about
+   the guidelines; that it takes the form of a Council decision is procedure,
+   and it is the same procedure on every one of them. The verb stays, for the
+   same reason it stays after a wrapper: "Regulation amending the Multiannual
+   financial framework" is not the framework. */
+const INSTRUMENT_VERB =
+  /^(?:council|commission|european\s+parliament)?\s*(?:regulation|decision|directive)\s+(?=\b(?:establishing|setting\s+up|laying\s+down|amending|authorising)\b)/i;
+/* "…decision on the AIEM tax" leaves "On the AIEM tax", and no headline opens
+   on "On", so where the instrument is followed by a bare preposition the
+   preposition goes with it. */
+const INSTRUMENT_ON =
+  /^(?:council|commission|european\s+parliament)?\s*(?:regulation|decision|directive)\s+on\s+/i;
+
+/* And the article the wrapper left behind. Stripping "Report on" from "Report
+   on the progressive resumption of tourism services" leaves "The progressive
+   resumption of tourism services", which is how 336 titles came to open on a
+   word that carries nothing. A headline does not start with "The". */
+const ARTICLE = /^the\s+(?=\p{L})/iu;
+
 /* A clause the Parliament appends to nearly every legislative title, naming
    what the act repeals or amends. True, and never the reason anyone is
    reading. */
@@ -143,6 +163,13 @@ export function shorten(title) {
     }
   }
   text = text.replace(RULE, function () { return 'Objection: '; });
+
+  for (const opening of [INSTRUMENT_ON, INSTRUMENT_VERB, ARTICLE]) {
+    const trimmed = text.replace(opening, '');
+    if (trimmed !== text && trimmed.length > 12) {
+      text = trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
+    }
+  }
   text = text.replace(TAIL, '').trim();
 
   /* A title that is still a paragraph is usually the Parliament listing
