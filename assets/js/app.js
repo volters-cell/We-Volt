@@ -1138,7 +1138,9 @@
         return { className: 'layer-neutral', label: 'member state of the European Union' };
       }, function (code) {
         const item = statesByCode[code];
-        if (!item) return '';
+        // A former member state has no seats and no memberships to report: it
+        // is on the map because it was in the Parliament, not because it is.
+        if (!item || !item.seats) return '';
         const inside = ['euro', 'schengen', 'nato'].filter(function (key) {
           return ((item.memberships || {})[key] || {}).member;
         });
@@ -1430,7 +1432,11 @@
 
   function seatsOf(code) {
     const state = statesByCode[code];
-    return state ? state.seats : 0;
+    /* A state that has left has no seats in the sitting Parliament, and its
+       delegation's size on an old vote is whatever that vote recorded. Returning
+       0 is what the share below already falls back on: votes cast, then members
+       present. Nothing is claimed that the record does not hold. */
+    return (state && state.seats) || 0;
   }
 
   function castOf(totals) {
@@ -2835,6 +2841,16 @@
       states = reference.states;
       statesByCode = {};
       states.forEach(function (item) { statesByCode[item.code] = item; });
+      /* And the states that have left. The ninth term opened with the United
+         Kingdom in it, so 26 sitting days of this archive record votes by
+         members it sent, and a card reading "GB" where every other reads
+         "Ireland" is the site failing to say who voted. They are named and
+         nothing more: no seats, no population, no memberships — a former
+         member state takes no part in the sitting Parliament, and none of the
+         arithmetic on this site may treat it as though it did. */
+      (reference.former || []).forEach(function (item) {
+        if (!statesByCode[item.code]) statesByCode[item.code] = item;
+      });
       Panel.setStates(states);
       index = decisionIndex;
 
