@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The Council position on Draft amending budget No 7/2020 of the European Union for the financial year 2020 - Update of revenue (own resources)",
+  "title": "Council position on Draft amending budget No 7/2020 of the European Union for the financial year 2020 - Update of revenue (own resources)",
   "subtitle": "A9-0163/2020 - Monika Hohlmeier - Single vote — vote in plenary",
   "date": "2020-10-05",
   "voteRule": "simple-majority",

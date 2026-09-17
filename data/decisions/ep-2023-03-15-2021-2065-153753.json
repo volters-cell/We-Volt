@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The functioning of the EEAS and a stronger EU in the world",
+  "title": "Functioning of the EEAS and a stronger EU in the world",
   "subtitle": "A9-0045/2023 - Urmas Paet - Projet de recommandation — vote in plenary",
   "date": "2023-03-15",
   "voteRule": "simple-majority",

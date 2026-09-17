@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The Council position on Draft amending budget No 9/2020 of the European Union for the financial year 2020 accompanying the proposal to mobilise the European Union Solidarity Fund to provide assistance to Croatia and Poland in relation to a natural disaster and to provide for the payment of advances to Croatia, Germany, Greece, Hungary, Ireland, Portugal and Spain in relation to a public health emergency",
+  "title": "Council position on Draft amending budget No 9/2020 of the European Union for the financial year 2020 accompanying the proposal to mobilise the European Union Solidarity Fund to provide assistance to Croatia and Poland in relation to a natural disaster and to provide for the payment of advances to Croatia, Germany, Greece, Hungary, Ireland, Portugal and Spain in relation to a public health emergency",
   "subtitle": "A9-0223/2020 - Monika Hohlmeier - Single Vote — vote in plenary",
   "date": "2020-11-23",
   "voteRule": "simple-majority",

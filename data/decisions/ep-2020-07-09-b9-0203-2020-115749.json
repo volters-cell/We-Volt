@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The draft Commission implementing regulation amending Implementing Regulation (EU) No 540/2011 as regards the extension of the approval periods of the active substances beflubutamid, benalaxyl, benthiavalicarb, bifenazate, boscalid, bromoxynil, captan, cyazofamid, dimethomorph, ethephon, etoxazole, famoxadone, fenamiphos, flumioxazine, fluoxastrobin, folpet, formetanate, metribuzin, milbemectin, Paecilomyces lilacinus strain 251, phenmedipham, phosmet, pirimiphos-methyl, propamocarb, prothioconazole and S-metolachlor",
+  "title": "Draft Commission implementing regulation amending Implementing Regulation (EU) No 540/2011 as regards the extension of the approval periods of the active substances beflubutamid, benalaxyl, benthiavalicarb, bifenazate, boscalid, bromoxynil, captan, cyazofamid, dimethomorph, ethephon, etoxazole, famoxadone, fenamiphos, flumioxazine, fluoxastrobin, folpet, formetanate, metribuzin, milbemectin, Paecilomyces lilacinus strain 251, phenmedipham, phosmet, pirimiphos-methyl, propamocarb, prothioconazole and S-metolachlor",
   "subtitle": "B9-0203/2020 - Am 2 — vote in plenary",
   "date": "2020-07-09",
   "voteRule": "simple-majority",

@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The Agreement between the European Union and the Swiss Confederation on the transfer of Passenger Name Record (PNR) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime",
+  "title": "Agreement between the European Union and the Swiss Confederation on the transfer of Passenger Name Record (PNR) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime",
   "subtitle": "A10-0204/2026 - Jaroslav Bžoch - Projet de décision du Conseil — vote in plenary",
   "date": "2026-09-16",
   "voteRule": "simple-majority",

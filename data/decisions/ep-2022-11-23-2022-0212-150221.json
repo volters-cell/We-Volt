@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The joint text on the draft general budget of the European Union for the financial year 2023 approved by the Conciliation Committee under the budgetary procedure",
+  "title": "Joint text on the draft general budget of the European Union for the financial year 2023 approved by the Conciliation Committee under the budgetary procedure",
   "subtitle": "2023 budgetary procedure: joint text - A9-0278/2022 - Nicolae Ştefănuță, Niclas Herbst - Joint text — vote in plenary",
   "date": "2022-11-23",
   "voteRule": "simple-majority",

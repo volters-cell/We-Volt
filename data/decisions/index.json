@@ -41,7 +41,7 @@
       "Malta",
       "Cyprus"
     ],
-    "updated": "2026-09-16",
+    "updated": "2026-09-17",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -69,7 +69,7 @@
     {
       "id": "ep-2026-09-16-2025-0111-195854",
       "sourceId": 195854,
-      "title": "The Agreement between the European Union and the United Kingdom of Great Britain and Northern Ireland regarding cooperation on the application of their respective competition laws",
+      "title": "Agreement between the European Union and the United Kingdom of Great Britain and Northern Ireland regarding cooperation on the application of their respective competition laws",
       "subtitle": "A10-0203/2026 - Eero Heinäluoma - Projet de décision du Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -88,13 +88,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 671,
-      "keywords": "the agreement between the european union and the united kingdom of great britain and northern ireland regarding cooperation on the application of their respective competition laws a10-0203/2026 - eero heinäluoma - projet de décision du conseil — vote in plenary 2025/0111",
+      "keywords": "agreement between the european union and the united kingdom of great britain and northern ireland regarding cooperation on the application of their respective competition laws a10-0203/2026 - eero heinäluoma - projet de décision du conseil — vote in plenary 2025/0111",
       "file": "data/decisions/ep-2026-09-16-2025-0111-195854.json"
     },
     {
       "id": "ep-2026-09-16-2025-0172-196482",
       "sourceId": 196482,
-      "title": "The acceleration of permit-granting for defence readiness projects",
+      "title": "Acceleration of permit-granting for defence readiness projects",
       "subtitle": "A10-0271/2025 - Lucia Yar, Henrik Dahl - Proposition de rejet - Am 64 — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -112,7 +112,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 663,
-      "keywords": "the acceleration of permit-granting for defence readiness projects a10-0271/2025 - lucia yar, henrik dahl - proposition de rejet - am 64 — vote in plenary 2025/0172",
+      "keywords": "acceleration of permit-granting for defence readiness projects a10-0271/2025 - lucia yar, henrik dahl - proposition de rejet - am 64 — vote in plenary 2025/0172",
       "file": "data/decisions/ep-2026-09-16-2025-0172-196482.json"
     },
     {
@@ -166,7 +166,7 @@
     {
       "id": "ep-2026-09-16-2025-0265-195831",
       "sourceId": 195831,
-      "title": "Council regulation establishing the Instrument for Nuclear Safety Cooperation and Decommissioning for the period 2028-2034 and repealing Regulations (Euratom) 2021/100 and (Euratom) 2021/948",
+      "title": "Establishing the Instrument for Nuclear Safety Cooperation and Decommissioning for the period 2028-2034 and repealing Regulations (Euratom) 2021/100 and (Euratom) 2021/948",
       "subtitle": "A10-0196/2026 - Sophie Wilmès - Proposition de la Commission au Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -184,13 +184,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 669,
-      "keywords": "council regulation establishing the instrument for nuclear safety cooperation and decommissioning for the period 2028-2034 and repealing regulations (euratom) 2021/100 and (euratom) 2021/948 a10-0196/2026 - sophie wilmès - proposition de la commission au conseil — vote in plenary 2025/0265",
+      "keywords": "establishing the instrument for nuclear safety cooperation and decommissioning for the period 2028-2034 and repealing regulations (euratom) 2021/100 and (euratom) 2021/948 a10-0196/2026 - sophie wilmès - proposition de la commission au conseil — vote in plenary 2025/0265",
       "file": "data/decisions/ep-2026-09-16-2025-0265-195831.json"
     },
     {
       "id": "ep-2026-09-16-2025-0268-195830",
       "sourceId": 195830,
-      "title": "Council regulation establishing the nuclear decommissioning assistance programme of the Ignalina nuclear power plant in Lithuania for the period 2028-2034, and repealing Regulation (EU) 2021/101",
+      "title": "Establishing the nuclear decommissioning assistance programme of the Ignalina nuclear power plant in Lithuania for the period 2028-2034, and repealing Regulation (EU) 2021/101",
       "subtitle": "A10-0197/2026 - Virginijus Sinkevičius - Proposition de la Commission au Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -208,13 +208,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 667,
-      "keywords": "council regulation establishing the nuclear decommissioning assistance programme of the ignalina nuclear power plant in lithuania for the period 2028-2034, and repealing regulation (eu) 2021/101 a10-0197/2026 - virginijus sinkevičius - proposition de la commission au conseil — vote in plenary 2025/0268",
+      "keywords": "establishing the nuclear decommissioning assistance programme of the ignalina nuclear power plant in lithuania for the period 2028-2034, and repealing regulation (eu) 2021/101 a10-0197/2026 - virginijus sinkevičius - proposition de la commission au conseil — vote in plenary 2025/0268",
       "file": "data/decisions/ep-2026-09-16-2025-0268-195830.json"
     },
     {
       "id": "ep-2026-09-16-2025-0343-195855",
       "sourceId": 195855,
-      "title": "The Agreement between the European Union and the Swiss Confederation on the transfer of Passenger Name Record (PNR) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime",
+      "title": "Agreement between the European Union and the Swiss Confederation on the transfer of Passenger Name Record (PNR) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime",
       "subtitle": "A10-0204/2026 - Jaroslav Bžoch - Projet de décision du Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -232,13 +232,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 654,
-      "keywords": "the agreement between the european union and the swiss confederation on the transfer of passenger name record (pnr) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime a10-0204/2026 - jaroslav bžoch - projet de décision du conseil — vote in plenary 2025/0343",
+      "keywords": "agreement between the european union and the swiss confederation on the transfer of passenger name record (pnr) data for the prevention, detection, investigation and prosecution of terrorist offences and serious crime a10-0204/2026 - jaroslav bžoch - projet de décision du conseil — vote in plenary 2025/0343",
       "file": "data/decisions/ep-2026-09-16-2025-0343-195855.json"
     },
     {
       "id": "ep-2026-09-16-2025-0351-195856",
       "sourceId": 195856,
-      "title": "The Agreement between the European Union and Iceland laying down the rules for participation of Iceland in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme",
+      "title": "Agreement between the European Union and Iceland laying down the rules for participation of Iceland in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme",
       "subtitle": "A10-0207/2026 - Paolo Borchia - Projet de décision du Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -254,13 +254,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 653,
-      "keywords": "the agreement between the european union and iceland laying down the rules for participation of iceland in the govsatcom component of the union space programme and in the union secure connectivity programme, and for access to govsatcom services and to the governmental services of the union secure connectivity programme a10-0207/2026 - paolo borchia - projet de décision du conseil — vote in plenary 2025/0351",
+      "keywords": "agreement between the european union and iceland laying down the rules for participation of iceland in the govsatcom component of the union space programme and in the union secure connectivity programme, and for access to govsatcom services and to the governmental services of the union secure connectivity programme a10-0207/2026 - paolo borchia - projet de décision du conseil — vote in plenary 2025/0351",
       "file": "data/decisions/ep-2026-09-16-2025-0351-195856.json"
     },
     {
       "id": "ep-2026-09-16-2025-0352-195857",
       "sourceId": 195857,
-      "title": "The Agreement between the European Union and the Kingdom of Norway laying down the rules for participation of the Kingdom of Norway in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme",
+      "title": "Agreement between the European Union and the Kingdom of Norway laying down the rules for participation of the Kingdom of Norway in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme",
       "subtitle": "A10-0208/2026 - Paolo Borchia - Projet de décision du Conseil — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -276,7 +276,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 636,
-      "keywords": "the agreement between the european union and the kingdom of norway laying down the rules for participation of the kingdom of norway in the govsatcom component of the union space programme and in the union secure connectivity programme, and for access to govsatcom services and to the governmental services of the union secure connectivity programme a10-0208/2026 - paolo borchia - projet de décision du conseil — vote in plenary 2025/0352",
+      "keywords": "agreement between the european union and the kingdom of norway laying down the rules for participation of the kingdom of norway in the govsatcom component of the union space programme and in the union secure connectivity programme, and for access to govsatcom services and to the governmental services of the union secure connectivity programme a10-0208/2026 - paolo borchia - projet de décision du conseil — vote in plenary 2025/0352",
       "file": "data/decisions/ep-2026-09-16-2025-0352-195857.json"
     },
     {
@@ -376,7 +376,7 @@
     {
       "id": "ep-2026-09-16-2026-2782-196510",
       "sourceId": 196510,
-      "title": "The draft Commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean MON 94313 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
+      "title": "Draft Commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean MON 94313 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
       "subtitle": "B10-0379/2026 - Proposition de résolution — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -394,13 +394,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 651,
-      "keywords": "the draft commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean mon 94313 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0379/2026 - proposition de résolution — vote in plenary 2026/2782",
+      "keywords": "draft commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean mon 94313 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0379/2026 - proposition de résolution — vote in plenary 2026/2782",
       "file": "data/decisions/ep-2026-09-16-2026-2782-196510.json"
     },
     {
       "id": "ep-2026-09-16-2026-2783-196493",
       "sourceId": 196493,
-      "title": "The draft Commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean GMB151 x DAS-44406-6 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
+      "title": "Draft Commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean GMB151 x DAS-44406-6 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
       "subtitle": "B10-0380/2026 - Proposition de résolution — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -418,13 +418,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 638,
-      "keywords": "the draft commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean gmb151 x das-44406-6 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0380/2026 - proposition de résolution — vote in plenary 2026/2783",
+      "keywords": "draft commission implementing decision authorising the placing on the market of products containing, consisting of or produced from genetically modified soybean gmb151 x das-44406-6 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0380/2026 - proposition de résolution — vote in plenary 2026/2783",
       "file": "data/decisions/ep-2026-09-16-2026-2783-196493.json"
     },
     {
       "id": "ep-2026-09-16-2026-2784-196483",
       "sourceId": 196483,
-      "title": "The draft Commission implementing decision renewing the authorisation for the placing on the market of products containing, consisting of or produced from genetically modified maize MON 87460 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
+      "title": "Draft Commission implementing decision renewing the authorisation for the placing on the market of products containing, consisting of or produced from genetically modified maize MON 87460 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
       "subtitle": "B10-0381/2026 - Proposition de résolution — vote in plenary",
       "date": "2026-09-16",
       "body": "parliament",
@@ -442,7 +442,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 602,
-      "keywords": "the draft commission implementing decision renewing the authorisation for the placing on the market of products containing, consisting of or produced from genetically modified maize mon 87460 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0381/2026 - proposition de résolution — vote in plenary 2026/2784",
+      "keywords": "draft commission implementing decision renewing the authorisation for the placing on the market of products containing, consisting of or produced from genetically modified maize mon 87460 pursuant to regulation (ec) no 1829/2003 of the european parliament and of the council b10-0381/2026 - proposition de résolution — vote in plenary 2026/2784",
       "file": "data/decisions/ep-2026-09-16-2026-2784-196483.json"
     },
     {
@@ -520,7 +520,7 @@
     {
       "id": "ep-2026-09-15-a10-0199-2026-195987",
       "sourceId": 195987,
-      "title": "The findings and recommendations of the Special Committee on the European Democracy Shield",
+      "title": "Findings and recommendations of the Special Committee on the European Democracy Shield",
       "subtitle": "A10-0199/2026 - Tomas Tobé - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -536,7 +536,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 666,
-      "keywords": "the findings and recommendations of the special committee on the european democracy shield a10-0199/2026 - tomas tobé - proposition de résolution (ensemble du texte) — vote in plenary a10-0199/2026",
+      "keywords": "findings and recommendations of the special committee on the european democracy shield a10-0199/2026 - tomas tobé - proposition de résolution (ensemble du texte) — vote in plenary a10-0199/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0199-2026-195987.json"
     },
     {
@@ -564,7 +564,7 @@
     {
       "id": "ep-2026-09-15-a10-0202-2026-196109",
       "sourceId": 196109,
-      "title": "The Temporary Decarbonisation Fund",
+      "title": "Temporary Decarbonisation Fund",
       "subtitle": "A10-0202/2026 - Pascal Canfin - Proposition de la Commission — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -580,13 +580,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 676,
-      "keywords": "the temporary decarbonisation fund a10-0202/2026 - pascal canfin - proposition de la commission — vote in plenary a10-0202/2026",
+      "keywords": "temporary decarbonisation fund a10-0202/2026 - pascal canfin - proposition de la commission — vote in plenary a10-0202/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0202-2026-196109.json"
     },
     {
       "id": "ep-2026-09-15-a10-0214-2026-195850",
       "sourceId": 195850,
-      "title": "The global role of the euro",
+      "title": "Global role of the euro",
       "subtitle": "A10-0214/2026 - Rasmus Andresen - Proposition de résolution — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -604,13 +604,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 611,
-      "keywords": "the global role of the euro a10-0214/2026 - rasmus andresen - proposition de résolution — vote in plenary a10-0214/2026",
+      "keywords": "global role of the euro a10-0214/2026 - rasmus andresen - proposition de résolution — vote in plenary a10-0214/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0214-2026-195850.json"
     },
     {
       "id": "ep-2026-09-15-a10-0218-2026-195849",
       "sourceId": 195849,
-      "title": "The implementation of the Council Recommendation of 30 October 2020 on A Bridge to Jobs",
+      "title": "Implementation of the Council Recommendation of 30 October 2020 on A Bridge to Jobs",
       "subtitle": "A10-0218/2026 - Hristo Petrov - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -626,13 +626,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 668,
-      "keywords": "the implementation of the council recommendation of 30 october 2020 on a bridge to jobs a10-0218/2026 - hristo petrov - proposition de résolution (ensemble du texte) — vote in plenary a10-0218/2026",
+      "keywords": "implementation of the council recommendation of 30 october 2020 on a bridge to jobs a10-0218/2026 - hristo petrov - proposition de résolution (ensemble du texte) — vote in plenary a10-0218/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0218-2026-195849.json"
     },
     {
       "id": "ep-2026-09-15-a10-0219-2026-195890",
       "sourceId": 195890,
-      "title": "The implementation of the EU Youth Strategy 2019-2027",
+      "title": "Implementation of the EU Youth Strategy 2019-2027",
       "subtitle": "A10-0219/2026 - Sabrina Repp - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -650,13 +650,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 667,
-      "keywords": "the implementation of the eu youth strategy 2019-2027 a10-0219/2026 - sabrina repp - proposition de résolution (ensemble du texte) — vote in plenary a10-0219/2026",
+      "keywords": "implementation of the eu youth strategy 2019-2027 a10-0219/2026 - sabrina repp - proposition de résolution (ensemble du texte) — vote in plenary a10-0219/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0219-2026-195890.json"
     },
     {
       "id": "ep-2026-09-15-a10-0224-2026-195870",
       "sourceId": 195870,
-      "title": "The Council position on Draft amending budget No 2/2026 of the European Union for the financial year 2026",
+      "title": "Council position on Draft amending budget No 2/2026 of the European Union for the financial year 2026",
       "subtitle": "A10-0224/2026 - Andrzej Halicki - Proposition de résolution (ensemble du texte) — vote in plenary",
       "date": "2026-09-15",
       "body": "parliament",
@@ -674,7 +674,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 671,
-      "keywords": "the council position on draft amending budget no 2/2026 of the european union for the financial year 2026 a10-0224/2026 - andrzej halicki - proposition de résolution (ensemble du texte) — vote in plenary a10-0224/2026",
+      "keywords": "council position on draft amending budget no 2/2026 of the european union for the financial year 2026 a10-0224/2026 - andrzej halicki - proposition de résolution (ensemble du texte) — vote in plenary a10-0224/2026",
       "file": "data/decisions/ep-2026-09-15-a10-0224-2026-195870.json"
     },
     {
@@ -835,7 +835,7 @@
     {
       "id": "ep-2026-07-09-2026-2799-rsp-195769",
       "sourceId": 195769,
-      "title": "The threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in El-Obeid, Sudan",
+      "title": "Threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in El-Obeid, Sudan",
       "subtitle": "2026/2799(RSP) — vote in plenary",
       "date": "2026-07-09",
       "body": "parliament",
@@ -850,7 +850,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in el-obeid, sudan 2026/2799(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2799(rsp)",
+      "keywords": "threat of war crimes, the escalating violations of international humanitarian law and the human rights situation in el-obeid, sudan 2026/2799(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2799(rsp)",
       "file": "data/decisions/ep-2026-07-09-2026-2799-rsp-195769.json"
     },
     {
@@ -876,7 +876,7 @@
     {
       "id": "ep-2026-07-09-2026-2801-195774",
       "sourceId": 195774,
-      "title": "The abduction, forced conversion and child marriage of Maria Shahbaz and the protection of girls in Pakistan",
+      "title": "Abduction, forced conversion and child marriage of Maria Shahbaz and the protection of girls in Pakistan",
       "subtitle": "RC-B10-0346/2026 – After recital D – Am 4 — vote in plenary",
       "date": "2026-07-09",
       "body": "parliament",
@@ -888,7 +888,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 589,
-      "keywords": "the abduction, forced conversion and child marriage of maria shahbaz and the protection of girls in pakistan rc-b10-0346/2026 – after recital d – am 4 — vote in plenary 2026/2801",
+      "keywords": "abduction, forced conversion and child marriage of maria shahbaz and the protection of girls in pakistan rc-b10-0346/2026 – after recital d – am 4 — vote in plenary 2026/2801",
       "file": "data/decisions/ep-2026-07-09-2026-2801-195774.json"
     },
     {
@@ -1156,7 +1156,7 @@
     {
       "id": "ep-2026-07-08-2026-2617-rsp-195638",
       "sourceId": 195638,
-      "title": "The impact of the 1974 Turkish invasion on Cypriot women and girls, and the crimes committed by Turkish forces and consequences on gender equality",
+      "title": "Impact of the 1974 Turkish invasion on Cypriot women and girls, and the crimes committed by Turkish forces and consequences on gender equality",
       "subtitle": "2026/2617(RSP) — vote in plenary",
       "date": "2026-07-08",
       "body": "parliament",
@@ -1174,7 +1174,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the impact of the 1974 turkish invasion on cypriot women and girls, and the crimes committed by turkish forces and consequences on gender equality 2026/2617(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2617(rsp)",
+      "keywords": "impact of the 1974 turkish invasion on cypriot women and girls, and the crimes committed by turkish forces and consequences on gender equality 2026/2617(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2617(rsp)",
       "file": "data/decisions/ep-2026-07-08-2026-2617-rsp-195638.json"
     },
     {
@@ -1402,7 +1402,7 @@
     {
       "id": "ep-2026-07-07-2025-2169-ini-195006",
       "sourceId": 195006,
-      "title": "The changing geopolitical situation in East Asia and the need for closer cooperation with like-minded partners in the region",
+      "title": "Changing geopolitical situation in East Asia and the need for closer cooperation with like-minded partners in the region",
       "subtitle": "2025/2169(INI) — vote in plenary",
       "date": "2026-07-07",
       "body": "parliament",
@@ -1418,7 +1418,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the changing geopolitical situation in east asia and the need for closer cooperation with like-minded partners in the region 2025/2169(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2169(ini)",
+      "keywords": "changing geopolitical situation in east asia and the need for closer cooperation with like-minded partners in the region 2025/2169(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2169(ini)",
       "file": "data/decisions/ep-2026-07-07-2025-2169-ini-195006.json"
     },
     {
@@ -2555,7 +2555,7 @@
     {
       "id": "ep-2026-06-16-a10-0069-2026-193973",
       "sourceId": 193973,
-      "title": "The adjustment of customs duties on the import of certain goods originating in the United States of America and opening of tariff quotas for imports of certain goods originating in the United States of America",
+      "title": "Adjustment of customs duties on the import of certain goods originating in the United States of America and opening of tariff quotas for imports of certain goods originating in the United States of America",
       "subtitle": "A10-0069/2026 – Bernd Lange – Proposal to vote on amendments — vote in plenary",
       "date": "2026-06-16",
       "body": "parliament",
@@ -2573,7 +2573,7 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 634,
-      "keywords": "the adjustment of customs duties on the import of certain goods originating in the united states of america and opening of tariff quotas for imports of certain goods originating in the united states of america a10-0069/2026 – bernd lange – proposal to vote on amendments — vote in plenary a10-0069/2026",
+      "keywords": "adjustment of customs duties on the import of certain goods originating in the united states of america and opening of tariff quotas for imports of certain goods originating in the united states of america a10-0069/2026 – bernd lange – proposal to vote on amendments — vote in plenary a10-0069/2026",
       "file": "data/decisions/ep-2026-06-16-a10-0069-2026-193973.json"
     },
     {
@@ -2665,7 +2665,7 @@
     {
       "id": "ep-2026-05-21-2024-2127-ini-192528",
       "sourceId": 192528,
-      "title": "The multiannual plan for the Baltic Sea and ways forward",
+      "title": "Multiannual plan for the Baltic Sea and ways forward",
       "subtitle": "2024/2127(INI) — vote in plenary",
       "date": "2026-05-21",
       "body": "parliament",
@@ -2681,7 +2681,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the multiannual plan for the baltic sea and ways forward 2024/2127(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2127(ini)",
+      "keywords": "multiannual plan for the baltic sea and ways forward 2024/2127(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2127(ini)",
       "file": "data/decisions/ep-2026-05-21-2024-2127-ini-192528.json"
     },
     {
@@ -2773,7 +2773,7 @@
     {
       "id": "ep-2026-05-21-2025-3046-rsp-193345",
       "sourceId": 193345,
-      "title": "The need to reduce work-related fatalities",
+      "title": "Need to reduce work-related fatalities",
       "subtitle": "2025/3046(RSP) — vote in plenary",
       "date": "2026-05-21",
       "body": "parliament",
@@ -2789,7 +2789,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the need to reduce work-related fatalities 2025/3046(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/3046(rsp)",
+      "keywords": "need to reduce work-related fatalities 2025/3046(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/3046(rsp)",
       "file": "data/decisions/ep-2026-05-21-2025-3046-rsp-193345.json"
     },
     {
@@ -2837,7 +2837,7 @@
     {
       "id": "ep-2026-05-21-2026-2738-rsp-193395",
       "sourceId": 193395,
-      "title": "The cases of human rights and environmental defenders Andrie Yunus and Muhammad Rosidi in Indonesia",
+      "title": "Cases of human rights and environmental defenders Andrie Yunus and Muhammad Rosidi in Indonesia",
       "subtitle": "2026/2738(RSP) — vote in plenary",
       "date": "2026-05-21",
       "body": "parliament",
@@ -2851,7 +2851,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the cases of human rights and environmental defenders andrie yunus and muhammad rosidi in indonesia 2026/2738(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2738(rsp)",
+      "keywords": "cases of human rights and environmental defenders andrie yunus and muhammad rosidi in indonesia 2026/2738(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2026/2738(rsp)",
       "file": "data/decisions/ep-2026-05-21-2026-2738-rsp-193395.json"
     },
     {
@@ -2917,7 +2917,7 @@
     {
       "id": "ep-2026-05-20-2024-2126-ini-192483",
       "sourceId": 192483,
-      "title": "The impact of the implementation of the Maritime Spatial Planning Directive 2014/89/EU on fisheries in selected fishing areas and sea basins",
+      "title": "Impact of the implementation of the Maritime Spatial Planning Directive 2014/89/EU on fisheries in selected fishing areas and sea basins",
       "subtitle": "2024/2126(INI) — vote in plenary",
       "date": "2026-05-20",
       "body": "parliament",
@@ -2935,7 +2935,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the impact of the implementation of the maritime spatial planning directive 2014/89/eu on fisheries in selected fishing areas and sea basins 2024/2126(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2126(ini)",
+      "keywords": "impact of the implementation of the maritime spatial planning directive 2014/89/eu on fisheries in selected fishing areas and sea basins 2024/2126(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2126(ini)",
       "file": "data/decisions/ep-2026-05-20-2024-2126-ini-192483.json"
     },
     {
@@ -3398,7 +3398,7 @@
     {
       "id": "ep-2026-04-30-2026-2693-192305",
       "sourceId": 192305,
-      "title": "The need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment",
+      "title": "Need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment",
       "subtitle": "RC-B10-0206/2026 – Recital I/2 — vote in plenary",
       "date": "2026-04-30",
       "body": "parliament",
@@ -3412,7 +3412,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 551,
-      "keywords": "the need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment rc-b10-0206/2026 – recital i/2 — vote in plenary 2026/2693",
+      "keywords": "need for targeted criminal provisions and platforms’ responsibility to effectively address cyberbullying and online harassment rc-b10-0206/2026 – recital i/2 — vote in plenary 2026/2693",
       "file": "data/decisions/ep-2026-04-30-2026-2693-192305.json"
     },
     {
@@ -4129,7 +4129,7 @@
     {
       "id": "ep-2026-04-29-2025-2239-ini-190564",
       "sourceId": 190564,
-      "title": "The Commission’s 2025 Rule of Law report",
+      "title": "Commission’s 2025 Rule of Law report",
       "subtitle": "2025/2239(INI) — vote in plenary",
       "date": "2026-04-29",
       "body": "parliament",
@@ -4147,7 +4147,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the commission’s 2025 rule of law report 2025/2239(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2239(ini)",
+      "keywords": "commission’s 2025 rule of law report 2025/2239(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2239(ini)",
       "file": "data/decisions/ep-2026-04-29-2025-2239-ini-190564.json"
     },
     {
@@ -4387,7 +4387,7 @@
     {
       "id": "ep-2026-04-28-2025-2054-ini-189928",
       "sourceId": 189928,
-      "title": "The role of ocean diplomacy for the competitiveness of EU fisheries and aquaculture",
+      "title": "Role of ocean diplomacy for the competitiveness of EU fisheries and aquaculture",
       "subtitle": "2025/2054(INI) — vote in plenary",
       "date": "2026-04-28",
       "body": "parliament",
@@ -4405,7 +4405,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the role of ocean diplomacy for the competitiveness of eu fisheries and aquaculture 2025/2054(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2054(ini)",
+      "keywords": "role of ocean diplomacy for the competitiveness of eu fisheries and aquaculture 2025/2054(ini) — vote in plenary proposition de résolution (ensemble du texte) 2025/2054(ini)",
       "file": "data/decisions/ep-2026-04-28-2025-2054-ini-189928.json"
     },
     {
@@ -5166,7 +5166,7 @@
     {
       "id": "ep-2026-03-12-2026-2642-rsp-189129",
       "sourceId": 189129,
-      "title": "The arbitrary detention of President Mohamed Bazoum by the junta in Niger",
+      "title": "Arbitrary detention of President Mohamed Bazoum by the junta in Niger",
       "subtitle": "2026/2642(RSP) — vote in plenary",
       "date": "2026-03-12",
       "body": "parliament",
@@ -5180,7 +5180,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 718,
-      "keywords": "the arbitrary detention of president mohamed bazoum by the junta in niger 2026/2642(rsp) — vote in plenary proposition de résolution 2026/2642(rsp)",
+      "keywords": "arbitrary detention of president mohamed bazoum by the junta in niger 2026/2642(rsp) — vote in plenary proposition de résolution 2026/2642(rsp)",
       "file": "data/decisions/ep-2026-03-12-2026-2642-rsp-189129.json"
     },
     {
@@ -5760,7 +5760,7 @@
     {
       "id": "ep-2026-03-10-2025-2951-rsp-188564",
       "sourceId": 188564,
-      "title": "The upcoming European Research Area (ERA) Act",
+      "title": "Upcoming European Research Area (ERA) Act",
       "subtitle": "2025/2951(RSP) — vote in plenary",
       "date": "2026-03-10",
       "body": "parliament",
@@ -5776,7 +5776,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 718,
-      "keywords": "the upcoming european research area (era) act 2025/2951(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2951(rsp)",
+      "keywords": "upcoming european research area (era) act 2025/2951(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2951(rsp)",
       "file": "data/decisions/ep-2026-03-10-2025-2951-rsp-188564.json"
     },
     {
@@ -9684,7 +9684,7 @@
     {
       "id": "ep-2025-10-09-2024-2118-ini-179441",
       "sourceId": 179441,
-      "title": "The role of simple tax rules and tax fragmentation in European competitiveness",
+      "title": "Role of simple tax rules and tax fragmentation in European competitiveness",
       "subtitle": "2024/2118(INI) — vote in plenary",
       "date": "2025-10-09",
       "body": "parliament",
@@ -9698,7 +9698,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the role of simple tax rules and tax fragmentation in european competitiveness 2024/2118(ini) — vote in plenary proposition de résolution 2024/2118(ini)",
+      "keywords": "role of simple tax rules and tax fragmentation in european competitiveness 2024/2118(ini) — vote in plenary proposition de résolution 2024/2118(ini)",
       "file": "data/decisions/ep-2025-10-09-2024-2118-ini-179441.json"
     },
     {
@@ -11147,7 +11147,7 @@
     {
       "id": "ep-2025-07-09-2025-2710-rsp-178062",
       "sourceId": 178062,
-      "title": "The human cost of Russia’s war against Ukraine and the urgent need to end Russian aggression: the situation of illegally detained civilians and prisoners of war, and the continued bombing of civilians",
+      "title": "Human cost of Russia’s war against Ukraine and the urgent need to end Russian aggression: the situation of illegally detained civilians and prisoners of war, and the continued bombing of civilians",
       "subtitle": "2025/2710(RSP) — vote in plenary",
       "date": "2025-07-09",
       "body": "parliament",
@@ -11161,7 +11161,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the human cost of russia’s war against ukraine and the urgent need to end russian aggression: the situation of illegally detained civilians and prisoners of war, and the continued bombing of civilians 2025/2710(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2710(rsp)",
+      "keywords": "human cost of russia’s war against ukraine and the urgent need to end russian aggression: the situation of illegally detained civilians and prisoners of war, and the continued bombing of civilians 2025/2710(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2710(rsp)",
       "file": "data/decisions/ep-2025-07-09-2025-2710-rsp-178062.json"
     },
     {
@@ -11375,7 +11375,7 @@
     {
       "id": "ep-2025-07-08-2025-0051-177821",
       "sourceId": 177821,
-      "title": "The role of gas storage for securing gas supplies ahead of the winter season",
+      "title": "Role of gas storage for securing gas supplies ahead of the winter season",
       "subtitle": "A10-0079/2025 – Borys Budka – Proposal to vote on amendments — vote in plenary",
       "date": "2025-07-08",
       "body": "parliament",
@@ -11393,13 +11393,13 @@
       "result": "rejected",
       "status": "verified",
       "mepCount": 671,
-      "keywords": "the role of gas storage for securing gas supplies ahead of the winter season a10-0079/2025 – borys budka – proposal to vote on amendments — vote in plenary 2025/0051",
+      "keywords": "role of gas storage for securing gas supplies ahead of the winter season a10-0079/2025 – borys budka – proposal to vote on amendments — vote in plenary 2025/0051",
       "file": "data/decisions/ep-2025-07-08-2025-0051-177821.json"
     },
     {
       "id": "ep-2025-07-08-2025-0051-cod-177670",
       "sourceId": 177670,
-      "title": "The role of gas storage for securing gas supplies ahead of the winter season",
+      "title": "Role of gas storage for securing gas supplies ahead of the winter season",
       "subtitle": "2025/0051(COD) — vote in plenary",
       "date": "2025-07-08",
       "body": "parliament",
@@ -11413,7 +11413,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the role of gas storage for securing gas supplies ahead of the winter season 2025/0051(cod) — vote in plenary accord provisoire - am 9 2025/0051(cod)",
+      "keywords": "role of gas storage for securing gas supplies ahead of the winter season 2025/0051(cod) — vote in plenary accord provisoire - am 9 2025/0051(cod)",
       "file": "data/decisions/ep-2025-07-08-2025-0051-cod-177670.json"
     },
     {
@@ -11702,7 +11702,7 @@
     {
       "id": "ep-2025-06-18-2024-2078-ini-177229",
       "sourceId": 177229,
-      "title": "The Commission’s 2024 Rule of Law report",
+      "title": "Commission’s 2024 Rule of Law report",
       "subtitle": "2024/2078(INI) — vote in plenary",
       "date": "2025-06-18",
       "body": "parliament",
@@ -11716,7 +11716,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the commission’s 2024 rule of law report 2024/2078(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2078(ini)",
+      "keywords": "commission’s 2024 rule of law report 2024/2078(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2078(ini)",
       "file": "data/decisions/ep-2025-06-18-2024-2078-ini-177229.json"
     },
     {
@@ -12253,7 +12253,7 @@
     {
       "id": "ep-2025-05-08-2025-0051-cod-175610",
       "sourceId": 175610,
-      "title": "The role of gas storage for securing gas supplies ahead of the winter season",
+      "title": "Role of gas storage for securing gas supplies ahead of the winter season",
       "subtitle": "2025/0051(COD) — vote in plenary",
       "date": "2025-05-08",
       "body": "parliament",
@@ -12267,7 +12267,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the role of gas storage for securing gas supplies ahead of the winter season 2025/0051(cod) — vote in plenary proposition de la commission 2025/0051(cod)",
+      "keywords": "role of gas storage for securing gas supplies ahead of the winter season 2025/0051(cod) — vote in plenary proposition de la commission 2025/0051(cod)",
       "file": "data/decisions/ep-2025-05-08-2025-0051-cod-175610.json"
     },
     {
@@ -12389,7 +12389,7 @@
     {
       "id": "ep-2025-05-08-c10-0044-2025-176241",
       "sourceId": 176241,
-      "title": "The protection status of the wolf (Canis lupus)",
+      "title": "Protection status of the wolf (Canis lupus)",
       "subtitle": "C10-0044/2025 - Proposition de la Commission — vote in plenary",
       "date": "2025-05-08",
       "body": "parliament",
@@ -12401,7 +12401,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 570,
-      "keywords": "the protection status of the wolf (canis lupus) c10-0044/2025 - proposition de la commission — vote in plenary c10-0044/2025",
+      "keywords": "protection status of the wolf (canis lupus) c10-0044/2025 - proposition de la commission — vote in plenary c10-0044/2025",
       "file": "data/decisions/ep-2025-05-08-c10-0044-2025-176241.json"
     },
     {
@@ -12931,7 +12931,7 @@
     {
       "id": "ep-2025-05-07-2024-2104-ini-175535",
       "sourceId": 175535,
-      "title": "The European Water Resilience Strategy",
+      "title": "European Water Resilience Strategy",
       "subtitle": "2024/2104(INI) — vote in plenary",
       "date": "2025-05-07",
       "body": "parliament",
@@ -12945,7 +12945,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the european water resilience strategy 2024/2104(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2104(ini)",
+      "keywords": "european water resilience strategy 2024/2104(ini) — vote in plenary proposition de résolution (ensemble du texte) 2024/2104(ini)",
       "file": "data/decisions/ep-2025-05-07-2024-2104-ini-175535.json"
     },
     {
@@ -13999,7 +13999,7 @@
     {
       "id": "ep-2025-03-12-2025-2569-rsp-172585",
       "sourceId": 172585,
-      "title": "The need for EU support towards a just transition and reconstruction in Syria",
+      "title": "Need for EU support towards a just transition and reconstruction in Syria",
       "subtitle": "2025/2569(RSP) — vote in plenary",
       "date": "2025-03-12",
       "body": "parliament",
@@ -14013,7 +14013,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the need for eu support towards a just transition and reconstruction in syria 2025/2569(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2569(rsp)",
+      "keywords": "need for eu support towards a just transition and reconstruction in syria 2025/2569(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2025/2569(rsp)",
       "file": "data/decisions/ep-2025-03-12-2025-2569-rsp-172585.json"
     },
     {
@@ -15020,7 +15020,7 @@
     {
       "id": "ep-2024-11-28-2024-2951-rsp-170871",
       "sourceId": 170871,
-      "title": "The increasing and systematic repression of women in Iran",
+      "title": "Increasing and systematic repression of women in Iran",
       "subtitle": "2024/2951(RSP) — vote in plenary",
       "date": "2024-11-28",
       "body": "parliament",
@@ -15035,13 +15035,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the increasing and systematic repression of women in iran 2024/2951(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2951(rsp)",
+      "keywords": "increasing and systematic repression of women in iran 2024/2951(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2951(rsp)",
       "file": "data/decisions/ep-2024-11-28-2024-2951-rsp-170871.json"
     },
     {
       "id": "ep-2024-11-28-2024-2952-rsp-170880",
       "sourceId": 170880,
-      "title": "The shrinking space for civil society in Cambodia, in particular the case of the labour rights organisation CENTRAL",
+      "title": "Shrinking space for civil society in Cambodia, in particular the case of the labour rights organisation CENTRAL",
       "subtitle": "2024/2952(RSP) — vote in plenary",
       "date": "2024-11-28",
       "body": "parliament",
@@ -15055,7 +15055,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the shrinking space for civil society in cambodia, in particular the case of the labour rights organisation central 2024/2952(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2952(rsp)",
+      "keywords": "shrinking space for civil society in cambodia, in particular the case of the labour rights organisation central 2024/2952(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2952(rsp)",
       "file": "data/decisions/ep-2024-11-28-2024-2952-rsp-170880.json"
     },
     {
@@ -15612,7 +15612,7 @@
     {
       "id": "ep-2024-10-10-2024-2857-rsp-169857",
       "sourceId": 169857,
-      "title": "The cases of unjustly imprisoned Uyghurs in China, notably Ilham Tohti and Gulshan Abbas",
+      "title": "Cases of unjustly imprisoned Uyghurs in China, notably Ilham Tohti and Gulshan Abbas",
       "subtitle": "2024/2857(RSP) — vote in plenary",
       "date": "2024-10-10",
       "body": "parliament",
@@ -15626,7 +15626,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the cases of unjustly imprisoned uyghurs in china, notably ilham tohti and gulshan abbas 2024/2857(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2857(rsp)",
+      "keywords": "cases of unjustly imprisoned uyghurs in china, notably ilham tohti and gulshan abbas 2024/2857(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2857(rsp)",
       "file": "data/decisions/ep-2024-10-10-2024-2857-rsp-169857.json"
     },
     {
@@ -15652,7 +15652,7 @@
     {
       "id": "ep-2024-10-09-2024-2822-rsp-169808",
       "sourceId": 169808,
-      "title": "The democratic backsliding and threats to political pluralism in Georgia",
+      "title": "Democratic backsliding and threats to political pluralism in Georgia",
       "subtitle": "2024/2822(RSP) — vote in plenary",
       "date": "2024-10-09",
       "body": "parliament",
@@ -15666,7 +15666,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 718,
-      "keywords": "the democratic backsliding and threats to political pluralism in georgia 2024/2822(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2822(rsp)",
+      "keywords": "democratic backsliding and threats to political pluralism in georgia 2024/2822(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2822(rsp)",
       "file": "data/decisions/ep-2024-10-09-2024-2822-rsp-169808.json"
     },
     {
@@ -15731,7 +15731,7 @@
     {
       "id": "ep-2024-09-19-2024-2803-rsp-169565",
       "sourceId": 169565,
-      "title": "The deteriorating situation of women in Afghanistan due to the recent adoption of the law on the ‘Promotion of Virtue and Prevention of Vice’",
+      "title": "Deteriorating situation of women in Afghanistan due to the recent adoption of the law on the ‘Promotion of Virtue and Prevention of Vice’",
       "subtitle": "2024/2803(RSP) — vote in plenary",
       "date": "2024-09-19",
       "body": "parliament",
@@ -15746,13 +15746,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the deteriorating situation of women in afghanistan due to the recent adoption of the law on the ‘promotion of virtue and prevention of vice’ 2024/2803(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2803(rsp)",
+      "keywords": "deteriorating situation of women in afghanistan due to the recent adoption of the law on the ‘promotion of virtue and prevention of vice’ 2024/2803(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2803(rsp)",
       "file": "data/decisions/ep-2024-09-19-2024-2803-rsp-169565.json"
     },
     {
       "id": "ep-2024-09-19-2024-2804-rsp-169544",
       "sourceId": 169544,
-      "title": "The severe situation of political prisoners in Belarus",
+      "title": "Severe situation of political prisoners in Belarus",
       "subtitle": "2024/2804(RSP) — vote in plenary",
       "date": "2024-09-19",
       "body": "parliament",
@@ -15767,13 +15767,13 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the severe situation of political prisoners in belarus 2024/2804(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2804(rsp)",
+      "keywords": "severe situation of political prisoners in belarus 2024/2804(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2804(rsp)",
       "file": "data/decisions/ep-2024-09-19-2024-2804-rsp-169544.json"
     },
     {
       "id": "ep-2024-09-19-2024-2805-rsp-169541",
       "sourceId": 169541,
-      "title": "The case of José Daniel Ferrier García in Cuba",
+      "title": "Case of José Daniel Ferrier García in Cuba",
       "subtitle": "2024/2805(RSP) — vote in plenary",
       "date": "2024-09-19",
       "body": "parliament",
@@ -15787,7 +15787,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 717,
-      "keywords": "the case of josé daniel ferrier garcía in cuba 2024/2805(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2805(rsp)",
+      "keywords": "case of josé daniel ferrier garcía in cuba 2024/2805(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2805(rsp)",
       "file": "data/decisions/ep-2024-09-19-2024-2805-rsp-169541.json"
     },
     {
@@ -15853,7 +15853,7 @@
     {
       "id": "ep-2024-07-17-2024-2721-rsp-169362",
       "sourceId": 169362,
-      "title": "The need for the EU's continuous support for Ukraine",
+      "title": "Need for the EU's continuous support for Ukraine",
       "subtitle": "2024/2721(RSP) — vote in plenary",
       "date": "2024-07-17",
       "body": "parliament",
@@ -15867,7 +15867,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 719,
-      "keywords": "the need for the eu's continuous support for ukraine 2024/2721(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2721(rsp)",
+      "keywords": "need for the eu's continuous support for ukraine 2024/2721(rsp) — vote in plenary proposition de résolution (ensemble du texte) 2024/2721(rsp)",
       "file": "data/decisions/ep-2024-07-17-2024-2721-rsp-169362.json"
     }
   ]

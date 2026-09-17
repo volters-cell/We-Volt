@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The implementation of Directive 2009/81/EC, concerning procurement in the fields of defence and security, and of Directive 2009/43/EC, concerning the transfer of defence-related products",
+  "title": "Implementation of Directive 2009/81/EC, concerning procurement in the fields of defence and security, and of Directive 2009/43/EC, concerning the transfer of defence-related products",
   "subtitle": "Marchés publics dans les domaines de la défense et de la sécurité et transferts de produits liés à la défense: mise en œuvre des directives en la matière - Procurement in the fields of defence and security and transfer of defence-related products: implementation of relevant Directives - Auftragsvergabe in den Bereichen Verteidigung und Sicherheit und Verbringung von Verteidigungsgütern: Umsetzung der einschlägigen Richtlinien - A9-0025/2021 - Andreas Schwab - Motion for a resolution — vote in plenary",
   "date": "2021-03-25",
   "voteRule": "simple-majority",

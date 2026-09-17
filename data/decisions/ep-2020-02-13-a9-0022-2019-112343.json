@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The European Border and Coast Guard and repealing Council Joint Action n°98/700/JHA, Regulation (EU) n° 1052/2013 of the European Parliament and of the Council and Regulation (EU) n° 2016/1624 of the European Parliament and of the Council",
+  "title": "European Border and Coast Guard and repealing Council Joint Action n°98/700/JHA, Regulation (EU) n° 1052/2013 of the European Parliament and of the Council and Regulation (EU) n° 2016/1624 of the European Parliament and of the Council",
   "subtitle": "A9-0022/2019 - Roberta Metsola - Am 2 — vote in plenary",
   "date": "2020-02-13",
   "voteRule": "simple-majority",

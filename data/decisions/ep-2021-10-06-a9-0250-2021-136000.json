@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "The future of EU-US relations",
+  "title": "Future of EU-US relations",
   "subtitle": "The future of EU-US relations - A9-0250/2021 - Tonino Picula - Motion for a resolution (as a whole) — vote in plenary",
   "date": "2021-10-06",
   "voteRule": "simple-majority",

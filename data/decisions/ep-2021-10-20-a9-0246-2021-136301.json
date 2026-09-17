@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Council regulation establishing the Joint Undertakings under Horizon Europe",
+  "title": "Establishing the Joint Undertakings under Horizon Europe",
   "subtitle": "Joint Undertakings under Horizon Europe - A9-0246/2021 - Maria da Graça Carvalho - Amendments by the committee responsible - block vote - Ams 1-456 — vote in plenary",
   "date": "2021-10-20",
   "voteRule": "simple-majority",

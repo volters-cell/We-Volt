@@ -5,7 +5,7 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Council directive amending Directive 2006/112/EC on the common system of value added tax as regards the identification of taxable persons in Northern Ireland",
+  "title": "Amending Directive 2006/112/EC on the common system of value added tax as regards the identification of taxable persons in Northern Ireland",
   "subtitle": "A9-0200/2020 - Irene Tinagli - Single vote — vote in plenary",
   "date": "2020-11-11",
   "voteRule": "simple-majority",
