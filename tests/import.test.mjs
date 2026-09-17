@@ -44,7 +44,11 @@ assert.equal(english(null), '');
 assert.equal(countryCode('FRA'), 'FR');
 assert.equal(countryCode('GRC'), 'GR');
 assert.equal(countryCode('EL'), 'GR');
-assert.equal(countryCode('GBR'), null, 'a former member state is not a member state');
+/* This asserted null, on the reasoning that a former member state is not a
+   member state. True, and it erased the 73 members the United Kingdom sent to
+   the ninth term — whose votes are now held here, and have to belong to
+   somebody. It is a member state on the days it sat. */
+assert.equal(countryCode('GBR'), 'GB', 'the United Kingdom sat until 31 January 2020');
 assert.equal(normaliseGroup('PPE'), 'EPP');
 assert.equal(normaliseGroup('Verts/ALE'), 'Greens/EFA');
 assert.equal(normaliseGroup('Some New Group'), 'Some New Group', 'unknown groups pass through');
@@ -232,5 +236,27 @@ assert.equal(shorten('The progressive resumption of tourism services in the EU')
 assert.equal(shorten('Amending Regulation (EU) 2017/2107 laying down management measures'),
   'Amending Regulation (EU) 2017/2107 laying down management measures', 'a good title is left alone');
 assert.equal(shorten('The EU'), 'The EU', 'and a title with nothing to spare keeps its article');
+
+/* The United Kingdom sat in the ninth term and this archive holds 26 of its
+   sitting days. Mapping it to null erased 74 members, whose ballots then
+   counted as nobody's. */
+assert.equal(countryCode('GBR'), 'GB', 'the portal spells it GBR');
+assert.equal(countryCode('UK'), 'GB', 'the Union spells it UK');
+assert.equal(countryCode('EL'), 'GR', 'and Greece EL, which ISO spells GR');
+assert.equal(countryCode('ZZZ'), null, 'a country nobody uses is still nothing');
+
+/* A former member state is named and nothing more: these figures feed the
+   qualified-majority arithmetic and the seat counts, and a state that has left
+   takes no part in either. */
+const reference = JSON.parse(await readFile(new URL('../data/reference/member-states.json', import.meta.url), 'utf8'));
+assert.equal(reference.states.length, 27, 'the sitting Parliament is still 27 states');
+assert.ok(reference.former.length >= 1, 'and the ones that left are recorded apart from them');
+for (const state of reference.former) {
+  assert.ok(state.code && state.name, 'a former state has a code and a name');
+  assert.equal(state.seats, undefined, 'and claims no seats');
+  assert.equal(state.population, undefined, 'and no population');
+  assert.equal(state.memberships, undefined, 'and no memberships');
+  assert.ok(!reference.states.some((row) => row.code === state.code), 'and is not also a member');
+}
 
 console.log('import.test.mjs: ok');

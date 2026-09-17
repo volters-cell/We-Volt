@@ -47,10 +47,19 @@ const ISO3 = {
   AUT: 'AT', BEL: 'BE', BGR: 'BG', HRV: 'HR', CYP: 'CY', CZE: 'CZ', DNK: 'DK',
   EST: 'EE', FIN: 'FI', FRA: 'FR', DEU: 'DE', GRC: 'GR', HUN: 'HU', IRL: 'IE',
   ITA: 'IT', LVA: 'LV', LTU: 'LT', LUX: 'LU', MLT: 'MT', NLD: 'NL', POL: 'PL',
-  PRT: 'PT', ROU: 'RO', SVK: 'SK', SVN: 'SI', ESP: 'ES', SWE: 'SE'
+  PRT: 'PT', ROU: 'RO', SVK: 'SK', SVN: 'SI', ESP: 'ES', SWE: 'SE',
+  /* The United Kingdom sat in this Parliament until 31 January 2020, and the
+     ninth term's first 26 sitting days are 73 members it sent. This used to
+     map to null — the site held the Union as it is, so they were erased where
+     a country is read — and the result was 74 members with no country at all,
+     whose ballots counted as "unknown" and whose votes belonged to nobody.
+     A record of how the Parliament voted has to name who voted. */
+  GBR: 'GB'
 };
 
-const CODE_FIXES = { EL: 'GR', UK: null, GB: null };
+/* EL is what the Union calls Greece and ISO calls GR. UK is what the Union
+   calls the country ISO calls GB. Neither is an error to be dropped. */
+const CODE_FIXES = { EL: 'GR', UK: 'GB' };
 
 export const PORTAL = BASE;
 

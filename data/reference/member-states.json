@@ -9,6 +9,7 @@
     "membershipsSource": "Euro area: Council decisions on the adoption of the euro. Schengen: the year internal border controls were lifted, not the year of signature. NATO: year of accession. Checked against the institutions' own published lists — update when a member state joins.",
     "membershipsAsOf": "2026"
   },
+  "formerNote": "States that sat in an earlier Parliament and do not sit in this one. Named only, so that members they sent can be attributed on the votes they took part in. Deliberately carrying no seats, population or memberships: this file's figures feed the qualified-majority arithmetic and the seat counts, and a state that has left takes no part in either.",
   "states": [
     {
       "code": "AT",
@@ -632,6 +633,14 @@
           "since": 2004
         }
       }
+    }
+  ],
+  "former": [
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "leftOn": "2020-01-31",
+      "note": "Withdrew from the European Union on 31 January 2020. Its 73 members sat until then, and voted on the first 26 sitting days held here."
     }
   ]
 }
