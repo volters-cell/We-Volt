@@ -383,8 +383,14 @@
     this.classFor = classFor;
     Object.keys(this.shapes).forEach(function (code) {
       const entry = this.shapes[code];
-      if (!entry.shape.member) return;
+      /* A member state is always painted, even to say it did not vote. A
+         country outside the Union is painted only when the caller asks for it
+         by returning a class — which is how the United Kingdom is coloured on
+         the ninth term's first 26 sitting days, when it was in the Parliament,
+         and left alone on every vote since. */
       const wanted = classFor(code);
+      if (!wanted) return;
+      if (!entry.shape.member && !wanted.className) return;
       entry.group.setAttribute('class', [
         'country',
         entry.shape.area < SMALL_AREA ? 'country-small' : '',

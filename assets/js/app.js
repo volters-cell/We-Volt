@@ -801,6 +801,24 @@
       }).join('');
   }
 
+  /* Does this country sit in the Parliament the map describes? A former member
+     state is in statesByCode so its members can be named, and carries no seats
+     precisely so that nothing counts it as sitting. */
+  function seated(code) {
+    const state = statesByCode[code];
+    return !!(state && state.seats);
+  }
+
+  /* Did it take part in this vote? The United Kingdom is grey on the map for
+     every vote since January 2020 and has to be coloured on the ones before,
+     where 73 of its members were voting — a map calling that "did not vote"
+     while the list beneath it names them voting is the site contradicting
+     itself. */
+  function votedHere(decision, code) {
+    const here = decision && decision.countries && decision.countries[code];
+    return !!(here && (here.meps || []).length);
+  }
+
   /* The cost layer is data-driven: it appears when a decision carries sourced
      figures and stays out of the way when it does not. */
   function hasImpact(decision) {
@@ -1134,8 +1152,10 @@
 
     if (!decision) {
       // No vote open: the Union itself is the subject.
-      map.paint(function () {
-        return { className: 'layer-neutral', label: 'member state of the European Union' };
+      map.paint(function (code) {
+        return seated(code)
+          ? { className: 'layer-neutral', label: 'member state of the European Union' }
+          : null;
       }, function (code) {
         const item = statesByCode[code];
         // A former member state has no seats and no memberships to report: it
@@ -1157,6 +1177,7 @@
     if (state.layer === 'impact') {
       const scale = Data.impactScale(decision);
       map.paint(function (code) {
+        if (!seated(code) && !votedHere(decision, code)) return null;
         const impact = (decision.countries[code] || {}).impact;
         const value = impact ? impact.value : null;
         return {
@@ -1169,6 +1190,7 @@
       });
     } else {
       map.paint(function (code) {
+        if (!seated(code) && !votedHere(decision, code)) return null;
         const position = Data.countryPosition(decision, code);
         return {
           className: 'layer-vote vote-' + position.position,
@@ -2736,9 +2758,27 @@
         }
       });
     }
-    const entry = index.decisions.find(function (item) {
-      return item.id === id || String(item.sourceId) === String(id);
-    });
+    const find = function () {
+      return index.decisions.find(function (item) {
+        return item.id === id || String(item.sourceId) === String(id);
+      });
+    };
+    let entry = find();
+    /* An earlier Parliament's votes are not in the index the page starts with:
+       they sit in their own file and are fetched when a reader unfolds that
+       Parliament. A link naming one of them unfolds nothing, so the vote was
+       simply not found and the page sat there showing the map — which is every
+       one of the 2,982 ninth-term votes, each of whose own page carries a link
+       saying "see how every country and every MEP voted".
+
+       So a link that names a vote this page has not got is a reason to fetch
+       the rest, not a reason to give up. */
+    if (!entry) {
+      for (const row of (index.terms || [])) {
+        if (row.file) await loadTerm(Number(row.term), row.file);
+      }
+      entry = find();
+    }
     if (!entry) {
       clearDecision({ country: code });
       return;
