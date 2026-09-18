@@ -16,7 +16,10 @@
   },
   "document": "A9-0304/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines the overall importance of cross-border mobility for facilitating the creative work of CCS professionals and expanding the opportunities for gaining new professional experience abroad",
+    "Stresses the need to facilitate legal access to content and the need to fight against piracy and other illegal uses, in particular in the digital single market"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 109 against, 105 abstained. Result derived from the totals."
@@ -2541,5 +2544,9 @@
   "countries": {},
   "topics": [
     "Jobs and workers"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0304/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0304_EN.html"
+  }
 }

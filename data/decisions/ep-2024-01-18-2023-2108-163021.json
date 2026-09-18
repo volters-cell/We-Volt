@@ -16,7 +16,11 @@
   },
   "document": "A9-0421/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the proposal for the establishment of an international fund for victims under the LBI that would provide legal and financial aid to victims seeking access to remedies",
+    "Underlines the importance of closing the legal and regulatory loopholes which are being exploited by some business enterprises, including investors, at the cost of human rights and the environment",
+    "Believes that business activities should be understood in line with the UNGPs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 426 in favour, 43 against, 86 abstained. Result derived from the totals."
@@ -2269,5 +2273,9 @@
   "countries": {},
   "topics": [
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0421/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0421_EN.html"
+  }
 }

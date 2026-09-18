@@ -16,7 +16,11 @@
   },
   "document": "B9-0463/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to promote species diversity in cultivated arable crops and to preserve natural habitats for pollinators to the greatest extent possible",
+    "Calls on the Commission to set up appropriate governance and monitoring mechanisms, including assigning clear responsibilities to the Commission departments involved in policy areas relevant to wild pollinators",
+    "Calls on the Commission and the Member States to support research to better understand the interactions, including in terms of competition, between honeybee colonies and native/wild pollinators"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 275 in favour, 265 against, 6 abstained. Result derived from the totals."
@@ -2230,5 +2234,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0463/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0463_EN.html"
+  }
 }

@@ -16,10 +16,6 @@
   },
   "document": "A9-0036/2019",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
-    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 656 in favour, 21 against, 19 abstained. Result derived from the totals."
@@ -2836,9 +2832,5 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0036/2019",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0036_EN.html"
-  }
+  ]
 }

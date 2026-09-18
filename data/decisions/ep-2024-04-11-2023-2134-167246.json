@@ -16,7 +16,11 @@
   },
   "document": "A9-0102/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EEAS to persist in taking action to achieve more discernible gender balance within its organisation at all levels",
+    "Welcomes that the EEAS joined the EU Voice pilot project by the EDPS and the EEAS cooperates with other Union institutions in order to share experience and best practices",
+    "Notes that 14 (23 %) of the 60 transactions contained errors but that the Court, based on the five errors which were quantified, estimate the level of error to be below the materiality threshold"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 419 in favour, 153 against, 29 abstained. Result derived from the totals."
@@ -2453,5 +2457,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0102/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0102_EN.html"
+  }
 }

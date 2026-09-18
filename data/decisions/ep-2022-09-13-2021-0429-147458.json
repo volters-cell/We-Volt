@@ -16,9 +16,6 @@
   },
   "document": "A9-0227/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward this resolution to the Council and the Commission"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 497 in favour, 79 against, 53 abstained. Result derived from the totals."
@@ -2567,9 +2564,5 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0227/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0227_EN.html"
-  }
+  ]
 }

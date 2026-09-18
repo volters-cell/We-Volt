@@ -16,7 +16,11 @@
   },
   "document": "A9-0053/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on the need for the Commission to provide reliable, timely and accurate information on NGEU borrowing costs and on expected Recovery and Resilience Facility disbursements throughout the budgetary procedure",
+    "Insists that Parliament will ensure that its prerogatives in the annual budgetary procedure are fully respected in the implementation of this package",
+    "Regrets that, with respect to flexibility and crisis response, the MFF revision can only be seen as a missed opportunity"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 422 in favour, 101 against, 101 abstained. Result derived from the totals."
@@ -2545,5 +2549,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0053/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0053_EN.html"
+  }
 }

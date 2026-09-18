@@ -16,7 +16,10 @@
   },
   "document": "A9-0282/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to assess all Chinese initiatives aimed at combating IUU fishing, and in the light of such assessments, to take appropriate actions under the IUU Regulation",
+    "Welcomes the Agreement reached in the UN on the conservation and sustainable use of marine biological diversity of areas beyond national jurisdiction, and urges the EU and China to ratify it and bring it into effect"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 573 in favour, 11 against, 30 abstained. Result derived from the totals."
@@ -2506,5 +2509,9 @@
   "topics": [
     "China",
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0282/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0282_EN.html"
+  }
 }

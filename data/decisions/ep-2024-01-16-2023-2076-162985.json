@@ -16,7 +16,11 @@
   },
   "document": "A9-0415/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that a cohesive strategy should be adopted for the Black Sea area and that synergies should be developed with the Danube Programme 2021-2027",
+    "Calls on the Commission to continue integrating the Sustainable Development Goals into the future action plans for cross-border cooperation so that no place and no one is left behind",
+    "Welcomes the WestMed sea basin strategy in the Western Mediterranean and Interreg programmes such as MARITTIMO as good examples of direct and diversified cooperation, including at regional level, with shared objectives"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 559 in favour, 20 against, 36 abstained. Result derived from the totals."
@@ -2506,5 +2510,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0415/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0415_EN.html"
+  }
 }

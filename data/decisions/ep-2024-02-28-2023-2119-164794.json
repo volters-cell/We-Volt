@@ -16,7 +16,10 @@
   },
   "document": "A9-0403/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EEAS to regularly and comprehensively report on the implementation of the Strategic Compass to SEDE",
+    "Deplores the continued lack of support from a large number of African countries for a UN general assembly resolution condemning Russia, supporting Ukraine’s territorial integrity and calling for peace"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 350 in favour, 91 against, 96 abstained. Result derived from the totals."
@@ -2197,5 +2200,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0403/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0403_EN.html"
+  }
 }

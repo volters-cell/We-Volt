@@ -16,7 +16,10 @@
   },
   "document": "A9-0405/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges each EU delegation to publicise Parliament’s work relevant to its host country, including in the local language on its website, and to follow up with local authorities and civil society groups",
+    "Believes that great untapped potential exists for Parliament to further develop its diplomatic role and contribution to the achievement of EU foreign and security policy objectives"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 492 in favour, 73 against, 55 abstained. Result derived from the totals."
@@ -2526,5 +2529,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0405/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0405_EN.html"
+  }
 }

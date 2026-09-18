@@ -16,7 +16,11 @@
   },
   "document": "A9-0229/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all countries in the region to commit to the stability and territorial integrity of BiH, to condemn the use of inflammatory rhetoric and to contribute in a constructive manner to BiH’s progress towards EU accession",
+    "Urges BiH to align its legislation and take action on anti-money laundering and countering the financing of terrorism",
+    "Calls on political and religious leaders in BiH to work towards promoting unity, inclusivity, reconciliation and peace; condemns all inflammatory rhetoric and warmongering that fuel tensions and divisions in BiH society"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 530 in favour, 68 against, 33 abstained. Result derived from the totals."
@@ -2573,5 +2577,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0229/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0229_EN.html"
+  }
 }

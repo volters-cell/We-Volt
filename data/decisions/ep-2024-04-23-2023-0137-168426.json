@@ -16,7 +16,9 @@
   },
   "document": "A9-0444/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to alter its proposal accordingly, in accordance with Article 293(2) of the Treaty on the Functioning of the European Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 368 in favour, 166 against, 64 abstained. Result derived from the totals."
@@ -2438,5 +2440,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0444/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0444_EN.html"
+  }
 }

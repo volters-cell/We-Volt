@@ -16,9 +16,6 @@
   },
   "document": "B9-0093/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward this decision to the Council and the Commission, for information"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 689 in favour, 6 against, 5 abstained. Result derived from the totals."
@@ -2849,9 +2846,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0093/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0093_EN.html"
-  }
+  "countries": {}
 }

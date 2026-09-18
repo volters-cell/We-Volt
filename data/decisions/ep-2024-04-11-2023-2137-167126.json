@@ -16,7 +16,11 @@
   },
   "document": "A9-0084/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Ombudsman to periodically inform the budgetary authority about the difficulties encountered in its work on the transparency and accountability of the Recovery and Resilience Facility",
+    "Regrets that the post of the Secretary-General has been vacant since 1 September 2022",
+    "Welcomes that the Ombudsman published a guide in 2022 for the public on the right of public access to documents, with information on how to best exercise this right"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 585 in favour, 9 against, 15 abstained. Result derived from the totals."
@@ -2485,5 +2489,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0084/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0084_EN.html"
+  }
 }

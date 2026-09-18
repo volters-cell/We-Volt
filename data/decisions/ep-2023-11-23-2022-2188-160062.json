@@ -16,7 +16,11 @@
   },
   "document": "A9-0331/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to regularly monitor the overall impact of the TCA on the internal market and consumers",
+    "Calls on the Commission to ensure that rules on UK ingredients required by EU manufacturers are applied coherently across EU Member States",
+    "Calls on the Commission to prepare a table comparing tariff rate quotas, customs duties and non-tariff barriers for different product categories for EU-UK trade and EU trade with other partners"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 512 in favour, 9 against, 42 abstained. Result derived from the totals."
@@ -2302,5 +2306,9 @@
   "topics": [
     "United Kingdom",
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0331/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0331_EN.html"
+  }
 }

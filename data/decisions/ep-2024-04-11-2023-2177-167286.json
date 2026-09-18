@@ -16,7 +16,11 @@
   },
   "document": "A9-0095/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Joint Undertaking's objective and role in developing a supercomputing ecosystem in Europe",
+    "Notes, in addition, that the risk related to the Joint Undertaking operational contract expenditure was assessed by the Court as medium due to its complex procurement procedures for high-value contracts",
+    "Notes that the Court categorises the risk to budget management as medium because the complex and lengthy acquisition process for supercomputers"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 518 in favour, 17 against, 55 abstained. Result derived from the totals."
@@ -2409,5 +2413,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0095/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0095_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0129/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the area of communication of findings registered very positive results, with the timeliness of publication on the Authority’s Journal maintaining the positive performance achieved over the past 2 years",
+    "Welcomes the Authority’s organisation of ‘ONE Conference - Health, Environment, Society’ in June 2022, highlighting the connection between human, animal and environmental health and leading to a ‘one health-one environment’",
+    "Welcomes EFSA's intention to strengthen joint data management with Member States and other agencies in order to improve data quality and interoperability (in line with the One Health approach)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 554 in favour, 50 against, 6 abstained. Result derived from the totals."
@@ -2489,5 +2493,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0129/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0129_EN.html"
+  }
 }

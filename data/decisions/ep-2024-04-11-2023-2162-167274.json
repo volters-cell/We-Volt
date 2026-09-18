@@ -16,7 +16,10 @@
   },
   "document": "A9-0103/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Authority managed, in 2022, 14 procurement procedures, out of which three were open tenders in the area of IT representing a total value of EUR 99,4 million",
+    "Notes that in 2022 the Authority, together with the other European Supervisory Authorities, issued warnings to consumers in relation to the high-risk and speculative activities associated with many crypto-assets"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 35 against, 36 abstained. Result derived from the totals."
@@ -2437,5 +2440,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0103/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0103_EN.html"
+  }
 }

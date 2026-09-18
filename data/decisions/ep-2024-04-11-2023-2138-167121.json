@@ -16,7 +16,11 @@
   },
   "document": "A9-0086/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EDPS to review its rules of procedure of ensuring and timely review of complaints by citizens, taking into account all relevant information and to inform the discharge authority on the progress made in this area",
+    "Welcomes the EDPS’ continued efforts to actively improve physical and mental well-being of its staff",
+    "Notes that 14 (23 %) of the 60 transactions contained errors but that the Court, based on the five errors which were quantified, estimates the level of error to be below the materiality threshold"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 556 in favour, 19 against, 28 abstained. Result derived from the totals."
@@ -2461,5 +2465,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0086/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0086_EN.html"
+  }
 }

@@ -16,7 +16,9 @@
   },
   "document": "A9-0045/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests under paragraph 1 and 2 shall at least contain:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 329 in favour, 213 against, 79 abstained. Result derived from the totals."
@@ -2535,5 +2537,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0045/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0045_EN.html"
+  }
 }

@@ -16,10 +16,6 @@
   },
   "document": "A9-0046/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
-    "Instructs its President to forward its position to the Council and the Commission"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 472 in favour, 122 against, 41 abstained. Result derived from the totals."
@@ -2592,9 +2588,5 @@
   "countries": {},
   "topics": [
     "Climate"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0046/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0046_EN.html"
-  }
+  ]
 }

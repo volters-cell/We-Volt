@@ -16,7 +16,11 @@
   },
   "document": "A9-0137/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU Member States to fully comply with and implement the EU Timber Regulation and to align with the requirements of the EU Deforestation Regulation",
+    "Welcomes the conclusion of negotiations on the VPA between the EU and Côte d’Ivoire and calls for its swift ratification by both sides so it can enter into force in XXXX",
+    "Recalls that sustainable and inclusive forest management and governance are essential for achieving the objectives set in the 2030 Agenda for Sustainable Development and the Paris Agreement"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 11 against, 78 abstained. Result derived from the totals."
@@ -2494,5 +2498,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0137/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0137_EN.html"
+  }
 }

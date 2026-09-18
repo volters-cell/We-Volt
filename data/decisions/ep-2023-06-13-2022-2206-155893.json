@@ -16,7 +16,11 @@
   },
   "document": "A9-0182/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to encourage the Member States to use the eID signature tool",
+    "Calls on the Commission to engage with organisers of valid ECIs after it has issued its communication, thereby increasing the possibility of legislative follow-up in the long term",
+    "Welcomes the fact that a number of Member States have decided to lower the minimum age entitling to support ECIs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 502 in favour, 49 against, 54 abstained. Result derived from the totals."
@@ -2466,5 +2470,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0182/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0182_EN.html"
+  }
 }

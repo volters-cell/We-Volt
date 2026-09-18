@@ -16,7 +16,11 @@
   },
   "document": "A9-0433/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States to establish and maintain comprehensive databases that collect and record information on the beneficial owners of registered vessels",
+    "Urges the Commission to increase the number of staff working on ocean governance and IUU fishing within the Commission’s Directorate-General for Maritime Affairs and Fisheries",
+    "Underlines the importance of introducing more import controls to protect public health and the competitiveness of the EU fishing industry by implementing strong and timely measures and sanctions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 5 against, 3 abstained. Result derived from the totals."
@@ -2249,5 +2253,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0433/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0433_EN.html"
+  }
 }

@@ -16,7 +16,9 @@
   },
   "document": "A9-0327/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to alter its proposal accordingly, in accordance with Article 293(2) of the Treaty on the Functioning of the European Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 570 in favour, 17 against, 52 abstained. Result derived from the totals."
@@ -2605,5 +2607,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0327/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0327_EN.html"
+  }
 }

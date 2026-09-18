@@ -16,7 +16,9 @@
   },
   "document": "B9-0431/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to submit a new delegated act which takes account of the following recommendations:"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 149 in favour, 461 against, 22 abstained. Result derived from the totals."
@@ -2571,5 +2573,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0431/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0431_EN.html"
+  }
 }

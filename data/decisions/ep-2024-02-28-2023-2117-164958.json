@@ -16,7 +16,11 @@
   },
   "document": "A9-0389/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns the role of the illegitimate regime of Aliaksandr Lukashenka for de facto surrendering national sovereignty to the Kremlin in order to maintain its grip on Belarus",
+    "Believes that the EU should shape its CFSP accordingly, and on the basis of the following four objectives:",
+    "Reiterates the need to re-think the Eastern Partnership multilateral policy to restore regional engagement and the regional democratic reform agenda, including through the EuroNest Parliamentary Assembly"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 338 in favour, 86 against, 122 abstained. Result derived from the totals."
@@ -2230,5 +2234,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0389/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0389_EN.html"
+  }
 }

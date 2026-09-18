@@ -16,7 +16,11 @@
   },
   "document": "A9-0091/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Court of Auditors’ findings that the transactions underlying Europe’s Rail Joint Undertaking ('JU') for the financial year 2022 are, in all material respect, legal and regular",
+    "Welcomes the successful commencement of activities by the EU- Rail Joint Undertaking in the end of 2021; welcomes furthermore its role in delivering an integrated EU railway network for European passengers and cargo",
+    "Notes that the estimated total value of the activities in 2022 amounts to EUR 102.4 million (of which EUR 90 million from Members other than the EU)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 528 in favour, 51 against, 18 abstained. Result derived from the totals."
@@ -2437,5 +2441,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0091/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0091_EN.html"
+  }
 }

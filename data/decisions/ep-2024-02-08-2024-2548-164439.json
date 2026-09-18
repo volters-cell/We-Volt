@@ -16,7 +16,9 @@
   },
   "document": "B9-0124/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines the need to strengthen permanent monitoring efforts and enhance their implementation well ahead of elections, referendums and other important political processes across Europe"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 433 in favour, 56 against, 18 abstained. Result derived from the totals."
@@ -2073,5 +2075,9 @@
   "countries": {},
   "topics": [
     "Russia"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0124/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0124_EN.html"
+  }
 }

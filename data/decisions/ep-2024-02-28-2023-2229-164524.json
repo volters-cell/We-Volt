@@ -16,7 +16,10 @@
   },
   "document": "A9-0031/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that the EIB must maintain its AAA credit rating and retain the full confidence of the capital markets in its activities",
+    "Recalls that the EIB is the world’s largest multi-currency issuer of green bonds; points out that increasing the proportion of euro-denominated bonds would further strengthen the international role of the euro"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 455 in favour, 64 against, 26 abstained. Result derived from the totals."
@@ -2226,5 +2229,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0031/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0031_EN.html"
+  }
 }

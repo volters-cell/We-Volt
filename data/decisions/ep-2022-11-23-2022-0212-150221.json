@@ -16,11 +16,6 @@
   },
   "document": "A9-0278/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to declare that the general budget of the European Union for the financial year 2023 has been definitively adopted and to arrange for its publication in the Official Journal of the European Union",
-    "Instructs its President to forward this legislative resolution to the Council, the Commission, the other institutions and bodies concerned and the national parliaments",
-    "Takes note of the Commission statement annexed to this resolution"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 492 in favour, 66 against, 46 abstained. Result derived from the totals."
@@ -2465,9 +2460,5 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0278/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0278_EN.html"
-  }
+  ]
 }

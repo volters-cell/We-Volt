@@ -16,7 +16,10 @@
   },
   "document": "A9-0068/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of research and innovation in the agri-food sector and the need to increase the budget for the Horizon research programme dedicated to agriculture",
+    "Reiterates its long standing call for full co-decision powers, the European Parliament’s right of legislative initiative, and the abolition of vetoes for the adoption of the multiannual financial framework"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 380 in favour, 102 against, 100 abstained. Result derived from the totals."
@@ -2377,5 +2380,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0068/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0068_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "B9-0184/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests their unconditional and immediate release, and the release of all the political prisoners unjustly and arbitrarily imprisoned by the Venezuelan regime",
+    "Condemns in the strongest possible terms the arrests of Rocio San Miguel and of General Hernández Da Costa",
+    "Deplores the continuous repression by the Venezuelan regime against opposition figures, including torture, enforced disappearances and killings; reiterates its firm and unconditional support for the Venezuelan people"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 497 in favour, 22 against, 27 abstained. Result derived from the totals."
@@ -2230,5 +2234,9 @@
   "topics": [
     "Venezuela",
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0184/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0184_EN.html"
+  }
 }

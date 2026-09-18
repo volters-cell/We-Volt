@@ -16,9 +16,6 @@
   },
   "document": "A9-0013/2019",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward this resolution to the Council and the Commission"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 53 in favour, 526 against, 82 abstained. Result derived from the totals."
@@ -2695,9 +2692,5 @@
   "countries": {},
   "topics": [
     "Migration"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0013/2019",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0013_EN.html"
-  }
+  ]
 }

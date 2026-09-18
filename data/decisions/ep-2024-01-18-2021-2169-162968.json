@@ -16,7 +16,11 @@
   },
   "document": "A9-0357/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission and the Member States to ensure the highest standards of safety on board vessels, irrespective of their size; encourages the sector to implement the best possible conditions for safety on board",
+    "Calls on the Commission and Member States to make it easier for industry professionals to access EMFAF funds",
+    "Urges the Commission and Member States to work together to support research and allowing innovative gear and techniques for selective fishing that contribute to substantially reducing CO2 emissions and fuel use"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 371 in favour, 92 against, 92 abstained. Result derived from the totals."
@@ -2269,5 +2273,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0357/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0357_EN.html"
+  }
 }

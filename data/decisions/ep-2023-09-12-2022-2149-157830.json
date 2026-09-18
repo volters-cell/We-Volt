@@ -16,7 +16,9 @@
   },
   "document": "A9-0205/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the BoG to strengthen educational and pedagogical standards by:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 530 in favour, 67 against, 30 abstained. Result derived from the totals."
@@ -2554,5 +2556,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0205/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0205_EN.html"
+  }
 }

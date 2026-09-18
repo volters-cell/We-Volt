@@ -16,7 +16,9 @@
   },
   "document": "A9-0104/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the resource page, EMCDDA 4 Ukraine, created for professionals working in the drugs field in Europe supporting people displaced from Ukraine"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 534 in favour, 46 against, 22 abstained. Result derived from the totals."
@@ -2457,5 +2459,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0104/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0104_EN.html"
+  }
 }

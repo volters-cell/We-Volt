@@ -16,7 +16,11 @@
   },
   "document": "B9-0467/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that – at least in part – the report and recommendations were prepared in the context of upcoming or ongoing electoral process in Poland, Greece and Spain",
+    "Emphasises the fact that the authors of the report and recommendations used unreliable and biased sources, which distorted the description of the situation",
+    "Believes that better regulation at EU level on the import of spyware and dual-use products (for example to prevent their purchase by criminal groups) seems justified but extremely difficult to implement and enforce"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 425 in favour, 108 against, 23 abstained. Result derived from the totals."
@@ -2266,5 +2270,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0467/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0467_EN.html"
+  }
 }

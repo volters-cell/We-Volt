@@ -16,7 +16,9 @@
   },
   "document": "B9-0234/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Points out that EO 14086 does not apply to data accessed by public authorities via other means, for example through the US Cloud Act or the US Patriot Act, by commercial data purchases, or by voluntary data sharing agreements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 306 in favour, 27 against, 231 abstained. Result derived from the totals."
@@ -2302,5 +2304,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0234/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0234_EN.html"
+  }
 }

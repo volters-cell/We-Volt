@@ -16,7 +16,11 @@
   },
   "document": "A9-0193/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission once again to include canned fish and seafood as ‘sensitive products’ for the purposes of possible trade negotiations with Thailand",
+    "Welcomes Thailand’s adoption of a National Action Plan on Business and Human Rights, which made it the first country in the Asia-Pacific region to incorporate such a plan, and calls for its effective implementation",
+    "Welcomes the inclusion in the PCA of provisions on cooperation on sustainable food systems; stresses that the agriculture sector has important sensitivities for both Thailand and the EU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 546 in favour, 42 against, 26 abstained. Result derived from the totals."
@@ -2502,5 +2506,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0193/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0193_EN.html"
+  }
 }

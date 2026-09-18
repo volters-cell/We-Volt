@@ -16,7 +16,11 @@
   },
   "document": "A9-0376/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Deplores the fact that some Member States are prolonging state of emergency measures beyond what is necessary and proportionate, and rushing to adopt legislation without proper consultation",
+    "Welcomes the introduction of broadcasting and live-streaming in 2022 by the Court of Justice to facilitate partial public access to its judicial activity",
+    "Welcomes, in this light, the adoption of the amendments to the Rules of Procedure of the European Parliament that aim at strengthening its integrity, independence and accountability"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 391 in favour, 130 against, 20 abstained. Result derived from the totals."
@@ -2210,5 +2214,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0376/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0376_EN.html"
+  }
 }

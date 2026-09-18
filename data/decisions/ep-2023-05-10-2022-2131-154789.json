@@ -16,7 +16,9 @@
   },
   "document": "A9-0069/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the IHI Joint Undertaking has maintained a good geographical balance (20 different countries) and a good gender balance (22 women, 17 men) when external experts were consulted"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 568 in favour, 53 against, 6 abstained. Result derived from the totals."
@@ -2557,5 +2559,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0069/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0069_EN.html"
+  }
 }

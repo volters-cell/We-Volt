@@ -16,7 +16,11 @@
   },
   "document": "A9-0204/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on adequate funding for and the effective and impartial functioning of independent bodies and agencies and the consistent implementation of their decisions and recommendations",
+    "Calls on the authorities to continue cooperating with organisations representing the Roma and Egyptian communities in order to ensure their well-being and integration into society",
+    "Calls on the authorities to adopt a legal framework that protects journalists, human rights defenders and other stakeholders from strategic lawsuits against public participation (SLAPPs)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 536 in favour, 54 against, 32 abstained. Result derived from the totals."
@@ -2537,5 +2541,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0204/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0204_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0156/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to maintain close alignment between POSEI and rural development programmes, given the high level of interdependence between these two types of support",
+    "Calls on the Commission and the Member States to address the root causes of early school leaving in the ORs and to encourage the exchange of good practices in order to provide concrete solutions to this problem",
+    "Calls on the Commission to examine the possibility of special treatment for the outermost regions with regard to State aid in the field of transport, which would not create any distortion of competition at EU level"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 589 in favour, 22 against, 16 abstained. Result derived from the totals."
@@ -2554,5 +2558,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0156/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0156_EN.html"
+  }
 }

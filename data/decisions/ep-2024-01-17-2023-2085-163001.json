@@ -16,7 +16,11 @@
   },
   "document": "A9-0436/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to adopt measures to keep their electoral processes free from extremism, the spread of disinformation and foreign interference",
+    "Calls on the Commission to present, without further delay, a proposal to update and improve the Consular Protection Directive, including by giving EU delegations a more active role in assisting under-represented EU citizens",
+    "Calls on the Commission to take into account these proposals in the upcoming 2023 EU citizenship report and to take the necessary steps to implement them following the procedure provided for in Article 25 TFEU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 437 in favour, 158 against, 41 abstained. Result derived from the totals."
@@ -2590,5 +2594,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0436/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0436_EN.html"
+  }
 }

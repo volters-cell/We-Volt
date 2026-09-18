@@ -16,7 +16,9 @@
   },
   "document": "A9-0429/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls the importance of enhancing cooperation and dialogue between the national parliaments and the European Parliament on the right of inquiry"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 453 in favour, 85 against, 95 abstained. Result derived from the totals."
@@ -2578,5 +2580,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0429/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0429_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0384/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls that EU primary law introduces two main procedures for the adoption of legislative acts: the ordinary legislative procedure and the special legislative procedure",
+    "Notes that the respective procedures involve Parliament and the Council to differing degrees",
+    "Underlines that, although Parliament and the Council are both involved, SLPs do not put the two institutions on an equal footing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 389 in favour, 186 against, 53 abstained. Result derived from the totals."
@@ -2558,5 +2562,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0384/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0384_EN.html"
+  }
 }

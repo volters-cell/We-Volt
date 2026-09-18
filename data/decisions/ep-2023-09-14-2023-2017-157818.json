@@ -16,7 +16,9 @@
   },
   "document": "A9-0249/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Considers it necessary for Parliament to strengthen its functions of political scrutiny over the Commission, including introducing the possibility of triggering motions of censure against individual commissioners"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 316 in favour, 137 against, 47 abstained. Result derived from the totals."
@@ -2046,5 +2048,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0249/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0249_EN.html"
+  }
 }

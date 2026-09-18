@@ -16,7 +16,11 @@
   },
   "document": "A9-0232/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to increase investment through the ESF+ to support measures aimed at integrating disadvantaged youth and NEETs into the labour market as well as reducing the school dropout rate",
+    "Underlines the need for the active inclusion of younger and older people in the vocational learning process in order to avoid age discrimination related to skills and vocational training",
+    "Notes that the acquisition of a range of skills related to the use of basic software or simple computerised machines should be provided and paid for by all employers, as it is the core of the twin transition"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 508 in favour, 12 against, 76 abstained. Result derived from the totals."
@@ -2430,5 +2434,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0232/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0232_EN.html"
+  }
 }

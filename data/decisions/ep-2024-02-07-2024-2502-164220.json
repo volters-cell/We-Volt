@@ -16,7 +16,11 @@
   },
   "document": "B9-0098/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the government to ensure the full independence of its national regulatory authority for the audiovisual sector as required under the AVMS Directive",
+    "Calls on the government to fully implement all judgments of the European Court of Human Rights, as well as to comply with interim measures imposed by the Court",
+    "Calls on the government to improve the legislative process by introducing real and meaningful consultation and to abolish the controversial practice of omnibus legislation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 330 in favour, 254 against, 26 abstained. Result derived from the totals."
@@ -2485,5 +2489,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0098/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0098_EN.html"
+  }
 }

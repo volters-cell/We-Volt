@@ -16,10 +16,6 @@
   },
   "document": "A9-0004/2019",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to declare that Amending budget No 2/2019 has been definitively adopted and arrange for its publication in the Official Journal of the European Union",
-    "Instructs its President to forward this resolution to the Council, the Commission, the other institutions and bodies concerned and the national parliaments"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 614 in favour, 69 against, 10 abstained. Result derived from the totals."
@@ -2824,9 +2820,5 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0004/2019",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0004_EN.html"
-  }
+  ]
 }

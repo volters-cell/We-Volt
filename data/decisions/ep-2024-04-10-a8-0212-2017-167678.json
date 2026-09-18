@@ -16,7 +16,11 @@
   },
   "document": "A8-0212/2017",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests for comparison with Eurodac data shall be limited to searching with fingerprint or facial image data",
+    "Requests for comparison with Eurodac data shall be limited to searching with biometric or alphanumeric data",
+    "Requests for comparison with Eurodac data shall be limited to comparisons of fingerprint and facial image data"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 100 in favour, 519 against, 4 abstained. Result derived from the totals."
@@ -2546,5 +2550,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A8-0212/2017",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-8-2017-0212_EN.html"
+  }
 }

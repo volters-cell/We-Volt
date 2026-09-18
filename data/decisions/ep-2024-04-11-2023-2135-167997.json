@@ -16,7 +16,9 @@
   },
   "document": "A9-0072/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that 14 (23 %) of the 60 transactions contained errors but that the Court, based on the five errors which were quantified, estimates the level of error to be below the materiality threshold"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 527 in favour, 62 against, 0 abstained. Result derived from the totals."
@@ -2405,5 +2407,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0072/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0072_EN.html"
+  }
 }

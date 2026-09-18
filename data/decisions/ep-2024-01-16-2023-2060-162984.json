@@ -16,7 +16,10 @@
   },
   "document": "A9-0438/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that smaller electric aircraft can operate from existing shorter and simpler runways, which could reduce the need for large and expensive infrastructure in the future",
+    "Recalls that the altitude conditions specific to air transport impose particular technical constraints on batteries, compared to other modes of transport"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 414 in favour, 118 against, 93 abstained. Result derived from the totals."
@@ -2549,5 +2552,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0438/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0438_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0208/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the European Council, in light of the ongoing energy crisis, to activate the general passerelle clauses to allow measures on energy policy that are primarily fiscal (Article 194(3) TFEU) to be approved by QMV and OLP",
+    "Calls on the European Council to activate the general passerelle clauses to allow certain social policy and anti-discrimination measures to be approved by OLP and QMV",
+    "Welcomes the conclusions of the Conference on the Future of Europe and reaffirms its commitment to effectively following up on the citizens’ recommendations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 347 in favour, 241 against, 46 abstained. Result derived from the totals."
@@ -2582,5 +2586,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0208/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0208_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0101/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the KDT Joint Undertaking to address weaknesses in the use of the reinforced monitoring tool",
+    "Welcomes the KDT Joint Undertaking's contribution to reinforcing EU's strategic autonomy in the electronic components and systems sector",
+    "Notes that the changes in the size of the KDT Joint Undertaking’s budget largely depend on the implementation phase of the multiannual research and innovation programmes, which the KDT Joint Undertaking is implementing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 535 in favour, 48 against, 11 abstained. Result derived from the totals."
@@ -2425,5 +2429,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0101/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0101_EN.html"
+  }
 }

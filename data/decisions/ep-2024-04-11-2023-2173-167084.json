@@ -16,7 +16,11 @@
   },
   "document": "A9-0087/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the finding of the Court of Auditors that the transactions underlying the accounts of the Clean Sky 2 Joint Undertaking (‘JU’) for the financial year 2022 are legal and regular in all material respects",
+    "Welcomes that the ex-post audit results in 2022 had a representative error rate of 1.56% and that the corresponding residual error rate of 0.43%, staying well below the targeted threshold of 2%",
+    "Stresses, as does the Court, that the importance for the Joint Undertaking to implement their specific risk-based approach to grant management has increased under Horizon Europe"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 510 in favour, 52 against, 23 abstained. Result derived from the totals."
@@ -2389,5 +2393,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0087/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0087_EN.html"
+  }
 }

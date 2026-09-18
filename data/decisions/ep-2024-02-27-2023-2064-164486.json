@@ -16,7 +16,9 @@
   },
   "document": "A9-0412/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the ECB to bring its internal whistleblowing framework into line with the EU Whistleblower Directive"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 418 in favour, 157 against, 42 abstained. Result derived from the totals."
@@ -2517,5 +2519,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0412/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0412_EN.html"
+  }
 }

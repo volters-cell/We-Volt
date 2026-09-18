@@ -16,7 +16,11 @@
   },
   "document": "A9-0434/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to urgently revise its ex post audit procedures, in order to ensure adequate verification of whether the audited targets previously assessed as fulfilled were not reversed after the respective payments",
+    "Welcomes the PIF Report 2022 and the analyses presented therein",
+    "Welcomes the actions launched by the Commission in 2022 to enhance the level of protection of the EU’s financial interests but calls for further vigilance and complementary actions in this field"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 446 in favour, 48 against, 66 abstained. Result derived from the totals."
@@ -2286,5 +2290,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0434/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0434_EN.html"
+  }
 }

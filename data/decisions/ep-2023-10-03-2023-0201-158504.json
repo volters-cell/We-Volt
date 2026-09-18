@@ -16,7 +16,11 @@
   },
   "document": "A9-0273/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that women and men should benefit equally from the Recovery and Resilience Facility, in particular with the objective to narrow the Union’s ongoing gender pay gap of 13 %",
+    "Considers that the proposed revision targets only some of the most pressing areas of concern in the existing framework and does not fully address all needs and challenges identified by Parliament",
+    "Recalls that spending under Heading 7 should be set at a level that guarantees that the EU has an effective and efficient administration, as proposed by the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 393 in favour, 136 against, 92 abstained. Result derived from the totals."
@@ -2533,5 +2537,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0273/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0273_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A9-0393/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the European Council to support the protection and promotion of the freedom of scientific research, and to ensure that this fundamental right is duly respected in all Member States",
+    "Calls on the Commission and Member States to promote public awareness of the importance of freedom of scientific research through education, public outreach, and support for science journalism"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 461 in favour, 34 against, 140 abstained. Result derived from the totals."
@@ -2586,5 +2589,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0393/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0393_EN.html"
+  }
 }

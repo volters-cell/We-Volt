@@ -16,7 +16,11 @@
   },
   "document": "A9-0400/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on both parties to ensure better integration of small-scale farmers and consumers in Domestic Advisory Groups in the context of the renewal of these groups",
+    "Calls on both parties to ensure better integration of small-scale farmers and consumers in the DAGs in the context of the renewal of these groups",
+    "Notes, with concern, that EU imports of fertilisers from Canada increased by 225 % between 2017 and 2022, which is contrary to the EU’s goal of achieving autonomy in fertilising products and improved soil health"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 391 in favour, 157 against, 83 abstained. Result derived from the totals."
@@ -2573,5 +2577,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0400/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0400_EN.html"
+  }
 }

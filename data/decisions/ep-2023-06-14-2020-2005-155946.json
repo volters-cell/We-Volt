@@ -16,7 +16,11 @@
   },
   "document": "A9-0186/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to update and strengthen the 2014 Council Recommendation and to turn it into a stronger legislative instrument",
+    "Calls on the Commission to provide assistance to the Member States on legal enquiries related to implementation of a Quality Traineeship Framework",
+    "Welcomes the appearance of digital traineeships; calls on the Union institutions to develop such formats and recalls the importance of keeping the quality standards for traineeships high in the current context"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 404 in favour, 78 against, 130 abstained. Result derived from the totals."
@@ -2494,5 +2498,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0186/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0186_EN.html"
+  }
 }

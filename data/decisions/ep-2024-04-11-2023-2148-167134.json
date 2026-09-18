@@ -16,7 +16,11 @@
   },
   "document": "A9-0135/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Agency’s activities for promoting alternatives to animal testing and the steps taken to increase the effectiveness and visibility of this work",
+    "Welcomes the fact that 151 of the 162 planned outputs have been completed as planned and a further 8 are in progress",
+    "Welcomes ECHA’s activities for promoting alternatives to animal testing and the steps taken to increase the effectiveness and visibility of this work"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 531 in favour, 48 against, 24 abstained. Result derived from the totals."
@@ -2461,5 +2465,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0135/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0135_EN.html"
+  }
 }

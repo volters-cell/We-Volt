@@ -16,7 +16,10 @@
   },
   "document": "B9-0192/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns in the strongest possible terms the barbaric terrorist attacks committed by Hamas against Israel and calls for the immediate and unconditional release of all hostages",
+    "Welcomes international efforts to establish a comprehensive aid strategy that includes air, land, and sea routes to maximize the flow of humanitarian aid into Gaza and ensure that aid is distributed to everyone in need"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 372 in favour, 44 against, 120 abstained. Result derived from the totals."
@@ -2189,5 +2192,9 @@
   "countries": {},
   "topics": [
     "Israel and Palestine"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0192/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0192_EN.html"
+  }
 }

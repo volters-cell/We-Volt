@@ -16,7 +16,11 @@
   },
   "document": "A9-0030/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that rainbow families have a right to free movement in the EU, and the children of rainbow families should not be discriminated against in acquiring EU citizenship",
+    "Calls on the Member States to implement the Directive on equal treatment in employment and occupation",
+    "Calls on all Member States to adhere to the Guidelines for Strategies and Action Plans to Enhance LGBTIQ Equality[9] as prepared by the LGBTIQ Equality Subgroup"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 392 in favour, 119 against, 32 abstained. Result derived from the totals."
@@ -2218,5 +2222,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0030/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0030_EN.html"
+  }
 }

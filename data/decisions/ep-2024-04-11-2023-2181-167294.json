@@ -16,7 +16,11 @@
   },
   "document": "A9-0094/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the Joint Undertaking has taken corrective action in response to the Court’s observation issued in 2021",
+    "Notes that, for 2022, the available budget[15] was EUR 146.9 million in payment appropriations (EUR 69.9 million in 2021) and EUR 158.8 million in commitment appropriations (EUR 34.8 million in 2021)",
+    "Notes the 2022 surplus of EUR 107.2 million, attributed to the late adoption of the Single Basic Act"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 523 in favour, 47 against, 23 abstained. Result derived from the totals."
@@ -2421,5 +2425,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0094/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0094_EN.html"
+  }
 }

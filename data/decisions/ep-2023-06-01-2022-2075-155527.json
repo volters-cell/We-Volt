@@ -16,7 +16,11 @@
   },
   "document": "A9-0187/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission, Member States and tech companies to work together and to invest more resources in developing regulatory and technological remedies to AI-powered disinformation",
+    "Calls on the Commission and ENISA to map existing and planned bodies, agencies and other European organisations working with cybersecurity and to propose solutions to fill potential gaps",
+    "Calls on the Council, the Commission and the EEAS to strengthen cyber-related controls on strategic communication channels (e.g. military channels in times of war and CSDP missions)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 469 in favour, 71 against, 75 abstained. Result derived from the totals."
@@ -2505,5 +2509,9 @@
   "countries": {},
   "topics": [
     "Disinformation"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0187/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0187_EN.html"
+  }
 }

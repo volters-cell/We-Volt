@@ -16,7 +16,9 @@
   },
   "document": "A9-0098/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes with appreciation, regarding the SYSPER tool, that the Agency has onboarded modules such as REPORTING, ETHICS and STAGE and is working on onboarding other Sysper modules (e.g. EVAL/PROMO)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 20 against, 48 abstained. Result derived from the totals."
@@ -2425,5 +2427,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0098/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0098_EN.html"
+  }
 }

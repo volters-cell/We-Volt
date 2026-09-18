@@ -16,7 +16,10 @@
   },
   "document": "B9-0493/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to submit a new delegated act which takes account of the following recommendations:",
+    "Considers that the Commission delegated directive:"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 120 in favour, 501 against, 10 abstained. Result derived from the totals."
@@ -2566,5 +2569,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0493/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0493_EN.html"
+  }
 }

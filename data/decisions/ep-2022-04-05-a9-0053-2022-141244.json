@@ -16,10 +16,6 @@
   },
   "document": "A9-0053/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
-    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 549 in favour, 3 against, 78 abstained. Result derived from the totals."
@@ -2574,9 +2570,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0053/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0053_EN.html"
-  }
+  "countries": {}
 }

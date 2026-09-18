@@ -16,7 +16,11 @@
   },
   "document": "A9-0377/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Council to adopt a decision to include hate speech and hate crime among the criminal offences within the list under Article 83(1) TFEU, so that the Commission can initiate the second stage of the procedure",
+    "Calls on the Member States to work together responsibly and constructively to resume negotiations within the Council in order to adopt a Council decision before the end of the current parliamentary term",
+    "Urges the Member States to support or at least refrain from opposing the adoption of the draft decision"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 397 in favour, 121 against, 26 abstained. Result derived from the totals."
@@ -2222,5 +2226,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0377/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0377_EN.html"
+  }
 }

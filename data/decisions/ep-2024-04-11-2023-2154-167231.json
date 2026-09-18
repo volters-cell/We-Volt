@@ -16,7 +16,11 @@
   },
   "document": "A9-0132/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the amount of the Institute’s final budget is the result of an amendment of EUR 656 930,67 adopted by its governing board (the ‘Board’) due to modifications made to the Institute’s annual work programme 2022",
+    "Notes that one former Commissioner and one former Member of the European Parliament, as members of the Board, are receiving honoraria of EUR 2 000 per Board meeting attended from the budget of the Institute",
+    "Recalls the importance of the Institute to develop greater visibility in the media, internet, and social media in order to make its work known to the citizens"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 535 in favour, 47 against, 7 abstained. Result derived from the totals."
@@ -2405,5 +2409,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0132/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0132_EN.html"
+  }
 }

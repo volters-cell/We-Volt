@@ -16,10 +16,6 @@
   },
   "document": "A9-0128/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
-    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 2 against, 27 abstained. Result derived from the totals."
@@ -2593,9 +2589,5 @@
   "countries": {},
   "topics": [
     "Tax"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0128/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0128_EN.html"
-  }
+  ]
 }

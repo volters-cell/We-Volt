@@ -16,7 +16,11 @@
   },
   "document": "A9-0314/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the elimination of tariffs on EU agri-food exports, including key products such as pigmeat (current tariff: 5 %) and wine and sparkling wine (current tariff: 5 %), thereby opening up new business opportunities",
+    "Welcomes the concern about protecting the specific situation of the outermost regions in the Agreement, given that the Agreement affects sensitive products for the economies of those regions",
+    "Welcomes the agreement, which will create more sustainable free and fair trade opportunities between the EU and New Zealand; calls for the European Parliament to consent to the agreement"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 457 in favour, 104 against, 74 abstained. Result derived from the totals."
@@ -2589,5 +2593,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0314/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0314_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A9-0122/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates the importance of high-quality data provided by the Foundation’s ongoing monitoring tools for evidence-based policymaking, especially the Europe-wide surveys conducted by the Foundation",
+    "Notes the Foundation’s efforts towards digitalisation through the use of EU Signature and DocuSign in case of procurement, contractual documents and internal documents"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 543 in favour, 59 against, 2 abstained. Result derived from the totals."
@@ -2465,5 +2468,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0122/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0122_EN.html"
+  }
 }

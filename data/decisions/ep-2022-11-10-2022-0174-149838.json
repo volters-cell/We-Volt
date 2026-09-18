@@ -16,9 +16,6 @@
   },
   "document": "A9-0257/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward its position to the Council, the Commission and the governments and parliaments of the Member States and of World Trade Organization"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 503 in favour, 93 against, 12 abstained. Result derived from the totals."
@@ -2480,9 +2477,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0257/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0257_EN.html"
-  }
+  "countries": {}
 }

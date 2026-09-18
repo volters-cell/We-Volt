@@ -16,7 +16,11 @@
   },
   "document": "A9-0425/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure that in the remaining programming period no less than 9 %[40] of the overall budget 2021-2027 is allocated to supporting the objectives of the Cross-sectoral strand",
+    "Regrets that the actions programmed under the Cross-sectoral strand have suffered the greatest delays in implementation, especially in 2021, due to the novelties introduced in the strand",
+    "Stresses the significant potential of the Creative Europe programme in developing and enhancing transnational partnerships, thus also contributing to the EU’s international relations through culture"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 489 in favour, 87 against, 40 abstained. Result derived from the totals."
@@ -2510,5 +2514,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0425/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0425_EN.html"
+  }
 }

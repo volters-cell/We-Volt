@@ -16,7 +16,11 @@
   },
   "document": "A9-0446/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all NGOs and entities committed to full transparency and accountability, the EU Charter and promoting democratic and EU values, to request to be included in the Transparency Register when applying for EU funds",
+    "Recalls that transparency and accountability should not be used to curtail the space for independent civil society or to silence critical voices",
+    "Emphasises that a disproportionate increase in reporting and transparency requirements for NGOs under various pretexts should be avoided in order not to undermine civic space"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 397 in favour, 134 against, 72 abstained. Result derived from the totals."
@@ -2461,5 +2465,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0446/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0446_EN.html"
+  }
 }

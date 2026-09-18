@@ -16,7 +16,11 @@
   },
   "document": "A9-0264/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests for cooperation or mutual assistance, including accelerated cooperation or mutual assistance, shall contain all the necessary information, including the purpose of and reasons for it",
+    "Requests for cooperation, such as the exchange of information and mutual assistance, shall contain all the necessary information related to the request, including the purpose of and reasons for it",
+    "Requests for cooperation including accelerated cooperation or mutual assistance, shall contain all the necessary information, including the purpose of and reasons for it"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 56 in favour, 535 against, 18 abstained. Result derived from the totals."
@@ -2485,5 +2489,9 @@
   "countries": {},
   "topics": [
     "Single market"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0264/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0264_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0017/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges both parties to the roll out the Agreement quickly, for the benefit of all, including SMEs and women",
+    "Welcomes the fact that parliamentary diplomacy is recognised as a pillar of the political dialogue with Chile; praises Chile’s key role in the Andean Parliament as well as in the Euro-Latin American Parliamentary Assembly",
+    "Welcomes the fact that the outermost regions have been taken into account in the Agreement’s bilateral safeguard measures"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 319 in favour, 113 against, 121 abstained. Result derived from the totals."
@@ -2258,5 +2262,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0017/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0017_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A9-0341/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the need to ensure that the common policies and objectives of the EU are effectively implemented across all Member States, ensuring a level playing field and promoting mutual trust among Member States",
+    "Recalls that the principles of primacy of EU law or that of the precedence of international law over national law are present in the constitutional order of several Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 430 in favour, 172 against, 29 abstained. Result derived from the totals."
@@ -2570,5 +2573,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0341/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0341_EN.html"
+  }
 }

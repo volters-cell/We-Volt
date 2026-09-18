@@ -16,7 +16,11 @@
   },
   "document": "A9-0133/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court of Auditors has stated that it has obtained reasonable assurances that the EMA’s annual accounts for 2022 are reliable and that the underlying transactions are legal and regular",
+    "Welcomes the fact that in 2022 the Agency conducted a comprehensive well-being survey, and the resulting recommendations have been integrated into the Agency human resources strategy for 2023-2025",
+    "Notes that the EMA's total final appropriations for 2022 amounted to EUR 421 815 000, representing a 11,22% increase compared to the 2021 budget"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 528 in favour, 71 against, 4 abstained. Result derived from the totals."
@@ -2461,5 +2465,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0133/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0133_EN.html"
+  }
 }

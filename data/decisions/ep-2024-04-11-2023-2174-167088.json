@@ -16,7 +16,11 @@
   },
   "document": "A9-0088/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the CBE JU s role in advancing competitive circular bio-based industries in the Union",
+    "Notes that the changes in the size of the CBE JU’s budget largely depend on the implementation phase of the multiannual research and innovation programmes, which it is implementing",
+    "Notes that, in 2022, the CBE JU started with the implementation of the Horizon Europe programme and, as a consequence, the 2022 budget includes the commitment budget for the first Horizon Europe calls planned for 2021 and 2022"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 53 against, 17 abstained. Result derived from the totals."
@@ -2413,5 +2417,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0088/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0088_EN.html"
+  }
 }

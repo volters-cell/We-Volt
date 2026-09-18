@@ -16,9 +16,6 @@
   },
   "document": "A9-0008/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward its position to the Council, the Commission and the governments and parliaments of the Member States and to the government of the Republic of Korea, as the depository for the Convention"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 675 in favour, 4 against, 16 abstained. Result derived from the totals."
@@ -2836,9 +2833,5 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0008/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0008_EN.html"
-  }
+  ]
 }

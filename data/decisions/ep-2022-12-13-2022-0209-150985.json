@@ -16,10 +16,6 @@
   },
   "document": "A9-0285/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
-    "Instructs its President to forward its position to the Council and the Commission"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 600 in favour, 21 against, 10 abstained. Result derived from the totals."
@@ -2576,9 +2572,5 @@
   "countries": {},
   "topics": [
     "Transport"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0285/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0285_EN.html"
-  }
+  ]
 }

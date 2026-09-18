@@ -16,7 +16,11 @@
   },
   "document": "A9-0367/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to fully implement the Digital Services Act[50] in order to prevent, tackle and avoid any online hate and harassment, especially for vulnerable people, such as women and young people",
+    "Calls on the Commission to address the root causes of sexual exploitation and trafficking by supporting Member States in the fight against poverty, social exclusion and discrimination",
+    "Urges the Member States to identify and address workers’ specific psychological care needs through dedicated instruments tailored to their distinct needs, including through occupational medicine"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 482 in favour, 94 against, 32 abstained. Result derived from the totals."
@@ -2481,5 +2485,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0367/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0367_EN.html"
+  }
 }

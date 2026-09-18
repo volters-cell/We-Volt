@@ -16,7 +16,11 @@
   },
   "document": "B9-0120/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Iran to allow an impartial international investigation into human rights violations, including the killing of Mohammad Ghobadlou, and other peaceful demonstrators, torture and ill-treatment of detainees",
+    "Calls on EU member states to support the renewal of the mandates of the UN Special Rapporteur on Iran and the Independent International Fact-Finding Mission on Iran at the upcoming UN Human Rights Council session",
+    "Calls on the VP/HR to develop an EU strategy to counter Iran’s hostage diplomacy against EU nationals"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 258 in favour, 228 against, 36 abstained. Result derived from the totals."
@@ -2133,5 +2137,9 @@
   "countries": {},
   "topics": [
     "Iran"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0120/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0120_EN.html"
+  }
 }

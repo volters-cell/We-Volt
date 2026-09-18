@@ -16,7 +16,9 @@
   },
   "document": "A9-0257/2020",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its proposal"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 438 in favour, 152 against, 34 abstained. Result derived from the totals."
@@ -2542,5 +2544,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0257/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0257_EN.html"
+  }
 }

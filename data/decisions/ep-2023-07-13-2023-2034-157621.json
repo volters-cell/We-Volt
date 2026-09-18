@@ -16,7 +16,11 @@
   },
   "document": "A9-0215/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges MEPs to be vigilant about certain entities that, under the pretence of dealing with general policy issues, are vectors of influence and undeclared interference by foreign countries",
+    "Insists on the obligation to declare participation in any conference or event organised or funded by foreign entities, including foreign states, private companies, NGOs and think tanks",
+    "Welcomes the Commission’s planned anti-corruption package, including the proposal to update the EU rules on fighting corruption through criminal law"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 441 in favour, 70 against, 71 abstained. Result derived from the totals."
@@ -2373,5 +2377,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0215/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0215_EN.html"
+  }
 }

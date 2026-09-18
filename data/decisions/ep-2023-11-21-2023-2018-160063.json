@@ -16,7 +16,11 @@
   },
   "document": "A9-0308/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to include specific initiatives for EU volunteers to contribute to the post-war rebuilding of Ukraine",
+    "Calls on the Commission and the Member States to increase the recognition of youth work, youth workers’ education, and non-formal education in order to harmonise youth workers’ realities across the EU",
+    "Calls on the Commission and the Member States to introduce a special visa category for ESC participants from non-Schengen countries, as host organisations cannot assist them in acquiring visas"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 499 in favour, 56 against, 52 abstained. Result derived from the totals."
@@ -2474,5 +2478,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0308/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0308_EN.html"
+  }
 }

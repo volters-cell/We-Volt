@@ -16,7 +16,11 @@
   },
   "document": "A9-0432/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to ensure that certification schemes or equivalent qualification schemes are available, particularly for installers of small-scale shallow geothermal systems and heat pumps",
+    "Regrets that the potential of repurposing for geothermal applications of depleted, abandoned and end-of-life hydrocarbon reservoirs as well as oil and gas wells is not being fully tapped",
+    "Notes that the development of technologies has broadened the area suitable for cost-efficient geothermal projects and their scope"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 531 in favour, 2 against, 20 abstained. Result derived from the totals."
@@ -2261,5 +2265,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0432/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0432_EN.html"
+  }
 }

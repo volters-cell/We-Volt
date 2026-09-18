@@ -16,7 +16,10 @@
   },
   "document": "A9-0032/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to support local civil society organisations that protect and promote the rights of migrants, as well as those monitoring the cooperation of the Senegalese authorities with Frontex",
+    "Underlines that the provision of development aid by the EU and its Member States is to be carried out in full transparency and under parliamentary scrutiny"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 212 in favour, 347 against, 29 abstained. Result derived from the totals."
@@ -2401,5 +2404,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0032/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0032_EN.html"
+  }
 }

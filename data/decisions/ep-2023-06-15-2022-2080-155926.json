@@ -16,7 +16,11 @@
   },
   "document": "A9-0095/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes further that the FATF is reviewing Recommendation 25 on the transparency and beneficial ownership information of legal arrangements",
+    "Recalls that tax crime is recognised as a predicate offence of money laundering, which is often linked to organised crime, corruption and the financing of terrorism",
+    "Points out that the names in the Pandora Papers include political leaders in developing countries that heavily depend on aid from the European Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 465 in favour, 5 against, 36 abstained. Result derived from the totals."
@@ -2070,5 +2074,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0095/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0095_EN.html"
+  }
 }

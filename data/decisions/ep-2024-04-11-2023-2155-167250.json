@@ -16,7 +16,11 @@
   },
   "document": "A9-0131/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the Authority has initiated an environmental analysis and preparation for its environmental statement and action plan for the implementation of the EMAS certification, which will be completed by 2023",
+    "Notes that the Authority is among the EU agencies which yet has to established a corporate plan to improve the energy efficiency and climate neutrality of its operations",
+    "Notes that the Authority has continued to implement its functionalities of the Advanced Records System, the Sysper system, eProcurement and Speedwell, among others in order to improve efficiency of systems and workflows"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 477 in favour, 50 against, 65 abstained. Result derived from the totals."
@@ -2417,5 +2421,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0131/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0131_EN.html"
+  }
 }

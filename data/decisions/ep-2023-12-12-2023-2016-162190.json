@@ -16,7 +16,11 @@
   },
   "document": "A9-0332/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that it will be the prerogative of the President of the European Parliament to communicate the name of Parliament’s common candidate for the position of President of the European Commission to the European Council",
+    "Recalls the prerogative of the European Parliament to choose its own President",
+    "Believes that establishing a single common European voting day would create a more coherent pan-European election"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 365 in favour, 178 against, 71 abstained. Result derived from the totals."
@@ -2502,5 +2506,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0332/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0332_EN.html"
+  }
 }

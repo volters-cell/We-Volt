@@ -16,7 +16,10 @@
   },
   "document": "A9-0082/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes with satisfaction that the Centre was one of the participating agencies in the initiative called ‘Joint EU Forces on AI’, launched by the European Food Safety Authority",
+    "Notes that, given the nature of the Centre’s core tasks, no meeting with lobbyists are taking place and the Centre does not currently plan to introduce an internal anticorruption strategy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 557 in favour, 39 against, 11 abstained. Result derived from the totals."
@@ -2477,5 +2480,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0082/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0082_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0325/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and Member States to undertake actions aimed at improving technological, environmental and managerial skills among farmers, in particular young farmers, and fostering the exchange of best practices",
+    "Calls on the Member States to consolidate policies for attracting teachers to regions and localities facing ‘talent development traps’, ensuring attractive salaries and decent living conditions",
+    "Urges all Member States to make childcare more affordable and accessible in order to help ensure the fair and unhindered participation of caregivers, who are predominately female, in the labour market"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 401 in favour, 39 against, 109 abstained. Result derived from the totals."
@@ -2242,5 +2246,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0325/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0325_EN.html"
+  }
 }

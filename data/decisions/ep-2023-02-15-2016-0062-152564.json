@@ -16,9 +16,6 @@
   },
   "document": "A9-0021/2023",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to forward this resolution to the Council, the Commission, the Member States and the Parliamentary Assembly of the Council of Europe"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 469 in favour, 104 against, 55 abstained. Result derived from the totals."
@@ -2563,9 +2560,5 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0021/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0021_EN.html"
-  }
+  ]
 }

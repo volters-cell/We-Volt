@@ -16,7 +16,11 @@
   },
   "document": "A9-0114/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Foundation´s commitment to adopting all the Commission’s e-procurement tools and the fact that Foundation’s procurement process is fully digitalised",
+    "Notes with satisfaction that the Foundation uses certain measures as key performance indicators to assess the added value provided by its activities and other measures to improve its budget management",
+    "Underlines that the Foundation has suspended all activities and cooperation with Belarusian authorities since the beginning of 2022"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 533 in favour, 45 against, 26 abstained. Result derived from the totals."
@@ -2465,5 +2469,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0114/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0114_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "B9-0232/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Considers that the draft Commission implementing decision exceeds the implementing powers provided for in Regulation (EC) No 1829/2003"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 394 in favour, 169 against, 17 abstained. Result derived from the totals."
@@ -2369,5 +2372,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0232/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0232_EN.html"
+  }
 }

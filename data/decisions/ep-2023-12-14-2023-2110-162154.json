@@ -16,7 +16,11 @@
   },
   "document": "A9-0383/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to define start-ups and scale-ups within SMEs, and to use this definition in the context of policy and statistics",
+    "Calls on the Commission to re-evaluate the effect on start-ups of upcoming legislation focused on SMEs, industry and innovation, while taking into account start-ups’ specific needs and features",
+    "Urges the Commission and the Member States to develop awareness campaigns to promote jobs in digital and industrial environments, with a specific focus on attracting more female talent to these sectors"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 465 in favour, 36 against, 50 abstained. Result derived from the totals."
@@ -2250,5 +2254,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0383/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0383_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0212/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to continue reporting on the state of play and status of the previous recommendations issued by Parliament in its annual resolutions, especially as regards:",
+    "Welcomes the setting up of EIB Global as a dedicated development branch within the EIB Group",
+    "Notes that, in 2022, the Bank’s new lending amounted to EUR 65.15 billion, close to the results of the preceding years (EUR 65.4 billion in 2021, EUR 66.1 billion in 2020 and EUR 63.3 billion in 2019)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 507 in favour, 54 against, 51 abstained. Result derived from the totals."
@@ -2494,5 +2498,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0212/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0212_EN.html"
+  }
 }

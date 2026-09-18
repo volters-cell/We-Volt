@@ -16,7 +16,9 @@
   },
   "document": "A9-0220/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its proposal"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 201 in favour, 414 against, 12 abstained. Result derived from the totals."
@@ -2557,5 +2559,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0220/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0220_EN.html"
+  }
 }

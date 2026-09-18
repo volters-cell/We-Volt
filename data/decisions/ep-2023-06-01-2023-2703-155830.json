@@ -16,7 +16,11 @@
   },
   "document": "B9-0258/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to establish an EU-level database of data on AMR and AMC in human health, animal health and the environment",
+    "Calls on the Member States to ensure that human-health measures are implemented to support the prudent use of antimicrobial agents, in particular by:",
+    "Calls on the Commission to put in place exchanges of best practice between the Member States on effective antimicrobial stewardship programmes"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 525 in favour, 2 against, 33 abstained. Result derived from the totals."
@@ -2282,5 +2286,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0258/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0258_EN.html"
+  }
 }

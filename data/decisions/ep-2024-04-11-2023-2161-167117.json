@@ -16,7 +16,11 @@
   },
   "document": "A9-0108/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Agency’s efforts in cooperate with partners and stakeholders to strengthen the security of supply of nuclear materials in view of the illegal and unprovoked Russia invasion to Ukraine",
+    "Notes that the Agency has reported a gender ratio for all staff of 59 % women and 41 % men in 2022 showing the equal opportunities policy",
+    "Notes that the Agency has reinforced the access security to its premises, all members of staff and all external contractors hold security clearance"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 577 in favour, 16 against, 13 abstained. Result derived from the totals."
@@ -2473,5 +2477,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0108/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0108_EN.html"
+  }
 }

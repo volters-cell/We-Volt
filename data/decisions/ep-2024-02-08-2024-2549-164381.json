@@ -16,7 +16,11 @@
   },
   "document": "B9-0111/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States and the VP/HR to impose the necessary sanctions against those individuals from the Venezuelan regime and its proxies responsible for violations of human rights against the Venezuelan people",
+    "Deplores the continuous repression by the Venezuelan regime against political opposition figures and civil society; reiterates its firm and unconditional support for the Venezuelan people",
+    "Deplores Venezuela’s alignment with Russia, Cuba, Nicaragua and other dictatorial regimes"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 446 in favour, 21 against, 32 abstained. Result derived from the totals."
@@ -2041,5 +2045,9 @@
   "countries": {},
   "topics": [
     "Venezuela"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0111/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0111_EN.html"
+  }
 }

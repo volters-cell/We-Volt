@@ -16,7 +16,10 @@
   },
   "document": "A9-0228/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the co-ordinated package of personalised services was drawn up by Belgium in consultation with targeted beneficiaries, their representatives and social partners",
+    "Stresses that Belgium has confirmed that the measures described below receiving a financial contribution from the EGF will not also receive financial contributions from other Union financial instruments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 590 in favour, 46 against, 2 abstained. Result derived from the totals."
@@ -2601,5 +2604,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0228/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0228_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0227/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Uzbek authorities to continue to make progress in their compliance with the principles relating to the status of national institutions for the promotion and protection of human rights (the Paris Principles)",
+    "Calls on the Uzbek authorities to ratify ILO Convention 155 on Occupational Safety and Health",
+    "Stresses that Uzbekistan also plays a crucial role in regional security and economic stability, especially in terms of the fight against illegal immigration, organised crime, terrorism and corruption"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 9 against, 76 abstained. Result derived from the totals."
@@ -2406,5 +2410,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0227/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0227_EN.html"
+  }
 }

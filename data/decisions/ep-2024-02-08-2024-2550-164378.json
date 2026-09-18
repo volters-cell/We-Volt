@@ -16,7 +16,10 @@
   },
   "document": "B9-0129/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Belarusian authorities to immediately and unconditionally release the arrested women and other family members of current and former political prisoners and to cease any gender-based repression",
+    "Reiterates its solidarity with the people of Belarus whose legitimate aspirations for respect of their democratic rights, fundamental freedoms and human rights deserve to be supported as actively as possible"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 459 in favour, 14 against, 33 abstained. Result derived from the totals."
@@ -2069,5 +2072,9 @@
   "countries": {},
   "topics": [
     "Belarus"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0129/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0129_EN.html"
+  }
 }
