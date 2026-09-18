@@ -41,7 +41,7 @@
       "Malta",
       "Cyprus"
     ],
-    "updated": "2026-09-17",
+    "updated": "2026-09-18",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -70,7 +70,7 @@
       "id": "ep-2026-09-17-2025-2010-196157",
       "sourceId": 196157,
       "title": "Role of social, economic and environmental standards in safeguarding fair competition for all aquatic food products and improving food security",
-      "subtitle": "A10-0205/2026 - Paulo do Nascimento Cabral - Proposition de résolution — vote in plenary",
+      "subtitle": "A10-0205/2026 – Paulo do Nascimento Cabral – Motion for a resolution — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -87,14 +87,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 603,
-      "keywords": "role of social, economic and environmental standards in safeguarding fair competition for all aquatic food products and improving food security a10-0205/2026 - paulo do nascimento cabral - proposition de résolution — vote in plenary 2025/2010",
+      "keywords": "role of social, economic and environmental standards in safeguarding fair competition for all aquatic food products and improving food security a10-0205/2026 – paulo do nascimento cabral – motion for a resolution — vote in plenary 2025/2010",
       "file": "data/decisions/ep-2026-09-17-2025-2010-196157.json"
     },
     {
       "id": "ep-2026-09-17-2025-2062-196143",
       "sourceId": 196143,
       "title": "An EU health workforce crisis plan: sustainability of healthcare systems and employment and working conditions in the healthcare sector",
-      "subtitle": "A10-0168/2026 - Loucas Fourlas, Ruggero Razza - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "A10-0168/2026 – Loucas Fourlas, Ruggero Razza – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -111,14 +111,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 608,
-      "keywords": "an eu health workforce crisis plan: sustainability of healthcare systems and employment and working conditions in the healthcare sector a10-0168/2026 - loucas fourlas, ruggero razza - proposition de résolution (ensemble du texte) — vote in plenary 2025/2062",
+      "keywords": "an eu health workforce crisis plan: sustainability of healthcare systems and employment and working conditions in the healthcare sector a10-0168/2026 – loucas fourlas, ruggero razza – motion for a resolution (as a whole) — vote in plenary 2025/2062",
       "file": "data/decisions/ep-2026-09-17-2025-2062-196143.json"
     },
     {
       "id": "ep-2026-09-17-2025-2081-196147",
       "sourceId": 196147,
       "title": "Impact of social media and the online environment on young people",
-      "subtitle": "A10-0220/2026 - Sandro Ruotolo - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "A10-0220/2026 – Sandro Ruotolo – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -135,14 +135,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 611,
-      "keywords": "impact of social media and the online environment on young people a10-0220/2026 - sandro ruotolo - proposition de résolution (ensemble du texte) — vote in plenary 2025/2081",
+      "keywords": "impact of social media and the online environment on young people a10-0220/2026 – sandro ruotolo – motion for a resolution (as a whole) — vote in plenary 2025/2081",
       "file": "data/decisions/ep-2026-09-17-2025-2081-196147.json"
     },
     {
       "id": "ep-2026-09-17-2026-2731-196774",
       "sourceId": 196774,
       "title": "Strengthening global health resilience in partner countries",
-      "subtitle": "B10-0385/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "B10-0385/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -159,14 +159,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 480,
-      "keywords": "strengthening global health resilience in partner countries b10-0385/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2731",
+      "keywords": "strengthening global health resilience in partner countries b10-0385/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2731",
       "file": "data/decisions/ep-2026-09-17-2026-2731-196774.json"
     },
     {
       "id": "ep-2026-09-17-2026-2778-196838",
       "sourceId": 196838,
       "title": "Evaluation of the Common Fisheries Policy and follow-up",
-      "subtitle": "B10-0386/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "B10-0386/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -179,14 +179,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 609,
-      "keywords": "evaluation of the common fisheries policy and follow-up b10-0386/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2778",
+      "keywords": "evaluation of the common fisheries policy and follow-up b10-0386/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2778",
       "file": "data/decisions/ep-2026-09-17-2026-2778-196838.json"
     },
     {
       "id": "ep-2026-09-17-2026-2797-196796",
       "sourceId": 196796,
       "title": "Narco-trafficking in Europe’s waters: protecting our borders and supporting our law enforcement officers",
-      "subtitle": "B10-0390/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "B10-0390/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -199,14 +199,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 610,
-      "keywords": "narco-trafficking in europe’s waters: protecting our borders and supporting our law enforcement officers b10-0390/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2797",
+      "keywords": "narco-trafficking in europe’s waters: protecting our borders and supporting our law enforcement officers b10-0390/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2797",
       "file": "data/decisions/ep-2026-09-17-2026-2797-196796.json"
     },
     {
       "id": "ep-2026-09-17-2026-2870-197199",
       "sourceId": 197199,
-      "title": "Recent hybrid attacks and instrumentalisation of migrants in Ceuta and the need for a coordinated response to protect the EU’s external borders",
-      "subtitle": "B10-0406/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Recent hybrid attacks and instrumentalisation of migrants in Ceuta and the need for a coordinated response to protect EU’s external borders",
+      "subtitle": "B10-0406/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -217,14 +217,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 580,
-      "keywords": "recent hybrid attacks and instrumentalisation of migrants in ceuta and the need for a coordinated response to protect the eu’s external borders b10-0406/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2870",
+      "keywords": "recent hybrid attacks and instrumentalisation of migrants in ceuta and the need for a coordinated response to protect eu’s external borders b10-0406/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2870",
       "file": "data/decisions/ep-2026-09-17-2026-2870-197199.json"
     },
     {
       "id": "ep-2026-09-17-2026-2873-197236",
       "sourceId": 197236,
       "title": "Deteriorating situation of media freedom and freedom of expression in Hong Kong following the recent arrest of bookseller Leticia Wong and the convictions of Lee Cheuk-yan and Chow Hang-tung",
-      "subtitle": "RC-B10-0398/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "RC-B10-0398/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -238,14 +238,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 557,
-      "keywords": "deteriorating situation of media freedom and freedom of expression in hong kong following the recent arrest of bookseller leticia wong and the convictions of lee cheuk-yan and chow hang-tung rc-b10-0398/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2873",
+      "keywords": "deteriorating situation of media freedom and freedom of expression in hong kong following the recent arrest of bookseller leticia wong and the convictions of lee cheuk-yan and chow hang-tung rc-b10-0398/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2873",
       "file": "data/decisions/ep-2026-09-17-2026-2873-197236.json"
     },
     {
       "id": "ep-2026-09-17-2026-2874-197242",
       "sourceId": 197242,
       "title": "Political prisoners in Cuba, in particular the case of Félix Navarro and his daughter Saylí Navarro",
-      "subtitle": "RC-B10-0394/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "RC-B10-0394/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -259,14 +259,14 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 591,
-      "keywords": "political prisoners in cuba, in particular the case of félix navarro and his daughter saylí navarro rc-b10-0394/2026 - proposition de résolution (ensemble du texte) — vote in plenary 2026/2874",
+      "keywords": "political prisoners in cuba, in particular the case of félix navarro and his daughter saylí navarro rc-b10-0394/2026 – motion for a resolution (as a whole) — vote in plenary 2026/2874",
       "file": "data/decisions/ep-2026-09-17-2026-2874-197242.json"
     },
     {
       "id": "ep-2026-09-17-2026-2876-197216",
       "sourceId": 197216,
       "title": "Post-electoral repression in Zambia and the killing of Mutotwe Kafwaya",
-      "subtitle": "RC-B10-0404/2026 - Proposition de résolution — vote in plenary",
+      "subtitle": "RC-B10-0404/2026 – Motion for a resolution — vote in plenary",
       "date": "2026-09-17",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -277,7 +277,7 @@
       "result": "adopted",
       "status": "verified",
       "mepCount": 596,
-      "keywords": "post-electoral repression in zambia and the killing of mutotwe kafwaya rc-b10-0404/2026 - proposition de résolution — vote in plenary 2026/2876",
+      "keywords": "post-electoral repression in zambia and the killing of mutotwe kafwaya rc-b10-0404/2026 – motion for a resolution — vote in plenary 2026/2876",
       "file": "data/decisions/ep-2026-09-17-2026-2876-197216.json"
     },
     {
@@ -553,11 +553,7 @@
       "topics": [
         "Trade"
       ],
-      "committee": {
-        "code": "IMCO",
-        "label": "Internal Market and Consumer Protection",
-        "short": "Single Market"
-      },
+      "committee": null,
       "rollCalls": 4,
       "result": "adopted",
       "status": "verified",

@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-09-17",
+  "fetched": "2026-09-18",
   "term": 10,
   "terms": [
     10,
@@ -8236,6 +8236,12 @@
       "country": "NL",
       "group": "Greens/EFA",
       "party": "Progressief Nederland"
+    },
+    "280663": {
+      "name": "Balázs ORBÁN",
+      "country": "HU",
+      "group": "PfE",
+      "party": null
     }
   }
 }
