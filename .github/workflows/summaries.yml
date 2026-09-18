@@ -1,0 +1,93 @@
+# Put three of the Parliament's own sentences under every vote that has them.
+#
+# A motion for a resolution is numbered operative paragraphs, each a whole
+# sentence beginning with a verb the Parliament chose — "Calls on Member States
+# to maintain their ports open to NGO vessels;". Three of those say what a vote
+# was about and can be checked word for word against the document they came
+# from, which is linked beside them.
+#
+# Nothing is written, paraphrased or condensed here. A vote whose document has
+# no operative paragraph — a legislative consent approves a text rather than
+# asking for anything — gets nothing and shows nothing.
+#
+# In a browser, because www.europarl.europa.eu answers a plain HTTP client with
+# an empty 202. On a clock, because 1,460 documents at a few seconds each
+# outlast a runner, and a run killed by the clock would commit nothing.
+
+name: Quote what each vote asks for
+
+on:
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Stop reading after this many minutes and commit what was read"
+        default: "80"
+      again:
+        description: "Re-read votes that already carry quoted paragraphs"
+        type: boolean
+        default: false
+
+jobs:
+  quote:
+    outputs:
+      changed: ${{ steps.quote.outputs.changed }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+
+      - name: Install Playwright
+        run: npm i -D playwright@1.49.0 && npx playwright install --with-deps chromium
+
+      - name: Read what the votes ask for
+        id: quote
+        run: |
+          set -euo pipefail
+          git config user.name "eu-tracker-bot"
+          git config user.email "actions@github.com"
+
+          node scripts/fetch-summaries.mjs --minutes "${{ inputs.minutes }}" \
+            ${{ inputs.again && '--again' || '' }}
+
+          node scripts/build-index.mjs
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nothing to quote."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          git add data/
+          git commit -m "Quote what each vote asks for, from the text that was voted
+
+          Three operative paragraphs lifted whole out of the Parliament's own
+          document by .github/workflows/summaries.yml. Nothing is written,
+          paraphrased or condensed: a vote whose text asks for nothing gets
+          nothing.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          Claude-Session: https://claude.ai/code/session_01Q2GR9PWbYZc6kZnv6W9Gx7"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+  publish:
+    needs: quote
+    if: needs.quote.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

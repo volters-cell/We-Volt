@@ -83,7 +83,8 @@
   }
 
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
-   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'vote-links', 'vote-share',
+   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-asks',
+   'vote-links', 'vote-share',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-go', 'search-status',
    'member-face', 'member-party',
@@ -817,6 +818,33 @@
   function votedHere(decision, code) {
     const here = decision && decision.countries && decision.countries[code];
     return !!(here && (here.meps || []).length);
+  }
+
+  /* What the vote asks for, in the Parliament's own sentences.
+
+     Three operative paragraphs lifted whole out of the text that was voted —
+     "Calls on Member States to maintain their ports open to NGO vessels" —
+     with their number and closing semicolon taken off and nothing else
+     touched. The document they came from is named and linked beside them, so
+     a reader can check every word against it in one click.
+
+     It says whose words they are, in the open, because a reader arriving at
+     three tidy bullets under a heading has every reason to assume a person or
+     a machine wrote them for this site. Neither did. */
+  function asksBlock(decision) {
+    const asks = decision.whatItMeans || [];
+    if (!asks.length) return '';
+    const from = decision.whatItMeansFrom || {};
+    const cite = from.url
+      ? '<a href="' + esc(from.url) + '" rel="noopener noreferrer">' +
+          esc(from.reference || 'the text') + '</a>'
+      : esc(from.reference || 'the text');
+    return '<p class="asks-head">What it asks for, in the Parliament\'s words</p>' +
+      '<ul class="asks-list">' +
+        asks.map(function (line) { return '<li>' + esc(line) + '</li>'; }).join('') +
+      '</ul>' +
+      '<p class="asks-note">Quoted from ' + cite +
+        '. Nothing here is written or shortened by this site.</p>';
   }
 
   /* The cost layer is data-driven: it appears when a decision carries sourced
@@ -2592,6 +2620,8 @@
     dom['decision-title'].textContent = decision.title;
     dom['decision-subtitle'].textContent = decision.subtitle || '';
     dom['decision-summary'].textContent = decision.summary || '';
+    dom['decision-asks'].innerHTML = asksBlock(decision);
+    dom['decision-asks'].hidden = !(decision.whatItMeans || []).length;
 
 
 

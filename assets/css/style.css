@@ -2513,6 +2513,27 @@ button.permalink {
    with the same need for a quiet figure at the end of a row. */
 .card-rule { color: var(--ink-faint); }
 
+/* What a vote asks for, quoted from the text that was voted. Set apart from
+   the site's own writing, because these are not the site's words. */
+.decision-asks {
+  margin: .9rem 0 0;
+  padding: .85rem 1rem;
+  border-left: 3px solid var(--eu-blue);
+  background: color-mix(in srgb, var(--eu-blue) 5%, var(--surface));
+  border-radius: 0 8px 8px 0;
+}
+.asks-head {
+  margin: 0 0 .5rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.asks-list { margin: 0; padding-left: 1.1rem; display: grid; gap: .4rem; }
+.asks-list li { line-height: 1.45; }
+.asks-note { margin: .6rem 0 0; font-size: .76rem; color: var(--ink-faint); }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .decision-card.is-current .card-title { color: var(--ink); }
 }

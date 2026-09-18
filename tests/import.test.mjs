@@ -20,6 +20,7 @@ import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.
 import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
 import { shorten } from '../scripts/lib/titles.mjs';
 import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
+import { bulletsFrom, operativeParagraphs } from '../scripts/lib/operative.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -271,5 +272,34 @@ assert.equal(opensOnOeil('C9-0161/2020'), true, 'and a Council one');
 assert.equal(opensOnOeil('2019/0806'), false, 'a procedure number with no type: 404');
 assert.equal(opensOnOeil('RC-B9-0006/2019'), false, 'a joint motion: 404');
 assert.equal(opensOnOeil(''), false, 'and nothing is not a reference');
+
+/* Three of the Parliament's own sentences under a vote, chosen by a rule
+   anybody can apply to the same document and get the same three back. */
+const motion = [
+  'MOTION FOR A RESOLUTION on search and rescue in the Mediterranean',
+  '– having regard to the Geneva Convention of 1951, in particular Article 33 thereof,',
+  '1. Welcomes the Commission proposal on search and rescue and looks forward to further work;',
+  '3. Calls on Member States and Frontex to step up their efforts in support of search and rescue;',
+  '6. Recalls that Member States shall take the measures necessary to ensure that infringements are punishable;',
+  '9. Calls on Member States to maintain their ports open to NGO vessels;'
+].join('\n');
+
+const asks = bulletsFrom(motion);
+assert.equal(asks.length, 3, 'three bullets');
+assert.ok(/^Calls on Member States and Frontex/.test(asks[0]), 'a demand outranks an observation');
+assert.ok(/^Calls on Member States to maintain/.test(asks[1]), 'and the second demand follows it');
+assert.ok(asks.every((line) => !/^\d/.test(line)), 'the paragraph number comes off');
+assert.ok(asks.every((line) => !/[;]$/.test(line)), 'and the closing semicolon');
+assert.ok(!asks.some((line) => /having regard/.test(line)), 'a recital is not something a vote asks for');
+
+/* A legislative consent asks for nothing: it approves a text. Quoting it is
+   not possible and inventing something is not allowed, so it yields nothing. */
+assert.deepEqual(bulletsFrom('DRAFT LEGISLATIVE RESOLUTION\n– having regard to the draft Council decision,'),
+  [], 'a document with no operative paragraph gives no bullets');
+assert.deepEqual(bulletsFrom(''), [], 'and neither does an empty one');
+
+// A paragraph the length of a page is not a bullet; it stays in the document.
+const huge = '4. Calls on the Commission ' + 'to consider every possible aspect '.repeat(20) + ';';
+assert.deepEqual(operativeParagraphs(huge), [], 'a half-page paragraph is left where it is');
 
 console.log('import.test.mjs: ok');
