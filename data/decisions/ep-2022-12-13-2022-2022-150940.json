@@ -16,7 +16,11 @@
   },
   "document": "A9-0242/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and Member States to take appropriate initiatives to further improve the attractiveness of investing in the ERTMS",
+    "Calls on the Commission and the Member States to strengthen the strategic role of railway stations within an integrated and sustainable mobility system, in particular by supporting the modernisation of small stations",
+    "Calls on the Commission to monitor the implementation of bicycle carriages in cross-border passenger trains as provided for in the Rail Passengers’ Rights Regulation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 524 in favour, 38 against, 50 abstained. Result derived from the totals."
@@ -2497,5 +2501,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0242/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0242_EN.html"
+  }
 }

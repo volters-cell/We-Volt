@@ -16,7 +16,11 @@
   },
   "document": "A9-0066/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that no specific issues relating to the regularity of the transactions were detected by the Court",
+    "Welcomes the decision to publish its register of processing activities on the Curia website, which came into effect in January 2021",
+    "Welcomes the logistical support provided to the European Public Prosecutor’s Office, whose offices are located in front of the offices of the CJEU, in order to facilitate its installation in Luxembourg"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 573 in favour, 45 against, 19 abstained. Result derived from the totals."
@@ -2602,5 +2606,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0066/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0066_EN.html"
+  }
 }

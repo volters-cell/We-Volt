@@ -16,7 +16,10 @@
   },
   "document": "B9-0289/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, and to the governments and parliaments of the Member States",
+    "Notes that the term ‘sexual and reproductive healthcare’ traditionally includes a wide range of healthcare measures; denounces the fact that this term is being used by the political left as a euphemism for abortion"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 364 in favour, 154 against, 37 abstained. Result derived from the totals."
@@ -2268,5 +2271,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0289/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0289_EN.html"
+  }
 }

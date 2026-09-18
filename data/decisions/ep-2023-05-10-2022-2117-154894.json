@@ -16,7 +16,11 @@
   },
   "document": "A9-0105/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that in 2021, eu-LISA continued the development of new IT systems, as well as of the interoperability between the new and already existing systems; further notes the completion of several projects",
+    "Considers that the Agency should continue its dialogue with the Commission in order to propose changes to its multiannual budget planning, so that it only receives funds for developing systems once legal certainty is ensured",
+    "Notes the Agency’s position that the formal irregularities identified by the Court did not result in any financial prejudice to the Union’s budget"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 587 in favour, 42 against, 6 abstained. Result derived from the totals."
@@ -2589,5 +2593,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0105/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0105_EN.html"
+  }
 }

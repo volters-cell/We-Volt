@@ -16,7 +16,10 @@
   },
   "document": "B9-0091/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Welcomes the increase in support for young farmers in the next Common Agricultural Policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 580 in favour, 57 against, 55 abstained. Result derived from the totals."
@@ -2817,5 +2820,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0091/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0091_EN.html"
+  }
 }

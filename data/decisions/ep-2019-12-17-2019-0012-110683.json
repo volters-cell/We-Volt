@@ -16,7 +16,9 @@
   },
   "document": "A9-0044/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the governments and parliaments of the Member States and of the Principality of Liechtenstein"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 631 in favour, 12 against, 51 abstained. Result derived from the totals."
@@ -2825,5 +2827,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0044/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0044_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0017/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that these reports analyse the impact of commitments to the size of payments’ backlog of a given Multiannual Financial Framework (MFF)",
+    "Insists that any revenue to the Union budget deriving from any assigned revenues or repayments of irregularities from agriculture in previous years should remain under Heading 2",
+    "Insists that there should be no further cuts to the agricultural budget, especially given the fact that the agricultural sector is frequently affected by crises that require a budgetary response"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 529 in favour, 130 against, 43 abstained. Result derived from the totals."
@@ -2857,5 +2861,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0017/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0017_EN.html"
+  }
 }

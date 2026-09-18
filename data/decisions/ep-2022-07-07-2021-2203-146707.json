@@ -16,7 +16,11 @@
   },
   "document": "A9-0165/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to step up its reporting to Parliament regarding its decisions, progress achieved and the impact of its lending activities, notably through regular structured dialogues",
+    "Instructs its President to forward this resolution to the Council, the Commission and the European Investment Bank",
+    "Welcomes the working arrangement with the European Public Prosecutor’s Office and calls for its full and diligent implementation, in particular as regards reporting"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 484 in favour, 52 against, 41 abstained. Result derived from the totals."
@@ -2354,5 +2358,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0165/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0165_EN.html"
+  }
 }

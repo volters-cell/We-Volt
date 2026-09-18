@@ -16,7 +16,11 @@
   },
   "document": "A9-0021/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its Annex, to the Council and the Commission",
+    "Recalls that the design of the coordinated package of personalised services should also anticipate emerging labour market developments, with a special focus on the shift towards a source-efficient and sustainable economy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 558 in favour, 63 against, 43 abstained. Result derived from the totals."
@@ -2705,5 +2709,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0021/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0021_EN.html"
+  }
 }

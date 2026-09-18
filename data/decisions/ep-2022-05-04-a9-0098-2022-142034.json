@@ -16,7 +16,9 @@
   },
   "document": "A9-0098/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls the importance for the Authority to develop greater visibility in the media and on the Internet in order to raise awareness of its activities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 556 in favour, 52 against, 34 abstained. Result derived from the totals."
@@ -2622,5 +2624,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0098/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0098_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0043/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission",
+    "Stresses that Belgium has confirmed that the measures described below receiving a financial contribution from the EGF will not also receive financial contributions from other Union financial instruments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 592 in favour, 25 against, 3 abstained. Result derived from the totals."
@@ -2529,5 +2533,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0043/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0043_EN.html"
+  }
 }

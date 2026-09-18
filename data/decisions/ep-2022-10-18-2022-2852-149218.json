@@ -16,7 +16,11 @@
   },
   "document": "B9-0463/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission and the governments of the Member States",
+    "Recalls that Member States retain sovereignty over border management",
+    "Stresses that, in the current Schengen framework, the rigorous management of external borders is required in order to ensure free movement, as weaknesses may result in a loss of control over basic public safety factors"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 547 in favour, 49 against, 43 abstained. Result derived from the totals."
@@ -2601,5 +2605,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0463/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0463_EN.html"
+  }
 }

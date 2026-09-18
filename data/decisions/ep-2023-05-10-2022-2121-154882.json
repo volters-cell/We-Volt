@@ -16,7 +16,11 @@
   },
   "document": "A9-0138/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the establishment of the Europol Data Protection Experts Network (EDEN), used as a channel to present projects, best practices and events linked to data protection in a law enforcement context",
+    "Welcomes the signature of a memorandum of understanding with the Fundamental Rights Agency, which would contribute to ensure Europol’s compliance with fundamental rights",
+    "Welcomes the establishment of the Europol Data Protection Experts Network, which is used as a channel to present projects, best practices and events linked to data protection in a law enforcement context"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 594 in favour, 17 against, 21 abstained. Result derived from the totals."
@@ -2577,5 +2581,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0138/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0138_EN.html"
+  }
 }

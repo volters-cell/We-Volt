@@ -16,7 +16,11 @@
   },
   "document": "B9-0167/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets the fact that school principals often violate applicable law and invite in organisations that arrange sexual education classes without the knowledge or consent of the parents",
+    "Notes that sexual education is very strongly linked to religious beliefs and ideological conviction and should therefore not take place against the wishes of parents",
+    "Believes that Polish society and the Polish authorities have the full right and obligation to organise an education system, including sexual education, in accordance with the democratic will of the majority"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 471 in favour, 128 against, 57 abstained. Result derived from the totals."
@@ -2670,5 +2674,9 @@
   "topics": [
     "Poland",
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0167/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0167_EN.html"
+  }
 }

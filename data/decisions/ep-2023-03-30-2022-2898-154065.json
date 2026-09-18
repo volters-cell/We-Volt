@@ -16,7 +16,11 @@
   },
   "document": "B9-0189/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to use the relevant elements of the methodology applied in the annual rule of law reports in its evaluation of all candidate and potential candidate countries for EU accession",
+    "Urges the Commission to initiate the relevant procedures without hesitation or delay, especially when governments show no willingness to comply with the country-specific recommendations",
+    "Deplores the fact that the Commission did not address in full the recommendations made by Parliament in its previous resolutions[25] and calls on the Commission to take steps to address them"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 118 in favour, 442 against, 15 abstained. Result derived from the totals."
@@ -2349,5 +2353,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0189/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0189_EN.html"
+  }
 }

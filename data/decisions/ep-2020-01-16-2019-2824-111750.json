@@ -16,7 +16,11 @@
   },
   "document": "B9-0035/2020",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to design a strategy that will address the main drivers of biodiversity loss, both domestically and worldwide",
+    "Calls on the Commission to consider a harmonised methodology for calculating the ecological footprint of EU companies as well as their impact on biodiversity",
+    "Instructs its President to forward this resolution to the Council and the Commission"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 274 in favour, 325 against, 74 abstained. Result derived from the totals."
@@ -2734,5 +2738,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0035/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0035_EN.html"
+  }
 }

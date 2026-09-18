@@ -16,7 +16,11 @@
   },
   "document": "A9-0069/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the finding of the Court of Auditors that the transactions underlying the accounts of the Shift2Rail Joint Undertaking ('the Undertaking') for the financial year 2020 are, in all material respect, legal and regular",
+    "Notes that it is estimated that the total value of the activities performed in 2020 amounts to EUR 119.4 million (of which EUR 110.3 million delivered by the members other than the Union)",
+    "Notes that there are different procedures across the Joint Undertakings regarding the calculation for the in-kind contributions and calls for their harmonisation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 557 in favour, 47 against, 35 abstained. Result derived from the totals."
@@ -2610,5 +2614,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0069/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0069_EN.html"
+  }
 }

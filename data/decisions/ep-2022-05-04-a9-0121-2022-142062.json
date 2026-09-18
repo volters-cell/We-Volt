@@ -16,7 +16,10 @@
   },
   "document": "A9-0121/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that on 31 December 2020, the establishment plan was 94,12 % implemented, with 16 Commission officials appointed out of 17 posts authorised under the Union budget (17 authorised posts in 2019)",
+    "Notes that the Agency reported a gender ratio for all staff of 56 % women and 44 % men and that the Agency has an equal opportunities policy in place"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 529 in favour, 27 against, 10 abstained. Result derived from the totals."
@@ -2318,5 +2321,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0121/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0121_EN.html"
+  }
 }

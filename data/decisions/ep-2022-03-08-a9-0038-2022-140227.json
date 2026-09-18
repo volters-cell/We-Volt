@@ -16,7 +16,11 @@
   },
   "document": "A9-0038/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission",
+    "Notes that the Spanish authorities submitted the application on 23 September 2021, and that the Commission finalised its assessment on 20 January 2022 and notified it to Parliament on the same day"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 665 in favour, 28 against, 3 abstained. Result derived from the totals."
@@ -2838,5 +2842,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0038/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0038_EN.html"
+  }
 }

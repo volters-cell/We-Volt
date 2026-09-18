@@ -16,7 +16,9 @@
   },
   "document": "A9-0015/2020",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this decision to the Commission and to the competent national authorities and the parliaments of the Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 523 in favour, 6 against, 135 abstained. Result derived from the totals."
@@ -2702,5 +2704,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0015/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0015_EN.html"
+  }
 }

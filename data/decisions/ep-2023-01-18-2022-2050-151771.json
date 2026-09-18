@@ -16,7 +16,9 @@
   },
   "document": "A9-0296/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates the importance of strengthening defence cooperation and shared threat assessments at EU level, building upon the objectives of the Strategic Compass"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 459 in favour, 93 against, 85 abstained. Result derived from the totals."
@@ -2597,5 +2599,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0296/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0296_EN.html"
+  }
 }

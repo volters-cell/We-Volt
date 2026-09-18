@@ -16,7 +16,11 @@
   },
   "document": "A9-0021/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the relevant Directorates-General to ensure that the selection of study authors is gender balanced",
+    "Urges the Member States to fully transpose and implement the work-life balance directive and calls on the Commission to monitor it effectively",
+    "Requests that concrete targets to ensure gender balance when naming and renaming Parliament’s buildings, rooms and other physical spaces be adopted"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 482 in favour, 139 against, 68 abstained. Result derived from the totals."
@@ -2805,5 +2809,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0021/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0021_EN.html"
+  }
 }

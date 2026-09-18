@@ -16,7 +16,10 @@
   },
   "document": "A9-0126/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission and the governments and parliaments of the Member States",
+    "Believes that the certification and control mechanisms must be more suited to the reality on the ground for organic farmers and the process must be simplified, including through IT solutions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 611 in favour, 14 against, 5 abstained. Result derived from the totals."
@@ -2569,5 +2572,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0126/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0126_EN.html"
+  }
 }

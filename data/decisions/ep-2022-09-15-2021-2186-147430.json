@@ -16,7 +16,11 @@
   },
   "document": "A9-0224/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission and the governments and parliaments of the Member States",
+    "Condemns the increase in attacks on LGBTIQ people and urges the Member States and the Commission to take measures to put an end to these attacks and to guarantee effective equality for LGBTIQ people in all areas",
+    "Welcomes the Commission’s commitment to publishing a proposal for a regulation in 2022 on the mutual recognition of parenthood between Member States, which will aim to create legal certainty for rainbow families across the EU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 410 in favour, 131 against, 42 abstained. Result derived from the totals."
@@ -2378,5 +2382,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0224/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0224_EN.html"
+  }
 }

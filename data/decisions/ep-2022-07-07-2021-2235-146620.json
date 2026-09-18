@@ -16,7 +16,11 @@
   },
   "document": "A9-0173/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to prioritise, through its lending activities for social, green and sustainable projects, the implementation of the Sustainable Development Goals of the UN 2030 Agenda for Sustainable Development",
+    "Calls on the EIB to continue to prioritise investments in health infrastructure, personnel training and the quality of national health services in order to reduce inequalities between countries",
+    "Calls on the EIB to make full use of its toolkit to combat tax avoidance for projects financed in non-EU countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 492 in favour, 42 against, 36 abstained. Result derived from the totals."
@@ -2326,5 +2330,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0173/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0173_EN.html"
+  }
 }

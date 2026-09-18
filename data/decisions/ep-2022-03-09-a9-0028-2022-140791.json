@@ -16,7 +16,11 @@
   },
   "document": "A9-0028/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests the Commission to ensure and uphold the high regulatory standards for both CBI and RBI schemes in case a comprehensive regulation would apply to RBI schemes before the complete phase-out of CBI schemes",
+    "Instructs its President to forward this resolution and the accompanying proposals to the Commission and the Council",
+    "Considers that Union citizenship is not a commodity that can be marketed or sold and has never been conceived as such in the Treaties"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 595 in favour, 12 against, 74 abstained. Result derived from the totals."
@@ -2775,5 +2779,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0028/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0028_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0195/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to accelerate efforts to support partner countries to reduce the number of stunted children aged under five by 7 million by 2025 as committed to in the EU Action Plan on Nutrition",
+    "Calls on the Commission to review the existing crisis management plans, in particular with a view to food production",
+    "Calls on the EU to protect small-scale farmers’ access to and control of land and other resources including seeds, infrastructure and water"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 15 against, 20 abstained. Result derived from the totals."
@@ -2597,5 +2601,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0195/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0195_EN.html"
+  }
 }

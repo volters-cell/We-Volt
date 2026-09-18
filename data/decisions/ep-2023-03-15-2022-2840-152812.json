@@ -16,7 +16,10 @@
   },
   "document": "B9-0099/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to take measures aimed at sharing good practice between and among the Member States, particularly with regard to Roma, people living in poverty, women and other disadvantaged groups",
+    "Instructs its President to forward this resolution to the Council and the Commission"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 294 in favour, 330 against, 5 abstained. Result derived from the totals."
@@ -2562,5 +2565,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0099/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0099_EN.html"
+  }
 }

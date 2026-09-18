@@ -16,7 +16,11 @@
   },
   "document": "A9-0012/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to alter its proposal accordingly, in accordance with Article 293(2) of the Treaty on the Functioning of the European Union",
+    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
+    "Instructs its President to forward its position to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 594 in favour, 15 against, 27 abstained. Result derived from the totals."
@@ -2590,5 +2594,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0012/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0012_EN.html"
+  }
 }

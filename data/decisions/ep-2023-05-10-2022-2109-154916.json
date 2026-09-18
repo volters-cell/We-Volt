@@ -16,7 +16,11 @@
   },
   "document": "A9-0106/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that EMA recommended for approval in 2021 4 more vaccines and 5 new treatments to combat COVID-19 pandemic",
+    "Welcomes the fact that the Court of Auditors has stated that it has obtained reasonable assurances that the EMA’s annual accounts for 2021 are reliable and that the underlying transactions are legal and regular",
+    "Reiterates the key role of the European Medicines Agency ('the EMA') in protecting and promoting public human and animal health by assessing and supervising medicines for human or veterinary use"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 548 in favour, 73 against, 5 abstained. Result derived from the totals."
@@ -2553,5 +2557,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0106/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0106_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0058/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Stresses that it is essential to take into account the social situation of parents and to support families whose income has been reduced as a result of the economic impact of the COVID-19 pandemic",
+    "Points out that COVID-19 has had a devastating impact on children and young people with disabilities, who have required special care and attention during lockdown and are now having to face the consequences"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 568 in favour, 21 against, 43 abstained. Result derived from the totals."
@@ -2582,5 +2586,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0058/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0058_EN.html"
+  }
 }

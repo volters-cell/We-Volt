@@ -16,7 +16,11 @@
   },
   "document": "B9-0329/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member State prosecutors and competent authorities to investigate to the fullest extent of the law all cases of illegal logging, as well as the transportation, storage, distribution and sale of illegal timber",
+    "Calls on all Member States to share best practices among law enforcement authorities in order to boost the fight against all related illegal practices",
+    "Calls on prosecutors, investigators, rangers and financial experts to join forces and pool expertise in order to swiftly and successfully detect, investigate and prosecute organised crime"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 317 in favour, 248 against, 20 abstained. Result derived from the totals."
@@ -2391,5 +2395,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0329/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0329_EN.html"
+  }
 }

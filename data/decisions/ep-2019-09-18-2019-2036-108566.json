@@ -16,7 +16,11 @@
   },
   "document": "A9-0001/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue to systematically invite Parliament to these meetings and seminars in accordance with the relevant provisions of the Framework Agreement on relations between Parliament and the Commission",
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 580 in favour, 61 against, 67 abstained. Result derived from the totals."
@@ -2881,5 +2885,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0001/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0001_EN.html"
+  }
 }

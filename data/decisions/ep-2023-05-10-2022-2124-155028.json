@@ -16,7 +16,11 @@
   },
   "document": "A9-0142/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Court’s conclusion that the revenue and payments underlying the Agency’s accounts for the year ended 31 December 2021 are legal and regular in all material respects",
+    "Welcomes the successful implementation of Parliament’s calls for publication of the CVs and declarations of interest of the members of the Agency’s management board and of its executive management on the Agency’s website",
+    "Welcomes the adoption of the Agency’s business continuity plan (BCP); calls on the Agency to report to the discharge authority on the implementation of its BCP"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 498 in favour, 82 against, 44 abstained. Result derived from the totals."
@@ -2545,5 +2549,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0142/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0142_EN.html"
+  }
 }

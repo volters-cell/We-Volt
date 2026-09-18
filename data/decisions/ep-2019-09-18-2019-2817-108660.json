@@ -16,7 +16,11 @@
   },
   "document": "B9-0039/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that the negotiation of a future agreement on the new forms of amicable cooperation between the EU and the UK should be delayed no longer so that such an agreement may come into force as soon as possible",
+    "Instructs its President to forward this resolution to the European Council, the Council, the Commission, the national parliaments and the Government of the United Kingdom",
+    "Welcomes the vibrant democratic traditions in certain Member States, which highlight a response against the unfortunate trend of centralisation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 544 in favour, 126 against, 38 abstained. Result derived from the totals."
@@ -2877,5 +2881,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0039/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0039_EN.html"
+  }
 }

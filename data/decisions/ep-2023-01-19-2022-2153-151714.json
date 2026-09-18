@@ -16,7 +16,11 @@
   },
   "document": "A9-0294/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to play an active role in supporting projects that contribute to the just transition, such as research, innovation, digitalisation, SMEs’ access to finance, social investment and skills",
+    "Calls on the EIB to continue to prioritise investments in health infrastructure, staff training and in the quality of health services in order to reduce inequalities between countries",
+    "Urges the EIB to quickly respond to the Ombudsman’s requests to enable the public to see more easily the potential environmental impact of the projects it finances"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 475 in favour, 47 against, 26 abstained. Result derived from the totals."
@@ -2238,5 +2242,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0294/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0294_EN.html"
+  }
 }

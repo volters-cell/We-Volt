@@ -16,7 +16,11 @@
   },
   "document": "A9-0143/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Moldovan authorities to implement reforms improving transparency, tackling corruption and clientelism, which hinder the country's sustainable development and limit the full potential of the DCFTAs, notably to SMEs",
+    "Calls on Moldova to fully implement the DCFTA Trade and Sustainable Development chapter and to remain committed to the Paris agreement and its objectives",
+    "Calls on the Moldovan Government to continue efforts to depoliticise law enforcement agencies and public anti-corruption institutions and to invest in building increased trust between citizens and law enforcement agencies"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 512 in favour, 43 against, 39 abstained. Result derived from the totals."
@@ -2430,5 +2434,9 @@
   "countries": {},
   "topics": [
     "Moldova"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0143/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0143_EN.html"
+  }
 }

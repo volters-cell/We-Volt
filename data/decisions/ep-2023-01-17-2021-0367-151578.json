@@ -16,7 +16,10 @@
   },
   "document": "A9-0290/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 594 in favour, 5 against, 43 abstained. Result derived from the totals."
@@ -2617,5 +2620,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0290/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0290_EN.html"
+  }
 }

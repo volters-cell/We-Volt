@@ -16,7 +16,11 @@
   },
   "document": "A9-0048/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its Annex, to the Council and the Commission",
+    "Welcomes the fact that Selecta put in place a very active training policy that goes far beyond its legal obligations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 556 in favour, 21 against, 10 abstained. Result derived from the totals."
@@ -2397,5 +2401,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0048/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0048_EN.html"
+  }
 }

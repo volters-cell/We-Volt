@@ -16,7 +16,10 @@
   },
   "document": "A9-0072/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this decision to the Council and the Commission, for information",
+    "Points out that the amendments will enter into force on the first day of the next part-session"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 610 in favour, 6 against, 2 abstained. Result derived from the totals."
@@ -2521,5 +2524,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0072/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0072_EN.html"
+  }
 }

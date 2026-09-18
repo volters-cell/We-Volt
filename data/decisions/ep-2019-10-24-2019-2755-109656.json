@@ -16,7 +16,11 @@
   },
   "document": "B9-0130/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all actors in the Mediterranean involved in SAR operations to transmit information related to persons in distress at sea to the competent authorities for SAR",
+    "Calls on the Member States to make the registration of NGO vessels as transparent as possible, in order to guarantee clear information on the origin of their financing",
+    "Calls on Commission to propose rational and feasible polices in order to make sure that only those migrants genuinely in need of international protection come to the European Union, and that they do so via safe pathways"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 319 in favour, 278 against, 28 abstained. Result derived from the totals."
@@ -2546,5 +2550,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0130/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0130_EN.html"
+  }
 }

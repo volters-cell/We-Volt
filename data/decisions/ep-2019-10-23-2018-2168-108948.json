@@ -16,7 +16,10 @@
   },
   "document": "A9-0010/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes efforts to further improve its financial management and performance such as the harmonisation of budget planning at a central level by integrating Multiannual Activity and Budget Planning (MABP)",
+    "Reiterates that the Council ought to be transparent and fully accountable to Union citizens for the funds entrusted to it as a Union institution"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 662 in favour, 24 against, 9 abstained. Result derived from the totals."
@@ -2829,5 +2832,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0010/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0010_EN.html"
+  }
 }

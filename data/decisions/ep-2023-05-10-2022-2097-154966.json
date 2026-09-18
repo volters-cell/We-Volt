@@ -16,7 +16,11 @@
   },
   "document": "A9-0098/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on providing sufficient funding and incentives for further research and development of SAF to make them more efficient and affordable and to enhance and open their market",
+    "Welcomes the finding of the Court of Auditors that the accounts of the European Aviation Safety Agency ('the Agency') for the 2021 financial year are legal and regular in all material respects",
+    "Welcomes that budget implementation rate for final available current year appropriations of EUR 125.2 million remained very high at 96.3 %"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 585 in favour, 21 against, 26 abstained. Result derived from the totals."
@@ -2577,5 +2581,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0098/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0098_EN.html"
+  }
 }

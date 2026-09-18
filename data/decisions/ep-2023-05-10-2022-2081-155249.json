@@ -16,7 +16,11 @@
   },
   "document": "A9-0101/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to indicate the country level spending targets regarding the announced assignment of at least 10% for education and to inform the Parliament about the involvement of local implementing partners",
+    "Calls on the Commission to follow up all errors found by the Court and to request additional financial corrections, where deemed necessary",
+    "Calls on the Court to qualify the impact of corrective measures on the overall level of error"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 421 in favour, 151 against, 5 abstained. Result derived from the totals."
@@ -2357,5 +2361,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0101/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0101_EN.html"
+  }
 }

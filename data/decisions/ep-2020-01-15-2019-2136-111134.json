@@ -16,7 +16,11 @@
   },
   "document": "A9-0054/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that, prior to the adoption of a CFSP-related strategy or communication by the Commission and the EEAS, a consultation mechanism with the Committee on Foreign Affairs and relevant bodies be established",
+    "Underlines the role of each institution involved in the CFSP/CSPD in revisiting its working methods and evaluating the best way to fulfil its role under the Treaties",
+    "Recalls that modern democracies require fully functioning legislative branches and, in this regard, underlines the importance of supporting the work of parliaments in both the Western Balkans and in the neighbourhood"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 148 against, 102 abstained. Result derived from the totals."
@@ -2862,5 +2866,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0054/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0054_EN.html"
+  }
 }

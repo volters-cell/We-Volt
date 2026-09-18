@@ -16,7 +16,9 @@
   },
   "document": "A9-0106/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that with the proclamation of the European Pillar of Social Rights, the Agency is given an important role in implementing its principles"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 559 in favour, 56 against, 25 abstained. Result derived from the totals."
@@ -2614,5 +2616,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0106/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0106_EN.html"
+  }
 }

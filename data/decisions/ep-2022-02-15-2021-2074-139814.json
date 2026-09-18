@@ -16,7 +16,11 @@
   },
   "document": "A9-0348/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, and the governments and parliaments of the Member States",
+    "Supports high standards of respect for taxpayer rights, especially on privacy and data protection, and in particular for individuals, in any political and legislative process regarding taxation",
+    "Notes that Parliament, in dialogue with experts, national parliaments and citizens, will contribute to developing guiding principles ahead of the BEFIT proposal by the Commission in 2023"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 469 in favour, 94 against, 137 abstained. Result derived from the totals."
@@ -2849,5 +2853,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0348/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0348_EN.html"
+  }
 }

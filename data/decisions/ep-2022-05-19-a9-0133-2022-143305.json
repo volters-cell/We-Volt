@@ -16,7 +16,11 @@
   },
   "document": "A9-0133/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Government of North Macedonia to ensure adequate funding and consistent implementation of the decisions and recommendations of independent bodies and agencies, such as the Ombudsman",
+    "Welcomes the establishment of the Commission for Prevention and Protection against Discrimination and its ongoing work; urges the government to allocate the resources necessary to enable it to be fully functional",
+    "Welcomes North Macedonia’s membership of the International Holocaust Remembrance Alliance"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 508 in favour, 56 against, 35 abstained. Result derived from the totals."
@@ -2450,5 +2454,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0133/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0133_EN.html"
+  }
 }

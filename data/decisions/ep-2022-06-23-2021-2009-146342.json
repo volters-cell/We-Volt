@@ -16,7 +16,11 @@
   },
   "document": "A9-0158/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to further develop Erasmus+ financing tools and establish synergies with other programmes",
+    "Calls on the Commission and the Member States to increase their efforts through Erasmus+ to support women’s access to and advancement in mathematics, information and natural sciences and technology",
+    "Instructs its President to forward this resolution to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 471 in favour, 55 against, 66 abstained. Result derived from the totals."
@@ -2417,5 +2421,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0158/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0158_EN.html"
+  }
 }

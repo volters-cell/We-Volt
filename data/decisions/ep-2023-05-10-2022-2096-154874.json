@@ -16,7 +16,11 @@
   },
   "document": "A9-0102/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls that the agency shall ensure full transparency and full respect with fundamental rights in all its activities, including those with third countries",
+    "Notes that, in 2021, the Agency started the implementation of the four multi-annual international projects assisting third countries in building their capacities in relevant law enforcement policy areas",
+    "Notes with appreciation that the Agency has implemented various modules of SYSPER and plans to continue to do so, increasing the use of more basic and optional modules"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 578 in favour, 42 against, 17 abstained. Result derived from the totals."
@@ -2597,5 +2601,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0102/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0102_EN.html"
+  }
 }

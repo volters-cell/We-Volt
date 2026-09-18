@@ -16,7 +16,11 @@
   },
   "document": "B9-0169/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on the Commission not to authorise the import of GM soybeans unless it can be clearly demonstrated that their cultivation did not contribute, directly or indirectly, to deforestation",
+    "Instructs its President to forward this resolution to the Council and the Commission, and to the governments and parliaments of the Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 448 in favour, 185 against, 30 abstained. Result derived from the totals."
@@ -2701,5 +2705,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0169/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0169_EN.html"
+  }
 }

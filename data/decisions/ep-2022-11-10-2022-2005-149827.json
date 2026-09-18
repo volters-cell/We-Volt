@@ -16,7 +16,10 @@
   },
   "document": "A9-0254/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Emphasises the need to ensure meaningful participation of all groups affected by intersectional discrimination in policymaking at EU, national and local levels, especially minority groups"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 442 in favour, 114 against, 42 abstained. Result derived from the totals."
@@ -2441,5 +2444,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0254/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0254_EN.html"
+  }
 }

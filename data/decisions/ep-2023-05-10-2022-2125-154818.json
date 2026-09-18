@@ -16,7 +16,9 @@
   },
   "document": "A9-0093/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the CBE Joint Undertaking’s internal control framework is based on 17 control principles and it is aligned with the control framework of the Commission and is in force since 1 January 2020"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 569 in favour, 55 against, 2 abstained. Result derived from the totals."
@@ -2553,5 +2555,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0093/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0093_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0357/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, and the governments and parliaments of the Member States",
+    "Recalls that, as per Article 50(2) TEU, withdrawal agreements are to take account of the framework for the withdrawing state’s future relationship with the Union",
+    "Notes that the Withdrawal Agreement included a provision for early agreements on the future EU-UK relationship in the area of Common Foreign and Security Policy and CSDP"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 516 in favour, 85 against, 91 abstained. Result derived from the totals."
@@ -2819,5 +2823,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0357/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0357_EN.html"
+  }
 }

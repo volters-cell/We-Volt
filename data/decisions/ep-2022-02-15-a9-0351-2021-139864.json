@@ -16,7 +16,11 @@
   },
   "document": "A9-0351/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Welcomes the fact that the debate on the future of the EU economic governance framework has already begun",
+    "Welcomes the fact that the ECB is preparing to align its corporate asset purchase programmes with the Paris Agreement, with a view to reducing the carbon intensity of its portfolio, but warns against delays"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 569 in favour, 84 against, 38 abstained. Result derived from the totals."
@@ -2818,5 +2822,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0351/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0351_EN.html"
+  }
 }

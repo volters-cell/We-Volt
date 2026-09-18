@@ -16,7 +16,9 @@
   },
   "document": "A9-0186/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports updating the crisis management framework; highlights that the envisaged targeted adjustments to the crisis management regime should make it more coherent, credible and effective"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 494 in favour, 100 against, 19 abstained. Result derived from the totals."
@@ -2501,5 +2503,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0186/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0186_EN.html"
+  }
 }

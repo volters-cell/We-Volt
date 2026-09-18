@@ -16,7 +16,11 @@
   },
   "document": "A9-0126/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes, in particular, the Agency’s work with the advisory committee working group on security of supply and prices, which was given a new mandate in 2021",
+    "Notes that in 2021 the Agency reported a gender repartition among all members of staff of 56 % women and 44 % men",
+    "Notes that following the entry into force of the new rules, the Agency published the forms that must be used to submit supply contracts to be concluded by the Agency and to notify contracts for the provision of services"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 603 in favour, 14 against, 9 abstained. Result derived from the totals."
@@ -2553,5 +2557,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0126/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0126_EN.html"
+  }
 }

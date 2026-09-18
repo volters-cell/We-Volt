@@ -16,7 +16,11 @@
   },
   "document": "A9-0052/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the UK authorities to take particular care in the case of families, registered partners, and persons in an existing durable relationship who are entering the UK to join their family members",
+    "Calls on the UK authorities to guarantee the social and employment rights acquired by the EU citizens and the freedom of movement of cross-border workers based on non-discrimination and reciprocity",
+    "Calls on the UK Government to continue guaranteeing the residence rights of imprisoned EU citizens with pre-settled status, as provided for by the Withdrawal Agreement"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 537 in favour, 43 against, 38 abstained. Result derived from the totals."
@@ -2521,5 +2525,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0052/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0052_EN.html"
+  }
 }

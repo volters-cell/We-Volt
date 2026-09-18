@@ -16,7 +16,11 @@
   },
   "document": "A9-0068/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Ombudsman to integrate in its management decisions adequate considerations for a sustainable development strategy and to include this strategy in the carrying out of its inquiries",
+    "Welcomes the fact that no specific issue was detected by the Court on the regularity of the transactions and that no significant issue was detected following examination of the supervisory and control system of the Ombudsman",
+    "Welcomes the adoption in 2020 of the ‘return to work policy’ aiming to facilitate the re-integration of staff after a long period sick leave, irrespective of whether or not the sick leave is linked to burnout"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 611 in favour, 8 against, 18 abstained. Result derived from the totals."
@@ -2602,5 +2606,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0068/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0068_EN.html"
+  }
 }

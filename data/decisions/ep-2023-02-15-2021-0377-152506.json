@@ -16,7 +16,9 @@
   },
   "document": "A9-0196/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 492 in favour, 109 against, 27 abstained. Result derived from the totals."
@@ -2558,5 +2560,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0196/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0196_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0073/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the progress made in 2021 in developing the integrated case management system (SIGA), and the possibilities this offers for greater optimisation and automation of the various stages in the processing of cases",
+    "Welcomes the progress made, in 2021, in developing the integrated case management system (SIGA) and the possibilities that offers for greater optimisation and automation of the various stages in the processing of cases",
+    "Notes that the Court of Auditors, in its Annual Report for the financial year 2021, increased its sample of transactions under ‘Administration’ from 48 in 2020 to 60 in 2021"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 563 in favour, 73 against, 1 abstained. Result derived from the totals."
@@ -2597,5 +2601,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0073/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0073_EN.html"
+  }
 }

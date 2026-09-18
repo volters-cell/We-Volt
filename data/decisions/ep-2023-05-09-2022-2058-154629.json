@@ -16,7 +16,11 @@
   },
   "document": "A9-0136/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Recalls that the ESOs should always consider the EU policy objectives when drafting standards",
+    "Considers that EU product legislation should focus on essential health and safety requirements, applying where possible a technology-neutral approach, leaving the technical requirements to harmonised EU standards"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 501 in favour, 18 against, 41 abstained. Result derived from the totals."
@@ -2289,5 +2293,9 @@
   "countries": {},
   "topics": [
     "Single market"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0136/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0136_EN.html"
+  }
 }

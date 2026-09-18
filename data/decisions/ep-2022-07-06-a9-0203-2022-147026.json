@@ -16,7 +16,9 @@
   },
   "document": "A9-0203/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this decision to the Council and the Commission, for information"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 20 against, 63 abstained. Result derived from the totals."
@@ -2606,5 +2608,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0203/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0203_EN.html"
+  }
 }

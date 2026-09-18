@@ -16,7 +16,11 @@
   },
   "document": "A9-0231/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to discourage practices that are a threat to the right to safe and clean drinking water and sanitation and to make those practices subject to environmental and human-rights impact assessments",
+    "Calls on the Commission to report regularly to Parliament on the implementation of the EU Human Rights Guidelines on Safe Drinking Water and Sanitation, giving tangible examples of the activities undertaken and their impact",
+    "Calls on the World Bank and the International Monetary Fund to disincentivise the imposition of conditions requiring governments to privatise water and sanitation services when providing grants, loans and technical assistance"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 22 against, 66 abstained. Result derived from the totals."
@@ -2601,5 +2605,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0231/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0231_EN.html"
+  }
 }

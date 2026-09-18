@@ -16,7 +16,9 @@
   },
   "document": "A9-0263/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council and the Commission and to the governments and parliaments of the Member States and Ukraine"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 586 in favour, 1 against, 7 abstained. Result derived from the totals."
@@ -2425,5 +2427,9 @@
   "countries": {},
   "topics": [
     "Ukraine"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0263/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0263_EN.html"
+  }
 }

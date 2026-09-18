@@ -16,7 +16,9 @@
   },
   "document": "A9-0161/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 472 in favour, 124 against, 22 abstained. Result derived from the totals."
@@ -2521,5 +2523,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0161/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0161_EN.html"
+  }
 }

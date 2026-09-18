@@ -16,7 +16,11 @@
   },
   "document": "A9-0349/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Welcomes the Commission’s evaluation report on the TSD, aiming at assessing its functioning since its entry into force",
+    "Stresses the need to develop ambitious standards for adaptive toys, which allow children with disabilities to enjoy and interact with toys they may not otherwise be able to"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 688 in favour, 6 against, 1 abstained. Result derived from the totals."
@@ -2831,5 +2835,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0349/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0349_EN.html"
+  }
 }

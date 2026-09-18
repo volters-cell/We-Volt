@@ -16,7 +16,11 @@
   },
   "document": "A9-0022/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the ECB, as an independent institution, to keep refraining from politically motivated decisions in the pursuit of its mandate",
+    "Calls on the ECB to better report on positions taken by the ECB in the Basel Committee on Banking Supervision, including in writing",
+    "Calls on the ECB to develop a strategy on how to deal with lobbyists and increase the transparency of staff-level contacts beyond the Governing Council"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 376 in favour, 96 against, 35 abstained. Result derived from the totals."
@@ -2077,5 +2081,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0022/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0022_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0168/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member States to increase the EPF’s budget to enable the EU to strengthen the EaP countries’ resilience and defence capabilities, such as those for countering hybrid threats",
+    "Calls on the Commission to strengthen the monitoring of sanctions regimes to secure compliance with existing sanctions regimes",
+    "Calls on the EEAS to coordinate assessment reports, threat assessments and political messaging with Member States’ embassies and NATO Liaison Offices in the associated EaP countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 490 in favour, 59 against, 38 abstained. Result derived from the totals."
@@ -2402,5 +2406,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0168/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0168_EN.html"
+  }
 }

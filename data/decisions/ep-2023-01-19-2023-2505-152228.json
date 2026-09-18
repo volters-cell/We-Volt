@@ -16,7 +16,9 @@
   },
   "document": "B9-0058/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and Commission"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 117 in favour, 296 against, 25 abstained. Result derived from the totals."
@@ -1797,5 +1799,9 @@
   "countries": {},
   "topics": [
     "Brazil"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0058/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0058_EN.html"
+  }
 }

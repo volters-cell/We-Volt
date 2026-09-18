@@ -16,7 +16,11 @@
   },
   "document": "A9-0073/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Undertaking’s outreach activities, in particular the organisation by SESAR Digital Academy of numerous webinars to present its achievements",
+    "Welcomes the fact that the Undertaking was not subject to an investigation led by the European Anti-Fraud Office (OLAF) in 2020",
+    "Welcomes the fact that the Undertaking has completed a significant body of work related to U-space, the European Commission’s initiative for the safe and secure integration of drones"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 547 in favour, 84 against, 6 abstained. Result derived from the totals."
@@ -2602,5 +2606,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0073/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0073_EN.html"
+  }
 }

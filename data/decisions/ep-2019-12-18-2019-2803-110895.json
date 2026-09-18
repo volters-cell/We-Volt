@@ -16,7 +16,11 @@
   },
   "document": "B9-0233/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to ensure the provision of high-quality advice to farmers, through national and regional farm advisory systems, on how to promote and protect biodiversity and pollinators",
+    "Calls on the Commission to request from EFSA a pesticide guidance document setting out pre-approval tests to provide protection for butterflies, moths and hoverflies",
+    "Calls on the Commission and Member States to support green infrastructure that recreates and restores mosaics of habitats and functional connectivity for pollinators in rural and urban landscapes"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 574 in favour, 92 against, 27 abstained. Result derived from the totals."
@@ -2814,5 +2818,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0233/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0233_EN.html"
+  }
 }

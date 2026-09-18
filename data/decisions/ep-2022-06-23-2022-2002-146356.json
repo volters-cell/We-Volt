@@ -16,7 +16,11 @@
   },
   "document": "A9-0174/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to anticipate the next UN Agenda after 2030 with a roadmap of targets and measures to plan the next sustainable developments goals",
+    "Instructs its President to forward this resolution to the Council, the Commission, the Organisation for Economic Co-operation and Development and the United Nations",
+    "Recalls that there are fewer than eight years left to meet the 2030 Agenda targets for sustainable development and that the 2020s have been declared to be the UN Decade of Action on Sustainable Development"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 470 in favour, 56 against, 67 abstained. Result derived from the totals."
@@ -2418,5 +2422,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0174/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0174_EN.html"
+  }
 }

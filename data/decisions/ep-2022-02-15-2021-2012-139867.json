@@ -16,7 +16,11 @@
   },
   "document": "A9-0339/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to make ORE and other relevant energy technologies core components of the EU’s energy system by 2050",
+    "Calls on the Commission and the Member States to ensure there is adequate infrastructure in the EU to ensure a cost-effective deployment of ORE",
+    "Urges Member States to designate specific historical and traditional fishing grounds to local fishers as areas that are to remain free of offshore renewables"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 518 in favour, 88 against, 85 abstained. Result derived from the totals."
@@ -2813,5 +2817,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0339/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0339_EN.html"
+  }
 }

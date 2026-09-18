@@ -16,7 +16,11 @@
   },
   "document": "A9-0065/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that no specific issue was detected by the Court on the regularity of the transactions",
+    "Welcomes the implementation of the Multi-Annual Strategic Audit Plan developed by the IAS; calls on the EEAS to inform the discharge authority about the results and lessons learnt from this strategy",
+    "Welcomes the strengthening of the Regional Security Officers’ (RSO) network in 2020 with the creation of 10 new posts and the investments made in the deployment of a corporate classified system supporting all EEAS roles"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 83 against, 6 abstained. Result derived from the totals."
@@ -2630,5 +2634,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0065/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0065_EN.html"
+  }
 }

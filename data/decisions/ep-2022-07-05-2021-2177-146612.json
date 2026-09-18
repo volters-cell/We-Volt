@@ -16,7 +16,11 @@
   },
   "document": "A9-0193/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure that the text of the agreement, as consistently done in previous EU free trade agreements, protects the EU’s common single market by preventing:",
+    "Instructs its President to forward this resolution to the Council, the Commission, and the Government and Parliament of India",
+    "Regrets that uncertainties remain for EU investors, notably as a result of India’s decision to unilaterally terminate all its bilateral investment treaties in 2016"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 482 in favour, 107 against, 40 abstained. Result derived from the totals."
@@ -2566,5 +2570,9 @@
   "topics": [
     "India",
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0193/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0193_EN.html"
+  }
 }

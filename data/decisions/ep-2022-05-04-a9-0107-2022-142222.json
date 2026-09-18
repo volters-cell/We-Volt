@@ -16,7 +16,11 @@
   },
   "document": "A9-0107/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that an effective policy for managing rented premises and related services, which the Court has been calling for, was established in 11 June 2021 and fully applied from 1 January 2022",
+    "Welcomes the fact that the implementation of the internal control framework was further reinforced in 2020, by adding an ex-post control function, thus addressing observations made in previous years by the discharge authority",
+    "Recalls that in 2020 about 13 600 applications for asylum were lodged by unaccompanied minors in the Member States; stresses the importance of providing a specific reception system for minors that protects them"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 503 in favour, 85 against, 53 abstained. Result derived from the totals."
@@ -2618,5 +2622,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0107/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0107_EN.html"
+  }
 }

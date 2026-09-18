@@ -16,7 +16,10 @@
   },
   "document": "A9-0019/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses therefore the need for clear, high-level political commitment to PCD and calls on the Commission to:",
+    "Emphasises the critical role of the Directorate-General for International Partnerships (DG INTPA) in ensuring the implementation of PCD in the Commission and:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 545 in favour, 26 against, 32 abstained. Result derived from the totals."
@@ -2458,5 +2461,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0019/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0019_EN.html"
+  }
 }

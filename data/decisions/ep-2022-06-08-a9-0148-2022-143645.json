@@ -16,7 +16,9 @@
   },
   "document": "A9-0148/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the governments and parliaments of the Member States and of the Islamic Republic of Mauritania"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 557 in favour, 34 against, 31 abstained. Result derived from the totals."
@@ -2542,5 +2544,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0148/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0148_EN.html"
+  }
 }

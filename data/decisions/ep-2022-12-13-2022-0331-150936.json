@@ -16,7 +16,10 @@
   },
   "document": "A9-0276/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 625 in favour, 3 against, 2 abstained. Result derived from the totals."
@@ -2566,5 +2569,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0276/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0276_EN.html"
+  }
 }

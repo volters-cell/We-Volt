@@ -16,7 +16,11 @@
   },
   "document": "B9-0461/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the completion in Glasgow of the Paris Agreement Rulebook, underlines that the implementation of the rulebook must ensure strong environmental integrity and deliver the highest level of ambition",
+    "Welcomes the commitment, efforts and progress made so far by European citizens, communities, municipalities, cities, regions, industries and institutions towards meeting the obligations of the Paris Agreement",
+    "Notes with deep concern the WMO’s latest State of the Climate report, which shows that four key climate indicators – sea level rise, ocean heat, ocean acidification and GHG concentrations – broke new records in 2021"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 255 in favour, 278 against, 45 abstained. Result derived from the totals."
@@ -2362,5 +2366,9 @@
   "topics": [
     "Egypt",
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0461/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0461_EN.html"
+  }
 }

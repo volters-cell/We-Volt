@@ -16,7 +16,10 @@
   },
   "document": "B9-0264/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission and the Government and Parliament of Hungary",
+    "Reiterates that the Member States are and remain the masters of the Treaties; calls for a reform of the EU towards a Europe that upholds the sovereignty and identity of our European nations and peoples"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 426 in favour, 133 against, 37 abstained. Result derived from the totals."
@@ -2435,5 +2438,9 @@
   "topics": [
     "Hungary",
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0264/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0264_EN.html"
+  }
 }

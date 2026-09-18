@@ -16,7 +16,10 @@
   },
   "document": "A9-0137/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Authority to aim its focus on disseminating the results of its operations to the public, and to reach out to public via the social media and other media outlets",
+    "Recalls the importance of investing in ICT staff with long-term contracts, to avoid brain drain, inefficiencies and potentially increased risks and weakness to cyber-attacks"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 38 against, 36 abstained. Result derived from the totals."
@@ -2565,5 +2568,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0137/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0137_EN.html"
+  }
 }

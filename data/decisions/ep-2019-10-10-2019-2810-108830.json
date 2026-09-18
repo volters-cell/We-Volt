@@ -16,7 +16,11 @@
   },
   "document": "B9-0111/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to prevent the EU from becoming a (counter)propaganda machine silencing all forms of opposition against its narrative",
+    "Calls on the Commission to avoid imposing self-censorship on citizens of the Member States by creating the fear that any form of criticism of the EU will be silenced and/or sanctioned",
+    "Calls on the Commission and the Member States to ensure that the strategies against disinformation and propaganda are not used as a tool to prevent or stifle criticism being levelled at the EU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 469 in favour, 143 against, 47 abstained. Result derived from the totals."
@@ -2681,5 +2685,9 @@
   "countries": {},
   "topics": [
     "Disinformation"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0111/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0111_EN.html"
+  }
 }

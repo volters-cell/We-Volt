@@ -16,7 +16,9 @@
   },
   "document": "B9-0139/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that the recommendations of the special committee should be followed up by Parliament’s standing committees"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 642 in favour, 10 against, 39 abstained. Result derived from the totals."
@@ -2814,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0139/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0139_EN.html"
+  }
 }

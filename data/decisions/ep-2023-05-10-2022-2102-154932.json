@@ -16,7 +16,10 @@
   },
   "document": "A9-0143/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the Court has stated that it has obtained reasonable assurances that the EEA's annual accounts for 2021 are reliable and that the underlying transactions are legal and regular",
+    "Notes that the Agency continues to actively pursue joint procurement procedures with the Commission by means of framework contracts, as well as to use a variety of Commission systems and services"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 544 in favour, 78 against, 4 abstained. Result derived from the totals."
@@ -2553,5 +2556,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0143/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0143_EN.html"
+  }
 }

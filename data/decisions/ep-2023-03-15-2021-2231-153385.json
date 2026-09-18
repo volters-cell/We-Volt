@@ -16,7 +16,11 @@
   },
   "document": "A9-0037/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that Azerbaijan ensure the right to peaceful assembly and calls on Azerbaijan to stop preventing the International Women’s Day march",
+    "Regrets that Azerbaijan has made minimal progress in efforts to eliminate the worst forms of child labour, sexual exploitation and forced begging",
+    "Welcomes the initiative to establish a new Azerbaijan-Georgia-Armenia regional platform and calls for the EU to support regional cooperation in order to foster peace, security and prosperity in the region"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 475 in favour, 35 against, 76 abstained. Result derived from the totals."
@@ -2393,5 +2397,9 @@
   "countries": {},
   "topics": [
     "Armenia and Azerbaijan"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0037/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0037_EN.html"
+  }
 }

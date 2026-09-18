@@ -16,7 +16,11 @@
   },
   "document": "B9-0181/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue its engagement with all of the WTO Members, including the United States, in order to unblock the appointments procedure as a matter of priority, even after 10 December 2019 if necessary",
+    "Instructs its President to forward this resolution to the Council, the Commission, the governments and parliaments of the WTO Members, and the Director-General of the WTO",
+    "Deplores the fact that the ongoing discussions between the WTO Members have not yet yielded positive results"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 506 in favour, 46 against, 61 abstained. Result derived from the totals."
@@ -2498,5 +2502,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0181/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0181_EN.html"
+  }
 }

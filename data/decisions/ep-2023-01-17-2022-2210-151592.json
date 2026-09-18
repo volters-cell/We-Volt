@@ -16,7 +16,9 @@
   },
   "document": "A9-0001/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this decision to the Council and the Commission, for information"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 610 in favour, 26 against, 9 abstained. Result derived from the totals."
@@ -2629,5 +2631,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0001/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0001_EN.html"
+  }
 }

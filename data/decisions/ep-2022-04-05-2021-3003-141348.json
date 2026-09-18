@@ -16,7 +16,10 @@
   },
   "document": "B9-0176/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to ensure full transparency and public access regarding modelling and the underlying choices and assumptions made for estimating nitrogen emissions",
+    "Instructs its President to forward this resolution to the European Commission, the Council and the governments and parliaments of the Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 548 in favour, 15 against, 65 abstained. Result derived from the totals."
@@ -2561,5 +2564,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0176/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0176_EN.html"
+  }
 }

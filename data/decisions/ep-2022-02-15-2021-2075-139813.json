@@ -16,7 +16,11 @@
   },
   "document": "A9-0352/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, Member States and their parliaments",
+    "Stresses the adverse effects of the COVID-19 pandemic on education and highlights the need to ensure inclusion and access to education",
+    "Considers that a series of innovative concepts, especially the hybrid use and multi-functionality of urban spaces, land-use justice and the ’15-minutes city’, will play a crucial role in the new model for the EU’s urban areas"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 524 in favour, 33 against, 143 abstained. Result derived from the totals."
@@ -2849,5 +2853,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0352/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0352_EN.html"
+  }
 }

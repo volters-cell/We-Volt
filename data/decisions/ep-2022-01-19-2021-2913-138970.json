@@ -16,7 +16,10 @@
   },
   "document": "B9-0061/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Commission and to notify it that the delegated regulation cannot enter into force",
+    "Instructs its President to forward this resolution to the Council and to the governments and parliaments of the Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 353 in favour, 336 against, 4 abstained. Result derived from the totals."
@@ -2818,5 +2821,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0061/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0061_EN.html"
+  }
 }

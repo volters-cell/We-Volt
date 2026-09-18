@@ -16,7 +16,10 @@
   },
   "document": "A9-0216/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 655 in favour, 31 against, 8 abstained. Result derived from the totals."
@@ -2821,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0216/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0216_EN.html"
+  }
 }

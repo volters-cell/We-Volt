@@ -16,7 +16,10 @@
   },
   "document": "B9-0224/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, the governments of the Member States and the Parliamentary Assembly of the Council of Europe",
+    "Recalls that the Member States are bound by Article 2 of the TEU and by the Charter of Fundamental Rights to guarantee, protect and promote gender equality"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 500 in favour, 91 against, 50 abstained. Result derived from the totals."
@@ -2609,5 +2612,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0224/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0224_EN.html"
+  }
 }

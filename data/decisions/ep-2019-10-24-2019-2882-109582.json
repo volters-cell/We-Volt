@@ -16,7 +16,10 @@
   },
   "document": "B9-0117/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission and to the governments and parliaments of the Member States",
+    "Welcomes the fact that the incoming Commission has reiterated its utmost support for a prompt adoption of the public CBCR proposal"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 572 in favour, 42 against, 21 abstained. Result derived from the totals."
@@ -2585,5 +2588,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0117/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0117_EN.html"
+  }
 }

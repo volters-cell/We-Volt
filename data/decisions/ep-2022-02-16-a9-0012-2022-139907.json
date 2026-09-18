@@ -16,7 +16,9 @@
   },
   "document": "A9-0012/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this recommendation to the Council and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 568 in favour, 42 against, 82 abstained. Result derived from the totals."
@@ -2822,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0012/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0012_EN.html"
+  }
 }

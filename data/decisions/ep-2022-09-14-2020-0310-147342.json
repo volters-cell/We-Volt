@@ -16,7 +16,9 @@
   },
   "document": "A9-0325/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 92 against, 44 abstained. Result derived from the totals."
@@ -2610,5 +2612,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0325/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0325_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0120/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the finding of the Court of Auditors that the accounts of the European Union Agency for Railways ('the Agency') for the 2020 financial year are legal and regular in all material aspects",
+    "Notes that the cancelled payment appropriations amounted to almost 5 % (mainly due to the Covid-19 crisis) while the implementation rate for current-year appropriations was 89,3 %",
+    "Notes that the budget outturn in 2020 was EUR 114 225, up from EUR 59 486 in 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 578 in favour, 53 against, 13 abstained. Result derived from the totals."
@@ -2630,5 +2634,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0120/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0120_EN.html"
+  }
 }

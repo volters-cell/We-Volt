@@ -16,7 +16,11 @@
   },
   "document": "A9-0039/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission",
+    "Reiterates that the mobilisation of this instrument, as provided for in Article 11 of the MFF Regulation, shows, once more, the crucial need for the Union budget to be more flexible"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 558 in favour, 62 against, 83 abstained. Result derived from the totals."
@@ -2861,5 +2865,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0039/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0039_EN.html"
+  }
 }

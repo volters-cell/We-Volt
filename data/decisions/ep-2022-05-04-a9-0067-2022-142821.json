@@ -16,7 +16,11 @@
   },
   "document": "A9-0067/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that no specific issues were detected by the Court on the regularity of the transactions or following examination of the supervisory and control system of the Council",
+    "Notes with satisfaction that the Court of Auditors (the ‘Court’) identified no significant weaknesses in respect of the audited topics relating to human resources and procurement for the Council",
+    "Believes that increased transparency and a proactive approach to sharing information on the part of the Council would be conducive to a better-informed discharge procedure from the outset"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 60 against, 13 abstained. Result derived from the totals."
@@ -2566,5 +2570,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0067/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0067_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0019/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to alter its proposal accordingly, in accordance with Article 293(2) of the Treaty on the Functioning of the European Union",
+    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 565 in favour, 23 against, 65 abstained. Result derived from the totals."
@@ -2658,5 +2662,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0019/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0019_EN.html"
+  }
 }

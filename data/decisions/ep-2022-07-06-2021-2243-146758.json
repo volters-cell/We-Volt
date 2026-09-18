@@ -16,7 +16,11 @@
   },
   "document": "A9-0190/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to support single mothers of African, Middle-Eastern, Latin-American and Asian descent in order to ensure their full participation in society",
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Welcomes the increasing mention of intersectionality in EU documents, including in the proposal for a pay transparency directive but regrets the lack of clearly defined targets, indicators and actions to implement it"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 438 in favour, 133 against, 58 abstained. Result derived from the totals."
@@ -2565,5 +2569,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0190/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0190_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0153/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Parliament to continue highlighting to seniors Union programmes and policies that benefit active ageing",
+    "Urges the Bureau to actively follow-up on finding a feasible, legal and fair solution given the urgency of the Voluntary Pension Fund situation",
+    "Instructs its President to forward this resolution and the estimates to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 367 in favour, 150 against, 38 abstained. Result derived from the totals."
@@ -2266,5 +2270,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0153/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0153_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "B9-0134/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Commission, the Council and the Member States",
+    "Underlines that the deteriorating situation as regards the rule of law in some Member States necessitates a constructive dialogue about the further evolution of the EU’s rule of law toolbox"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 478 in favour, 155 against, 29 abstained. Result derived from the totals."
@@ -2693,5 +2696,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0134/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0134_EN.html"
+  }
 }

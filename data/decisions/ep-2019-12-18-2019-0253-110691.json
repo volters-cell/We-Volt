@@ -16,7 +16,11 @@
   },
   "document": "A9-0042/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
+    "Requests transparent and timely information on any resulting changes in the CAP legal bases that have an impact on the annual budgetary procedures 2020 and beyond",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 637 in favour, 27 against, 20 abstained. Result derived from the totals."
@@ -2782,5 +2786,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0042/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0042_EN.html"
+  }
 }

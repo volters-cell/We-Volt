@@ -16,7 +16,11 @@
   },
   "document": "A9-0214/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission establish and operate an online platform for collaboration between stakeholders in order to further promote the co-creation process",
+    "Calls on the Commission to propose a crisis management mechanism to ensure that the tourism sector is adequately prepared for future crises where national responses prove insufficient",
+    "Calls on the Commission to develop a comprehensive European tourism policy in view of creating a European Tourism Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 503 in favour, 40 against, 18 abstained. Result derived from the totals."
@@ -2290,5 +2294,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0214/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0214_EN.html"
+  }
 }

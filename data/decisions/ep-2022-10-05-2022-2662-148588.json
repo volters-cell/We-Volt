@@ -16,7 +16,10 @@
   },
   "document": "B9-0413/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Points out that programmes and instruments such as Erasmus Plus and the Youth Guarantee give opportunities to young people from disadvantaged backgrounds and Roma people and their organisations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 109 against, 38 abstained. Result derived from the totals."
@@ -2578,5 +2581,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0413/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0413_EN.html"
+  }
 }

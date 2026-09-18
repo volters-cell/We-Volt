@@ -16,7 +16,10 @@
   },
   "document": "A9-0288/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 571 in favour, 7 against, 10 abstained. Result derived from the totals."
@@ -2401,5 +2404,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0288/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0288_EN.html"
+  }
 }

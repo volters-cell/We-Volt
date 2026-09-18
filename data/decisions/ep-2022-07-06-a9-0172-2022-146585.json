@@ -16,7 +16,11 @@
   },
   "document": "A9-0172/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU to work with and within the UN, regional organisations, international fora such as the G7 and G20 and ad hoc coalitions to tackle the global challenges we face now and in the future",
+    "Urges the UN to appoint its special envoy to Libya, as the position has been vacant since November 2021 and the democratic process in Libya remains at a turning point",
+    "Urges the EU to promote efforts in the UN to combat terrorism by implementing and updating the four pillars of the UN Global Counter-Terrorism Strategy approved by the General Assembly in September 2006"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 73 against, 112 abstained. Result derived from the totals."
@@ -2610,5 +2614,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0172/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0172_EN.html"
+  }
 }

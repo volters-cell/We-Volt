@@ -16,7 +16,11 @@
   },
   "document": "A9-0142/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the European Council, the Council, the Commission and the governments and parliaments of the Member States",
+    "Regrets that three Member States have not yet ratified the amended European Union electoral law adopted in 2018",
+    "Welcomes the adoption of the new Statute of the European Ombudsman, following Parliament’s initiative, which ensures that the Statute is consistent with the Treaty of Lisbon"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 420 in favour, 117 against, 35 abstained. Result derived from the totals."
@@ -2334,5 +2338,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0142/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0142_EN.html"
+  }
 }

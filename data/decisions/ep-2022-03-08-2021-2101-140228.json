@@ -16,7 +16,11 @@
   },
   "document": "A9-0010/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission and the Member States to make swifter progress with the digitalisation of public services including schools, universities, research institutes, public transport, e-government and efficient administration",
+    "Instructs its President to forward this resolution to the Council, the Commission, the Committee of the Regions and the Member States",
+    "Stresses that there are two sides to the digital divide: infrastructure and capacity, that their origins are different, and that different policies must be applied to them and tailored to their respective features"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 644 in favour, 9 against, 43 abstained. Result derived from the totals."
@@ -2830,5 +2834,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0010/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0010_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A9-0238/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that all internal procedures and decisions, including the ones on ethics, be published in a specific column of the Committee’s website",
+    "Welcomes the decision to revise the rules on short-term traineeships (that are compulsory for the completion of studies) and to offer adequate remuneration and further allowances for expenses such as travel and mobility"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 56 against, 28 abstained. Result derived from the totals."
@@ -2585,5 +2588,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0238/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0238_EN.html"
+  }
 }

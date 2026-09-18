@@ -16,7 +16,11 @@
   },
   "document": "A9-0016/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member States to follow recommendations to shift taxation away from labour to other factors that are less detrimental to sustainable growth",
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Deplores the fact that in many Member States the per capita gross disposable household income is still below the 2008 pre-crisis level; urges the Member States to do more to reduce inequalities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 422 in favour, 131 against, 101 abstained. Result derived from the totals."
@@ -2665,5 +2669,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0016/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0016_EN.html"
+  }
 }

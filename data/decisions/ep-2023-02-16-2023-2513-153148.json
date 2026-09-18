@@ -16,7 +16,11 @@
   },
   "document": "B9-0105/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present a proposal aimed at promoting a European network of public companies able to produce, store and distribute renewable energy in the different regions",
+    "Calls on the Commission and the Member States to design binding standards and conditions to guarantee the green transition and the performance of private investments in terms of employment and research and development",
+    "Instructs its President to forward this resolution to the Commission and the Council"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 229 in favour, 316 against, 26 abstained. Result derived from the totals."
@@ -2329,5 +2333,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0105/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0105_EN.html"
+  }
 }

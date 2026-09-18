@@ -16,7 +16,11 @@
   },
   "document": "B9-0492/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue providing financial support, in a transparent manner, to key non-governmental organisations, including those that advocate for and represent patients, consumers and healthcare professionals",
+    "Calls on the Commission and the Member States to map out and address barriers to both human and analogue insulin, and to ensure affordability for both users and national health systems",
+    "Calls on the Commission and the Member States to improve the coordination of European and inter-Member State diabetes research"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 279 in favour, 350 against, 7 abstained. Result derived from the totals."
@@ -2586,5 +2590,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0492/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0492_EN.html"
+  }
 }

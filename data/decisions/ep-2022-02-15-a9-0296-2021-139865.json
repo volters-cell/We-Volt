@@ -16,7 +16,11 @@
   },
   "document": "A9-0296/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to join up the various legal texts on animal welfare, whether on farms, during transport or at slaughter",
+    "Calls on the Commission to also guarantee animal welfare in the rest of the chain downstream of the producer and to incorporate it in the harmonised voluntary labelling provisions",
+    "Calls on the Commission to implement a policy to protect European livestock farming by prohibiting the import into Europe of livestock or meat that does not comply with European animal welfare standards"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 496 in favour, 140 against, 51 abstained. Result derived from the totals."
@@ -2802,5 +2806,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0296/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0296_EN.html"
+  }
 }

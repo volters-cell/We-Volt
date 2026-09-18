@@ -16,7 +16,11 @@
   },
   "document": "B9-0307/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to transmit this resolution to the Council and to forward it to the Commission and the governments and parliaments of the Member States",
+    "Welcomes the conclusions of the Conference of 9 May 2022",
+    "Notes that several of the Conference proposals require amendments to the Treaties, and that Parliament’s Committee on Constitutional Affairs shall prepare proposals for Treaty amendments accordingly"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 355 in favour, 154 against, 48 abstained. Result derived from the totals."
@@ -2275,5 +2279,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0307/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0307_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0077/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that there are different procedures across the Joint Undertakings regarding the calculation for the in-kind contributions and calls for their harmonisation",
+    "Notes that as regards the Joint Undertaking’s 2020 budget available for Horizon 2020 projects, the implementation rates for commitment and payment appropriations were 100 % and 91 % respectively",
+    "Notes that the Joint Undertaking uses common Horizon 2020 key performance indicators (KPIs) for monitoring performance and cross-cutting issues, as well as KPIs specific to the Joint Undertaking"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 576 in favour, 62 against, 3 abstained. Result derived from the totals."
@@ -2618,5 +2622,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0077/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0077_EN.html"
+  }
 }

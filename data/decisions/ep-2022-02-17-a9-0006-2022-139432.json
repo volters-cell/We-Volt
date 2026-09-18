@@ -16,7 +16,11 @@
   },
   "document": "A9-0006/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the act with the President of the Council, in accordance with Article 297(1) of the Treaty on the Functioning of the European Union",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments",
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 173 in favour, 471 against, 54 abstained. Result derived from the totals."
@@ -2843,5 +2847,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0006/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0006_EN.html"
+  }
 }

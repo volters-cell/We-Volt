@@ -16,7 +16,10 @@
   },
   "document": "A9-0111/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Agency’s Administrative Board adopted a new anti-fraud strategy in December 2021, based on the findings of the implementation report of the anti-fraud strategy 2019-2021",
+    "Notes that the Agency uses a number of IT tools to improve efficiency and use of resources, including shared services provided by the Commission, such as ARES (document management) and Sysper (human resources management)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 552 in favour, 76 against, 2 abstained. Result derived from the totals."
@@ -2569,5 +2572,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0111/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0111_EN.html"
+  }
 }

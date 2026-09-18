@@ -16,7 +16,11 @@
   },
   "document": "A9-0125/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Centre has completed all actions taken to the Court’s observations related to the implementation of the budget for the financial years 2019 and 2020",
+    "Notes that the final budget of the Centre for the financial year 2021 amounted to EUR 25 million; expresses its satisfaction that the Centre’s budget for 2021 was executed by 100%",
+    "Stresses the importance of the geographical balance and that all Member States should be proportionally represented in order to have an appropriate representation of nationals from all Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 553 in favour, 78 against, 6 abstained. Result derived from the totals."
@@ -2597,5 +2601,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0125/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0125_EN.html"
+  }
 }

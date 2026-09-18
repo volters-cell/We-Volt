@@ -16,7 +16,11 @@
   },
   "document": "B9-0127/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on EFSA to request data on the impact of the consumption of food and feed derived from GM plants on the intestinal microbiome",
+    "Instructs its President to forward this resolution to the Council and the Commission, and to the governments and parliaments of the Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 474 in favour, 205 against, 15 abstained. Result derived from the totals."
@@ -2825,5 +2829,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0127/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0127_EN.html"
+  }
 }

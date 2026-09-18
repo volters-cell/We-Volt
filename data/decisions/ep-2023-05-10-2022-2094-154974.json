@@ -16,7 +16,11 @@
   },
   "document": "A9-0104/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Deplores the high number of members of the management board, which does not facilitate decision-making and simplified management",
+    "Notes that for 2021, due to exceptional events, the Centre did not apply the mechanism for automatic reimbursement of the budget surplus (EUR 1,1 million) to clients; notes that that amount has been carried over to 2022",
+    "Notes that the Centre has developed a human resources policy on work-life balance, career development, teleworking and the integration of people with disabilities and has a turnover rate for 2021 of 2,72 %"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 585 in favour, 39 against, 6 abstained. Result derived from the totals."
@@ -2569,5 +2573,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0104/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0104_EN.html"
+  }
 }

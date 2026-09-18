@@ -16,7 +16,11 @@
   },
   "document": "A9-0007/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to look into the different forms under which non-profit organisations operate in the Member States and to draw up a comparative analysis",
+    "Urges the Commission to develop a dedicated, comprehensive strategy to strengthen civil society in the Union, including by introducing measures to facilitate the operations of non-profit organisations at all levels",
+    "Requests the Commission to submit, on the basis of Article 352 TFEU, a Regulation establishing a statute for a European Association, following the recommendations set out in this motion and in Part I of the Annex hereto"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 530 in favour, 146 against, 15 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0007/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0007_EN.html"
+  }
 }

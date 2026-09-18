@@ -16,7 +16,11 @@
   },
   "document": "A9-0103/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the level of assistance that EMA has provided to companies developing vaccines and medicines against COVID-19; lauds its consistently scientific approach, which places the health of Union citizens above all else",
+    "Welcomes the fact that the Court has stated that it has obtained reasonable assurance that the EMA’s annual accounts for 2020 are reliable and that the underlying transactions are legal and regular",
+    "Notes that EMA's final budget for the financial year 2020 was EUR 369 749 000, representing an increase of 6,63% compared to 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 559 in favour, 55 against, 27 abstained. Result derived from the totals."
@@ -2618,5 +2622,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0103/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0103_EN.html"
+  }
 }

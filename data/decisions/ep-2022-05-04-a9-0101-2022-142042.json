@@ -16,7 +16,9 @@
   },
   "document": "A9-0101/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes the reappointment of the Authority’s Executive Director for a second five-year term on 29 September 2020"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 547 in favour, 48 against, 35 abstained. Result derived from the totals."
@@ -2574,5 +2576,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0101/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0101_EN.html"
+  }
 }

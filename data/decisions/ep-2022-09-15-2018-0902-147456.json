@@ -16,7 +16,10 @@
   },
   "document": "A9-0217/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates that its concerns relate to the following issues in Hungary:",
+    "Takes note of the recent parliamentary elections in Hungary and insists that the Hungarian Government remains responsible for eliminating the risk of serious breaches of EU values"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 433 in favour, 123 against, 28 abstained. Result derived from the totals."
@@ -2385,5 +2388,9 @@
   "countries": {},
   "topics": [
     "Hungary"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0217/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0217_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0001/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to heed Parliament’s various calls in its resolution of 16 January 2019 to improve the Union’s authorisation procedure for pesticides",
+    "Calls on the Commission and Member States to further invest in research into the causes of adult and also paediatric and adolescent cancers",
+    "Calls on the EU and the Member States to reinforce cooperation with the WHO and to work towards the implementation of WHO policy recommendations and guidelines"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 239 in favour, 371 against, 82 abstained. Result derived from the totals."
@@ -2817,5 +2821,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0001/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0001_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0085/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to follow up on the European Parliament resolution of 9 June 2022 on the call for a Convention for the revision of the Treaties[9]",
+    "Regrets the Council position on the Transparency Register, refusing to consider any strengthening of the measures and rejecting any recommendation for improvement",
+    "Welcomes that the General Secretariat of the Council was able to ensure that decision-making could continue in the European Council and the Council despite the continuing exceptional situation caused by the COVID-19 pandemic"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 517 in favour, 57 against, 64 abstained. Result derived from the totals."
@@ -2601,5 +2605,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0085/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0085_EN.html"
+  }
 }

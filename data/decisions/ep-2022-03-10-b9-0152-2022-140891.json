@@ -16,7 +16,11 @@
   },
   "document": "B9-0152/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU, UNESCO, the Council of Europe, and the OSCE to jointly encourage and support efforts aimed at safeguarding cultural and religious heritage",
+    "Calls on the EU and the Member States to continue supporting the work of international organisations aimed at the protection of cultural and religious heritage",
+    "Calls on the Commission to use all available levers to prevent acts of vandalism, destruction or alteration of cultural heritage in Nagorno-Karabakh"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 635 in favour, 2 against, 42 abstained. Result derived from the totals."
@@ -2767,5 +2771,9 @@
   "topics": [
     "Armenia and Azerbaijan",
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0152/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0152_EN.html"
+  }
 }

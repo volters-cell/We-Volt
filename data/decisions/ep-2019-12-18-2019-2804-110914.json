@@ -16,7 +16,11 @@
   },
   "document": "B9-0239/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue improving cybersecurity and thus reducing the risk of privacy breaches and the unauthorised use of health data across the Union",
+    "Calls on the Commission and the Member States to support the scaling-up of smart health pilot and demonstration projects so as to accelerate learning curves",
+    "Calls on the Commission and the Member States to establish a clear timetable for the changes planned in order to create a digital health Europe, with mid-term assessments and the setting of targets"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 77 in favour, 589 against, 14 abstained. Result derived from the totals."
@@ -2769,5 +2773,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0239/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0239_EN.html"
+  }
 }

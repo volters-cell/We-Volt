@@ -16,7 +16,11 @@
   },
   "document": "A9-0266/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to notify Parliament if it intends to depart from the text approved by Parliament",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments",
+    "Underlines that modifications of the current MFF are necessary to reflect Parliament’s strong support for the Fit for 55 package, including on the revised financial envelope of the Social Climate Fund"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 440 in favour, 117 against, 77 abstained. Result derived from the totals."
@@ -2585,5 +2589,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0266/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0266_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A9-0107/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the Centre has not yet implemented any modules of the SYSPER human resources management system; calls on the Centre to enhance the digitalisation of its staff management system in order to increase its efficiency",
+    "Welcomes the release in 2021 of the first modules of the Centre’s publication ‘Health and Social Responses to Drug Problems: A European Guide 2021’, as the Centre’s first fully digital publication"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 577 in favour, 39 against, 14 abstained. Result derived from the totals."
@@ -2569,5 +2572,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0107/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0107_EN.html"
+  }
 }

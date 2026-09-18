@@ -16,7 +16,11 @@
   },
   "document": "A9-0086/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Bureau to revise the Code of Conduct by including restrictions on Members hiring not only direct, but also indirect family members",
+    "Welcomes and supports the following actions that the internal auditor has agreed with the directorates-general responsible, as a result of the assurance assignments:",
+    "Welcomes the proposal from the Secretary-General to enable the Bureau to debate draft decisions on important matters and decide on those at its following meeting; invites the Bureau and Quaestors to implement that practice"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 500 in favour, 79 against, 53 abstained. Result derived from the totals."
@@ -2577,5 +2581,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0086/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0086_EN.html"
+  }
 }

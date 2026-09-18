@@ -16,7 +16,11 @@
   },
   "document": "A9-0088/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to accelerate the establishment of a real capital markets union; stresses the need to improve access to financial resources, especially for SMEs, start-ups and scale-ups",
+    "Calls on the Commission to ensure consistent enforcement of the rules of the single market",
+    "Calls on the Commission to assess the interplay between AI and the next wave of digital infrastructure, enabling Europe to take the lead in next generation networks, including 6G"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 495 in favour, 34 against, 102 abstained. Result derived from the totals."
@@ -2578,5 +2582,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0088/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0088_EN.html"
+  }
 }

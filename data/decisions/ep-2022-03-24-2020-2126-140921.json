@@ -16,7 +16,11 @@
   },
   "document": "A9-0039/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges greater use of the EU Copernicus observation programme to detect discrepancies between declared and actually cultivated parcels",
+    "Calls on the Commission to increase the weight of the political aspect of its evaluation processes, in particular as regard possible conflicts of interest resulting from revolving doors",
+    "Instructs its President to forward this resolution to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 61 against, 42 abstained. Result derived from the totals."
@@ -2094,5 +2098,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0039/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0039_EN.html"
+  }
 }

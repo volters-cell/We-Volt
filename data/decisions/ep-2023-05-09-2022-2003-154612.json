@@ -16,7 +16,11 @@
   },
   "document": "A9-0119/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to promote, within the rules of the EMFAF, a commitment to co-management models for fisheries, with adequate funding to cover their operating expenditure",
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Notes that there is a continuum of possible co-management arrangements, covering various partnership arrangements and degrees of power-sharing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 583 in favour, 10 against, 33 abstained. Result derived from the totals."
@@ -2553,5 +2557,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0119/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0119_EN.html"
+  }
 }

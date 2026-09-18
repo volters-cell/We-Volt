@@ -16,7 +16,11 @@
   },
   "document": "A9-0271/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission, together with the Member States, to ensure the correct implementation of EU legislation in the environmental field",
+    "Underlines that increased attention should be given to the adoption of a European legislative act that enshrines the recognition of LGBTIQ+ rights",
+    "Points out the need to prevent any inconsistency or lack of homogeneity in the treatment of petitions, in order to guarantee the correct implementation of the right to petition"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 408 in favour, 44 against, 31 abstained. Result derived from the totals."
@@ -1978,5 +1982,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0271/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0271_EN.html"
+  }
 }

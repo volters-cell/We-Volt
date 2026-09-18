@@ -16,7 +16,11 @@
   },
   "document": "A9-0033/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to provide sufficient allocation of funds in order to meet children’s needs in all types of judicial proceedings and to make support services available",
+    "Calls on the Commission to provide a guide to good practice on the recast Brussels IIa Regulation",
+    "Calls on the Commission to evaluate the need for EU legislation to harmonise procedural guarantees for children in cross-border family law proceedings"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 529 in favour, 49 against, 52 abstained. Result derived from the totals."
@@ -2571,5 +2575,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0033/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0033_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0358/2021",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the launch of EU-Ukraine dialogue on cybersecurity and encourages similar engagement with other interested Eastern Partnership countries",
+    "Considers that the Strategic Compass capabilities basket should have the following objectives:",
+    "Stresses the need to develop ever closer cooperation with national parliaments on CSDP matters in order to reinforce accountability and scrutiny and to strengthen defence diplomacy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 369 in favour, 197 against, 123 abstained. Result derived from the totals."
@@ -2810,5 +2814,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0358/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0358_EN.html"
+  }
 }

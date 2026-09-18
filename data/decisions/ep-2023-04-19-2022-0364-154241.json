@@ -16,7 +16,11 @@
   },
   "document": "A9-0068/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward its position to the Council, the Commission and the governments and parliaments of the Member States and to the World Trade Organization",
+    "Urges in this respect also the importance to close any gaps in data, both environmental and economic, that are necessary to ensure the monitoring and full and correct implementation of the Agreement",
+    "Calls on the Commission, in line with the EU’s zero IUU fishing policy, to ensure transparency and full implementation of the ambition"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 593 in favour, 7 against, 43 abstained. Result derived from the totals."
@@ -2621,5 +2625,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0068/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0068_EN.html"
+  }
 }

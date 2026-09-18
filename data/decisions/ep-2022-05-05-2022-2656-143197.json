@@ -16,7 +16,9 @@
   },
   "document": "B9-0238/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU Delegation in Ankara to further monitor the situation of political prisoners and human rights defenders, including by observing trials, making public statements and requesting permission for prison visits"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 79 in favour, 483 against, 27 abstained. Result derived from the totals."
@@ -2401,5 +2403,9 @@
   "countries": {},
   "topics": [
     "Türkiye"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0238/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0238_EN.html"
+  }
 }

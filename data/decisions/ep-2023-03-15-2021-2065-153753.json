@@ -16,7 +16,9 @@
   },
   "document": "A9-0045/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 451 in favour, 133 against, 48 abstained. Result derived from the totals."
@@ -2574,5 +2576,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0045/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0045_EN.html"
+  }
 }

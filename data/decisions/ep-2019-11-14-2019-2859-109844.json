@@ -16,7 +16,11 @@
   },
   "document": "B9-0171/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on the Commission not to authorise the import for food or feed uses of any GM plant which has been made tolerant to a herbicide-active substance that is not authorised for use in the Union",
+    "Calls on the Commission not to authorise any sub-combinations of stacked GM events unless they have been thoroughly evaluated by EFSA on the basis of complete data submitted by the applicant"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 465 in favour, 169 against, 30 abstained. Result derived from the totals."
@@ -2705,5 +2709,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0171/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0171_EN.html"
+  }
 }

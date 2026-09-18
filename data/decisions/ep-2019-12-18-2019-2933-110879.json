@@ -16,7 +16,11 @@
   },
   "document": "B9-0234/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to take concrete measures to ensure freedom of movement for all families, including LGBTI families, in line with the June 2018 judgment by the Court of Justice of the EU in the Coman case[12]",
+    "Calls on the Commission to support training programmes for law enforcement and judicial authorities, and for the relevant EU agencies, with the aim of preventing and tackling discriminatory practices and hate crimes",
+    "Calls on all Member States to monitor hate speech by public authorities and elected officials, as well as during local, regional and national elections, and to take firm and concrete measures and sanctions against it"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 463 in favour, 107 against, 105 abstained. Result derived from the totals."
@@ -2742,5 +2746,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0234/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0234_EN.html"
+  }
 }

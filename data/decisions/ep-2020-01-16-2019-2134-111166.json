@@ -16,7 +16,11 @@
   },
   "document": "A9-0032/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the annual report for 2018 presented by the European Ombudsman",
+    "Welcomes the Ombudsman’s strategy, which aims to increase the impact and visibility of her mandate among EU citizens",
+    "Welcomes the redesign of the European Ombudsman’s website, which makes it a more functional and accessible instrument for citizens"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 563 in favour, 3 against, 63 abstained. Result derived from the totals."
@@ -2562,5 +2566,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0032/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2019-0032_EN.html"
+  }
 }

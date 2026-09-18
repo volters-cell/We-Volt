@@ -16,7 +16,11 @@
   },
   "document": "A9-0074/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Court in its Annual Report for the financial year 2021 increased its sample of transactions under ‘Administration’ from 48 in 2020 to 60 in 2021",
+    "Notes with satisfaction that in the annual Report for the financial year 2021, the Court did not identify any specific issues concerning the Committee",
+    "Underlines that, on 6 October 2022, by its ruling in case C-673/21[7], the Court of Justice confirmed the legality of the measures taken by the decision of 9 June 2020 of the Committee’s bureau"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 552 in favour, 79 against, 4 abstained. Result derived from the totals."
@@ -2589,5 +2593,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0074/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0074_EN.html"
+  }
 }

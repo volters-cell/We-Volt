@@ -16,7 +16,11 @@
   },
   "document": "A9-0204/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to explore in future legislative proposals how to ensure that the technology underpinning newly adopted legislation is intrinsically linked to the correct implementation of the legislation",
+    "Calls on Member States to treat different types of crypto-assets in a manner that is consistent with the tax treatment of similar non-crypto assets",
+    "Instructs its President to forward this resolution to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 566 in favour, 7 against, 47 abstained. Result derived from the totals."
@@ -2529,5 +2533,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0204/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0204_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "A9-0026/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to make better use of bilateral agreements and to set up cooperation arrangements to remove barriers to cross-border healthcare",
+    "Instructs its President to forward this resolution to the Council, the Commission and the national parliaments of the Member States",
+    "Underlines that the EU’s cohesion policy invests in health as a key asset for regional development, social convergence and regional competitiveness in order to reduce economic and social disparities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 582 in favour, 35 against, 79 abstained. Result derived from the totals."
@@ -2833,5 +2837,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0026/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0026_EN.html"
+  }
 }

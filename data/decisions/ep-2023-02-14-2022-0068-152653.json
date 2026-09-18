@@ -16,7 +16,10 @@
   },
   "document": "A9-0248/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to refer the matter to Parliament again if it replaces, substantially amends or intends to substantially amend its proposal",
+    "Instructs its President to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 13 against, 81 abstained. Result derived from the totals."
@@ -2646,5 +2649,9 @@
   "topics": [
     "United Kingdom",
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0248/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0248_EN.html"
+  }
 }

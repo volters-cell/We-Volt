@@ -16,7 +16,11 @@
   },
   "document": "A9-0018/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU institutions to address the challenges faced by vulnerable groups of people who are underrepresented and unable to have their issues addressed, and to involve them in decision-making",
+    "Instructs its President to forward this resolution to the Council, the Commission, the European Ombudsman, the governments and parliaments of the Member States, and their ombudsmen or similar competent bodies",
+    "Recalls that many European citizens are being deprived of their right to petition, as their platforms do not comply with accessibility standards and the requirements set out in Article 33.2 of the UN CPRD"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 417 in favour, 40 against, 237 abstained. Result derived from the totals."
@@ -2822,5 +2826,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0018/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0018_EN.html"
+  }
 }

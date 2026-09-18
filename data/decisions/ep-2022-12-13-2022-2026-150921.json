@@ -16,7 +16,11 @@
   },
   "document": "A9-0284/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU Member States which have not yet signed and ratified the Optional Protocol to the CRPD to do so",
+    "Urges the Commission and the Member States to introduce public and private sector workplace quotas for persons with disabilities in order to foster an inclusive workplace",
+    "Calls on the Commission and the Member States to remove any physical, legal and pedagogical barriers that impede equal access to learning and teaching environments for teachers and students with disabilities and special needs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 10 against, 83 abstained. Result derived from the totals."
@@ -2522,5 +2526,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0284/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0284_EN.html"
+  }
 }

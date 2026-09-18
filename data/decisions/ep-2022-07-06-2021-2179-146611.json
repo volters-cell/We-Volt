@@ -16,7 +16,11 @@
   },
   "document": "A9-0192/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to monitor that Member States follow-up on Social Economy commitments in national Recovery and Resilience Plans (RRPs)",
+    "Instructs its President to forward this resolution to the Council and the Commission",
+    "Welcomes the Commission’s plans to consider the launch of dedicated co-investment mechanisms with foundations and philanthropic organisations for target issues such as homelessness"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 493 in favour, 75 against, 69 abstained. Result derived from the totals."
@@ -2594,5 +2598,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0192/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0192_EN.html"
+  }
 }

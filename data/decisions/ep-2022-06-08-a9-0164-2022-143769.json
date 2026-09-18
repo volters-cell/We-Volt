@@ -16,7 +16,9 @@
   },
   "document": "A9-0164/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 438 in favour, 65 against, 94 abstained. Result derived from the totals."
@@ -2443,5 +2445,9 @@
   "topics": [
     "Ukraine",
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0164/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0164_EN.html"
+  }
 }

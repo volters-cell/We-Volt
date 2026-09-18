@@ -16,7 +16,10 @@
   },
   "document": "A9-0282/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to sign the decision with the President of the Council and arrange for its publication in the Official Journal of the European Union",
+    "Instructs its President to forward this resolution, including its annex, to the Council and the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 555 in favour, 7 against, 4 abstained. Result derived from the totals."
@@ -2313,5 +2316,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0282/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0282_EN.html"
+  }
 }

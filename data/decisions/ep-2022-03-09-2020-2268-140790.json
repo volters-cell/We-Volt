@@ -16,7 +16,11 @@
   },
   "document": "A9-0022/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to put forward an overarching media and information literacy strategy with a special focus on combating information manipulation",
+    "Calls on the Member States to close in particular all the following loopholes when further harmonising national regulations, and to implement a ban on foreign donations:",
+    "Calls on the Commission to review EU investments in NSO Group Technologies and to adopt targeted measures against foreign states using software to spy on EU citizens or persons benefiting from refugee status in EU countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 552 in favour, 81 against, 60 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
   "countries": {},
   "topics": [
     "Disinformation"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0022/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0022_EN.html"
+  }
 }

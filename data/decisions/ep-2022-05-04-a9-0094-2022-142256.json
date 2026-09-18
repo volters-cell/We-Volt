@@ -16,7 +16,10 @@
   },
   "document": "A9-0094/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the efforts taken by the Institute to continue improving its social media presence and its strategy for sustainable development in 2020",
+    "Notes, with respect to the follow-up of the 2019 discharge, that in 2020 the Institute initiated the process of reviewing the application of the good governance principles (‘GGP’) by the Institute’s KICs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 570 in favour, 32 against, 31 abstained. Result derived from the totals."
@@ -2586,5 +2589,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0094/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0094_EN.html"
+  }
 }

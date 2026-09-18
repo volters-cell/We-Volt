@@ -16,7 +16,11 @@
   },
   "document": "A9-0295/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission submit, by 31January 2024, on the basis of Article 153(1)(e) TFEU, a proposal for a revision of Directive 2009/38/EC , following the recommendations set out in the Annex hereto",
+    "Instructs its President to forward this resolution and the accompanying recommendations to the Commission and the Council",
+    "Stresses the importance of ensuring that undertakings or groups of undertakings can take decisions effectively"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 270 in favour, 319 against, 16 abstained. Result derived from the totals."
@@ -2466,5 +2470,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0295/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0295_EN.html"
+  }
 }

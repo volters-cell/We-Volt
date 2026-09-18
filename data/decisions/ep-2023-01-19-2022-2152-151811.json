@@ -16,7 +16,11 @@
   },
   "document": "A9-0299/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Demands that the Member States collect data on the final recipients of funds and make this data available on request",
+    "Calls on the Commission to explore the possibility of using artificial intelligence for the protection of the EU’s financial interests",
+    "Calls on the Commission to update the fraud report system for funds spent in non-EU countries; notes that the new system should take into account specific issues that the EU faces when spending money outside EU territory"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 459 in favour, 33 against, 56 abstained. Result derived from the totals."
@@ -2238,5 +2242,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0299/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0299_EN.html"
+  }
 }

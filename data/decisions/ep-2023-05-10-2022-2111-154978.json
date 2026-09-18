@@ -16,7 +16,11 @@
   },
   "document": "A9-0113/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the publication by the Agency of its Annual Overview of Marine Casualties and Incidents 2021 which presents statistical data on marine casualties and incidents for the 2014-2020 period",
+    "Stresses that financial regulation and high management standards have to be respected by all the EU’s institutions",
+    "Notes that as from January 2021 EMSA changed its contract with its energy provider and now uses 100 % of renewable green energy; welcomes the installations of photovoltaic solar panels on the roof of the EMSA building"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 553 in favour, 55 against, 24 abstained. Result derived from the totals."
@@ -2577,5 +2581,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0113/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0113_EN.html"
+  }
 }

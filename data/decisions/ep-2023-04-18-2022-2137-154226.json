@@ -16,7 +16,11 @@
   },
   "document": "A9-0056/2023",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this resolution to the Council, the Commission, the European Union Agency for Fundamental Rights and the Council of Europe",
+    "Welcomes the success of the Common European Framework of Reference for Languages, which has become an essential tool for assessing language proficiency",
+    "Welcomes, in that regard, the effective cooperation of the parliamentary assemblies of the OSCE and the Council of Europe with the European Parliament in election observation missions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 494 in favour, 76 against, 76 abstained. Result derived from the totals."
@@ -2630,5 +2634,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0056/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0056_EN.html"
+  }
 }

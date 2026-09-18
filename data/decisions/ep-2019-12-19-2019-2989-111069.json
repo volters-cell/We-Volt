@@ -16,7 +16,9 @@
   },
   "document": "B9-0241/2019",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its President to forward this Resolution to the Council, the Commission and the governments and parliaments of all Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 513 in favour, 18 against, 87 abstained. Result derived from the totals."
@@ -2514,5 +2516,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0241/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2019-0241_EN.html"
+  }
 }

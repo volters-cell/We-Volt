@@ -16,7 +16,11 @@
   },
   "document": "A9-0112/2022",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Agency’s cooperation with UK-based companies at the end of transition period that followed the withdrawal of the UK from the Union, thus helping to prevent significant disruption to the Union market",
+    "Welcomes the Agency’s efforts to strengthen, clarify and speed up the process for approving and reviewing active substances with a biocidal effect under the Active Substances Action Plan",
+    "Welcomes the Agency’s decision to become climate-neutral in line with the Union’s 2030 climate target and its ambition to extend environmental certification to the Union’s eco-management and audit scheme"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 552 in favour, 68 against, 18 abstained. Result derived from the totals."
@@ -2606,5 +2610,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0112/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0112_EN.html"
+  }
 }
