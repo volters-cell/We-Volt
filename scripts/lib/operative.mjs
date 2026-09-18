@@ -21,6 +21,31 @@
    Parliament asks for above what it observes, and it is a rule anybody can
    apply to the same document and get the same three back. */
 const DEMANDS = ['Calls on', 'Urges', 'Demands', 'Requests', 'Insists', 'Instructs'];
+
+/* The formulas every resolution ends on, which say what the Parliament does
+   with a text rather than what it wants done in the world. "Instructs its
+   President to forward this resolution to the Council" is the last paragraph
+   of almost every resolution ever passed — it appeared 371 times in the first
+   pass, and "Calls on the Commission to refer the matter to Parliament" 131
+   more. Between them they were 41% of everything quoted: three bullets under
+   a vote, two of them identical to the two under the vote before it.
+
+   They are excluded by what they say, not by where they sit, because the
+   Parliament does not always put them last. */
+const PROCEDURAL = [
+  /^Instructs its President to (forward|declare|sign|transmit)/i,
+  /^Calls on the Commission to refer the matter to Parliament/i,
+  /^Calls on the Council to (notify|inform) Parliament if it intends to depart/i,
+  /^(Approves|Takes note of) the (Commission|Council|joint)/i,
+  /^Approves the .{0,40}(proposal|position|draft|text) (annexed|as amended|thereto)/i,
+  /^Instructs its President to forward/i,
+  /^Decides to (consult|forward|refer)/i,
+  /^Consents? to (the )?conclusion of/i
+];
+
+export function isProcedural(text) {
+  return PROCEDURAL.some(function (pattern) { return pattern.test(String(text || '').trim()); });
+}
 const POSITIONS = ['Condemns', 'Deplores', 'Regrets', 'Welcomes', 'Supports', 'Rejects'];
 const OBSERVATIONS = ['Stresses', 'Underlines', 'Emphasises', 'Notes', 'Recalls',
   'Considers', 'Points out', 'Takes note', 'Reiterates', 'Believes'];
@@ -56,6 +81,8 @@ export function operativeParagraphs(text) {
     // Strip the paragraph number and the semicolon that ends it.
     const body = trimmed.replace(/^\d{1,3}\.\s+/, '').replace(/\s*[;,.]\s*$/, '').trim();
     if (!body || seen.has(body)) return;
+    // What the Parliament does with the paper is not what the vote asks for.
+    if (isProcedural(body)) return;
     seen.add(body);
     found.push({ text: body, order: number, rank: rank(trimmed) });
   });

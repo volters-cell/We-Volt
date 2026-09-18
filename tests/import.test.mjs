@@ -20,7 +20,7 @@ import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.
 import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
 import { shorten } from '../scripts/lib/titles.mjs';
 import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
-import { bulletsFrom, operativeParagraphs } from '../scripts/lib/operative.mjs';
+import { bulletsFrom, operativeParagraphs, isProcedural } from '../scripts/lib/operative.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -301,5 +301,22 @@ assert.deepEqual(bulletsFrom(''), [], 'and neither does an empty one');
 // A paragraph the length of a page is not a bullet; it stays in the document.
 const huge = '4. Calls on the Commission ' + 'to consider every possible aspect '.repeat(20) + ';';
 assert.deepEqual(operativeParagraphs(huge), [], 'a half-page paragraph is left where it is');
+
+/* What the Parliament does with the paper is not what the vote asks for.
+   These formulas close almost every resolution it passes — 564 of the first
+   1,378 bullets, 41%, were one of them. */
+assert.equal(isProcedural('Instructs its President to forward this resolution to the Council'), true);
+assert.equal(isProcedural('Instructs its President to forward its position to the Commission'), true);
+assert.equal(isProcedural('Calls on the Commission to refer the matter to Parliament if it intends to amend its proposal'), true);
+assert.equal(isProcedural('Calls on the Council to notify Parliament if it intends to depart from the text approved'), true);
+assert.equal(isProcedural('Calls on Member States to maintain their ports open to NGO vessels'), false,
+  'and a real demand is not procedural');
+assert.equal(isProcedural('Urges the Commission to withdraw its draft implementing regulation'), false);
+
+assert.deepEqual(
+  bulletsFrom(['1. Instructs its President to forward this resolution to the Council;',
+    '2. Calls on Member States to maintain their ports open to NGO vessels;'].join('\n')),
+  ['Calls on Member States to maintain their ports open to NGO vessels'],
+  'the closing formula is dropped and the demand kept');
 
 console.log('import.test.mjs: ok');

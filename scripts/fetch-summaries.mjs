@@ -107,7 +107,17 @@ for (const name of files) {
 
   looked += 1;
   const found = await bulletsForDocument(record.document);
-  if (!found) { nothingToQuote += 1; continue; }
+  if (!found) {
+    nothingToQuote += 1;
+    /* On a re-read, a record that used to carry boilerplate and now qualifies
+       for nothing must lose it rather than keep what the rule has rejected. */
+    if (AGAIN && (record.whatItMeans || []).length) {
+      delete record.whatItMeans;
+      delete record.whatItMeansFrom;
+      if (!DRY) await writeFile(file, JSON.stringify(record, null, 2) + '\n', 'utf8');
+    }
+    continue;
+  }
 
   record.whatItMeans = found.bullets;
   record.whatItMeansFrom = { reference: found.from, url: found.url };
