@@ -1,0 +1,41 @@
+# Do the "Procedure file" links actually open a procedure file?
+#
+# 1,090 of the 3,176 cite a document code — RC-B9-0006/2019 — where OEIL's
+# procedure-file expects a procedure reference like 2019/2820(RSP), and another
+# 1,485 cite a bare number with its type missing. This site's whole claim is
+# that its figures can be checked against the Parliament's, and a citation that
+# opens nothing invites the check and then fails it.
+#
+# So each shape is opened in a real browser, because www.europarl.europa.eu
+# answers a plain HTTP client with an empty 202 and an earlier probe here read
+# that as "does not exist".
+#
+# Writes nothing. Read the table, then change the importer.
+
+name: Probe reference links
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Cache the browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.49-chromium
+
+      - name: Install Playwright
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
+
+      - name: Ask each address what it returns
+        run: node scripts/probe-reference-links.mjs
