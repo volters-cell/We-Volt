@@ -47,8 +47,15 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-1.49-chromium
 
+      # --no-save, like every other workflow here. Installing it as a
+      # dependency rewrites package.json, which leaves the tree dirty, and the
+      # rebase before the push then refuses to run — which is exactly how the
+      # first run of this read 725 documents, committed them, and pushed
+      # nothing.
       - name: Install Playwright
-        run: npm i -D playwright@1.49.0 && npx playwright install --with-deps chromium
+        run: |
+          npm i --no-save playwright@1.49
+          npx playwright install --with-deps chromium
 
       - name: Read what the votes ask for
         id: quote
