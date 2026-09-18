@@ -553,7 +553,11 @@
       "topics": [
         "Trade"
       ],
-      "committee": null,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
       "rollCalls": 4,
       "result": "adopted",
       "status": "verified",

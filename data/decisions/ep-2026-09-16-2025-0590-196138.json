@@ -21,7 +21,11 @@
     "result": "adopted",
     "headline": "Adopted — 496 in favour, 53 against, 125 abstained. Result derived from the totals."
   },
-  "committee": null,
+  "committee": {
+    "code": "IMCO",
+    "label": "Internal Market and Consumer Protection",
+    "short": "Single Market"
+  },
   "rollCalls": 4,
   "ballots": [
     [
