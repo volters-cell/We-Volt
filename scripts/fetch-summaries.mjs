@@ -28,9 +28,8 @@
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { chromium } from 'playwright';
 import { documentPath } from './lib/portal.mjs';
-import { bulletsFrom } from './lib/operative.mjs';
+import { bulletsFrom, isProcedural } from './lib/operative.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -41,6 +40,10 @@ function arg(name) {
   return at === -1 ? null : process.argv[at + 1];
 }
 const AGAIN = process.argv.includes('--again');
+/* Re-apply the rule to what is already written, without asking the Parliament
+   for anything. A formula spotted after a run is not worth reading 1,460
+   documents again to remove. */
+const TIDY = process.argv.includes('--tidy');
 const DRY = process.argv.includes('--dry-run');
 const MINUTES = Number(arg('minutes') || 0);
 const DEADLINE = MINUTES > 0 ? Date.now() + MINUTES * 60000 : Infinity;
@@ -48,6 +51,28 @@ const DEADLINE = MINUTES > 0 ? Date.now() + MINUTES * 60000 : Infinity;
 const files = (await readdir(path.join(ROOT, DIR)))
   .filter((n) => n.endsWith('.json') && n !== 'index.json' && !/^term-\d+\.json$/.test(n));
 
+if (TIDY) {
+  let trimmed = 0;
+  let emptied = 0;
+  for (const name of files) {
+    const file = path.join(ROOT, DIR, name);
+    const record = JSON.parse(await readFile(file, 'utf8'));
+    const had = record.whatItMeans || [];
+    if (!had.length) continue;
+    const keep = had.filter(function (line) { return !isProcedural(line); });
+    if (keep.length === had.length) continue;
+    if (keep.length) { record.whatItMeans = keep; trimmed += 1; }
+    else { delete record.whatItMeans; delete record.whatItMeansFrom; emptied += 1; }
+    if (!DRY) await writeFile(file, JSON.stringify(record, null, 2) + '\n', 'utf8');
+  }
+  console.log(`Tidied: ${trimmed} records lost a formulaic line, ${emptied} were left with none.`);
+  process.exit(0);
+}
+
+/* Loaded here rather than at the top, because --tidy needs no browser and a
+   top-level import of one stops the offline path running anywhere it is not
+   installed. */
+const { chromium } = await import('playwright');
 const browser = await chromium.launch();
 const context = await browser.newContext({
   userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36',

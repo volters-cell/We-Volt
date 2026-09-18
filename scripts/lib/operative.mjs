@@ -40,7 +40,8 @@ const PROCEDURAL = [
   /^Approves the .{0,40}(proposal|position|draft|text) (annexed|as amended|thereto)/i,
   /^Instructs its President to forward/i,
   /^Decides to (consult|forward|refer)/i,
-  /^Consents? to (the )?conclusion of/i
+  /^Consents? to (the )?conclusion of/i,
+  /alter its proposal accordingly, in accordance with Article 293\(2\)/i
 ];
 
 export function isProcedural(text) {
