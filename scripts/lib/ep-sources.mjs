@@ -41,6 +41,36 @@ export function procedureUrl(reference) {
     encodeURIComponent(reference).replace(/%2F/g, '/');
 }
 
+/* Which references OEIL will actually answer for.
+
+   Asked, not assumed — scripts/probe-reference-links.mjs opened one of each
+   shape in a browser and read what came back:
+
+     2024/2721(RSP)    200, Procedure File: 2024/2721(RSP)
+     2023/0212(COD)    200, Procedure File: 2023/0212(COD)
+     A9-0002/2020      200, Procedure File: 2018/0358(NLE)   — resolves it
+     C9-0161/2020      200, Procedure File: 2020/0113(COD)   — resolves it
+     2019/0806         404, Error 404 | Legislative Observatory
+     2019/2057         404
+     RC-B9-0006/2019   404
+
+   So a procedure number without its type in brackets is not a reference OEIL
+   knows, and neither is a joint motion. Between them that was 1,715 of the
+   3,188 links this site published — 54% of its "check it at the European
+   Parliament" invitations answering Error 404. A citation that opens nothing
+   is worse than none: it invites the check and then fails it. */
+const FULL_PROCEDURE = /^\d{4}\/\d{4}[A-Z]?\([A-Z]+\)$/;
+const DOCUMENT_CODE = /^[A-Z]{1,3}\d{1,2}-\d{4}\/\d{4}$/;
+
+export function opensOnOeil(reference) {
+  const ref = String(reference || '').trim();
+  if (!ref) return false;
+  if (FULL_PROCEDURE.test(ref)) return true;
+  // A joint motion carries a document code and OEIL has nothing for it.
+  if (/^RC-/i.test(ref)) return false;
+  return DOCUMENT_CODE.test(ref);
+}
+
 export function sourcesFor(date, procedureReference) {
   const term = termOf(date);
   const doceo = 'https://www.europarl.europa.eu/doceo/document/PV-' + term + '-' + date;
@@ -60,9 +90,18 @@ export function sourcesFor(date, procedureReference) {
     }
   ];
 
-  if (procedureReference) {
+  /* Only where the Parliament will answer for it. A vote whose reference OEIL
+     does not know keeps the three links that do work — the roll-call annex,
+     the minutes, and the sitting as data — rather than gaining a fourth that
+     opens an error page. */
+  if (procedureReference && opensOnOeil(procedureReference)) {
     sources.push({
-      label: 'Procedure file ' + procedureReference,
+      // The reference is named only when it is a procedure reference. A
+      // document code resolves to a procedure file that is not called that,
+      // so naming it would promise the wrong page.
+      label: FULL_PROCEDURE.test(String(procedureReference).trim())
+        ? 'Procedure file ' + procedureReference
+        : 'Procedure file for ' + procedureReference,
       url: procedureUrl(procedureReference),
       role: 'procedure'
     });

@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of Parliament's component members",
   "procedure": {
     "reference": "2023/0129",
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0129"
+    "url": null
   },
   "document": "A10-0246/2025",
   "summary": "",
@@ -2595,11 +2595,6 @@
       "label": "Minutes of the sitting",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-12-16-TOC_EN.html",
       "role": "minutes"
-    },
-    {
-      "label": "Procedure file 2023/0129",
-      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2023/0129",
-      "role": "procedure"
     },
     {
       "label": "Open data record for the sitting",

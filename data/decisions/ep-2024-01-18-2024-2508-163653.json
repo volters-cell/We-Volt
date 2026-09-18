@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2024/2508",
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2508"
+    "url": null
   },
   "document": "B9-0071/2024",
   "summary": "",
@@ -2087,11 +2087,6 @@
       "label": "Minutes of the sitting",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-18-TOC_EN.html",
       "role": "minutes"
-    },
-    {
-      "label": "Procedure file 2024/2508",
-      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2508",
-      "role": "procedure"
     },
     {
       "label": "Open data record for the sitting",

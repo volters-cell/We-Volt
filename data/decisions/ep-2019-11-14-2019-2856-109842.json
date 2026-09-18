@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2019/2856",
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2019/2856"
+    "url": null
   },
   "document": "B9-0170/2019",
   "summary": "",
@@ -2699,11 +2699,6 @@
       "label": "Minutes of the sitting",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-9-2019-11-14-TOC_EN.html",
       "role": "minutes"
-    },
-    {
-      "label": "Procedure file 2019/2856",
-      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2019/2856",
-      "role": "procedure"
     },
     {
       "label": "Open data record for the sitting",

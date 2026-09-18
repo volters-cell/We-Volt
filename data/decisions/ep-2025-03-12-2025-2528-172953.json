@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2025/2528",
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2528"
+    "url": null
   },
   "document": "B10-0156/2025",
   "summary": "",
@@ -2743,11 +2743,6 @@
       "label": "Minutes of the sitting",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-10-2025-03-12-TOC_EN.html",
       "role": "minutes"
-    },
-    {
-      "label": "Procedure file 2025/2528",
-      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2528",
-      "role": "procedure"
     },
     {
       "label": "Open data record for the sitting",

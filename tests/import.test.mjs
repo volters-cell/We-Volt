@@ -19,6 +19,7 @@ import {
 import { foldSessions, locationOf, termNumber } from '../scripts/fetch-sessions.mjs';
 import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
 import { shorten } from '../scripts/lib/titles.mjs';
+import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -258,5 +259,17 @@ for (const state of reference.former) {
   assert.equal(state.memberships, undefined, 'and no memberships');
   assert.ok(!reference.states.some((row) => row.code === state.code), 'and is not also a member');
 }
+
+/* Which references the Legislative Observatory answers for, established by
+   opening one of each in a browser rather than by reasoning about it. Half
+   this site's "check it at the European Parliament" links used to open Error
+   404, which is the one kind of broken link this project cannot afford. */
+assert.equal(opensOnOeil('2024/2721(RSP)'), true, 'a procedure reference with its type');
+assert.equal(opensOnOeil('2024/0159M(NLE)'), true, 'including the M form');
+assert.equal(opensOnOeil('A9-0002/2020'), true, 'a report code, which OEIL resolves');
+assert.equal(opensOnOeil('C9-0161/2020'), true, 'and a Council one');
+assert.equal(opensOnOeil('2019/0806'), false, 'a procedure number with no type: 404');
+assert.equal(opensOnOeil('RC-B9-0006/2019'), false, 'a joint motion: 404');
+assert.equal(opensOnOeil(''), false, 'and nothing is not a reference');
 
 console.log('import.test.mjs: ok');

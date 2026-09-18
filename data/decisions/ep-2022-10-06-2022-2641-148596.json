@@ -12,7 +12,7 @@
   "voteRuleLabel": "Majority of votes cast",
   "procedure": {
     "reference": "2022/2641",
-    "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2641"
+    "url": null
   },
   "document": "B9-0423/2022",
   "summary": "",
@@ -2343,11 +2343,6 @@
       "label": "Minutes of the sitting",
       "url": "https://www.europarl.europa.eu/doceo/document/PV-9-2022-10-06-TOC_EN.html",
       "role": "minutes"
-    },
-    {
-      "label": "Procedure file 2022/2641",
-      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/2641",
-      "role": "procedure"
     },
     {
       "label": "Open data record for the sitting",
