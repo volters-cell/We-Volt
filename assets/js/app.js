@@ -31,6 +31,9 @@
   const cache = {};
   let states = [];
   let statesByCode = {};
+  /* The votes of each plenary, so a fold that was rendered empty can be filled
+     when it opens without rebuilding the feed around it. */
+  const cardsByKey = {};
   let index = null;
   let map = null;
 
@@ -681,8 +684,22 @@
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
       });
+      const showing = open || current;
+
+      /* A plenary that is shut builds no cards.
+
+         Every one of them used to, open or not: landing on the site put 770
+         card buttons into the page and unfolding the earlier Parliament put
+         3,752 there, almost all of them inside folds nobody had opened. The
+         browser laid out, styled and kept all of it, which is what made
+         scrolling and every re-render cost what they did.
+
+         A shut plenary now gets an empty list that fills itself the moment it
+         is opened. Searching is unaffected: a search opens what it matches, so
+         the cards are built for the matches and for nothing else. */
+      cardsByKey[group.key] = group.items;
       return '<details class="session" data-session="' + esc(group.key) + '"' +
-        (open || current ? ' open' : '') + '>' +
+        (showing ? ' open' : '') + '>' +
         '<summary>' +
           '<span class="session-label">' + esc(sessionLabelFor(group)) + '</span>' +
           (isOngoing(group.session)
@@ -690,7 +707,9 @@
           '<span class="session-count">' + group.items.length + ' vote' +
             (group.items.length === 1 ? '' : 's') + '</span>' +
         '</summary>' +
-        '<ul class="decision-list">' + group.items.map(decisionCard).join('') + '</ul>' +
+        '<ul class="decision-list"' + (showing ? '' : ' data-unbuilt="' + esc(group.key) + '"') + '>' +
+          (showing ? group.items.map(decisionCard).join('') : '') +
+        '</ul>' +
         '</details>';
     };
 
@@ -820,6 +839,22 @@
     return !!(here && (here.meps || []).length);
   }
 
+  /* The majority a vote needed, but only where it was not the usual one.
+
+     "Majority of votes cast" is how 3,736 of the 3,752 votes here were
+     decided: it is the rule unless a Treaty article says otherwise, so
+     printing it on a card says no more than printing "European Parliament"
+     did. The other sixteen needed a majority of all members whether they
+     turned up or not, which is a real fact about a real vote and the reason
+     the field is worth keeping at all. */
+  const USUAL_RULE = 'Majority of votes cast';
+
+  function unusualRule(item) {
+    const rule = item.voteRuleLabel || '';
+    if (!rule || rule === USUAL_RULE) return '';
+    return '<span class="card-when">' + esc(rule) + '</span>';
+  }
+
   /* What the vote asks for, in the Parliament's own sentences.
 
      Three operative paragraphs lifted whole out of the text that was voted —
@@ -883,8 +918,7 @@
           (withDate
             ? '<time class="card-when" datetime="' + esc(item.date) + '">' +
                 esc(Data.formatDate(item.date)) + '</time>'
-            : (item.voteRuleLabel
-                ? '<span class="card-when">' + esc(item.voteRuleLabel) + '</span>' : '')) +
+            : unusualRule(item)) +
         '</span>' +
       '</button></li>';
   }
@@ -3034,6 +3068,18 @@
 
         const file = details.getAttribute('data-term-file');
         if (details.open && file) loadTerm(Number(details.getAttribute('data-term')), file);
+
+        /* A plenary opened for the first time builds its cards now. The feed
+           around it is left alone: rebuilding it would throw away every other
+           fold's state and cost more than the cards it is trying to save. */
+        if (details.open && details.classList.contains('session')) {
+          const list = details.querySelector('.decision-list[data-unbuilt]');
+          if (list) {
+            const items = cardsByKey[list.getAttribute('data-unbuilt')] || [];
+            list.innerHTML = items.map(function (item) { return decisionCard(item); }).join('');
+            list.removeAttribute('data-unbuilt');
+          }
+        }
       }, true);
 
       Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (button) {

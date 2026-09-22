@@ -286,8 +286,14 @@ const motion = [
 
 const asks = bulletsFrom(motion);
 assert.equal(asks.length, 3, 'three bullets');
-assert.ok(/^Calls on Member States and Frontex/.test(asks[0]), 'a demand outranks an observation');
-assert.ok(/^Calls on Member States to maintain/.test(asks[1]), 'and the second demand follows it');
+/* Demands first, and among them the one a reader takes in at a glance: the
+   66-character paragraph says as much as the 96-character one above it. */
+assert.ok(/^Calls on Member States to maintain/.test(asks[0]),
+  'the shorter demand leads');
+assert.ok(/^Calls on Member States and Frontex/.test(asks[1]),
+  'the longer demand follows it');
+assert.ok(/^Recalls|^Welcomes/.test(asks[2]),
+  'and both demands outrank what the Parliament merely observes');
 assert.ok(asks.every((line) => !/^\d/.test(line)), 'the paragraph number comes off');
 assert.ok(asks.every((line) => !/[;]$/.test(line)), 'and the closing semicolon');
 assert.ok(!asks.some((line) => /having regard/.test(line)), 'a recital is not something a vote asks for');

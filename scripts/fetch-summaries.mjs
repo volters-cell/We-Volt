@@ -48,6 +48,23 @@ const DRY = process.argv.includes('--dry-run');
 const MINUTES = Number(arg('minutes') || 0);
 const DEADLINE = MINUTES > 0 ? Date.now() + MINUTES * 60000 : Infinity;
 
+/* The document a vote was taken on, wherever the Parliament happened to write
+   it down. 1,460 records carry it in a field of their own; another 1,127 name
+   it only in the label the Parliament gave the vote — "A9-0003/2020 - Geert
+   Bourgeois - Consent procedure" — which is the same reference in a different
+   place, and was being ignored. */
+const CODE = /([A-Z]+(?:-[A-Z]+)?\d{1,2}-\d{4}\/\d{4})/;
+
+function documentOf(record) {
+  const candidates = [record.document, record.subtitle, record.title,
+    (record.procedure || {}).reference];
+  for (const candidate of candidates) {
+    const match = CODE.exec(String(candidate || ''));
+    if (match && documentPath(match[1])) return match[1];
+  }
+  return null;
+}
+
 const files = (await readdir(path.join(ROOT, DIR)))
   .filter((n) => n.endsWith('.json') && n !== 'index.json' && !/^term-\d+\.json$/.test(n));
 
@@ -125,13 +142,14 @@ let outOfTime = false;
 for (const name of files) {
   const file = path.join(ROOT, DIR, name);
   const record = JSON.parse(await readFile(file, 'utf8'));
-  if (!record.document) continue;
+  const reference = documentOf(record);
+  if (!reference) continue;
   if (!AGAIN && (record.whatItMeans || []).length) continue;
   if (outOfTime) { left += 1; continue; }
   if (Date.now() > DEADLINE) { outOfTime = true; left += 1; continue; }
 
   looked += 1;
-  const found = await bulletsForDocument(record.document);
+  const found = await bulletsForDocument(reference);
   if (!found) {
     nothingToQuote += 1;
     /* On a re-read, a record that used to carry boilerplate and now qualifies

@@ -90,10 +90,20 @@ export function operativeParagraphs(text) {
   return found;
 }
 
+/* Three bullets a reader takes in at a glance, which means the short ones.
+
+   The Parliament makes the same demand at several lengths — "Calls on Member
+   States to maintain their ports open to NGO vessels" is 66 characters and
+   says as much as the 226-character paragraph three lines below it. Ranking by
+   verb and then by length puts what it asks for first and, among those, the
+   sentence that can be read without stopping. Still whole paragraphs: this
+   chooses between them, it does not cut any of them down. */
 export function bulletsFrom(text, howMany) {
   const wanted = howMany || 3;
   return operativeParagraphs(text)
-    .sort(function (a, b) { return a.rank - b.rank || a.order - b.order; })
+    .sort(function (a, b) {
+      return a.rank - b.rank || a.text.length - b.text.length || a.order - b.order;
+    })
     .slice(0, wanted)
     .map(function (item) { return item.text; });
 }
