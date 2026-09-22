@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States and the wood industry to make substantial contributions to ensure that as many areas are reforested as are deforested;",
+    "Calls on the Member States to ensure that the National Strategic Plans under the CAP will incentivise forest managers to preserve, grow and manage forests sustainably",
+    "Calls on the Commission and the Member States to create economic and policy instruments that will allow more forest to grow to their ecological potential and absorb carbon dioxide"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 462 in favour, 176 against, 59 abstained. Result derived from the totals."
@@ -2831,5 +2835,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0154/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0154_EN.html"
+  }
 }

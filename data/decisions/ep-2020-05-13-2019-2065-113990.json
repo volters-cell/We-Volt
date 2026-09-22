@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on DG DEVCO as a matter of priority to close in the short term the remaining operations from the eighth and ninth EDF",
+    "Calls on the Commission to place greater focus on the dissemination of successfully implemented projects and to raise public awareness about the Union’s investments in global sustainable development",
+    "Calls on the Commission to develop a “more is more approach” with our partners allowing to adjust our aid to the respect by the third countries of democratic rights, rule of law, respect of the international conventions etc"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 210 against, 27 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0057/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0057_EN.html"
+  }
 }

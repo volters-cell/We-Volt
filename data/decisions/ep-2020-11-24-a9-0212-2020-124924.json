@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0212/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the independent report by the High-Level Group of Wise Persons on the European financial architecture for development, and calls for the creation of a European Investment and Sustainable Development Bank",
+    "Stresses that it is important that EU ODA focuses even more on reducing inequalities, ending poverty and leaving no-one behind",
+    "Reiterates that making aid allocation conditional on cooperation with the EU on migration or security issues is not compatible with agreed development effectiveness principles"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 363 in favour, 296 against, 41 abstained. Result derived from the totals."
@@ -2845,5 +2849,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0212/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0212_EN.html"
+  }
 }

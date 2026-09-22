@@ -16,9 +16,6 @@
   },
   "document": "A9-0019/2022",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes the Commission’s renewed focus on respect for the rule of law in the Member States"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 357 in favour, 119 against, 207 abstained. Result derived from the totals."
@@ -2780,9 +2777,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0019/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0019_EN.html"
-  }
+  "countries": {}
 }

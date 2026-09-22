@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Government of Honduras to renew the mandate for the Mission to Support the Fight against Corruption and Impunity in Honduras (MACCIH), which ended in January 2020",
+    "Welcomes the recent adoption of the Honduran VPA implementation action plan and calls on the Government of Honduras to follow a concrete, time-bound and measurable approach",
+    "Believes that the successful negotiations of this VPA demonstrate the importance of the Union’s Delegations to third countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 576 in favour, 54 against, 69 abstained. Result derived from the totals."
@@ -2839,5 +2843,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0054/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0054_EN.html"
+  }
 }

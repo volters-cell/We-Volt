@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0276/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates Parliament’s expectation that information is provided in an easily understandable and comparable format, including any existing translations of documents submitted by Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 35 against, 56 abstained. Result derived from the totals."
@@ -2817,5 +2819,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0276/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0276_EN.html"
+  }
 }

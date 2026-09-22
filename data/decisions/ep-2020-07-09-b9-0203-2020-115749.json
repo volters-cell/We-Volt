@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0203/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the approvals for substances if proof or reasonable doubt exists that they will not meet the safety criteria laid down in Regulation (EC) No 1107/2009",
+    "Considers that the draft Commission implementing regulation exceeds the implementing powers provided for in Regulation (EC) No 1107/2009",
+    "Considers that the draft Commission implementing regulation is not consistent with Union law in that it does not respect the precautionary principle"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 385 in favour, 254 against, 51 abstained. Result derived from the totals."
@@ -2805,5 +2809,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0203/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0203_EN.html"
+  }
 }

@@ -16,11 +16,6 @@
   },
   "document": "A9-0213/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to ensure gender equality and the inclusion of minorities and persons with disabilities in the NEB; calls on the Commission to ensure accessibility for persons with disabilities",
-    "Calls on the Member States to closely cooperate and share their experience in the modernisation of buildings and the development of new solutions for the construction of sustainable, energy-efficient buildings",
-    "Urges the Commission to increase its efforts to make this initiative more inclusive; notes that most contributions are related to aesthetics or sustainability, while accessibility, affordability and inclusion are less present"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 466 in favour, 83 against, 55 abstained. Result derived from the totals."
@@ -2466,9 +2461,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0213/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0213_EN.html"
-  }
+  "countries": {}
 }

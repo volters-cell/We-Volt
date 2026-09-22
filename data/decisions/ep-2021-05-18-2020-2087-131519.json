@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure the dissemination of good practices with regard to governance and the use of institutional coordination structures in disaster situations",
+    "Notes the significant potential synergies between the EUSF and other Union funds and policies; asks that these synergies be used fully",
+    "Notes that the average time needed to make advance payments is five months and calls on the Commission to consider some more reactive solutions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 668 in favour, 10 against, 18 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0052/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0052_EN.html"
+  }
 }

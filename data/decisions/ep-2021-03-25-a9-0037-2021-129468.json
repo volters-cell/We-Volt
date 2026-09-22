@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0037/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to improve the implementation of existing legislation in line with the rulings of the Court of Justice of the European Union",
+    "Welcomes the creation of the Commission’s zero-pollution action plan and points to the need for clear objectives to bring about genuine change, accompanied by specific targets for the different Member States and regions",
+    "Points out that public transport services, especially in rural areas, are frequently unsatisfactory, irregular and expensive"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 425 in favour, 109 against, 153 abstained. Result derived from the totals."
@@ -2793,5 +2797,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0037/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0037_EN.html"
+  }
 }

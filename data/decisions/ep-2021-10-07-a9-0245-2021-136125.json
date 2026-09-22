@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0245/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the CoC Group to invite Members of the European Parliament to CoC Group discussions as observers; encourages the CoC Group to publicly stream some of their meetings when they do not require confidential deliberations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 506 in favour, 81 against, 99 abstained. Result derived from the totals."
@@ -2792,5 +2794,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0245/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0245_EN.html"
+  }
 }

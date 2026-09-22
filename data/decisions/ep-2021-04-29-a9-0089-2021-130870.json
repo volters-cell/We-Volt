@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0089/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Foundation has several anti-harassment measures in place and that the Foundation adopted new a policy on protecting staff dignity in 2019",
+    "Notes that the Foundation achieved a 91 % activity completion rate with a timely completion rate of 85 %, and that it succeeded in reaching its targets for 14 out of 15 KPIs",
+    "Notes with satisfaction that the Foundation has reported almost a gender balance among the senior management (3 men and 2 women) and the governing board (13 men and 15 women)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 601 in favour, 85 against, 5 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0089/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0089_EN.html"
+  }
 }

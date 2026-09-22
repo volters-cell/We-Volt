@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0098/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the progress made regarding the Court’s observations and Parliament's ensuing recommendations from previous years",
+    "Welcomes the Agency’s active online presence in 2019; encourages the Agency to continue promoting its work, research and activities to increase its public visibility",
+    "Welcomes the progress made regarding the Court’s recommendations from previous years and that, since the beginning of 2019, the Agency publishes vacancy notices on the European Personnel Selection Office website"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 56 against, 9 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0098/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0098_EN.html"
+  }
 }

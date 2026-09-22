@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to use its weight in the IMO to achieve a carbon offsetting scheme in international shipping and to ensure a realistic path of emissions reduction",
+    "Recalls that the objectives of decarbonisation and modal shift should be supported by the CEF, which should benefit from increased budgetary resources"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 453 in favour, 92 against, 154 abstained. Result derived from the totals."
@@ -2839,5 +2842,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0029/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0029_EN.html"
+  }
 }

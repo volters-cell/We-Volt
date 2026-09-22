@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to improve the protection of consumers buying companion animals via online adverts as part of its Digital Agenda",
+    "Calls on the Member States to introduce policies with the aim of marking and registering all cats and dogs by default in the battle against animal abuse",
+    "Calls on Member States to ensure that detailed rules are in place for the monitoring of companion animal breeders and appropriate oversight by veterinarians"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 607 in favour, 3 against, 19 abstained. Result derived from the totals."
@@ -2559,5 +2563,9 @@
   "countries": {},
   "topics": [
     "Animal welfare"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0088/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0088_EN.html"
+  }
 }

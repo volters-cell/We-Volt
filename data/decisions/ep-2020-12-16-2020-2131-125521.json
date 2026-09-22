@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that SMEs should receive targeted support - i.e. technical, administrative and skills support - when implementing the EU regulatory framework, in order to ensure compliance with single market rules",
+    "Insists that sustainability needs to remain a core objective of relevant EU programmes so that SMEs can take full advantage of the sustainable transition in terms of competitiveness, cost reduction and job creation",
+    "Calls on Member States to develop active labour market policies, foster research and innovation, and provide good quality public services and infrastructures, also in order to encourage private sector investment in SMEs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 533 in favour, 58 against, 82 abstained. Result derived from the totals."
@@ -2732,5 +2736,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0237/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0237_EN.html"
+  }
 }

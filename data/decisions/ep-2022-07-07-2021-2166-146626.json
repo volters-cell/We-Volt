@@ -16,11 +16,6 @@
   },
   "document": "A9-0167/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Member States and the Commission to acknowledge the need for better regulation and simplification taking into consideration economic, environmental, gender and social impacts in an integrated and balanced way",
-    "Calls on the Member States and the Commission to acknowledge the need for better regulation and simplification, taking into account economic, environmental, gender and social impacts in an integrated and balanced way",
-    "Calls on the Commission to set ambitious and binding quantitative and qualitative targets at EU level for the reduction of administrative burdens, as soon as possible after concluding an impact assessment"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 453 in favour, 26 against, 87 abstained. Result derived from the totals."
@@ -2314,9 +2309,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0167/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0167_EN.html"
-  }
+  "countries": {}
 }

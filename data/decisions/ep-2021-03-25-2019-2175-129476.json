@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Members States to allocate sufficient COVID-19 vaccines to the citizens of all Western Balkan countries",
+    "Welcomes the entry into force of the new Regional Roaming Agreement signed in April 2019",
+    "Welcomes Serbia’s continued endorsement of the Global Strategy for the EU’s foreign and security policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 538 in favour, 69 against, 79 abstained. Result derived from the totals."
@@ -2787,5 +2791,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0032/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0032_EN.html"
+  }
 }

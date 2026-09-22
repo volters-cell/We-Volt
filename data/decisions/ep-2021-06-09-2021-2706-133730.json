@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present a proposal for non-renewal of the approval of flumioxazine in the next meeting of the Standing Committee on Plants, Animals, Food and Feed",
+    "Considers that Implementing Regulation (EU) 2021/745 exceeds the implementing powers provided for in Regulation (EC) No 1107/2009",
+    "Considers that Implementing Regulation (EU) 2021/745 is not consistent with Union law in that it does not respect the precautionary principle"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 434 in favour, 230 against, 27 abstained. Result derived from the totals."
@@ -2805,5 +2809,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0312/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0312_EN.html"
+  }
 }

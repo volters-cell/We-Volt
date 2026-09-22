@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to classify green infrastructure as belonging to the category of critical infrastructure for the purposes of programming, funding and investments",
+    "Requests national, regional and local authorities to establish timely early warning systems and prepare appropriate tools to respond to extreme weather events and other negative impacts of climate change, as well as pandemics",
+    "Welcomes the Commission’s proposal to extend the scope of the EU Solidarity Fund to cover public health emergencies such as pandemics"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 80 against, 59 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0422/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0422_EN.html"
+  }
 }

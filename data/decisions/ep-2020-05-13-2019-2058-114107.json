@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises that, in its 2018 annual report, the Court of Auditors made no observations concerning the CJEU, as has been the case each year since 2010",
+    "Points out that the European Judicial Network, which includes the Member States’ constitutional and supreme courts, has been set up and is being coordinated by the CJEU",
+    "Notes the very high utilisation rate (99.18%) for final appropriations in the implementation of the budget for the financial year 2018, even higher than the rate in 2017 (98.69%)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 76 against, 10 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0027/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0027_EN.html"
+  }
 }

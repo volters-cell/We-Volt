@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to take all the necessary measures and to uphold the rights of persons belonging to minorities and ensure that these rights are fully respected",
+    "Considers that the EU should continue to raise awareness for multilingualism throughout Europe through EU programmes, and actively promote the advantages of multilingualism",
+    "Recalls that the protection of persons belonging to minorities is an explicit founding value of the EU, together with democracy, the rule of law and respect for human rights, as set out in Article 2 of the TEU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 524 in favour, 67 against, 103 abstained. Result derived from the totals."
@@ -2816,5 +2820,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0403/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0403_EN.html"
+  }
 }

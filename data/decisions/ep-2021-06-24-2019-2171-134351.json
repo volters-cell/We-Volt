@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to put more emphasis on constitutional reform in its next annual report",
+    "Calls on BiH to complete its legal framework on the prevention of conflicts of interest and protection of whistle-blowers",
+    "Calls on BiH to remedy unequal access to remote schooling, resulting in many children being deprived of their right to education during the pandemic"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 483 in favour, 73 against, 133 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0185/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0185_EN.html"
+  }
 }

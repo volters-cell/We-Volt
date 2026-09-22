@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Considers that the primary lesson to be learnt from the crisis is that inclusion and equal opportunities, both in terms of access and quality, must be placed at the heart of the Union’s future education and training policies"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 593 in favour, 58 against, 36 abstained. Result derived from the totals."
@@ -2791,5 +2793,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0338/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0338_EN.html"
+  }
 }

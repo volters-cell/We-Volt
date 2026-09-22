@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0046/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to examine the possibility of redirecting unused or saved resources to culture, education, youth, sports and media programmes",
+    "Calls on strengthening the EU’s global response to the COVID-19 crisis and step up its efforts to fight and recover from the impact of the COVID-19 pandemic",
+    "Calls on the Commission to increase budget allocation to civil society organisations that promote women’s rights in Europe, including Sexual and Reproductive Health and Rights"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 158 in favour, 518 against, 14 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0046/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0046_EN.html"
+  }
 }

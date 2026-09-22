@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the irreversible nature of the single currency; emphasises that the euro is not only a monetary project but also a political one",
+    "Notes that strong and competitive financial markets are key to strengthening the international role of a currency, and therefore underlines the need for effective, proportionate and predictable regulation in this area",
+    "Underlines that the international role of the euro would also benefit from tapping the potential of one of the greatest added values of the EU: its single market; calls, to this end, for the completion of the single market"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 494 in favour, 94 against, 100 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0043/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0043_EN.html"
+  }
 }

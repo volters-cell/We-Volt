@@ -16,9 +16,6 @@
   },
   "document": "B9-0174/2023",
   "summary": "",
-  "whatItMeans": [
-    "Urges the Cambodian Government to repeal any legislation, that is limiting political freedoms in violation of Cambodia’s obligations and international standards"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 496 in favour, 11 against, 36 abstained. Result derived from the totals."
@@ -2216,9 +2213,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0174/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0174_EN.html"
-  }
+  "countries": {}
 }

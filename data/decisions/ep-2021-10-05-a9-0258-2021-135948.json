@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0258/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the African initiative on the ‘Great Green Wall’ and calls on the Commission to support this project",
+    "Stresses that the deterioration of biodiversity and ecosystems have both direct and indirect impacts on public health",
+    "Underlines the fact that environmental crime poses a global threat to nature conservation, sustainable development, stability and security"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 351 in favour, 31 against, 304 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0258/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0258_EN.html"
+  }
 }

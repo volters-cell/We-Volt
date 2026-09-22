@@ -16,11 +16,6 @@
   },
   "document": "A9-0032/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Member States to identify tools to promote and encourage civil society action, especially in the context of the COVID-19 pandemic",
-    "Calls on the Commission to expand the European democracy action plan with a new strand dedicated to strengthening the efforts to provide education on democratic citizenship and human rights across the EU",
-    "Calls on the Commission to monitor the challenges and attacks faced by civil society and to include a specific section and country-by-country recommendations on this topic in its assessments"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 115 against, 54 abstained. Result derived from the totals."
@@ -2830,9 +2825,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0032/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0032_EN.html"
-  }
+  "countries": {}
 }

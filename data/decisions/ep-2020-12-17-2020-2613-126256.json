@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States and water providers to systematically use testing for COVID-19 in waste water as an early warning system to support the fight against the pandemic",
+    "Calls on the Commission to revise the quality standards of the Groundwater Directive, improve the homogenisation of standards and reduce the wide range of thresholds within Members States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 622 in favour, 23 against, 43 abstained. Result derived from the totals."
@@ -2792,5 +2795,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0401/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0401_EN.html"
+  }
 }

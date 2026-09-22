@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Believes, in consequence, that the current underperformance of the standardisation system is one factor leading to an increasing use of the EOTA route as an alternative means of standardisation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 686 in favour, 4 against, 5 abstained. Result derived from the totals."
@@ -2820,5 +2822,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0012/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0012_EN.html"
+  }
 }

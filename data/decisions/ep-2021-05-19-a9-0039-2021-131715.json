@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0039/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests increased political and financial support for environmental rights defenders and systematically condemns reprisals against them",
+    "Calls on the Secretariat of the UNFCCC to develop, together with the parties to the Convention, a common legal framework for climate justice",
+    "Calls on the Union and its Member States to support, at the next UN General Assembly, the global recognition of the right to a safe, clean, healthy and sustainable environment"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 518 in favour, 97 against, 77 abstained. Result derived from the totals."
@@ -2816,5 +2820,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0039/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0039_EN.html"
+  }
 }

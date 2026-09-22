@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Demands that the supervision of the Semester include the monitoring of workers’ mobility and that workers’ rights, especially those of seasonal workers, be respected",
+    "Stresses that greater economic and social governance among the Member States, particularly by moving towards greater convergence of tax rules, would be a driving force for recovery",
+    "Recalls that according to the RRF Regulation, reforms and investments ‘should lead to the creation of high-quality and stable jobs [and] the inclusion and integration of disadvantaged groups’"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 347 in favour, 162 against, 191 abstained. Result derived from the totals."
@@ -2843,5 +2847,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0274/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0274_EN.html"
+  }
 }

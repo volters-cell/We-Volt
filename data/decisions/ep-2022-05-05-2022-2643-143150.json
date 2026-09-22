@@ -16,11 +16,6 @@
   },
   "document": "B9-0223/2022",
   "summary": "",
-  "whatItMeans": [
-    "Requests that all ships that want to make an EU port call be forbidden to bunker fuel in Russian ports or from Russian bunkering ships at sea",
-    "Calls on the Commission to support Ukraine and its efforts to strengthen rail connections between Ukraine and the EU",
-    "Calls on Member States to support EU hotels and short term rental services hosting Ukrainian refugees"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 159 in favour, 358 against, 25 abstained. Result derived from the totals."
@@ -2222,9 +2217,5 @@
   "topics": [
     "Ukraine",
     "Transport"
-  ],
-  "whatItMeansFrom": {
-    "reference": "B9-0223/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0223_EN.html"
-  }
+  ]
 }

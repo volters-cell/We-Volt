@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates that the Maltese Government must consider the fight against organised crime, corruption and the intimidation of journalists as of the utmost priority",
+    "Reiterates its call for the full and continuous involvement of Europol in all aspects of the murder investigation and all related investigations; calls for Europol’s involvement to be reinforced as it yields results"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 635 in favour, 46 against, 12 abstained. Result derived from the totals."
@@ -2815,5 +2818,9 @@
   "countries": {},
   "topics": [
     "Malta"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0219/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0219_EN.html"
+  }
 }

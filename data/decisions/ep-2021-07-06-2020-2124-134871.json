@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to increase support for modal shifts towards low-carbon transportation, such as cycling and public transport, in particular for underserved communities and localities",
+    "Calls on the Commission, in this context, to study the possibility of being represented on the EIB Board of Governors through the subscription of EIB capital using funds from the EU budget",
+    "Calls on the EIB to consider proposing additional incentives for projects and credit lines already approved in order to get the projects off the ground as soon as possible and ensure the swift implementation of funds"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 582 in favour, 62 against, 48 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0200/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0200_EN.html"
+  }
 }

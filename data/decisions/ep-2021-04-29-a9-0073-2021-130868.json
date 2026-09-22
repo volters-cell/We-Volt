@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0073/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the Internal Audit Service did not carry out any audit in 2019",
+    "Welcomes the fact that the Court has stated that it has obtained reasonable assurances that the EMA’s annual accounts for 2019 are reliable and that the underlying transactions are legal and regular",
+    "Welcomes the fact that the Agency’s new building which it occupies since January 2020 is highly energy efficient and provided with electricity originating from 100% renewable energy (windmills and solar panels)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 81 against, 8 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0073/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0073_EN.html"
+  }
 }

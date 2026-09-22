@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the Commission has not decided to launch infringement procedures against the Member States that have breached Schengen rules",
+    "Emphasises the importance of proper dialogue between the Commission and the Member States at the pre-litigation stage"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 504 in favour, 123 against, 61 abstained. Result derived from the totals."
@@ -2792,5 +2795,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0270/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0270_EN.html"
+  }
 }

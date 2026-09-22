@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue to systematically invite Parliament to such meetings and seminars in accordance with the relevant provisions of the Framework Agreement on relations between Parliament and the Commission",
+    "Reiterates the need for a dedicated website, accessible to all Union citizens, containing detailed information about the EGF"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 609 in favour, 26 against, 53 abstained. Result derived from the totals."
@@ -2795,5 +2798,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0109/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0109_EN.html"
+  }
 }

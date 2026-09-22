@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court has stated that it has obtained reasonable assurances that the Agency’s annual accounts for 2018 are reliable and that the underlying transactions are legal and regular",
+    "Stresses that the publication of CVs and declarations of interest of management board members should be obligatory",
+    "Recalls that the Agency started in 2018 its work on Energy Union Governance and streamlining of environmental reporting"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 606 in favour, 82 against, 5 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0064/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0064_EN.html"
+  }
 }

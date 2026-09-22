@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0315/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of gender budgeting in order to apply the principle of gender mainstreaming in all budgetary processes",
+    "Considers it essential to promote the participation of women in sporting activities, structures and development; recognises the need to address the inequalities regarding women’s access to sport and the presentation of awards"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 500 in favour, 105 against, 87 abstained. Result derived from the totals."
@@ -2816,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0315/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0315_EN.html"
+  }
 }

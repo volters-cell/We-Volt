@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0076/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the Institute put in place social policies, that include improved schooling and kindergarten packages and funding of social activities aimed at attracting and retaining a bigger number of expatriate staff",
+    "Notes that the Institute implemented 95 % of its work programme for 2019",
+    "Notes that the Institute has outsourced accounting services to the Commission, and introduced the Commission’s IT tools, such as ARES for document management and SYSPER for human resources management"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 635 in favour, 24 against, 39 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0076/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0076_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0239/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the adoption and entry into force on 1 January 2017 of the IMO’s International Code for Ships Operating in Polar Waters (Polar Code)",
+    "Welcomes the work of the Arctic Council in tackling pollution in the Arctic and calls for the EU to play an active role and provide assistance in this regard",
+    "Reiterates its call on all the remaining Member States to ratify without delay ILO Convention No 169 on Indigenous and Tribal Peoples"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 506 in favour, 36 against, 140 abstained. Result derived from the totals."
@@ -2773,5 +2777,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0239/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0239_EN.html"
+  }
 }

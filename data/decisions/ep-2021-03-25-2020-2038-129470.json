@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to propose new programmes to support innovation in the tourism sector through design thinking",
+    "Calls on the Commission to respect the right of local authorities to regulate against the harmful impacts of overtourism",
+    "Calls on the Commission to introduce the e-visa, along with the travel visa and other measures that allow visitors to enter the Union lawfully"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 577 in favour, 31 against, 80 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0033/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0033_EN.html"
+  }
 }

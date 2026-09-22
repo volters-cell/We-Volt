@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0149/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the European Labour Authority to take a leading role in facilitating the transformation process towards a social-digital economy",
+    "Calls on the Commission to take into full account the different level of preparedness of Member States by evaluating the CAP strategic plans",
+    "Calls on the Commission to design and put in place a digital platform or a website dedicated to AI developments in the Union’s agri-food sector"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 487 in favour, 118 against, 89 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0149/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0149_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and national agencies to promote projects in less popular destinations to stimulate the development of the local economy and sustainability, while encouraging the exploration of new destinations",
+    "Welcomes, in this regard, young people’s determination to contribute to the implementation of the EU efforts towards sustainability and choosing ‘Sustainable Green Europe’ as one of the European Youth Goals"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 566 in favour, 52 against, 69 abstained. Result derived from the totals."
@@ -2791,5 +2794,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0141/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0141_EN.html"
+  }
 }

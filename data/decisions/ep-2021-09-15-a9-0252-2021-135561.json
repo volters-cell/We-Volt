@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0252/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Council to elaborate mechanisms to address these threats coherently, in particular by:",
+    "Calls on the Commission to express its concern over the new Order 15, further constraining religious people and their leaders, to the Chinese authorities",
+    "Urges the Commission to come up with concrete proposals and action to facilitate Taiwan’s full participation as an observer in the meetings, mechanism and activities of the WHO, the ICAO and the UNFCCC"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 570 in favour, 61 against, 40 abstained. Result derived from the totals."
@@ -2732,5 +2736,9 @@
   "countries": {},
   "topics": [
     "China"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0252/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0252_EN.html"
+  }
 }

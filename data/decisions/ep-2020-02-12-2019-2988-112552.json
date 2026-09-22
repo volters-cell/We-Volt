@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates its commitment to help eliminate the practice of FGM worldwide, as a form of gender-based violence that has long-lasting psychological and physical consequences on women and girls, and in some instances causes death"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 612 in favour, 7 against, 32 abstained. Result derived from the totals."
@@ -2647,5 +2649,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0090/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0090_EN.html"
+  }
 }

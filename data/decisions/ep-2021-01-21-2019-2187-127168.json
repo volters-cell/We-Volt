@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to encourage the use of European programmes that support the rebuilding of homes in order to make housing affordable",
+    "Calls on the Member States to develop their house-building policies, which will boost economic growth in the context of the COVID-19 pandemic",
+    "Urges the Member States to define and implement policies against slum landlords and rack-renters, and to share good practices on these policies"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 352 in favour, 179 against, 152 abstained. Result derived from the totals."
@@ -2775,5 +2779,9 @@
   "countries": {},
   "topics": [
     "Housing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0247/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0247_EN.html"
+  }
 }

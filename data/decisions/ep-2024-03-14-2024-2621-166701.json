@@ -16,9 +16,6 @@
   },
   "document": "B9-0174/2024",
   "summary": "",
-  "whatItMeans": [
-    "Underlines that the European Capitals of Children should be tasked with bringing children in the Member States closer together, helping them to better understand each other"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 412 in favour, 72 against, 28 abstained. Result derived from the totals."
@@ -2092,9 +2089,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0174/2024",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0174_EN.html"
-  }
+  "countries": {}
 }

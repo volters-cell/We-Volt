@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on each Member State and the Commission to coordinate their positions in order to speak with a single voice",
+    "Stresses that new solutions to taxing the digital economy should preferably tax profits, not revenues",
+    "Emphasises the need to review existing double taxation rules to ensure that all profit that leaves the EU is taxed"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 549 in favour, 70 against, 75 abstained. Result derived from the totals."
@@ -2819,5 +2823,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0103/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0103_EN.html"
+  }
 }

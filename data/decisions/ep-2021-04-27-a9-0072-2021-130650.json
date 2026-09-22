@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0072/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Institute’s continuous work on the Gender Equality Index",
+    "Welcomes the EIGE 2021-2023 Single Programming Document and its key objectives and priorities",
+    "Welcomes the Institute’s 2021-2023 Single Programming Document and its key objectives and priorities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 567 in favour, 84 against, 47 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0072/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0072_EN.html"
+  }
 }

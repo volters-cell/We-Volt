@@ -16,11 +16,6 @@
   },
   "document": "A9-0213/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on EU Member States and its global partners to support research and development, innovative green technologies, capacity-building and knowledge-sharing for a sustainable, resilient and inclusive recovery",
-    "Calls on the Member States to enhance their data collection as well as to adopt SDG indicators and monitor their implementation in the NRRPs",
-    "Calls on Member States to put in place comprehensive tools, such as mapping, for the effective implementation of SDGs"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 322 in favour, 68 against, 43 abstained. Result derived from the totals."
@@ -1782,9 +1777,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0213/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0213_EN.html"
-  }
+  "countries": {}
 }

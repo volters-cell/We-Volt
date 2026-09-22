@@ -16,10 +16,6 @@
   },
   "document": "B9-0462/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the remaining Member States (Austria and Latvia) to urgently adopt their Child Guarantee NAPs",
-    "Calls on the Commission and the Member States to continue investing in family and community-based care to ensure the effective transition from institutional care"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 351 in favour, 206 against, 49 abstained. Result derived from the totals."
@@ -2473,9 +2469,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0462/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0462_EN.html"
-  }
+  "countries": {}
 }

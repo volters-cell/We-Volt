@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0551/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Believes that the ESSP must cover all mobile EU citizens and workers including the self-employed, as well as all mobile third country nationals who are covered by EU rules on intra-EU mobility"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 591 in favour, 84 against, 12 abstained. Result derived from the totals."
@@ -2796,5 +2798,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0551/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0551_EN.html"
+  }
 }

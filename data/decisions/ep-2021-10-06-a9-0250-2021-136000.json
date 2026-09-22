@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0250/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that increased efforts are needed on improving gender equality and women’s rights, including on gender-based violence and sexual and reproductive health and rights, among others",
+    "Reiterates its appeal to the US to abolish the death penalty and to reform its criminal justice system",
+    "Notes that such issues cannot be solved unilaterally or bilaterally and require a coalition of like-minded partners at international level within the framework of the WTO"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 83 against, 55 abstained. Result derived from the totals."
@@ -2800,5 +2804,9 @@
   "countries": {},
   "topics": [
     "United States"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0250/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0250_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises that interoperability is key to ensuring that digital content is usable and reusable in the long term; highlights in this regard the role of standards and frameworks",
+    "Underlines the need also to promote the existence and value of digitised archives, as well as to improve the digital skills of the public so that the uptake of digital content is increased",
+    "Notes that nearly three quarters of Europeans surveyed think public authorities should allocate more resources to cultural heritage; highlights the need to increase EU funding for activities related to cultural heritage"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 644 in favour, 18 against, 27 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0210/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0210_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that any recommendation of the special committee shall be presented to and, if necessary, followed up by Parliament’s competent standing committee"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 651 in favour, 28 against, 8 abstained. Result derived from the totals."
@@ -2791,5 +2793,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0188/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0188_EN.html"
+  }
 }

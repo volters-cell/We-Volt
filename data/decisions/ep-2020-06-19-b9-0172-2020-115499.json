@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0172/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to propose long-term solutions to deal with abusive subcontracting practices and safeguard seasonal and cross-border workers employed along the subcontracting and supply chain",
+    "Urges the Commission to make sure that the Farm to Fork Strategy and the upcoming revision of the common agricultural policy deliver for agricultural workers in Europe, including seasonal, migrant and other mobile workers",
+    "Recalls the importance of and need for good cooperation with third countries where there are a high number of cross-border workers, such as those in the European Economic Area (EEA), Switzerland and the United Kingdom"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 593 in favour, 34 against, 38 abstained. Result derived from the totals."
@@ -2708,5 +2712,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0172/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0172_EN.html"
+  }
 }

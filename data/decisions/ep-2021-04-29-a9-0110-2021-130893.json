@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0110/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that, in 2019, the balance of the budget outturn amounted to EUR 824 174 (compared to EUR 1 316 734 in 2018)",
+    "Notes that during 2019, 43 operational procurement procedures were launched, 74 operational procurement contracts were awarded and 75 were signed",
+    "Notes that the Joint Undertaking established and adopted its own health and safety management system in 2019 to safeguard occupational health derived from the Council Directive 89/391/EEC[15]"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 624 in favour, 35 against, 32 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0110/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0110_EN.html"
+  }
 }

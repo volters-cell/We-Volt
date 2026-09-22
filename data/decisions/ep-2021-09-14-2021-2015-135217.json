@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of tackling the issue of fluidity in ports by ensuring enough berth and waiting area capacity for inland vessels",
+    "Underlines the significant potential in refurbishing connecting waterways and canals, especially in regions that have suffered from decades of insufficient investment in inland waterway infrastructure",
+    "Stresses the need to encourage the project development of innovative inland waterway vessels and the corresponding port infrastructure under the Horizon Europe partnership on zero-emission waterborne transport"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 641 in favour, 7 against, 45 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0231/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0231_EN.html"
+  }
 }

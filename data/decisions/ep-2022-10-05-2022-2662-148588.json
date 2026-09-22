@@ -16,9 +16,6 @@
   },
   "document": "B9-0413/2022",
   "summary": "",
-  "whatItMeans": [
-    "Points out that programmes and instruments such as Erasmus Plus and the Youth Guarantee give opportunities to young people from disadvantaged backgrounds and Roma people and their organisations"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 109 against, 38 abstained. Result derived from the totals."
@@ -2580,9 +2577,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0413/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0413_EN.html"
-  }
+  "countries": {}
 }

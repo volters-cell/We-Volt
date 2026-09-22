@@ -16,11 +16,6 @@
   },
   "document": "A9-0171/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to use the social component of the RRF to promote entrepreneurship and talent, focusing especially on young people, as a means of developing the single market",
-    "Calls on the Commission and the Member States to speed up the implementation of energy resilience projects and to identify sustainable solutions to mitigate the impact of rising energy prices on the population",
-    "Urges Member States to launch public procurement for the implementation of measures in a timely fashion in order to ensure their completion in line with the calendar of milestones and targets"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 420 in favour, 90 against, 83 abstained. Result derived from the totals."
@@ -2427,9 +2422,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0171/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0171_EN.html"
-  }
+  "countries": {}
 }

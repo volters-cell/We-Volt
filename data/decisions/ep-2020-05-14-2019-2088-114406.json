@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the public and to reach out to the public via social media and other media outlets",
+    "Notes with appreciation that the Agency has identified positive trends in its commitment to ensure balanced gender representation",
+    "Notes the uneven gender balance reported for 2018 among the senior managers – 145 men and 27 women, with 43 men and 10 women on the management board"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 501 in favour, 179 against, 12 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0075/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0075_EN.html"
+  }
 }

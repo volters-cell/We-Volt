@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0122/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the announcement in the European Green Deal communication that the revision of the TEN-E guidelines will take place on 2020"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 183 in favour, 492 against, 15 abstained. Result derived from the totals."
@@ -2808,5 +2810,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0122/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0122_EN.html"
+  }
 }

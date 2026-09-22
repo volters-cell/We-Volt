@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the efforts made at a national level, such as mapping the locations of the dumped munitions and monitoring and removing hazardous materials",
+    "Regrets the fact that none of the EUR 8.8 million allotted under the European Neighbourhood Instrument was used for the DAIMON or DAIMON 2 projects under the Interreg Baltic Sea Region Programme",
+    "Emphasises the importance, in this connection, of interstate and interregional cooperation mechanisms, free access to public information, and the efficient exchange of scientific knowledge and research"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 660 in favour, 8 against, 25 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0224/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0224_EN.html"
+  }
 }

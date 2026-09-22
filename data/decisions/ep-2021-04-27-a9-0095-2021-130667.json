@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0095/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to proceed with a pre-established format for communication between partner countries, EDF beneficiaries and the Union with a view to reducing the errors found by the Court",
+    "Calls on the Commission to encourage international institutions, in particular in the case of co-funded and multi-donor initiatives, to approximate their results management frameworks with the Union",
+    "Welcomes the Court’s opinion, according to which the revenue underlying the accounts for the year 2019 is legal and regular in all material aspects"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 485 in favour, 206 against, 7 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0095/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0095_EN.html"
+  }
 }

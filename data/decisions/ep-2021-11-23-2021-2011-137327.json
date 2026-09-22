@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission include all possible options for minimising resource consumption in its CRMs demand scenarios",
+    "Calls on the Commission to implement strict standards for public disclosure, transparency and reporting in extractive industries",
+    "Calls on the Commission to review the criticality assessment methodology before 2023, ahead of the publication of the next list of CRMs"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 141 in favour, 506 against, 40 abstained. Result derived from the totals."
@@ -2788,5 +2792,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0280/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0280_EN.html"
+  }
 }

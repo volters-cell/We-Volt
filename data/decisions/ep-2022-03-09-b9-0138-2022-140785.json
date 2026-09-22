@@ -16,9 +16,6 @@
   },
   "document": "B9-0138/2022",
   "summary": "",
-  "whatItMeans": [
-    "Instructs its President to arrange for publication of this decision in the Official Journal of the European Union"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 635 in favour, 36 against, 20 abstained. Result derived from the totals."
@@ -2813,9 +2810,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0138/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0138_EN.html"
-  }
+  "countries": {}
 }

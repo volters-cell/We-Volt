@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the negotiators to ensure that the UK commits itself to implement the standards, including targets, and other provisions agreed at EU level during the transition period",
+    "Insists also that the Agreement should provide for the establishment of joint parliamentary body between the EU and the UK tasked to monitor the implementation of the future Agreement",
+    "Insists on the absolute necessity for this governance system to fully preserve the autonomy of the EU’s decision-making and legal order, including the role of the CJEU as the sole interpreter of EU law"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 543 in favour, 39 against, 69 abstained. Result derived from the totals."
@@ -2647,5 +2651,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0098/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0098_EN.html"
+  }
 }

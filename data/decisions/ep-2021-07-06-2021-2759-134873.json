@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Considers that the draft Commission implementing decision exceeds the implementing powers provided for in Regulation (EC) No 1829/2003",
+    "Reiterates its call on the Commission not to authorise the import for food or feed uses of any GM plant which has been made tolerant to a herbicide-active substance that is not authorised for use in the Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 470 in favour, 199 against, 23 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0372/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0372_EN.html"
+  }
 }

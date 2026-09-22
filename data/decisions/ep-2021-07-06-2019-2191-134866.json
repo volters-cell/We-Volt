@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to take account of ERTMS equipment when drawing up the rail connectivity index",
+    "Calls on the Member States to grant a reduction of 75 % in track access charges for 10 years to railway undertakings that successfully equip 100 % of their locomotives with ERTMS Baseline 3",
+    "Welcomes the fact that the ERTMS Coordinator reports back to Parliament on a yearly basis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 667 in favour, 11 against, 14 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0181/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0181_EN.html"
+  }
 }

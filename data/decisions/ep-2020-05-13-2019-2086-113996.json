@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the public, and to reach out to the public via social media and other media outlets",
+    "Calls on the Agency to report to the discharge authority on the measures taken to respond to the recommendations from the second review of Regulation (EC) No 1907/2006 and to ensure compliance of registration dossier",
+    "Calls on the Agency to report to the discharge authority on the measures taken to respond to the recommendations from the second review of Regulation (EC) No 1907/2006 and to ensure that registration dossiers are compliant"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 600 in favour, 88 against, 3 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0063/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0063_EN.html"
+  }
 }

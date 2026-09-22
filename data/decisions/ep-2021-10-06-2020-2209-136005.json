@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU and the Member States that have not yet done so to ratify the Optional Protocol to the UN CRPD",
+    "Urges the EU institutions and Member States to introduce workplace quotas for persons with disabilities in order to foster an inclusive workplace",
+    "Calls on the Commission and the Member States to ensure the cognitive, sensory and physical accessibility of EU initiatives on the digitalisation of the labour market"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 579 in favour, 12 against, 92 abstained. Result derived from the totals."
@@ -2772,5 +2776,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0261/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0261_EN.html"
+  }
 }

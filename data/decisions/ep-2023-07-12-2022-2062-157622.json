@@ -16,11 +16,6 @@
   },
   "document": "A9-0210/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the EIB to develop a method of assessing the green funding gap in the EU, to estimate the size of this gap and to identify potential public and private funding sources",
-    "Urges the EIB to increase support directed at scaling up European start-ups, including by taking greater risks in disbursing venture capital to ensure that European start-ups can scale up in the EU rather than outside it",
-    "Calls on the EIB to finance viable projects that align with the EU taxonomy and projects that aim to reduce the carbon footprint of the maritime sector, such as Green Corridor projects"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 443 in favour, 74 against, 98 abstained. Result derived from the totals."
@@ -2510,9 +2505,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0210/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0210_EN.html"
-  }
+  "countries": {}
 }

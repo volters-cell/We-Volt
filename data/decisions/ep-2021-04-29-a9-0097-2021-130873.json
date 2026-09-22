@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0097/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Authority to further develop its ethics@work programme by developing measures offering whistle blowers protection",
+    "Welcomes that the Court of Auditors has stated that it has obtained reasonable assurances that the Authority's annual accounts for 2019 are reliable and that the underlying transactions are legal and regular",
+    "Notes that 459 of the 467 available posts (including officials, temporary agents, contract agents and seconded national experts) were occupied on 31 December 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 58 against, 28 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0097/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0097_EN.html"
+  }
 }

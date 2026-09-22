@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0059/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court sees a strong increase in media interest with particularly heavy coverage of its special reports",
+    "Welcomes the fact that a memorandum of understanding with the European Central Bank (ECB) was signed in October 2019, setting out the practical arrangements for sharing information about the ECB’s supervisory activities",
+    "Welcomes the Court’s efforts, in line with the Financial Regulation, to produce its special reports generally within 13 months while noting that the average time to produce the special reports still exceeds that time limit"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 363 in favour, 218 against, 113 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0059/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0059_EN.html"
+  }
 }

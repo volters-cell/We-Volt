@@ -16,9 +16,6 @@
   },
   "document": "B9-0339/2023",
   "summary": "",
-  "whatItMeans": [
-    "Underlines that uncontrolled migration puts severe pressure on public funds and that prison population figures show that illegal migrants are disproportionately responsible for crime in the Member States"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 163 in favour, 404 against, 5 abstained. Result derived from the totals."
@@ -2332,9 +2329,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0339/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0339_EN.html"
-  }
+  "countries": {}
 }

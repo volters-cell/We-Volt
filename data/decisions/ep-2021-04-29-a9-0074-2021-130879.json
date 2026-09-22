@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0074/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Agency’s efforts and new measures introduced to attract, recruit and retain highly competent staff",
+    "Notes that four new satellites were put in service in February 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 28 against, 30 abstained. Result derived from the totals."
@@ -2812,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0074/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0074_EN.html"
+  }
 }

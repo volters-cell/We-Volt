@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to monitor closely the implementation of the Platform-to-Business Regulation[19], especially the rules on the transparency of rankings, which involve use of automated decision-making processes"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 179 in favour, 437 against, 26 abstained. Result derived from the totals."
@@ -2611,5 +2613,9 @@
   "countries": {},
   "topics": [
     "Consumers"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0094/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0094_EN.html"
+  }
 }

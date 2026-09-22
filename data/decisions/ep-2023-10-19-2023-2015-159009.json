@@ -16,11 +16,6 @@
   },
   "document": "A9-0281/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to put forward the following policy actions:",
-    "Considers that the EU protein strategy should be based on:",
-    "Considers that increasing the EU’s food self-sufficiency is a key objective that requires a level playing field and strong support for the European agricultural sector"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 305 in favour, 129 against, 69 abstained. Result derived from the totals."
@@ -2062,9 +2057,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0281/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0281_EN.html"
-  }
+  "countries": {}
 }

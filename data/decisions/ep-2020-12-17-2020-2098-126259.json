@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Considers that the amendments shown below should be adopted in accordance with standard procedures",
+    "Stresses that those temporary measures were fully justified and that they ensured the validity of all votes taken during their period of application",
+    "Recalls the importance of ensuring, to the best of its capabilities, reasonable accommodation for Members with disabilities and their staff while Parliament is operating under extraordinary circumstances"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 598 in favour, 58 against, 33 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0194/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0194_EN.html"
+  }
 }

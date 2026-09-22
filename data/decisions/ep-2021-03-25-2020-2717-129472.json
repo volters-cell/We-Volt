@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EDPB to publish its meeting agenda ahead of its meetings and to provide more detailed summaries of its meetings to the public and to Parliament",
+    "Calls on the DPAs and the Commission to systematically assess whether data protection rules are applied in practice in third countries, in line with CJEU case law",
+    "Calls on the Commission to evaluate the possibility of obliging large multinational technology companies to pay for their own oversight through the introduction of an EU digital tax"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 483 in favour, 96 against, 108 abstained. Result derived from the totals."
@@ -2791,5 +2795,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0211/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0211_EN.html"
+  }
 }

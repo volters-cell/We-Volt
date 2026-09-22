@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0056/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to tackle gender and geographical imbalances in order to establish a proper representation of nationals from all Member States, including at management level",
+    "Notes that over the course of almost twenty years Parliament has developed the practice of granting discharge to all Union institutions, bodies, offices and agencies",
+    "Underlines the need to re-start negotiations with the Council with a view to reaching a mutually satisfactory agreement to finally overcome this situation of deadlock"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 39 against, 18 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0056/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0056_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0143/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the European institutions to resume discussions on the revision of the Blue Card Directive immediately, and to unblock the situation at the Council",
+    "Stresses that further opportunities for labour mobility within the Union must be legally guaranteed",
+    "Recalls its resolution of 19 June 2020 on European protection of cross-border and seasonal workers in the context of the COVID-19 crisis[34]"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 141 in favour, 534 against, 15 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0143/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0143_EN.html"
+  }
 }

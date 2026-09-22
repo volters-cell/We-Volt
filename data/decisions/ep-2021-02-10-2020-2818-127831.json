@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises the potential opportunities offered by the Erasmus + programme, especially in the adult education field, and the need to boost its 2021-2027 budget",
+    "Notes that creative and artistic skills are essential for the economy, and calls for the introduction of a more horizontal approach in the Skills Agenda in order to include them into all curricula",
+    "Notes that the main source of EU education funding is the European Social Fund+, and stresses the importance of ensuring that these funds remain available for this purpose, especially in times of crisis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 606 in favour, 12 against, 72 abstained. Result derived from the totals."
@@ -2803,5 +2807,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0108/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0108_EN.html"
+  }
 }

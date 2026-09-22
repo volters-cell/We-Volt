@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Ukraine to assist the Moldovan central government in its endeavours to regain control over Transnistria based on the territorial integrity of Moldova",
+    "Calls on the Ukrainian Government to introduce a system of incentives and sanctions to combat the notoriously high numbers of jobs in the informal employment sector",
+    "Urges Ukraine to ratify the International Criminal Court’s Rome Statute and the Istanbul Convention on preventing and combating violence against women and domestic violence"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 79 against, 71 abstained. Result derived from the totals."
@@ -2747,5 +2751,9 @@
   "countries": {},
   "topics": [
     "Ukraine"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0219/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0219_EN.html"
+  }
 }

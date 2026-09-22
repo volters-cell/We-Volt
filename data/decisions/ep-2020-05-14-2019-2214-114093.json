@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that Parliament’s 2021 budget must be realistic and accurate regarding the matching of needs and their costs, to avoid over-budgeting",
+    "Reiterates its call for a transparent decision-making process in the field of buildings policy based on early information, having due regard to Article 266 of the Financial Regulation",
+    "Emphasises that the largest part of Parliament's budget is fixed by statutory or contractual obligations and is subject to annual indexation and for 2021 those obligations are estimated at EUR 32 million"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 94 against, 56 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0102/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0102_EN.html"
+  }
 }

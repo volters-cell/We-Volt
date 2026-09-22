@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 174 in favour, 513 against, 8 abstained. Result derived from the totals."
@@ -2823,5 +2825,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0116/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0116_EN.html"
+  }
 }

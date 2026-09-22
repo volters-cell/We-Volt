@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0058/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to take into account the following considerations when amending the FRA Regulation:",
+    "Calls on the FRA to specifically address the gender aspect of the protection of the victims of crime, in the framework of the agency’s expanded competences within cooperation on criminal matters"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 149 in favour, 532 against, 13 abstained. Result derived from the totals."
@@ -2821,5 +2824,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0058/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0058_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Urges the Commission, again, to take into account the Union’s obligations under international agreements, such as the Paris Climate Agreement, the UN Convention on Biological Diversity and the UN Sustainable Development Goals",
+    "Considers that the draft Commission implementing decision exceeds the implementing powers provided for in Regulation (EC) No 1829/2003"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 483 in favour, 178 against, 25 abstained. Result derived from the totals."
@@ -2787,5 +2791,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0346/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0346_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0120/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 152 in favour, 497 against, 49 abstained. Result derived from the totals."
@@ -2840,5 +2842,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0120/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0120_EN.html"
+  }
 }

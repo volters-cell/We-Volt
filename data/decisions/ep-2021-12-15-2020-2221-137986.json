@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that farmers must be protected from intimidation by criminal gangs that seek to claim subsidies for their land",
+    "Stresses that the Financial Regulation, in particular Article 61 thereof, must be respected and implemented in all Member States and applied to all payments of EU funds, including direct payments for agriculture",
+    "Underlines the importance of a thorough investigation of cases of misuse of EU funds uncovered by journalists in Member States and the importance of ensuring the recovery of EU funds used in violation of the rules"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 655 in favour, 8 against, 34 abstained. Result derived from the totals."
@@ -2831,5 +2835,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0330/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0330_EN.html"
+  }
 }

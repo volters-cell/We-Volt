@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0234/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member States to define a common communication standard that could be used for classified and non-classified information, in order to enhance rapid action and ensure a secure network to counter cyberattacks",
+    "Welcomes the progress made by some Member States in establishing cyber commands within their military",
+    "Underlines the importance of cooperation with national parliaments in order to exchange best practices in the area of cyber defence"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 591 in favour, 65 against, 26 abstained. Result derived from the totals."
@@ -2776,5 +2780,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0234/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0234_EN.html"
+  }
 }

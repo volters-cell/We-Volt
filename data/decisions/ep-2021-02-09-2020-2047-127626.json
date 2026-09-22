@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member States to continuously exchange best practices on the correct application of the current border procedures and also share them with the Commission",
+    "Reiterates the importance of an evidence-based approach to guide coherent policy-making",
+    "Recalls that in Joined Cases C-924/19 PPU and C-925/19 PPU, the CJEU ruled that even if an applicant can leave a transit zone in the direction of a third country, this situation can qualify as detention"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 124 against, 55 abstained. Result derived from the totals."
@@ -2779,5 +2783,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0005/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0005_EN.html"
+  }
 }

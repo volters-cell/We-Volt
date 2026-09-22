@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0087/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Centre’s efforts to provide a cost-effective and environmentally-friendly workplace",
+    "Welcomes the publication of vacancies both on the Centre's website, as well as on the website of the European Personnel Selection Office",
+    "Welcomes the fact that the observation of the Court regarding the financial contribution from Norway to the Centre, which was not in line with the envisaged contribution mechanism, has been acted upon and completed"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 636 in favour, 53 against, 9 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0087/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0087_EN.html"
+  }
 }

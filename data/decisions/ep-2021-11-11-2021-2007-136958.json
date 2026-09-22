@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to maintain its strong support for innovation and intellectual property rights in global discussions",
+    "Calls on the Commission to ensure that owners of standard essential patents commit to licensing their patents on fair, reasonable and non-discriminatory terms in developing countries",
+    "Welcomes the efforts of all Member States to make sure that the courts take the principle of proportionality into consideration when dealing with injunction cases"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 94 against, 23 abstained. Result derived from the totals."
@@ -2324,5 +2328,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0284/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0284_EN.html"
+  }
 }

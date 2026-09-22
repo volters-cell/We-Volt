@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Council has showed its openness to reaching an agreement with Parliament on how to cooperate in the discharge process",
+    "Regrets the lack of cooperation from the Council in the discharge procedure which has resulted in Parliament’s refusal to grant discharge to the Secretary-General of the Council since the financial year 2009",
+    "Notes that Parliament's role in respect of the budget discharge is laid down in the Treaty on the Functioning of the European Union (TFEU), in the Financial Regulation and in Parliament’s Rules of Procedure"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 641 in favour, 30 against, 22 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0038/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0038_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0155/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to use the forthcoming reviews of financial services regulations to foster investor and shareholder engagement through digital tools",
+    "Calls on the Commission to promote the direct involvement of retail savers in financing the economy, considering the possibility of return on investment for retail investors",
+    "Calls on the Commission to work towards the implementation of the Digital Finance Action Plan for better access to financial services offering wider choice and increasing efficiency of operations"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 158 in favour, 500 against, 38 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0155/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0155_EN.html"
+  }
 }

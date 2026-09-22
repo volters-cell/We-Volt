@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0161/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to consider undertaking a supervisory overview of ICT providers in the area of financial services which provide their services in the Union as outlined in paragraph 47",
+    "Calls on the Commission to propose legislative changes in the area of ICT and cyber security requirements for the Union financial sector. These changes should focus on the four key areas outlined in paragraph 48",
+    "Calls on the Commission to assess and monitor the risk of trading opportunities on the ‘black market’ emerging, and of money laundering, the financing of terrorism, tax fraud and evasion and other criminal activities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 63 against, 89 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0161/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0161_EN.html"
+  }
 }

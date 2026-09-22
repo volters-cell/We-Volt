@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0225/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the non-discrimination clause in the governance chapter that ensures that the UK cannot, in its national visa policy, discriminate between citizens of EU Member States for the purpose of granting short-term visas",
+    "Notes with appreciation that the Agreement includes commitments on taxation transparency and fair tax competition, as well as a joint Political Declaration on countering harmful tax regimes"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 578 in favour, 51 against, 68 abstained. Result derived from the totals."
@@ -2836,5 +2839,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0225/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0225_EN.html"
+  }
 }

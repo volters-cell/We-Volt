@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0229/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that all costs related to the NGEU (principal and interest) should be budgeted over and above the MFF ceilings"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 465 in favour, 150 against, 67 abstained. Result derived from the totals."
@@ -2773,5 +2775,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0229/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0229_EN.html"
+  }
 }

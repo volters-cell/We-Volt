@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0194/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to use REACT-EU funds to tackle demographic change[53]",
+    "Calls on the Commission and the Member States to promote best practices for an efficient ageing policy",
+    "Calls on the Member States to support the functioning and development of older people’s organisations and other forms of social participation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 381 in favour, 289 against, 20 abstained. Result derived from the totals."
@@ -2805,5 +2809,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0194/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0194_EN.html"
+  }
 }

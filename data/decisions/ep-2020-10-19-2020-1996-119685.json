@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that the personalised services to be provided to workers made redundant have to be tailor-made for each profile",
+    "Stresses that the Spanish authorities have confirmed that the eligible actions do not receive assistance from other Union funds or financial instruments",
+    "Reiterates that assistance from the EGF must not replace actions which are the responsibility of companies, by virtue of national law or collective agreements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 645 in favour, 33 against, 9 abstained. Result derived from the totals."
@@ -2789,5 +2793,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "A9-0192/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0192_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0090/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Agency celebrated its 25th anniversary in 2019 and that actions dedicated to marking and promoting that milestone were performed throughout the year",
+    "Notes that in February 2019, the Agency’s new founding regulation entered into force and the management board adopted a number of decisions to ensure the effective and efficient implementation of the new rounding regulation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 636 in favour, 58 against, 4 abstained. Result derived from the totals."
@@ -2840,5 +2843,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0090/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0090_EN.html"
+  }
 }

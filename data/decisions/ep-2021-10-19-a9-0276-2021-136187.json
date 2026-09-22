@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0276/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the Council continues to fail to provide answers to Parliament's questions as well as to attend the hearings of the secretary-generals of the institutions",
+    "Regrets that for more than ten years the Council has refused to cooperate with Parliament in the framework of the discharge procedure, forcing Parliament to refuse discharge",
+    "Recalls Parliament's role in respect of the budget discharge, as specified in the Treaty on the Functioning of the European Union (TFEU) and in the Financial Regulation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 640 in favour, 46 against, 14 abstained. Result derived from the totals."
@@ -2848,5 +2852,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0276/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0276_EN.html"
+  }
 }

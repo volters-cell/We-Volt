@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Eurojust to focus on disseminating the results of its research to the general public, and to reach out to the public via social media and other media outlets",
+    "Welcomes the adoption by the College of an updated Anti-Fraud Strategy and Action Plan in November 2018",
+    "Welcomes also the fact that the Court recognised that all the recommendations from previous years were correctly implemented by Eurojust"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 625 in favour, 61 against, 5 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0048/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0048_EN.html"
+  }
 }

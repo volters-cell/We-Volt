@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0079/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Authority to ensure a proper follow-up and implementation of the Court’s recommendations",
+    "Calls on the Authority to draw inspiration from the European Central Bank's initiatives to propose internal programmes for the promotion of women and for greater diversity among its staff",
+    "Welcomes the efforts made to increase the Authority’s cyber security and data protection"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 613 in favour, 54 against, 31 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0079/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0079_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0272/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to amend the two draft implementing decisions with a view to making them fully consistent with EU law and case law"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 344 in favour, 311 against, 28 abstained. Result derived from the totals."
@@ -2780,5 +2782,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0272/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0272_EN.html"
+  }
 }

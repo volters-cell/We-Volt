@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to inform the discharge authority of the measures they have taken to mitigate possible conflicts of interest, particularly as regards project selection",
+    "Notes from the Court’s report that at 31 December 2018, the Joint Undertaking employed 42 staff (2017: 40)",
+    "Notes the results of the 2018 Human Resources benchmarking exercise: 61,67 % operational posts, 28,57 % administrative and 9,76 % of neutral posts"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 597 in favour, 88 against, 6 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0044/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0044_EN.html"
+  }
 }

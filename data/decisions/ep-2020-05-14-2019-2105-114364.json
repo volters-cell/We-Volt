@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Undertaking’s efforts to introduce Automatic Train Operation (ATO); warns that the road transport sector has made greater progress with automation",
+    "Welcomes the Joint Undertaking’s efforts to introduce Automatic Train Operation (ATO); warns that the road transport sector has made greater progress with automation",
+    "Welcomes the continued implementation of the Undertaking’s Anti-Fraud Strategy 2017-2020 that resulted in no case of close monitoring due to an assessment of high risk of fraud and no files sent to OLAF for investigation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 598 in favour, 87 against, 8 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0055/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0055_EN.html"
+  }
 }

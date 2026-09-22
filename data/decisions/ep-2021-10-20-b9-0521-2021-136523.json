@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0521/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports the Commission’s endeavours to advocate the creation of a legally binding framework at international level for methane emission reduction under the UN",
+    "Welcomes the revision of energy legislation under the Fit for 55 package to align it with the Union’s increased target of reducing emissions by at least 55 % by 2030 in order to reach climate neutrality by 2050 at the latest",
+    "Stresses the need for synergies between the EU Biodiversity Strategy for 2030 and climate action for both mitigation and adaptation"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 259 in favour, 427 against, 7 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
   "topics": [
     "United Kingdom",
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0521/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0521_EN.html"
+  }
 }

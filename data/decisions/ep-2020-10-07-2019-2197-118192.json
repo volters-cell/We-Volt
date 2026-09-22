@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure that human rights conditions linked to unilateral trade preferences such as GSP or GSP+ are effectively implemented and monitored",
+    "Regrets that the current administration is considering withdrawing from the General Procurement Agreement; urges the administration to remain a party to that agreement",
+    "Recalls that one of the main challenges for developing countries is to climb up the global value chain through economic diversification"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 431 in favour, 140 against, 124 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0160/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0160_EN.html"
+  }
 }

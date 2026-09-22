@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0109/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Undertaking attained a rate of implementation of 100% for the commitment appropriations and 97.4% for the payment appropriations",
+    "Welcomes the finding of the Court of Auditors that the transactions underlying the accounts of the Clean Sky 2 Joint Undertaking ('the Undertaking') for the financial year 2019 are legal and regular in all material respects",
+    "Notes that the Undertaking’s revised financial rules were adopted in January 2020"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 629 in favour, 57 against, 5 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0109/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0109_EN.html"
+  }
 }

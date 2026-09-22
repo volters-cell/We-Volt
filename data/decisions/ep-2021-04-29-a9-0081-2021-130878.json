@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0081/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the first technical and operational European integrated border management strategy was adopted in March 2019",
+    "Considers the explanation of the Agency particularly weak, in light of information on a possible fraud case involving Polish IT software where a similar modus operandi was applied",
+    "Underlines the challenges posed for the Agency by the long planning cycle leading to the adoption of the single programming document in light of the volatile environment it is operating in"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 531 in favour, 80 against, 80 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0081/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0081_EN.html"
+  }
 }

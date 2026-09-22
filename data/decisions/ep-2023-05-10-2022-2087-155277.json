@@ -16,11 +16,6 @@
   },
   "document": "A9-0080/2023",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes that the majority of technical systems are hosted internally and managed by internal staff",
-    "Welcomes the study launched by the Committee in 2021 to define CO2 reduction targets and scenarios and to propose measures in various areas with the goal of better implementation of the European Green Deal in the Committee",
-    "Notes that the budget of the Committee falls under MFF heading 7, ‘European public administration’, which amounted to a total of EUR 10,7 billion in 2021 (representing 5,9 % of Union spending)"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 557 in favour, 53 against, 21 abstained. Result derived from the totals."
@@ -2577,9 +2572,5 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0080/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0080_EN.html"
-  }
+  ]
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0107/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that at 31 December 2019, all recommendations and action plans coming from the previous IAS audits were successfully implemented and closed",
+    "Notes that, according to the Court’s report, at the end of 2019, the implementation rate of Horizon 2020 stood at 83 % with regard to the call procedures for the activities assigned to the Joint Undertaking"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 625 in favour, 32 against, 34 abstained. Result derived from the totals."
@@ -2812,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0107/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0107_EN.html"
+  }
 }

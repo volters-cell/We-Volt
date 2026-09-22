@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0070/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Agency report back on the measures taken to address this situation",
+    "Calls on the management board to pay more careful attention to the social aspects of the staff policy, taking serious steps to reduce the social unrest in the Agency, and establish a serious and productive social dialogue",
+    "Welcomes the preparation of the EASA to all eventualities with regard to Brexit, in particular the establishment of a contingency plan in coordination with the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 635 in favour, 51 against, 12 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0070/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0070_EN.html"
+  }
 }

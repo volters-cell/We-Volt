@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the above prerequisites also apply to all new MPAs",
+    "Calls on the Commission to count MPAs in international targets only once they are appropriately managed",
+    "Calls on the Commission and the Member States to request an IPCC special report on biodiversity and climate change"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 515 in favour, 90 against, 86 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0179/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0179_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0099/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the commitment made by the Agency to procure energy from 100% renewable sources by 2021",
+    "Regrets that in 2019, the Agency paid late in 18 % of the cases; requests that the Agency takes measures to ensure that it makes its payments in due time",
+    "Welcomes the Agency’s efforts to strengthen the ex-ante controls on payments under IT framework contracts and to ensure a competitive procedure for all procurements following the observations made by the Court in 2018"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 601 in favour, 86 against, 4 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0099/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0099_EN.html"
+  }
 }

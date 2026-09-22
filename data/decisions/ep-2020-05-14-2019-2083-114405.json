@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to follow up on the outstanding recommendation regarding e-procurement, namely the introduction of e-submission, without delay",
+    "Calls on the Agency to take corrective action with regard to all outstanding observations of the Court, including the adoption and implementation of a sensitive posts policy in line with its own internal control standards",
+    "Notes with concern that the reported gender balance within the management board for 2018 (50 male members and 8 female members) was highly uneven"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 588 in favour, 95 against, 10 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0072/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0072_EN.html"
+  }
 }

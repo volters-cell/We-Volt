@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Committee on Budgetary Control to invite of the Director of the APPF to the annual hearing for the Parliament discharge, as is the case for the other heads of agencies and institutions",
+    "Calls on DG COMM to inform the discharge authority in future discharge cycles of the targets set in the respective year so that it can assess the effectiveness of the directorate-general’s activities",
+    "Welcomes the measures taken by the Bureau to develop greater transparency and financial accountability"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 579 in favour, 89 against, 24 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0021/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0021_EN.html"
+  }
 }

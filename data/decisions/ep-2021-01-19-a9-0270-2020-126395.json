@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0270/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the Commission has not decided to launch infringement procedures against the Member States that have breached Schengen rules",
+    "Emphasises the importance of proper dialogue between the Commission and the Member States at the pre-litigation stage"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 112 in favour, 542 against, 36 abstained. Result derived from the totals."
@@ -2805,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0270/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0270_EN.html"
+  }
 }

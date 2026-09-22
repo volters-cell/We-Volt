@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0268/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to adopt the adequacy decisions on time, that is before the end of the interim period, in order to avoid any disruptions for European companies or to transfers for law enforcement purposes",
+    "Notes the UK’s commitment to respect democracy and the rule of law, and protect and give domestic effect to fundamental rights such as those set out in the ECHR, including high levels of data protection",
+    "Recalls the assessment of the EDPB, which recognises that the UK has mirrored, for the most part, the GDPR in its data protection framework, and that the EDPB has identified many aspects as being essentially equivalent"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 335 in favour, 350 against, 8 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0268/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0268_EN.html"
+  }
 }

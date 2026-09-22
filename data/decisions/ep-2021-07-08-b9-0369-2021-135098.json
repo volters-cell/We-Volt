@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0369/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that IUU fishing activities represent a considerable threat to sustainable fishing and the resilience of marine ecosystems",
+    "Points out that the geographic isolation of the Southern Ocean makes monitoring operations in the CAMLR Convention Area complex and difficult",
+    "Notes that the establishment of MPAs covering over 3 million km2 in the eastern Antarctic and the Weddell Sea would create one of the largest marine protection areas in history"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 588 in favour, 21 against, 79 abstained. Result derived from the totals."
@@ -2800,5 +2804,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0369/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0369_EN.html"
+  }
 }

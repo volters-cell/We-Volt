@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to further strengthen the role of the EU as a catalyst for gender equality worldwide",
+    "Urges the Member States to take further action in combating discrimination against women in the labour market",
+    "Calls on the Commission to support action to reduce the gender pay gap, which is a form of gender discrimination"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 464 in favour, 119 against, 93 abstained. Result derived from the totals."
@@ -2747,5 +2751,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0234/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0234_EN.html"
+  }
 }

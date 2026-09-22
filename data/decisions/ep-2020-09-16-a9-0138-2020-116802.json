@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0138/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Polish Government to include sexual orientation, gender identity and sex characteristics as a protected personal characteristic in the Criminal Code to ensure the rights of all LGBTI+ people in Poland"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 116 in favour, 534 against, 17 abstained. Result derived from the totals."
@@ -2717,5 +2719,9 @@
   "topics": [
     "Poland",
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0138/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0138_EN.html"
+  }
 }

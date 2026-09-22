@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0519/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to reveal the prices per dose for each manufacturer’s vaccine and to give detailed information about its procurement strategy, as vaccine prices vary greatly between manufacturers"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 314 in favour, 368 against, 12 abstained. Result derived from the totals."
@@ -2824,5 +2826,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0519/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0519_EN.html"
+  }
 }

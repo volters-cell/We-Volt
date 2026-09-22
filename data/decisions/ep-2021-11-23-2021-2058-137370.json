@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present a communication on the future of sport linked to the EU’s strategic goals",
+    "Calls on the Member States and sports federations to provide first aid training for young people and athletes",
+    "Urges the Commission and the Member States to regularly update and present data on the economic impact of sport"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 597 in favour, 36 against, 55 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0318/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0318_EN.html"
+  }
 }

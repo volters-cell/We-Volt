@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0131/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council and the Commission to consult the EDPS on the provisions of the draft agreement before its finalisation and throughout the negotiations",
+    "Believes that cross-border information exchange between all relevant law enforcement agencies, within the EU and with global partners, should be prioritised in order to fight serious crime and terrorism more effectively"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 494 in favour, 192 against, 4 abstained. Result derived from the totals."
@@ -2808,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0131/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0131_EN.html"
+  }
 }

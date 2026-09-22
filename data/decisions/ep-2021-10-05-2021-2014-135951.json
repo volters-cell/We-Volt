@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to assess making theoretical and practical training and tests mandatory to obtaining a driving licence for all categories of powered two-wheeled vehicles",
+    "Calls on the Commission to develop crash test dummy standards that are more representative of a variety of aspects such as age, gender, size and stature for users both within and outside vehicles",
+    "Calls on the Member States to develop their principal trauma networks and to adopt guidelines for mutual cooperation in order to enable emergency care services to deliver patients swiftly, including across borders"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 615 in favour, 24 against, 48 abstained. Result derived from the totals."
@@ -2791,5 +2795,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0211/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0211_EN.html"
+  }
 }

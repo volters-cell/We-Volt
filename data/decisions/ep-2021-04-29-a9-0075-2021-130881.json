@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0075/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court of Auditors has stated that it has obtained reasonable assurances that the Agency's annual accounts for 2019 are reliable and that the underlying transactions are legal and regular",
+    "Notes that ECHA's final budget for 2019 was EUR 111 969 312, representing a decrease of 5,9% compared to 2018",
+    "Recalls the importance for the Agency of developing greater visibility in the media, on the internet, and in social media in order to make its work known"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 603 in favour, 84 against, 3 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0075/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0075_EN.html"
+  }
 }

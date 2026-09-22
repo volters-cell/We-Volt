@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests transparent and timely information on any resulting changes in the CAP legal bases that have an impact on the annual budgetary procedures 2020 and beyond"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 39 in favour, 630 against, 25 abstained. Result derived from the totals."
@@ -2816,5 +2818,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0101/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0101_EN.html"
+  }
 }

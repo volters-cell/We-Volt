@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0186/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that all the procedural requirements were met",
+    "Stresses that the Finnish authorities have confirmed that the eligible actions do not receive assistance from other Union funds or financial instruments",
+    "Reiterates that assistance from the EGF must not replace actions which are the responsibility of companies, by virtue of national law or collective agreements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 658 in favour, 31 against, 7 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0186/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0186_EN.html"
+  }
 }

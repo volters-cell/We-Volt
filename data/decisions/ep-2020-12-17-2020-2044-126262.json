@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that many petitions have led to legislative or political action, whether in the form of reports or motions for resolutions, or of preliminary rulings or infringement procedures"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 619 in favour, 11 against, 59 abstained. Result derived from the totals."
@@ -2796,5 +2798,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0230/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0230_EN.html"
+  }
 }

@@ -16,11 +16,6 @@
   },
   "document": "B9-0414/2022",
   "summary": "",
-  "whatItMeans": [
-    "Urges the Commission to adopt specific EU guidance to tackle wildlife cybercrime, ensuring harmonised policies in Member States and the collaboration between all relevant stakeholders",
-    "Calls on Member States to implement and promote consistent and transparent reporting on all seized or confiscated live animals to CITES, Europol and the countries of origin",
-    "Calls on the World Health Organization to take a stance against the use of wild animals in medicines, in particular against the use of species classified as (near) threatened, vulnerable or endangered on the IUCN red list"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 549 in favour, 28 against, 50 abstained. Result derived from the totals."
@@ -2558,9 +2553,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0414/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0414_EN.html"
-  }
+  "countries": {}
 }

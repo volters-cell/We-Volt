@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0344/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the co-ordinated package of personalised services was drawn up in consultation with the social partners (UGT[12], CCOO[13], CEPYME[14] and CEOE[15])",
+    "Welcomes the fact that the social partners were consulted in the drawing up of the co-ordinated package of personalised services and calls for social partners’ involvement in its implementation and evaluation",
+    "Notes that all the procedural requirements were met"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 665 in favour, 27 against, 5 abstained. Result derived from the totals."
@@ -2836,5 +2840,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0344/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0344_EN.html"
+  }
 }

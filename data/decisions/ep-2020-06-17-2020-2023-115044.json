@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that the UK cannot “cherry-pick” which elements of the EU asylum and migration acquis it would like to keep",
+    "Urges the Commission to include provisions on preventing and combating illegal, unreported and unregulated (IUU) fishing activities within EU and UK waters",
+    "Urges the Commission to include provisions on preventing and combating illegal, unreported and unregulated (IUU) fishing activities within Union and United Kingdom waters"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 159 in favour, 531 against, 4 abstained. Result derived from the totals."
@@ -2819,5 +2823,9 @@
   "countries": {},
   "topics": [
     "United Kingdom"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0117/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0117_EN.html"
+  }
 }

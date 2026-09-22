@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0026/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Council to do their utmost to fight tax evasion and tax avoidance and effectively counter harmful tax practices adopted by some Member States",
+    "Urges the Commission to support those Member States that are further behind in establishing their digital infrastructure and connectivity, by making available additional expert consultations",
+    "Calls on the Commission to expand the country-specific recommendations in the future to include an outcome regarding the involvement of social partners in wage-setting mechanisms and the effectiveness of their involvement"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 508 in favour, 121 against, 64 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0026/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0026_EN.html"
+  }
 }

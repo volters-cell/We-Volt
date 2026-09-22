@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to adopt in good time the proposal for the new regulation applying a Generalised Scheme of Preferences, possibly with a view to increasing the number of countries committing to the GSP+ scheme"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 593 in favour, 50 against, 50 abstained. Result derived from the totals."
@@ -2812,5 +2814,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0370/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0370_EN.html"
+  }
 }

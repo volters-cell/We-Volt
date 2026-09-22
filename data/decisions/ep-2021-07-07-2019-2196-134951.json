@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the presentation of the strategic risk analysis for European integrated border management presented by Frontex as the first step of the new policy cycle",
+    "Welcomes the political agreement reached on the reform of the Visa Information System (VIS), in particular the establishment of a clear and legally binding deadline for the start of operations",
+    "Reiterates its call on the Member States to ensure proper implementation of the Return Directive in all its aspects and calls on the Commission to monitor its implementation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 134 against, 54 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0183/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0183_EN.html"
+  }
 }

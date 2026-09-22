@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to propose measures for the revision of Commission Delegated Regulation (EU) No 885/2013 and Regulation (EU) No 1315/2013",
+    "Requests the introduction of regular security/police patrols in parking areas where security services cannot be constantly provided, but attacks on carriers have been reported",
+    "Calls on the Commission and the Member States to promote existing in-vehicle safety systems and any kind of intelligent warning tool and their connection with police and emergency services"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 681 in favour, 1 against, 13 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0552/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0552_EN.html"
+  }
 }

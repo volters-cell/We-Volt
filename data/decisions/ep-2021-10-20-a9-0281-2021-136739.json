@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0281/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to appoint as soon as possible a high-level EU Climate Envoy to promote the fight against climate change at international level",
+    "Requests earmarked funding for EASA for research on limitation of the spread of airborne infection diseases in the air transport environment and new health safety measures",
+    "Calls on the Commission to guarantee that Union funds do not support any projects, investments and programmes that contribute to segregation, discrimination or social exclusion"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 88 against, 84 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0281/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0281_EN.html"
+  }
 }

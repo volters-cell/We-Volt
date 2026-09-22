@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that this agreement should be adapted to Cape Verde’s needs and priorities, notably those outlined in Cape Verde’s Blue Economy Plan",
+    "Calls on the Commission and the Cape Verdean authorities to improve data collection on and the monitoring of stocks in the context of overfishing, with a particular focus on sharks",
+    "Calls on the Commission to better integrate the recommendations made in the EU-Cape Verde SFPA and to take them into account, for instance, in the procedures for the renewal of the Protocol"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 587 in favour, 50 against, 51 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0023/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0023_EN.html"
+  }
 }

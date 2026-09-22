@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Court´s report states that the transactions underlying the annual accounts of the Joint Undertaking for the financial year 2018 are, in all material respects, legal and regular",
+    "Notes that the joint Undertaking launched two calls for proposals; although the number of proposals decreased for a fourth year in a row, the number of selected proposals is the same as in 2017",
+    "Notes that for Seventh Framework Programme operational payments, the Joint Undertaking is still dependent on the EPS national funding authorities, resulting in an enhanced risk regarding timely final payments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 626 in favour, 55 against, 12 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0045/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0045_EN.html"
+  }
 }

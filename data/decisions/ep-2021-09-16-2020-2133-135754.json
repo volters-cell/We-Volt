@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that the procedures laid down in the Treaties must be applied, such as the transfer of investigations by the European Court of Auditors to OLAF and to the CJEU",
+    "Welcomes the commitment made by the European Commission before Parliament to establish an independent EU ethics body",
+    "Regrets, with concern, that there has been a lack of consideration of prevention and enforcement measures to avoid conflicts of interest in the Commission’s procedure on public tenders"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 377 in favour, 87 against, 224 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0260/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0260_EN.html"
+  }
 }

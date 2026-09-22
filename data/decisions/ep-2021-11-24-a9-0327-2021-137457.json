@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0327/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Takes note of Draft amending budget No 5/2021 as submitted by the Commission"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 588 in favour, 87 against, 14 abstained. Result derived from the totals."
@@ -2805,5 +2807,9 @@
   "topics": [
     "Türkiye",
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0327/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0327_EN.html"
+  }
 }

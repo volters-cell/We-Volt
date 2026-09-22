@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States also to continue working on the development and usage of other forms of renewable energy",
+    "Urges the Member States to take into account the impact of offshore renewable energy on the marine ecosystem and fisheries when determining their energy mix",
+    "Calls on Member States, in line with maritime spatial planning provisions, to designate specific historical and traditional fishing grounds of local fishers as areas that are to remain free of offshore renewables"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 512 in favour, 21 against, 159 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0184/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0184_EN.html"
+  }
 }

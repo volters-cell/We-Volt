@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0225/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to finance the training of new scientific experts",
+    "Calls on the Member States to fight IUU fishing by increasing transparency of fishing operations, and of monitoring and control efforts",
+    "Calls on the Commission to consider integrating fisheries into the EU Neighbourhood Policy, as a tool for invigorating regional cooperation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 582 in favour, 5 against, 100 abstained. Result derived from the totals."
@@ -2793,5 +2797,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0225/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0225_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0018/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to always include, in the external policy activities, including in trade and investment agreements, provisions and discussions on the protection of human rights",
+    "Considers that the requested proposal does not have financial implications for the general budget of the Union",
+    "Notes that the Charter applies to all Union legislation and to national authorities when implementing Union law both in the Union and in third countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 504 in favour, 79 against, 112 abstained. Result derived from the totals."
@@ -2825,5 +2829,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0018/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0018_EN.html"
+  }
 }

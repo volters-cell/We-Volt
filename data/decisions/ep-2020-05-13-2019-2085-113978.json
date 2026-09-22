@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes with concern the lack of gender balance on the management board (47 men and 21 women)",
+    "Notes that the Agency implemented 98 % of its activities on time and that it implemented 100 % of its annual communication strategy plan",
+    "Points out that, in 2018, the Agency handled a 23% increase in payments transactions due to the increase in activity, without using additional resources"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 83 against, 6 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0041/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0041_EN.html"
+  }
 }

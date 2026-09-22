@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0100/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on better avoiding overlapping subjects and areas of competence between the different agencies",
+    "Calls on all agencies to participate in the interinstitutional agreement on the transparency register for interest representatives under negotiation between the Commission, the Council and Parliament",
+    "Calls on all JHA agencies to take into account sustainability in their overall business processes in order to improve the agencies’ environmental performance, and make proper reporting on measures and progress in this field"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 600 in favour, 88 against, 3 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0100/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0100_EN.html"
+  }
 }

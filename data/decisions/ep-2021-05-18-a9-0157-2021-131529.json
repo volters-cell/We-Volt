@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0157/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the urgent need to release financial assistance through the European Union Solidarity Fund (the ‘Fund’) and the importance of ensuring that it adequately reaches the regions and beneficiaries in the affected countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 675 in favour, 8 against, 13 abstained. Result derived from the totals."
@@ -2833,5 +2835,9 @@
   "topics": [
     "Western Balkans",
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0157/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0157_EN.html"
+  }
 }

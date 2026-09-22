@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0238/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to ensure the proper implementation of the directive in all its aspects; calls on the Commission to continue monitoring this implementation and take action in the event of non-compliance",
+    "Recalls that the principle of non-refoulement is binding on Member States in all circumstances, including for return procedures not falling within the scope of application of the return directive"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 512 in favour, 134 against, 49 abstained. Result derived from the totals."
@@ -2825,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0238/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0238_EN.html"
+  }
 }

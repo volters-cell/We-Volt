@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0266/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 94 in favour, 577 against, 19 abstained. Result derived from the totals."
@@ -2808,5 +2810,9 @@
   "countries": {},
   "topics": [
     "Enlargement"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0266/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0266_EN.html"
+  }
 }

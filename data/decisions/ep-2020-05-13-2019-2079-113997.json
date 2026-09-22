@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court of Auditors has stated that it has obtained reasonable assurances that the Centre’s annual accounts for 2018 are reliable and that the underlying transactions are legal and regular",
+    "Notes that, in 2018, the Centre implemented 89 % of the key outputs indicated in its work programme (above the target of 85 %)",
+    "Notes that, in 2018, the management board adopted a revised independence policy for non-staff and endorsed a corresponding internal procedure"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 80 against, 6 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0065/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0065_EN.html"
+  }
 }

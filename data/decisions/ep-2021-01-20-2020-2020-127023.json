@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the national parliaments to actively engage in supporting the enforcement of existing rules, and to exercise their powers of scrutiny over national authorities",
+    "Recalls that on 21 October 2019 Parliament called on the Commission to withdraw its proposal for a European Services e-card; reiterates therefore its call on the Commission to withdraw the proposal",
+    "Notes that two thirds of service activities are included in the scope of the Services Directive and encourages the Commission to evaluate and improve its implementation to strengthen the single market legal framework"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 462 in favour, 120 against, 108 abstained. Result derived from the totals."
@@ -2800,5 +2804,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0250/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0250_EN.html"
+  }
 }

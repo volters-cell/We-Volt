@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the national public employment services and the European Employment Services (EURES) network to communicate better on the opportunities offered by the labour platforms",
+    "Calls on the Commission and the Member States to ensure that waiting time and being available on the platform is considered as working time for platform workers in an employment relationship",
+    "Believes that workers should be informed of client reviews; stresses that workers should have the right to contest non-payment and to have that contestation reviewed by a platform employee"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 259 in favour, 225 against, 209 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0257/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0257_EN.html"
+  }
 }

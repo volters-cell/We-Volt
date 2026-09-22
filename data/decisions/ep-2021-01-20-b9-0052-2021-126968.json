@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0052/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that Parliament’s role in relation to the Code of Conduct Group should be formalised, including with regard to governance and the criteria of the listing process, such as through an opinion-giving process",
+    "Stresses the importance of BEPS minimum standards in the screening of third countries, in particular Actions 5, 6, 13 and 14; stresses the importance of identifying other BEPS standards to be included as listing criteria"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 594 in favour, 37 against, 56 abstained. Result derived from the totals."
@@ -2796,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0052/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0052_EN.html"
+  }
 }

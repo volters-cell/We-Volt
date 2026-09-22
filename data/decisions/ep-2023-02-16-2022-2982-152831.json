@@ -16,11 +16,6 @@
   },
   "document": "B9-0101/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to assess the possibility of drawing up rules for establishing a joint purchase mechanism for fertilisers at EU level",
-    "Calls on the Commission to build strategic alliances with reliable partners to facilitate the sourcing of fertilisers in the medium term",
-    "Calls on the Commission to carry out a review of all disused fertiliser production capabilities in the EU and to determine where further production capacity may be possible"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 265 in favour, 190 against, 21 abstained. Result derived from the totals."
@@ -1954,9 +1949,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0101/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0101_EN.html"
-  }
+  "countries": {}
 }

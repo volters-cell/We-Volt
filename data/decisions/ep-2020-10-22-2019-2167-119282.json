@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes EU-NATO cooperation aiming to promote peace and stability in the Euro-Atlantic area, where one of the main focus points is to promote the Women Peace and Security Agenda",
+    "Underlines the need to ensure that automated decision-making methods, including AI algorithms in the EU’s foreign and security policy, are free of profiling biases, especially any bias based on gender",
+    "Stresses that further analysis needs to be carried out on the power dynamics inherent in EU policies and practice and in the current programming cycle in order to analyse and address their gender implications"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 382 in favour, 266 against, 38 abstained. Result derived from the totals."
@@ -2784,5 +2788,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0145/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0145_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that the recommendation of the special committee shall be taken into consideration by the competent standing committees in their work"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 548 in favour, 83 against, 56 abstained. Result derived from the totals."
@@ -2791,5 +2793,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0190/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0190_EN.html"
+  }
 }

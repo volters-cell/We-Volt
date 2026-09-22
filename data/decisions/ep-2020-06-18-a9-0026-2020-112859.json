@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0026/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to analyse the framework of functioning institutional protection schemes in the context of EDIS",
+    "Urges the Council to resume negotiations on EDIS as soon as possible, while ensuring a coherent framework with the DGSD in order to deliver on the objective of enhancing financial stability",
+    "Recalls that the Banking Union is open to all Members States that wish to join"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 135 in favour, 531 against, 21 abstained. Result derived from the totals."
@@ -2796,5 +2800,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0026/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0026_EN.html"
+  }
 }

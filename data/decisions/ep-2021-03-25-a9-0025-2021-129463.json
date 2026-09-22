@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0025/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to improve access to finance for SMEs",
+    "Calls on the Commission to continue its work and thoroughly examine the causes behind the lack of SME participation",
+    "Calls on the Commission and the Member States to increase efforts in raising awareness of the directive’s tools and benefits, in particular among SMEs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 470 in favour, 96 against, 121 abstained. Result derived from the totals."
@@ -2796,5 +2800,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0025/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0025_EN.html"
+  }
 }

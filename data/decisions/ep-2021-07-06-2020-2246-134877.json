@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to consider revising its new Anti-Fraud Strategy to fully reflect the operationalisation of the EPPO and its role in fighting fraud",
+    "Regrets the fact that the Commission had to send reasoned opinions to Ireland and Romania on 3 December 2020 for failing to transpose the PIF Directive into national law",
+    "Reiterates its call on the Commission to set up an internal corruption evaluation mechanism for the EU institutions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 534 in favour, 34 against, 124 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0209/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0209_EN.html"
+  }
 }

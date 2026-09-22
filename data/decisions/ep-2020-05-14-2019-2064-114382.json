@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EEAS to implement gender budgeting in all public expenditure",
+    "Notes also that, for the second consecutive year, the Court did not report any specific issues for the EEAS",
+    "Notes that a contribution of EUR 58,5 million was also received in 2018 from the European Development Fund and the trust funds compared to EUR 55 million in 2017"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 581 in favour, 91 against, 21 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0043/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0043_EN.html"
+  }
 }

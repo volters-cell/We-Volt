@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0230/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to launch urgent initiatives to end forced labour and trafficking in the fishing industry",
+    "Urges the Commission to address the aspects and demands set out in this resolution in its next report on the implementation of the CFP",
+    "Calls on the Commission to launch initiatives to acknowledge the work of women in fisheries and to secure equal payment between genders"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 650 in favour, 17 against, 20 abstained. Result derived from the totals."
@@ -2796,5 +2800,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0230/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0230_EN.html"
+  }
 }

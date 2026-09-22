@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that any recommendation of the special committee shall be presented to and, if necessary, followed up by Parliament’s competent standing committees"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 206 in favour, 470 against, 9 abstained. Result derived from the totals."
@@ -2783,5 +2785,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0189/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0189_EN.html"
+  }
 }

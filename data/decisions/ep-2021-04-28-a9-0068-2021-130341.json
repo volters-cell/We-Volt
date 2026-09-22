@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0068/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Office to continue to increase cooperation and exchanges of good practices with other Union agencies with a view to improving efficiency (human resources, building management, IT services and security)",
+    "Notes that the Office adopted a policy on protecting the dignity of the person and preventing harassment in 2019",
+    "Notes the Office’s reply that 81 % of posts were filled in 2019 (representing an increase of 7 % as compared with 2018) and that turnover decreased from 10 % in 2018 to 7 % in 2019"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 228 in favour, 423 against, 43 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0068/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0068_EN.html"
+  }
 }

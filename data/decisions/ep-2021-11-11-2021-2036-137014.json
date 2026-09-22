@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to come forward with proposals on the basis of the annex to this resolution",
+    "Deplores the fact that journalists have paid with their own lives for simply doing their jobs and being the guardians of our democracies",
+    "Welcomes the setting up of ERGA and encourages cooperation within the internal market among audiovisual regulatory bodies, as well as with other regulatory bodies of relevance for online news activities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 438 in favour, 103 against, 6 abstained. Result derived from the totals."
@@ -2231,5 +2235,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0292/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0292_EN.html"
+  }
 }

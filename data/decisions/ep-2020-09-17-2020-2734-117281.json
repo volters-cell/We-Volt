@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the draft regulation and submit a new one to the committee",
+    "Considers that free trade rules should never lead to a lowering of the Union’s protective standards",
+    "Notes that under the draft regulation, the MRL for haloxyfop-P would increase from 0,01 to 0,05 mg/kg for linseeds"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 372 in favour, 275 against, 39 abstained. Result derived from the totals."
@@ -2784,5 +2788,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0245/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0245_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges that the data governance framework should promote the principle of data for the public good, while always protecting the rights of EU citizens",
+    "Calls on the Commission to evaluate the impact of the prerequisite of requiring open access to publicly funded research data on research institutions",
+    "Urges the Commission to present a data act to encourage and enable a greater and fair B2B, B2G, government-to-business (G2B) and government-to-government (G2G) flow of data in all sectors"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 8 against, 78 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0027/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0027_EN.html"
+  }
 }

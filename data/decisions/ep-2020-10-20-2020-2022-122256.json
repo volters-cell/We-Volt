@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that illegal content should be removed where it is hosted, and that mere conduit intermediaries should not be required to block access to content",
+    "Stresses the need to give citizens more control over how their personal data is managed and protected online, while also placing more responsibility on businesses in their data protection practices",
+    "Considers that the transparency reports drawn up by platforms and national competent authorities should be made publicly available and analysed for structural trends in removal, detection and blocking at EU level"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 566 in favour, 45 against, 80 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0172/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0172_EN.html"
+  }
 }

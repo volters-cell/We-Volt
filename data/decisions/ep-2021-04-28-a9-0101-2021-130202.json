@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0101/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the completion of the previous Court's observation concerning the publication of vacancy notices not only on the Agency's website and social media, but also on the website of the European Personnel Selection Office",
+    "Stresses the important role of the Agency in assisting competent authorities of the Member States in the prosecution of cross-border serious and organised crime",
+    "Stresses the important role of the European Judicial Cooperation Unit (‘Eurojust’ or ‘the Agency’) in assisting competent authorities of the Member States in the prosecution of serious cross-border and organised crime"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 228 in favour, 421 against, 45 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0101/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0101_EN.html"
+  }
 }

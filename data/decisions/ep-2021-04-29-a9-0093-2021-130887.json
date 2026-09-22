@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0093/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Authority to draw inspiration from the European Central Bank’s initiatives that propose internal programmes for the promotion of women and for greater diversity among its staff",
+    "Welcomes the fact that the Authority publishes CVs and declarations of interest of its senior management",
+    "Welcomes the further steps taken to enhance the transparency of the Authority’s activities by reporting the meetings that the Authority’s staff has with external stakeholders and their availability on the Authority’s website"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 65 against, 24 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0093/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0093_EN.html"
+  }
 }

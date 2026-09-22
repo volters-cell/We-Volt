@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0253/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests for a scientific opinion referred to in paragraph 1 shall clearly explain the scientific issue to be addressed and the Union interest and be accompanied by sufficient background information regarding that issue"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 588 in favour, 99 against, 6 abstained. Result derived from the totals."
@@ -2817,5 +2819,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0253/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0253_EN.html"
+  }
 }

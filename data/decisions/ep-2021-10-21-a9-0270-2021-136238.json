@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0270/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines the importance of acting responsibly and transparently in the implementation of the Union budget",
+    "Notes the Court’s conclusion that not all relevant authorities have been included in Regulation (EU) No 1052/2013[24] (for example, customs authorities)",
+    "Recalls the role of Parliament within the discharge procedure, as governed by the TFEU, Regulation (EU, Euratom) 2018/1046 and Parliament’s Rules of Procedure"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 558 in favour, 82 against, 46 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0270/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0270_EN.html"
+  }
 }

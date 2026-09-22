@@ -16,11 +16,6 @@
   },
   "document": "A9-0077/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on Member States to adapt national procedures to allow for rapid deployments, while acknowledging Member States’ own strategic culture, capabilities and competences in security and defence",
-    "Urges the VP/HR to regularly inform Parliament as required in Article 36 TEU and to ensure that the views of Parliament are duly taken into account in the VP/HR’s proposals",
-    "Calls on the Member States participating in the EU RDC to agree to act on behalf of the European Union as mandated by the Council under Article 44 TEU:"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 444 in favour, 96 against, 86 abstained. Result derived from the totals."
@@ -2554,9 +2549,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0077/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0077_EN.html"
-  }
+  "countries": {}
 }

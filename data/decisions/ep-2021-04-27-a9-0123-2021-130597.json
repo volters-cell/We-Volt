@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0123/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes clarification that registrants are not released from the obligation to ensure the observance of the same ethical standards when they outsource part of their activities to others",
+    "Welcomes the timely and regular review of the implementation measures taken pursuant to Article 5 of the Agreement, with a view to making recommendations for the improvement and reinforcement of those measures",
+    "Welcomes clarifications concerning the activities covered and not covered, including the exclusion of spontaneous encounters and coverage of intermediaries of third countries which do not enjoy diplomatic status"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 645 in favour, 5 against, 49 abstained. Result derived from the totals."
@@ -2841,5 +2845,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0123/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0123_EN.html"
+  }
 }

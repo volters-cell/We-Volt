@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to assess the AI technology available on the market and the level of use by police and judicial authorities on a country-by-country basis",
+    "Emphasises the importance of AI being used with due respect for the principles of the rule of law and the independence of the judiciary in the decision-making process",
+    "Underlines that the sovereign discretion of judges and case-by-case decision-making have to be upheld in order to avoid the standardisation of decisions based on purely statistical calculations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 377 in favour, 248 against, 62 abstained. Result derived from the totals."
@@ -2791,5 +2795,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0232/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0232_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0145/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates its request to the Bureau to establish full flexibility of presence for Members during the Green Weeks to facilitate their working arrangements",
+    "Notes that remote voting systems have been put into place to safeguard continuity of Parliament's work during the pandemic; asks for these voting systems to be unified",
+    "Recalls that adequate resources need to be dedicated for the financing of cultural and artistic activities within and outside Parliament’s premises, so as to underline its support to the cultural and creative sector"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 582 in favour, 91 against, 18 abstained. Result derived from the totals."
@@ -2809,5 +2813,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0145/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0145_EN.html"
+  }
 }

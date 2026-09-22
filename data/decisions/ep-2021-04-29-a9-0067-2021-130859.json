@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0067/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the new telework decision allows staff to work at home, allowing the EDPS to make more use of shared offices and make savings on related expenditure",
+    "Notes with satisfaction that in its annual report for 2019, the Court observed no serious weaknesses in respect of the audited topics related to the EDPS’ human resources and procurement activities",
+    "Considers the EDPS equal opportunities clause to be an an excellent signal for the inclusion of those with disabilities and for ensuring equal opportunities as well as for strengthening work place diversity"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 627 in favour, 30 against, 34 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0067/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0067_EN.html"
+  }
 }

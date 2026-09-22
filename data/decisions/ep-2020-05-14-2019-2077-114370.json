@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the significant efforts made by the Agency to create a single European drone area",
+    "Notes that 62% of the Agency’s income consist of fees; takes note of the Agency’s view that the fact that applicants pay fees does not necessarily imply a conflict of interest",
+    "Notes with concern that an uneven gender balance is reported for 2018 with regard to the senior managers (4 men and 1 woman) and the management board members (26 men and 3 women)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 612 in favour, 54 against, 27 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0074/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0074_EN.html"
+  }
 }

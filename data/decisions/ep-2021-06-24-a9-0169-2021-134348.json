@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0169/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to work towards an EU-wide and global ban on so-called conversion therapy, as it is a harmful practice that violates the fundamental rights of LGBTIQ women and girls",
+    "Notes that women’s economic and social empowerment, including their access to education, health and employment, is crucial for sustainable development and growth",
+    "Stresses that it is essential to ensure that development cooperation policy involves civil society organisations which are directly involved in the defence of SRHR in developing countries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 378 in favour, 255 against, 42 abstained. Result derived from the totals."
@@ -2748,5 +2752,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0169/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0169_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0371/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the United States’ 2016 Global Magnitsky Act and the leading role this Act has played in inspiring other international actors, including the EU, in its efforts to safeguard human rights",
+    "Underlines the importance of EU candidate countries and potential candidate countries aligning with the EU GHRSR, in line with their broader alignment with the EU’s CFSP"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 584 in favour, 73 against, 33 abstained. Result derived from the totals."
@@ -2808,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0371/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0371_EN.html"
+  }
 }

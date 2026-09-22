@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to put a greater emphasis on the importance of green infrastructure in the upcoming 2030 Biodiversity Strategy",
+    "Calls on the Commission to put forward measures under the European Green Deal to specifically address the role of cities and to promote investment in green infrastructure",
+    "Stresses the importance of effectively mainstreaming climate and environmental perspectives into local, regional, national and global urban policymaking"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 593 in favour, 80 against, 13 abstained. Result derived from the totals."
@@ -2784,5 +2788,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0243/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0243_EN.html"
+  }
 }

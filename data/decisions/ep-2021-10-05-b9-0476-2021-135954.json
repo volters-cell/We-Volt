@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0476/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to adhere to the science-based approach, as outlined by the experts of the Joint Research Centre of the Commission[4]",
+    "Calls on the Commission to submit a new delegated act that includes nuclear and gas activities and which takes account of the position of Parliament",
+    "Calls on the Commission to present all the activities covered by Regulation (EU) 2020/852 in a single delegated act, in order to allow full and meaningful democratic scrutiny"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 162 in favour, 488 against, 34 abstained. Result derived from the totals."
@@ -2784,5 +2788,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0476/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0476_EN.html"
+  }
 }

@@ -16,9 +16,6 @@
   },
   "document": "B9-0327/2022",
   "summary": "",
-  "whatItMeans": [
-    "Considers that new antimicrobials developed for human use should not be subject to that derogation"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 269 in favour, 280 against, 46 abstained. Result derived from the totals."
@@ -2434,9 +2431,5 @@
     }
   ],
   "countries": {},
-  "topics": [],
-  "whatItMeansFrom": {
-    "reference": "B9-0327/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0327_EN.html"
-  }
+  "topics": []
 }

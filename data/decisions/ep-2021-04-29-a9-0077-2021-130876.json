@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0077/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the efforts made by the Centre to create an environment-friendly working frame",
+    "Regrets that the Management Board has did not manage in 2019 to decide on a language arrangement for the Agency",
+    "Regrets that the Management Board has still not managed in 2019 to decide on a language arrangement for the Agency"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 624 in favour, 58 against, 9 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0077/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0077_EN.html"
+  }
 }

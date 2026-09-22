@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission include Parliament’s suggestions in the final version of the guidelines",
+    "Requests the Commission to include the Parliament’s suggestions into the final version of the guidelines",
+    "Recalls that under the Regulation, it is essential to properly safeguard the legitimate interest of final recipients and beneficiaries"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 529 in favour, 150 against, 14 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0226/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0226_EN.html"
+  }
 }

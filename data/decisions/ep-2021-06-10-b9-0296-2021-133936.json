@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0296/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present possible conversion programmes for a faster phasing-out of cage farming, including an assessment of the follow-up costs",
+    "Calls on the Member States to assist farmers and stockpeople by providing advice and training, if needed, in order to ease the transition to cage-free systems",
+    "Calls on the Commission to re-evaluate trade agreements with third countries in order to ensure that they meet the same animal welfare and product quality standards"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 558 in favour, 37 against, 85 abstained. Result derived from the totals."
@@ -2765,5 +2769,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0296/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0296_EN.html"
+  }
 }

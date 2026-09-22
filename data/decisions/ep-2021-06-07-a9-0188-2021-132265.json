@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0188/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes that the co-ordinated package of personalised services was drawn up by Belgium in consultation with workers’ representatives and the social partners as well as an employment centre specialized in the aviation sector",
+    "Notes that all the procedural requirements were met",
+    "Reiterates that assistance from the EGF must not replace actions which are the responsibility of companies, by virtue of national law or collective agreements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 660 in favour, 29 against, 7 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0188/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0188_EN.html"
+  }
 }

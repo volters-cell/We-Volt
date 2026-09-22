@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets the lack of information and details regarding the ‘Action Plan for Gender Balance at EMSA’",
+    "Welcomes the fact that the Agency works together with the European Fisheries Control Agency and the European Border and Coast Guard Agency",
+    "Welcomes the finding of the Court of Auditors that the transactions underlying the accounts of the European Maritime Safety Agency ('the Agency') for the 2018 financial year are legal and regular in all material respects"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 83 against, 5 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0066/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0066_EN.html"
+  }
 }

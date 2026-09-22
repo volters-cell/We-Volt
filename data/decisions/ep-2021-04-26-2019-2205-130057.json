@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to organise a European Year of Road Safety within the coming years, in preparation for 2030 as the intermediate target date for the achievement of Vision Zero"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 654 in favour, 30 against, 9 abstained. Result derived from the totals."
@@ -2815,5 +2817,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0028/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0028_EN.html"
+  }
 }

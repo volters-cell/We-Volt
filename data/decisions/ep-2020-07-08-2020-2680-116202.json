@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to provide psychological support for persons with intellectual disabilities to mitigate the impact of confinement measures",
+    "Calls on the Commission to put forward a comprehensive, ambitious and long-term post-2020 European Disability Strategy, including lessons learned from the COVID-19 crisis",
+    "Urges the Commission and the Member States to consult and involve persons with disabilities and their representative organisations from the outset when adopting measures responding to a future crisis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 682 in favour, 3 against, 10 abstained. Result derived from the totals."
@@ -2823,5 +2827,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0204/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0204_EN.html"
+  }
 }

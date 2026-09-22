@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the authorities to step up their efforts to eliminate child labour throughout the informal sector and to bolster the prosecution of child abuse",
+    "Calls on Albania to ensure that minority groups have equal opportunities and adequate representation in political life, public administration and the judiciary",
+    "Urges the Albanian authorities to intensify their efforts to strengthen political dialogue and the functioning of the country’s democratic institutions, while improving the climate for media pluralism and civil society"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 581 in favour, 61 against, 45 abstained. Result derived from the totals."
@@ -2791,5 +2795,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0041/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0041_EN.html"
+  }
 }

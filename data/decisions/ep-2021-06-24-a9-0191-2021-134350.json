@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0191/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to consider taking the following action on impact assessments:",
+    "Calls on the Commission to take this resolution into account in the drafting of its announced communication on better regulation",
+    "Urges the Commission to make even greater use of recasting and codification procedures in order to streamline secondary legislation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 620 in favour, 20 against, 51 abstained. Result derived from the totals."
@@ -2809,5 +2813,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0191/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0191_EN.html"
+  }
 }

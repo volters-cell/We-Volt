@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0017/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls the need to set up a dedicated and common European civil search and rescue operation to end the loss of life at sea",
+    "Emphasises the unique perspective and needs of Small Island Developing States (SIDS) as regards climate adaptation and mitigation",
+    "Considers that a dialogue between the EU, the AU and the African states is needed on the issue of migration, which is a long-term priority issue in EU-Africa relations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 460 in favour, 64 against, 163 abstained. Result derived from the totals."
@@ -2793,5 +2797,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0017/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0017_EN.html"
+  }
 }

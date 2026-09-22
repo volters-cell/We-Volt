@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0207/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to consider a proposal on a European framework for cross-border tax investigations and other cross-border financial crimes",
+    "Calls on the Commission to propose a more harmonised set of effective, proportionate and dissuasive sanctions at EU level for failure to comply with AML/CTF regulations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 534 in favour, 25 against, 122 abstained. Result derived from the totals."
@@ -2772,5 +2775,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0207/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0207_EN.html"
+  }
 }

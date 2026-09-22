@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to address the phenomenon of young women in particular from Christian minorities being forced to marry older men from outside their religion in certain parts of the world",
+    "Urges governments to pursue development and environmental policies that respect economic, social and cultural rights, and are inclusive of indigenous people and local populations, in line with the UN SDGs",
+    "Welcomes the fact that efforts to advance the rights of women and girls have gained further prominence worldwide; notes, however, that no country in the world has achieved gender equality yet"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 459 in favour, 62 against, 163 abstained. Result derived from the totals."
@@ -2776,5 +2780,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0259/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0259_EN.html"
+  }
 }

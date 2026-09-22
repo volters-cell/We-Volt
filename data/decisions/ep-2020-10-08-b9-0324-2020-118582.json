@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0324/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges to find non-custodial alternatives for migrants and refugees and rejects in this sense any inhuman or degrading treatment of migrants",
+    "Rejects any defamation against migrants; believes that treating migratory flows from a repressive or criminalizing approach favours xenophobia, hatred and violence",
+    "Stresses further that development aid must not be made conditional on cooperation in migration matters such as border management or readmission agreements"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 87 in favour, 581 against, 25 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Ethiopia"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0324/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0324_EN.html"
+  }
 }

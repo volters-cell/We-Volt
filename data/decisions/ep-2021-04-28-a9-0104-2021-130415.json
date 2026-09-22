@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0104/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the Court has stated that it has obtained reasonable assurances that the Centre's annual accounts for 2019 are reliable and that the underlying transactions are legal and regular",
+    "Notes that the budget of the European Centre for Disease Prevention and Control (the ‘Centre’) for 2019 was EUR 59 260 000 and that 98,2 % of this budget derives from the Union budget",
+    "Notes that in 2019 the Centre registered 46 cases in the register of exceptions that were analysed accordingly, and that an action plan has been developed to reduce the number of exceptions"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 232 in favour, 418 against, 44 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0104/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0104_EN.html"
+  }
 }

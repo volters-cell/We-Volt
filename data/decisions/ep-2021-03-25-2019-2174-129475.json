@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on the need for further improvements in the transparency and visibility of EU funding, ensuring efficient control, audit and follow up",
+    "Urges the Public Prosecutor’s Office to process serious cases, and to pro-actively follow up on major cases referred by anti-corruption and audit agencies as well by whistleblowers",
+    "Calls on the authorities to take necessary action to preserve Ohrid’s natural and cultural heritage by ensuring full implementation of the UNESCO recommendation on the Ohrid region"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 558 in favour, 70 against, 59 abstained. Result derived from the totals."
@@ -2791,5 +2795,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0040/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0040_EN.html"
+  }
 }

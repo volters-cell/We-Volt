@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on China, furthermore, to support the existing multilateral framework protecting GIs by becoming a member of the WIPO Lisbon Agreement and the Geneva Act, in force since 26 February 2020",
+    "Urges both parties to this agreement to strengthen their cooperation and coordination with regard to the protection and use of GIs at regional and/or global levels through the corresponding organisations and fora",
+    "Notes that the EU has a large trade deficit with China, but recalls that in the area of agri-food products the EU has a trade surplus"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 13 against, 39 abstained. Result derived from the totals."
@@ -2783,5 +2787,9 @@
   "countries": {},
   "topics": [
     "China"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0202/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0202_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0424/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to submit a new delegated act in line with the criteria and the recommendations of the WHO to reserve highest priority critically important antimicrobials for human use only",
+    "Considers that the Commission delegated regulation:",
+    "Considers that the Commission delegated regulation is therefore not sufficiently protective of human health"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 204 in favour, 450 against, 32 abstained. Result derived from the totals."
@@ -2790,5 +2794,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0424/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0424_EN.html"
+  }
 }

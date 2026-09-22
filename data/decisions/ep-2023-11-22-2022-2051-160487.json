@@ -16,11 +16,6 @@
   },
   "document": "A9-0337/2023",
   "summary": "",
-  "whatItMeans": [
-    "Demands the strengthening of the Union’s capacity to act by considerably increasing the number of areas where actions are decided by qualified majority voting (QMV) and through the ordinary legislative procedure (OLP)",
-    "Urges that the framework of the ECB’s accountability to Parliament be improved to reinforce the role of Parliament as a scrutiny body; insists on formalising obligatory Monetary Dialogue with Parliament",
-    "Insists that the four freedoms of the internal market must be applied equally by all Member States and the institutions of the Union"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 291 in favour, 274 against, 44 abstained. Result derived from the totals."
@@ -2486,9 +2481,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0337/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0337_EN.html"
-  }
+  "countries": {}
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to provide clear information for artists on mobility issues related to EU-UK relations",
+    "Urges the Commission to effectively implement gender equality, inclusion and integration initiatives in the cultural and audiovisual fields through the Creative Europe Programme and to monitor the results thereof",
+    "Welcomes the initiatives of some Member States to encourage gender equality in the selection process for higher positions in public cultural institutions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 543 in favour, 50 against, 107 abstained. Result derived from the totals."
@@ -2843,5 +2847,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0283/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0283_EN.html"
+  }
 }

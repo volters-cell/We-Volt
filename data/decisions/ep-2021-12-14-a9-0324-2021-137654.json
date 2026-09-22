@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0324/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the states outside of the NPT framework in possession of nuclear weapons to refrain from the proliferation of any military-related nuclear technology and to become party to the NPT",
+    "Calls on the EU to increase its investments in AI capabilities matched to Member States’ operating concepts; underlines that the growing significance of AI also requires enhanced cooperation with like-minded partners",
+    "Underlines the widened mandate for transparency reporting, coordination and enforcement and the enlarged scope of obligations in the Dual-Use Regulation"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 192 in favour, 490 against, 14 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0324/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0324_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to follow up on allegations of unresolved conflicts of interest in other Member States",
+    "Calls on the Czech authorities to inform the EU institutions of the outcome of the reopened ‘Stork Nest’ investigation as soon as possible",
+    "Calls on the Commission to take concerns expressed in this resolution into account when monitoring the situation in the context of the rule of law mechanism"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 89 against, 49 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0192/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0192_EN.html"
+  }
 }

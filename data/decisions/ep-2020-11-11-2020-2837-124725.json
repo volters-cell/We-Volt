@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on the Commission not to authorise any sub-combinations of stacked GM events unless they have been thoroughly evaluated by EFSA on the basis of complete data submitted by the applicant",
+    "Calls on EFSA to further develop and systematically use methods that permit the identification of unintended effects of stacked GM events, such as in relation to the adjuvant properties of Bt toxins"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 526 in favour, 142 against, 18 abstained. Result derived from the totals."
@@ -2787,5 +2791,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0347/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0347_EN.html"
+  }
 }

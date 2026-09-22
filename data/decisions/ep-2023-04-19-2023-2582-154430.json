@@ -16,9 +16,6 @@
   },
   "document": "B9-0201/2023",
   "summary": "",
-  "whatItMeans": [
-    "Recalls that the EU Treaties and the Charter enshrine the EU’s mandate and responsibility to combat discrimination and to promote equal treatment for everyone"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 152 in favour, 482 against, 4 abstained. Result derived from the totals."
@@ -2596,9 +2593,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0201/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0201_EN.html"
-  }
+  "countries": {}
 }

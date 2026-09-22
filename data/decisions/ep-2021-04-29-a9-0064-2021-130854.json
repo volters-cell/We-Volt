@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0064/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the change in the structure of this year’s management report of the CJEU, which presents the information in a clearer and more comprehensible manner",
+    "Welcomes the change in the structure of this year’s Management Report of the Court of Justice, which presents the information in a clearer and more comprehensible manner"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 78 against, 9 abstained. Result derived from the totals."
@@ -2812,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0064/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0064_EN.html"
+  }
 }

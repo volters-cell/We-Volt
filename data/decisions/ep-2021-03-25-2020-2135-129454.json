@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to intensify their promotional activities concerning the new Europass platform among schools, teachers, universities, students, education and training institutions and employers",
+    "Stresses the need to align the revised Digital Education Action Plan with the relevant principles of the EPSR, the UN Sustainable Development Goals and the European Strategy for Gender Equality"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 639 in favour, 24 against, 25 abstained. Result derived from the totals."
@@ -2795,5 +2798,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0042/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0042_EN.html"
+  }
 }

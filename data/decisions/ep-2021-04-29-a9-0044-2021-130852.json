@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0044/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the right of Members and assistants to use free and open source office software be ensured",
+    "Urges that an internal escape strategy be implemented for people with reduced mobility or disabilities in case of emergency",
+    "Welcomes the significant increase of use of bicycles in Brussels in 2019 compared to 2018"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 564 in favour, 90 against, 37 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0044/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0044_EN.html"
+  }
 }

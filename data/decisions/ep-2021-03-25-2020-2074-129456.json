@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that the transition towards climate neutrality must be just and inclusive, with a particular focus on citizens living in rural and remote areas",
+    "Calls on national and regional programming authorities to maximise the transformational impact of climate and environmental protection during the ongoing preparation of national and regional programmes",
+    "Insists on creating a balanced, sustainable and inclusive development of the Union through Cohesion Policy that takes into consideration the specificities and needs of all Member States, their regions and their citizens"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 572 in favour, 79 against, 37 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0034/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0034_EN.html"
+  }
 }

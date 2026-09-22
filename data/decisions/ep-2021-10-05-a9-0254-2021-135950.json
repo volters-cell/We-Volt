@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0254/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to encourage moves to eliminate the ingrained preconceptions still underlying the gender care gap",
+    "Calls on the Member States to explore virtual options for helping victims of violence, including mental health and counselling options, paying attention to existing inequalities in access to information technology services"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 510 in favour, 31 against, 141 abstained. Result derived from the totals."
@@ -2776,5 +2779,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0254/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0254_EN.html"
+  }
 }

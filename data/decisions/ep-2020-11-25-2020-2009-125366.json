@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to set up an EU hotline as a rapid-response mechanism for journalists requesting protection and to ensure that adequate attention is paid to their situation",
+    "Deplores the fact that in some Member States media regulatory bodies have come under government influence and operate in a manner biased against media outlets that are critical of the government",
+    "Reiterates, in this context, its call for an ambitious EU media action plan to support the development of a vibrant and pluralistic media landscape"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 553 in favour, 54 against, 89 abstained. Result derived from the totals."
@@ -2827,5 +2831,9 @@
   "countries": {},
   "topics": [
     "Disinformation"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0205/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0205_EN.html"
+  }
 }

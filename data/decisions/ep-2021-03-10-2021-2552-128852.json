@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present a proposal for non-renewal of dimoxystrobin in the next meeting of the Standing Committee on Plants, Animals, Food and Feed",
+    "Considers that Implementing Regulation (EU) 2021/52 does not respect the precautionary principle",
+    "Considers that Implementing Regulation (EU) 2021/52 exceeds the implementing powers provided for in Regulation (EC) No 1107/2009"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 472 in favour, 214 against, 9 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0162/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0162_EN.html"
+  }
 }

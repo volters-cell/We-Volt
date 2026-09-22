@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0117/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests the Council together with the European Parliament to:",
+    "Requests the Commission make sure that the AMPR is fully reliable and not based on projections",
+    "Calls on the Commission to continue promoting a better gender balance and gender budgeting approach in the allocated funds"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 362 in favour, 164 against, 156 abstained. Result derived from the totals."
@@ -2776,5 +2780,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0117/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0117_EN.html"
+  }
 }

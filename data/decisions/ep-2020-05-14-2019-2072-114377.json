@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that translation for Union bodies, offices and agencies is provided by a public Union agency; notes the strength of the Centre as a long standing Union agency endowed with 200 experienced staff",
+    "Welcomes the progress made on the external evaluation of the Centre’s business model, which was carried out in 2017; calls on the Centre to report to the discharge authority on the outcome of the final evaluation",
+    "Notes with satisfaction that a good gender balance was achieved in 2018 with respect to the senior management positions (three men and two women) and within the management board (32 men and 27 women)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 610 in favour, 75 against, 7 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0035/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0035_EN.html"
+  }
 }

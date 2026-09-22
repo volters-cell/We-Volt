@@ -16,11 +16,6 @@
   },
   "document": "A9-0082/2023",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes the Council general approach on the proposal for a Regulation of the European Parliament and of the Council establishing a framework of measures for strengthening Europe's semiconductor ecosystem (the ‘Chips Act ’)",
-    "Welcomes the fact that ECSEL has assessed the internal control system during the reporting year and has concluded that it is effective and that the components and principles are present and functioning as intended",
-    "Notes that procurement and contracts are managed in accordance with the provisions of the KDT Joint Undertaking’s financial regulation and coordinated within the KDT Joint Undertaking’s Administration & Finance team"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 563 in favour, 44 against, 14 abstained. Result derived from the totals."
@@ -2537,9 +2532,5 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0082/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0082_EN.html"
-  }
+  ]
 }

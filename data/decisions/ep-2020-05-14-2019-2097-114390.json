@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes with concern that according to the reported figures the gender balance within the Management Board for 2018 is highly uneven with 40 male members and 6 female members",
+    "Stresses the importance of providing gender-based data in order to be able to analyse the evolution of the gender balance within the staff of the Agency and in its governing bodies",
+    "Notes that, in relation to e-procurement procedures, the Agency has introduced e-invoicing and e-tendering for certain procedures, but notes that the introduction of e-submission remains ongoing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 82 against, 7 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0053/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0053_EN.html"
+  }
 }

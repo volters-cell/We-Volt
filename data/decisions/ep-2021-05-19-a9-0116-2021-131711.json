@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0116/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports measures to coordinate efforts of different stakeholders to create a common approach among policymakers, industry, and investors",
+    "Welcomes the efforts made by European steel producers to switch from fossil fuels to green hydrogen as a way of producing fossil-free steel",
+    "Welcomes the Commission’s intention to revise the State aid framework, including the State aid guidelines for energy and environmental protection, envisaged for 2021"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 411 in favour, 135 against, 149 abstained. Result derived from the totals."
@@ -2828,5 +2832,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0116/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0116_EN.html"
+  }
 }

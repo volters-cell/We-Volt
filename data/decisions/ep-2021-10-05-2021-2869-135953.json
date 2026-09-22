@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the approvals for substances if proof or reasonable doubt exists that they will not meet the safety criteria laid down in Regulation (EC) No 1107/2009",
+    "Considers that Commission Implementing Regulation (EU) 2021/1449 exceeds the implementing powers provided for in Regulation (EC) No 1107/2009",
+    "Considers that Implementing Regulation (EU) 2021/1449 is not consistent with Union law in that it does not respect the precautionary principle"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 407 in favour, 256 against, 24 abstained. Result derived from the totals."
@@ -2789,5 +2793,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0481/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0481_EN.html"
+  }
 }

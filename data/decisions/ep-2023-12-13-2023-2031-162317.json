@@ -16,11 +16,6 @@
   },
   "document": "A9-0322/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission, the Member States and partner countries to ensure that climate partnerships and sustainable investment facilitation agreements align with the national determined contributions of the partner countries",
-    "Calls on the Commission to ensure that while facilitating investments, there is no race to the bottom in subsidies in partner countries, leading to a lowering of ILO and environmental standards",
-    "Calls on the EU to encourage trading partners to also promote sustainable resource management in their trade and investment relations, through cooperation in international forums and the sharing of best practices"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 357 in favour, 179 against, 97 abstained. Result derived from the totals."
@@ -2582,9 +2577,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0322/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0322_EN.html"
-  }
+  "countries": {}
 }

@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that the rule of law is intrinsically linked to respect for democracy and for fundamental rights and that therefore the three principles must be jointly monitored",
+    "Emphasises that the European Union should fulfil its role of examining its institutions to see whether their functioning is in compliance with the principle of democracy and the rule of law"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 152 against, 21 abstained. Result derived from the totals."
@@ -2816,5 +2819,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0170/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0170_EN.html"
+  }
 }

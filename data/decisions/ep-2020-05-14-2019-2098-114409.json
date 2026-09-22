@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges all JHA agencies to implement a clear anti-harassment policy in order to prevent any such behaviour within their organisations, and to firmly condemn it wherever it occurs",
+    "Calls on all agencies to participate in the interinstitutional agreement on the transparency register for interest representatives under negotiation between the Commission, the Council and Parliament",
+    "Stresses the importance of a staff well-being policy; stresses that agencies should provide for decent, high quality working conditions for all staff"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 603 in favour, 84 against, 6 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0079/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0079_EN.html"
+  }
 }

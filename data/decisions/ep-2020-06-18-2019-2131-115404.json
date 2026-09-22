@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to look into the possibility to fine countries found in breach of State aid rules",
+    "Calls on the Commission to ensure that the provisions of Article 222 of the Single CMO Regulation are activated swiftly in order to address serious market distortions",
+    "Calls on the Commission to re-evaluate on an annual basis whether the requirements for the application of Article 107(3)(b) of the TFEU in the financial sector continue to be fulfilled"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 41 against, 126 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Single market"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0022/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0022_EN.html"
+  }
 }

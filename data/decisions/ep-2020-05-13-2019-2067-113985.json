@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Foundation to focus on disseminating the results of its research to the public, and to reach out to the public via the social media and other media outlets",
+    "Welcomes the results of the job screening exercise carried out in December 2018, which shows a relatively high level of stability year on year",
+    "Welcomes the fact that the Foundation had completed the corrective actions in relation to the Court’s observations from previous years while the introduction of e-submission was still ongoing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 82 against, 5 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0051/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0051_EN.html"
+  }
 }

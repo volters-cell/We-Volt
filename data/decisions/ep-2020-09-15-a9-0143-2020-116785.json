@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0143/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to make use of the new provisions of the anti-dumping regulation concerning environment and climate policies",
+    "Calls on the Commission to support and stimulate industry-driven innovation and initiatives to enhance sustainability in value chains",
+    "Calls on the Commission to make use of the new provisions of the Anti-Dumping Regulation[19] concerning environment and climate policies"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 543 in favour, 47 against, 109 abstained. Result derived from the totals."
@@ -2844,5 +2848,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0143/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0143_EN.html"
+  }
 }

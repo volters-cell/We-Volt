@@ -16,11 +16,6 @@
   },
   "document": "A9-0408/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to explore the possibility for Member States to use any eligible fund or the Just Transition Fund to finance the research and development of SMRs",
-    "Calls on the Commission to carry out an assessment to ensure that the development of SMRs is not hampered by potential shortfalls in the supply chain and to adapt accordingly",
-    "Welcomes international initiatives to develop specific SMR designs; maintains that joint SMR design reviews can accelerate the licensing process without compromising nuclear safety and security"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 173 against, 31 abstained. Result derived from the totals."
@@ -2502,9 +2497,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0408/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0408_EN.html"
-  }
+  "countries": {}
 }

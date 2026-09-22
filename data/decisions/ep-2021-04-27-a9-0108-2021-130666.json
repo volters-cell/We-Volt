@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0108/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that, according to the Court’s report, at the end of 2019, the Horizon 2020 programme implementation rate stood at 71 % with regard to the call procedures for the activities assigned to the Joint Undertaking"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 60 against, 5 abstained. Result derived from the totals."
@@ -2840,5 +2842,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0108/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0108_EN.html"
+  }
 }

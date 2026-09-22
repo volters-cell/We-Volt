@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to use the forthcoming reviews of financial services regulations to foster investor and shareholder engagement through digital tools",
+    "Calls on the Commission to promote the direct involvement of retail savers in financing the economy, considering the possibility of return on investment for retail investors",
+    "Calls on the Commission to work towards the implementation of the Digital Finance Action Plan for better access to financial services offering wider choice and increasing efficiency of operations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 417 in favour, 205 against, 72 abstained. Result derived from the totals."
@@ -2816,5 +2820,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0155/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0155_EN.html"
+  }
 }

@@ -16,9 +16,6 @@
   },
   "document": "A9-0122/2023",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes the Agency’s assessment of its internal control system, that concluded that all internal control principles are present and functioning, with minor deficiencies for which corrective measures have been foreseen"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 610 in favour, 13 against, 14 abstained. Result derived from the totals."
@@ -2599,9 +2596,5 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0122/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0122_EN.html"
-  }
+  ]
 }

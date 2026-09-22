@@ -16,11 +16,6 @@
   },
   "document": "A9-0328/2023",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes the reports from the Commission on Monitoring the application of European Union law 2020, 2021 and 2022 and recognises their importance to ensure that EU law is implemented correctly and accordingly to the EU Treaties",
-    "Stresses that, pursuant to Article 2 of the Treaty on European Union (TEU), rule of law is one of our founding values and shall be respected across Member States",
-    "Underlines that the Conference on the Future of Europe delivered many recommendations on protecting the rule of law, which should be given follow-up by the European Commission, Council and the European Parliament"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 372 in favour, 107 against, 33 abstained. Result derived from the totals."
@@ -2098,9 +2093,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0328/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0328_EN.html"
-  }
+  "countries": {}
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0366/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Considers that the information provided by the Commission in its draft implementing regulation is insufficient for Parliament to be able to exercise its power of scrutiny properly",
+    "Considers that the draft Commission implementing regulation is not consistent with Union law, in that it is not compatible with the aim and content of Directive 98/8/EC or Regulation (EC) No 528/2012"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 458 in favour, 219 against, 19 abstained. Result derived from the totals."
@@ -2829,5 +2832,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0366/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0366_EN.html"
+  }
 }

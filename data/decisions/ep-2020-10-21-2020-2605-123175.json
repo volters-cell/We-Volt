@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission, on the basis of Article 265 of the TFEU, to adopt the required delegated act within two months from the date of adoption of this resolution at the latest"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 376 in favour, 269 against, 43 abstained. Result derived from the totals."
@@ -2792,5 +2794,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0339/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0339_EN.html"
+  }
 }

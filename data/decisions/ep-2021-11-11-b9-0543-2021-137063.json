@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0543/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to support the Member States in guaranteeing universal access to SRHR, including access to safe and legal abortion for all citizens",
+    "Calls on the Commission to adopt guidelines for Member States in order to ensure equal access to SRHR goods and services in line with EU law and the jurisprudence of the ECtHR",
+    "Urges the Polish authorities to repeal the law limiting access to the emergency contraceptive pill, and to finance, develop and promote the full range of contraceptives, including male contraception"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 319 in favour, 214 against, 24 abstained. Result derived from the totals."
@@ -2276,5 +2280,9 @@
   "countries": {},
   "topics": [
     "Poland"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0543/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0543_EN.html"
+  }
 }

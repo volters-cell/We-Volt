@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0269/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to assess the Regional Comprehensive Economic Partnership (RCEP) agreement and China’s role therein",
+    "Believes that the people-to-people dimension is also essential for basing competitiveness on the EU’s values and for effective European economic diplomacy",
+    "Notes that the EU should strengthen its links with the host countries and present them with a credible and sustainable alternative offer for connectivity financing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 601 in favour, 16 against, 72 abstained. Result derived from the totals."
@@ -2801,5 +2805,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0269/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0269_EN.html"
+  }
 }

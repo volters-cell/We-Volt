@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls that according to TFEU the institutions enjoy administrative autonomy, their expenditure is set out in separate parts of the budget, and they are individually responsible for the implementation of their budgets"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 653 in favour, 30 against, 12 abstained. Result derived from the totals."
@@ -2823,5 +2825,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0189/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0189_EN.html"
+  }
 }

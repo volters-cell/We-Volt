@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0294/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to take due account of these proposals when drafting and putting forward its proposal for a regulation amending Regulation (EU, Euratom) No 1141/2014",
+    "Supports the idea of increasing the importance of the own resources of European political parties when calculating the amount financed by the Union",
+    "Considers that the prohibition of cross-party and cross-foundation membership should be clarified and extended"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 428 in favour, 92 against, 49 abstained. Result derived from the totals."
@@ -2321,5 +2325,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0294/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0294_EN.html"
+  }
 }

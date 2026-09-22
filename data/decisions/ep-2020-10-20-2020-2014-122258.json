@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to update the existing liability framework, and in particular Council Directive 85/374/EEC[25] (the Product Liability Directive - ‘PLD’), to adapt it to the digital world",
+    "Requests the Commission to evaluate the need for legal provisions at Union level on contracts to prevent contractual non-liability clauses, including in Business-to-Business and Business-to-Administration relationships",
+    "Considers that the requested proposal will not have financial implications"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 626 in favour, 25 against, 40 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0178/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0178_EN.html"
+  }
 }

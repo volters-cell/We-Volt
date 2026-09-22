@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0196/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns all types of incidents of hate crime and hate speech, both offline and online, that occur in the EU on a daily basis, and recalls that racism and xenophobia are crimes, not opinions",
+    "Recalls the adoption on 26 March 2019 of its resolution on the fundamental rights of people with African descent, and calls urgently for the EU and the Member States to implement it"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 493 in favour, 104 against, 67 abstained. Result derived from the totals."
@@ -2701,5 +2704,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0196/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0196_EN.html"
+  }
 }

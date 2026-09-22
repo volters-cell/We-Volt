@@ -16,11 +16,6 @@
   },
   "document": "A9-0039/2022",
   "summary": "",
-  "whatItMeans": [
-    "Urges greater use of the EU Copernicus observation programme to detect discrepancies between declared and actually cultivated parcels",
-    "Calls on the Commission to increase the weight of the political aspect of its evaluation processes, in particular as regard possible conflicts of interest resulting from revolving doors",
-    "Recalls that the farm structure between Member States varies greatly, which is why in the CAP, Member States have a wide range of voluntary measures available to redistribute payments"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 61 against, 42 abstained. Result derived from the totals."
@@ -2098,9 +2093,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0039/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0039_EN.html"
-  }
+  "countries": {}
 }

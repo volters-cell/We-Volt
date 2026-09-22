@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Foundation to focus on disseminating the results of its research to the public, and to reach out to the public via the social media and other media outlets",
+    "Notes that the Foundation developed its own anti-fraud strategy, on the basis of methodology developed by OLAF, and has implemented it since 2014,",
+    "Notes the Foundation’s existing measures and ongoing efforts to secure transparency, prevention and management of conflicts of interests, and whistleblower protection"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 86 against, 3 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0047/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0047_EN.html"
+  }
 }

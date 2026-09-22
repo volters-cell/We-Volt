@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Council’s decision to make public the negotiating directives of 20 March 2018 on the MIC, and calls on the Council to make public all previous trade and investment agreement negotiating directives",
+    "Underlines that forum shopping will not be possible and that multiple and parallel proceedings will be avoided",
+    "Stresses that third parties such as labour and environmental organisations can contribute to ICS proceedings through amicus curiae briefs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 406 in favour, 184 against, 58 abstained. Result derived from the totals."
@@ -2635,5 +2639,9 @@
   "countries": {},
   "topics": [
     "Vietnam"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0014/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0014_EN.html"
+  }
 }

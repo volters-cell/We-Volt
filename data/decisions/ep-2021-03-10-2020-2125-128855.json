@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges Member States to be more diligent in meeting their obligation to cooperate with the Ombudsman",
+    "Calls on the Ombudsman, in the interests of transparency, to publish the events which she intends to host, stating where each event will take place",
+    "Calls on the Commission to propose a comprehensive, ambitious and long-term European Disability Strategy for the post-2020 period in order to make possible, inter alia, the full and consistent implementation of the UNCRPD"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 576 in favour, 11 against, 108 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0013/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0013_EN.html"
+  }
 }

@@ -16,11 +16,6 @@
   },
   "document": "A9-0024/2022",
   "summary": "",
-  "whatItMeans": [
-    "Requests that the Commission submit by 2022/2023 one or more legislative proposals following the recommendations set out in the Annex hereto",
-    "Welcomes the actions undertaken by the Commission in the area of prevention and resolution of double VAT taxation disputes",
-    "Welcomes the start of operations by the EPPO in June 2021"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 476 in favour, 78 against, 129 abstained. Result derived from the totals."
@@ -2790,9 +2785,5 @@
   "countries": {},
   "topics": [
     "Tax"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0024/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0024_EN.html"
-  }
+  ]
 }

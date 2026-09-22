@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0221/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 132 in favour, 558 against, 4 abstained. Result derived from the totals."
@@ -2821,5 +2823,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0221/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0221_EN.html"
+  }
 }

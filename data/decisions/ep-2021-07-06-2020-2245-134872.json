@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to continue reporting on the state of play and status of the previous recommendations issued by Parliament in its annual resolutions, especially as regards:",
+    "Reiterates the importance of ethics, integrity, transparency, communication and accountability of the EIB Group in all its operations and policies",
+    "Takes note of the rate of impaired loans, which stood at 0.4 % of the total loan portfolio at the end of 2019 (0.3 % at the end of 2018) despite the Bank’s recent move towards higher risk lending operations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 82 against, 68 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0215/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0215_EN.html"
+  }
 }

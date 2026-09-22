@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0127/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to support the use of AI in the area of digitalised cultural heritage",
+    "Calls on the Commission to take more effective steps to protect the personal data of pupils and teachers in the education sphere",
+    "Calls on the Commission to launch an EU-level education plan on digital and AI literacy, in coordination with the Member States, with a particular focus on school students and youth"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 623 in favour, 12 against, 61 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0127/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0127_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Agency had 16 staff at the end of 2018, all being Commission officials, out of 25 authorised by the establishment plan, the same as were authorised in 2017"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 600 in favour, 79 against, 12 abstained. Result derived from the totals."
@@ -2807,5 +2809,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0056/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0056_EN.html"
+  }
 }

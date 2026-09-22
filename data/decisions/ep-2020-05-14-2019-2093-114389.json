@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to disseminate the results of its research to the public and to reach out to the public by means of the social media and other media outlets",
+    "Regrets the lack of gender balance within the Agency’s senior management board members, with 12 out of 17 members being of the same gender",
+    "Welcomes the fact that the Agency carried out a formal analysis in 2018 of the likely impact of the United Kingdom’s decision to withdraw from the European Union on its organisation, operations and accounts"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 84 against, 5 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0052/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0052_EN.html"
+  }
 }

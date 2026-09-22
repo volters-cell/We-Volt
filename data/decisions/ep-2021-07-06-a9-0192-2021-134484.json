@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0192/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all members to work towards the conclusion of a security agreement between Cyprus and NATO",
+    "Supports enhanced coordination between the EU, the UN and NATO in Iraq, inter alia through the EU Advisory Mission (EUAM) in Iraq and NATO’s Mission Iraq (NMI), which both help to stabilise the country"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 578 in favour, 77 against, 27 abstained. Result derived from the totals."
@@ -2776,5 +2779,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0192/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0192_EN.html"
+  }
 }

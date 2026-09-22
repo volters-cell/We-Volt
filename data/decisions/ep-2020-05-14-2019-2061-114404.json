@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of promoting the involvement of regional and local authorities given their role in the implementation of Union policies",
+    "Notes the decision of the third invalidity committee, which unanimously confirms that the internal auditor was invalided out on occupational grounds and was subjected to a process of bullying by the Committee"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 84 against, 5 abstained. Result derived from the totals."
@@ -2815,5 +2818,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0071/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0071_EN.html"
+  }
 }

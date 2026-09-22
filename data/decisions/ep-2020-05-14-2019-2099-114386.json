@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that out of EUR 706 200 000 available for commitment appropriations, 98,4 % was implemented through direct individual commitments (compared to 96,5 % in 2017)",
+    "Notes that in 2018 the balance of the budget outturn amounted to EUR 1 316 734 (compared to EUR 17 236 192 in 2017)",
+    "Notes the progress on the ITER construction regarding the completion of the huge bio-shield encircling the tokamak pit and the instalment of the first components in the tokamak complex"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 619 in favour, 55 against, 17 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0049/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0049_EN.html"
+  }
 }

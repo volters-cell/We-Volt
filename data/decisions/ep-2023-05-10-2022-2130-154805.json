@@ -16,11 +16,6 @@
   },
   "document": "A9-0083/2023",
   "summary": "",
-  "whatItMeans": [
-    "Notes that the implementation rate for the Clean H2 Joint Undertaking’s 2021 commitment and payment budget available for Horizon 2020 projects was 98 % and 87,8 % respectively (compared to 97 % in 2020)",
-    "Notes that on 31 December 2021, the Clean H2 Joint Undertaking had 23 temporary agents, two contract agents and two seconded national experts",
-    "Notes that, in 2021, joint IT sessions were organised together with the other joint undertakings with the main purpose of preparing for the switch to Office 365, SharePoint and OneDrive"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 578 in favour, 30 against, 7 abstained. Result derived from the totals."
@@ -2513,9 +2508,5 @@
   "countries": {},
   "topics": [
     "Energy"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0083/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0083_EN.html"
-  }
+  ]
 }

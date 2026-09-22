@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0147/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges, therefore, all Member States who have not yet ratified the Istanbul Convention to do so urgently",
+    "Calls on the Member States to officially recognise antigypsyism as a specific form of racism against Romani people",
+    "Calls on the Member States to make a concerted effort to raise awareness and inform the public about Roma inclusion"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 521 in favour, 130 against, 35 abstained. Result derived from the totals."
@@ -2789,5 +2793,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0147/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0147_EN.html"
+  }
 }

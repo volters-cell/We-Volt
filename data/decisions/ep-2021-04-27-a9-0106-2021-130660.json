@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0106/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes the increasing importance of the Joint Undertaking’s work in light of emerging technologies enabling autonomous and unmanned aircraft",
+    "Notes that according to the Undertaking’s Annual Activity Report for the year 2019, the Undertaking met all its key policy and operational objectives",
+    "Notes the results of the 2019 Human Resources benchmarking exercise: 59.29 % operational posts, 30 % administrative and 10.71 % of finances and control posts"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 89 against, 5 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0106/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0106_EN.html"
+  }
 }

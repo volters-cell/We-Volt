@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0275/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to base its impact assessment to be prepared for its legislative proposal on:",
+    "Calls on the Commission to present a European Strategy for the Removal of All Asbestos (ESRAA), which includes the following elements:",
+    "Calls on the Commission to assess the financial implications of Parliament’s requests in accordance with paragraphs 6 and 7 and point 3 of Annex I"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 675 in favour, 2 against, 23 abstained. Result derived from the totals."
@@ -2848,5 +2852,9 @@
   "countries": {},
   "topics": [
     "Jobs and workers"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0275/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0275_EN.html"
+  }
 }

@@ -16,9 +16,6 @@
   },
   "document": "A9-0386/2023",
   "summary": "",
-  "whatItMeans": [
-    "Requests for data referred to in paragraph 1 shall:"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 568 in favour, 22 against, 12 abstained. Result derived from the totals."
@@ -2456,9 +2453,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0386/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0386_EN.html"
-  }
+  "countries": {}
 }

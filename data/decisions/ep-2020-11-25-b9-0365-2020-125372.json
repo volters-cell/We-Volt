@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0365/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the draft regulation and submit a new one to the committee without delay",
+    "Considers that the draft Commission regulation fails to respect the principle of proportionality",
+    "Considers that the draft Commission regulation exceeds the implementing powers provided for in the REACH Regulation"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 153 in favour, 499 against, 39 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0365/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0365_EN.html"
+  }
 }

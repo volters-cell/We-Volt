@@ -16,11 +16,6 @@
   },
   "document": "A9-0075/2024",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the CJEU to make available on its website all the files related to a case after the ruling is published while ensuring the non-divulgation of private or sensitive information in order to protect personal data",
-    "Welcomes the fact that the average length of proceedings for cases completed before the General Court has decreased to 16.2 months in 2022 (17.3 months in 2021)",
-    "Welcomes that the CJEU is working on a wide range of IT systems, both internally and via service level agreements, across different areas that will make it more resource efficient"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 550 in favour, 55 against, 6 abstained. Result derived from the totals."
@@ -2497,9 +2492,5 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A9-0075/2024",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0075_EN.html"
-  }
+  ]
 }

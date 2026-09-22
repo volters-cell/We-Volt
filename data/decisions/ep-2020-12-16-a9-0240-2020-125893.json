@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0240/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to commit to developing such standards during the upcoming NFRD review; considers that these standards should not pose an undue burden on SMEs",
+    "Underlines the importance of the new taxonomy regulation and its significance for supply chains; stresses that tackling tax avoidance is a fundamental part of sustainable corporate governance",
+    "Considers that the EU framework should help and assist companies, in particular SMEs, by ensuring that disclosures are clear, balanced, understandable and comparable among companies within a sector"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 409 in favour, 215 against, 70 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0240/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0240_EN.html"
+  }
 }

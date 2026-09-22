@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0096/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to continue to increase cooperation and exchanges of good practices with other Union agencies with a view to improving efficiency (human resources, building management, IT services and security)",
+    "Welcomes the fact that Europol correctly implemented the Court's recommendation regarding the publication of vacancy notices on the website of the European Personnel Selection Office (EPSO)",
+    "Notes that the Agency implemented 79 % of work programme objectives and 75 % of the actions contained in the 2019 work programme"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 637 in favour, 18 against, 36 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0096/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0096_EN.html"
+  }
 }

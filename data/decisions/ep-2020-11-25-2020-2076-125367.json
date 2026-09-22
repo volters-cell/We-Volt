@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to develop a European export and import strategy for renewable and resource- and energy-efficient technologies",
+    "Calls on the Commission to formalise a process through which low-carbon technologies are made available and affordable for developing countries",
+    "Calls on the Commission to develop, together with Member States, potential tax incentives to boost R&D investments, which have decreased heavily due to the COVID‑19 crisis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 486 in favour, 109 against, 102 abstained. Result derived from the totals."
@@ -2828,5 +2832,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0197/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0197_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0401/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States and water providers to systematically use testing for COVID-19 in waste water as an early warning system to support the fight against the pandemic",
+    "Calls on the Commission to revise the quality standards of the Groundwater Directive, improve the homogenisation of standards and reduce the wide range of thresholds within Members States"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 306 in favour, 354 against, 35 abstained. Result derived from the totals."
@@ -2828,5 +2831,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0401/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0401_EN.html"
+  }
 }

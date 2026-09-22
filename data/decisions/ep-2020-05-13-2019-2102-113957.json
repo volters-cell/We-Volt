@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes with appreciation the Court’s finding that the residual error rate is below materiality, amounting to 0,01 % for Horizon 2020",
+    "Notes that out of the maximum of EUR 975 000 000 of Union cash contributions to be allocated to the Joint Undertaking over its lifespan, the Union had contributed a total amount of EUR 264 600 000 by the end of 2018"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 628 in favour, 59 against, 4 abstained. Result derived from the totals."
@@ -2807,5 +2810,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0034/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0034_EN.html"
+  }
 }

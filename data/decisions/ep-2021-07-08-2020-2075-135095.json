@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure that Member States develop credible exit strategies from the crisis-related measures, while not pre-empting future fiscal trajectories",
+    "Requests that the restrictions stipulating unanimity in Council and thus limiting parliamentary codecision powers be removed in all areas of economic and financial policy in the next revision of the Treaties",
+    "Welcomes the adoption of the interinstitutional agreement between the European Parliament, the Council and the Commission on new own resources, including a roadmap towards the introduction of new own resources"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 461 in favour, 94 against, 133 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0212/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0212_EN.html"
+  }
 }

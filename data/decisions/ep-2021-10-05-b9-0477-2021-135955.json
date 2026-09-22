@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0477/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission include the criteria missing in the Commission delegated regulation in its new version",
+    "Calls on the Commission to submit a single new delegated act which takes account of the abovementioned recommendations",
+    "Considers that the Commission delegated regulation fails to respect the principle of technological neutrality, as referred to in Article 19(1), point (a), of Regulation (EU) 2020/852"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 227 in favour, 428 against, 31 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0477/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0477_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0251/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to strengthen the coherence between national transport plans and the TEN-T networks, in order to ensure the proper implementation of the TEN-T regulation",
+    "Points out the importance of enhancing the quality of road infrastructure in the TEN-T throughout the Union"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 174 in favour, 504 against, 13 abstained. Result derived from the totals."
@@ -2812,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0251/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0251_EN.html"
+  }
 }

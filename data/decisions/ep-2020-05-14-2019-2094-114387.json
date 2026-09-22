@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the general public, and to reach out to public via the social media and other media outlets",
+    "Notes that in 2018 the Agency undertook an internal exercise to assess its internal control systems, concluding that they have been effectively implemented",
+    "Notes that the Agency uses several types of measures as key performance indicators to assess the added value provided by its activities and to improve its budget management"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 85 against, 3 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0050/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0050_EN.html"
+  }
 }

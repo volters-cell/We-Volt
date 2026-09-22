@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to fully explore their energy storage potential",
+    "Calls on the Commission and Member States to ensure coherence and avoid overlaps in legislation on European, national or regional level",
+    "Calls on the Commission to establish a task force involving all relevant Directorates-General to develop this strategy, which shall be based on a comprehensive analysis of:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 556 in favour, 22 against, 110 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0130/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0130_EN.html"
+  }
 }

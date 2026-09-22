@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0170/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the adoption by the Commission of its position on the Conference and its readiness to go forward in a speedy fashion"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 50 in favour, 604 against, 32 abstained. Result derived from the totals."
@@ -2789,5 +2791,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0170/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0170_EN.html"
+  }
 }

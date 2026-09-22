@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0305/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the initiatives outlined by the Commission in the joint communication entitled ‘The EU’s Cybersecurity Strategy for the Digital Decade’",
+    "Recalls the importance of the human factor in the cyber-security strategy; Calls for continued efforts to spread cyber-security awareness, including cyber-hygiene and cyber-literacy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 685 in favour, 1 against, 6 abstained. Result derived from the totals."
@@ -2816,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0305/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0305_EN.html"
+  }
 }

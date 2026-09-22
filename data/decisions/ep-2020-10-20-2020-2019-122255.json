@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests the Commission to consider recent national case law setting 30 minutes as the time span for service providers to take down infringing content and to clarify the notion of “expeditious” with regard to live content",
+    "Notes the rise of “smart contracts” such as those based on distributed ledger technologies without a clear legal framework",
+    "Stresses that content hosting platforms must be transparent in the processing of algorithms and of the data used to train them"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 637 in favour, 26 against, 28 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0177/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0177_EN.html"
+  }
 }

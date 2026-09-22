@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "urges the Commission to ensure full implementation of the EU FLEGT Work Plan 2018-2022",
+    "Urges the Commission to ensure full implementation of the EU FLEGT Work Plan 2018-2022",
+    "Calls on the Commission and Member States to set up a rapid response mechanism at Union level to support environmental and forest defenders in the Union and worldwide"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 377 in favour, 75 against, 243 abstained. Result derived from the totals."
@@ -2823,5 +2827,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0179/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0179_EN.html"
+  }
 }

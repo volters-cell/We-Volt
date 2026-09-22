@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises the need to include gender-responsive STEM learning and career opportunities in national development plans and policies for the education sector, ICT and science",
+    "Considers the under‑representation of women in charge of investment decisions at venture capital firms to constitute a major source of the persistent funding gap for women-driven start-ups and enterprises"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 546 in favour, 35 against, 100 abstained. Result derived from the totals."
@@ -2767,5 +2770,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0163/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0163_EN.html"
+  }
 }

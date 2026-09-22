@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0204/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns the attempt on Alexei Navalny’s life and calls for an independent and transparent investigation into Mr Navalny’s poisoning without any delay",
+    "Stresses the importance of the EU-India Strategic Partnership, the need to promote it and to work together on stability and security, especially in the Indian Ocean and the Pacific"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 467 in favour, 80 against, 148 abstained. Result derived from the totals."
@@ -2828,5 +2831,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0204/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0204_EN.html"
+  }
 }

@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0268/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Takes note of Draft amending budget No 4/2021 as submitted by the Commission",
+    "Underlines the Parliament’s particular commitment to the new own resources and their introduction over the duration of the MFF 2021-2027, following the roadmap established in the Interinstitutional Agreement"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 589 in favour, 89 against, 22 abstained. Result derived from the totals."
@@ -2848,5 +2851,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0268/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0268_EN.html"
+  }
 }

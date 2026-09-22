@@ -16,10 +16,6 @@
   },
   "document": "A9-0244/2022",
   "summary": "",
-  "whatItMeans": [
-    "Underlines that national incentives and support for local video game development, including SMEs, should be encouraged and facilitated through EU State aid rules such as the General Block Exemption Regulation",
-    "Stresses that the timely and full implementation of all EU legislation relating to the CCIs is of the utmost importance"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 560 in favour, 34 against, 16 abstained. Result derived from the totals."
@@ -2489,9 +2485,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0244/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0244_EN.html"
-  }
+  "countries": {}
 }

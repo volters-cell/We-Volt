@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the agencies to:",
+    "Calls on the Commission to further improve the PPO, especially by:",
+    "Calls on the Commission in full acceptance of the principle of shared management to:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 514 in favour, 95 against, 84 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0069/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0069_EN.html"
+  }
 }

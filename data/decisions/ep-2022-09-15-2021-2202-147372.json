@@ -16,11 +16,6 @@
   },
   "document": "A9-0222/2022",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to carry out an in-depth analysis of the socio-economic circumstances of cross-border SMEs, gathering specific assessments and comparative statistics",
-    "Welcomes the communication published by the Commission in 2021 entitled ‘EU border regions: living labs of European integration’, which includes detailed information on the barriers faced by border regions in the EU",
-    "Stresses that disproportionate burdens such as the inherent structural disadvantages faced by all border regions should be compensated with a separate regime for regional aid designed specifically for border regions"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 522 in favour, 49 against, 11 abstained. Result derived from the totals."
@@ -2378,9 +2373,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0222/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0222_EN.html"
-  }
+  "countries": {}
 }

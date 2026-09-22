@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Authority to focus on disseminating the results of its research to the public, and to reach out to the public via social media and other media outlets",
+    "Welcomes that the Court of Auditors has stated that it has obtained reasonable assurances that the Authority’s annual accounts for 2018 are reliable and that the underlying transactions are legal and regular",
+    "Believes that the Authority should continue paying special attention to public opinion, and commit itself to increased openness and increased transparency"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 575 in favour, 81 against, 35 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0068/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0068_EN.html"
+  }
 }

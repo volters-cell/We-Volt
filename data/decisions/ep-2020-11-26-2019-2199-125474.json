@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to propose an urgent solution to resolve flagrant cases of violations of the human rights of refugees and migrants in reception centres on European soil",
+    "Calls on the FRA to commit to the provision of equality of opportunity and make the EU Code of Ethics a statement of abiding principles that address changing technology and development practices",
+    "Welcomes the fact that the Commission has announced a new Strategy for the implementation of the Charter of Fundamental Rights in its 2020 Work Programme; expects it to focus on raising awareness at national level"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 330 in favour, 298 against, 65 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0226/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0226_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0139/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that providers of streaming servers and streaming platforms should implement specific take down tools or measures in order to remove or disable access to illegal live sports broadcasts available on their services",
+    "Considers that the requested proposal does not have financial implications",
+    "Stresses that infringement of broadcasting rights in sport threatens its long-term funding"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 61 in favour, 608 against, 26 abstained. Result derived from the totals."
@@ -2828,5 +2832,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0139/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0139_EN.html"
+  }
 }

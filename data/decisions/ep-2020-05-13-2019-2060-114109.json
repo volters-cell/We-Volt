@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the Committee’s policy relating to 'revolving doors', which includes following up on the external activities carried out by its former senior officials; notes that the Committee publishes a related report every year"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 669 in favour, 10 against, 11 abstained. Result derived from the totals."
@@ -2803,5 +2805,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0078/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0078_EN.html"
+  }
 }

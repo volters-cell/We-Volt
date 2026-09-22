@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0136/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the EU to ensure that DCFTA do not run counter to the imperative for environmental and climate action or initiatives in the European Green Deal",
+    "Calls on the Parliament of Georgia to make full use of the opportunities available to Georgia as a priority country for the European Parliament’s democracy support activities and to engage in a dialogue to identify its needs",
+    "Welcomes the continued good cooperation on trade and economic relations between the EU and Georgia, and acknowledges the important and growing partnership between the two parties"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 552 in favour, 61 against, 78 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Georgia"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0136/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0136_EN.html"
+  }
 }

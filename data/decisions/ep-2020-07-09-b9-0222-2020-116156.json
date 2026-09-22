@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0222/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on ECHA to make publicly available the toxicological and ecotoxicological studies that are submitted by registrants and applicants",
+    "Calls on the Commission to set specific targets to significantly reduce both the use of chemical pesticides and the risk arising from them",
+    "Requests that the Commission ask ECHA on a regular basis to evaluate the performance and impact of the EU Observatory for Nanomaterials (EUON)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 353 in favour, 329 against, 7 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0222/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0222_EN.html"
+  }
 }

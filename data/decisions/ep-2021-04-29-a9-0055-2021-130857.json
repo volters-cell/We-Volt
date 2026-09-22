@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0055/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of promoting the involvement of regional and local authorities in the shaping of Union policies via enhanced cooperation with the Commission and the co-legislators"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 57 against, 30 abstained. Result derived from the totals."
@@ -2812,5 +2814,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0055/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0055_EN.html"
+  }
 }

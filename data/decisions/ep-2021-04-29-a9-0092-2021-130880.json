@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0092/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Takes note of the policy of the Agency to promote equal treatment of staff and the objective of gender balance in terms of number, grade and level of responsibility",
+    "Notes that, on 31 December 2019, the establishment plan was 100 % filled, with 61 temporary agents appointed out of 61 temporary agents authorised under the Union budget",
+    "Notes that the Agency has carried out an analysis of the likely impact of the United Kingdom’s decision to withdraw from the Union and identified the necessary mitigating steps"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 599 in favour, 85 against, 7 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0092/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0092_EN.html"
+  }
 }

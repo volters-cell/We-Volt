@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the general public, and to reach out to public via the social media and other media outlets",
+    "Notes that with the proclamation of the European pillar on social rights at the end of 2017, the Agency is given an important role in implementing its principles",
+    "Notes that further efforts are needed to achieving an even gender balance among senior managers (three men and one woman) and on the management board (42 men and 35 women)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 607 in favour, 83 against, 3 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0033/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0033_EN.html"
+  }
 }

@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on an assessment before the end of the recovery strategy and for the MFF to be revised accordingly during its mid-term revision"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 119 against, 69 abstained. Result derived from the totals."
@@ -2815,5 +2817,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0158/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0158_EN.html"
+  }
 }

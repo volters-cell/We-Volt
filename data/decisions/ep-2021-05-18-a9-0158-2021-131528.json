@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0158/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to minimise the time taken to assess EGF assistance requests and to mobilise the EGF, so as to reduce the pressure on national social security systems in the context of COVID-19 crisis",
+    "Notes that all the procedural requirements were met",
+    "Points out that more than 60 % of eligible persons are women with most effected age group between 30 and 64 years old"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 659 in favour, 30 against, 7 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0158/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0158_EN.html"
+  }
 }

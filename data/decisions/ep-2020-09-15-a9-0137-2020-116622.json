@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0137/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States, with regard to export controls, to pay greater attention to goods which may be used for both civilian and military purposes",
+    "Calls on the Member States to follow the example of Germany, Finland and Denmark, which, after the killing of the journalist Jamal Khashoggi, adopted restrictions on their arms exports to Saudi Arabia",
+    "Notes Member States’ efforts to comply with Article 346.1(b) TFEU on the production of or trade in arms"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 636 in favour, 32 against, 29 abstained. Result derived from the totals."
@@ -2836,5 +2840,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0137/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0137_EN.html"
+  }
 }

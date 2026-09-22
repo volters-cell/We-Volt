@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the public, and to reach out to the public via social media and other media outlets",
+    "Welcomes the fact that the cancellation of carry-overs from 2017 to 2018 represents 3,25 % of the total amount carried over after a decrease of 2,05 % in comparison to 2017",
+    "Regrets that the CVs of the administrative board members have still not been published on the Agency's website; calls on the Agency to report to the discharge authority on the actions taken in that regard"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 629 in favour, 56 against, 7 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0067/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0067_EN.html"
+  }
 }

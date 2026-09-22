@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the decision as a sign of the Union’s solidarity with the Union citizens and regions hit by natural disasters",
+    "Considers that the financial assistance released to the Member States shall be subject to a fair distribution to the most affected regions and areas",
+    "Stresses the urgent need to release financial assistance through the European Union Solidarity Fund (‘the Fund’) to the regions affected by natural disasters in the Union in 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 680 in favour, 7 against, 1 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0105/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0105_EN.html"
+  }
 }

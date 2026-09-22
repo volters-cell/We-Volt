@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to pay special attention to access for SMEs and clusters to data that could boost their activity, as well as to technology centres and universities to promote their research programmes",
+    "Considers that guidance and counselling for AI developers and users on protecting IPR should be widely available",
+    "Stresses that where AI is used only as a tool to assist an author in the process of creation, the current copyright framework remains applicable to the work created and the intervention of AI is not taken into consideration"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 612 in favour, 66 against, 12 abstained. Result derived from the totals."
@@ -2803,5 +2807,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0176/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0176_EN.html"
+  }
 }

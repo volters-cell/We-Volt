@@ -16,9 +16,6 @@
   },
   "document": "A9-0218/2022",
   "summary": "",
-  "whatItMeans": [
-    "Considers that the requested proposal will not have financial implications"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 504 in favour, 57 against, 65 abstained. Result derived from the totals."
@@ -2552,9 +2549,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0218/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0218_EN.html"
-  }
+  "countries": {}
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the draft regulation",
+    "Calls on the Commission to apply the precautionary principle and to remove titanium dioxide (E 171) from the Union list of permitted food additives",
+    "Considers that the draft Commission regulation is not compatible with the aim and content of Regulations (EC) No 1333/2008 and (EC) No 1331/2008"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 443 in favour, 118 against, 135 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0308/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0308_EN.html"
+  }
 }

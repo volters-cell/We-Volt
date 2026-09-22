@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to provide for proper legal protection for investigative journalists along the lines of that provided for whistleblowers",
+    "Urges the EU agencies, in particular Europol, Eurojust and OLAF, to cooperate ever more closely with national authorities in order to detect fraud more effectively",
+    "Calls on the Commission to develop incentives to create an electronic profile of contracting authorities for those Member States where such profiles are not available"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 421 in favour, 167 against, 93 abstained. Result derived from the totals."
@@ -2764,5 +2768,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0103/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0103_EN.html"
+  }
 }

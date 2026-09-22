@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the public and to reach out to the public via social media and other media outlets",
+    "Welcomes the fact that the Agency’s internal restructuring over 2018 with the aim of enhancing support across departments and strengthening the Agency’s outputs",
+    "Notes that in 2018 a new operational unit was established to strengthen inter-departmental cooperation on projects and enhance capacity for real-time responses"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 460 in favour, 225 against, 7 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0070/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0070_EN.html"
+  }
 }

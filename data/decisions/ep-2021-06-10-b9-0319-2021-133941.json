@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0319/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines that despite numerous European Parliament resolutions and reports, and several infringement proceedings and decisions of the CJEU, the rule of law situation in the European Union is continuing to deteriorate"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 506 in favour, 150 against, 28 abstained. Result derived from the totals."
@@ -2784,5 +2786,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0319/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0319_EN.html"
+  }
 }

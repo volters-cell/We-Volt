@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to swiftly adopt the proposal for a Council recommendation for establishing a European Child Guarantee",
+    "Calls on the Commission and the Member States to support the creation and reinforcement of universal public childcare, education and healthcare networks, with high quality standards"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 510 in favour, 42 against, 139 abstained. Result derived from the totals."
@@ -2804,5 +2807,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0220/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0220_EN.html"
+  }
 }

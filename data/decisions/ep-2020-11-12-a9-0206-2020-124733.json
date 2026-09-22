@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0206/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists that the European Investment Bank reports in a timely and comprehensive manner on all its external spending to the relevant its committees",
+    "Calls on the Commission to provide Member States with all necessary assistance to make using the European Maritime and Fisheries Fund (EMFF) as simple and efficient as possible",
+    "Calls on the Commission to swiftly implement pilot projects and preparatory actions and stresses that such instruments and their results should be integrated in Union policy actions and programmes to fulfil their objective"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 471 in favour, 102 against, 116 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0206/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0206_EN.html"
+  }
 }

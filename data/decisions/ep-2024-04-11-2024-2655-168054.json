@@ -16,9 +16,6 @@
   },
   "document": "B9-0207/2024",
   "summary": "",
-  "whatItMeans": [
-    "Regrets that issues are being raised at EU level that go beyond the EU’s competences, as regards the inclusion in the Charter of health and medical care matters that are the exclusive competence of the Member States"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 336 in favour, 163 against, 39 abstained. Result derived from the totals."
@@ -2196,9 +2193,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0207/2024",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0207_EN.html"
-  }
+  "countries": {}
 }

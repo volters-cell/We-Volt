@@ -16,9 +16,6 @@
   },
   "document": "A9-0096/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Commission to periodically assess the possibility of gradually increasing the scheme’s budget, given its benefits to society as a whole"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 534 in favour, 57 against, 23 abstained. Result derived from the totals."
@@ -2504,9 +2501,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0096/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0096_EN.html"
-  }
+  "countries": {}
 }

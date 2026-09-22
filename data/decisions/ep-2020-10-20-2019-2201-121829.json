@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the authorities to step up efforts to fight organized crime and dismantle criminal schemes",
+    "Calls on the Moldovan Government and the EU to cooperate to overcome the negative impact of the COVID-19 crisis on social and economic development",
+    "Calls on the Commission to upgrade neglected areas of AAs, which include important policy areas such as gender, the European Green Deal and the prevention of health crises"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 554 in favour, 70 against, 65 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Moldova"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0166/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0166_EN.html"
+  }
 }

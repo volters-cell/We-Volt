@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to promote freedom of movement for persons with disabilities",
+    "Calls on the European Union and all Member States to ratify the Optional Protocol to the CRPD",
+    "Calls on all Member States to report on the implementation of the European Disability Strategy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 405 in favour, 275 against, 16 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0123/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0123_EN.html"
+  }
 }

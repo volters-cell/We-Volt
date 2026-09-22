@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the increase of the number of confidential counsellors in order to improve the informal procedure and the possibility for staff to share their concerns on any perceived situation of harassment",
+    "Notes that due to a higher number of opinions and reports issued, which requested more members’ involvement in the preparation, higher costs for travelling and other reimbursements occurred"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 7 against, 85 abstained. Result derived from the totals."
@@ -2819,5 +2822,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0188/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0188_EN.html"
+  }
 }

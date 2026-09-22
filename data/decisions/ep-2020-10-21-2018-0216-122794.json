@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its Presidents to forward its position to the Council, the Commission and the national parliaments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 595 in favour, 85 against, 8 abstained. Result derived from the totals."
@@ -2792,5 +2794,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A8-0200/2019",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-8-2019-0200_EN.html"
+  }
 }

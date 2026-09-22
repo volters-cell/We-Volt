@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Agency to focus on disseminating the results of its research to the public, and to reach out to the public via social media and other media outlets",
+    "Regrets the fact that the Agency has not yet formalised a strategy to ensure an environmentally friendly working place; calls on the Agency to do so as a matter of urgency",
+    "Notes with concern the lack of gender balance for 2018 for senior managers (8 men and 2 women) and for the Management Board (25 men and 5 women)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 625 in favour, 55 against, 11 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0039/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0039_EN.html"
+  }
 }

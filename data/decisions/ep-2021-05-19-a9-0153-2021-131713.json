@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0153/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EEAS StratCom division to document suspicions of Turkish disinformation directed at the EU, particularly in Africa and the MENA region and to report its findings to the European Parliament"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 480 in favour, 64 against, 150 abstained. Result derived from the totals."
@@ -2824,5 +2826,9 @@
   "countries": {},
   "topics": [
     "Türkiye"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0153/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0153_EN.html"
+  }
 }

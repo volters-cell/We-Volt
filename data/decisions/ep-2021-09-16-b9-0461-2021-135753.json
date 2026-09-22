@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0461/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Prosecutor General to withdraw his motion before the illegitimate ‘Constitutional Tribunal’ related to the constitutionality of Article 6 of the European Convention on Human Rights",
+    "Welcomes the appointment of a new Polish Commissioner for Human Rights in July 2021 after the expiry of the term of his predecessor in September 2020",
+    "Welcomes the Commission’s recent initiative to issue a Recommendation on Ensuring Safety of Journalists in the European Union; calls on the Commission to deliver on the Media Freedom Act[23] without delay"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 502 in favour, 149 against, 36 abstained. Result derived from the totals."
@@ -2797,5 +2801,9 @@
   "topics": [
     "Poland",
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0461/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0461_EN.html"
+  }
 }

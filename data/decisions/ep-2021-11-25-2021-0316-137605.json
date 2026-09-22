@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the social partners were consulted in the drawing up of the co-ordinated package of personalised services and calls for social partners’ involvement in its implementation and evaluation",
+    "Points out that most of the displaced workers are in the second half of their professional career and have a low level of formal qualification",
+    "Stresses that the Spanish authorities have confirmed that the eligible actions do not receive assistance from other Union funds or financial instruments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 662 in favour, 30 against, 3 abstained. Result derived from the totals."
@@ -2823,5 +2827,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0319/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0319_EN.html"
+  }
 }

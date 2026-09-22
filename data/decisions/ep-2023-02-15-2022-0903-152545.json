@@ -16,9 +16,6 @@
   },
   "document": "A9-0010/2023",
   "summary": "",
-  "whatItMeans": [
-    "Calls on the Ombudsman to notify Parliament if she intends to depart from the text approved by Parliament"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 634 in favour, 2 against, 2 abstained. Result derived from the totals."
@@ -2600,9 +2597,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0010/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0010_EN.html"
-  }
+  "countries": {}
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the draft regulation and submit a new one to the committee, respecting the precautionary principle",
+    "Considers that the draft Commission regulation is not compatible with the aim and content of Regulation (EC) No 396/2005",
+    "Notes that, under the draft Commission regulation, the existing MRLs of lufenuron would increase from 0,01 mg/kg to 0,30 mg/kg for grapefruits and from 0,01 mg/kg to 0,02 mg/kg for sugar canes"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 441 in favour, 242 against, 15 abstained. Result derived from the totals."
@@ -2833,5 +2837,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0223/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0223_EN.html"
+  }
 }

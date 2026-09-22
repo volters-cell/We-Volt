@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0170/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the respective monitoring authorities to monitor NATURA 2000 sites and MPAs in the Black Sea effectively",
+    "Calls on the fishing industry in the region to consider making use of underrated and unused fish stocks, which are also sources of protein",
+    "Calls on the Commission to explore whether a multi-annual management plan similar to those in place in other sea basins could be introduced for the Black Sea"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 598 in favour, 3 against, 92 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Fisheries"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0170/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0170_EN.html"
+  }
 }

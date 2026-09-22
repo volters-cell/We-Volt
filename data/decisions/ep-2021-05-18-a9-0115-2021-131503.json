@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0115/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to mainstream gender equality and climate justice in the elaboration and implementation of all policies that have impact on the situation of women and girls",
+    "Calls on the Commission to prepare a comprehensive strategy for a substantively reinforced EU contribution to limiting the impacts of climate change on vulnerable populations in developing countries through:",
+    "Insists on the importance of better communicating climate and disaster risks and adaptation options for vulnerable populations; recalls the important role of non-state actors and local authorities in building local resilience"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 255 in favour, 260 against, 170 abstained. Result derived from the totals."
@@ -2788,5 +2792,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0115/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0115_EN.html"
+  }
 }

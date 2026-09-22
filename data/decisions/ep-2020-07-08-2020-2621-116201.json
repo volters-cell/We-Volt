@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to pay particular attention to the recommendations received on cross-border mediation by all relevant stakeholders at national and EU level",
+    "Insists that all child-protection systems should have transnational and cross-border mechanisms in place, which take into account the specificities of cross-border conflicts",
+    "Calls on the Japanese authorities to better cooperate with the EU and to enable the effective enforcement of the access and visiting rights granted by court decisions to left-behind parents"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 686 in favour, 1 against, 8 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0205/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0205_EN.html"
+  }
 }

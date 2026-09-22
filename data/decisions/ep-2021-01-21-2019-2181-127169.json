@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to evaluate and address the risks of not protecting the right to disconnect",
+    "Calls on Member States and employers to ensure that workers are informed of and able to exercise their right to disconnect",
+    "Requests that the Commission submit, on the basis of Article 225 TFEU, a proposal for an act on the right to disconnect, following the recommendations set out in the Annex hereto"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 472 in favour, 126 against, 83 abstained. Result derived from the totals."
@@ -2764,5 +2768,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0246/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0246_EN.html"
+  }
 }

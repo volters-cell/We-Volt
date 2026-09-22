@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to respect the deadlines laid down in the REACH Regulation",
+    "Calls on the Commission to withdraw the draft regulation and submit a new one to the committee without delay",
+    "Considers that the draft Commission regulation is not compatible with the aim and content of the REACH Regulation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 389 in favour, 116 against, 143 abstained. Result derived from the totals."
@@ -2635,5 +2639,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0089/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0089_EN.html"
+  }
 }

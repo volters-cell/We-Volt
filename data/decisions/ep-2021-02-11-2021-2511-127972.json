@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Belarusian authorities to fully cooperate with ENSREG in the stress test process, including a formal review and urgent implementation of Belarus’ National Action Plan",
+    "Stresses the need to build up and maintain an early warning system for the measuring of radiation in EU countries located in the vicinity of the plant",
+    "Notes that, despite the common agreement between the Baltic countries to cease commercial exchanges of electricity with Belarus, is it still possible for electricity from Belarus to enter the EU market via the Russian grid"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 642 in favour, 29 against, 21 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "topics": [
     "Belarus",
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0109/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0109_EN.html"
+  }
 }

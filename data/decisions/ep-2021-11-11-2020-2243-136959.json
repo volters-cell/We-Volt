@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to assess the impact of the EEA on the basis of qualitative, and not merely quantitative, indicators",
+    "Calls on the Member States to promote education related to climate change and the ecological transition and to raise awareness of the European Green Deal",
+    "Calls on the Member States to develop quality dual education systems and vocational systems based on flexible curricula, strong career guidance and connections to labour market needs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 483 in favour, 25 against, 52 abstained. Result derived from the totals."
@@ -2283,5 +2287,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0291/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0291_EN.html"
+  }
 }

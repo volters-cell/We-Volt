@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0113/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on IMI2 Joint Undertaking to introduce a compulsory training scheme for newcomers and already operational members of staff",
+    "Calls on the IMI2 Joint Undertaking to further strengthen its ethics framework by ensuring measures preventing harassment and conflicts of interest, as well as for whistleblower protection, are in place",
+    "Notes that the IMI Joint Undertaking utilisation rate for payment appropriations for the Seventh Framework Programme projects was 97 %"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 390 in favour, 246 against, 57 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0113/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0113_EN.html"
+  }
 }

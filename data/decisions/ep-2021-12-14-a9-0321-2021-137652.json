@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0321/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets the fact that although the deadline to transpose the EPBD expired on 10 March 2020, some Member States have still not fully implemented this legislation",
+    "Stresses that the EPBD is crucial to successfully delivering on the Renovation Wave and emissions reduction",
+    "Emphasises the need for holistic, coherent and inclusive urban planning and the promotion of safe and sustainable modes of transport and their supporting infrastructure"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 143 in favour, 355 against, 198 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0321/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0321_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0071/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Agency managed in 2019 to connect with a wider demographic of people by reinforcing its presence in social media",
+    "Notes with satisfaction that the Agency has successfully delivered its mandate, and in some cases exceeded the objectives set in its annual work programme for 2019",
+    "Notes that in 2019, the Agency undertook an internal exercise to assess its internal control systems, concluding that they have been effectively implemented and that only minor improvements are needed"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 612 in favour, 28 against, 53 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0071/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0071_EN.html"
+  }
 }

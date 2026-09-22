@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0266/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises the need to develop a coherent climate policy-related dimension of the CFSP, as climate change is increasingly playing the role of an economic, social and political destabiliser and risk-multiplier"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 347 in favour, 326 against, 8 abstained. Result derived from the totals."
@@ -2769,5 +2771,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0266/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0266_EN.html"
+  }
 }

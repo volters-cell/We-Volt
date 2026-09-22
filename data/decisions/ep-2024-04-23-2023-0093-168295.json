@@ -16,10 +16,6 @@
   },
   "document": "A9-0008/2024",
   "summary": "",
-  "whatItMeans": [
-    "Requests for consultations shall be answered without delay",
-    "Requests for consultations shall be answered without undue delay"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 604 in favour, 2 against, 6 abstained. Result derived from the totals."
@@ -2497,9 +2493,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0008/2024",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0008_EN.html"
-  }
+  "countries": {}
 }

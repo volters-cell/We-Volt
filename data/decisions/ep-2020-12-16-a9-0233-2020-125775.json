@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0233/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States to unblock negotiations on the Women on Boards Directive and the Anti-Discrimination Directive",
+    "Calls on the Commission and the Council to adopt binding policy measures concerning pay transparency and the minimum wage",
+    "Urges that ambitious policies be pursued at the destination of the most vulnerable groups such as refugees, migrants, Roma, etc."
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 350 in favour, 266 against, 78 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0233/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0233_EN.html"
+  }
 }

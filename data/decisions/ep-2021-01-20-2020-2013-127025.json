@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on the need for an EU-wide strategy against LAWS and a ban on so-called ‘killer robots’",
+    "Calls on the Commission to support the research, development, deployment and use of AI for preserving peace and preventing conflicts",
+    "Calls on the Commission to facilitate research into and discourse on opportunities of using AI in disaster relief, crisis prevention, and upholding peace"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 364 in favour, 274 against, 52 abstained. Result derived from the totals."
@@ -2803,5 +2807,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0001/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0001_EN.html"
+  }
 }

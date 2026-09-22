@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0129/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports the African Union request to the United Nations to have access to UN-assessed contributions for African-led missions mandated by the United Nations Security Council",
+    "Believes that a comprehensive and medium- to long-term security policy for these regions should also focus on fostering resilience",
+    "Considers that meaningful security cooperation between the EU and Africa must be built on sustainable development, and especially focus on:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 396 in favour, 248 against, 40 abstained. Result derived from the totals."
@@ -2784,5 +2788,9 @@
   "countries": {},
   "topics": [
     "Sahel"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0129/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0129_EN.html"
+  }
 }

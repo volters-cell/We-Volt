@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0221/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to support the collection of data on compaction and promote sustainable agricultural measures aimed at reducing the use of heavy machinery",
+    "Calls on the Commission to update the Guidelines on best practices to limit, mitigate or compensate soil sealing in line with the objectives of the European Green Deal",
+    "Calls on the Commission to facilitate an annual conference with the participation of Member States and relevant stakeholders, giving them a critical role through issue-based dialogues"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 415 in favour, 241 against, 42 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0221/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0221_EN.html"
+  }
 }

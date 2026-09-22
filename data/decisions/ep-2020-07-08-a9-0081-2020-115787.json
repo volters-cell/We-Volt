@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0081/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EIB to enhance its cooperation with the European Ombudsman",
+    "Calls on the EIB to ensure a more balanced gender representation, especially in its senior positions",
+    "Calls on the EIB to continue working in collaboration with like-minded partners to address global issues"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 468 in favour, 170 against, 57 abstained. Result derived from the totals."
@@ -2825,5 +2829,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0081/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0081_EN.html"
+  }
 }

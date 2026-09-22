@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and Member States to adopt policies and measures to address the leaky pipeline phenomenon",
+    "Considers that women need to be encouraged to play a more critical role in the design, development, construction and maintenance of smart cities or smart villages"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 598 in favour, 45 against, 40 abstained. Result derived from the totals."
@@ -2775,5 +2778,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0232/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0232_EN.html"
+  }
 }

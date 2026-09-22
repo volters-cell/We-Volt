@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Kosovo’s authorities and the Commission to further support SMEs in order to develop a viable economy for Kosovo",
+    "Welcomes the decision of the Kosovo Government to lift tariffs on imports from Serbia and Bosnia and Herzegovina, which allowed for the resumption of the EU-facilitated dialogue",
+    "Welcomes Kosovo’s decision to participate in the mini-Schengen initiative as a mean to improve good neighbourly relations and provide new opportunities for Kosovo citizens and businesses"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 471 in favour, 109 against, 104 abstained. Result derived from the totals."
@@ -2779,5 +2783,9 @@
   "countries": {},
   "topics": [
     "Western Balkans"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0031/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0031_EN.html"
+  }
 }

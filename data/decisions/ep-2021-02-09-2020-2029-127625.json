@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to conduct evidence-based research on the risk factors for potential victims and on how different policy areas intersect with THB in risk sectors",
+    "Calls on CEPOL to provide training for the competent law enforcement authorities in order to ensure standardised approaches to investigation and the protection of victims",
+    "Calls on the Commission to ensure the continuity of the EU Anti-Trafficking Coordinator’s work by appointing a full-time EU Anti-Trafficking Coordinator, and to include this in the new strategy on THB"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 571 in favour, 61 against, 59 abstained. Result derived from the totals."
@@ -2807,5 +2811,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0011/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0011_EN.html"
+  }
 }

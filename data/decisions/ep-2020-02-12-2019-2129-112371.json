@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the ECB to ensure an appropriate balance between financial innovation, including Fintech, and financial stability",
+    "Welcomes the continuous efforts of the ECB to further strengthen its response and recovery capabilities in the event of a cyberattack on its own organisation",
+    "Welcomes the role of the ECB in safeguarding euro stability; highlights that the statutory independence of the ECB, as laid down in the treaties, is a prerequisite for it to fulfil its mandate of maintaining price stability"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 452 in favour, 142 against, 53 abstained. Result derived from the totals."
@@ -2631,5 +2635,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0016/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0016_EN.html"
+  }
 }

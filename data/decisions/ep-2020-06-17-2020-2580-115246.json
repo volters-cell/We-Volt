@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all Member States to take with determination the necessary steps to ensure the due recognition of ME/CFS",
+    "Calls on the Commission to commission a study assessing the overall social and economic costs attributable to ME/CFS within the EU",
+    "Stresses the importance of raising awareness on the matter by further promoting activities at EU and Member State level around the ‘Rare Disease Day’ commemorated on the last day of February each year"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 676 in favour, 4 against, 8 abstained. Result derived from the totals."
@@ -2792,5 +2796,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0186/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0186_EN.html"
+  }
 }

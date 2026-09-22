@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Institute to focus on disseminating the results of its research to the public, and to reach out to public via the social media and other media outlets",
+    "Welcomes the fact that, according to the Institute’s reply, the new Director was appointed by the Institute’s governing board decision of 19 August 2019",
+    "Welcomes the fact that the Institute has introduced e-tendering and e-submission in 2018 and has processed several calls for tender via e-procurement tools in 2019"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 603 in favour, 75 against, 15 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0054/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0054_EN.html"
+  }
 }

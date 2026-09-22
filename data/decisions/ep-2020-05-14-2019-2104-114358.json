@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact, that all calls for proposals were published and closed according to the respective work plans and with the annual work programme 2018, included 20 topics",
+    "Notes that the overall 2018 budget execution of commitment and payment appropriations reached 93 % and 83 % respectively",
+    "Notes that FCH2´s final budget for the financial year 2018 included commitment appropriations of EUR 85 504 157 and payment appropriations of EUR 126 526 307"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 629 in favour, 58 against, 6 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0030/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0030_EN.html"
+  }
 }

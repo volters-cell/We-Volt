@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to draw up annual reports on democracy, the rule of law and fundamental rights, including equality and the rights of persons belonging to minorities",
+    "Welcomes the Commission’s 2020 Rule of Law Report (‘the Report’) and the importance that it places on the justice system, as well as the country-specific chapters",
+    "Regrets that the application of Cooperation and Verification Mechanism still prevents some EU citizens from fully benefitting from the area of freedom, security and justice"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 509 in favour, 152 against, 28 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0199/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0199_EN.html"
+  }
 }

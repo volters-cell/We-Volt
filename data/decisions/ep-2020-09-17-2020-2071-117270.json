@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to ensure that healthcare workers are authorised to cross internal borders if they work in a neighbouring country",
+    "Calls on the Commission and the Member States to ensure that health care workers are authorised to cross internal borders if they work in a neighbouring country",
+    "Calls on the Commission to place the issue of the shortage of cancer medicines at the centre of the treatment part of the forthcoming Europe’s Beating Cancer Plan"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 663 in favour, 23 against, 10 abstained. Result derived from the totals."
@@ -2827,5 +2831,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0142/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0142_EN.html"
+  }
 }

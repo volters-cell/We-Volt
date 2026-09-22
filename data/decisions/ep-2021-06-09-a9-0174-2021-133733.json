@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0174/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Instructs its Secretary-General to arrange for publication of the regulation in the Official Journal of the European Union"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 658 in favour, 12 against, 22 abstained. Result derived from the totals."
@@ -2813,5 +2815,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0174/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0174_EN.html"
+  }
 }

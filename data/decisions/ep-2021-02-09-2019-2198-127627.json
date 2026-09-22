@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the institutions to conclude the negotiations on the proposal for a mandatory Transparency Register as soon as possible, thereby rendering their work as transparent as possible in the interest of the democratic process",
+    "Reiterates its call on the Council, including its preparatory bodies, to sign up to the Transparency Register without further delay",
+    "Recalls its calls on the Commission and Council in its resolution of 28 April 2016 on public access to documents for the years 2014-2015"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 676 in favour, 14 against, 1 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0004/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0004_EN.html"
+  }
 }

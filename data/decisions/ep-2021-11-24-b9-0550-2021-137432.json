@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0550/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all WTO members to ratify Annex K to the World Customs Organisation’s Kyoto Convention to reduce customs bureaucracy",
+    "Calls on the Commission and the Council to ensure that Parliament continues to be closely involved in the preparation of MC12, and is promptly updated and consulted during the 2021 Ministerial Conference"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 547 in favour, 125 against, 17 abstained. Result derived from the totals."
@@ -2801,5 +2804,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0550/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0550_EN.html"
+  }
 }

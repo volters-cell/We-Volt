@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Authority completed 90 % of the activities included in its annual work programme",
+    "Notes that the staff turnover rate of the Authority was 6,9 %, meeting the Authority’s target of less than 10 %",
+    "Notes that the Authority’s workload is constantly evolving and includes both regulatory tasks and the enforcement and application of Union law"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 605 in favour, 58 against, 30 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0059/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0059_EN.html"
+  }
 }

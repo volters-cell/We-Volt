@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0400/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to increase the resources allocated to the digitalisation of VET programmes and to graduate tracking",
+    "Welcomes all possible synergies and a greater role for VET under the Youth Guarantee, in view of its effectiveness in easing the transition to the labour market for young people at risk of unemployment and social exclusion",
+    "Underlines that work-based learning and the promotion and implementation of the dual VET system should be priorities of the new Erasmus programme"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 115 in favour, 539 against, 38 abstained. Result derived from the totals."
@@ -2816,5 +2820,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0400/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0400_EN.html"
+  }
 }

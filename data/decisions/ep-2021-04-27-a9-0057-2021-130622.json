@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0057/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the implementation rate of appropriations carried forward from 2018 to 2019 was 82,1 % as compared to 77,5 % for appropriations carried forward from 2017 to 2018",
+    "Welcomes that the Committee uses free and open source software whenever possible; notes that for 2019 39 open source software applications were included in the inventory of software packages,",
+    "Underlines the importance of the role of the Committee but expresses concerns with respect to the lack of impact of its work"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 484 in favour, 209 against, 5 abstained. Result derived from the totals."
@@ -2840,5 +2844,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0057/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0057_EN.html"
+  }
 }

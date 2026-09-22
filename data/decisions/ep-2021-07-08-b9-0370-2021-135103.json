@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0370/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that international cooperation is an important component allowing the ERA to enhance knowledge sharing and skills, and to improve R&I capacities",
+    "Takes note of the launch of the ERA Forum for Transition to support Member States in the coordination and prioritisation of national R&I funding and reforms",
+    "Underlines that the ERA cannot be completed without guaranteed academic freedom within the Union; welcomes the principle of academic freedom as a fundamental pillar in the new ERA"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 634 in favour, 5 against, 57 abstained. Result derived from the totals."
@@ -2829,5 +2833,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0370/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0370_EN.html"
+  }
 }

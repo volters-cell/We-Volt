@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0069/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the efforts made by the Centre to create an environmentally friendly working place and all the measures taken by the Centre to reduce its carbon footprint, its energy consumption and to develop a paperless workflow",
+    "Notes the efforts made to increase the Centre’s cyber security and data protection, especially as regards the training and awareness of staff",
+    "Notes with satisfaction the new service level agreement with the Directorate-General for Budget for the migration to the Commission’s finance and accounting system"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 81 against, 8 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0069/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0069_EN.html"
+  }
 }

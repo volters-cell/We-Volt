@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0211/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States, ahead of the 2024 elections, to make more resources available in consulates so that checks can be stepped up and members of the public made aware that multiple voting is illegal",
+    "Points out that nothing prevents European parties and movements from forming coalitions ahead of the European elections, and so putting forward a joint programme and a single-coalition Spitzenkandidat"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 138 in favour, 537 against, 20 abstained. Result derived from the totals."
@@ -2825,5 +2828,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0211/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0211_EN.html"
+  }
 }

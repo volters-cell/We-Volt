@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0189/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that all the procedural requirements were met",
+    "Reiterates that assistance from the EGF must not replace actions which are the responsibility of companies, by virtue of national law or collective agreements",
+    "Recalls that assistance from the EGF and other Union funds must not replace actions, which are the responsibility of the employers, be it by virtue of national law or collective agreements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 670 in favour, 22 against, 4 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0189/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0189_EN.html"
+  }
 }

@@ -16,11 +16,6 @@
   },
   "document": "A9-0248/2023",
   "summary": "",
-  "whatItMeans": [
-    "Welcomes Switzerland’s 2023-2024 term as a non-permanent member of the UN Security Council as an opportunity to strengthen international cooperation and promote common priorities at the multilateral level",
-    "Regrets the Swiss Government’s unilateral decision to terminate negotiations on the EU-Swiss institutional framework agreement in 2021, which affected Switzerland’s participation in the Erasmus+ programme",
-    "Welcomes, further, Switzerland’s participation in the summits of the European Political Community"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 538 in favour, 42 against, 43 abstained. Result derived from the totals."
@@ -2542,9 +2537,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0248/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0248_EN.html"
-  }
+  "countries": {}
 }

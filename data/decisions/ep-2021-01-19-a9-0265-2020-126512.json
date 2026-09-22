@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0265/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States to increase their defence spending and aim for a target of 2 % of GDP",
+    "Welcomes the EU’s activities aimed at supporting the universalisation of the Arms Trade Treaty, and calls on all the major arms-exporting countries to sign and ratify it as soon as possible",
+    "Recalls that effective international arms control, disarmament and non-proliferation regimes are a cornerstone of global and European security and stability"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 405 in favour, 242 against, 34 abstained. Result derived from the totals."
@@ -2772,5 +2776,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0265/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0265_EN.html"
+  }
 }

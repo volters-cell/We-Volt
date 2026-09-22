@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the announcement in the European Green Deal communication that the revision of the TEN-E guidelines will take place on 2020"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 548 in favour, 100 against, 40 abstained. Result derived from the totals."
@@ -2792,5 +2794,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0122/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0122_EN.html"
+  }
 }

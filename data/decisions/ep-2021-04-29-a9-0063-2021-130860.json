@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0063/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Court to explore ways of providing more information on the administrative expenditure of other Union institutions in the context of the discharge",
+    "Welcomes that the EEAS uses free and open-source software whenever possible",
+    "Emphasises the necessity for the EEAS to fully comply with the Commission's Guidelines on Whistleblowing, in particular to protect whistleblowers in good faith against any form of prejudice"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 586 in favour, 93 against, 12 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0063/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0063_EN.html"
+  }
 }

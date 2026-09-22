@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council and the European Council to establish a Council configuration on gender equality in order to facilitate gender mainstreaming across all EU policies and legislation",
+    "Calls on the European Council to act by qualified majority and amend the list of configurations in which the Council meets, in accordance with Article 236 of the TFEU and Article 2(1) of the Council’s Rules of Procedure"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 146 against, 37 abstained. Result derived from the totals."
@@ -2795,5 +2798,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0402/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0402_EN.html"
+  }
 }

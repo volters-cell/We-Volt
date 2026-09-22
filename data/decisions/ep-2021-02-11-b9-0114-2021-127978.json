@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0114/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all Member States and the Commission to complete annual tracking and national reporting as part of the Action Coalition Progress Report",
+    "Calls on the Member States to ratify and implement without delay the recently adopted ILO Convention 190 on eliminating violence and harassment in the world of work",
+    "Urges the Commission and the Member States to put women at the heart of pandemic recovery in order to counter the erosion of progress made in closing gender poverty gaps caused by the COVID-19 crisis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 505 in favour, 109 against, 76 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0114/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0114_EN.html"
+  }
 }

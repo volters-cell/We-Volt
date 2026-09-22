@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0134/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to lift the financial and non-financial barriers to higher absorption rates of the regional funds set aside for integrated building renovation by 2021",
+    "Calls on the Commission to make the energy efficiency first principle central to the process of the renovation of the EU building stock in line with the Energy Union Governance Regulation",
+    "Calls on the Commission to further facilitate the use of public private partnerships (PPPs), such as PF4EE, relating to smart and sustainable financing, and identifying possible local investment concepts"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 594 in favour, 11 against, 85 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0134/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0134_EN.html"
+  }
 }

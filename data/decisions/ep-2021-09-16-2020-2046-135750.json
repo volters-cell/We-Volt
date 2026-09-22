@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the European Commission to present, in due time, an evaluation of the interaction between AML and DAC",
+    "Deplores the side effects the FATCA still has on so-called accidental Americans; regrets that, to date, no lasting solution has been found at the European level",
+    "Recalls that the European rules on administrative cooperation do not replace national rules but rather provide minimum standards for information exchange and cooperative actions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 561 in favour, 12 against, 116 abstained. Result derived from the totals."
@@ -2799,5 +2803,9 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0193/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0193_EN.html"
+  }
 }

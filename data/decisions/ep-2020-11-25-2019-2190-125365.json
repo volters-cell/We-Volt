@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to prioritise product safety in its action plan for customs",
+    "Calls on the Commission to negotiate an ambitious WTO e-commerce agreement in order to improve respect for product safety rules online at EU and international level"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 688 in favour, 8 against, 1 abstained. Result derived from the totals."
@@ -2828,5 +2831,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0207/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0207_EN.html"
+  }
 }

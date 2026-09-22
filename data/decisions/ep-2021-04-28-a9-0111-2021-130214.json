@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0111/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that, in total, more than 400 public and private entities, representing the railway sector, participate to the Shift2Rail research and innovation activities",
+    "Notes that by the end of 2019, the Joint Undertaking reported all recommendations, resulting from the limited review of the implementation of internal control standards of 2018, as implemented",
+    "Believes that the successor of the Shift2Rail should include in the research programme joint work with other modes of transport in order to pave the way towards seamless and integrated transport"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 396 in favour, 231 against, 66 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0111/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0111_EN.html"
+  }
 }

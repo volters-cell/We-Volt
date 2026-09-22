@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on EFSA to request data on the impact of the consumption of food and feed derived from GM plants on the intestinal microbiome",
+    "Calls on EFSA to make sure that the data from field trials or greenhouses cover a sufficiently broad range of different varieties to assess the impact of various genetic backgrounds on gene expression and plant composition"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 490 in favour, 184 against, 22 abstained. Result derived from the totals."
@@ -2827,5 +2831,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0416/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0416_EN.html"
+  }
 }

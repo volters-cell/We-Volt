@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on the role of EIGE, as the Union expertise centre on gender equality, to monitor the implementation of the Istanbul Convention",
+    "Insists on the role of the Institute, as the Union centre of expertise on gender equality, to monitor the implementation of the Istanbul Convention",
+    "Calls on the Institute to focus on disseminating the results of its research to the public and to reach out to the public via social media and other media outlets"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 574 in favour, 91 against, 25 abstained. Result derived from the totals."
@@ -2803,5 +2807,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0058/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0058_EN.html"
+  }
 }

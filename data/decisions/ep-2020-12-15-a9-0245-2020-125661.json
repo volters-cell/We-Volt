@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0245/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States and the Commission to clearly state that detention is never in the best interests of the child",
+    "Calls on the Council to adopt qualified majority voting when reforming the Dublin III Regulation, and when acting with regard to Article 78(2) of the TFEU",
+    "Deplores the fact that the Commission has still not published its Article 46 assessment report; calls on the Commission to ensure that the Dublin III Regulation is implemented more effectively"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 532 in favour, 110 against, 52 abstained. Result derived from the totals."
@@ -2821,5 +2825,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0245/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0245_EN.html"
+  }
 }

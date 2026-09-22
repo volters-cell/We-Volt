@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to better implement the ‘polluter pays’ principle",
+    "Calls on the Commission to extend the Marine Strategy Framework Directive to the outermost regions",
+    "Calls on the Commission to increase the awareness of maritime operators in all their potential interactions with the marine environment, in particular during the sale or leasing of ships"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 646 in favour, 3 against, 39 abstained. Result derived from the totals."
@@ -2795,5 +2799,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0030/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0030_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to present an EU framework on minimum income",
+    "Calls on the Member States to swiftly transpose and fully implement the Work-Life Balance Directive[77]",
+    "Calls on the Commission to set out an EU-level response to extend support to women-led SMEs during and after the crisis"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 365 in favour, 118 against, 208 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0006/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0006_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to swiftly come forward with a new draft in full compliance with the REACH Regulation",
+    "Calls on the Commission to withdraw its draft implementing decision and to submit a new draft to the committee",
+    "Calls on RAC and SEAC to swiftly assess the resulting complemented application, including a proper check that it includes all the necessary information specified in Article 62 of the REACH Regulation"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 325 in favour, 325 against, 35 abstained. Result derived from the totals."
@@ -2780,5 +2784,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0202/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0202_EN.html"
+  }
 }

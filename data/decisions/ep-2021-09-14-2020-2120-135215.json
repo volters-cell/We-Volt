@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to take account of the ORs in the Atlantic macro-regional strategy by including topics relevant to them",
+    "Urges the Commission to increase the budgets allocated to campaigns to promote and raise awareness and appreciation of EU quality schemes, particularly:",
+    "Calls on the Commission to carry out a study measuring the cumulative impact of trade agreements with third countries on the socio-economic development of the ORs"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 614 in favour, 20 against, 59 abstained. Result derived from the totals."
@@ -2812,5 +2816,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0241/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0241_EN.html"
+  }
 }

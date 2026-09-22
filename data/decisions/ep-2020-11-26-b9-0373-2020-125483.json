@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0373/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to adopt guidelines for Member States to ensure equal access to SRHR goods and services in line with EU law and the jurisprudence of the ECtHR"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 455 in favour, 145 against, 71 abstained. Result derived from the totals."
@@ -2732,5 +2734,9 @@
   "countries": {},
   "topics": [
     "Poland"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0373/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0373_EN.html"
+  }
 }

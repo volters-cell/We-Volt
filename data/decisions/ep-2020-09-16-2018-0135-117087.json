@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates, therefore, that the reform and introduction of new own resources as from 2021 is a pre-requisite for Parliament’s consent to the next MFF",
+    "Recalls the importance of using own resources to achieve the European Union's political objectives, in particular to address the global challenges of climate change, social equity and digitalization"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 455 in favour, 146 against, 88 abstained. Result derived from the totals."
@@ -2799,5 +2802,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0146/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0146_EN.html"
+  }
 }

@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the ECB to continue its fruitful cooperation also with the non-euro area Member States",
+    "Calls on the ECB to continue its efforts to ensure the stability of financial markets for all possible contingencies related to the withdrawal of the United Kingdom from the EU",
+    "Welcomes the fact that the purchases of green bonds and their share of the ECB’s portfolio continue to increase"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 533 in favour, 94 against, 63 abstained. Result derived from the totals."
@@ -2803,5 +2807,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0002/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0002_EN.html"
+  }
 }

@@ -16,9 +16,6 @@
   },
   "document": "B9-0235/2023",
   "summary": "",
-  "whatItMeans": [
-    "Believes that periods of caregiving in which the carer shifts to part-time working arrangements or gives up paid employment should count towards their pension contributions[14]"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 401 in favour, 139 against, 41 abstained. Result derived from the totals."
@@ -2372,9 +2369,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "B9-0235/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2023-0235_EN.html"
-  }
+  "countries": {}
 }

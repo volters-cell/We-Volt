@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the IMI 2 Joint Undertaking signed a total of 20 new grant agreements in 2018, bringing the total project portfolio to 119 (59 IMI Joint Undertaking + 60 IMI 2 Joint Undertaking projects)",
+    "Notes that in 2018 the IMI 2 Joint Undertaking’s leverage effect value was 0,99",
+    "Notes that, in 2018, three budget amendments were adopted by the IMI 2 Joint Undertaking’s governing board:"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 633 in favour, 22 against, 38 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0046/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0046_EN.html"
+  }
 }

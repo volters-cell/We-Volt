@@ -15,7 +15,10 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0088/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Agency had an acting director-general between January and March 2019 and that, following appointment by the Commission, a new director-general has been in charge since April 2019",
+    "Notes that on 31 December 2019, the establishment plan was 100 % filled, with 17 Commission officials appointed out of 17 authorised posts in the establishment plan (compared to 25 authorised posts in 2018)"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 631 in favour, 56 against, 4 abstained. Result derived from the totals."
@@ -2812,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0088/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0088_EN.html"
+  }
 }

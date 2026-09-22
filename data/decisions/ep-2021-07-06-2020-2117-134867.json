@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to actively work within the WTO in order to promote multilateral rules for the sustainable management of global value chains, including mandatory supply chain due diligence",
+    "Welcomes the Trade Policy Review’s affirmation of multilateralism and the extensive proposals made for the necessary in-depth WTO reform across all its functions",
+    "Welcomes the Commission’s guidelines on screening foreign direct investment, to guard against a predatory takeover of a weakened EU enterprise as a result of the pandemic"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 509 in favour, 63 against, 120 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0190/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0190_EN.html"
+  }
 }

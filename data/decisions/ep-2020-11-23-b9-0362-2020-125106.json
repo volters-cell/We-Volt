@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0362/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to continue its efforts to improve and support EU-wide cooperation and coordination among and with Member States during the pandemic"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 619 in favour, 45 against, 28 abstained. Result derived from the totals."
@@ -2816,5 +2818,9 @@
   "countries": {},
   "topics": [
     "Migration"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0362/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0362_EN.html"
+  }
 }

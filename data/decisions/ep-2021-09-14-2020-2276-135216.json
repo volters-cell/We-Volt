@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to review the current strategy, given the serious shortcomings identified",
+    "Calls on the Commission to draw up, in collaboration with the International Maritime Organization, ambitious initiatives and a road map for ship decarbonisation based on an in-depth impact assessment",
+    "Calls on the Commission to draw up in collaboration with the International Maritime Organization (IMO) ambitious initiatives and a road map for ship decarbonisation based on an in-depth impact assessment"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 664 in favour, 8 against, 21 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0243/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0243_EN.html"
+  }
 }

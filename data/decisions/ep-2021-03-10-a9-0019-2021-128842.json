@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0019/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to minimise the risk of exporters to the EU trying to bypass the mechanism or compromise its effectiveness, for example by re-routing production between markets or exporting semi-finished goods",
+    "Stresses that any mechanism must create an incentive for industries in the EU and abroad to produce clean and competitive products and avoid carbon leakage, without endangering trade opportunities",
+    "Stresses that Least Developed Countries and Small Island Developing States should be given special treatment in order to take account of their specificities and the potential negative impacts of the CBAM on their development"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 444 in favour, 70 against, 181 abstained. Result derived from the totals."
@@ -2828,5 +2832,9 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0019/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0019_EN.html"
+  }
 }

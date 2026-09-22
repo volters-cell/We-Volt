@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to define 'systemic operators' on the basis of clear indicators",
+    "Calls on the Commission to ensure that platform operators make available complaint and redress mechanisms for users and that complaints are processed without undue delay",
+    "Urges that device neutrality be addressed, as it is only by means of its interaction with network neutrality that empowered consumer decisions can be facilitated end to end"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 571 in favour, 26 against, 94 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0181/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0181_EN.html"
+  }
 }

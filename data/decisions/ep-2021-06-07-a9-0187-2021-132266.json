@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0187/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets the lengthy process in such difficult circumstances and calls the Commission to accelerate the process of assessment, ensuring that the dismissed workers can benefit from the Union's support in a timely manner",
+    "Notes that according to the Commission all the procedural requirements were met",
+    "Stresses that the Dutch authorities have confirmed that the eligible actions will not receive assistance from other Union funds or financial instruments[9]"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 657 in favour, 32 against, 7 abstained. Result derived from the totals."
@@ -2832,5 +2836,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0187/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0187_EN.html"
+  }
 }

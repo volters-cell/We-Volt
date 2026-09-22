@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Council to swiftly adopt the Agreement",
+    "Calls on the Commission and the EEAS to formally report to Parliament on Vietnam’s commitment to making progress on a series of human rights issues, as referred to in its resolution of 17 December 2015[13]",
+    "Calls on the Commission and the EEAS to formally report to Parliament on Vietnam’s commitment to making progress on a series of human rights issues, as referred to in Parliament’s resolution of 17 December 2015[11]"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 416 in favour, 187 against, 44 abstained. Result derived from the totals."
@@ -2632,5 +2636,9 @@
   "topics": [
     "Vietnam",
     "Trade"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0017/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0017_EN.html"
+  }
 }

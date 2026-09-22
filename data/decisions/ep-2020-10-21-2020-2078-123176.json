@@ -15,7 +15,9 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Recalls the specific need to foster upward convergence and sustainable growth within the EU and in particular the euro area"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 218 in favour, 435 against, 33 abstained. Result derived from the totals."
@@ -2787,5 +2789,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0193/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0193_EN.html"
+  }
 }

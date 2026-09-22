@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0338/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and Member States to expand the scope of hate speech to include sexist hate speech",
+    "Urges the Commission to use the upcoming directive to criminalise gender-based cyberviolence, as a cornerstone for the harmonisation of existing and future legal acts",
+    "Calls on the Commission and Member States to ensure a proper application of the Directive 2011/93/EU in order to raise awareness and reduce the risk of children becoming victims of online sexual abuse or exploitation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 513 in favour, 122 against, 58 abstained. Result derived from the totals."
@@ -2820,5 +2824,9 @@
   "countries": {},
   "topics": [
     "Gender equality"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0338/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0338_EN.html"
+  }
 }

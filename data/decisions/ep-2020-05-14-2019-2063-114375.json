@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the targeted initiatives by the EDPS to lower the environmental footprint of the institution; encourages the EDPS to put in place a concrete action plan to lower its environmental footprint",
+    "Welcomes the annual report published by the EDPS in February 2019; appreciates the insights given therein on all EDPS activities in 2018; highlights in particular its cooperation with the new European Data Protection Board",
+    "Takes note of the fact that, according to the annual activity report of the EDPS, the Court has examined one transaction from the financial year 2018 and this examination did not give rise to any observation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 628 in favour, 56 against, 8 abstained. Result derived from the totals."
@@ -2811,5 +2815,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0029/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0029_EN.html"
+  }
 }

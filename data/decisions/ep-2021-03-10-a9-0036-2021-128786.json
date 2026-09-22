@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0036/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to ensure effective climate and biodiversity mainstreaming and proofing across EU spending and programmes on the basis of technical screening criteria developed under Regulation (EU) 2020/852",
+    "Supports the Commission’s guidance to Member States to include in their RRPs investments and reforms in flagship areas that are in line with the EU’s objective of just climate and digital transitions",
+    "Underlines that sustainable fiscal policy is crucial for a sustainable financing model for the European Green Deal"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 641 in favour, 37 against, 16 abstained. Result derived from the totals."
@@ -2824,5 +2828,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0036/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0036_EN.html"
+  }
 }

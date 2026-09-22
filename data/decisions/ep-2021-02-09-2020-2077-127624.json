@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Commission to develop EPR schemes that hold producers accountable for the end-of-life of plastic products",
+    "Calls on the Commission to consider the distinction between avoidable waste and unavoidable losses due to unforeseen circumstances",
+    "Calls on the Commission and the Member States to invest in new circular economy initiatives in order to develop better infrastructure for the circular economy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 574 in favour, 22 against, 95 abstained. Result derived from the totals."
@@ -2804,5 +2808,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0008/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0008_EN.html"
+  }
 }

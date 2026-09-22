@@ -16,9 +16,6 @@
   },
   "document": "B9-0338/2022",
   "summary": "",
-  "whatItMeans": [
-    "Considers that the technical screening criteria proposed in the Commission delegated regulation do not respect Article 3 of Regulation (EU) 2020/852"
-  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 278 in favour, 328 against, 33 abstained. Result derived from the totals."
@@ -2612,9 +2609,5 @@
   "countries": {},
   "topics": [
     "Climate"
-  ],
-  "whatItMeansFrom": {
-    "reference": "B9-0338/2022",
-    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0338_EN.html"
-  }
+  ]
 }

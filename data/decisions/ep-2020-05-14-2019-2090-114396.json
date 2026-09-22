@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets in this context the rejection of a proposal to investigate the Danske Bank money laundering case",
+    "Notes that the Authority has participated in several inter-institutional procurement procedures with Commission DGs and with other agencies",
+    "Recalls the importance of supervising the financial sector, which is a necessary and truly effective instrument in combating tax fraud and money laundering"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 607 in favour, 81 against, 5 abstained. Result derived from the totals."
@@ -2815,5 +2819,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0060/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2020-0060_EN.html"
+  }
 }

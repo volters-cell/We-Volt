@@ -15,7 +15,11 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=B9-0242/2020"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to coordinate cooperation on schemes aimed at avoiding improper disposal of pharmaceuticals",
+    "Calls on the Member States to establish, widely promote and fully enforce provisions for take-back schemes for unused medicines",
+    "Calls on the Commission and the Member States to promote vaccination as a disease prevention measure, so as to minimise the need for pharmaceuticals"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 308 in favour, 374 against, 8 abstained. Result derived from the totals."
@@ -2808,5 +2812,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0242/2020",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2020-0242_EN.html"
+  }
 }

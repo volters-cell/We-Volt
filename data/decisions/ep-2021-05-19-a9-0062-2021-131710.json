@@ -15,7 +15,9 @@
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=A9-0062/2021"
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines the numerous benefits of increasing energy efficiency efforts such as reduced dependency on energy imports, lower consumption bills, increased industrial competitiveness, and overall climate and environment benefits"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 542 in favour, 111 against, 42 abstained. Result derived from the totals."
@@ -2828,5 +2830,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0062/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0062_EN.html"
+  }
 }

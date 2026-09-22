@@ -16,9 +16,6 @@
   },
   "document": "A9-0091/2023",
   "summary": "",
-  "whatItMeans": [
-    "Stresses that EU civilian crisis management makes important contributions to international peace and security, and plays a key role in implementing the EU’s Integrated Approach to External Conflicts and Crises"
-  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 493 in favour, 81 against, 66 abstained. Result derived from the totals."
@@ -2608,9 +2605,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A9-0091/2023",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0091_EN.html"
-  }
+  "countries": {}
 }
