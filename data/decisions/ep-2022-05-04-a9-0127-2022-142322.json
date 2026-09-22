@@ -2625,5 +2625,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on the central office of the European Schools to follow up on the recommendations from the Court",
+    "Calls on the Commission to follow up all errors found by the Court and to request additional financial corrections, where deemed necessary",
+    "Urges the European Schools to swiftly follow up on the recommendations of the Court concerning the specific weakness found in procurement and recruitment"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0127/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0127_EN.html"
+  }
 }

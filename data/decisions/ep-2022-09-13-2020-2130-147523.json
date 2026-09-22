@@ -2549,5 +2549,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Considers that the requested proposal will not have financial implications"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0218/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0218_EN.html"
+  }
 }

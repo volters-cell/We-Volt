@@ -2617,5 +2617,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that there are different procedures across Joint Undertakings regarding the calculation for the in-kind contributions and calls for their harmonisation",
+    "Notes that, by the end of 2020, according to its annual activity report, the Joint Undertaking had 23 staff members from 10 Member States (26 % men and 74 % women)",
+    "Notes that, as regards the Joint Undertaking’s 2020 budget available for Horizon 2020 projects, the implementations rates for commitment and payment appropriations were 100 % and 85 % respectively"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0074/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0074_EN.html"
+  }
 }

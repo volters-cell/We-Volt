@@ -2817,5 +2817,14 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the fact that the debate on the future of the EU economic governance framework has already begun",
+    "Welcomes the progress made so far in the reduction of non-performing loans (NPLs); calls for the introduction of adequate legal protection from repossession for mortgage holders at EU level",
+    "Welcomes the fact that the ECB is preparing to align its corporate asset purchase programmes with the Paris Agreement, with a view to reducing the carbon intensity of its portfolio, but warns against delays"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0351/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0351_EN.html"
+  }
 }

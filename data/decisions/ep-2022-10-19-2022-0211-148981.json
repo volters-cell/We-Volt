@@ -2532,5 +2532,12 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Takes note of Draft amending budget No 4/2022 as submitted by the Commission"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0240/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0240_EN.html"
+  }
 }

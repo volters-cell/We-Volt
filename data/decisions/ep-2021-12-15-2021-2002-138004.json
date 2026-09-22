@@ -15,7 +15,10 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets the lack of genuine political will among parts of the local political elites to fight organised crime and corruption and eliminate any elements of state capture",
+    "Believes that the Western Balkan partners should actively engage in the Conference on the Future of Europe and should be included in a broader European debate on tackling organised crime"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 531 in favour, 48 against, 117 abstained. Result derived from the totals."
@@ -2828,5 +2831,9 @@
   "topics": [
     "Western Balkans",
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0298/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0298_EN.html"
+  }
 }

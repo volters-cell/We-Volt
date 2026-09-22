@@ -2333,5 +2333,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Regrets that three Member States have not yet ratified the amended European Union electoral law adopted in 2018",
+    "Welcomes the adoption of the new Statute of the European Ombudsman, following Parliament’s initiative, which ensures that the Statute is consistent with the Treaty of Lisbon",
+    "Emphasises and regrets that Parliament, despite being the only directly elected EU institution, does not have a general direct right of initiative"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0142/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0142_EN.html"
+  }
 }

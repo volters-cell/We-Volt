@@ -2553,5 +2553,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges all the parties to prohibit the trade in totoaba completely",
+    "Calls on Hong Kong and China to step up their border controls to stop imports of totoaba, mainly destined for China",
+    "Calls on the Commission and Member States to require increased transparency and improved management of ivory stocks and stockpiles, and encourage their destruction"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0414/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0414_EN.html"
+  }
 }

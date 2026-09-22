@@ -2598,5 +2598,14 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the approvals for substances if proof or reasonable doubt exists that they will not meet the safety criteria laid down in Regulation (EC) No 1107/2009",
+    "Considers that Implementing Regulation (EU) 2022/1480 exceeds the implementing powers provided for in Regulation (EC) No 1107/2009",
+    "Considers that Implementing Regulation (EU) 2022/1480 is not consistent with Union law in that it does not respect the precautionary principle"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0460/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0460_EN.html"
+  }
 }

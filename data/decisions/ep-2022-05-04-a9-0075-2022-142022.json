@@ -2597,5 +2597,13 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that the FCH2 used the eProcurement solution for open procurement procedures in 2020 and that in addition, in 2020, FCH 2 migrated to EU Sign",
+    "Notes that the implementation rate of the budget available for Horizon 2020 projects for commitments and payments appropriations was 97 % in each case"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0075/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0075_EN.html"
+  }
 }

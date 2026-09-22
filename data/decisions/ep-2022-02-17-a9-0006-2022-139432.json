@@ -2842,5 +2842,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0006/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0006_EN.html"
+  }
 }

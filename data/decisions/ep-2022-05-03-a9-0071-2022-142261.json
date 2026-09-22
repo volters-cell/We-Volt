@@ -2598,5 +2598,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to link the issue of religious freedom with trade treaties concluded between the EU and its external partners",
+    "Condemns the human rights violations, sexual abuse, sectarianism and financial misconduct carried out by religious missions and leaders in several developing countries",
+    "Notes that churches and other institutions of belief and religion, FBOs and religious associations can play an important role in mediating peace and contributing to social cohesion and stability"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0071/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0071_EN.html"
+  }
 }

@@ -2568,5 +2568,12 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeans": [
+    "Believes that the certification and control mechanisms must be more suited to the reality on the ground for organic farmers and the process must be simplified, including through IT solutions"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0126/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0126_EN.html"
+  }
 }

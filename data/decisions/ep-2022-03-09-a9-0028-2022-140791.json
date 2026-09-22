@@ -2774,5 +2774,13 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Requests the Commission to ensure and uphold the high regulatory standards for both CBI and RBI schemes in case a comprehensive regulation would apply to RBI schemes before the complete phase-out of CBI schemes",
+    "Considers that Union citizenship is not a commodity that can be marketed or sold and has never been conceived as such in the Treaties"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0028/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0028_EN.html"
+  }
 }

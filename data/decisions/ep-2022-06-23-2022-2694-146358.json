@@ -2428,5 +2428,14 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on EFSA to request data on the impact of the consumption of food and feed derived from GM plants on the intestinal microbiome",
+    "Considers that the draft Commission implementing decision exceeds the implementing powers provided for in Regulation (EC) No 1829/2003"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0328/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0328_EN.html"
+  }
 }

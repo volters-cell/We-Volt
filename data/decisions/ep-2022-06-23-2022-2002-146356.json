@@ -2417,5 +2417,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to anticipate the next UN Agenda after 2030 with a roadmap of targets and measures to plan the next sustainable developments goals",
+    "Stresses the need to finance trainings for capacity building for SMEs in order to learn how to implement the SDGs in their daily activities",
+    "Stresses the urgency of increasing ambition and action in relation to mitigation, adaptation and finance in this critical decade to address gaps between Member States on environmental issues"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0174/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0174_EN.html"
+  }
 }

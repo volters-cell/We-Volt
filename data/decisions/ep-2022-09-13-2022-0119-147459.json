@@ -2464,5 +2464,12 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Regrets that EUR 183 million intended for the purchase of COVID-19 vaccines in 2021 were not spent as planned by the Commission or redirected to other needs"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0226/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0226_EN.html"
+  }
 }

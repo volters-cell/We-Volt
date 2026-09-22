@@ -2325,5 +2325,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the EIB to make full use of its toolkit to combat tax avoidance for projects financed in non-EU countries",
+    "Calls on the EIB to continue supporting the achievement of the UN Sustainable Development Goals through its activities falling under specific mandates decided by the Council and Parliament",
+    "Calls on the EIB to continue to prioritise investments in health infrastructure, personnel training and the quality of national health services in order to reduce inequalities between countries"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0173/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0173_EN.html"
+  }
 }

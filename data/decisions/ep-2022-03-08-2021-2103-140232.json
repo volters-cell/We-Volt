@@ -2825,5 +2825,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges the Commission, in particular, to create a European civic space index for monitoring civic space in the Member States",
+    "Calls on the Member States to identify tools to promote and encourage civil society action, especially in the context of the COVID-19 pandemic",
+    "Urges the Commission to ensure that EU funds are only awarded to organisations that are strictly independent from any government and fully adhere to EU values"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0032/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0032_EN.html"
+  }
 }

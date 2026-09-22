@@ -2573,5 +2573,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Stresses its importance, autonomy and added value in its field of expertise",
+    "Stresses the Foundation’s importance, autonomy and added value in its field of expertise",
+    "Notes that in September 2020 the Foundation signed up to a Parliament initiative providing a Green Public Procurement Helpdesk for assistance in sustainable procurement"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0109/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0109_EN.html"
+  }
 }

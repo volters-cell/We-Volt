@@ -2274,5 +2274,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes the conclusions of the Conference of 9 May 2022",
+    "Points out, especially following the most recent crises, that the Treaties need to be amended urgently to make sure the Union has the competence to take more effective action during future crises",
+    "Notes that several of the Conference proposals require amendments to the Treaties, and that Parliament’s Committee on Constitutional Affairs shall prepare proposals for Treaty amendments accordingly"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0307/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0307_EN.html"
+  }
 }

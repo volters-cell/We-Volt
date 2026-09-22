@@ -2589,5 +2589,14 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the EEA’s decision to strengthen its commitment to move from climate-friendly to climate-neutral operations in line with the Union’s increased climate targets",
+    "Welcomes the Agency’s decision to strengthen its commitment to move from climate-friendly to climate-neutral operations in line with the Union’s increased climate targets",
+    "Welcomes that the Court of Auditors has stated that it has obtained reasonable assurances that the EEA's annual accounts for 2020 are reliable and that the underlying transactions are legal and regular"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0113/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0113_EN.html"
+  }
 }

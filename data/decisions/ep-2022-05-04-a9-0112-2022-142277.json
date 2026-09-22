@@ -2605,5 +2605,14 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the Agency’s efforts to strengthen, clarify and speed up the process for approving and reviewing active substances with biocidal effect under the Active Substances Action Plan",
+    "Welcomes the Agency’s efforts to strengthen, clarify and speed up the process for approving and reviewing active substances with a biocidal effect under the Active Substances Action Plan",
+    "Welcomes the Agency’s decision to become climate-neutral in line with the Union’s 2030 climate target and its ambition to extend environmental certification to the Union’s eco-management and audit scheme"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0112/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0112_EN.html"
+  }
 }

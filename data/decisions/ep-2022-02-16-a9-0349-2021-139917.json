@@ -2830,5 +2830,13 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes the Commission’s evaluation report on the TSD, aiming at assessing its functioning since its entry into force",
+    "Stresses the need to develop ambitious standards for adaptive toys, which allow children with disabilities to enjoy and interact with toys they may not otherwise be able to"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0349/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0349_EN.html"
+  }
 }

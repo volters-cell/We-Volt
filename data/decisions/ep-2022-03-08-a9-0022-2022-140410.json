@@ -2813,5 +2813,14 @@
   "countries": {},
   "topics": [
     "Disinformation"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on the Commission to put forward an overarching media and information literacy strategy with a special focus on combating information manipulation",
+    "Calls on the Commission to review EU investments in NSO Group Technologies and to adopt targeted measures against foreign states using software to spy on EU citizens or persons benefiting from refugee status in EU countries",
+    "Underlines the need to strengthen permanent monitoring efforts while reinforcing them well ahead of elections, referendums or other important political processes across Europe"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0022/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0022_EN.html"
+  }
 }

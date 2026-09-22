@@ -2785,5 +2785,14 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "whatItMeans": [
+    "Requests that the Commission submit by 2022/2023 one or more legislative proposals following the recommendations set out in the Annex hereto",
+    "Welcomes the start of operations by the EPPO in June 2021",
+    "Welcomes the actions undertaken by the Commission in the area of prevention and resolution of double VAT taxation disputes"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0024/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0024_EN.html"
+  }
 }

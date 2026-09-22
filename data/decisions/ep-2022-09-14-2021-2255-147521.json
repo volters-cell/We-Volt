@@ -2461,5 +2461,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to allow Parliament to be more closely involved in the relevant NEB bodies such as the high-level roundtable",
+    "Calls on the Commission to ensure good governance, transparency and accountability towards relevant stakeholders for all NEB projects",
+    "Calls on the Member States to introduce aid for young people and families to enable them to find housing, taking into account their needs"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0213/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0213_EN.html"
+  }
 }

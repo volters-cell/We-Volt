@@ -2816,5 +2816,12 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the increase in support for young farmers in the next Common Agricultural Policy"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0091/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0091_EN.html"
+  }
 }

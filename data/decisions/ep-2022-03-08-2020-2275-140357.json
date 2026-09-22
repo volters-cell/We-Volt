@@ -2825,5 +2825,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the EU institutions to address the challenges faced by vulnerable groups of people who are underrepresented and unable to have their issues addressed, and to involve them in decision-making",
+    "Recalls that only a few successful ECIs have received adequate follow-up by the Commission",
+    "Stresses the need for permanent participatory mechanisms that enable citizens to participate in EU decision-making"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0018/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0018_EN.html"
+  }
 }

@@ -2569,5 +2569,13 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to ensure effective and enforceable rights to administrative and judicial redress, and effective remedy for all data subjects, meaning any person whose data is processed under this agreement",
+    "Underlines that the agreement explicitly clarifies that Interpol will not have reciprocal direct or indirect access to EU databases"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0200/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0200_EN.html"
+  }
 }

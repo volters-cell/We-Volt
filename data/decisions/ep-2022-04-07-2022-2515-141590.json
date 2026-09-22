@@ -2145,5 +2145,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission and Member States to develop financial incentives for repair services to make repairs convenient and attractive to consumers",
+    "Calls on the Commission to study the feasibility of introducing a joint manufacturer-seller liability mechanism in the event of product non-conformity",
+    "Calls on the Commission to assess to what extent the right to repair could be proposed so that market operators may offer easy and affordable access to repairs even beyond the guarantee period"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0175/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0175_EN.html"
+  }
 }

@@ -2601,5 +2601,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the fact that the Joint Undertaking started using the e-procurement solution at the beginning on 2021",
+    "Welcomes the fact that the Undertaking was not subject to an investigation led by the European Anti-Fraud Office (OLAF) in 2020",
+    "Welcomes the fact that the Joint Undertaking was not subject to an investigation led by the European Anti-Fraud Office (OLAF) in 2020"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0073/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0073_EN.html"
+  }
 }

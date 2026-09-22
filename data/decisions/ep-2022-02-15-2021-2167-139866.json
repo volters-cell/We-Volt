@@ -2805,5 +2805,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges the Commission to investigate the use of ESI Funds which were allocated for the construction of institutional care facilities for persons with disabilities in Hungary and Portugal",
+    "Calls on the Ombudsman to continue her work to ensure the timely publication of the names of all EU officials involved in ‘revolving door’ cases and to guarantee full transparency with regard to all related information",
+    "Welcomes the Ombudsman’s efforts to improve public participation in the EU decision-making process"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0342/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0342_EN.html"
+  }
 }

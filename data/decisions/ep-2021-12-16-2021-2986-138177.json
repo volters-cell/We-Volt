@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to provide sufficient instruments for dealing with cases of harassment, avoiding secondary victimisation and ensuring timely responses when reviewing the EU Staff Regulations",
+    "Calls on all EU institutions and agencies to regularly exchange their best practices in tackling harassment, including anti-harassment policies, guidelines or any new provisions on how to deal with it",
+    "Welcomes the adoption of the European Parliament’s Gender Action Plan in 2020 and the roadmap for its implementation in 2021"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 516 in favour, 86 against, 75 abstained. Result derived from the totals."
@@ -2748,5 +2752,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B9-0587/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2021-0587_EN.html"
+  }
 }

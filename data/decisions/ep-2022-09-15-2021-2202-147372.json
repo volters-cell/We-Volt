@@ -2373,5 +2373,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to carry out an in-depth analysis of the socio-economic circumstances of cross-border SMEs, gathering specific assessments and comparative statistics",
+    "Welcomes the communication published by the Commission in 2021 entitled ‘EU border regions: living labs of European integration’, which includes detailed information on the barriers faced by border regions in the EU",
+    "Stresses the crucial role that investments in high quality public services have on building social resilience and coping with economic, health and social crises"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0222/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0222_EN.html"
+  }
 }

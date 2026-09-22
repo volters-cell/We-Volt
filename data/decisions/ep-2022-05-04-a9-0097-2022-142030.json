@@ -2601,5 +2601,12 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that the Agency needs more staff and resources, primarily for implementing its tasks related to wholesale energy market integrity and transparency and for monitoring unprecedentedly increased energy market transactions"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0097/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0097_EN.html"
+  }
 }

@@ -2309,5 +2309,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to set ambitious and binding quantitative and qualitative targets at EU level for the reduction of administrative burdens, as soon as possible after concluding an impact assessment",
+    "Calls on the Commission to ensure the effectiveness and good functioning of the Regulatory Scrutiny Board (RSB) by ensuring it has a majority of external experts and support from the Joint Research Centre",
+    "Calls on the Commission to guarantee a balanced representation of large and small companies, expertise and sectors in all relevant bodies and committees associated with EU policymaking, including on the RSB"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0167/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0167_EN.html"
+  }
 }

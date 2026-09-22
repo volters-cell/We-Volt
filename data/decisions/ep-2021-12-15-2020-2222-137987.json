@@ -15,7 +15,11 @@
     "url": null
   },
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the delegation of powers to the Commission for the establishment, by means of a delegated act, of a scoreboard to closely monitor the implementation of the recovery and resilience plans of the Members States",
+    "Believes that data platforms can strengthen oversight mechanisms and enhance effective information sharing with other government departments",
+    "Recalls that the protection of the Union’s financial interests is of utmost importance and that continuous, strong efforts in this regard are necessary at all levels"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 553 in favour, 29 against, 115 abstained. Result derived from the totals."
@@ -2831,5 +2835,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0320/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0320_EN.html"
+  }
 }

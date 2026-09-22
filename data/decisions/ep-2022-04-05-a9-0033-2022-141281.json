@@ -2570,5 +2570,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to provide a guide to good practice on the recast Brussels IIa Regulation",
+    "Calls on the Commission and the Member States to continue to support existing networks of mediators in cross-border family disputes",
+    "Calls on the Member States to actively promote voluntary mediation in family matters concerning children, including through changes to legislation"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0033/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0033_EN.html"
+  }
 }

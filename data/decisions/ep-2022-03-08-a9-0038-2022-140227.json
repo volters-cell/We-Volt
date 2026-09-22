@@ -2837,5 +2837,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Stresses that the Spanish authorities have confirmed that the eligible actions do not receive assistance from other Union funds or financial instruments",
+    "Stresses that the Spanish authorities have confirmed that the eligible actions will not receive assistance from other Union funds or financial instrument",
+    "Reiterates that assistance from the EGF must not replace actions that are the responsibility of companies, by virtue of national law or collective agreements"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0038/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0038_EN.html"
+  }
 }

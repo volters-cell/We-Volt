@@ -2813,5 +2813,14 @@
   "countries": {},
   "topics": [
     "Animal welfare"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on all Member States to adopt stricter national measures to improve animal welfare during transport",
+    "Calls on the Member States to ensure that there are no gaps between the floor or vehicle wall and the partitions in transport vehicles",
+    "Calls on the Member States, moreover, to cooperate better in planning livestock transport in order to prevent excessive build-ups at border controls"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0057/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0057_EN.html"
+  }
 }

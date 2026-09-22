@@ -2617,5 +2617,13 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that in 2020 the IMI2 Joint Undertaking’s leverage effect was 1,01",
+    "Notes that the IMI Joint Undertaking utilisation rate for payment appropriations for the Seventh Framework Programme projects was 96 %"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0072/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0072_EN.html"
+  }
 }

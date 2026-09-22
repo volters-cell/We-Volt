@@ -2422,5 +2422,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to use the social component of the RRF to promote entrepreneurship and talent, focusing especially on young people, as a means of developing the single market",
+    "Urges Member States to launch public procurement for the implementation of measures in a timely fashion in order to ensure their completion in line with the calendar of milestones and targets",
+    "Calls on the Commission to present complementary indicators included in the thematic analysis of the scoreboard to track Member States’ performance on biodiversity and cohesion and competitiveness"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0171/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0171_EN.html"
+  }
 }

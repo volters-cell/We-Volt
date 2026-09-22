@@ -2560,5 +2560,12 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to ensure full transparency and public access regarding modelling and the underlying choices and assumptions made for estimating nitrogen emissions"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0176/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0176_EN.html"
+  }
 }

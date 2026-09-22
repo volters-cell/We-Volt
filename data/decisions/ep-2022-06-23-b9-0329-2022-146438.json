@@ -2390,5 +2390,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to allocate funding to the fight against illegal logging",
+    "Calls on all Member States to share best practices among law enforcement authorities in order to boost the fight against all related illegal practices",
+    "Calls on prosecutors, investigators, rangers and financial experts to join forces and pool expertise in order to swiftly and successfully detect, investigate and prosecute organised crime"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0329/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0329_EN.html"
+  }
 }

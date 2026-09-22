@@ -2606,5 +2606,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes the conclusions of the Conference as endorsed by the Conference Plenary on 30 April 2022",
+    "Stresses that the conclusions of the Conference show the urgent need for the EU to play a leading role in addressing climate change, protecting biodiversity and promoting sustainability",
+    "Points out that the most recent crises call for common European solutions; believes that the Conference represented a unique opportunity to provide the EU with forward-looking proposals in this regard"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0228/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0228_EN.html"
+  }
 }

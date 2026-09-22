@@ -2026,5 +2026,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Parliament to conduct regular assessments of Parliament Secretariat's organisation and personnel needs, to reallocate vacant posts between directorates in order to carry out new tasks at constant staffing levels",
+    "Welcomes Parliament’s policy aiming to ensure the fully independent use of Parliament buildings by persons with disabilities and supports further measures and adaptions that will be necessary in this regard",
+    "Recalls for a dedicated service for seniors highlighting Union programmes and policies that benefit active ageing"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0087/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0087_EN.html"
+  }
 }

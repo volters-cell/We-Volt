@@ -2545,5 +2545,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to make 2024 the European Year of Islands",
+    "Calls on the Commission to take into consideration the allocation of the budget based on GDP per capita in order to cover all the disparities between islands",
+    "Calls on the Commission to study the options available for earmarking POSEI funding and EAFRD aid for agricultural and livestock farmers affected by natural disasters in the outermost regions"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0144/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0144_EN.html"
+  }
 }

@@ -2609,5 +2609,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the fact that the Joint Undertaking used the eProcurement solution for its open procurement procedures in 2020",
+    "Welcomes the Undertaking's implementation of the Commission’s internal control framework (ICF) based on 17 internal control principles in 2020",
+    "Welcomes the fact that the Undertaking attained a rate of implementation of 97.4 % for the commitment appropriations and 88.1 % for the payment appropriations"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0070/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0070_EN.html"
+  }
 }

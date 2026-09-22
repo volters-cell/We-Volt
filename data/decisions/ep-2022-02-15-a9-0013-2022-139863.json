@@ -2821,5 +2821,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Points out that 13,5 % of the targeted beneficiaries are above 54, and 74,7 % of them are between 30 and 54 years old",
+    "Considers that those personalised services should last for a relevant period of time according to the nature of the project",
+    "Stresses that the French authorities have confirmed that the eligible actions do not receive assistance from other Union funds or financial instrument"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0013/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0013_EN.html"
+  }
 }

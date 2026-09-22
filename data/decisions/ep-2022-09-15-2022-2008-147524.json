@@ -2289,5 +2289,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to develop a comprehensive European tourism policy in view of creating a European Tourism Union",
+    "Requests that the Commission establish and operate an online platform for collaboration between stakeholders in order to further promote the co-creation process",
+    "Calls on the Commission to promote the transfer of environmental technologies to developing countries in order to facilitate the green transition on a global scale"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0214/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0214_EN.html"
+  }
 }

@@ -2093,5 +2093,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges greater use of the EU Copernicus observation programme to detect discrepancies between declared and actually cultivated parcels",
+    "Calls on the Commission to increase the weight of the political aspect of its evaluation processes, in particular as regard possible conflicts of interest resulting from revolving doors",
+    "Notes with satisfaction that certain cases concerned by the aforementioned Commission report have recently qualified as falling within the remit of the EPPO"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0039/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0039_EN.html"
+  }
 }

@@ -2818,5 +2818,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Recalls that, as per Article 50(2) TEU, withdrawal agreements are to take account of the framework for the withdrawing state’s future relationship with the Union",
+    "Notes that in this respect, the exit procedure provided for in Article 50 TEU has led both the EU and its Member States to reaffirm the Union’s constitutional identity",
+    "Notes that the Withdrawal Agreement included a provision for early agreements on the future EU-UK relationship in the area of Common Foreign and Security Policy and CSDP"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0357/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0357_EN.html"
+  }
 }

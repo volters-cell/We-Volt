@@ -2777,5 +2777,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes the Commission’s renewed focus on respect for the rule of law in the Member States"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0019/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0019_EN.html"
+  }
 }

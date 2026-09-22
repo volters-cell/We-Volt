@@ -2325,5 +2325,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to provide for proper legal protection for investigative journalists along the lines of that provided for whistleblowers",
+    "Urges the Commission to extend the scope of EDES to include the funds under shared management in the context of the revision of the Financial Regulation[19]",
+    "Notes that the number of expenditure irregularities reported as non-fraudulent in 2020 was 6 696"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0175/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0175_EN.html"
+  }
 }

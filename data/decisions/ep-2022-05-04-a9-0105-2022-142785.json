@@ -2601,5 +2601,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that the time-to-pay has improved in 2020 to 17,5 days on average, compared to 18,5 in 2019",
+    "Notes that the Foundation has developed and implemented its own anti-fraud strategy elaborated using the methodology developed by OLAF",
+    "Notes that the Foundation published all the declarations of conflict of interest and CVs for management board members, and senior and middle managers"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0105/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0105_EN.html"
+  }
 }

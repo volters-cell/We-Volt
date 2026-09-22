@@ -2431,5 +2431,12 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeans": [
+    "Considers that new antimicrobials developed for human use should not be subject to that derogation"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0327/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0327_EN.html"
+  }
 }

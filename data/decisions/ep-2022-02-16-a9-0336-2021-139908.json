@@ -2821,5 +2821,14 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "whatItMeans": [
+    "Insists that all measures taken by the EU should be consistent with the principles of the World Trade Organization and never violate them in any circumstances",
+    "Calls on the Commission and Member States to adopt handy, concise, and ready-to-use tools for national authorities to address incorrect practices and violations and enforce internal market rules",
+    "Calls on the Commission to use the resources of the single market programme to strengthen the single market’s governance and improve its functioning, in particular with regard to non-tariff barriers"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0336/2021",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2021-0336_EN.html"
+  }
 }

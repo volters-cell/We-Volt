@@ -2613,5 +2613,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Deplores the high number of members on the board, which does not facilitate decision-making and simplified management",
+    "Welcomes the signature of an interinstitutional framework contract by the Centre for the purchase of electricity from a green source",
+    "Welcomes the fact that the European Court of Auditors, in its report on the Centre’s annual accounts for 2020, confirms the legality and regularity of the revenue and payments underlying the Centre’s accounts"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0095/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2022-0095_EN.html"
+  }
 }

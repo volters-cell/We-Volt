@@ -2577,5 +2577,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Points out that programmes and instruments such as Erasmus Plus and the Youth Guarantee give opportunities to young people from disadvantaged backgrounds and Roma people and their organisations"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0413/2022",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2022-0413_EN.html"
+  }
 }
