@@ -325,4 +325,15 @@ assert.deepEqual(
   ['Calls on Member States to maintain their ports open to NGO vessels'],
   'the closing formula is dropped and the demand kept');
 
+/* A paragraph ending on a colon opens a list and says nothing without it.
+   Sorting by length put those at the very top, which is how "Calls on the
+   Commission and the agencies to:" became a summary of a vote. */
+assert.deepEqual(bulletsFrom('4. Calls on the Commission and the agencies to:'), [],
+  'the opening line of a list is not a bullet');
+assert.deepEqual(bulletsFrom('7. Calls on the EIB to implement the recommendations, namely'), [],
+  'and neither is a sentence that trails off into one');
+assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively combat child poverty;'),
+  ['Calls on the Member States to effectively combat child poverty'],
+  'a complete short sentence is exactly what is wanted');
+
 console.log('import.test.mjs: ok');

@@ -70,6 +70,18 @@ function rank(text) {
 const SHORTEST = 45;
 const LONGEST = 230;
 
+/* A paragraph that ends on a colon is the opening of a list, and everything
+   it asks for is in the indented items below it. "Calls on the Commission and
+   the agencies to:" is 44 characters and says nothing at all — and sorting by
+   length put exactly those at the top of the page. Complete sentences only. */
+export function isDangling(text) {
+  const body = String(text || '').trim();
+  /* The colon only. Every operative paragraph the Parliament writes ends on a
+     semicolon — it is how they are separated — so testing for one rejected
+     every paragraph in existence, which the tests caught at once. */
+  return /:$/.test(body) || /\b(namely|as follows|the following)$/i.test(body);
+}
+
 export function operativeParagraphs(text) {
   const lines = String(text || '').split('\n');
   const found = [];
@@ -84,6 +96,8 @@ export function operativeParagraphs(text) {
     if (!body || seen.has(body)) return;
     // What the Parliament does with the paper is not what the vote asks for.
     if (isProcedural(body)) return;
+    // Nor is the opening line of a list a thing anybody can read on its own.
+    if (isDangling(body)) return;
     seen.add(body);
     found.push({ text: body, order: number, rank: rank(trimmed) });
   });

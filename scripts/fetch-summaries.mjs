@@ -29,7 +29,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { documentPath } from './lib/portal.mjs';
-import { bulletsFrom, isProcedural } from './lib/operative.mjs';
+import { bulletsFrom, isProcedural, isDangling } from './lib/operative.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -76,7 +76,9 @@ if (TIDY) {
     const record = JSON.parse(await readFile(file, 'utf8'));
     const had = record.whatItMeans || [];
     if (!had.length) continue;
-    const keep = had.filter(function (line) { return !isProcedural(line); });
+    const keep = had.filter(function (line) {
+      return !isProcedural(line) && !isDangling(line);
+    });
     if (keep.length === had.length) continue;
     if (keep.length) { record.whatItMeans = keep; trimmed += 1; }
     else { delete record.whatItMeans; delete record.whatItMeansFrom; emptied += 1; }
