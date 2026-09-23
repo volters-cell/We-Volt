@@ -127,7 +127,8 @@
   function EUMap(container, geo, handlers) {
     this.container = container;
     this.handlers = handlers || {};
-    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12);
+    // The map a reader explores is the one place with room for an inset.
+    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12, { insets: true });
     this.shapes = {};
     this.selected = null;
     this.hovered = null;
@@ -186,6 +187,28 @@
         });
         outside.addEventListener('mousemove', function (event) { self.moveTip(event); });
         outside.addEventListener('mouseleave', function () { self.hideTip(); });
+
+        /* An inset says it is one. A thin frame round it and its name under
+           it, so that nobody takes Newfoundland to be an island off Ireland:
+           the box is how a map says "this is somewhere else, drawn here". */
+        if (shape.inset) {
+          const box = shape.inset;
+          outside.insertBefore(el('rect', {
+            x: box.x.toFixed(1), y: box.y.toFixed(1),
+            width: box.w.toFixed(1), height: box.h.toFixed(1),
+            rx: '6', class: 'inset-frame'
+          }), outside.firstChild);
+          const caption = el('text', {
+            x: (box.x + box.w / 2).toFixed(1),
+            y: (box.y + box.h + 12).toFixed(1),
+            class: 'inset-caption',
+            'text-anchor': 'middle'
+          });
+          caption.textContent = shape.name;
+          outside.appendChild(caption);
+          outside.setAttribute('aria-label', shape.name + ', shown in an inset — not in its true position');
+        }
+
         contextLayer.appendChild(outside);
         self.shapes[shape.code] = { shape: shape, group: outside };
         return;

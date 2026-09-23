@@ -13,18 +13,28 @@
   const SIN_LAT0 = Math.sin(LAT0);
   const COS_LAT0 = Math.cos(LAT0);
 
-  function project(lon, lat) {
+  /* The same projection centred somewhere else. An inset is drawn around its
+     own middle — Atlantic Canada seen from 52N 10E would be a sliver leaning
+     off the edge of the world — so it gets its own centre and keeps its own
+     shape. */
+  function projectAround(lon, lat, lon0, lat0) {
+    const sinLat0 = Math.sin(lat0 * RAD);
+    const cosLat0 = Math.cos(lat0 * RAD);
     const phi = lat * RAD;
-    const lambda = lon * RAD - LON0;
+    const lambda = (lon - lon0) * RAD;
     const cosPhi = Math.cos(phi);
     const sinPhi = Math.sin(phi);
     const cosLambda = Math.cos(lambda);
-    const denominator = 1 + SIN_LAT0 * sinPhi + COS_LAT0 * cosPhi * cosLambda;
+    const denominator = 1 + sinLat0 * sinPhi + cosLat0 * cosPhi * cosLambda;
     const k = Math.sqrt(2 / Math.max(denominator, 1e-9));
     return [
       k * cosPhi * Math.sin(lambda),
-      -k * (COS_LAT0 * sinPhi - SIN_LAT0 * cosPhi * cosLambda) // SVG y grows downward
+      -k * (cosLat0 * sinPhi - sinLat0 * cosPhi * cosLambda) // SVG y grows downward
     ];
+  }
+
+  function project(lon, lat) {
+    return projectAround(lon, lat, LON0 / RAD, LAT0 / RAD);
   }
 
 
@@ -164,8 +174,59 @@
 
   /* Projects a FeatureCollection once and returns SVG-ready paths plus the
      viewBox that fits them, so the map never re-projects on redraw. */
-  function layout(collection, width, height, padding) {
-    const projected = collection.features.map(function (feature) {
+  /* An inset: a place drawn in a box of its own, at a size and position
+     that has nothing to do with the rest of the map. Its box is given as
+     fractions of the frame, so it lands in the same place whatever size the
+     map is drawn at, and its outline is fitted into that box around its own
+     centre. It is the cartographer's answer to a place that matters and does
+     not fit — here Atlantic Canada, forty degrees west of Ireland. */
+  function insetScreen(feature, width, height) {
+    const inset = feature.properties.inset;
+    const centre = inset.centre;
+    const box = {
+      x: inset.box[0] * width, y: inset.box[1] * height,
+      w: inset.box[2] * width, h: inset.box[3] * height
+    };
+    const polygons = feature.geometry.coordinates.map(function (polygon) {
+      return polygon[0].map(function (point) {
+        return projectAround(point[0], point[1], centre[0], centre[1]);
+      });
+    });
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    polygons.forEach(function (ring) {
+      ring.forEach(function (p) {
+        minX = Math.min(minX, p[0]); maxX = Math.max(maxX, p[0]);
+        minY = Math.min(minY, p[1]); maxY = Math.max(maxY, p[1]);
+      });
+    });
+    const pad = Math.min(box.w, box.h) * 0.08;
+    const scale = Math.min((box.w - pad * 2) / (maxX - minX), (box.h - pad * 2) / (maxY - minY));
+    const offsetX = box.x + (box.w - (maxX - minX) * scale) / 2;
+    const offsetY = box.y + (box.h - (maxY - minY) * scale) / 2;
+    return {
+      box: box,
+      polygons: polygons.map(function (ring) {
+        return ring.map(function (p) {
+          return [(p[0] - minX) * scale + offsetX, (p[1] - minY) * scale + offsetY];
+        });
+      })
+    };
+  }
+
+  /* options.insets: draw the features that ask for an inset. Off unless asked
+     for, so the story card and the preview pictures — each laid out by hand
+     against the map as it was — are drawn exactly as they were. Only the map
+     a reader explores has room for a box of somewhere else. */
+  function layout(collection, width, height, padding, options) {
+    const withInsets = !!(options && options.insets);
+    const features = collection.features.filter(function (feature) {
+      return withInsets || !(feature.properties && feature.properties.inset);
+    });
+    const projected = features.map(function (feature) {
+      if (feature.properties && feature.properties.inset) {
+        const placed = insetScreen(feature, width, height);
+        return { feature: feature, polygons: placed.polygons, screen: true, box: placed.box };
+      }
       const polygons = feature.geometry.coordinates.map(function (polygon) {
         return polygon[0].map(function (point) { return project(point[0], point[1]); });
       });
@@ -181,6 +242,9 @@
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     projected.forEach(function (item) {
       const properties = item.feature.properties;
+      // An inset is in a box of its own and never moves the frame: that is
+      // the whole reason it is an inset.
+      if (item.screen) return;
       if (properties.member === false && properties.frame !== true) return;
       item.polygons.forEach(function (ring) {
         ring.forEach(function (p) {
@@ -214,7 +278,7 @@
         let inscribed = 0;
 
         item.polygons.forEach(function (ring) {
-          const screen = ring.map(toScreen);
+          const screen = item.screen ? ring : ring.map(toScreen);
           d += 'M' + screen.map(function (p) {
             return p[0].toFixed(1) + ' ' + p[1].toFixed(1);
           }).join('L') + 'Z';
@@ -244,6 +308,7 @@
           code: item.feature.properties.code,
           name: item.feature.properties.name,
           member: item.feature.properties.member !== false,
+          inset: item.box || null,
           path: d,
           area: largestArea,
           // How much room the shape actually has for a label: Croatia's arm is
@@ -255,5 +320,5 @@
     };
   }
 
-  global.Projection = { project: project, layout: layout };
+  global.Projection = { project: project, projectAround: projectAround, layout: layout };
 })(window);

@@ -2513,6 +2513,24 @@ button.permalink {
    with the same need for a quiet figure at the end of a row. */
 .card-rule { color: var(--ink-faint); }
 
+/* A place drawn in a box of its own — Atlantic Canada, which does not fit the
+   frame and matters to the Union. Faint, so it reads as context, and framed,
+   so it reads as displaced. */
+.inset-frame {
+  fill: color-mix(in srgb, var(--surface) 60%, transparent);
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  vector-effect: non-scaling-stroke;
+}
+.inset-caption {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  fill: var(--ink-soft);
+  pointer-events: none;
+}
+
 /* What a vote asks for, quoted from the text that was voted. Set apart from
    the site's own writing, because these are not the site's words. */
 .decision-asks {

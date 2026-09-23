@@ -336,4 +336,33 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   ['Calls on the Member States to effectively combat child poverty'],
   'a complete short sentence is exactly what is wanted');
 
+/* Canada is drawn in an inset, and an inset must never cost the Union an
+   inch: the frame is fitted to the member states, and a box of somewhere else
+   takes no part in fitting it. Laid out with and without Canada, every member
+   state has to land on exactly the same pixels. */
+{
+  const { default: vm } = await import('node:vm');
+  const context = { window: {}, Math };
+  vm.createContext(context);
+  vm.runInContext(await readFile(new URL('../assets/js/projection.js', import.meta.url), 'utf8'), context);
+  const Projection = context.window.Projection;
+  const geo = JSON.parse(await readFile(new URL('../data/eu-countries.geo.json', import.meta.url), 'utf8'));
+  const withoutCanada = { type: geo.type, features: geo.features.filter((f) => f.properties.code !== 'CA') };
+
+  const paths = (collection) => Object.fromEntries(
+    Projection.layout(collection, 760, 700, 12, { insets: true }).shapes
+      .filter((shape) => shape.member).map((shape) => [shape.code, shape.path]));
+  assert.deepEqual(paths(geo), paths(withoutCanada),
+    'adding an inset moves or resizes no member state by a single pixel');
+
+  const drawn = Projection.layout(geo, 760, 700, 12, { insets: true }).shapes;
+  const canada = drawn.find((shape) => shape.code === 'CA');
+  assert.ok(canada && canada.inset, 'the map draws Canada, in an inset');
+  assert.ok(canada.inset.x >= 0 && canada.inset.x + canada.inset.w <= 760, 'inside the frame');
+
+  // The story card and the preview pictures do not ask for insets.
+  assert.ok(!Projection.layout(geo, 400, 470, 6).shapes.some((shape) => shape.code === 'CA'),
+    'and the cards, laid out by hand without it, are drawn as they were');
+}
+
 console.log('import.test.mjs: ok');
