@@ -282,11 +282,40 @@
               : '') + '</p>'
           : '') +
       '</header>' +
-      '<section class="card"><p class="neutral-note">' + escapeHTML(country.name) +
-        ' sends no members to the European Parliament, so it casts no votes in these ' +
-        'records. It is drawn here because what the Union decides rarely stops at its ' +
-        'own border.</p></section>';
+      '<section class="card"><p class="neutral-note">' + representation(country) + '</p>' +
+        '<p class="welcome-note">The Union\u2019s border is not a wall. The people of ' +
+        escapeHTML(withArticle(country.name)) + ' are always welcome here \u2014 to follow ' +
+        'what Europe decides, and to be part of the conversation.</p></section>';
     node.hidden = false;
+  }
+
+  /* "The people of the United Kingdom", not "of United Kingdom". */
+  const NEEDS_THE = { 'United Kingdom': true, 'Faroe Islands': true };
+
+  function withArticle(name) {
+    return NEEDS_THE[name] ? 'the ' + name : name;
+  }
+
+  /* Whether this country's members voted in these records.
+
+     It used to say that no country outside the Union ever had, which stopped
+     being true the day the ninth term's first sitting days were imported:
+     the United Kingdom sent 73 members until 31 January 2020, and their votes
+     from July 2019 until then are here. A country that left before the records
+     begin — Greenland, in 1985 — genuinely has none. */
+  const RECORDS_BEGIN = 2019;
+
+  function representation(country) {
+    const eu = country.eu || {};
+    // At the start of a sentence: "The United Kingdom no longer sends…".
+    const bare = withArticle(country.name);
+    const name = escapeHTML(bare.charAt(0).toUpperCase() + bare.slice(1));
+    if (eu.status === 'former' && eu.since >= RECORDS_BEGIN) {
+      return name + ' no longer sends members to the European Parliament. Its members\u2019 ' +
+        'votes from July 2019 until it left are in these records.';
+    }
+    return name + ' sends no members to the European Parliament, so it casts no votes ' +
+      'in these records.';
   }
 
   function render(node, decision, state, permalink) {

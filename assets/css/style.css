@@ -2513,6 +2513,18 @@ button.permalink {
    with the same need for a quiet figure at the end of a row. */
 .card-rule { color: var(--ink-faint); }
 
+/* A welcome, under the facts about a country outside the Union. Warmer than
+   the note above it, because it is meant to be. */
+.welcome-note {
+  margin: .7rem 0 0;
+  padding-top: .7rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
 /* A place drawn in a box of its own — Atlantic Canada, which does not fit the
    frame and matters to the Union. Faint, so it reads as context, and framed,
    so it reads as displaced. */
