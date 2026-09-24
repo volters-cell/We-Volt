@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add Atlantic Canada to the map, as an inset.
+"""Add Canada to the map, as an inset.
 
 Canada has said it wants to be more closely associated with the European
 Union, and a map of the Union with Canada's intention on it should be able to
@@ -9,13 +9,15 @@ right-hand third of the picture — every member state smaller, and the whole
 point of the map is the member states.
 
 So Canada goes where maps put a place that matters and does not fit: in an
-inset. Only its Atlantic edge — Newfoundland, the Labrador coast, the
-Maritimes, the Gaspe — which is the part of Canada that faces Europe, in the
-empty ocean at the left of the frame, between Iceland and Ireland. That is
-roughly where it would be if the Atlantic were narrower: Newfoundland is on
-the latitude of France. It is drawn in its own box, with its own projection
-centred on itself, and it takes no part in fitting the frame, so the member
-states keep exactly the size they had.
+inset, whole, in the empty ocean at the left of the frame between Iceland and
+Ireland — which is the side of Europe it lies on. It is drawn in its own box,
+with its own projection centred on the middle of Canada, and it takes no part
+in fitting the frame, so the member states keep exactly the size they had.
+
+It used to show only the Atlantic edge — Newfoundland, Labrador, the
+Maritimes — which at that size read as an unlabelled coastline rather than a
+country. Drawn whole it is recognisable at a glance, which is the point of
+putting it there.
 
 Source: Natural Earth 1:50m admin-0 countries, public domain.
   https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson
@@ -28,20 +30,27 @@ import sys
 sys.path.insert(0, __file__.rsplit('/', 1)[0])
 from build_map_data import clean_ring, ring_area  # noqa: E402  same rules as every neighbour
 
-# The Atlantic edge of Canada, and nothing inland: a little piece, which is
-# what it is on the map for.
-WINDOW = (-67.0, 43.3, -52.5, 55.0)   # min lon, min lat, max lon, max lat
-EPSILON = 0.05
-PRECISION = 2
-MIN_AREA = 0.15   # square degrees: Newfoundland, Cape Breton, PEI, Anticosti
+# All of Canada. The window is the whole country; nothing is cut.
+WINDOW = (-142.0, 41.0, -52.0, 84.0)   # min lon, min lat, max lon, max lat
+# Coarse, because the whole country fits in a box a hundred pixels wide: a
+# finer outline would put a thousand points where nobody can see ten of them.
+EPSILON = 0.25
+PRECISION = 1
+# The mainland and the islands big enough to be seen at that size — Baffin,
+# Victoria, Ellesmere, Newfoundland and their like. The rest are specks.
+MIN_AREA = 6.0
 
 # Where the inset sits, as fractions of the frame, so it lands in the same
 # place whatever size the map is drawn at. Measured against the drawn map, not
 # guessed: the left of the frame is open Atlantic from below Iceland to above
 # Ireland, and Scotland is the nearest land to the right.
 INSET = {
-    "centre": [-59.5, 49.0],
-    "box": [0.018, 0.214, 0.121, 0.157],
+    # The middle of the country, so it is drawn the way an atlas draws it.
+    "centre": [-96.0, 62.0],
+    # The largest clear space of Canada's proportions at the left of the frame,
+    # found by testing the drawn map point by point with six units of clearance
+    # from any land: 114 by 82 units, from below Iceland to above Scotland.
+    "box": [0.016, 0.211, 0.15, 0.117],
 }
 
 
@@ -119,8 +128,8 @@ def main(source_path, out_path):
             "name": "Canada",
             "member": False,
             "inset": INSET,
-            "note": ("Atlantic Canada, drawn in an inset. Not to scale with, and not "
-                     "in its true position relative to, the rest of the map."),
+            "note": ("Canada, drawn in an inset. Not to scale with, and not in its "
+                     "true position relative to, the rest of the map."),
         },
         "geometry": {"type": "MultiPolygon", "coordinates": kept},
     }
