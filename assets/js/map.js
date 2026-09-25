@@ -198,15 +198,17 @@
             width: box.w.toFixed(1), height: box.h.toFixed(1),
             rx: '6', class: 'inset-frame'
           }), outside.firstChild);
+          // Inside the frame, top left: the box sits on the bottom edge of
+          // the map, with no room beneath it for a line of text.
           const caption = el('text', {
-            x: (box.x + box.w / 2).toFixed(1),
-            y: (box.y + box.h + 12).toFixed(1),
-            class: 'inset-caption',
-            'text-anchor': 'middle'
+            x: (box.x + 6).toFixed(1),
+            y: (box.y + 13).toFixed(1),
+            class: 'inset-caption'
           });
           caption.textContent = shape.name;
           outside.appendChild(caption);
           outside.setAttribute('aria-label', shape.name + ', shown in an inset — not in its true position');
+          outside.classList.add('is-inset');
         }
 
         contextLayer.appendChild(outside);

@@ -2535,6 +2535,12 @@ button.permalink {
   stroke-dasharray: 3 3;
   vector-effect: non-scaling-stroke;
 }
+.is-inset .context-shape {
+  /* A shade darker than the neighbours: at this size a pale shape on a pale
+     box reads as nothing at all. Still grey, still outside the Union. */
+  fill: color-mix(in srgb, var(--context) 72%, var(--ink));
+}
+.is-inset:hover .context-shape { fill: color-mix(in srgb, var(--context) 60%, var(--ink)); }
 .inset-caption {
   font-size: 11px;
   font-weight: 600;

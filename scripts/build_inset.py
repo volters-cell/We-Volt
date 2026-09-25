@@ -9,8 +9,8 @@ right-hand third of the picture — every member state smaller, and the whole
 point of the map is the member states.
 
 So Canada goes where maps put a place that matters and does not fit: in an
-inset, whole, in the empty ocean at the left of the frame between Iceland and
-Ireland — which is the side of Europe it lies on. It is drawn in its own box,
+inset, whole, in the empty ocean at the bottom left of the frame, below Spain
+and Portugal — the largest clear space on the side of Europe it lies on. It is drawn in its own box,
 with its own projection centred on the middle of Canada, and it takes no part
 in fitting the frame, so the member states keep exactly the size they had.
 
@@ -47,10 +47,13 @@ MIN_AREA = 6.0
 INSET = {
     # The middle of the country, so it is drawn the way an atlas draws it.
     "centre": [-96.0, 62.0],
-    # The largest clear space of Canada's proportions at the left of the frame,
-    # found by testing the drawn map point by point with six units of clearance
-    # from any land: 114 by 82 units, from below Iceland to above Scotland.
-    "box": [0.016, 0.211, 0.15, 0.117],
+    # The largest clear space on the left of the frame, found by testing the
+    # drawn map point by point with nine units of clearance from any land: the
+    # open Atlantic below Spain and Portugal, 132 by 90 units — the corner
+    # where an atlas puts an inset. The gap between Iceland and Scotland, where
+    # it first went, is 114 by 82, and on a phone that left Canada a pale smudge
+    # thirty-five pixels wide.
+    "box": [0.176, 0.859, 0.174, 0.129],
 }
 
 

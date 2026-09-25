@@ -199,7 +199,9 @@
         minY = Math.min(minY, p[1]); maxY = Math.max(maxY, p[1]);
       });
     });
-    const pad = Math.min(box.w, box.h) * 0.08;
+    // Tight: at phone size every pixel the country gives up to margin is a
+    // pixel less of the thing it is there to show.
+    const pad = Math.min(box.w, box.h) * 0.03;
     const scale = Math.min((box.w - pad * 2) / (maxX - minX), (box.h - pad * 2) / (maxY - minY));
     const offsetX = box.x + (box.w - (maxX - minX) * scale) / 2;
     const offsetY = box.y + (box.h - (maxY - minY) * scale) / 2;
