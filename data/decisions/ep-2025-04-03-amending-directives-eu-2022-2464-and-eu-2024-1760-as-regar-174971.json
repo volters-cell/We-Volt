@@ -14,7 +14,7 @@
     "reference": null,
     "url": null
   },
-  "summary": "Proposition de la Commission",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2911,5 +2911,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Proposition de la Commission"
 }

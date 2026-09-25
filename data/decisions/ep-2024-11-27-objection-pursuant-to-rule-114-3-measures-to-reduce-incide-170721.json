@@ -14,7 +14,7 @@
     "reference": null,
     "url": null
   },
-  "summary": "Proposition de résolution",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
@@ -2916,5 +2916,6 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "votedOn": "Proposition de résolution"
 }

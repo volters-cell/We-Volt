@@ -14,7 +14,7 @@
     "reference": "2024/2100(REG)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2100(REG)"
   },
-  "summary": "Proposition de décision",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Proposition de décision"
 }

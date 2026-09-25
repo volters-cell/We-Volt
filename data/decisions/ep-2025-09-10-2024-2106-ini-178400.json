@@ -14,7 +14,7 @@
     "reference": "2024/2106(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2106(INI)"
   },
-  "summary": "Proposition de résolution",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Proposition de résolution"
 }

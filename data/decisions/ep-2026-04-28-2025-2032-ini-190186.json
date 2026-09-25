@@ -14,7 +14,7 @@
     "reference": "2025/2032(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2032(INI)"
   },
-  "summary": "Proposition de résolution",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2925,5 +2925,6 @@
     "code": "CONT",
     "label": "Budgetary Control",
     "short": "Budget Control"
-  }
+  },
+  "votedOn": "Proposition de résolution"
 }

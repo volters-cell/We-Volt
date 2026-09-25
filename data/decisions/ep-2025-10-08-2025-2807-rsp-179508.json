@@ -14,7 +14,7 @@
     "reference": "2025/2807(RSP)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2807(RSP)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

@@ -14,7 +14,7 @@
     "reference": "2024/0260(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0260(NLE)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2912,5 +2912,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Projet de décision du Conseil"
 }

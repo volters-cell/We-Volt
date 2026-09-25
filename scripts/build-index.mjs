@@ -39,9 +39,12 @@ for (const name of files) {
   // The institution is deliberately not in here: it is identical on every
   // record of a body, so including it made "euro" match all 614 votes through
   // "European Parliament". The filters cover institution already.
+  //
+  // Only what the entry does not already carry. The title and subtitle are
+  // fields of their own, and repeating them here was a quarter of the whole
+  // index — 113 KB of the 535 a phone downloads before it can show a vote.
+  // The page puts the three together once when it loads.
   const keywords = [
-    decision.title,
-    decision.subtitle,
     decision.summary,
     (decision.procedure && decision.procedure.reference) || '',
     ...(decision.whatItMeans || [])
@@ -55,7 +58,11 @@ for (const name of files) {
     date: decision.date,
     body: decision.body,
     bodyLabel: decision.bodyLabel,
-    voteRuleLabel: decision.voteRuleLabel || '',
+    // Only where it is not the usual rule. "Majority of votes cast" decided
+    // 3,736 of the 3,752 votes and the card no longer prints it; the sixteen
+    // that needed a majority of all members still carry it.
+    ...(decision.voteRuleLabel && decision.voteRuleLabel !== 'Majority of votes cast'
+      ? { voteRuleLabel: decision.voteRuleLabel } : {}),
     // The chips on the card: what the vote is about, read from its title,
     // and the committee that wrote the text where the portal gave one.
     topics: decision.topics || [],
@@ -67,8 +74,9 @@ for (const name of files) {
       ? decision.ballots.length
       : Object.values(decision.countries || {})
           .reduce((sum, country) => sum + ((country.meps || []).length), 0),
-    keywords: keywords,
-    file: `${DIR}/${name}`
+    // The record's own file is data/decisions/<id>.json for every vote, so the
+    // path is not sent: whoever needs it derives it from the id.
+    keywords: keywords
   });
 }
 

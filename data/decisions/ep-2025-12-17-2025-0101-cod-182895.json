@@ -14,7 +14,7 @@
     "reference": "2025/0101(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0101(COD)"
   },
-  "summary": "Décision d'engager des négociations interinstitutionnelles",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Décision d'engager des négociations interinstitutionnelles"
 }

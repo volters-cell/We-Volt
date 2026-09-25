@@ -14,7 +14,7 @@
     "reference": "2025/2135(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2135(INI)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2925,5 +2925,6 @@
     "code": "LIBE",
     "label": "Civil Liberties, Justice and Home Affairs",
     "short": "Civil Liberties"
-  }
+  },
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

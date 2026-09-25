@@ -14,7 +14,7 @@
     "reference": "2021/0372(CNS)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/0372(CNS)"
   },
-  "summary": "Projet du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Projet du Conseil"
 }

@@ -14,7 +14,7 @@
     "reference": "2025/2085(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2085(INI)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2925,5 +2925,6 @@
     "code": "DEVE",
     "label": "Development",
     "short": "Development"
-  }
+  },
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

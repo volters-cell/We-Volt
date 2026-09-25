@@ -14,7 +14,7 @@
     "reference": "2026/2733(RSP)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/2733(RSP)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2916,5 +2916,6 @@
   "topics": [
     "Iran",
     "Human rights"
-  ]
+  ],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

@@ -14,7 +14,7 @@
     "reference": "2025/0806(CNS)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0806(CNS)"
   },
-  "summary": "Projet de règlement du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "votedOn": "Projet de règlement du Conseil"
 }

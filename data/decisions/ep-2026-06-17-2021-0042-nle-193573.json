@@ -14,7 +14,7 @@
     "reference": "2021/0042(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2021/0042(NLE)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Trade"
-  ]
+  ],
+  "votedOn": "Projet de décision du Conseil"
 }

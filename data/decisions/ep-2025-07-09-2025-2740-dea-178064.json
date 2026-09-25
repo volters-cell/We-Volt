@@ -14,7 +14,7 @@
     "reference": "2025/2740(DEA)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/2740(DEA)"
   },
-  "summary": "Proposition de résolution",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
@@ -2921,5 +2921,6 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "votedOn": "Proposition de résolution"
 }

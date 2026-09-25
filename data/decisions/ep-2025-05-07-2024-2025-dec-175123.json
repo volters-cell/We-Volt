@@ -14,7 +14,7 @@
     "reference": "2024/2025(DEC)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2025(DEC)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

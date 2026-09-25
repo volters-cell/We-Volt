@@ -14,7 +14,7 @@
     "reference": "2024/0803(CNS)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0803(CNS)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Projet de décision du Conseil"
 }

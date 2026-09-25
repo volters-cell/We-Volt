@@ -14,7 +14,7 @@
     "reference": "2025/0810R(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0810R(NLE)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2929,5 +2929,6 @@
   "topics": [
     "Mexico",
     "Trade"
-  ]
+  ],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

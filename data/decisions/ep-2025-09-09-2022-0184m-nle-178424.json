@@ -14,7 +14,7 @@
     "reference": "2022/0184M(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0184M(NLE)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

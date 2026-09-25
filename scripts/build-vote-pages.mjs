@@ -98,12 +98,20 @@ for (const entry of everyDecision) {
   const preview = previewFor(id);
   const day = spoken(record.date);
 
+  /* What the vote asks for, quoted from the text, where the text asks for
+     anything. A link preview is the one place a stranger meets this vote, and
+     the tally alone says it happened without saying what it was. The quote
+     comes after the result and inside quotation marks, so it reads as the
+     Parliament's words and not this site's. */
+  const asks = record.whatItMeans || [];
+  const lead = asks.length ? '\u201c' + asks[0] + '.\u201d' : '';
+
   const summary = word + ' by the European Parliament on ' + day + ' — ' +
     totals.for + ' in favour, ' + totals.against + ' against, ' + totals.abstain +
-    ' abstained. ' + (houseOf(record.date) === null
+    ' abstained. ' + (lead || ((houseOf(record.date) === null
       ? cast + ' members voted.'
       : cast + ' of ' + houseOf(record.date) + ' members voted.') + ' See how every country ' +
-    'and every MEP split.';
+    'and every MEP split.'));
 
   const page = `<!doctype html>
 <html lang="en">
@@ -161,6 +169,7 @@ for (const entry of everyDecision) {
 <meta name="apple-mobile-web-app-title" content="EU Tracker">
 <meta name="application-name" content="EU Tracker">
 
+<link rel="stylesheet" href="../../assets/fonts/fonts.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
 <style>
   .vote-shell { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem; }
@@ -175,6 +184,11 @@ for (const entry of everyDecision) {
     border-radius: 10px; background: var(--eu-blue); color: #fff; text-decoration: none; }
   .vote-shell img { width: 100%; height: auto; border-radius: 12px; margin: 0 0 1.6rem;
     border: 1px solid var(--line); }
+  .vote-shell h2 { font-size: 1.1rem; margin: 1.8rem 0 .6rem; }
+  .vote-shell .vote-asks { margin: 0 0 .6rem; padding-left: 1.2rem; font-family: var(--serif);
+    font-size: 1.05rem; line-height: 1.55; }
+  .vote-shell .vote-asks li { margin: 0 0 .5rem; }
+  .vote-shell .vote-asks-note { font-size: .85rem; color: var(--ink-faint); margin: 0 0 1.6rem; }
 </style>
 </head>
 <body>
@@ -196,7 +210,14 @@ for (const entry of everyDecision) {
      ${totals.abstain} abstained. ${houseOf(record.date) === null
        ? `${cast} members voted.`
        : `${cast} of ${houseOf(record.date)} members voted; ${houseOf(record.date) - cast} did not.`}</p>
-  <p><a class="vote-open" href="../../#/${id}">See how every country and every MEP voted</a></p>
+${asks.length ? `  <h2>What it asks for, in the Parliament's words</h2>
+  <ul class="vote-asks">
+${asks.map((line) => `    <li>${esc(line)}</li>`).join('\n')}
+  </ul>
+  <p class="vote-asks-note">Quoted from ${record.whatItMeansFrom && record.whatItMeansFrom.url
+    ? `<a href="${esc(record.whatItMeansFrom.url)}" rel="noopener noreferrer">${esc(record.whatItMeansFrom.reference)}</a>`
+    : 'the text that was voted'}, which says more than these lines. Each is a whole paragraph; this site does not rewrite them.</p>
+` : ''}  <p><a class="vote-open" href="../../#/${id}">See how every country and every MEP voted</a></p>
   <h2>Check it at the European Parliament</h2>
   <ul>
 ${(record.sources || []).filter(s => s.url).map(s =>

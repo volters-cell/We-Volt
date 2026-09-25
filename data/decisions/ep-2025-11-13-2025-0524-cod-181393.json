@@ -14,7 +14,7 @@
     "reference": "2025/0524(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0524(COD)"
   },
-  "summary": "Proposition de rejet - Am 47= 59=",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Climate"
-  ]
+  ],
+  "votedOn": "Proposition de rejet - Am 47= 59="
 }

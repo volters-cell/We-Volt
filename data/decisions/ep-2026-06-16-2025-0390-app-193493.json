@@ -14,7 +14,7 @@
     "reference": "2025/0390(APP)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0390(APP)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2921,5 +2921,6 @@
     "code": "BUDG",
     "label": "Budgets",
     "short": "Budgets"
-  }
+  },
+  "votedOn": "Projet de décision du Conseil"
 }

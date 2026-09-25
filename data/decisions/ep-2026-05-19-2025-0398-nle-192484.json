@@ -14,7 +14,7 @@
     "reference": "2025/0398(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0398(NLE)"
   },
-  "summary": "Projet du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "ITRE",
     "label": "Industry, Research and Energy",
     "short": "Industry and Energy"
-  }
+  },
+  "votedOn": "Projet du Conseil"
 }

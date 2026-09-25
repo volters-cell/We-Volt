@@ -14,7 +14,7 @@
     "reference": "2025/0097(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0097(COD)"
   },
-  "summary": "Décision d'engager des négociations interinstitutionnelles",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "TRAN",
     "label": "Transport and Tourism",
     "short": "Transport"
-  }
+  },
+  "votedOn": "Décision d'engager des négociations interinstitutionnelles"
 }

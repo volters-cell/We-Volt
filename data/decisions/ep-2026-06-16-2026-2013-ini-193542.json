@@ -14,7 +14,7 @@
     "reference": "2026/2013(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/2013(INI)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2922,5 +2922,6 @@
     "label": "Constitutional Affairs",
     "short": "Constitutional Affairs"
   },
-  "topics": []
+  "topics": [],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

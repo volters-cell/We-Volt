@@ -14,7 +14,7 @@
     "reference": "2024/2127(INI)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2127(INI)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "PECH",
     "label": "Fisheries",
     "short": "Fisheries"
-  }
+  },
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

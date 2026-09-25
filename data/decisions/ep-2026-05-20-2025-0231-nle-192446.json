@@ -14,7 +14,7 @@
     "reference": "2025/0231(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0231(NLE)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2920,5 +2920,6 @@
   },
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "votedOn": "Projet de décision du Conseil"
 }

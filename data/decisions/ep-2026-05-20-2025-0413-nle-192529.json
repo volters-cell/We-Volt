@@ -14,7 +14,7 @@
     "reference": "2025/0413(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0413(NLE)"
   },
-  "summary": "Projet de décision du Conseil",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "SEDE",
     "label": "Security and Defence",
     "short": "Security and Defence"
-  }
+  },
+  "votedOn": "Projet de décision du Conseil"
 }

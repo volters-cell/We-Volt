@@ -14,7 +14,7 @@
     "reference": "2025/0059(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0059(COD)"
   },
-  "summary": "Proposition de rejet - Am 2 = 3 =",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "rejected",
@@ -2925,5 +2925,6 @@
     "code": "LIBE",
     "label": "Civil Liberties, Justice and Home Affairs",
     "short": "Civil Liberties"
-  }
+  },
+  "votedOn": "Proposition de rejet - Am 2 = 3 ="
 }

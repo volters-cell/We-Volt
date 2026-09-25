@@ -14,7 +14,7 @@
     "reference": "2024/0260M(NLE)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0260M(NLE)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "AFET",
     "label": "Foreign Affairs",
     "short": "Foreign Affairs"
-  }
+  },
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

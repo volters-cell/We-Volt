@@ -14,7 +14,7 @@
     "reference": "2024/2857(RSP)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2857(RSP)"
   },
-  "summary": "Proposition de résolution (ensemble du texte)",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "China"
-  ]
+  ],
+  "votedOn": "Proposition de résolution (ensemble du texte)"
 }

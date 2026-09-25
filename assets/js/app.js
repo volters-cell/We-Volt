@@ -13,6 +13,7 @@
     country: null, filter: 'all', isolate: null, query: '', unfolded: false, member: null,
     // The filter panel's questions: when, where, about what, and by whom.
     from: '', until: '', topics: [], countries: [], committees: [],
+    shown: 50,
     // The neighbour whose record is open, if any. It is not `country`: a
     // neighbour has no seats and never narrows the roll-call.
     outside: null
@@ -34,6 +35,8 @@
   /* The votes of each plenary, so a fold that was rendered empty can be filled
      when it opens without rebuilding the feed around it. */
   const cardsByKey = {};
+  // How many search results are drawn at a time.
+  const PAGE = 50;
   let index = null;
   let map = null;
 
@@ -164,10 +167,27 @@
     return new RegExp('\\b' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   }
 
+  /* What a search looks through: the title, the subtitle, and the rest the
+     index carries for it — the procedure, and the paragraphs the vote asks
+     for. Put together once per vote rather than shipped already joined. */
+  function searchText(item) {
+    if (item.searchText === undefined) {
+      item.searchText = [item.title, item.subtitle, item.keywords]
+        .join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
+    }
+    return item.searchText;
+  }
+
+  /* Where a vote's own record is. The same for every vote, so the index does
+     not spend fifty kilobytes saying it. */
+  function recordFile(entry) {
+    return entry.file || 'data/decisions/' + entry.id + '.json';
+  }
+
   function matches(item) {
     if (!state.query) return true;
     return state.query.split(/\s+/).every(function (word) {
-      return wordTest(word).test(item.keywords);
+      return wordTest(word).test(searchText(item));
     });
   }
 
@@ -403,7 +423,7 @@
     }).filter(function (row) {
       if (!row.record) return false;
       if (!filter) return true;
-      return (row.record.keywords || '').indexOf(filter) !== -1;
+      return searchText(row.record).indexOf(filter) !== -1;
     });
 
     dom['member-count'].textContent = rows.length + ' vote' + (rows.length === 1 ? '' : 's') +
@@ -423,8 +443,31 @@
       : '');
   }
 
+  /* Every Parliament's votes, before a search or a filter answers.
+
+     The earlier Parliament's votes sit in a file of their own, fetched when a
+     reader unfolds it. A search did not fetch it, so "ukraine" answered with
+     the sitting Parliament's 25 votes and said nothing about the ninth term's
+     — under a line promising "this Parliament and the one before it". A search
+     now fetches whatever is not loaded yet, and the list fills in when it
+     arrives. */
+  function loadEveryTerm() {
+    (index.terms || []).forEach(function (row) {
+      if (row.file && !loadedTerms.has(row.term)) {
+        loadTerm(Number(row.term), row.file, { quiet: true });
+      }
+    });
+  }
+
+  function filtering() {
+    return Boolean(state.query || state.from || state.until ||
+      state.topics.length || state.countries.length || state.committees.length);
+  }
+
   function setQuery(value) {
     state.query = String(value || '').trim().toLowerCase();
+    state.shown = PAGE;
+    if (state.query) loadEveryTerm();
     renderFeed();
     renderMepResults();
   }
@@ -619,14 +662,19 @@
     // as a flat list, newest first, rather than unfolding every session they
     // touch.
     if (asked) {
-      const shown = items.slice(0, 50);
+      /* Fifty at a time, and a button for the next fifty. It used to stop at
+         fifty and tell the reader to narrow the search, which is a fine
+         suggestion and a poor wall: "ukraine" matches more votes than that
+         across two Parliaments, and every one of them is a real answer. */
+      const shown = items.slice(0, state.shown);
       dom['session-list'].innerHTML = shown.length
         ? '<ul class="decision-list">' + shown.map(function (item) {
             return decisionCard(item, true);
           }).join('') + '</ul>' +
           (items.length > shown.length
-            ? '<p class="feed-empty">Showing the first ' + shown.length + ' of ' +
-              items.length + '. Narrow it down with a word or another filter.</p>'
+            ? '<p class="feed-more"><button type="button" id="show-more">Show ' +
+              Math.min(PAGE, items.length - shown.length) + ' more</button>' +
+              '<span>' + shown.length + ' of ' + items.length + '</span></p>'
             : '')
         : '<p class="feed-empty">Nothing here matches that. Try a procedure reference, ' +
           'a word from the title, or fewer filters.</p>';
@@ -879,7 +927,7 @@
         asks.map(function (line) { return '<li>' + esc(line) + '</li>'; }).join('') +
       '</ul>' +
       '<p class="asks-note">Quoted from ' + cite +
-        '. Nothing here is written or shortened by this site.</p>';
+        ', which says more than these lines. Each is a whole paragraph; this site does not rewrite them.</p>';
   }
 
   /* The cost layer is data-driven: it appears when a decision carries sourced
@@ -1101,6 +1149,8 @@
     state.committees = draft.committees.slice();
     showFilterCount();
     closeFilters();
+    state.shown = PAGE;
+    if (filtering()) loadEveryTerm();
     renderFeed();
   }
 
@@ -1408,8 +1458,11 @@
 
      Once only, and never on the way in: a reader who never opens the fold
      never pays for it, which is the whole reason the index was split. */
-  async function loadTerm(term, file) {
+  async function loadTerm(term, file, options) {
     if (loadedTerms.has(term) || loadingTerms.has(term)) return;
+    // Fetched for a search, not because the reader opened that Parliament:
+    // its votes join the list, but its fold stays shut.
+    const quiet = !!(options && options.quiet);
     loadingTerms.add(term);
     try {
       const older = await Data.getJSON(file);
@@ -1421,7 +1474,7 @@
         return a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id);
       });
       loadedTerms.add(term);
-      unfoldedSessions.add('term-' + term);
+      if (!quiet) unfoldedSessions.add('term-' + term);
       renderFeed();
     } catch (error) {
       const box = document.querySelector('.term[data-term="' + term + '"] .term-loading');
@@ -2848,7 +2901,7 @@
       return;
     }
     if (!cache[entry.id]) {
-      cache[entry.id] = Data.expandBallots(await Data.getJSON(entry.file), directory);
+      cache[entry.id] = Data.expandBallots(await Data.getJSON(recordFile(entry)), directory);
     }
     const changed = !state.decision || state.decision.id !== entry.id;
     state.member = null;
@@ -3041,6 +3094,16 @@
         const card = event.target.closest('.decision-card');
         if (card) {
           loadDecision(card.getAttribute('data-id'), state.country);
+          return;
+        }
+        if (event.target.closest('#show-more')) {
+          // The button is rebuilt with the list, so keyboard focus would fall
+          // back to the top of the page. It goes to the first new card instead.
+          const before = state.shown;
+          state.shown += PAGE;
+          renderFeed();
+          const next = dom['session-list'].querySelectorAll('.decision-card')[before];
+          if (next) next.focus();
           return;
         }
         if (event.target.closest('#unfold-all')) {

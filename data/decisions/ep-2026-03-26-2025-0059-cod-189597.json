@@ -14,7 +14,7 @@
     "reference": "2025/0059(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0059(COD)"
   },
-  "summary": "Décision d'engager des négociations interinstitutionnelles",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2921,5 +2921,6 @@
     "code": "LIBE",
     "label": "Civil Liberties, Justice and Home Affairs",
     "short": "Civil Liberties"
-  }
+  },
+  "votedOn": "Décision d'engager des négociations interinstitutionnelles"
 }

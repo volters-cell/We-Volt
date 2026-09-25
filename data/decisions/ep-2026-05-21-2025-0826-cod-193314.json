@@ -14,7 +14,7 @@
     "reference": "2025/0826(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0826(COD)"
   },
-  "summary": "Décision d'engager des négociations interinstitutionnelles",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2917,5 +2917,6 @@
     "code": "ECON",
     "label": "Economic and Monetary Affairs",
     "short": "Economy"
-  }
+  },
+  "votedOn": "Décision d'engager des négociations interinstitutionnelles"
 }

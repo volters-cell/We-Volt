@@ -2513,6 +2513,18 @@ button.permalink {
    with the same need for a quiet figure at the end of a row. */
 .card-rule { color: var(--ink-faint); }
 
+/* The next page of search results. */
+.feed-more {
+  display: flex; align-items: center; justify-content: center; gap: .8rem;
+  margin: .9rem 0 .2rem; color: var(--ink-faint); font-size: .85rem;
+}
+.feed-more button {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: .55rem 1.1rem; border-radius: 999px;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink);
+}
+.feed-more button:hover { background: var(--surface-sunken); }
+
 /* A welcome, under the facts about a country outside the Union. Warmer than
    the note above it, because it is meant to be. */
 .welcome-note {

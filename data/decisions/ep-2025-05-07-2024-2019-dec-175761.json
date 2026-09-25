@@ -14,7 +14,7 @@
     "reference": "2024/2019(DEC)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/2019(DEC)"
   },
-  "summary": "Proposition de décision",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "votedOn": "Proposition de décision"
 }

@@ -14,7 +14,7 @@
     "reference": "2024/0276(CNS)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2024/0276(CNS)"
   },
-  "summary": "Proposition de la Commission",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2923,5 +2923,6 @@
   "countries": {},
   "topics": [
     "Tax"
-  ]
+  ],
+  "votedOn": "Proposition de la Commission"
 }

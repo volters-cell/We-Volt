@@ -225,6 +225,8 @@ const index = await readJSON('data/decisions/index.json');
 const bySource = new Map();
 
 for (const entry of index.decisions) {
+  // The index no longer carries the path; every record lives at its id.
+  entry.file = entry.file || `data/decisions/${entry.id}.json`;
   const decision = await readJSON(entry.file);
   if (decision.id !== entry.id) fail(entry.file, `id "${decision.id}" does not match the index entry "${entry.id}"`);
   checkDecision(path.basename(entry.file), decision, states);

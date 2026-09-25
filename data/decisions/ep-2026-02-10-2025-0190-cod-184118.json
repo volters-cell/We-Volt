@@ -14,7 +14,7 @@
     "reference": "2025/0190(COD)",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0190(COD)"
   },
-  "summary": "Proposition de la Commission",
+  "summary": "",
   "whatItMeans": [],
   "outcome": {
     "result": "adopted",
@@ -2925,5 +2925,6 @@
     "code": "JURI",
     "label": "Legal Affairs",
     "short": "Legal Affairs"
-  }
+  },
+  "votedOn": "Proposition de la Commission"
 }

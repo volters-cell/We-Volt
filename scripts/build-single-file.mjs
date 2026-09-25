@@ -50,7 +50,7 @@ async function collectData() {
 
   const voteIds = new Set();
   for (const entry of kept) {
-    await add(entry.file);
+    await add(entry.file || `data/decisions/${entry.id}.json`);
     if (entry.sourceId) voteIds.add(entry.sourceId);
   }
 
