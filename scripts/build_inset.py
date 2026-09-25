@@ -54,6 +54,12 @@ INSET = {
     # it first went, is 114 by 82, and on a phone that left Canada a pale smudge
     # thirty-five pixels wide.
     "box": [0.176, 0.859, 0.174, 0.129],
+    # On a laptop the map is drawn half as large again as on a phone, so the
+    # smaller space on the left side itself is enough to read Canada in — and
+    # the left side is where it lies. The largest clear space there, measured
+    # the same way with six units of clearance: 114 by 82 units between Iceland
+    # and Scotland. The site's own laptop breakpoint, 62rem, decides which.
+    "wideBox": [0.016, 0.211, 0.15, 0.117],
 }
 
 

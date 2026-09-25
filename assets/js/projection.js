@@ -180,12 +180,15 @@
      map is drawn at, and its outline is fitted into that box around its own
      centre. It is the cartographer's answer to a place that matters and does
      not fit — here Atlantic Canada, forty degrees west of Ireland. */
-  function insetScreen(feature, width, height) {
+  function insetScreen(feature, width, height, wide) {
     const inset = feature.properties.inset;
     const centre = inset.centre;
+    // A wide screen can have its own place for an inset: on a laptop the map
+    // is large enough to read Canada in a smaller space at the left side.
+    const fractions = (wide && inset.wideBox) || inset.box;
     const box = {
-      x: inset.box[0] * width, y: inset.box[1] * height,
-      w: inset.box[2] * width, h: inset.box[3] * height
+      x: fractions[0] * width, y: fractions[1] * height,
+      w: fractions[2] * width, h: fractions[3] * height
     };
     const polygons = feature.geometry.coordinates.map(function (polygon) {
       return polygon[0].map(function (point) {
@@ -221,12 +224,13 @@
      a reader explores has room for a box of somewhere else. */
   function layout(collection, width, height, padding, options) {
     const withInsets = !!(options && options.insets);
+    const wide = !!(options && options.wide);
     const features = collection.features.filter(function (feature) {
       return withInsets || !(feature.properties && feature.properties.inset);
     });
     const projected = features.map(function (feature) {
       if (feature.properties && feature.properties.inset) {
-        const placed = insetScreen(feature, width, height);
+        const placed = insetScreen(feature, width, height, wide);
         return { feature: feature, polygons: placed.polygons, screen: true, box: placed.box };
       }
       const polygons = feature.geometry.coordinates.map(function (polygon) {

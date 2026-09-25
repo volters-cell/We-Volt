@@ -349,11 +349,19 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   const geo = JSON.parse(await readFile(new URL('../data/eu-countries.geo.json', import.meta.url), 'utf8'));
   const withoutCanada = { type: geo.type, features: geo.features.filter((f) => f.properties.code !== 'CA') };
 
-  const paths = (collection) => Object.fromEntries(
-    Projection.layout(collection, 760, 700, 12, { insets: true }).shapes
+  const paths = (collection, wide) => Object.fromEntries(
+    Projection.layout(collection, 760, 700, 12, { insets: true, wide: wide }).shapes
       .filter((shape) => shape.member).map((shape) => [shape.code, shape.path]));
-  assert.deepEqual(paths(geo), paths(withoutCanada),
-    'adding an inset moves or resizes no member state by a single pixel');
+  assert.deepEqual(paths(geo, false), paths(withoutCanada, false),
+    'adding an inset moves or resizes no member state by a single pixel, on a phone');
+  assert.deepEqual(paths(geo, true), paths(withoutCanada, true),
+    'or on a laptop');
+
+  // On a laptop Canada sits at the left side of the map; on a phone, below Spain.
+  const where = (wide) => Projection.layout(geo, 760, 700, 12, { insets: true, wide: wide })
+    .shapes.find((shape) => shape.code === 'CA').inset;
+  assert.ok(where(true).x < 40 && where(true).y < 350, 'on a laptop, at the left side');
+  assert.ok(where(false).y > 550, 'on a phone, in the corner below Spain');
 
   const drawn = Projection.layout(geo, 760, 700, 12, { insets: true }).shapes;
   const canada = drawn.find((shape) => shape.code === 'CA');

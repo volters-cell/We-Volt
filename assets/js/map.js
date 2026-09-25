@@ -26,6 +26,8 @@
      short leader line, pushed clear of its neighbours' labels rather than
      stacked on top of them. */
   const MARGIN = 12;        // px — no label is allowed nearer the frame than this
+  // The site's laptop layout, the same breakpoint the stylesheet switches on.
+  const WIDE = '(min-width: 62.0625rem)';
 
   function inFrame(point) {
     return point[0] >= MARGIN && point[0] <= WIDTH - MARGIN &&
@@ -127,8 +129,13 @@
   function EUMap(container, geo, handlers) {
     this.container = container;
     this.handlers = handlers || {};
-    // The map a reader explores is the one place with room for an inset.
-    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12, { insets: true });
+    // The map a reader explores is the one place with room for an inset, and
+    // where it goes depends on how large the map is drawn: on a laptop, at the
+    // left side; on a phone, in the larger corner below Spain.
+    this.geo = geo;
+    this.wideQuery = window.matchMedia(WIDE);
+    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12,
+      { insets: true, wide: this.wideQuery.matches });
     this.shapes = {};
     this.selected = null;
     this.hovered = null;
@@ -136,6 +143,10 @@
     this.dimmed = null;
     this.timers = [];
     this.build();
+    const self = this;
+    const move = function () { self.placeInsets(); };
+    if (this.wideQuery.addEventListener) this.wideQuery.addEventListener('change', move);
+    else if (this.wideQuery.addListener) this.wideQuery.addListener(move);
   }
 
   EUMap.prototype.build = function () {
@@ -308,6 +319,36 @@
 
   /* Arrow keys walk to the nearest state in that direction — the map is a
      stand-in for a menu of 27 items, and it should behave like one. */
+  /* Move each inset to where it belongs at the current width. Only the inset
+     is touched: its outline, its frame and its caption. Every other shape is
+     where it was, which is the promise an inset makes. */
+  EUMap.prototype.placeInsets = function () {
+    const self = this;
+    const fresh = Projection.layout(this.geo, WIDTH, HEIGHT, 12,
+      { insets: true, wide: this.wideQuery.matches });
+    fresh.shapes.forEach(function (shape) {
+      if (!shape.inset) return;
+      const entry = self.shapes[shape.code];
+      if (!entry) return;
+      const group = entry.group;
+      const path = group.querySelector('.context-shape');
+      const frame = group.querySelector('.inset-frame');
+      const caption = group.querySelector('.inset-caption');
+      if (path) path.setAttribute('d', shape.path);
+      if (frame) {
+        frame.setAttribute('x', shape.inset.x.toFixed(1));
+        frame.setAttribute('y', shape.inset.y.toFixed(1));
+        frame.setAttribute('width', shape.inset.w.toFixed(1));
+        frame.setAttribute('height', shape.inset.h.toFixed(1));
+      }
+      if (caption) {
+        caption.setAttribute('x', (shape.inset.x + 6).toFixed(1));
+        caption.setAttribute('y', (shape.inset.y + 13).toFixed(1));
+      }
+      entry.shape = shape;
+    });
+  };
+
   EUMap.prototype.onKeydown = function (event, shape) {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
