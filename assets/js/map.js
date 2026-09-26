@@ -28,6 +28,7 @@
   const MARGIN = 12;        // px — no label is allowed nearer the frame than this
   // The site's laptop layout, the same breakpoint the stylesheet switches on.
   const WIDE = '(min-width: 62.0625rem)';
+  let mapCount = 0;          // each map on a page needs its own clip id
 
   function inFrame(point) {
     return point[0] >= MARGIN && point[0] <= WIDTH - MARGIN &&
@@ -159,42 +160,71 @@
 
   /* Canada, on a laptop, at the real left edge of the map.
 
-     The drawing is 760 by 700 and is scaled to fit the height of the space
-     the page gives it, so on most laptops there is a band of empty sea on
-     either side of it. That band is still part of the map — the svg draws
-     into it — and it is where Canada belongs: west of everything, below
-     Greenland and Iceland, level with the United Kingdom. The box runs from
-     that left edge to just short of Ireland, and down beside it, clear of any
-     land by six units (measured on the drawing: Iceland ends at 141, Ireland
-     begins at 57 across and 297 down). Where the page leaves no band worth
-     having, the fixed place beside Scotland is used instead. */
+     The drawing is 760 by 700 and is scaled to fit the space the page gives
+     it, so there is usually a band of empty sea on either side of it, and
+     beyond that the padding of the card the map sits in. Both are where
+     Canada belongs: west of everything, below Greenland and Iceland, level
+     with the United Kingdom. So on a laptop the svg is allowed to draw past
+     its own box — Canada only; every other shape is clipped to that box
+     exactly as before (see view()) — and Canada's frame starts a few pixels
+     inside the card's edge. It runs from there to just short of Ireland,
+     clear of any land by six units (measured on the drawing: Iceland ends at
+     141, Ireland begins at 57 across and 297 down), and hugs the country. */
   const WEST = {
-    top: 196, bottom: 330, right: 50, widest: 124, narrowest: 90, clear: 6,
+    top: 196, bottom: 330, right: 50, widest: 116, narrowest: 60,
+    edge: 8,        // px between the frame and the card's own edge
     level: 262,     // level with the north of Britain on the drawing
     aspect: 1.17,   // Canada as drawn, width over height
     caption: 26     // room for its name above it: Canada is centred, so half of this
                     // is above it and half below
   };
 
+  /* The part of the drawing the reader actually sees, in drawing units: the
+     svg's own box, which is wider or taller than 760 by 700 whenever the page
+     is not that exact shape. */
+  EUMap.prototype.view = function () {
+    const svg = this.svg;
+    if (!svg) return null;
+    const shown = svg.getBoundingClientRect();
+    if (!shown.width || !shown.height) return null;
+    const scale = Math.min(shown.width / WIDTH, shown.height / HEIGHT);
+    const w = shown.width / scale, h = shown.height / scale;
+    const card = svg.closest('.map-section');
+    const room = card ? Math.max(0, shown.left - card.getBoundingClientRect().left - WEST.edge) : 0;
+    return { x: -(w - WIDTH) / 2, y: -(h - HEIGHT) / 2, w: w, h: h, scale: scale, room: room / scale };
+  };
+
   EUMap.prototype.insetOptions = function () {
     const wide = this.wideQuery.matches;
     const options = { insets: true, wide: wide };
-    const svg = this.svg;
-    if (!wide || !svg) return options;
-    const shown = svg.getBoundingClientRect();
-    if (!shown.width || !shown.height) return options;
-    const scale = Math.min(shown.width / WIDTH, shown.height / HEIGHT);
-    const edge = -((shown.width / scale) - WIDTH) / 2;
-    const left = Math.max(edge + WEST.clear, WEST.right - WEST.widest);
+    const view = this.view();
+    if (!wide || !view) return options;
+    // Always from the left edge; where there is more room than Canada needs,
+    // the frame ends short of Ireland rather than starting short of the edge.
+    const left = view.x - view.room;
     if (WEST.right - left < WEST.narrowest) return options;
     // As tall as Canada needs at that width and no taller, centred on the
     // level of the United Kingdom, so the frame hugs the country instead of
     // standing round it with empty sea above and below.
-    const w = WEST.right - left;
+    const w = Math.min(WEST.right - left, WEST.widest);
     const h = Math.min(WEST.bottom - WEST.top, w / WEST.aspect + WEST.caption);
     const y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
     options.places = { CA: { x: left, y: y, w: w, h: h } };
     return options;
+  };
+
+  /* Everything but the inset stays inside the svg's own box. The svg itself
+     may draw past it, for Canada's sake, so the clip that the browser used to
+     apply to the whole map is applied here to the layers that need it. */
+  EUMap.prototype.clipToView = function () {
+    const view = this.view();
+    if (!view || !this.clipRect) return;
+    this.clipRect.setAttribute('x', view.x.toFixed(1));
+    this.clipRect.setAttribute('y', view.y.toFixed(1));
+    this.clipRect.setAttribute('width', view.w.toFixed(1));
+    this.clipRect.setAttribute('height', view.h.toFixed(1));
+    this.clipped.forEach(function (layer) { layer.setAttribute('clip-path', 'url(#' + this.clipId + ')'); }, this);
+    this.svg.style.overflow = 'visible';
   };
 
   EUMap.prototype.build = function () {
@@ -220,6 +250,9 @@
     const unionLayer = el('g', { class: 'union', 'aria-hidden': 'true' });
     const shapeLayer = el('g', { class: 'shapes' });
     const labelLayer = el('g', { class: 'labels', 'aria-hidden': 'true' });
+    // An inset has a layer of its own: it is the one thing allowed to draw
+    // outside the svg's box.
+    const insetLayer = el('g', { class: 'insets' });
 
     const placements = [];
 
@@ -270,7 +303,7 @@
           outside.classList.add('is-inset');
         }
 
-        contextLayer.appendChild(outside);
+        (shape.inset ? insetLayer : contextLayer).appendChild(outside);
         self.shapes[shape.code] = { shape: shape, group: outside };
         return;
       }
@@ -342,10 +375,21 @@
 
     placeLabels(placements, labelLayer);
 
+    const clipId = 'map-view-' + (++mapCount);
+    const defs = el('defs', {});
+    const clip = el('clipPath', { id: clipId });
+    const clipRect = el('rect', { x: '0', y: '0', width: String(WIDTH), height: String(HEIGHT) });
+    clip.appendChild(clipRect);
+    defs.appendChild(clip);
+    svg.appendChild(defs);
     svg.appendChild(contextLayer);
+    svg.appendChild(insetLayer);
     svg.appendChild(unionLayer);
     svg.appendChild(shapeLayer);
     svg.appendChild(labelLayer);
+    this.clipId = clipId;
+    this.clipRect = clipRect;
+    this.clipped = [contextLayer, unionLayer, shapeLayer, labelLayer];
 
     // Clicking the sea closes the open country. A map you can only ever open
     // and never close is a trap, and the way out has to be the obvious one.
@@ -372,6 +416,7 @@
      where it was, which is the promise an inset makes. */
   EUMap.prototype.placeInsets = function () {
     const self = this;
+    this.clipToView();
     const fresh = Projection.layout(this.geo, WIDTH, HEIGHT, 12, this.insetOptions());
     fresh.shapes.forEach(function (shape) {
       if (!shape.inset) return;
