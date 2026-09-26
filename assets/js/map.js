@@ -134,8 +134,7 @@
     // left side; on a phone, in the larger corner below Spain.
     this.geo = geo;
     this.wideQuery = window.matchMedia(WIDE);
-    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12,
-      { insets: true, wide: this.wideQuery.matches });
+    this.layout = Projection.layout(geo, WIDTH, HEIGHT, 12, this.insetOptions());
     this.shapes = {};
     this.selected = null;
     this.hovered = null;
@@ -147,7 +146,56 @@
     const move = function () { self.placeInsets(); };
     if (this.wideQuery.addEventListener) this.wideQuery.addEventListener('change', move);
     else if (this.wideQuery.addListener) this.wideQuery.addListener(move);
+    // How much margin the drawing has at its left depends on the width of the
+    // page, not only on which side of the breakpoint it is.
+    let pending = 0;
+    window.addEventListener('resize', function () {
+      cancelAnimationFrame(pending);
+      pending = requestAnimationFrame(move);
+    });
+    // The first layout ran before the map was on the page and had no size.
+    requestAnimationFrame(move);
   }
+
+  /* Canada, on a laptop, at the real left edge of the map.
+
+     The drawing is 760 by 700 and is scaled to fit the height of the space
+     the page gives it, so on most laptops there is a band of empty sea on
+     either side of it. That band is still part of the map — the svg draws
+     into it — and it is where Canada belongs: west of everything, below
+     Greenland and Iceland, level with the United Kingdom. The box runs from
+     that left edge to just short of Ireland, and down beside it, clear of any
+     land by six units (measured on the drawing: Iceland ends at 141, Ireland
+     begins at 57 across and 297 down). Where the page leaves no band worth
+     having, the fixed place beside Scotland is used instead. */
+  const WEST = {
+    top: 196, bottom: 330, right: 50, widest: 124, narrowest: 90, clear: 6,
+    level: 262,     // level with the north of Britain on the drawing
+    aspect: 1.17,   // Canada as drawn, width over height
+    caption: 26     // room for its name above it: Canada is centred, so half of this
+                    // is above it and half below
+  };
+
+  EUMap.prototype.insetOptions = function () {
+    const wide = this.wideQuery.matches;
+    const options = { insets: true, wide: wide };
+    const svg = this.svg;
+    if (!wide || !svg) return options;
+    const shown = svg.getBoundingClientRect();
+    if (!shown.width || !shown.height) return options;
+    const scale = Math.min(shown.width / WIDTH, shown.height / HEIGHT);
+    const edge = -((shown.width / scale) - WIDTH) / 2;
+    const left = Math.max(edge + WEST.clear, WEST.right - WEST.widest);
+    if (WEST.right - left < WEST.narrowest) return options;
+    // As tall as Canada needs at that width and no taller, centred on the
+    // level of the United Kingdom, so the frame hugs the country instead of
+    // standing round it with empty sea above and below.
+    const w = WEST.right - left;
+    const h = Math.min(WEST.bottom - WEST.top, w / WEST.aspect + WEST.caption);
+    const y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
+    options.places = { CA: { x: left, y: y, w: w, h: h } };
+    return options;
+  };
 
   EUMap.prototype.build = function () {
     const self = this;
@@ -324,8 +372,7 @@
      where it was, which is the promise an inset makes. */
   EUMap.prototype.placeInsets = function () {
     const self = this;
-    const fresh = Projection.layout(this.geo, WIDTH, HEIGHT, 12,
-      { insets: true, wide: this.wideQuery.matches });
+    const fresh = Projection.layout(this.geo, WIDTH, HEIGHT, 12, this.insetOptions());
     fresh.shapes.forEach(function (shape) {
       if (!shape.inset) return;
       const entry = self.shapes[shape.code];

@@ -373,6 +373,16 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.ok(middle > extent('GB').top && middle < extent('GB').bottom, 'level with the United Kingdom');
   assert.ok(where(false).y > 550, 'on a phone, in the corner below Spain');
 
+  // The map can name the box itself, in drawing units — on a laptop with a
+  // band of sea beside the drawing, Canada goes into it — and Europe still
+  // does not move.
+  const west = { x: -50, y: 207, w: 100, h: 111 };
+  const placed = Projection.layout(geo, 760, 700, 12, { insets: true, wide: true, places: { CA: west } });
+  assert.deepEqual(placed.shapes.find((shape) => shape.code === 'CA').inset, west,
+    'Canada goes where the map puts it');
+  assert.deepEqual(Object.fromEntries(placed.shapes.filter((shape) => shape.member)
+    .map((shape) => [shape.code, shape.path])), paths(geo, true), 'and Europe stays where it was');
+
   const drawn = Projection.layout(geo, 760, 700, 12, { insets: true }).shapes;
   const canada = drawn.find((shape) => shape.code === 'CA');
   assert.ok(canada && canada.inset, 'the map draws Canada, in an inset');

@@ -180,13 +180,15 @@
      map is drawn at, and its outline is fitted into that box around its own
      centre. It is the cartographer's answer to a place that matters and does
      not fit — here Atlantic Canada, forty degrees west of Ireland. */
-  function insetScreen(feature, width, height, wide) {
+  function insetScreen(feature, width, height, wide, place) {
     const inset = feature.properties.inset;
     const centre = inset.centre;
     // A wide screen can have its own place for an inset: on a laptop the map
     // is large enough to read Canada in a smaller space at the left side.
+    // The map itself may also name a box, in drawing units, when it knows
+    // how much room there is beyond the drawing's own left edge.
     const fractions = (wide && inset.wideBox) || inset.box;
-    const box = {
+    const box = place || {
       x: fractions[0] * width, y: fractions[1] * height,
       w: fractions[2] * width, h: fractions[3] * height
     };
@@ -230,7 +232,9 @@
     });
     const projected = features.map(function (feature) {
       if (feature.properties && feature.properties.inset) {
-        const placed = insetScreen(feature, width, height, wide);
+        const places = (options && options.places) || {};
+        const placed = insetScreen(feature, width, height, wide,
+          places[feature.properties.code || feature.id] || null);
         return { feature: feature, polygons: placed.polygons, screen: true, box: placed.box };
       }
       const polygons = feature.geometry.coordinates.map(function (polygon) {

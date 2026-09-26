@@ -60,6 +60,9 @@ INSET = {
     # with Scotland, west of Ireland: 82 by 78 units, the lowest box that keeps
     # six units of clearance from any land (Ireland begins just under it). The
     # site's own laptop breakpoint, 62rem, decides which place is used.
+    # This is the fallback: where the page leaves a band of sea beside the
+    # drawing, assets/js/map.js moves Canada into it, at the map's real left
+    # edge, and makes it larger (see WEST there).
     "wideBox": [0.008, 0.303, 0.108, 0.111],
 }
 
