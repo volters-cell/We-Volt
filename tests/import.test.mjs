@@ -357,10 +357,20 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.deepEqual(paths(geo, true), paths(withoutCanada, true),
     'or on a laptop');
 
-  // On a laptop Canada sits at the left side of the map; on a phone, below Spain.
-  const where = (wide) => Projection.layout(geo, 760, 700, 12, { insets: true, wide: wide })
-    .shapes.find((shape) => shape.code === 'CA').inset;
-  assert.ok(where(true).x < 40 && where(true).y < 350, 'on a laptop, at the left side');
+  // On a laptop Canada sits at the left side of the map, below Greenland and
+  // level with the United Kingdom; on a phone, below Spain.
+  const laid = (wide) => Projection.layout(geo, 760, 700, 12, { insets: true, wide: wide }).shapes;
+  const where = (wide) => laid(wide).find((shape) => shape.code === 'CA').inset;
+  const extent = (code) => {
+    const ys = [...laid(true).find((shape) => shape.code === code).path
+      .matchAll(/[ML]-?[\d.]+ (-?[\d.]+)/g)].map((match) => Number(match[1]));
+    return { top: Math.min(...ys), bottom: Math.max(...ys) };
+  };
+  assert.ok(where(true).x < 40, 'on a laptop, at the left side');
+  assert.ok(where(true).y > extent('GL').bottom && where(true).y > extent('IS').bottom,
+    'below Greenland and Iceland');
+  const middle = where(true).y + where(true).h / 2;
+  assert.ok(middle > extent('GB').top && middle < extent('GB').bottom, 'level with the United Kingdom');
   assert.ok(where(false).y > 550, 'on a phone, in the corner below Spain');
 
   const drawn = Projection.layout(geo, 760, 700, 12, { insets: true }).shapes;
