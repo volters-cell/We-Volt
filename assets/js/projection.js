@@ -209,7 +209,11 @@
     const pad = Math.min(box.w, box.h) * 0.03;
     const scale = Math.min((box.w - pad * 2) / (maxX - minX), (box.h - pad * 2) / (maxY - minY));
     const offsetX = box.x + (box.w - (maxX - minX) * scale) / 2;
-    const offsetY = box.y + (box.h - (maxY - minY) * scale) / 2;
+    // Centred, unless the map asks for the country to sit at the bottom of
+    // its box, leaving the top for its name.
+    const offsetY = place && place.bottom
+      ? box.y + box.h - pad - (maxY - minY) * scale
+      : box.y + (box.h - (maxY - minY) * scale) / 2;
     return {
       box: box,
       polygons: polygons.map(function (ring) {

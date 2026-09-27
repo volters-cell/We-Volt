@@ -179,6 +179,11 @@
                     // is above it and half below
   };
 
+  /* On a phone: below Iceland (it ends at 141 on the drawing), above the
+     Shetlands and Scotland (250) and short of the Faroes (130 across), each
+     by at least six units. */
+  const NORTH = { top: 148, bottom: 244, right: 124, caption: 24 };
+
   /* The part of the drawing the reader actually sees, in drawing units: the
      svg's own box, which is wider or taller than 760 by 700 whenever the page
      is not that exact shape. */
@@ -198,7 +203,7 @@
     const wide = this.wideQuery.matches;
     const options = { insets: true, wide: wide };
     const view = this.view();
-    if (!wide || !view) return options;
+    if (!view) return options;
     // Always from the left edge; where there is more room than Canada needs,
     // the frame ends short of Ireland rather than starting short of the edge.
     const left = view.x - view.room;
@@ -206,6 +211,19 @@
     // As tall as Canada needs at that width and no taller, centred on the
     // level of the United Kingdom, so the frame hugs the country instead of
     // standing round it with empty sea above and below.
+    if (!wide) {
+      /* A phone draws the map at half the size, and beside Ireland Canada
+         would be under thirty pixels wide. So it goes a little higher, still
+         at the left edge: in the open sea below Iceland and west of northern
+         Scotland, which is wider (see NORTH). Its height sets its size. */
+      const nh = NORTH.bottom - NORTH.top;
+      // Canada sits at the bottom of the frame and its name above it, in a
+      // row of its own: at phone size the name is set larger than on a
+      // laptop (see .inset-caption), or it would be five pixels tall.
+      const nw = Math.min(NORTH.right - left, (nh - NORTH.caption) * WEST.aspect);
+      options.places = { CA: { x: left, y: NORTH.top, w: nw, h: nh, bottom: true } };
+      return options;
+    }
     const w = Math.min(WEST.right - left, WEST.widest);
     const h = Math.min(WEST.bottom - WEST.top, w / WEST.aspect + WEST.caption);
     const y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
@@ -434,8 +452,9 @@
         frame.setAttribute('height', shape.inset.h.toFixed(1));
       }
       if (caption) {
+        const size = parseFloat(getComputedStyle(caption).fontSize) || 11;
         caption.setAttribute('x', (shape.inset.x + 6).toFixed(1));
-        caption.setAttribute('y', (shape.inset.y + 13).toFixed(1));
+        caption.setAttribute('y', (shape.inset.y + size + 2).toFixed(1));
       }
       entry.shape = shape;
     });
