@@ -163,23 +163,26 @@
      The drawing is 760 by 700 and is scaled to fit the space the page gives
      it, so there is usually a band of empty sea on either side of it, and
      beyond that the padding of the card the map sits in. Both are where
-     Canada belongs: west of everything, below Greenland and Iceland, level
-     with the United Kingdom. So on a laptop the svg is allowed to draw past
-     its own box — Canada only; every other shape is clipped to that box
-     exactly as before (see view()) — and Canada's frame starts a few pixels
-     inside the card's edge. It runs from there to just short of Ireland,
-     clear of any land by six units (measured on the drawing: Iceland ends at
-     141, Ireland begins at 57 across and 297 down), and hugs the country. */
+     Canada belongs: west of everything, below Greenland and Iceland, beside
+     northern Britain. So the svg is allowed to draw past its own box —
+     Canada only; every other shape is clipped to that box exactly as before
+     (see view()) — and Canada's frame starts a few pixels inside the card's
+     edge. On a laptop it sits above Ireland and reaches east towards
+     Scotland (see LAPTOP); on a phone, higher, below Iceland (see NORTH).
+     Clear of any land by six units, and hugging the country. */
   const WEST = {
-    top: 196, bottom: 330, right: 50, widest: 116, narrowest: 60,
+    right: 50, narrowest: 60,  // too little room west of Ireland: use the fixed place
     edge: 8,        // px between the frame and the card's own edge
     nudge: 10,      // px further right on a laptop, so it does not hug the edge
-    ireland: 291,   // lowest the frame's bottom may go once it reaches past x 50
-    level: 262,     // level with the north of Britain on the drawing
     aspect: 1.17,   // Canada as drawn, width over height
     caption: 26     // room for its name above it: Canada is centred, so half of this
                     // is above it and half below
   };
+
+  /* On a laptop, the larger place: bottom six units above Ireland (297 on
+     the drawing), right edge six short of Scotland's west coast (117 at that
+     height), top no higher than six below Iceland (141). */
+  const LAPTOP = { top: 147, bottom: 291, right: 110, widest: 124 };
 
   /* On a phone: below Iceland (it ends at 141 on the drawing), above the
      Shetlands and Scotland (250) and short of the Faroes (130 across), each
@@ -226,14 +229,14 @@
       options.places = { CA: { x: left, y: NORTH.top, w: nw, h: nh, bottom: true } };
       return options;
     }
-    const w = Math.min(WEST.right - left, WEST.widest);
-    const h = Math.min(WEST.bottom - WEST.top, w / WEST.aspect + WEST.caption);
-    let y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
-    // A little in from the card's edge, at the same size. Where that takes
-    // the frame past x 50 it would come within six units of Ireland, so it
-    // rises just enough to pass above it.
+    // Larger than beside Ireland allows: the frame sits above Ireland, its
+    // bottom on the line that clears it (LAPTOP.bottom), and reaches east as
+    // far as Scotland lets it. It grows upward from there, beside northern
+    // Britain, towards Iceland. A little in from the card's edge.
     const x = left + WEST.nudge / view.scale;
-    if (x + w > WEST.right) y = Math.max(WEST.top, Math.min(y, WEST.ireland - h));
+    const w = Math.min(LAPTOP.right - x, LAPTOP.widest);
+    const h = Math.min(LAPTOP.bottom - LAPTOP.top, w / WEST.aspect + WEST.caption);
+    const y = LAPTOP.bottom - h;
     options.places = { CA: { x: x, y: y, w: w, h: h } };
     return options;
   };
