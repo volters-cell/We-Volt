@@ -173,6 +173,8 @@
   const WEST = {
     top: 196, bottom: 330, right: 50, widest: 116, narrowest: 60,
     edge: 8,        // px between the frame and the card's own edge
+    nudge: 10,      // px further right on a laptop, so it does not hug the edge
+    ireland: 291,   // lowest the frame's bottom may go once it reaches past x 50
     level: 262,     // level with the north of Britain on the drawing
     aspect: 1.17,   // Canada as drawn, width over height
     caption: 26     // room for its name above it: Canada is centred, so half of this
@@ -226,8 +228,13 @@
     }
     const w = Math.min(WEST.right - left, WEST.widest);
     const h = Math.min(WEST.bottom - WEST.top, w / WEST.aspect + WEST.caption);
-    const y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
-    options.places = { CA: { x: left, y: y, w: w, h: h } };
+    let y = Math.min(Math.max(WEST.level - h / 2, WEST.top), WEST.bottom - h);
+    // A little in from the card's edge, at the same size. Where that takes
+    // the frame past x 50 it would come within six units of Ireland, so it
+    // rises just enough to pass above it.
+    const x = left + WEST.nudge / view.scale;
+    if (x + w > WEST.right) y = Math.max(WEST.top, Math.min(y, WEST.ireland - h));
+    options.places = { CA: { x: x, y: y, w: w, h: h } };
     return options;
   };
 
