@@ -182,7 +182,7 @@
   /* On a laptop, the larger place: bottom six units above Ireland (297 on
      the drawing), right edge six short of Scotland's west coast (117 at that
      height), top no higher than six below Iceland (141). */
-  const LAPTOP = { top: 147, bottom: 291, right: 110, widest: 124 };
+  const LAPTOP = { top: 148, bottom: 291, right: 110 };
 
   /* On a phone: below Iceland (it ends at 141 on the drawing), above the
      Shetlands and Scotland (250) and short of the Faroes (130 across), each
@@ -234,7 +234,9 @@
     // far as Scotland lets it. It grows upward from there, beside northern
     // Britain, towards Iceland. A little in from the card's edge.
     const x = left + WEST.nudge / view.scale;
-    const w = Math.min(LAPTOP.right - x, LAPTOP.widest);
+    // As wide as the sea allows, or as wide as Canada can be at the full
+    // height, whichever is less: nothing is left unused.
+    const w = Math.min(LAPTOP.right - x, (LAPTOP.bottom - LAPTOP.top - WEST.caption) * WEST.aspect);
     const h = Math.min(LAPTOP.bottom - LAPTOP.top, w / WEST.aspect + WEST.caption);
     const y = LAPTOP.bottom - h;
     options.places = { CA: { x: x, y: y, w: w, h: h } };
