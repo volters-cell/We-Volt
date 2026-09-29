@@ -171,6 +171,19 @@
 
     --context: #1c2330;
     --context-line: #29313d;
+
+    /* The same as the system dark theme above. These were missing here, so a
+       reader who chose dark with the switch got the light theme's dark green
+       "Adopted" on a dark surface: 2.6:1, measured. */
+    --ink-for: #50ac92;
+    --ink-against: #e07e72;
+    --ink-abstain: #d8a53a;
+    --ink-absent: #9298a5;
+    --eu-ink: #7aa7ff;
+    --on-for: #0d1117;
+    --on-against: #0d1117;
+    --on-abstain: #1c1400;
+    --on-absent: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -655,9 +668,12 @@ main {
 
   .decision-brief, #member-section { order: 1; }
   .map-section { order: 2; }
-  #decision-section > .roll { order: 3; }
-  .rail #country-panel { order: 4; }
-  #tracker { order: 5; }
+  /* Moved here from the brief by placeShare() in app.js: after the map. */
+  #decision-section > #vote-share { order: 3; min-width: 0; }
+  #decision-section > #vote-share .share-card { margin-top: 0; box-shadow: var(--shadow); }
+  #decision-section > .roll { order: 4; }
+  .rail #country-panel { order: 5; }
+  #tracker { order: 6; }
 
   /* The map card gives its padding back to the map on a phone. */
   .map-section { padding: .85rem .7rem 1rem; }
@@ -1660,7 +1676,8 @@ thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; 
   font-size: .62rem;
   text-transform: uppercase;
   letter-spacing: .07em;
-  opacity: .85;
+  /* Full strength: at .85 the dark theme's "AGAINST" measured 4.26:1 on its
+     red, under the 4.5 small text needs. */
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;

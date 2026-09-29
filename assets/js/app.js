@@ -102,6 +102,49 @@
     dom[id] = document.getElementById(id);
   });
 
+  /* On one column, sharing comes after the map rather than before it.
+
+     The brief sits above the map on a phone, and the share card — picture,
+     buttons, address — was the last thing in it: four hundred pixels between
+     the result and the map, which pushed the map, and the colouring that plays
+     on it when a vote opens, off the bottom of the screen. So on a phone the
+     card is moved to follow the map (the stylesheet orders it there); on a
+     laptop it goes back to the foot of the brief, where it has always been. */
+  const ONE_COLUMN = window.matchMedia('(max-width: 62rem)');
+  function placeShare() {
+    const share = dom['vote-share'];
+    const section = dom['decision-section'];
+    const brief = section && section.querySelector('.decision-brief');
+    if (!share || !brief) return;
+    if (ONE_COLUMN.matches) {
+      if (share.parentNode !== section) section.insertBefore(share, dom.roll);
+    } else if (share.parentNode !== brief) {
+      brief.appendChild(share);
+    }
+  }
+  placeShare();
+  if (ONE_COLUMN.addEventListener) ONE_COLUMN.addEventListener('change', placeShare);
+  else if (ONE_COLUMN.addListener) ONE_COLUMN.addListener(placeShare);
+
+  const PLACEHOLDERS = [
+    'Search a vote, a procedure reference, an MEP…',
+    'Search a vote, a reference or an MEP…',
+    'Search a vote or an MEP…',
+    'Search…'
+  ];
+  let measure = null;
+  function fitPlaceholder() {
+    const input = dom['search-input'];
+    if (!input || !input.clientWidth) return;
+    const style = getComputedStyle(input);
+    const room = input.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 4;
+    measure = measure || document.createElement('canvas').getContext('2d');
+    if (!measure) return;
+    measure.font = style.fontStyle + ' ' + style.fontWeight + ' ' + style.fontSize + ' ' + style.fontFamily;
+    const fits = PLACEHOLDERS.find(function (text) { return measure.measureText(text).width <= room; });
+    input.placeholder = fits || PLACEHOLDERS[PLACEHOLDERS.length - 1];
+  }
+
   const esc = Panel.escapeHTML;
 
   const LAYERS = {
@@ -2673,7 +2716,7 @@
       panelLabelled('panel-empty-title');
       dom['panel-empty'].querySelector('p').textContent = state.decision
         ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
-          'how its own members voted.'
+          'its own members voted.'
         : 'Click any member state to see who they are and which clubs they are in. Pick a ' +
           'vote from the list to see how they voted.';
     } else {
@@ -2989,11 +3032,12 @@
 
       document.body.classList.remove('is-loading');
 
-      // A placeholder that fits the box it is in. The long one is clipped
-      // mid-word on a phone, which reads as a broken field.
-      if (window.matchMedia('(max-width: 34rem)').matches) {
-        dom['search-input'].placeholder = 'Search a vote or an MEP…';
-      }
+      // A placeholder that fits the box it is in. The long one was clipped
+      // mid-word on a phone, and on a laptop too ("…a procedure reference,
+      // a"), which reads as a broken field. The longest that fits is used,
+      // measured in the field's own font, and again when the window resizes.
+      fitPlaceholder();
+      window.addEventListener('resize', fitPlaceholder);
 
       states = reference.states;
       statesByCode = {};

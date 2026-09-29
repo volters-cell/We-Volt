@@ -3,317 +3,247 @@
 <head>
   <meta charset="utf-8">
 <script>
-  /* The theme, before anything paints.
-
-     The site's default is light. It was applied by assets/js/theme.js, which
-     arrives at the bottom of the page — so a phone set to dark painted the
-     dark theme first and flipped to light when the script finally ran. On a
-     slow connection that flash is most of the visit, and it is why the site
-     looked dark to somebody whose phone is. The About page never flipped at
-     all: it carries no script.
-
-     So the default is applied here, in the head, before the stylesheet has
-     anything to say. theme.js agrees with this and takes over the switch.
-
-     On a phone there is no choice to apply: the site is light, the switch is
-     not shown, and a dark theme saved from a desktop does not follow you onto
-     the small screen. The width is the same 40rem at which the header becomes
-     the phone header, so "the phone version" means one thing across the site.
-     The saved choice is left alone — it is waiting on the desktop. */
+  /* The theme, before anything paints. An embed sits inside somebody else's
+     page, so it follows the address rather than a choice saved on this site:
+     ?theme=dark, ?theme=light, or ?theme=system for the reader's own setting.
+     Without one it is light, as the site is. */
   (function () {
     var theme = 'light';
-    var phone = false;
     try {
-      phone = window.matchMedia('(max-width: 40rem)').matches;
-    } catch (error) { phone = window.innerWidth <= 640; }
-    if (!phone) {
-      try {
-        var saved = localStorage.getItem('eu-tracker-theme');
-        if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
-      } catch (error) { /* storage refused; the default stands */ }
-    }
+      var asked = new URLSearchParams(location.search).get('theme');
+      if (asked === 'light' || asked === 'dark' || asked === 'system') theme = asked;
+    } catch (error) { /* an old browser: the default stands */ }
     if (theme !== 'system') document.documentElement.setAttribute('data-theme', theme);
   }());
 </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EU Tracker Embed</title>
+  <title>EU Tracker — embedded vote</title>
+  <meta name="robots" content="noindex">
   <!-- Without this the browser asks for /favicon.ico, which this site does not
        serve, and every embed logs a 404 in the host page's console. -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23103d8f'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffd617' stroke-width='7' stroke-dasharray='6 7'/></svg>">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    :root {
-      color-scheme: light dark;
-      --eu-blue: #0b3a8f;
-      --eu-gold: #f6c700;
-      --bg: #f4f5f8;
-      --surface: #ffffff;
-      --ink: #131a24;
-      --ink-soft: #4d5666;
-      --line: #d6dae3;
-      --radius: 10px;
-      --vote-for: #15785f;
-      --vote-against: #b3382c;
-      --vote-abstain: #c88a12;
-      --focus: #0b57d0;
-      --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    html, body { height: 100%; }
+    body { margin: 0; background: var(--surface); color: var(--ink); font-family: var(--font); }
+    /* The site's stylesheet lays <main> out as its two-column grid; the
+       embed is one column, full width, the map taking what is left. */
+    .embed {
+      box-sizing: border-box;
+      display: flex; flex-direction: column; align-items: stretch;
+      max-width: none; margin: 0;
+      min-height: 100%;
+      padding: .9rem 1rem .8rem;
+      gap: .5rem;
     }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #10141b;
-        --surface: #171d26;
-        --ink: #e8ecf3;
-        --ink-soft: #b0b9c8;
-        --line: #2b3441;
-        --vote-for: #2f9c7d;
-        --vote-against: #d75b4c;
-        --vote-abstain: #d8a53a;
-        --focus: #7aa7ff;
-      }
+    .embed-meta {
+      margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--ink-faint);
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: var(--font);
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.5;
+    .embed h1 {
+      margin: 0; font-family: var(--serif); font-size: clamp(1.05rem, 3.2vw, 1.4rem);
+      line-height: 1.25;
     }
-
-    .embed-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+    .embed h1 a { color: inherit; text-decoration: none; }
+    .embed h1 a:hover, .embed h1 a:focus-visible { text-decoration: underline; }
+    .embed-result { margin: 0; font-size: .95rem; color: var(--ink-soft); }
+    .embed-result strong.adopted { color: var(--ink-for); }
+    .embed-result strong.rejected { color: var(--ink-against); }
+    .embed-map { position: relative; flex: 1 1 auto; min-height: 200px; }
+    .embed-map .eu-map { width: 100%; height: 100%; max-height: none; position: absolute; inset: 0; }
+    .embed-legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin: 0; padding: 0;
+      list-style: none; font-size: .82rem; color: var(--ink-soft); }
+    .embed-legend li { display: flex; align-items: center; gap: .4rem; }
+    .embed-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem;
+      margin: 0; font-size: .78rem; color: var(--ink-faint); border-top: 1px solid var(--line);
+      padding-top: .5rem; }
+    .embed-foot a { color: var(--focus); }
+    /* A narrow frame keeps the map: the title stops at three lines (the
+       whole of it is on the link, and one tap away), the legend tightens. */
+    @media (max-width: 30rem) {
+      .embed h1 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+      .embed-legend { font-size: .75rem; gap: .2rem .7rem; }
+      .embed-map { min-height: 170px; }
     }
-
-    .embed-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .embed-title {
-      font-weight: 700;
-      color: var(--eu-blue);
-    }
-
-    .embed-attribution {
-      font-size: 0.75rem;
-      color: var(--ink-soft);
-    }
-
-    .embed-attribution a {
-      color: var(--eu-blue);
-      text-decoration: none;
-    }
-
-    .embed-attribution a:hover {
-      text-decoration: underline;
-    }
-
-    .embed-map {
-      width: 100%;
-      height: 400px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .embed-loading {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--ink-soft);
-    }
-
-    .embed-error {
-      padding: 1rem;
-      background: color-mix(in srgb, var(--vote-against) 15%, var(--surface));
-      border: 1px solid var(--vote-against);
-      color: var(--vote-against);
-      border-radius: var(--radius);
-      font-size: 0.875rem;
-    }
-
-    .embed-legend {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .legend-color {
-      width: 12px;
-      height: 12px;
-      border-radius: 2px;
-    }
-
-    .legend-color.for { background: var(--vote-for); }
-    .legend-color.against { background: var(--vote-against); }
-    .legend-color.abstain { background: var(--vote-abstain); }
-
-    .embed-config {
-      background: var(--surface-sunken);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1rem;
-      margin-top: 1rem;
-    }
-
-    .embed-config h3 {
-      margin: 0 0 0.5rem;
-      font-size: 0.875rem;
-    }
-
-    .embed-config label {
-      display: block;
-      margin: 0.5rem 0;
-      font-size: 0.875rem;
-    }
-
-    .embed-config select,
-    .embed-config input {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      font-family: var(--font);
-      font-size: 0.875rem;
-      background: var(--surface);
-      color: var(--ink);
-    }
-
-    .embed-config button {
-      margin-top: 0.75rem;
-      padding: 0.5rem 1rem;
-      background: var(--eu-blue);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .embed-instructions {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--surface-sunken);
-      border-radius: var(--radius);
-      font-size: 0.875rem;
-      color: var(--ink-soft);
-    }
-
-    .embed-instructions code {
-      background: var(--surface);
-      padding: 0.125rem 0.375rem;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 0.75rem;
-    }
-
-    @media (max-width: 600px) {
-      .embed-container {
-        padding: 0.75rem;
-      }
-      
-      .embed-map {
-        height: 250px;
-      }
-    }
+    .embed-note { margin: auto 0; max-width: 34rem; line-height: 1.5; color: var(--ink-soft); }
+    .embed-note code { font-size: .85em; background: var(--surface-sunken); padding: .1em .35em;
+      border-radius: 4px; word-break: break-all; }
   </style>
 </head>
 <body>
-  <div class="embed-container">
-    <header class="embed-header">
-      <div class="embed-title">EU Tracker</div>
-      <div class="embed-attribution">
-        Data: <a href="https://volters-cell.github.io/We-Volt/" target="_blank">EU Tracker</a>
-      </div>
-    </header>
+  <main class="embed" id="embed">
+    <p class="embed-meta" id="embed-meta">European Parliament</p>
+    <h1 id="embed-title">Loading the vote…</h1>
+    <p class="embed-result" id="embed-result"></p>
+    <div class="embed-map map" id="embed-map" aria-label="Map: how each member state's members voted"></div>
+    <ul class="embed-legend" id="embed-legend" hidden>
+      <li><span class="swatch vote-for"></span>In favour</li>
+      <li><span class="swatch vote-against"></span>Against</li>
+      <li><span class="swatch vote-abstain"></span>Abstained</li>
+      <li><span class="swatch vote-absent"></span>Did not vote</li>
+    </ul>
+    <p class="embed-foot" id="embed-foot"></p>
+  </main>
 
-    <div class="embed-map" id="embed-map">
-      <div class="embed-loading">Loading map...</div>
-    </div>
-
-    <div class="embed-legend">
-      <div class="legend-item">
-        <span class="legend-color for"></span>
-        <span>For</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-color against"></span>
-        <span>Against</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-color abstain"></span>
-        <span>Abstain</span>
-      </div>
-    </div>
-
-    <div class="embed-instructions">
-      <p><strong>To embed this in your site:</strong></p>
-      <p>Copy the following iframe code:</p>
-      <code>&lt;iframe src="https://volters-cell.github.io/We-Volt/embed.html?vote=VOTE_ID" 
-        width="100%" height="500" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code>
-      <p>Replace <code>VOTE_ID</code> with the actual vote identifier.</p>
-    </div>
-  </div>
-
+  <script src="assets/js/projection.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/map.js"></script>
   <script>
-    // Parse URL parameters
-    const params = new URLSearchParams(window.location.search);
-    const voteId = params.get('vote');
-    const theme = params.get('theme') || 'system';
+  /* One vote, on the same map the site draws, for somebody else's page.
 
-    // Set theme
-    if (theme === 'light' || theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', theme);
+       embed.html?vote=196157        the number at the end of a vote's share link
+       embed.html?vote=ep-2026-…     or the record's own id
+       &theme=light|dark|system      see the head
+       &height=200-800               the map's height in pixels; otherwise the
+                                     map fills whatever the frame leaves it
+
+     Everything read from the address is checked against a pattern and then
+     only ever used as text or as a key into the site's own data — never
+     written into the page as markup. */
+  (function () {
+    'use strict';
+
+    const params = new URLSearchParams(location.search);
+    const asked = (params.get('vote') || '').trim();
+    const voteId = /^[A-Za-z0-9-]{1,80}$/.test(asked) ? asked : '';
+    const height = Number(params.get('height'));
+
+    const $ = function (id) { return document.getElementById(id); };
+    const site = new URL('index.html', location.href).href;
+    const LABEL = { for: 'In favour', against: 'Against', abstain: 'Abstained', absent: 'Did not vote', unknown: 'Not recorded' };
+
+    if (height >= 200 && height <= 800) {
+      $('embed-map').style.flex = '0 0 auto';
+      $('embed-map').style.height = Math.round(height) + 'px';
     }
 
-    // Load vote data and render map
-    async function loadVoteData() {
-      const embedMap = document.getElementById('embed-map');
-      
+    function link(href, text) {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = text;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      return a;
+    }
+
+    function footer(extra) {
+      const foot = $('embed-foot');
+      foot.textContent = '';
+      const left = document.createElement('span');
+      left.append('Every MEP, by name, on ', link(site, 'EU Tracker'));
+      foot.append(left);
+      if (extra) foot.append(extra);
+    }
+
+    function explain(message, example) {
+      $('embed-title').textContent = 'EU Tracker';
+      $('embed-meta').textContent = 'Embedded vote';
+      const note = document.createElement('p');
+      note.className = 'embed-note';
+      note.textContent = message + ' ';
+      if (example) {
+        const code = document.createElement('code');
+        code.textContent = example;
+        note.append('For example: ', code);
+      }
+      $('embed-map').replaceWith(note);
+      footer();
+    }
+
+    async function findEntry(index) {
+      const match = function (entry) {
+        return entry.id === voteId || String(entry.sourceId) === voteId;
+      };
+      let entry = index.decisions.find(match);
+      if (entry) return entry;
+      for (const row of index.terms || []) {
+        if (!row.file) continue;
+        const older = await Data.getJSON(row.file);
+        entry = (older.decisions || []).find(match);
+        if (entry) return entry;
+      }
+      return null;
+    }
+
+    async function start() {
+      const index = await Data.getJSON('data/decisions/index.json');
+      const newest = index.decisions[0];
+      const example = new URL('embed.html?vote=' + (newest.sourceId || newest.id), location.href).href;
+
       if (!voteId) {
-        embedMap.innerHTML = '<div class="embed-error">No vote specified. Add ?vote=VOTE_ID to the URL.</div>';
+        explain('Add the vote to the address: the number at the end of its share link.', example);
+        return;
+      }
+      const entry = await findEntry(index);
+      if (!entry) {
+        explain('No vote with that number is in the archive.', example);
         return;
       }
 
-      try {
-        // In production, this would fetch from the actual data
-        // For demo purposes, show a message
-        embedMap.innerHTML = `
-          <div class="embed-error">
-            Embed functionality for vote "${voteId}" would be displayed here.
-            <br><br>
-            In a production environment, this would show an interactive map
-            of how each EU member state voted on this decision.
-          </div>
-        `;
-      } catch (error) {
-        embedMap.innerHTML = '<div class="embed-error">Error loading vote data.</div>';
-        console.error('Error loading vote:', error);
+      const [record, directory, geo] = await Promise.all([
+        Data.getJSON(entry.file || 'data/decisions/' + entry.id + '.json'),
+        Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
+        Data.getJSON('data/eu-countries.geo.json')
+      ]);
+      const decision = Data.expandBallots(record, directory && directory.members);
+      const key = String(decision.sourceId || decision.id);
+      const here = site + '#/' + encodeURIComponent(key);
+
+      document.title = decision.title + ' — EU Tracker';
+      $('embed-meta').textContent = 'European Parliament · ' + Data.formatDate(decision.date);
+      const title = $('embed-title');
+      title.textContent = '';
+      const titleLink = link(here, decision.title);
+      titleLink.title = decision.title;
+      title.append(titleLink);
+
+      const result = (decision.outcome && decision.outcome.result) || 'recorded';
+      const tally = Data.decisionTally(decision);
+      const line = $('embed-result');
+      const word = document.createElement('strong');
+      word.className = result;
+      word.textContent = { adopted: 'Adopted', rejected: 'Rejected' }[result] || 'Recorded';
+      line.append(word);
+      if (tally) {
+        line.append(' · ' + tally.for + ' in favour, ' + tally.against + ' against, ' +
+          tally.abstain + ' abstained');
       }
+
+      const members = new Set(geo.features
+        .filter(function (feature) { return feature.properties && feature.properties.member !== false; })
+        .map(function (feature) { return feature.properties.code || feature.id; }));
+      const map = new EUMap($('embed-map'), geo, {
+        // A country opens on the site, in a new tab, with its own members'
+        // votes: the embed shows the answer, the site holds the detail.
+        onSelect: function (code) {
+          if (code) window.open(here + '/' + encodeURIComponent(code), '_blank', 'noopener');
+        }
+      });
+      map.paint(function (code) {
+        const voted = decision.countries && decision.countries[code];
+        if (!voted && !members.has(code)) return null;
+        const position = voted ? Data.countryPosition(decision, code).position : 'absent';
+        return { className: 'layer-vote vote-' + position, label: LABEL[position] || position };
+      }, function (code) {
+        const position = Data.countryPosition(decision, code);
+        const totals = position.totals;
+        const span = document.createElement('span');
+        span.textContent = (LABEL[position.position] || '') +
+          (totals ? ' · ' + totals.for + '–' + totals.against + (totals.abstain ? '–' + totals.abstain : '') : '');
+        return span.outerHTML;
+      });
+      $('embed-legend').hidden = false;
+
+      const roll = (decision.sources || []).find(function (source) { return source.url; });
+      footer(roll ? link(roll.url, 'Source: the Parliament’s own record') : null);
     }
 
-    // Initialize
-    loadVoteData();
+    start().catch(function (error) {
+      console.error(error);
+      explain('The vote could not be loaded. Try again in a moment.');
+    });
+  }());
   </script>
 </body>
 </html>

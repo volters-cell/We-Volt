@@ -60,6 +60,8 @@ if (!base) {
 }
 
 const problems = [];
+const newest = JSON.parse(await readFile(path.join(ROOT, 'data/decisions/index.json'), 'utf8')).decisions[0];
+const newestKey = String(newest.sourceId || newest.id);
 const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : {});
 
 async function open(width, dark) {
@@ -132,6 +134,22 @@ for (const where of ['/about.html', '/404.html', '/embed.html']) {
   const answer = await page.goto(base + where, { waitUntil: 'commit' });
   await page.waitForTimeout(2000);
   if (!answer || answer.status() >= 400) problems.push(`${where}: HTTP ${answer && answer.status()}`);
+  await page.close();
+}
+
+/* The embed draws a real vote, and what the address carries is text, never
+   markup. It was a placeholder that wrote ?vote= straight into the page. */
+{
+  const page = await open(800, false);
+  await page.goto(base + '/embed.html?vote=' + encodeURIComponent(newestKey), { waitUntil: 'networkidle' });
+  await page.waitForTimeout(800);
+  const painted = await page.locator('svg.eu-map [data-code][class*="vote-"]').count();
+  if (painted < 27) problems.push(`embed: ${painted} member states coloured for vote ${newestKey}`);
+  let ran = false;
+  page.on('dialog', (dialog) => { ran = true; dialog.dismiss(); });
+  await page.goto(base + '/embed.html?vote=' + encodeURIComponent('<img src=x onerror=alert(1)>'), { waitUntil: 'networkidle' });
+  await page.waitForTimeout(500);
+  if (ran || await page.locator('main img').count()) problems.push('embed: the address was written into the page as markup');
   await page.close();
 }
 
