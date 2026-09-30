@@ -93,10 +93,13 @@ for (const [width, dark] of [[390, false], [1280, true]]) {
 
   if (await page.locator('.load-error').count()) problems.push(`${label}: load error shown`);
 
-  // A plenary builds its cards when it opens, so open one.
-  await page.locator('details.session summary').first().click().catch(() => {});
+  // The latest plenary is open on landing, with its votes showing.
+  if (!(await page.locator('details.session[open]').count())) problems.push(`${label}: the latest plenary is not open`);
+  if (!(await page.locator('.decision-card').count())) problems.push(`${label}: the latest plenary showed no votes`);
+  // A shut plenary builds its cards when it opens, so open one.
+  await page.locator('details.session:not([open]) summary').first().click().catch(() => {});
   await page.waitForTimeout(800);
-  if (!(await page.locator('.decision-card').count())) problems.push(`${label}: opening a plenary showed no votes`);
+  if (await page.locator('details.session[open]').count() < 2) problems.push(`${label}: opening a second plenary did nothing`);
 
   await page.locator('.decision-card').first().click().catch(() => {});
   await page.waitForTimeout(1400);

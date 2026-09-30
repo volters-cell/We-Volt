@@ -769,9 +769,14 @@
        and a plenary is what opens onto votes.
 
        The current year is open on landing, because that is the one somebody
-       came for; its plenaries are listed and all of them are shut. */
+       came for, and so is its latest plenary: the votes just taken are what
+       most visitors want, and a first screen of shut folds showed none. The
+       other plenaries are listed shut. A reader who folds the latest one
+       keeps it folded until they unfold it again. */
+    const newestSession = index.decisions[0] ? sessionFor(index.decisions[0].date).key : null;
     const sessionHtml = function (group) {
-      const open = state.query || state.unfolded || unfoldedSessions.has(group.key);
+      const open = state.query || state.unfolded || unfoldedSessions.has(group.key) ||
+        (group.key === newestSession && !foldedSessions.has(group.key));
       const current = state.decision && group.items.some(function (item) {
         return item.id === state.decision.id;
       });
