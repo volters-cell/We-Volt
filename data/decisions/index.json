@@ -50,7 +50,7 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 770,
+      "votes": 774,
       "from": "2024-07-17",
       "until": "2026-09-17",
       "file": null
@@ -11900,6 +11900,28 @@
       "keywords": "2024/2030"
     },
     {
+      "id": "ep-2025-05-07-2024-2030-175859",
+      "sourceId": 175859,
+      "title": "Discharge 2023: Agencies",
+      "subtitle": "A10-0065/2025 – Erik Marquardt – Proposal for a decision on discharge (Frontex) — vote in plenary",
+      "date": "2025-05-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 657,
+      "keywords": "2024/2030"
+    },
+    {
       "id": "ep-2025-05-07-2024-2030-dec-175513",
       "sourceId": 175513,
       "title": "Discharge 2023: Agencies",
@@ -13758,6 +13780,24 @@
       "keywords": "2024/2056(ini)"
     },
     {
+      "id": "ep-2024-12-17-c10-0119-2024-171182",
+      "sourceId": 171182,
+      "title": "Deforestation Regulation: provisions relating to the date of application",
+      "subtitle": "C10-0119/2024 – Provisional agreement (Commission proposal – unamended) — vote in plenary",
+      "date": "2024-12-17",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 650,
+      "keywords": "c10-0119/2024"
+    },
+    {
       "id": "ep-2024-11-28-2024-2911-rsp-170765",
       "sourceId": 170765,
       "title": "Smoke- and aerosol-free environments",
@@ -13968,6 +14008,22 @@
       "status": "verified",
       "mepCount": 719,
       "keywords": "2024/2877(rsp)"
+    },
+    {
+      "id": "ep-2024-11-27-election-of-the-commission-170611",
+      "sourceId": 170611,
+      "title": "Election of the Commission",
+      "subtitle": "vote in plenary",
+      "date": "2024-11-27",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 688,
+      "keywords": ""
     },
     {
       "id": "ep-2024-11-27-objection-pursuant-to-rule-114-3-measures-to-reduce-incide-170721",
@@ -14197,6 +14253,24 @@
       "status": "verified",
       "mepCount": 719,
       "keywords": "2024/2718(rsp)"
+    },
+    {
+      "id": "ep-2024-11-14-c10-0119-2024-170398",
+      "sourceId": 170398,
+      "title": "Deforestation Regulation: provisions relating to the date of application",
+      "subtitle": "C10-0119/2024 – Commission proposal — vote in plenary",
+      "date": "2024-11-14",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "mepCount": 641,
+      "keywords": "c10-0119/2024"
     },
     {
       "id": "ep-2024-10-24-2024-2890-rsp-170366",
