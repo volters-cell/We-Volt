@@ -74,6 +74,9 @@
 
   --context: #dcdfe6;
   --context-line: #ccd1da;
+  /* The sea the map is drawn on, and the faint grid of degrees across it. */
+  --sea: #edf2f8;
+  --graticule: rgba(11, 58, 143, .09);
 
   --radius: 10px;
   --shadow: 0 1px 2px rgba(16, 24, 40, .07), 0 8px 24px rgba(16, 24, 40, .06);
@@ -136,6 +139,8 @@
 
     --context: #1c2330;
     --context-line: #29313d;
+    --sea: #121924;
+    --graticule: rgba(122, 167, 255, .07);
   }
 }
 
@@ -171,6 +176,8 @@
 
     --context: #1c2330;
     --context-line: #29313d;
+    --sea: #121924;
+    --graticule: rgba(122, 167, 255, .07);
 
     /* The same as the system dark theme above. These were missing here, so a
        reader who chose dark with the switch got the light theme's dark green
@@ -2576,11 +2583,14 @@ button.permalink {
    frame and matters to the Union. Faint, so it reads as context, and framed,
    so it reads as displaced. */
 .inset-frame {
-  fill: color-mix(in srgb, var(--surface) 60%, transparent);
+  /* A card of its own, lifted off the sea: the map's edge runs under it, and
+     a box that half-belongs to the water would read as a mistake. */
+  fill: var(--surface);
   stroke: var(--line-strong);
   stroke-width: 1;
   stroke-dasharray: 3 3;
   vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 4px 10px rgba(16, 24, 40, .12));
 }
 .is-inset .context-shape {
   /* A shade darker than the neighbours: at this size a pale shape on a pale
@@ -3731,3 +3741,76 @@ button,
   text-transform: uppercase;
   vertical-align: .05em;
 }
+
+/* ------------------------------------------------------------ the sea, the grid
+   The map sits on water rather than on paper, with a faint graticule every ten
+   degrees: the difference between a picture of shapes and a map. */
+.eu-map { background: var(--sea); border-radius: 10px; }
+.graticule path { fill: none; stroke: var(--graticule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+@media print { .eu-map { background: none; } .graticule { display: none; } }
+
+/* --------------------------------------------------------------- the card tally
+   How the House split, under the title: a bar in the vote's colours and the
+   three numbers beside it. */
+.card-tally { display: flex; align-items: center; gap: .65rem; min-width: 0; }
+.tally-bar {
+  flex: 1 1 auto; display: flex; gap: 2px; height: 6px; min-width: 3rem;
+  border-radius: 999px; overflow: hidden; background: var(--surface-sunken);
+}
+.tally-bar > span { flex-basis: 0; min-width: 2px; }
+.tally-for { background: var(--vote-for); }
+.tally-against { background: var(--vote-against); }
+.tally-abstain { background: var(--vote-abstain); }
+.tally-figures {
+  display: flex; gap: .5rem; flex: 0 0 auto;
+  font-size: .72rem; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.tf-for { color: var(--ink-for); }
+.tf-against { color: var(--ink-against); }
+.tf-abstain { color: var(--ink-abstain); }
+
+/* The result as a filled pill: the second thing on the card a reader wants. */
+.card-meta .chip-result { padding: .12rem .55rem; border-radius: 999px; }
+.card-meta .chip-adopted { background: color-mix(in srgb, var(--vote-for) 13%, transparent); }
+.card-meta .chip-rejected, .card-meta .chip-blocked { background: color-mix(in srgb, var(--vote-against) 12%, transparent); }
+
+/* A card lifts a little under the pointer. */
+.decision-card { transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.decision-card:hover { box-shadow: 0 6px 18px -12px rgba(16, 24, 40, .35); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) {
+  .decision-card, .sq { transition: none; }
+  .decision-card:hover, .sq:hover { transform: none; }
+}
+
+/* ------------------------------------------------------------ the latest plenary
+   The landing panel: where and when, the count, and every vote as a square in
+   the order it was taken. */
+.latest { margin: .2rem 0 1rem; }
+.latest-where { margin: 0 0 .7rem; font-size: .95rem; font-weight: 600; color: var(--ink-soft); }
+.latest-stats {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1.1rem;
+  margin: 0 0 .8rem; font-size: .85rem; color: var(--ink-soft);
+}
+.latest-stats strong {
+  font-family: var(--serif); font-size: 1.6rem; line-height: 1; color: var(--ink);
+  font-variant-numeric: tabular-nums; margin-right: .3rem;
+}
+.latest-adopted strong { color: var(--ink-for); }
+.latest-rejected strong { color: var(--ink-against); }
+.latest-stats > span { display: inline-flex; align-items: baseline; }
+.latest-adopted::before, .latest-rejected::before, .latest-aside::before {
+  content: ""; width: .6rem; height: .6rem; border-radius: 2px; margin-right: .4rem; align-self: center;
+}
+.latest-adopted::before { background: var(--vote-for); }
+.latest-rejected::before { background: var(--vote-against); }
+.latest-aside::before { box-shadow: inset 0 0 0 1.5px var(--line-strong); }
+.latest-strip {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(15px, 1fr)); gap: 4px;
+}
+.sq { aspect-ratio: 1; border-radius: 3px; cursor: pointer; transition: transform .12s ease; }
+.sq:hover { transform: scale(1.25); }
+.sq-adopted { background: var(--vote-for); }
+.sq-rejected { background: var(--vote-against); }
+.sq-other { background: var(--vote-absent); }
+.sq-aside { box-shadow: inset 0 0 0 1.5px var(--line-strong); }
+

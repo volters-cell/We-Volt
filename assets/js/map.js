@@ -412,6 +412,27 @@
     clip.appendChild(clipRect);
     defs.appendChild(clip);
     svg.appendChild(defs);
+    /* The graticule: every ten degrees, faint, under everything. It is what
+       makes the picture read as a map of somewhere rather than shapes on a
+       page, and it is drawn on the same projection as the countries. */
+    const graticule = el('g', { class: 'graticule', 'aria-hidden': 'true' });
+    const locate = this.layout.locate;
+    if (locate) {
+      const line = function (points) {
+        return 'M' + points.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join('L');
+      };
+      for (let lon = -50; lon <= 70; lon += 10) {
+        const points = [];
+        for (let lat = 25; lat <= 85; lat += 2.5) points.push(locate(lon, lat));
+        graticule.appendChild(el('path', { d: line(points) }));
+      }
+      for (let lat = 30; lat <= 80; lat += 10) {
+        const points = [];
+        for (let lon = -60; lon <= 80; lon += 2.5) points.push(locate(lon, lat));
+        graticule.appendChild(el('path', { d: line(points) }));
+      }
+    }
+    svg.appendChild(graticule);
     svg.appendChild(contextLayer);
     svg.appendChild(insetLayer);
     svg.appendChild(unionLayer);
@@ -419,7 +440,7 @@
     svg.appendChild(labelLayer);
     this.clipId = clipId;
     this.clipRect = clipRect;
-    this.clipped = [contextLayer, unionLayer, shapeLayer, labelLayer];
+    this.clipped = [graticule, contextLayer, unionLayer, shapeLayer, labelLayer];
 
     // Clicking the sea closes the open country. A map you can only ever open
     // and never close is a trap, and the way out has to be the obvious one.

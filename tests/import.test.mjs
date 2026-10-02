@@ -414,6 +414,11 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.equal(is('B10-0322/2025 – Motion for a resolution'), 'Motion for a resolution');
   assert.equal(is('2024/0017(COD)'), null, 'a label naming no type gets none, not a guess');
   assert.equal(voteType({ subtitle: 'vote in plenary' }), null);
+  assert.equal(voteType({ title: 'Monday’s agenda – Request by The Left Group – ECB', subtitle: 'vote in plenary' }),
+    'Agenda request', 'an agenda change is named in its title');
+  assert.equal(voteType({ title: 'Ordre du jour de mercredi - Demande des groupes S&D et Renew' }), 'Agenda request');
+  assert.equal(voteType({ title: 'Implementing the 2030 Agenda', subtitle: 'B9-0001/2021 – Motion for a resolution' }),
+    'Motion for a resolution', 'the 2030 Agenda is not an agenda request');
   for (const type of NOT_THE_TEXT) assert.ok(MEANING[type], `${type} says what its result means`);
 }
 

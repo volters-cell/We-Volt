@@ -32,6 +32,13 @@ const files = (await readdir(path.join(ROOT, DIR)))
   .filter((name) => name.endsWith('.json') && name !== 'index.json' &&
     !/^term-\d+\.json$/.test(name));
 
+function tallyOf(decision) {
+  if (!Array.isArray(decision.ballots) || !decision.ballots.length) return null;
+  const counts = [0, 0, 0];
+  decision.ballots.forEach((ballot) => { if (ballot[1] >= 0 && ballot[1] <= 2) counts[ballot[1]] += 1; });
+  return counts[0] + counts[1] + counts[2] ? counts : null;
+}
+
 const decisions = [];
 for (const name of files) {
   const decision = JSON.parse(await readFile(path.join(ROOT, DIR, name), 'utf8'));
@@ -76,6 +83,9 @@ for (const name of files) {
     rollCalls: decision.rollCalls || 1,
     result: (decision.outcome && decision.outcome.result) || 'recorded',
     status: decision.status,
+    // For, against, abstained: what the card draws its bar from. Counted from
+    // the ballots, the same way the vote page counts them.
+    ...(tallyOf(decision) ? { tally: tallyOf(decision) } : {}),
     mepCount: Array.isArray(decision.ballots)
       ? decision.ballots.length
       : Object.values(decision.countries || {})

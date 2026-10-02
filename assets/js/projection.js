@@ -282,6 +282,9 @@
     return {
       width: width,
       height: height,
+      // Any point, placed as the shapes are: for the graticule the map draws
+      // behind the countries.
+      locate: function (lon, lat) { return toScreen(project(lon, lat)); },
       shapes: projected.map(function (item) {
         let d = '';
         let cx = 0, cy = 0, count = 0;

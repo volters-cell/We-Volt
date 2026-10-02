@@ -98,6 +98,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        467,
+        92,
+        44
+      ],
       "mepCount": 603,
       "keywords": "2025/2010"
     },
@@ -121,6 +126,11 @@
       "rollCalls": 5,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        514,
+        61,
+        33
+      ],
       "mepCount": 608,
       "keywords": "2025/2062"
     },
@@ -144,6 +154,11 @@
       "rollCalls": 6,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        395,
+        136,
+        80
+      ],
       "mepCount": 611,
       "keywords": "2025/2081"
     },
@@ -167,6 +182,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        319,
+        142,
+        19
+      ],
       "mepCount": 480,
       "keywords": "2026/2731"
     },
@@ -186,6 +206,11 @@
       "rollCalls": 19,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        368,
+        172,
+        69
+      ],
       "mepCount": 609,
       "keywords": "2026/2778"
     },
@@ -205,6 +230,11 @@
       "rollCalls": 17,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        601,
+        4,
+        5
+      ],
       "mepCount": 610,
       "keywords": "2026/2797"
     },
@@ -222,6 +252,11 @@
       "rollCalls": 69,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        339,
+        225,
+        16
+      ],
       "mepCount": 580,
       "keywords": "2026/2870"
     },
@@ -242,6 +277,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        459,
+        12,
+        86
+      ],
       "mepCount": 557,
       "keywords": "2026/2873"
     },
@@ -262,6 +302,11 @@
       "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        374,
+        198,
+        19
+      ],
       "mepCount": 591,
       "keywords": "2026/2874"
     },
@@ -279,6 +324,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        562,
+        1,
+        33
+      ],
       "mepCount": 596,
       "keywords": "2026/2876"
     },
@@ -303,6 +353,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        640,
+        5,
+        26
+      ],
       "mepCount": 671,
       "keywords": "2025/0111"
     },
@@ -326,6 +381,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        540,
+        105,
+        22
+      ],
       "mepCount": 667,
       "keywords": "2025/0172",
       "twin": true
@@ -351,6 +411,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        95,
+        546,
+        22
+      ],
       "mepCount": 663,
       "keywords": "2025/0172",
       "twin": true
@@ -375,6 +440,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        530,
+        125,
+        12
+      ],
       "mepCount": 667,
       "keywords": "2025/0176",
       "twin": true
@@ -400,6 +470,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        102,
+        543,
+        17
+      ],
       "mepCount": 662,
       "keywords": "2025/0176",
       "twin": true
@@ -424,6 +499,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        92,
+        27
+      ],
       "mepCount": 668,
       "keywords": "2025/0177"
     },
@@ -447,6 +527,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        600,
+        21,
+        48
+      ],
       "mepCount": 669,
       "keywords": "2025/0265"
     },
@@ -470,6 +555,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        625,
+        20,
+        22
+      ],
       "mepCount": 667,
       "keywords": "2025/0268"
     },
@@ -493,6 +583,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        75,
+        30
+      ],
       "mepCount": 654,
       "keywords": "2025/0343"
     },
@@ -514,6 +609,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        631,
+        7,
+        15
+      ],
       "mepCount": 653,
       "keywords": "2025/0351"
     },
@@ -535,6 +635,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        612,
+        8,
+        16
+      ],
       "mepCount": 636,
       "keywords": "2025/0352"
     },
@@ -558,6 +663,11 @@
       "rollCalls": 4,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        496,
+        53,
+        125
+      ],
       "mepCount": 674,
       "keywords": "2025/0590"
     },
@@ -581,6 +691,11 @@
       "rollCalls": 53,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        390,
+        218,
+        29
+      ],
       "mepCount": 637,
       "keywords": "2025/2074"
     },
@@ -602,6 +717,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        545,
+        47,
+        75
+      ],
       "mepCount": 667,
       "keywords": "2025/2132"
     },
@@ -625,6 +745,11 @@
       "rollCalls": 8,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        470,
+        129,
+        62
+      ],
       "mepCount": 661,
       "keywords": "2026/2024"
     },
@@ -648,6 +773,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        457,
+        184,
+        10
+      ],
       "mepCount": 651,
       "keywords": "2026/2782"
     },
@@ -668,6 +798,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        442,
+        184,
+        12
+      ],
       "mepCount": 638,
       "keywords": "2026/2783"
     },
@@ -691,6 +826,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        433,
+        159,
+        10
+      ],
       "mepCount": 602,
       "keywords": "2026/2784"
     },
@@ -714,6 +854,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        559,
+        48,
+        62
+      ],
       "mepCount": 669,
       "keywords": "a10-0039/2026"
     },
@@ -737,6 +882,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        467,
+        158,
+        41
+      ],
       "mepCount": 666,
       "keywords": "a10-0098/2026"
     },
@@ -760,6 +910,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        580,
+        51,
+        39
+      ],
       "mepCount": 670,
       "keywords": "a10-0150/2025"
     },
@@ -781,6 +936,11 @@
       "rollCalls": 85,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        420,
+        220,
+        26
+      ],
       "mepCount": 666,
       "keywords": "a10-0199/2026"
     },
@@ -802,6 +962,11 @@
       "rollCalls": 18,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        464,
+        50,
+        159
+      ],
       "mepCount": 673,
       "keywords": "a10-0201/2026"
     },
@@ -823,6 +988,11 @@
       "rollCalls": 10,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        433,
+        97,
+        146
+      ],
       "mepCount": 676,
       "keywords": "a10-0202/2026"
     },
@@ -846,6 +1016,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        405,
+        146,
+        60
+      ],
       "mepCount": 611,
       "keywords": "a10-0214/2026"
     },
@@ -867,6 +1042,11 @@
       "rollCalls": 14,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        530,
+        77,
+        61
+      ],
       "mepCount": 668,
       "keywords": "a10-0218/2026"
     },
@@ -890,6 +1070,11 @@
       "rollCalls": 7,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        477,
+        124,
+        66
+      ],
       "mepCount": 667,
       "keywords": "a10-0219/2026"
     },
@@ -913,6 +1098,11 @@
       "rollCalls": 12,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        127,
+        104
+      ],
       "mepCount": 671,
       "keywords": "a10-0224/2026"
     },
@@ -937,6 +1127,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        583,
+        49,
+        39
+      ],
       "mepCount": 671,
       "keywords": "a10-0226/2026"
     },
@@ -958,6 +1153,11 @@
       "rollCalls": 4,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        367,
+        240,
+        59
+      ],
       "mepCount": 666,
       "keywords": "a10-0230/2026"
     },
@@ -972,10 +1172,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        154,
+        216,
+        85
+      ],
       "mepCount": 455,
       "keywords": ""
     },
@@ -1000,6 +1207,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        416,
+        169,
+        22
+      ],
       "mepCount": 719,
       "keywords": "2023/0212(cod)"
     },
@@ -1018,6 +1230,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        314,
+        276,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2025/0429(cod)",
       "twin": true
@@ -1042,6 +1259,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        366,
+        192,
+        39
+      ],
       "mepCount": 719,
       "keywords": "2025/2211(ini)"
     },
@@ -1064,6 +1286,11 @@
       "rollCalls": 5,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        255,
+        315,
+        19
+      ],
       "mepCount": 589,
       "keywords": "2026/2734"
     },
@@ -1084,6 +1311,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        28,
+        96
+      ],
       "mepCount": 719,
       "keywords": "2026/2799(rsp)"
     },
@@ -1103,6 +1335,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        510,
+        1,
+        86
+      ],
       "mepCount": 719,
       "keywords": "2026/2800(rsp)"
     },
@@ -1121,6 +1358,11 @@
       "rollCalls": 5,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        480,
+        77,
+        32
+      ],
       "mepCount": 589,
       "keywords": "2026/2801"
     },
@@ -1140,6 +1382,11 @@
       "rollCalls": 28,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        276,
+        286,
+        30
+      ],
       "mepCount": 592,
       "keywords": "c10-0178/2026",
       "twin": true
@@ -1165,6 +1412,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        625,
+        16,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2023/0142(nle)"
     },
@@ -1188,6 +1440,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        499,
+        99,
+        69
+      ],
       "mepCount": 719,
       "keywords": "2025/0244(nle)"
     },
@@ -1212,6 +1469,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        474,
+        131,
+        60
+      ],
       "mepCount": 719,
       "keywords": "2025/0271(nle)"
     },
@@ -1235,6 +1497,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        573,
+        35,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2025/0387(nle)"
     },
@@ -1259,6 +1526,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        479,
+        119,
+        65
+      ],
       "mepCount": 663,
       "keywords": "2025/0810"
     },
@@ -1283,6 +1555,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        388,
+        161,
+        120
+      ],
       "mepCount": 719,
       "keywords": "2025/0810r(nle)"
     },
@@ -1306,6 +1583,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        468,
+        116,
+        79
+      ],
       "mepCount": 719,
       "keywords": "2025/2255(ini)"
     },
@@ -1329,6 +1611,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        505,
+        115,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/2258(ini)"
     },
@@ -1352,6 +1639,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        460,
+        136,
+        59
+      ],
       "mepCount": 719,
       "keywords": "2025/2259(ini)"
     },
@@ -1375,6 +1667,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        466,
+        175,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2025/2647(rsp)"
     },
@@ -1398,6 +1695,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        575,
+        33,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2026/2617(rsp)"
     },
@@ -1421,6 +1723,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        388,
+        248,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2026/2680(dea)"
     },
@@ -1440,6 +1747,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        197,
+        455,
+        7
+      ],
       "mepCount": 719,
       "keywords": "2026/2714(rps)"
     },
@@ -1463,6 +1775,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        460,
+        189,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2026/2745(rsp)"
     },
@@ -1486,6 +1803,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        417,
+        167,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2026/2746(rsp)"
     },
@@ -1503,6 +1825,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        646,
+        12,
+        3
+      ],
       "mepCount": 719,
       "keywords": "2013/0072(cod)"
     },
@@ -1524,6 +1851,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        511,
+        87,
+        61
+      ],
       "mepCount": 719,
       "keywords": "2016/0397(cod)"
     },
@@ -1547,6 +1879,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        152,
+        85
+      ],
       "mepCount": 719,
       "keywords": "2024/2117(ini)"
     },
@@ -1570,6 +1907,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        654,
+        4,
+        1
+      ],
       "mepCount": 719,
       "keywords": "2025/0407(cod)"
     },
@@ -1588,6 +1930,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        331,
+        304,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2025/0429(cod)"
     },
@@ -1611,6 +1958,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        501,
+        61,
+        95
+      ],
       "mepCount": 719,
       "keywords": "2025/2134(ini)"
     },
@@ -1632,6 +1984,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        542,
+        37,
+        79
+      ],
       "mepCount": 719,
       "keywords": "2025/2169(ini)"
     },
@@ -1655,6 +2012,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        447,
+        128,
+        78
+      ],
       "mepCount": 719,
       "keywords": "2025/2181(ini)"
     },
@@ -1678,6 +2040,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        390,
+        86,
+        134
+      ],
       "mepCount": 719,
       "keywords": "2025/2208(ini)"
     },
@@ -1699,6 +2066,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        316,
+        281,
+        39
+      ],
       "mepCount": 719,
       "keywords": "2025/2213(ini)"
     },
@@ -1720,6 +2092,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        374,
+        185,
+        74
+      ],
       "mepCount": 719,
       "keywords": "2025/2248(ini)"
     },
@@ -1743,6 +2120,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        492,
+        101,
+        60
+      ],
       "mepCount": 719,
       "keywords": "2026/0090(bud)"
     },
@@ -1767,6 +2149,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        642,
+        13,
+        1
+      ],
       "mepCount": 719,
       "keywords": "2026/0120(bud)"
     },
@@ -1790,6 +2177,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        532,
+        64,
+        62
+      ],
       "mepCount": 719,
       "keywords": "2026/0126(bud)"
     },
@@ -1807,6 +2199,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        576,
+        62,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2026/0150(cod)"
     },
@@ -1827,6 +2224,11 @@
       "rollCalls": 6,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        128,
+        481,
+        43
+      ],
       "mepCount": 652,
       "keywords": "2026/2807"
     },
@@ -1841,10 +2243,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        283,
+        142,
+        11
+      ],
       "mepCount": 436,
       "keywords": ""
     },
@@ -1859,10 +2268,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        221,
+        213,
+        12
+      ],
       "mepCount": 446,
       "keywords": ""
     },
@@ -1884,6 +2300,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        437,
+        112,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2023/0284(cod)",
       "twin": true
@@ -1907,6 +2328,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        108,
+        436,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2023/0284(cod)",
       "twin": true
@@ -1927,6 +2353,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        559,
+        7,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2026/0099(cod)"
     },
@@ -1946,6 +2377,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        294,
+        245,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2026/2652(rsp)"
     },
@@ -1966,6 +2402,11 @@
       "rollCalls": 10,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        167,
+        363,
+        36
+      ],
       "mepCount": 566,
       "keywords": "2026/2725"
     },
@@ -1985,6 +2426,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        283,
+        199,
+        85
+      ],
       "mepCount": 719,
       "keywords": "2026/2735(rsp)"
     },
@@ -2006,6 +2452,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        186,
+        336,
+        37
+      ],
       "mepCount": 559,
       "keywords": "2026/2765"
     },
@@ -2026,6 +2477,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        504,
+        4,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2026/2766(rsp)"
     },
@@ -2045,6 +2501,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        11,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2026/2767(rsp)"
     },
@@ -2064,6 +2525,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        412,
+        63,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2026/2772(rsp)"
     },
@@ -2083,6 +2549,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        276,
+        13,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2021/0042(nle)"
     },
@@ -2108,6 +2579,11 @@
       "rollCalls": 18,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        280,
+        343,
+        40
+      ],
       "mepCount": 663,
       "keywords": "2023/0226",
       "twin": true
@@ -2133,6 +2609,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        201,
+        431,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2023/0226(cod)",
       "twin": true
@@ -2156,6 +2637,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        258,
+        394,
+        6
+      ],
       "mepCount": 658,
       "keywords": "2025/0059",
       "twin": true
@@ -2178,6 +2664,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        218,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/0059(cod)",
       "twin": true
@@ -2201,6 +2692,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        198,
+        453,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/0059(cod)",
       "twin": true
@@ -2225,6 +2721,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        608,
+        38,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/0259(nle)"
     },
@@ -2248,6 +2749,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        542,
+        52,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2025/0259(nle)"
     },
@@ -2271,6 +2777,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        33,
+        84
+      ],
       "mepCount": 719,
       "keywords": "2025/0348(cns)"
     },
@@ -2292,6 +2803,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        181,
+        439,
+        38
+      ],
       "mepCount": 719,
       "keywords": "2025/0580(cns)"
     },
@@ -2313,6 +2829,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        325,
+        304,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2025/0581(cns)"
     },
@@ -2336,6 +2857,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        431,
+        111,
+        103
+      ],
       "mepCount": 719,
       "keywords": "2025/2216(ini)"
     },
@@ -2359,6 +2885,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        483,
+        103,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2025/2250(ini)"
     },
@@ -2382,6 +2913,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        478,
+        116,
+        54
+      ],
       "mepCount": 719,
       "keywords": "2025/2251(ini)"
     },
@@ -2405,6 +2941,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        412,
+        174,
+        58
+      ],
       "mepCount": 719,
       "keywords": "2025/2252(ini)"
     },
@@ -2428,6 +2969,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        486,
+        101,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2025/2253(ini)"
     },
@@ -2447,6 +2993,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        411,
+        120,
+        120
+      ],
       "mepCount": 719,
       "keywords": "2025/2254(ini)"
     },
@@ -2470,6 +3021,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        381,
+        107,
+        171
+      ],
       "mepCount": 719,
       "keywords": "2025/2256(ini)"
     },
@@ -2489,6 +3045,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        436,
+        145,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2025/2257(ini)"
     },
@@ -2512,6 +3073,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        659,
+        1,
+        1
+      ],
       "mepCount": 661,
       "keywords": "2026/0041"
     },
@@ -2531,6 +3097,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        560,
+        75,
+        25
+      ],
       "mepCount": 718,
       "keywords": "2024/0319(cod)"
     },
@@ -2554,6 +3125,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        444,
+        152,
+        54
+      ],
       "mepCount": 718,
       "keywords": "2025/0260(cod)"
     },
@@ -2577,6 +3153,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        151,
+        50
+      ],
       "mepCount": 718,
       "keywords": "2025/0261(cod)"
     },
@@ -2600,6 +3181,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        423,
+        57,
+        174
+      ],
       "mepCount": 718,
       "keywords": "2025/0359(cod)"
     },
@@ -2621,6 +3207,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        563,
+        44,
+        56
+      ],
       "mepCount": 718,
       "keywords": "2025/0390(app)"
     },
@@ -2642,6 +3233,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        344,
+        237,
+        66
+      ],
       "mepCount": 718,
       "keywords": "2025/2111(ini)"
     },
@@ -2661,6 +3257,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        415,
+        105,
+        142
+      ],
       "mepCount": 718,
       "keywords": "2025/2113(ini)"
     },
@@ -2682,6 +3283,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        434,
+        128,
+        104
+      ],
       "mepCount": 718,
       "keywords": "2025/2179(ini)"
     },
@@ -2705,6 +3311,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        602,
+        47,
+        11
+      ],
       "mepCount": 718,
       "keywords": "2026/0097(bud)"
     },
@@ -2726,6 +3337,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        426,
+        140,
+        107
+      ],
       "mepCount": 718,
       "keywords": "2026/2013(ini)"
     },
@@ -2750,6 +3366,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        120,
+        509,
+        5
+      ],
       "mepCount": 634,
       "keywords": "a10-0069/2026"
     },
@@ -2774,6 +3395,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        135,
+        468,
+        51
+      ],
       "mepCount": 654,
       "keywords": "a10-0073/2026"
     },
@@ -2788,10 +3414,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        336,
+        86,
+        11
+      ],
       "mepCount": 433,
       "keywords": ""
     },
@@ -2806,10 +3439,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        244,
+        179,
+        15
+      ],
       "mepCount": 438,
       "keywords": ""
     },
@@ -2831,6 +3471,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        49,
+        84
+      ],
       "mepCount": 717,
       "keywords": "2023/0250(cod)"
     },
@@ -2852,6 +3497,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        337,
+        178,
+        44
+      ],
       "mepCount": 717,
       "keywords": "2024/2127(ini)"
     },
@@ -2874,6 +3524,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        369,
+        126,
+        84
+      ],
       "mepCount": 717,
       "keywords": "2025/0097(cod)"
     },
@@ -2896,6 +3551,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        294,
+        192,
+        90
+      ],
       "mepCount": 717,
       "keywords": "2025/0825(cod)"
     },
@@ -2918,6 +3578,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        294,
+        194,
+        86
+      ],
       "mepCount": 717,
       "keywords": "2025/0826(cod)"
     },
@@ -2937,6 +3602,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        263,
+        83,
+        154
+      ],
       "mepCount": 717,
       "keywords": "2025/2039(ini)"
     },
@@ -2958,6 +3628,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        395,
+        12,
+        41
+      ],
       "mepCount": 717,
       "keywords": "2025/3046(rsp)"
     },
@@ -2978,6 +3653,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        516,
+        14,
+        39
+      ],
       "mepCount": 717,
       "keywords": "2026/2733(rsp)"
     },
@@ -2998,6 +3678,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        480,
+        5,
+        83
+      ],
       "mepCount": 717,
       "keywords": "2026/2737(rsp)"
     },
@@ -3017,6 +3702,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        469,
+        38,
+        62
+      ],
       "mepCount": 717,
       "keywords": "2026/2738(rsp)"
     },
@@ -3036,6 +3726,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        581,
+        12,
+        45
+      ],
       "mepCount": 717,
       "keywords": "2024/0155(nle)"
     },
@@ -3053,6 +3748,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        493,
+        104,
+        45
+      ],
       "mepCount": 717,
       "keywords": "2024/0260(nle)"
     },
@@ -3074,6 +3774,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        423,
+        16,
+        208
+      ],
       "mepCount": 717,
       "keywords": "2024/0260m(nle)"
     },
@@ -3097,6 +3802,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        518,
+        31,
+        102
+      ],
       "mepCount": 717,
       "keywords": "2024/2126(ini)"
     },
@@ -3118,6 +3828,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        644,
+        1,
+        2
+      ],
       "mepCount": 717,
       "keywords": "2025/0193(nle)"
     },
@@ -3137,6 +3852,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        545,
+        89,
+        15
+      ],
       "mepCount": 717,
       "keywords": "2025/0202(nle)"
     },
@@ -3160,6 +3880,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        497,
+        91,
+        46
+      ],
       "mepCount": 717,
       "keywords": "2025/0231(nle)"
     },
@@ -3179,6 +3904,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        101,
+        74
+      ],
       "mepCount": 717,
       "keywords": "2025/0287(nle)"
     },
@@ -3200,6 +3930,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        466,
+        169,
+        14
+      ],
       "mepCount": 717,
       "keywords": "2025/0413(nle)"
     },
@@ -3223,6 +3958,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        527,
+        62,
+        59
+      ],
       "mepCount": 717,
       "keywords": "2025/2112(ini)"
     },
@@ -3244,6 +3984,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        369,
+        160,
+        112
+      ],
       "mepCount": 717,
       "keywords": "2025/2167(ini)"
     },
@@ -3264,6 +4009,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        347,
+        165,
+        25
+      ],
       "mepCount": 717,
       "keywords": "2026/2607(rsp)"
     },
@@ -3281,6 +4031,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        508,
+        64,
+        90
+      ],
       "mepCount": 717,
       "keywords": "2024/0017(cod)"
     },
@@ -3302,6 +4057,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        537,
+        17,
+        83
+      ],
       "mepCount": 717,
       "keywords": "2025/0398(nle)"
     },
@@ -3325,6 +4085,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        606,
+        16,
+        39
+      ],
       "mepCount": 717,
       "keywords": "2025/0726(cod)"
     },
@@ -3339,10 +4104,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        355,
+        86,
+        7
+      ],
       "mepCount": 448,
       "keywords": ""
     },
@@ -3358,10 +4130,17 @@
         "Israel and Palestine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        181,
+        259,
+        6
+      ],
       "mepCount": 446,
       "keywords": ""
     },
@@ -3376,10 +4155,17 @@
       "topics": [
         "Justice and policing"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        134,
+        309,
+        3
+      ],
       "mepCount": 446,
       "keywords": ""
     },
@@ -3395,10 +4181,17 @@
         "United States",
         "Defence and security"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        342,
+        65,
+        41
+      ],
       "mepCount": 448,
       "keywords": ""
     },
@@ -3418,6 +4211,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        404,
+        102,
+        67
+      ],
       "mepCount": 719,
       "keywords": "2024/2124(ini)"
     },
@@ -3441,6 +4239,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        426,
+        119,
+        40
+      ],
       "mepCount": 719,
       "keywords": "2025/2053(ini)"
     },
@@ -3464,6 +4267,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        376,
+        187,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2025/2136(ini)"
     },
@@ -3485,6 +4293,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        502,
+        46,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2025/2209(ini)"
     },
@@ -3506,6 +4319,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        401,
+        116,
+        68
+      ],
       "mepCount": 719,
       "keywords": "2025/2247(bui)"
     },
@@ -3530,6 +4348,11 @@
       "rollCalls": 6,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        399,
+        104,
+        75
+      ],
       "mepCount": 578,
       "keywords": "2026/2596"
     },
@@ -3550,6 +4373,11 @@
       "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        161,
+        12
+      ],
       "mepCount": 551,
       "keywords": "2026/2693"
     },
@@ -3570,6 +4398,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        446,
+        63,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2026/2700(rsp)"
     },
@@ -3589,6 +4422,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        47,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2026/2701(rsp)"
     },
@@ -3608,6 +4446,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        511,
+        21,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2026/2702(rsp)"
     },
@@ -3627,6 +4470,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        439,
+        52,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2026/2703(rsp)"
     },
@@ -3646,6 +4494,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        507,
+        31,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2026/2704(rsp)"
     },
@@ -3665,6 +4518,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        465,
+        57,
+        47
+      ],
       "mepCount": 569,
       "keywords": ""
     },
@@ -3688,6 +4546,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        631,
+        6,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2011/0102(nle)"
     },
@@ -3711,6 +4574,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        532,
+        72,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2025/0145(nle)"
     },
@@ -3734,6 +4602,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        532,
+        75,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2025/0156(nle)"
     },
@@ -3757,6 +4630,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        526,
+        56,
+        69
+      ],
       "mepCount": 719,
       "keywords": "2025/0207(cod)"
     },
@@ -3778,6 +4656,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        601,
+        13,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2025/0283(nle)"
     },
@@ -3802,6 +4685,11 @@
       "rollCalls": 12,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        568,
+        24,
+        42
+      ],
       "mepCount": 634,
       "keywords": "2025/0380",
       "twin": true
@@ -3826,6 +4714,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        433,
+        120,
+        91
+      ],
       "mepCount": 719,
       "keywords": "2025/0380(cod)",
       "twin": true
@@ -3850,6 +4743,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        540,
+        60,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/0531(cod)",
       "twin": true
@@ -3875,6 +4773,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        99,
+        539,
+        6
+      ],
       "mepCount": 719,
       "keywords": "2025/0531(cod)",
       "twin": true
@@ -3899,6 +4802,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        616,
+        24,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/0900(app)"
     },
@@ -3920,6 +4828,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        416,
+        190,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/2016(ini)"
     },
@@ -3941,6 +4854,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        328,
+        199,
+        98
+      ],
       "mepCount": 719,
       "keywords": "2025/2135(ini)"
     },
@@ -3964,6 +4882,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        207,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2025/2145(dec)"
     },
@@ -3987,6 +4910,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        131,
+        81
+      ],
       "mepCount": 719,
       "keywords": "2025/2146(dec)"
     },
@@ -4010,6 +4938,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        432,
+        160,
+        65
+      ],
       "mepCount": 719,
       "keywords": "2025/2147(dec)"
     },
@@ -4033,6 +4966,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        526,
+        79,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2025/2148(dec)"
     },
@@ -4056,6 +4994,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        343,
+        160,
+        150
+      ],
       "mepCount": 719,
       "keywords": "2025/2149(dec)"
     },
@@ -4079,6 +5022,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        429,
+        145,
+        76
+      ],
       "mepCount": 719,
       "keywords": "2025/2150(dec)"
     },
@@ -4102,6 +5050,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        478,
+        146,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2025/2151(dec)"
     },
@@ -4125,6 +5078,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        567,
+        70,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2025/2152(dec)"
     },
@@ -4144,6 +5102,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        593,
+        14,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/2153(dec)"
     },
@@ -4167,6 +5130,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        528,
+        59,
+        62
+      ],
       "mepCount": 719,
       "keywords": "2025/2154(dec)"
     },
@@ -4190,6 +5158,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        454,
+        161,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2025/2155(dec)"
     },
@@ -4213,6 +5186,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        475,
+        107,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2025/2156(dec)"
     },
@@ -4236,6 +5214,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        525,
+        104,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2025/2157(dec)"
     },
@@ -4259,6 +5242,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        387,
+        191,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2025/2239(ini)"
     },
@@ -4282,6 +5270,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        586,
+        48,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2026/0066(bud)"
     },
@@ -4305,6 +5298,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        412,
+        145,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2026/2651(rsp)"
     },
@@ -4328,6 +5326,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        459,
+        127,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2021/0297(cod)",
       "twin": true
@@ -4353,6 +5356,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        39,
+        600,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2021/0297(cod)",
       "twin": true
@@ -4375,6 +5383,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        558,
+        35,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2023/0447(cod)"
     },
@@ -4398,6 +5411,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        566,
+        67,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2025/0073(cod)"
     },
@@ -4421,6 +5439,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        591,
+        54,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/0408(cod)"
     },
@@ -4444,6 +5467,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        370,
+        201,
+        84
+      ],
       "mepCount": 719,
       "keywords": "2025/0571r(app)"
     },
@@ -4465,6 +5493,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        527,
+        85,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2025/2032(ini)"
     },
@@ -4486,6 +5519,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        447,
+        160,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2025/2040(ini)"
     },
@@ -4509,6 +5547,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        430,
+        107,
+        115
+      ],
       "mepCount": 719,
       "keywords": "2025/2054(ini)"
     },
@@ -4532,6 +5575,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        439,
+        42,
+        129
+      ],
       "mepCount": 719,
       "keywords": "2025/2120(ini)"
     },
@@ -4553,6 +5601,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        377,
+        254,
+        31
+      ],
       "mepCount": 719,
       "keywords": "2025/2237(ini)"
     },
@@ -4574,6 +5627,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        231,
+        389,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2025/2238(ini)"
     },
@@ -4597,6 +5655,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        389,
+        191,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2025/2246(bui)"
     },
@@ -4620,6 +5683,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        657,
+        0,
+        3
+      ],
       "mepCount": 719,
       "keywords": "2025/2262(reg)"
     },
@@ -4636,6 +5704,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        422,
+        202,
+        9
+      ],
       "mepCount": 633,
       "keywords": ""
     },
@@ -4650,10 +5723,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        132,
+        327,
+        3
+      ],
       "mepCount": 462,
       "keywords": ""
     },
@@ -4668,10 +5748,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        127,
+        338,
+        5
+      ],
       "mepCount": 470,
       "keywords": ""
     },
@@ -4696,6 +5783,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        179,
+        446,
+        16
+      ],
       "mepCount": 641,
       "keywords": "2023/0135",
       "twin": true
@@ -4720,6 +5812,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        581,
+        21,
+        42
+      ],
       "mepCount": 718,
       "keywords": "2023/0135(cod)",
       "twin": true
@@ -4745,6 +5842,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        603,
+        3,
+        33
+      ],
       "mepCount": 718,
       "keywords": "2023/0183(nle)"
     },
@@ -4766,6 +5868,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        618,
+        6,
+        5
+      ],
       "mepCount": 718,
       "keywords": "2024/0324(nle)"
     },
@@ -4788,6 +5895,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        389,
+        206,
+        32
+      ],
       "mepCount": 718,
       "keywords": "2025/0059(cod)"
     },
@@ -4809,6 +5921,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        605,
+        3,
+        9
+      ],
       "mepCount": 718,
       "keywords": "2025/0233(nle)"
     },
@@ -4832,6 +5949,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        437,
+        144,
+        60
+      ],
       "mepCount": 718,
       "keywords": "2025/0260(cod)",
       "twin": true
@@ -4857,6 +5979,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        159,
+        458,
+        23
+      ],
       "mepCount": 718,
       "keywords": "2025/0260(cod)",
       "twin": true
@@ -4882,6 +6009,11 @@
       "rollCalls": 17,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        185,
+        437,
+        16
+      ],
       "mepCount": 638,
       "keywords": "2025/0261",
       "twin": true
@@ -4906,6 +6038,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        417,
+        154,
+        71
+      ],
       "mepCount": 718,
       "keywords": "2025/0261(cod)",
       "twin": true
@@ -4931,6 +6068,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        160,
+        462,
+        16
+      ],
       "mepCount": 718,
       "keywords": "2025/0261(cod)",
       "twin": true
@@ -4955,6 +6097,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        569,
+        45,
+        23
+      ],
       "mepCount": 718,
       "keywords": "2025/0359(cod)"
     },
@@ -4976,6 +6123,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        228,
+        311,
+        92
+      ],
       "mepCount": 718,
       "keywords": "2025/0429(cod)"
     },
@@ -4997,6 +6149,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        371,
+        146,
+        80
+      ],
       "mepCount": 718,
       "keywords": "2025/2073(ini)"
     },
@@ -5014,6 +6171,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        208,
+        414,
+        10
+      ],
       "mepCount": 718,
       "keywords": "2025/3044(dea)"
     },
@@ -5037,6 +6199,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        584,
+        39,
+        13
+      ],
       "mepCount": 718,
       "keywords": "2026/0037(bud)"
     },
@@ -5060,6 +6227,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        575,
+        48,
+        10
+      ],
       "mepCount": 718,
       "keywords": "2026/0038(bud)"
     },
@@ -5074,10 +6246,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        163,
+        344,
+        14
+      ],
       "mepCount": 521,
       "keywords": ""
     },
@@ -5092,10 +6271,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        134,
+        350,
+        14
+      ],
       "mepCount": 498,
       "keywords": ""
     },
@@ -5111,10 +6297,17 @@
         "Iran",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        426,
+        77,
+        14
+      ],
       "mepCount": 517,
       "keywords": ""
     },
@@ -5136,6 +6329,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        537,
+        2,
+        24
+      ],
       "mepCount": 718,
       "keywords": "2023/0435(cod)"
     },
@@ -5155,6 +6353,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        81,
+        9
+      ],
       "mepCount": 718,
       "keywords": "2025/0423(cod)",
       "twin": true
@@ -5176,6 +6379,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        81,
+        473,
+        5
+      ],
       "mepCount": 718,
       "keywords": "2025/0423(cod)",
       "twin": true
@@ -5198,6 +6406,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        233,
+        250,
+        76
+      ],
       "mepCount": 718,
       "keywords": "2025/2138(ini)"
     },
@@ -5220,6 +6433,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        133,
+        385,
+        25
+      ],
       "mepCount": 543,
       "keywords": "2025/2875"
     },
@@ -5240,6 +6458,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        479,
+        17,
+        43
+      ],
       "mepCount": 718,
       "keywords": "2026/2641(rsp)"
     },
@@ -5259,6 +6482,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        524,
+        2,
+        29
+      ],
       "mepCount": 718,
       "keywords": "2026/2642(rsp)"
     },
@@ -5278,6 +6506,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        438,
+        37,
+        81
+      ],
       "mepCount": 718,
       "keywords": "2026/2643(rsp)"
     },
@@ -5301,6 +6534,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        586,
+        21,
+        11
+      ],
       "mepCount": 718,
       "keywords": "2025/0120(nle)"
     },
@@ -5324,6 +6562,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        455,
+        101,
+        74
+      ],
       "mepCount": 718,
       "keywords": "2025/0136(nle)"
     },
@@ -5346,6 +6589,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        172,
+        435,
+        14
+      ],
       "mepCount": 718,
       "keywords": "2025/0429(cod)",
       "twin": true
@@ -5368,6 +6616,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        103,
+        63
+      ],
       "mepCount": 718,
       "keywords": "2025/0429(cod)",
       "twin": true
@@ -5392,6 +6645,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        72,
+        98
+      ],
       "mepCount": 718,
       "keywords": "2025/2038(ini)"
     },
@@ -5415,6 +6673,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        385,
+        147,
+        98
+      ],
       "mepCount": 718,
       "keywords": "2025/2110(ini)"
     },
@@ -5438,6 +6701,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        393,
+        169,
+        67
+      ],
       "mepCount": 718,
       "keywords": "2025/2143(ini)"
     },
@@ -5461,6 +6729,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        448,
+        122,
+        38
+      ],
       "mepCount": 718,
       "keywords": "2025/2144(ini)"
     },
@@ -5484,6 +6757,11 @@
       "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        482,
+        108,
+        42
+      ],
       "mepCount": 632,
       "keywords": "2025/2168"
     },
@@ -5507,6 +6785,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        404,
+        208,
+        20
+      ],
       "mepCount": 718,
       "keywords": "2025/2183(ini)"
     },
@@ -5530,6 +6813,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        392,
+        219,
+        18
+      ],
       "mepCount": 718,
       "keywords": "2025/2214(ini)"
     },
@@ -5551,6 +6839,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        446,
+        100,
+        72
+      ],
       "mepCount": 718,
       "keywords": "2025/2243(aci)"
     },
@@ -5574,6 +6867,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        562,
+        53,
+        19
+      ],
       "mepCount": 718,
       "keywords": "2026/0004(bud)"
     },
@@ -5596,6 +6894,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        164,
+        447,
+        7
+      ],
       "mepCount": 618,
       "keywords": "2022/0408",
       "twin": true
@@ -5618,6 +6921,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        498,
+        90,
+        28
+      ],
       "mepCount": 718,
       "keywords": "2022/0408(cod)",
       "twin": true
@@ -5641,6 +6949,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        160,
+        462,
+        2
+      ],
       "mepCount": 624,
       "keywords": "2023/0404"
     },
@@ -5663,6 +6976,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        156,
+        462,
+        8
+      ],
       "mepCount": 718,
       "keywords": "2023/0404(cod)",
       "twin": true
@@ -5685,6 +7003,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        414,
+        182,
+        21
+      ],
       "mepCount": 718,
       "keywords": "2023/0404(cod)",
       "twin": true
@@ -5707,6 +7030,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        105,
+        81
+      ],
       "mepCount": 718,
       "keywords": "2025/0262(cod)"
     },
@@ -5730,6 +7058,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        528,
+        21,
+        62
+      ],
       "mepCount": 718,
       "keywords": "2025/2011(ini)"
     },
@@ -5751,6 +7084,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        493,
+        92,
+        44
+      ],
       "mepCount": 718,
       "keywords": "2025/2015(ini)"
     },
@@ -5774,6 +7112,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        460,
+        71,
+        88
+      ],
       "mepCount": 718,
       "keywords": "2025/2058(ini)"
     },
@@ -5797,6 +7140,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        367,
+        166,
+        84
+      ],
       "mepCount": 718,
       "keywords": "2025/2070(ini)"
     },
@@ -5818,6 +7166,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        602,
+        9,
+        8
+      ],
       "mepCount": 718,
       "keywords": "2025/2137(ini)"
     },
@@ -5839,6 +7192,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        399,
+        78,
+        69
+      ],
       "mepCount": 718,
       "keywords": "2025/2951(rsp)"
     },
@@ -5853,10 +7211,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        87,
+        291,
+        22
+      ],
       "mepCount": 400,
       "keywords": ""
     },
@@ -5876,6 +7241,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        437,
+        82,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2026/2599(rsp)"
     },
@@ -5895,6 +7265,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        555,
+        0,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/0318(cod)"
     },
@@ -5916,6 +7291,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        385,
+        141,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2025/2095(ini)"
     },
@@ -5935,6 +7315,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        332,
+        209,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2025/2133(ini)"
     },
@@ -5958,6 +7343,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        340,
+        141,
+        68
+      ],
       "mepCount": 719,
       "keywords": "2025/2240(ini)"
     },
@@ -5978,6 +7368,11 @@
       "rollCalls": 6,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        459,
+        45,
+        40
+      ],
       "mepCount": 544,
       "keywords": "2026/2586"
     },
@@ -5997,6 +7392,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        363,
+        71,
+        81
+      ],
       "mepCount": 719,
       "keywords": "2026/2602(rsp)"
     },
@@ -6014,6 +7414,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        514,
+        3,
+        56
+      ],
       "mepCount": 719,
       "keywords": "2026/2611(rsp)"
     },
@@ -6033,6 +7438,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        524,
+        3,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2026/2612(rsp)"
     },
@@ -6053,6 +7463,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        502,
+        2,
+        59
+      ],
       "mepCount": 719,
       "keywords": "2026/2613(rsp)"
     },
@@ -6074,6 +7489,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        552,
+        24,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2024/0101r(nle)"
     },
@@ -6097,6 +7517,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        119,
+        85
+      ],
       "mepCount": 719,
       "keywords": "2025/2119(ini)"
     },
@@ -6120,6 +7545,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        593,
+        55,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2026/0001(bud)"
     },
@@ -6139,6 +7569,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        140,
+        44
+      ],
       "mepCount": 719,
       "keywords": "2026/0008(cod)"
     },
@@ -6158,6 +7593,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        140,
+        32
+      ],
       "mepCount": 719,
       "keywords": "2026/0010(cod)"
     },
@@ -6181,6 +7621,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        428,
+        156,
+        22
+      ],
       "mepCount": 719,
       "keywords": "2026/2518(rsp)"
     },
@@ -6204,6 +7649,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        463,
+        164,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2026/2519(rsp)"
     },
@@ -6227,6 +7677,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        461,
+        169,
+        22
+      ],
       "mepCount": 719,
       "keywords": "2026/2523(rsp)"
     },
@@ -6250,6 +7705,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        462,
+        169,
+        22
+      ],
       "mepCount": 719,
       "keywords": "2026/2535(rsp)"
     },
@@ -6270,6 +7730,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        490,
+        130,
+        32
+      ],
       "mepCount": 652,
       "keywords": "c10-0023/2026"
     },
@@ -6291,6 +7756,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        594,
+        25,
+        23
+      ],
       "mepCount": 719,
       "keywords": "2024/0311(cod)"
     },
@@ -6314,6 +7784,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        625,
+        15,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2025/0071(cod)"
     },
@@ -6335,6 +7810,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        408,
+        184,
+        60
+      ],
       "mepCount": 719,
       "keywords": "2025/0101(cod)"
     },
@@ -6356,6 +7836,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        396,
+        226,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/0132(cod)",
       "twin": true
@@ -6379,6 +7864,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        220,
+        396,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2025/0132(cod)",
       "twin": true
@@ -6401,6 +7891,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        613,
+        5,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2025/0190(cod)"
     },
@@ -6425,6 +7920,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        206,
+        430,
+        12
+      ],
       "mepCount": 648,
       "keywords": "2025/0322",
       "twin": true
@@ -6449,6 +7949,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        483,
+        102,
+        67
+      ],
       "mepCount": 719,
       "keywords": "2025/0322(cod)",
       "twin": true
@@ -6473,6 +7978,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        413,
+        226,
+        12
+      ],
       "mepCount": 719,
       "keywords": "2025/0524(cod)",
       "twin": true
@@ -6498,6 +8008,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        224,
+        396,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2025/0524(cod)",
       "twin": true
@@ -6522,6 +8037,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        443,
+        71,
+        117
+      ],
       "mepCount": 719,
       "keywords": "2025/2182(ini)"
     },
@@ -6537,10 +8057,17 @@
         "Ukraine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        278,
+        121,
+        16
+      ],
       "mepCount": 415,
       "keywords": ""
     },
@@ -6556,10 +8083,17 @@
         "Israel and Palestine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        171,
+        217,
+        34
+      ],
       "mepCount": 422,
       "keywords": ""
     },
@@ -6583,6 +8117,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        471,
+        68,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2025/2007(ini)"
     },
@@ -6606,6 +8145,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        318,
+        247,
+        67
+      ],
       "mepCount": 719,
       "keywords": "2025/2034(ini)"
     },
@@ -6627,6 +8171,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        483,
+        68,
+        76
+      ],
       "mepCount": 719,
       "keywords": "2025/2088(ini)"
     },
@@ -6644,6 +8193,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        165,
+        390,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2026/2002(ins)"
     },
@@ -6663,6 +8217,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        562,
+        9,
+        57
+      ],
       "mepCount": 719,
       "keywords": "2026/2565(rsp)"
     },
@@ -6680,6 +8239,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        385,
+        165,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2026/2568(rsp)"
     },
@@ -6698,6 +8262,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        215,
+        362,
+        39
+      ],
       "mepCount": 616,
       "keywords": "2026/2571"
     },
@@ -6715,6 +8284,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        582,
+        0,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2026/2572(rsp)"
     },
@@ -6734,6 +8308,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        503,
+        9,
+        100
+      ],
       "mepCount": 719,
       "keywords": "2026/2573(rsp)"
     },
@@ -6757,6 +8336,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        632,
+        15,
+        9
+      ],
       "mepCount": 656,
       "keywords": "2013/0072"
     },
@@ -6781,6 +8365,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        565,
+        83,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2024/0305(nle)"
     },
@@ -6804,6 +8393,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        127,
+        59
+      ],
       "mepCount": 719,
       "keywords": "2025/2049(ini)"
     },
@@ -6825,6 +8419,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        392,
+        179,
+        83
+      ],
       "mepCount": 719,
       "keywords": "2025/2164(ini)"
     },
@@ -6848,6 +8447,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        395,
+        197,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2025/2165(ini)"
     },
@@ -6871,6 +8475,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        421,
+        120,
+        108
+      ],
       "mepCount": 719,
       "keywords": "2025/2166(ini)"
     },
@@ -6890,6 +8499,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        334,
+        324,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2026/2560(rsp)",
       "twin": true
@@ -6910,6 +8524,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        225,
+        402,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2026/2560(rsp)",
       "twin": true
@@ -6930,6 +8549,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        499,
+        135,
+        24
+      ],
       "mepCount": 658,
       "keywords": "c10-0004/2026"
     },
@@ -6953,6 +8577,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        503,
+        57,
+        108
+      ],
       "mepCount": 719,
       "keywords": "2025/0102(cod)",
       "twin": true
@@ -6978,6 +8607,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        44,
+        600,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2025/0102(cod)",
       "twin": true
@@ -7002,6 +8636,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        417,
+        234,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2025/2028(ini)"
     },
@@ -7025,6 +8664,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        491,
+        83,
+        84
+      ],
       "mepCount": 719,
       "keywords": "2025/2051(ini)"
     },
@@ -7046,6 +8690,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        492,
+        144,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2025/2079(inl)"
     },
@@ -7067,6 +8716,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        444,
+        153,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2025/2085(ini)"
     },
@@ -7088,6 +8742,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        420,
+        207,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2025/2131(inl)"
     },
@@ -7108,6 +8767,11 @@
       "rollCalls": 12,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        202,
+        442,
+        4
+      ],
       "mepCount": 648,
       "keywords": "2025/3020"
     },
@@ -7127,6 +8791,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        450,
+        93,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2024/2123(ini)"
     },
@@ -7146,6 +8815,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        386,
+        184,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/2061(ini)"
     },
@@ -7165,6 +8839,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        438,
+        37,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/3025(rsp)"
     },
@@ -7182,6 +8861,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        535,
+        0,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2025/3027(rsp)"
     },
@@ -7201,6 +8885,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        477,
+        7,
+        69
+      ],
       "mepCount": 719,
       "keywords": "2025/3028(rsp)"
     },
@@ -7220,6 +8909,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        2,
+        50
+      ],
       "mepCount": 719,
       "keywords": "2025/3029(rsp)"
     },
@@ -7237,6 +8931,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        627,
+        13,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2024/0178(nle)"
     },
@@ -7255,6 +8954,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        396,
+        202,
+        56
+      ],
       "mepCount": 719,
       "keywords": "2025/0101(cod)"
     },
@@ -7273,6 +8977,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        384,
+        237,
+        31
+      ],
       "mepCount": 719,
       "keywords": "2025/0132(cod)"
     },
@@ -7293,6 +9002,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        500,
+        120,
+        32
+      ],
       "mepCount": 719,
       "keywords": "2025/0180(cod)",
       "twin": true
@@ -7315,6 +9029,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        102,
+        517,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2025/0180(cod)",
       "twin": true
@@ -7333,6 +9052,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        604,
+        37,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2025/0229(nle)"
     },
@@ -7353,6 +9077,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        138,
+        512,
+        6
+      ],
       "mepCount": 719,
       "keywords": "2025/0329(cod)",
       "twin": true
@@ -7373,6 +9102,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        405,
+        242,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/0329(cod)",
       "twin": true
@@ -7393,6 +9127,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        451,
+        45,
+        153
+      ],
       "mepCount": 719,
       "keywords": "2025/2080(inl)"
     },
@@ -7412,6 +9151,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        493,
+        127,
+        38
+      ],
       "mepCount": 719,
       "keywords": "2025/2090(ini)"
     },
@@ -7431,6 +9175,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        425,
+        120,
+        96
+      ],
       "mepCount": 719,
       "keywords": "2025/2142(ini)"
     },
@@ -7450,6 +9199,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        230,
+        402,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2025/2806(dea)"
     },
@@ -7467,6 +9221,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        241,
+        356,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/3007(rsp)",
       "twin": true
@@ -7485,6 +9244,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        358,
+        202,
+        79
+      ],
       "mepCount": 719,
       "keywords": "2025/3007(rsp)",
       "twin": true
@@ -7509,6 +9273,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        128,
+        454,
+        57
+      ],
       "mepCount": 639,
       "keywords": "2023/0129"
     },
@@ -7534,6 +9303,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        122,
+        470,
+        69
+      ],
       "mepCount": 661,
       "keywords": "2023/0376"
     },
@@ -7556,6 +9330,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        224,
+        431,
+        4
+      ],
       "mepCount": 659,
       "keywords": "2025/0045",
       "twin": true
@@ -7574,6 +9353,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        428,
+        218,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2025/0045(cod)",
       "twin": true
@@ -7593,6 +9377,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        117,
+        540,
+        4
+      ],
       "mepCount": 719,
       "keywords": "2025/0045(cod)",
       "twin": true
@@ -7613,6 +9402,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        119,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2025/0103(cod)"
     },
@@ -7632,6 +9426,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        629,
+        17,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2025/0236(cod)"
     },
@@ -7649,6 +9448,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        585,
+        34,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/0251(cod)"
     },
@@ -7668,6 +9472,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        619,
+        6,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2025/0289(cod)"
     },
@@ -7687,6 +9496,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        431,
+        161,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2025/0322(cod)"
     },
@@ -7706,6 +9520,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        578,
+        54,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/0326(bud)"
     },
@@ -7723,6 +9542,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        417,
+        131,
+        108
+      ],
       "mepCount": 719,
       "keywords": "2025/2082(ini)"
     },
@@ -7742,6 +9566,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        479,
+        173,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/2958(rsp)"
     },
@@ -7761,6 +9590,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        455,
+        169,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/2959(rsp)"
     },
@@ -7775,10 +9609,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        240,
+        194,
+        2
+      ],
       "mepCount": 436,
       "keywords": ""
     },
@@ -7793,10 +9634,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        130,
+        316,
+        3
+      ],
       "mepCount": 449,
       "keywords": ""
     },
@@ -7811,10 +9659,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        181,
+        261,
+        9
+      ],
       "mepCount": 451,
       "keywords": ""
     },
@@ -7829,10 +9684,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        323,
+        112,
+        12
+      ],
       "mepCount": 447,
       "keywords": ""
     },
@@ -7852,6 +9714,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        400,
+        77,
+        132
+      ],
       "mepCount": 719,
       "keywords": "2023/0462(cod)"
     },
@@ -7871,6 +9738,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        392,
+        88,
+        133
+      ],
       "mepCount": 719,
       "keywords": "2023/0463(cod)"
     },
@@ -7891,6 +9763,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        490,
+        41,
+        74
+      ],
       "mepCount": 719,
       "keywords": "2024/2108(ini)"
     },
@@ -7908,6 +9785,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        337,
+        245,
+        12
+      ],
       "mepCount": 719,
       "keywords": "2025/2042(ini)"
     },
@@ -7925,6 +9807,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        490,
+        9,
+        109
+      ],
       "mepCount": 719,
       "keywords": "2025/2057(ini)"
     },
@@ -7944,6 +9831,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        503,
+        32,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2025/2984(rsp)"
     },
@@ -7963,6 +9855,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        3,
+        57
+      ],
       "mepCount": 719,
       "keywords": "2025/2986(rsp)"
     },
@@ -7982,6 +9879,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        7,
+        31
+      ],
       "mepCount": 719,
       "keywords": "2025/2987(rsp)"
     },
@@ -8002,6 +9904,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        464,
+        58,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2025/2988(rsp)"
     },
@@ -8021,6 +9928,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        539,
+        0,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2025/2990(rsp)"
     },
@@ -8040,6 +9952,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        401,
+        70,
+        90
+      ],
       "mepCount": 719,
       "keywords": "2025/3001(rsp)"
     },
@@ -8057,6 +9974,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        65,
+        73
+      ],
       "mepCount": 719,
       "keywords": "2025/0040(cod)"
     },
@@ -8076,6 +9998,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        419,
+        185,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2025/0210(bud)"
     },
@@ -8095,6 +10022,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        99,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/0319(bud)"
     },
@@ -8114,6 +10046,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        402,
+        250,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/0329(cod)",
       "twin": true
@@ -8135,6 +10072,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        134,
+        526,
+        6
+      ],
       "mepCount": 719,
       "keywords": "2025/0329(cod)",
       "twin": true
@@ -8155,6 +10097,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        521,
+        110,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2025/0806(cns)"
     },
@@ -8172,6 +10119,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        483,
+        92,
+        86
+      ],
       "mepCount": 719,
       "keywords": "2025/2060(ini)"
     },
@@ -8189,6 +10141,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        360,
+        298,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2025/2072(ini)"
     },
@@ -8206,6 +10163,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        510,
+        75,
+        80
+      ],
       "mepCount": 719,
       "keywords": "2025/2116(ini)"
     },
@@ -8227,6 +10189,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        269,
+        337,
+        55
+      ],
       "mepCount": 661,
       "keywords": "2025/2847",
       "twin": true
@@ -8247,6 +10214,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        88,
+        388,
+        184
+      ],
       "mepCount": 719,
       "keywords": "2025/2847(dea)",
       "twin": true
@@ -8267,6 +10239,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        157,
+        465,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2025/2943(dea)",
       "twin": true
@@ -8287,6 +10264,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        359,
+        188,
+        76
+      ],
       "mepCount": 719,
       "keywords": "2025/2943(dea)",
       "twin": true
@@ -8308,6 +10290,11 @@
       "rollCalls": 19,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        170,
+        399,
+        71
+      ],
       "mepCount": 640,
       "keywords": "2025/2971",
       "twin": true
@@ -8328,6 +10315,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        49,
+        600,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2025/2971(rsp)",
       "twin": true
@@ -8348,6 +10340,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        415,
+        193,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2018/0902r(nle)"
     },
@@ -8367,6 +10364,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        556,
+        74,
+        7
+      ],
       "mepCount": 719,
       "keywords": "2023/0438(cod)"
     },
@@ -8391,6 +10393,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        87,
+        542,
+        15
+      ],
       "mepCount": 644,
       "keywords": "2024/0061",
       "twin": true
@@ -8411,6 +10418,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        457,
+        148,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2024/0061(cod)",
       "twin": true
@@ -8432,6 +10444,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        116,
+        490,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2024/0061(cod)",
       "twin": true
@@ -8450,6 +10467,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        330,
+        273,
+        38
+      ],
       "mepCount": 719,
       "keywords": "2025/2013(ini)"
     },
@@ -8469,6 +10491,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        389,
+        213,
+        36
+      ],
       "mepCount": 719,
       "keywords": "2025/2033(ini)"
     },
@@ -8488,6 +10515,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        426,
+        182,
+        39
+      ],
       "mepCount": 719,
       "keywords": "2025/2056(ini)"
     },
@@ -8505,6 +10537,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        590,
+        28,
+        32
+      ],
       "mepCount": 719,
       "keywords": "2025/2086(ini)"
     },
@@ -8524,6 +10561,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        453,
+        171,
+        19
+      ],
       "mepCount": 719,
       "keywords": "2025/2893(rsp)"
     },
@@ -8543,6 +10585,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        452,
+        182,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2025/2894(rsp)"
     },
@@ -8562,6 +10609,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        456,
+        166,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2025/2895(rsp)"
     },
@@ -8581,6 +10633,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        453,
+        179,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2025/2896(rsp)"
     },
@@ -8600,6 +10657,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        426,
+        157,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2025/2897(rsp)"
     },
@@ -8619,6 +10681,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        334,
+        294,
+        11
+      ],
       "mepCount": 639,
       "keywords": ""
     },
@@ -8634,10 +10701,17 @@
         "Israel and Palestine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        173,
+        244,
+        16
+      ],
       "mepCount": 433,
       "keywords": ""
     },
@@ -8653,10 +10727,17 @@
         "Ukraine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        301,
+        103,
+        33
+      ],
       "mepCount": 437,
       "keywords": ""
     },
@@ -8672,10 +10753,17 @@
         "Ukraine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        424,
+        0,
+        14
+      ],
       "mepCount": 438,
       "keywords": ""
     },
@@ -8695,6 +10783,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        370,
+        160,
+        107
+      ],
       "mepCount": 719,
       "keywords": "2023/0321(cns)"
     },
@@ -8714,6 +10807,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        310,
+        222,
+        68
+      ],
       "mepCount": 719,
       "keywords": "2024/2125(ini)"
     },
@@ -8733,6 +10831,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        515,
+        93,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2025/0009(nle)"
     },
@@ -8752,6 +10855,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        572,
+        18,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2025/0009m(nle)"
     },
@@ -8769,6 +10877,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        382,
+        249,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2025/0045(cod)",
       "twin": true
@@ -8788,6 +10901,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        105,
+        529,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/0045(cod)",
       "twin": true
@@ -8806,6 +10924,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        454,
+        172,
+        19
+      ],
       "mepCount": 719,
       "keywords": "2025/0090(cod)"
     },
@@ -8825,6 +10948,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        543,
+        72,
+        22
+      ],
       "mepCount": 719,
       "keywords": "2025/0108(cod)"
     },
@@ -8846,6 +10974,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        605,
+        26,
+        2
+      ],
       "mepCount": 633,
       "keywords": "2025/0199"
     },
@@ -8867,6 +11000,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        611,
+        26,
+        1
+      ],
       "mepCount": 638,
       "keywords": "2025/0214"
     },
@@ -8888,6 +11026,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        606,
+        26,
+        1
+      ],
       "mepCount": 633,
       "keywords": "2025/0215"
     },
@@ -8909,6 +11052,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        610,
+        26,
+        1
+      ],
       "mepCount": 637,
       "keywords": "2025/0219"
     },
@@ -8930,6 +11078,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        605,
+        29,
+        0
+      ],
       "mepCount": 634,
       "keywords": "2025/0224"
     },
@@ -8949,6 +11102,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        622,
+        10,
+        3
+      ],
       "mepCount": 719,
       "keywords": "2025/0318(bud)"
     },
@@ -8973,6 +11131,11 @@
       "rollCalls": 40,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        244,
+        14
+      ],
       "mepCount": 636,
       "keywords": "2025/0524",
       "twin": true
@@ -8993,6 +11156,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        379,
+        248,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2025/0524(cod)",
       "twin": true
@@ -9014,6 +11182,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        234,
+        399,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/0524(cod)",
       "twin": true
@@ -9034,6 +11207,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        512,
+        76,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2025/2048(ini)"
     },
@@ -9051,6 +11229,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        605,
+        30,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/2195(inl)"
     },
@@ -9070,6 +11253,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        136,
+        432,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2025/2967(rsp)"
     },
@@ -9090,6 +11278,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        220,
+        341,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2023/0232(cod)"
     },
@@ -9112,6 +11305,11 @@
       "rollCalls": 8,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        127,
+        63
+      ],
       "mepCount": 568,
       "keywords": "2025/2618"
     },
@@ -9137,6 +11335,11 @@
       "rollCalls": 21,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        156,
+        404,
+        10
+      ],
       "mepCount": 570,
       "keywords": "2025/2666"
     },
@@ -9156,6 +11359,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        180,
+        373,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2025/2809(dea)",
       "twin": true
@@ -9176,6 +11384,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        175,
+        374,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2025/2809(dea)",
       "twin": true
@@ -9196,6 +11409,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        124,
+        401,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2025/2846(dea)"
     },
@@ -9213,6 +11431,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        367,
+        98,
+        113
+      ],
       "mepCount": 719,
       "keywords": "2025/2933(rsp)"
     },
@@ -9232,6 +11455,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        108,
+        11
+      ],
       "mepCount": 560,
       "keywords": ""
     },
@@ -9251,6 +11479,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        125,
+        73
+      ],
       "mepCount": 719,
       "keywords": "2024/2021(dec)"
     },
@@ -9270,6 +11503,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        99,
+        72
+      ],
       "mepCount": 719,
       "keywords": "2024/2030(dec)"
     },
@@ -9289,6 +11527,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        384,
+        202,
+        58
+      ],
       "mepCount": 719,
       "keywords": "2025/0210(bud)"
     },
@@ -9308,6 +11551,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        310,
+        277,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2025/2041(ini)"
     },
@@ -9327,6 +11575,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        18,
+        84
+      ],
       "mepCount": 719,
       "keywords": "2025/2900(rsp)"
     },
@@ -9346,6 +11599,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        457,
+        103,
+        72
+      ],
       "mepCount": 719,
       "keywords": "2025/2917(rsp)"
     },
@@ -9363,6 +11621,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        446,
+        162,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2021/0375(cod)"
     },
@@ -9382,6 +11645,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        533,
+        43,
+        68
+      ],
       "mepCount": 719,
       "keywords": "2023/0202(cod)"
     },
@@ -9406,6 +11674,11 @@
       "rollCalls": 5,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        352,
+        242,
+        40
+      ],
       "mepCount": 634,
       "keywords": "2023/0410",
       "twin": true
@@ -9426,6 +11699,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        327,
+        256,
+        58
+      ],
       "mepCount": 719,
       "keywords": "2023/0410(cod)",
       "twin": true
@@ -9447,6 +11725,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        370,
+        264,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2023/0413(cod)"
     },
@@ -9466,6 +11749,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        471,
+        123,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2023/0453(cod)"
     },
@@ -9485,6 +11773,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        477,
+        93,
+        76
+      ],
       "mepCount": 719,
       "keywords": "2023/0454(cod)"
     },
@@ -9504,6 +11797,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        469,
+        126,
+        50
+      ],
       "mepCount": 719,
       "keywords": "2023/0455(cod)"
     },
@@ -9523,6 +11821,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        505,
+        62,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2024/2119(ini)"
     },
@@ -9539,6 +11842,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        537,
+        88,
+        14
+      ],
       "mepCount": 639,
       "keywords": ""
     },
@@ -9553,10 +11861,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        124,
+        281,
+        16
+      ],
       "mepCount": 421,
       "keywords": ""
     },
@@ -9571,10 +11886,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        421,
+        0,
+        5
+      ],
       "mepCount": 426,
       "keywords": ""
     },
@@ -9589,10 +11911,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        331,
+        37,
+        62
+      ],
       "mepCount": 430,
       "keywords": ""
     },
@@ -9610,6 +11939,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        414,
+        139,
+        61
+      ],
       "mepCount": 719,
       "keywords": "2024/0006(cod)"
     },
@@ -9629,6 +11963,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        499,
+        66,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2024/2118(ini)"
     },
@@ -9646,6 +11985,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        535,
+        24,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2025/2114(ini)"
     },
@@ -9663,6 +12007,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        133,
+        383,
+        78
+      ],
       "mepCount": 719,
       "keywords": "2025/2173(ins)",
       "twin": true
@@ -9681,6 +12030,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        179,
+        378,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2025/2174(ins)",
       "twin": true
@@ -9699,6 +12053,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        360,
+        210,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2025/2654(rsp)"
     },
@@ -9723,6 +12082,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        204,
+        372,
+        10
+      ],
       "mepCount": 586,
       "keywords": "2025/2780"
     },
@@ -9743,6 +12107,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        504,
+        74,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/2872(rsp)"
     },
@@ -9762,6 +12131,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        469,
+        97,
+        38
+      ],
       "mepCount": 719,
       "keywords": "2025/2901(rsp)"
     },
@@ -9779,6 +12153,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        550,
+        3,
+        54
+      ],
       "mepCount": 719,
       "keywords": "2025/2905(rsp)"
     },
@@ -9798,6 +12177,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        546,
+        3,
+        44
+      ],
       "mepCount": 719,
       "keywords": "2025/2906(rsp)"
     },
@@ -9815,6 +12199,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        594,
+        38,
+        2
+      ],
       "mepCount": 719,
       "keywords": "2017/0159(nle)"
     },
@@ -9839,6 +12228,11 @@
       "rollCalls": 22,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        487,
+        134,
+        24
+      ],
       "mepCount": 645,
       "keywords": "2024/0319",
       "twin": true
@@ -9859,6 +12253,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        532,
+        78,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2024/0319(cod)",
       "twin": true
@@ -9879,6 +12278,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        520,
+        97,
+        12
+      ],
       "mepCount": 719,
       "keywords": "2025/0046(nle)"
     },
@@ -9898,6 +12302,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        412,
+        129,
+        98
+      ],
       "mepCount": 719,
       "keywords": "2025/0154(nle)"
     },
@@ -9917,6 +12326,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        578,
+        47,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2025/0198(bud)"
     },
@@ -9936,6 +12350,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        479,
+        82,
+        77
+      ],
       "mepCount": 719,
       "keywords": "2025/0206(bud)"
     },
@@ -9955,6 +12374,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        492,
+        111,
+        39
+      ],
       "mepCount": 719,
       "keywords": "2025/0236(cod)"
     },
@@ -9974,6 +12398,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        577,
+        47,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/0245(bud)"
     },
@@ -9991,6 +12420,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        354,
+        195,
+        77
+      ],
       "mepCount": 719,
       "keywords": "2025/2083(ini)"
     },
@@ -10010,6 +12444,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        433,
+        166,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2025/2807(rsp)"
     },
@@ -10027,6 +12466,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        518,
+        96,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2023/0371(cod)"
     },
@@ -10046,6 +12490,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        636,
+        10,
+        4
+      ],
       "mepCount": 719,
       "keywords": "2024/0011(cod)"
     },
@@ -10065,6 +12514,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        552,
+        52,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2025/2035(ini)"
     },
@@ -10084,6 +12538,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        182,
+        11
+      ],
       "mepCount": 651,
       "keywords": "c10-0130/2025"
     },
@@ -10104,6 +12563,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        175,
+        239,
+        26
+      ],
       "mepCount": 440,
       "keywords": ""
     },
@@ -10124,6 +12588,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        196,
+        234,
+        8
+      ],
       "mepCount": 438,
       "keywords": ""
     },
@@ -10141,6 +12610,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        535,
+        36,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2023/0435(cod)"
     },
@@ -10160,6 +12634,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        459,
+        65,
+        90
+      ],
       "mepCount": 719,
       "keywords": "2025/2009(ini)"
     },
@@ -10177,6 +12656,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        388,
+        186,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2025/2012(ini)"
     },
@@ -10194,6 +12678,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        461,
+        100,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/2036(ini)"
     },
@@ -10213,6 +12702,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        305,
+        151,
+        122
+      ],
       "mepCount": 719,
       "keywords": "2025/2852(rsp)"
     },
@@ -10232,6 +12726,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        355,
+        173,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/2855(rsp)"
     },
@@ -10251,6 +12750,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        597,
+        0,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/2860(rsp)"
     },
@@ -10268,6 +12772,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        2,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2025/2861(rsp)"
     },
@@ -10285,6 +12794,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        627,
+        4,
+        33
+      ],
       "mepCount": 719,
       "keywords": "2012/0231(nle)"
     },
@@ -10302,6 +12816,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        513,
+        111,
+        40
+      ],
       "mepCount": 719,
       "keywords": "2024/2106(ini)"
     },
@@ -10321,6 +12840,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        407,
+        161,
+        97
+      ],
       "mepCount": 719,
       "keywords": "2024/2116(ini)"
     },
@@ -10340,6 +12864,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        462,
+        142,
+        63
+      ],
       "mepCount": 719,
       "keywords": "2024/2120(ini)"
     },
@@ -10357,6 +12886,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        99,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2024/2121(ini)"
     },
@@ -10374,6 +12908,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        612,
+        7,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/0022(cod)"
     },
@@ -10391,6 +12930,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        662,
+        3,
+        2
+      ],
       "mepCount": 719,
       "keywords": "2025/0023(cod)"
     },
@@ -10410,6 +12954,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        617,
+        18,
+        19
+      ],
       "mepCount": 719,
       "keywords": "2025/0039(cod)"
     },
@@ -10429,6 +12978,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        528,
+        89,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/0055(nle)"
     },
@@ -10448,6 +13002,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        624,
+        9,
+        32
+      ],
       "mepCount": 719,
       "keywords": "2025/0066(nle)"
     },
@@ -10467,6 +13026,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        634,
+        4,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2025/0074(cod)"
     },
@@ -10487,6 +13051,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        151,
+        495,
+        19
+      ],
       "mepCount": 665,
       "keywords": "2025/0084",
       "twin": true
@@ -10505,6 +13074,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        440,
+        168,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2025/0084(cod)",
       "twin": true
@@ -10525,6 +13099,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        453,
+        149,
+        59
+      ],
       "mepCount": 719,
       "keywords": "2025/0085(cod)"
     },
@@ -10544,6 +13123,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        393,
+        145,
+        123
+      ],
       "mepCount": 719,
       "keywords": "2025/2052(ini)"
     },
@@ -10564,6 +13148,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        490,
+        65,
+        86
+      ],
       "mepCount": 719,
       "keywords": "2025/2811(rsp)"
     },
@@ -10581,6 +13170,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        114,
+        58
+      ],
       "mepCount": 719,
       "keywords": "2022/0184(nle)"
     },
@@ -10598,6 +13192,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        434,
+        49,
+        168
+      ],
       "mepCount": 719,
       "keywords": "2022/0184m(nle)"
     },
@@ -10615,6 +13214,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        431,
+        145,
+        76
+      ],
       "mepCount": 719,
       "keywords": "2023/0284(cod)"
     },
@@ -10635,6 +13239,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        606,
+        5,
+        19
+      ],
       "mepCount": 719,
       "keywords": "2024/0321(nle)"
     },
@@ -10652,6 +13261,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        432,
+        95,
+        124
+      ],
       "mepCount": 719,
       "keywords": "2024/2103(ini)"
     },
@@ -10671,6 +13285,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        135,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2025/2026(ini)"
     },
@@ -10691,6 +13310,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        384,
+        10,
+        51
+      ],
       "mepCount": 445,
       "keywords": ""
     },
@@ -10710,6 +13334,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        542,
+        97,
+        12
+      ],
       "mepCount": 719,
       "keywords": "2025/0129(cod)"
     },
@@ -10727,6 +13356,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        494,
+        83,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2025/2008(ini)"
     },
@@ -10744,6 +13378,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        175,
+        360,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2025/2140(ins)"
     },
@@ -10761,6 +13400,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        511,
+        50,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2025/2796(rsp)"
     },
@@ -10780,6 +13424,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        617,
+        4,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2025/2797(rsp)"
     },
@@ -10800,6 +13449,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        625,
+        7,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2025/2798(rsp)"
     },
@@ -10819,6 +13473,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        523,
+        75,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2025/2800(rsp)"
     },
@@ -10838,6 +13497,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        681,
+        4,
+        4
+      ],
       "mepCount": 719,
       "keywords": "2024/0224(cod)"
     },
@@ -10857,6 +13521,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        534,
+        102,
+        56
+      ],
       "mepCount": 719,
       "keywords": "2025/0091(bud)"
     },
@@ -10876,6 +13545,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        574,
+        63,
+        56
+      ],
       "mepCount": 719,
       "keywords": "2025/0135(bud)"
     },
@@ -10896,6 +13570,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        643,
+        13,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2025/0138(bud)"
     },
@@ -10913,6 +13592,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        422,
+        219,
+        31
+      ],
       "mepCount": 719,
       "keywords": "2025/2014(ini)"
     },
@@ -10932,6 +13616,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        502,
+        120,
+        64
+      ],
       "mepCount": 719,
       "keywords": "2025/2017(ini)"
     },
@@ -10951,6 +13640,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        495,
+        130,
+        63
+      ],
       "mepCount": 719,
       "keywords": "2025/2018(ini)"
     },
@@ -10970,6 +13664,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        461,
+        121,
+        107
+      ],
       "mepCount": 719,
       "keywords": "2025/2021(ini)"
     },
@@ -10989,6 +13688,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        490,
+        147,
+        49
+      ],
       "mepCount": 719,
       "keywords": "2025/2024(ini)"
     },
@@ -11008,6 +13712,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        619,
+        26,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2025/2037(ini)"
     },
@@ -11027,6 +13736,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        507,
+        77,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/2710(rsp)"
     },
@@ -11046,6 +13760,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        373,
+        289,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2025/2739(rsp)"
     },
@@ -11063,6 +13782,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        101,
+        501,
+        77
+      ],
       "mepCount": 719,
       "keywords": "2025/2740(dea)",
       "twin": true
@@ -11081,6 +13805,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        218,
+        431,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2025/2740(dea)",
       "twin": true
@@ -11099,6 +13828,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        153,
+        506,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2025/2740(dea)",
       "twin": true
@@ -11117,6 +13851,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        264,
+        369,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2025/2740(dea)",
       "twin": true
@@ -11138,6 +13877,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        300,
+        379,
+        8
+      ],
       "mepCount": 687,
       "keywords": "c10-0137/2025"
     },
@@ -11157,6 +13901,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        623,
+        26,
+        28
+      ],
       "mepCount": 719,
       "keywords": "2023/0158(cns)"
     },
@@ -11176,6 +13925,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        561,
+        109,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2024/0263(nle)"
     },
@@ -11195,6 +13949,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        616,
+        29,
+        36
+      ],
       "mepCount": 719,
       "keywords": "2024/0263(nle)"
     },
@@ -11212,6 +13971,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        572,
+        42,
+        67
+      ],
       "mepCount": 719,
       "keywords": "2024/0315(cod)"
     },
@@ -11229,6 +13993,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        417,
+        188,
+        75
+      ],
       "mepCount": 719,
       "keywords": "2024/2053(ini)"
     },
@@ -11253,6 +14022,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        126,
+        542,
+        3
+      ],
       "mepCount": 671,
       "keywords": "2025/0051",
       "twin": true
@@ -11273,6 +14047,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        542,
+        109,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/0051(cod)",
       "twin": true
@@ -11298,6 +14077,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        71,
+        539,
+        64
+      ],
       "mepCount": 674,
       "keywords": "2025/0158",
       "twin": true
@@ -11318,6 +14102,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        531,
+        69,
+        79
+      ],
       "mepCount": 719,
       "keywords": "2025/0158(nle)",
       "twin": true
@@ -11341,6 +14130,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        278,
+        352,
+        21
+      ],
       "mepCount": 651,
       "keywords": "2025/2575"
     },
@@ -11360,6 +14154,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        459,
+        170,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2025/2575(rsp)"
     },
@@ -11374,10 +14173,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        308,
+        101,
+        0
+      ],
       "mepCount": 409,
       "keywords": ""
     },
@@ -11395,6 +14201,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        457,
+        17,
+        86
+      ],
       "mepCount": 719,
       "keywords": "2023/0447(cod)"
     },
@@ -11414,6 +14225,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        112,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2025/2006(ini)"
     },
@@ -11431,6 +14247,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        381,
+        173,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2025/2656(rsp)"
     },
@@ -11451,6 +14272,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        324,
+        25,
+        87
+      ],
       "mepCount": 719,
       "keywords": "2025/2752(rsp)"
     },
@@ -11470,6 +14296,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        486,
+        8,
+        29
+      ],
       "mepCount": 719,
       "keywords": "2025/2753(rsp)"
     },
@@ -11489,6 +14320,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        511,
+        14,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2025/2754(rsp)"
     },
@@ -11508,6 +14344,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        386,
+        132,
+        49
+      ],
       "mepCount": 719,
       "keywords": "2024/0071(cod)"
     },
@@ -11527,6 +14368,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        557,
+        47,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2024/0146(nle)"
     },
@@ -11546,6 +14392,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        554,
+        53,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2024/0148(cod)"
     },
@@ -11565,6 +14416,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        405,
+        210,
+        36
+      ],
       "mepCount": 719,
       "keywords": "2024/2078(ini)"
     },
@@ -11582,6 +14438,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        421,
+        180,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2024/2085(ini)"
     },
@@ -11601,6 +14462,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        470,
+        102,
+        77
+      ],
       "mepCount": 719,
       "keywords": "2025/2020(ini)"
     },
@@ -11620,6 +14486,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        456,
+        118,
+        51
+      ],
       "mepCount": 719,
       "keywords": "2025/2025(ini)"
     },
@@ -11637,6 +14508,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        587,
+        60,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2021/0372(cns)"
     },
@@ -11654,6 +14530,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        599,
+        2,
+        62
+      ],
       "mepCount": 719,
       "keywords": "2024/0035(cod)"
     },
@@ -11673,6 +14554,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        583,
+        78,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2024/0245(nle)"
     },
@@ -11692,6 +14578,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        557,
+        75,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2024/0245m(nle)"
     },
@@ -11711,6 +14602,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        488,
+        137,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2024/0290(nle)"
     },
@@ -11730,6 +14626,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        622,
+        24,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2024/2105(ini)"
     },
@@ -11751,6 +14652,11 @@
       "rollCalls": 19,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        282,
+        340,
+        26
+      ],
       "mepCount": 648,
       "keywords": "2025/2004"
     },
@@ -11770,6 +14676,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        653,
+        0,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2025/2067(reg)"
     },
@@ -11787,6 +14698,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        653,
+        7,
+        3
+      ],
       "mepCount": 663,
       "keywords": "c10-0071/2025"
     },
@@ -11801,10 +14717,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        65,
+        338,
+        24
+      ],
       "mepCount": 427,
       "keywords": ""
     },
@@ -11819,10 +14742,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        300,
+        66,
+        77
+      ],
       "mepCount": 443,
       "keywords": ""
     },
@@ -11842,6 +14772,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        374,
+        176,
+        36
+      ],
       "mepCount": 719,
       "keywords": "2024/0027(cod)"
     },
@@ -11862,6 +14797,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        411,
+        100,
+        78
+      ],
       "mepCount": 719,
       "keywords": "2025/0021(cod)"
     },
@@ -11881,6 +14821,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        489,
+        55,
+        38
+      ],
       "mepCount": 719,
       "keywords": "2025/0035(nle)"
     },
@@ -11900,6 +14845,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        564,
+        20,
+        12
+      ],
       "mepCount": 719,
       "keywords": "2025/0039(cod)"
     },
@@ -11917,6 +14867,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        260,
+        194,
+        110
+      ],
       "mepCount": 719,
       "keywords": "2025/2027(ini)"
     },
@@ -11934,6 +14889,11 @@
       "rollCalls": 3,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        436,
+        149,
+        11
+      ],
       "mepCount": 596,
       "keywords": "c10-0059/2025"
     },
@@ -11954,6 +14914,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        102,
+        378,
+        7
+      ],
       "mepCount": 487,
       "keywords": ""
     },
@@ -11974,6 +14939,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        132,
+        334,
+        5
+      ],
       "mepCount": 471,
       "keywords": ""
     },
@@ -11996,6 +14966,11 @@
       "rollCalls": 25,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        427,
+        122,
+        10
+      ],
       "mepCount": 559,
       "keywords": "2024/0017",
       "twin": true
@@ -12014,6 +14989,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        173,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2024/0017(cod)",
       "twin": true
@@ -12034,6 +15014,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        345,
+        135,
+        62
+      ],
       "mepCount": 719,
       "keywords": "2024/2055(ini)"
     },
@@ -12053,6 +15038,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        358,
+        124,
+        79
+      ],
       "mepCount": 719,
       "keywords": "2024/2079(ini)"
     },
@@ -12072,6 +15062,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        392,
+        125,
+        55
+      ],
       "mepCount": 719,
       "keywords": "2024/2107(ini)"
     },
@@ -12091,6 +15086,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        425,
+        106,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2025/0051(cod)"
     },
@@ -12110,6 +15110,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        354,
+        147,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2025/0056(cod)"
     },
@@ -12129,6 +15134,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        306,
+        80,
+        57
+      ],
       "mepCount": 719,
       "keywords": "2025/2542(rsp)"
     },
@@ -12148,6 +15158,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        373,
+        150,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2025/2647(rsp)"
     },
@@ -12166,6 +15181,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        154,
+        389,
+        12
+      ],
       "mepCount": 555,
       "keywords": "2025/2690"
     },
@@ -12185,6 +15205,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        516,
+        3,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2025/2691(rsp)"
     },
@@ -12202,6 +15227,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        478,
+        30,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2025/2692(rsp)"
     },
@@ -12219,6 +15249,11 @@
       "rollCalls": 2,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        371,
+        162,
+        37
+      ],
       "mepCount": 570,
       "keywords": "c10-0044/2025"
     },
@@ -12238,6 +15273,11 @@
       "rollCalls": 22,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        458,
+        101,
+        14
+      ],
       "mepCount": 573,
       "keywords": "c10-0062/2025"
     },
@@ -12257,6 +15297,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        443,
+        202,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2024/2019(dec)",
       "twin": true
@@ -12277,6 +15322,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        412,
+        245,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2024/2019(dec)",
       "twin": true
@@ -12297,6 +15347,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        513,
+        119,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2024/2020(dec)"
     },
@@ -12316,6 +15371,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        526,
+        119,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2024/2021(dec)",
       "twin": true
@@ -12336,6 +15396,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        588,
+        62,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2024/2021(dec)",
       "twin": true
@@ -12356,6 +15421,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        485,
+        113,
+        61
+      ],
       "mepCount": 719,
       "keywords": "2024/2022(dec)",
       "twin": true
@@ -12376,6 +15446,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        541,
+        97,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/2022(dec)",
       "twin": true
@@ -12396,6 +15471,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        619,
+        19,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2024/2023(dec)",
       "twin": true
@@ -12416,6 +15496,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        630,
+        16,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2024/2023(dec)",
       "twin": true
@@ -12436,6 +15521,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        475,
+        136,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2024/2024(dec)",
       "twin": true
@@ -12456,6 +15546,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        519,
+        126,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2024/2024(dec)",
       "twin": true
@@ -12476,6 +15571,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        532,
+        120,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2024/2025(dec)",
       "twin": true
@@ -12496,6 +15596,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        538,
+        96,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2024/2025(dec)",
       "twin": true
@@ -12516,6 +15621,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        548,
+        110,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2024/2026(dec)",
       "twin": true
@@ -12536,6 +15646,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        97,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2024/2026(dec)",
       "twin": true
@@ -12556,6 +15671,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        611,
+        8,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2024/2027(dec)",
       "twin": true
@@ -12576,6 +15696,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        568,
+        54,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2024/2027(dec)",
       "twin": true
@@ -12596,6 +15721,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        548,
+        74,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2024/2028(dec)",
       "twin": true
@@ -12616,6 +15746,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        564,
+        61,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2024/2028(dec)",
       "twin": true
@@ -12636,6 +15771,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        452,
+        176,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2024/2029(dec)",
       "twin": true
@@ -12656,6 +15796,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        481,
+        157,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2024/2029(dec)",
       "twin": true
@@ -12680,6 +15825,11 @@
       "rollCalls": 16,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        520,
+        126,
+        6
+      ],
       "mepCount": 652,
       "keywords": "2024/2030"
     },
@@ -12703,6 +15853,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        120,
+        64
+      ],
       "mepCount": 657,
       "keywords": "2024/2030",
       "twin": true
@@ -12723,6 +15878,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        503,
+        121,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/2030(dec)",
       "twin": true
@@ -12743,6 +15903,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        513,
+        101,
+        39
+      ],
       "mepCount": 719,
       "keywords": "2024/2031(dec)"
     },
@@ -12762,6 +15927,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        317,
+        206,
+        123
+      ],
       "mepCount": 719,
       "keywords": "2024/2051(ini)"
     },
@@ -12781,6 +15951,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        470,
+        81,
+        92
+      ],
       "mepCount": 719,
       "keywords": "2024/2104(ini)"
     },
@@ -12800,6 +15975,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        353,
+        145,
+        78
+      ],
       "mepCount": 719,
       "keywords": "2025/2019(ini)"
     },
@@ -12819,6 +15999,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        419,
+        113,
+        88
+      ],
       "mepCount": 719,
       "keywords": "2025/2022(ini)"
     },
@@ -12838,6 +16023,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        367,
+        74,
+        188
+      ],
       "mepCount": 719,
       "keywords": "2025/2023(ini)"
     },
@@ -12856,6 +16046,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        316,
+        291,
+        27
+      ],
       "mepCount": 634,
       "keywords": "c10-0063/2025"
     },
@@ -12876,6 +16071,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        370,
+        268,
+        16
+      ],
       "mepCount": 654,
       "keywords": "c10-0064/2025"
     },
@@ -12895,6 +16095,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        514,
+        126,
+        6
+      ],
       "mepCount": 646,
       "keywords": "2024/0299"
     },
@@ -12912,6 +16117,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        340,
+        162,
+        150
+      ],
       "mepCount": 719,
       "keywords": "2024/2052(ini)"
     },
@@ -12929,6 +16139,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        59,
+        114
+      ],
       "mepCount": 719,
       "keywords": "2024/2083(ini)"
     },
@@ -12948,6 +16163,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        598,
+        48,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2025/0061(bud)"
     },
@@ -12963,10 +16183,17 @@
         "Cyprus",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        103,
+        301,
+        24
+      ],
       "mepCount": 428,
       "keywords": ""
     },
@@ -12981,10 +16208,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        164,
+        256,
+        8
+      ],
       "mepCount": 428,
       "keywords": ""
     },
@@ -12999,10 +16233,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        319,
+        37,
+        79
+      ],
       "mepCount": 435,
       "keywords": ""
     },
@@ -13018,10 +16259,17 @@
         "Cyprus",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        420,
+        4,
+        12
+      ],
       "mepCount": 436,
       "keywords": ""
     },
@@ -13037,10 +16285,17 @@
         "Israel and Palestine",
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        184,
+        241,
+        18
+      ],
       "mepCount": 443,
       "keywords": ""
     },
@@ -13059,6 +16314,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        327,
+        229,
+        50
+      ],
       "mepCount": 718,
       "keywords": "2023/0404(cod)"
     },
@@ -13079,6 +16339,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        411,
+        191,
+        13
+      ],
       "mepCount": 718,
       "keywords": "2024/0027(cod)"
     },
@@ -13096,6 +16361,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        432,
+        127,
+        54
+      ],
       "mepCount": 718,
       "keywords": "2024/2111(bui)"
     },
@@ -13120,6 +16390,11 @@
       "rollCalls": 19,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        300,
+        248,
+        59
+      ],
       "mepCount": 607,
       "keywords": "2025/2536"
     },
@@ -13138,6 +16413,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        46,
+        466,
+        14
+      ],
       "mepCount": 526,
       "keywords": "2025/2612"
     },
@@ -13158,6 +16438,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        108,
+        59
+      ],
       "mepCount": 585,
       "keywords": "2025/2627"
     },
@@ -13178,6 +16463,11 @@
       "rollCalls": 4,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        180,
+        404,
+        13
+      ],
       "mepCount": 597,
       "keywords": "2025/2628"
     },
@@ -13197,6 +16487,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        535,
+        19,
+        55
+      ],
       "mepCount": 718,
       "keywords": "2025/2629(rsp)"
     },
@@ -13214,6 +16509,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        531,
+        69,
+        17
+      ],
       "mepCount": 718,
       "keywords": ""
     },
@@ -13231,6 +16531,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        528,
+        121,
+        32
+      ],
       "mepCount": 718,
       "keywords": "2024/0052(nle)"
     },
@@ -13250,6 +16555,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        518,
+        104,
+        61
+      ],
       "mepCount": 718,
       "keywords": "2024/0159(nle)"
     },
@@ -13269,6 +16579,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        605,
+        68,
+        10
+      ],
       "mepCount": 718,
       "keywords": "2024/0159m(nle)"
     },
@@ -13289,6 +16604,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        619,
+        9,
+        45
+      ],
       "mepCount": 718,
       "keywords": "2024/0167(nle)"
     },
@@ -13306,6 +16626,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        377,
+        279,
+        16
+      ],
       "mepCount": 718,
       "keywords": "2024/0187(cns)"
     },
@@ -13323,6 +16648,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        188,
+        105
+      ],
       "mepCount": 718,
       "keywords": "2024/2080(ini)"
     },
@@ -13342,6 +16672,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        390,
+        116,
+        126
+      ],
       "mepCount": 718,
       "keywords": "2024/2081(ini)"
     },
@@ -13361,6 +16696,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        399,
+        198,
+        71
+      ],
       "mepCount": 718,
       "keywords": "2024/2082(ini)"
     },
@@ -13380,6 +16720,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        173,
+        70
+      ],
       "mepCount": 718,
       "keywords": "2024/2110(bui)"
     },
@@ -13399,6 +16744,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        481,
+        170,
+        22
+      ],
       "mepCount": 718,
       "keywords": "2023/0453(cod)"
     },
@@ -13418,6 +16768,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        482,
+        110,
+        81
+      ],
       "mepCount": 718,
       "keywords": "2023/0454(cod)"
     },
@@ -13437,6 +16792,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        486,
+        171,
+        18
+      ],
       "mepCount": 718,
       "keywords": "2023/0455(cod)"
     },
@@ -13456,6 +16816,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        452,
+        182,
+        40
+      ],
       "mepCount": 718,
       "keywords": "2024/0071(cod)"
     },
@@ -13473,6 +16838,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        571,
+        59,
+        46
+      ],
       "mepCount": 718,
       "keywords": "2024/0086(cod)"
     },
@@ -13492,6 +16862,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        593,
+        7,
+        35
+      ],
       "mepCount": 718,
       "keywords": "2025/0012(cod)"
     },
@@ -13510,6 +16885,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        427,
+        221,
+        14
+      ],
       "mepCount": 662,
       "keywords": "c10-0038/2025"
     },
@@ -13524,10 +16904,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        118,
+        326,
+        7
+      ],
       "mepCount": 451,
       "keywords": ""
     },
@@ -13542,10 +16929,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        110,
+        335,
+        6
+      ],
       "mepCount": 451,
       "keywords": ""
     },
@@ -13560,10 +16954,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        82,
+        357,
+        11
+      ],
       "mepCount": 450,
       "keywords": ""
     },
@@ -13588,6 +16989,11 @@
       "rollCalls": 14,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        284,
+        273,
+        57
+      ],
       "mepCount": 614,
       "keywords": "2024/2829"
     },
@@ -13607,6 +17013,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        482,
+        57,
+        68
+      ],
       "mepCount": 719,
       "keywords": "2025/2594(rsp)"
     },
@@ -13627,6 +17038,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        575,
+        7,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2025/2595(rsp)"
     },
@@ -13646,6 +17062,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        523,
+        3,
+        84
+      ],
       "mepCount": 719,
       "keywords": "2025/2596(rsp)"
     },
@@ -13666,6 +17087,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        525,
+        5,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2023/0341(nle)"
     },
@@ -13683,6 +17109,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        521,
+        90,
+        45
+      ],
       "mepCount": 719,
       "keywords": "2024/0051(nle)"
     },
@@ -13702,6 +17133,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        351,
+        260,
+        70
+      ],
       "mepCount": 719,
       "keywords": "2024/2084(ini)"
     },
@@ -13721,6 +17157,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        469,
+        162,
+        54
+      ],
       "mepCount": 719,
       "keywords": "2024/2112(ini)"
     },
@@ -13741,6 +17182,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        188,
+        456,
+        33
+      ],
       "mepCount": 677,
       "keywords": "2025/2528",
       "twin": true
@@ -13761,6 +17207,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        442,
+        98,
+        126
+      ],
       "mepCount": 719,
       "keywords": "2025/2528(rsp)",
       "twin": true
@@ -13781,6 +17232,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        419,
+        204,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2025/2565(rsp)"
     },
@@ -13800,6 +17256,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        462,
+        76,
+        106
+      ],
       "mepCount": 719,
       "keywords": "2025/2569(rsp)"
     },
@@ -13816,6 +17277,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        294,
+        77,
+        7
+      ],
       "mepCount": 378,
       "keywords": ""
     },
@@ -13835,6 +17301,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        499,
+        117,
+        44
+      ],
       "mepCount": 719,
       "keywords": "2024/0258(cod)"
     },
@@ -13854,6 +17325,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        432,
+        155,
+        82
+      ],
       "mepCount": 719,
       "keywords": "2024/2077(ini)"
     },
@@ -13871,6 +17347,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        643,
+        10,
+        15
+      ],
       "mepCount": 719,
       "keywords": "2024/2100(reg)"
     },
@@ -13888,6 +17369,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        472,
+        75,
+        92
+      ],
       "mepCount": 719,
       "keywords": "2024/2109(ini)"
     },
@@ -13902,10 +17388,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        110,
+        309,
+        9
+      ],
       "mepCount": 428,
       "keywords": ""
     },
@@ -13920,10 +17413,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        109,
+        317,
+        7
+      ],
       "mepCount": 433,
       "keywords": ""
     },
@@ -13943,6 +17443,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        400,
+        63,
+        81
+      ],
       "mepCount": 719,
       "keywords": "2025/2522(rsp)"
     },
@@ -13963,6 +17468,11 @@
       "rollCalls": 5,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        114,
+        415,
+        12
+      ],
       "mepCount": 541,
       "keywords": "2025/2546"
     },
@@ -13984,6 +17494,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        194,
+        225,
+        19
+      ],
       "mepCount": 438,
       "keywords": "2025/2547"
     },
@@ -14005,6 +17520,11 @@
       "rollCalls": 2,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        246,
+        259,
+        20
+      ],
       "mepCount": 525,
       "keywords": "2025/2548"
     },
@@ -14022,6 +17542,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        443,
+        4,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/2553(rsp)"
     },
@@ -14041,6 +17566,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        589,
+        42,
+        10
+      ],
       "mepCount": 719,
       "keywords": "2022/0407(cns)"
     },
@@ -14060,6 +17590,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        608,
+        33,
+        8
+      ],
       "mepCount": 719,
       "keywords": "2024/0276(cns)"
     },
@@ -14079,6 +17614,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        477,
+        152,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2024/3010(rsp)"
     },
@@ -14098,6 +17638,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        467,
+        156,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2024/3011(rsp)"
     },
@@ -14115,6 +17660,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        562,
+        17,
+        3
+      ],
       "mepCount": 719,
       "keywords": "2015/0188(nle)"
     },
@@ -14134,6 +17684,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        507,
+        76,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2024/0133(nle)"
     },
@@ -14153,6 +17708,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        591,
+        9,
+        9
+      ],
       "mepCount": 719,
       "keywords": "2024/0240(nle)"
     },
@@ -14172,6 +17732,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        378,
+        233,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/2054(ini)"
     },
@@ -14186,10 +17751,17 @@
       "topics": [
         "How Parliament works"
       ],
+      "voteType": "Agenda request",
+      "aside": true,
       "committee": null,
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        99,
+        317,
+        22
+      ],
       "mepCount": 438,
       "keywords": ""
     },
@@ -14210,6 +17782,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        480,
+        58,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2024/2988(rsp)"
     },
@@ -14228,6 +17805,11 @@
       "rollCalls": 3,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        150,
+        448,
+        12
+      ],
       "mepCount": 610,
       "keywords": "2025/2510"
     },
@@ -14248,6 +17830,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        556,
+        6,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2025/2511(rsp)"
     },
@@ -14265,6 +17852,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        533,
+        24,
+        48
+      ],
       "mepCount": 719,
       "keywords": "2025/2512(rsp)"
     },
@@ -14284,6 +17876,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        374,
+        53,
+        163
+      ],
       "mepCount": 719,
       "keywords": "2025/2519(rsp)"
     },
@@ -14303,6 +17900,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        567,
+        25,
+        66
+      ],
       "mepCount": 719,
       "keywords": "2024/3014(rsp)"
     },
@@ -14323,6 +17925,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        505,
+        90,
+        43
+      ],
       "mepCount": 719,
       "keywords": "2024/0074(nle)"
     },
@@ -14343,6 +17950,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        196,
+        221,
+        10
+      ],
       "mepCount": 427,
       "keywords": ""
     },
@@ -14363,6 +17975,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        108,
+        313,
+        6
+      ],
       "mepCount": 427,
       "keywords": ""
     },
@@ -14381,6 +17998,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        300,
+        254,
+        21
+      ],
       "mepCount": 719,
       "keywords": "2024/0006(cod)"
     },
@@ -14400,6 +18022,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        322,
+        163,
+        46
+      ],
       "mepCount": 719,
       "keywords": "2024/2057(ini)"
     },
@@ -14420,6 +18047,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        446,
+        25,
+        51
+      ],
       "mepCount": 719,
       "keywords": "2024/2992(rsp)"
     },
@@ -14439,6 +18071,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        492,
+        28,
+        41
+      ],
       "mepCount": 719,
       "keywords": "2024/2993(rsp)"
     },
@@ -14458,6 +18095,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        434,
+        30,
+        89
+      ],
       "mepCount": 719,
       "keywords": "2024/2994(rsp)"
     },
@@ -14475,6 +18117,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        591,
+        7,
+        53
+      ],
       "mepCount": 719,
       "keywords": "2015/0012(nle)"
     },
@@ -14494,6 +18141,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        533,
+        74,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2023/0456(nle)"
     },
@@ -14513,6 +18165,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        543,
+        77,
+        31
+      ],
       "mepCount": 719,
       "keywords": "2024/0010(nle)"
     },
@@ -14532,6 +18189,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        545,
+        81,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/0048(nle)"
     },
@@ -14549,6 +18211,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        448,
+        161,
+        40
+      ],
       "mepCount": 719,
       "keywords": "2024/2115(rso)"
     },
@@ -14566,6 +18233,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        441,
+        178,
+        34
+      ],
       "mepCount": 719,
       "keywords": "2024/2999(rso)"
     },
@@ -14585,6 +18257,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        480,
+        148,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2024/3000(rso)"
     },
@@ -14604,6 +18281,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        499,
+        131,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2024/0214(cod)"
     },
@@ -14623,6 +18305,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        644,
+        6,
+        3
+      ],
       "mepCount": 719,
       "keywords": "2024/0274(cod)"
     },
@@ -14640,6 +18327,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        638,
+        10,
+        5
+      ],
       "mepCount": 719,
       "keywords": "2024/0275(cod)"
     },
@@ -14659,6 +18351,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        599,
+        50,
+        7
+      ],
       "mepCount": 719,
       "keywords": "2024/0286(bud)"
     },
@@ -14676,6 +18373,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        598,
+        17,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2024/2056(ini)"
     },
@@ -14695,6 +18397,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        546,
+        97,
+        7
+      ],
       "mepCount": 650,
       "keywords": "c10-0119/2024"
     },
@@ -14714,6 +18421,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        152,
+        378,
+        26
+      ],
       "mepCount": 719,
       "keywords": "2024/2911(rsp)"
     },
@@ -14733,6 +18445,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        444,
+        72,
+        82
+      ],
       "mepCount": 719,
       "keywords": "2024/2933(rsp)"
     },
@@ -14753,6 +18470,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        390,
+        135,
+        52
+      ],
       "mepCount": 719,
       "keywords": "2024/2940(rsp)"
     },
@@ -14772,6 +18494,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        473,
+        23,
+        98
+      ],
       "mepCount": 719,
       "keywords": "2024/2950(rsp)"
     },
@@ -14792,6 +18519,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        562,
+        2,
+        30
+      ],
       "mepCount": 719,
       "keywords": "2024/2951(rsp)"
     },
@@ -14811,6 +18543,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        492,
+        5,
+        102
+      ],
       "mepCount": 719,
       "keywords": "2024/2952(rsp)"
     },
@@ -14828,6 +18565,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        627,
+        6,
+        37
+      ],
       "mepCount": 719,
       "keywords": "2024/0128(cod)"
     },
@@ -14847,6 +18589,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        418,
+        185,
+        67
+      ],
       "mepCount": 719,
       "keywords": "2024/0176(bud)"
     },
@@ -14866,6 +18613,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        525,
+        75,
+        81
+      ],
       "mepCount": 719,
       "keywords": "2024/0252(bud)"
     },
@@ -14885,6 +18637,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        660,
+        11,
+        4
+      ],
       "mepCount": 719,
       "keywords": "2024/0284(bud)"
     },
@@ -14902,6 +18659,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        53,
+        608,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2024/2877(rsp)",
       "twin": true
@@ -14920,6 +18682,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        154,
+        507,
+        19
+      ],
       "mepCount": 719,
       "keywords": "2024/2877(rsp)",
       "twin": true
@@ -14937,6 +18704,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        370,
+        282,
+        36
+      ],
       "mepCount": 688,
       "keywords": ""
     },
@@ -14954,6 +18726,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        123,
+        511,
+        42
+      ],
       "mepCount": 719,
       "keywords": ""
     },
@@ -14973,6 +18750,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        476,
+        169,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2024/2834(rsp)"
     },
@@ -14992,6 +18774,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        496,
+        143,
+        18
+      ],
       "mepCount": 719,
       "keywords": "2024/2835(rsp)"
     },
@@ -15011,6 +18798,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        474,
+        171,
+        13
+      ],
       "mepCount": 719,
       "keywords": "2024/2836(rsp)"
     },
@@ -15030,6 +18822,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        478,
+        165,
+        16
+      ],
       "mepCount": 719,
       "keywords": "2024/2837(rsp)"
     },
@@ -15049,6 +18846,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        474,
+        166,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2024/2838(rsp)"
     },
@@ -15068,6 +18870,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        478,
+        166,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2024/2839(rsp)"
     },
@@ -15087,6 +18894,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        464,
+        163,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2024/2840(rsp)"
     },
@@ -15106,6 +18918,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        468,
+        166,
+        14
+      ],
       "mepCount": 719,
       "keywords": "2024/2841(rsp)"
     },
@@ -15123,6 +18940,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        555,
+        48,
+        42
+      ],
       "mepCount": 719,
       "keywords": "2023/0187(cns)"
     },
@@ -15142,6 +18964,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        621,
+        10,
+        11
+      ],
       "mepCount": 719,
       "keywords": "2024/0152(cns)"
     },
@@ -15159,6 +18986,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        510,
+        105,
+        27
+      ],
       "mepCount": 719,
       "keywords": "2024/0803(cns)"
     },
@@ -15179,6 +19011,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        429,
+        183,
+        24
+      ],
       "mepCount": 719,
       "keywords": "2024/2718(rsp)"
     },
@@ -15198,6 +19035,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        371,
+        240,
+        30
+      ],
       "mepCount": 641,
       "keywords": "c10-0119/2024"
     },
@@ -15218,6 +19060,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        453,
+        31,
+        89
+      ],
       "mepCount": 719,
       "keywords": "2024/2890(rsp)"
     },
@@ -15238,6 +19085,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        432,
+        60,
+        71
+      ],
       "mepCount": 719,
       "keywords": "2024/2891(rsp)"
     },
@@ -15257,6 +19109,11 @@
       "rollCalls": 1,
       "result": "rejected",
       "status": "verified",
+      "tally": [
+        233,
+        360,
+        59
+      ],
       "mepCount": 719,
       "keywords": "2024/0176(bud)"
     },
@@ -15276,6 +19133,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        444,
+        179,
+        20
+      ],
       "mepCount": 719,
       "keywords": "2024/0599(nle)"
     },
@@ -15295,6 +19157,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        431,
+        131,
+        83
+      ],
       "mepCount": 719,
       "keywords": "2023/2131(dec)"
     },
@@ -15314,6 +19181,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        531,
+        91,
+        35
+      ],
       "mepCount": 719,
       "keywords": "2024/0089(bud)"
     },
@@ -15333,6 +19205,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        522,
+        115,
+        25
+      ],
       "mepCount": 719,
       "keywords": "2024/0185(bud)"
     },
@@ -15352,6 +19229,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        601,
+        47,
+        17
+      ],
       "mepCount": 719,
       "keywords": "2024/0226(bud)"
     },
@@ -15371,6 +19253,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        518,
+        56,
+        61
+      ],
       "mepCount": 719,
       "keywords": "2024/0234(cod)"
     },
@@ -15390,6 +19277,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        540,
+        23,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2024/2857(rsp)"
     },
@@ -15409,6 +19301,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        508,
+        53,
+        104
+      ],
       "mepCount": 718,
       "keywords": "2024/2821(rsp)"
     },
@@ -15428,6 +19325,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        495,
+        73,
+        86
+      ],
       "mepCount": 718,
       "keywords": "2024/2822(rsp)"
     },
@@ -15447,6 +19349,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        632,
+        7,
+        3
+      ],
       "mepCount": 718,
       "keywords": "2024/0212(bud)"
     },
@@ -15464,6 +19371,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        582,
+        16,
+        17
+      ],
       "mepCount": 717,
       "keywords": "2024/0046(nle)"
     },
@@ -15484,6 +19396,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        425,
+        131,
+        63
+      ],
       "mepCount": 717,
       "keywords": "2024/2799(rsp)"
     },
@@ -15504,6 +19421,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        565,
+        8,
+        43
+      ],
       "mepCount": 717,
       "keywords": "2024/2803(rsp)"
     },
@@ -15524,6 +19446,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        549,
+        21,
+        37
+      ],
       "mepCount": 717,
       "keywords": "2024/2804(rsp)"
     },
@@ -15543,6 +19470,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        380,
+        182,
+        51
+      ],
       "mepCount": 717,
       "keywords": "2024/2805(rsp)"
     },
@@ -15562,6 +19494,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        309,
+        201,
+        12
+      ],
       "mepCount": 717,
       "keywords": "2024/2810(rsp)"
     },
@@ -15581,6 +19518,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        516,
+        129,
+        27
+      ],
       "mepCount": 717,
       "keywords": "2024/2758(rps)"
     },
@@ -15600,6 +19542,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        522,
+        127,
+        28
+      ],
       "mepCount": 717,
       "keywords": "2024/2759(rps)"
     },
@@ -15619,6 +19566,11 @@
       "rollCalls": 1,
       "result": "adopted",
       "status": "verified",
+      "tally": [
+        495,
+        137,
+        47
+      ],
       "mepCount": 719,
       "keywords": "2024/2721(rsp)"
     }

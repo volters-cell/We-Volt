@@ -65,7 +65,14 @@ export function voteLabel(record) {
   return String(record.subtitle || '').replace(/\s*—\s*vote in plenary\s*$/, '').trim();
 }
 
+// A change to the agenda is named in the title, not the label: "Thursday's
+// agenda – Request by The Left Group", "Ordre du jour de mercredi – Demande
+// des groupes S&D et Renew". Both halves are needed, so "the 2030 Agenda" is
+// not one.
+const AGENDA_TITLE = /\b(?:agenda|ordre du jour|tagesordnung)\b.*\b(?:request|demande|antrag)/i;
+
 export function voteType(record) {
+  if (AGENDA_TITLE.test(String(record.title || ''))) return 'Agenda request';
   const label = voteLabel(record);
   if (!label) return null;
   const parts = label.split(SPLIT).map(function (part) { return part.trim(); }).filter(Boolean);

@@ -804,7 +804,10 @@
             (group.items.length === 1 ? '' : 's') + '</span>' +
         '</summary>' +
         '<ul class="decision-list"' + (showing ? '' : ' data-unbuilt="' + esc(group.key) + '"') + '>' +
-          (showing ? group.items.map(decisionCard).join('') : '') +
+          // The day, on every card: a plenary is four days. (This was
+          // map(decisionCard), which passed each card's position as the flag
+          // and so dated every card but the first.)
+          (showing ? group.items.map(function (item) { return decisionCard(item, true); }).join('') : '') +
         '</ul>' +
         '</details>';
     };
@@ -948,7 +951,7 @@
   function unusualRule(item) {
     const rule = item.voteRuleLabel || '';
     if (!rule || rule === USUAL_RULE) return '';
-    return '<span class="card-when">' + esc(rule) + '</span>';
+    return '<span class="card-rule">' + esc(rule) + '</span>';
   }
 
   /* What the vote asks for, in the Parliament's own sentences.
@@ -995,6 +998,71 @@
      foot, on a list already grouped under the date. Four rows where two say
      more. The subject is what somebody is scanning for, so the subject goes
      first and everything that qualifies it sits on one line beneath. */
+  /* How the House split, drawn: a bar in the vote's own colours and the three
+     numbers beside it. A list of titles says what was voted on; this says how
+     it went at a glance, before the vote is opened — which is what a reader
+     scanning a plenary of forty votes is looking for. The numbers are the
+     record's own, counted from its ballots by scripts/build-index.mjs. */
+  function tallyRow(item) {
+    const t = item.tally;
+    if (!t || !(t[0] + t[1] + t[2])) return '';
+    const said = t[0] + ' in favour, ' + t[1] + ' against, ' + t[2] + ' abstained';
+    const segment = function (kind, n) {
+      return n ? '<span class="tally-' + kind + '" style="flex-grow:' + n + '"></span>' : '';
+    };
+    return '<span class="card-tally">' +
+      '<span class="tally-bar" aria-hidden="true">' +
+        segment('for', t[0]) + segment('against', t[1]) + segment('abstain', t[2]) +
+      '</span>' +
+      '<span class="tally-figures" aria-hidden="true">' +
+        '<span class="tf-for">' + t[0] + '</span>' +
+        '<span class="tf-against">' + t[1] + '</span>' +
+        '<span class="tf-abstain">' + t[2] + '</span>' +
+      '</span>' +
+      '<span class="visually-hidden">' + said + '.</span>' +
+    '</span>';
+  }
+
+  /* The landing panel: the latest plenary at a glance. Every vote it took is a
+     square in the order it was taken, coloured by how it went; a vote whose
+     result is not the text's own fate (a motion to reject, an amendment, a
+     referral) is drawn apart, so the colours count decisions on texts and
+     nothing else. A square opens its vote; the same votes are in the list
+     below for anyone not using a mouse. */
+  function latestPlenary() {
+    const newest = index && index.decisions[0];
+    if (!newest) return '';
+    const where = sessionFor(newest.date);
+    const items = index.decisions.filter(function (item) {
+      return sessionFor(item.date).key === where.key;
+    }).slice().reverse();
+    const counted = { adopted: 0, rejected: 0, aside: 0 };
+    items.forEach(function (item) {
+      if (item.aside) counted.aside += 1;
+      else if (item.result === 'adopted') counted.adopted += 1;
+      else if (item.result === 'rejected') counted.rejected += 1;
+    });
+    const label = sessionLabelFor({ key: where.key, session: where.session, items: items });
+    const squares = items.map(function (item) {
+      const kind = item.aside ? 'aside' : (item.result === 'adopted' || item.result === 'rejected' ? item.result : 'other');
+      return '<span class="sq sq-' + kind + '" data-id="' + esc(item.id) + '" title="' +
+        esc(item.title + ' — ' + (item.aside && item.voteType ? item.voteType + ': ' : '') +
+          (RESULT_LABEL[item.result] || item.result)) + '"></span>';
+    }).join('');
+    const summary = items.length + ' votes: ' + counted.adopted + ' adopted, ' + counted.rejected +
+      ' rejected' + (counted.aside ? ', ' + counted.aside + ' on amendments or procedure' : '');
+    return '<p class="latest-where">' + esc(label) + '</p>' +
+      '<p class="latest-stats">' +
+        '<span><strong>' + items.length + '</strong> votes</span>' +
+        '<span class="latest-adopted"><strong>' + counted.adopted + '</strong> adopted</span>' +
+        '<span class="latest-rejected"><strong>' + counted.rejected + '</strong> rejected</span>' +
+        (counted.aside ? '<span class="latest-aside"><strong>' + counted.aside +
+          '</strong> on amendments or procedure</span>' : '') +
+      '</p>' +
+      '<div class="latest-strip" role="img" aria-label="' + esc(summary + ', in the order they were taken.') + '">' +
+        squares + '</div>';
+  }
+
   function decisionCard(item, withDate) {
     const current = state.decision && item.id === state.decision.id;
     return '<li>' +
@@ -1002,6 +1070,7 @@
       ' data-id="' + esc(item.id) + '"' + (current ? ' aria-current="true"' : '') + '>' +
         '<span class="card-title" title="' + esc(item.title) + '">' +
           esc(item.title) + '</span>' +
+        tallyRow(item) +
         '<span class="card-meta">' +
           // The institution only earns a word when it is not the one every
           // other card names.
@@ -1016,11 +1085,11 @@
             : '') +
           '<span class="chip chip-result chip-' + esc(item.result) + '">' +
             esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
-          // Only where the list is not already grouped under a date heading.
+          unusualRule(item) +
           (withDate
             ? '<time class="card-when" datetime="' + esc(item.date) + '">' +
                 esc(Data.formatDate(item.date)) + '</time>'
-            : unusualRule(item)) +
+            : '') +
         '</span>' +
       '</button></li>';
   }
@@ -2746,6 +2815,16 @@
           'its own members voted.'
         : 'Click any member state to see who they are and which clubs they are in. Pick a ' +
           'vote from the list to see how they voted.';
+      // On landing, the latest plenary leads; once a vote is open the panel
+      // is about that vote and goes back to its plain heading.
+      const latest = document.getElementById('latest-plenary');
+      const landing = !state.decision && !state.member;
+      if (latest) {
+        latest.innerHTML = landing ? latestPlenary() : '';
+        latest.hidden = !landing || !latest.innerHTML;
+      }
+      document.getElementById('panel-empty-title').textContent = landing && latest && !latest.hidden
+        ? 'The latest plenary' : 'Pick a country';
     } else {
       dom['panel-empty'].hidden = true;
       panelLabelled('panel-title');
@@ -3168,6 +3247,11 @@
         }
       }
 
+      document.getElementById('latest-plenary').addEventListener('click', function (event) {
+        const square = event.target.closest('.sq[data-id]');
+        if (square) loadDecision(square.getAttribute('data-id'), state.country);
+      });
+
       dom['session-list'].addEventListener('click', function (event) {
         const card = event.target.closest('.decision-card');
         if (card) {
@@ -3217,7 +3301,7 @@
           const list = details.querySelector('.decision-list[data-unbuilt]');
           if (list) {
             const items = cardsByKey[list.getAttribute('data-unbuilt')] || [];
-            list.innerHTML = items.map(function (item) { return decisionCard(item); }).join('');
+            list.innerHTML = items.map(function (item) { return decisionCard(item, true); }).join('');
             list.removeAttribute('data-unbuilt');
           }
         }
