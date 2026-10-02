@@ -2514,7 +2514,9 @@ button.permalink {
   font-weight: 600;
   background: color-mix(in srgb, var(--eu-blue) 9%, var(--surface));
   border-color: color-mix(in srgb, var(--eu-blue) 18%, transparent);
-  color: color-mix(in srgb, var(--eu-blue) 78%, var(--ink));
+  /* --eu-ink, not --eu-blue: the same blue in the light theme, and the
+     lightened one in the dark, where the dark blue measured 2.7:1. */
+  color: color-mix(in srgb, var(--eu-ink) 78%, var(--ink));
 }
 /* The committee and the roll-call count qualify the subject rather than
    competing with it, so they carry no fill. */
@@ -2531,6 +2533,22 @@ button.permalink {
 .card-rule { color: var(--ink-faint); }
 
 /* The next page of search results. */
+/* What was put to the vote. Quiet by default; marked where the result is
+   not the text's own fate, so "Rejected" beside "Motion to reject" is read
+   as the motion failing. */
+.chip-type {
+  background: transparent;
+  border: 1px dashed var(--line-strong);
+  color: var(--ink-soft);
+}
+.chip-type.chip-aside {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--vote-abstain) 55%, transparent);
+  background: color-mix(in srgb, var(--vote-abstain) 12%, transparent);
+  color: var(--ink);
+}
+.vote-kind { margin-top: .4rem; }
+
 .feed-more {
   display: flex; align-items: center; justify-content: center; gap: .8rem;
   margin: .9rem 0 .2rem; color: var(--ink-faint); font-size: .85rem;

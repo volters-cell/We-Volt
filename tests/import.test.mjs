@@ -21,6 +21,7 @@ import { sittingOn, dayAfter } from '../scripts/sitting-day.mjs';
 import { shorten } from '../scripts/lib/titles.mjs';
 import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
 import { bulletsFrom, operativeParagraphs, isProcedural } from '../scripts/lib/operative.mjs';
+import { voteType, NOT_THE_TEXT, MEANING } from '../scripts/lib/vote-types.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -391,6 +392,29 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   // The story card and the preview pictures do not ask for insets.
   assert.ok(!Projection.layout(geo, 400, 470, 6).shapes.some((shape) => shape.code === 'CA'),
     'and the cards, laid out by hand without it, are drawn as they were');
+}
+
+// What was put to the vote, read from the label.
+{
+  const is = (subtitle, votedOn) => voteType({ subtitle: subtitle + ' — vote in plenary', votedOn });
+  assert.equal(is('', 'Proposition de rejet - Am 72'), 'Motion to reject');
+  assert.equal(is('', 'Accord provisoire - Am 69'), 'Provisional agreement',
+    'an agreement tabled as an amendment is a vote on the agreement');
+  assert.equal(is('A9-0228/2020 - Ondřej Kovařík - Provisional Agreement - Am 2'), 'Provisional agreement');
+  assert.equal(is('A9-0161/2023 – Jan Huitema – Am 10'), 'Amendment');
+  assert.equal(is('B9-0154/2019- Am 69/3'), 'Amendment', 'a hyphen with no space before it still splits');
+  assert.equal(is('B9-0239/2019 - § 11/2'), 'Part of the text');
+  assert.equal(is('C10-0119/2024 – Provisional agreement (Commission proposal – unamended)'),
+    'Provisional agreement', 'the type is not always the last part');
+  assert.equal(is('A9-0015/2020 - Lucy Nethsingha - Decision'), 'Proposal for a decision');
+  assert.equal(is('A10-0197/2025 – Jörgen Warborn – Request for referral back (Rule 60(4))'),
+    'Referral back to committee');
+  assert.equal(is('Alternative dispute resolution – A9-0001/2020 – Jane Doe – Am 3'), 'Amendment',
+    'a word in the title does not outrank what the last part says');
+  assert.equal(is('B10-0322/2025 – Motion for a resolution'), 'Motion for a resolution');
+  assert.equal(is('2024/0017(COD)'), null, 'a label naming no type gets none, not a guess');
+  assert.equal(voteType({ subtitle: 'vote in plenary' }), null);
+  for (const type of NOT_THE_TEXT) assert.ok(MEANING[type], `${type} says what its result means`);
 }
 
 console.log('import.test.mjs: ok');

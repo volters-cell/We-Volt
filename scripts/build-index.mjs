@@ -18,6 +18,7 @@
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { PLACE_NAMES } from './lib/topics.mjs';
+import { voteType, NOT_THE_TEXT, MEANING } from './lib/vote-types.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -66,6 +67,11 @@ for (const name of files) {
     // The chips on the card: what the vote is about, read from its title,
     // and the committee that wrote the text where the portal gave one.
     topics: decision.topics || [],
+    // What was put to the vote, where the label says (scripts/lib/
+    // vote-types.mjs), and whether its result is something other than the
+    // text's own fate — a motion to reject, one amendment, a referral back.
+    ...(voteType(decision) ? { voteType: voteType(decision) } : {}),
+    ...(NOT_THE_TEXT.has(voteType(decision)) ? { aside: true } : {}),
     committee: decision.committee || null,
     rollCalls: decision.rollCalls || 1,
     result: (decision.outcome && decision.outcome.result) || 'recorded',
@@ -81,6 +87,18 @@ for (const name of files) {
 }
 
 decisions.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id)));
+
+/* Two cards on one day under one title — the resolution and a vote on one of
+   its recitals, a discharge decision and the resolution beside it — are told
+   apart only by what was voted. The card names it for those. */
+const sameDay = new Map();
+decisions.forEach((decision) => {
+  const key = decision.date + '\n' + decision.title;
+  sameDay.set(key, (sameDay.get(key) || 0) + 1);
+});
+decisions.forEach((decision) => {
+  if (sameDay.get(decision.date + '\n' + decision.title) > 1) decision.twin = true;
+});
 
 /* One index per Parliament, not one for all of them.
 
@@ -108,6 +126,9 @@ const metadata = {
   // and "Topic" as the two different questions they are. Written here rather
   // than repeated in the browser, so the vocabulary has one home.
   places: PLACE_NAMES,
+  // What the result of each kind of procedural vote means, for the vote page.
+  // One home for the wording: scripts/lib/vote-types.mjs.
+  voteKinds: MEANING,
   updated: new Date().toISOString().slice(0, 10),
   dataStatus: 'Votes of the European Parliament, from its open data portal. ' +
     'Summaries are editorial and may be absent. See about.html.'

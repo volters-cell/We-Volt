@@ -89,7 +89,7 @@
   }
 
   ['sample-banner', 'sample-banner-text', 'decision-list', 'decision-body', 'decision-status',
-   'decision-date', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-asks',
+   'decision-date', 'decision-type', 'decision-title', 'decision-subtitle', 'decision-summary', 'decision-asks',
    'vote-links', 'vote-share',
    'outcome', 'map', 'legend', 'map-heading', 'map-hint',
    'panel-empty', 'panel-body', 'header-plenary', 'search-input', 'search-go', 'search-status',
@@ -1008,6 +1008,12 @@
           (item.body && item.body !== 'parliament'
             ? '<span class="chip chip-body">' + esc(shortBody(item.body)) + '</span>' : '') +
           cardChips(item) +
+          // What was voted, where the result is not the text's own fate or
+          // where another card that day has the same title.
+          (item.voteType && (item.aside || item.twin)
+            ? '<span class="chip chip-type' + (item.aside ? ' chip-aside' : '') + '">' +
+                esc(item.voteType) + '</span>'
+            : '') +
           '<span class="chip chip-result chip-' + esc(item.result) + '">' +
             esc(RESULT_LABEL[item.result] || item.result) + '</span>' +
           // Only where the list is not already grouped under a date heading.
@@ -1994,6 +2000,15 @@
 
   const DELEGATION_WORD = { for: 'in favour', against: 'against', abstain: 'abstained' };
 
+  /* For the votes whose result is not the text's own fate, what the result
+     means — said once, under it. The wording lives in scripts/lib/
+     vote-types.mjs and reaches the page through the index, so the vote page
+     and the share page say the same thing. */
+  function kindNote(type) {
+    const kinds = (index && index.metadata && index.metadata.voteKinds) || {};
+    return type && kinds[type] ? kinds[type] : '';
+  }
+
   function renderOutcome() {
     const decision = state.decision;
     const result = decision.outcome || {};
@@ -2038,7 +2053,11 @@
         ' Abstaining counts the same as voting against when a qualified majority is being counted.</p>';
     } else if (decision.body === 'parliament') {
       // The stacked bar below carries the numbers; repeating them here twice
-      // over would just be furniture.
+      // over would just be furniture. What it was a vote on is not furniture
+      // when it was not the text itself.
+      if (kindNote(decision.voteType)) {
+        html += '<p class="outcome-note vote-kind">' + esc(kindNote(decision.voteType)) + '</p>';
+      }
     } else {
       html += '<p class="outcome-note">No country-by-country vote exists for this act: ' +
         'the Commission used powers the member states had already delegated to it.</p>';
@@ -2392,7 +2411,10 @@
     });
 
     const blob = await Story.card({
-      title: decision.title,
+      // "Motion to reject: Framework for achieving climate neutrality", so a
+      // picture reading "Rejected" is not taken for the law being thrown out.
+      title: decision.aside && decision.voteType
+        ? decision.voteType + ': ' + decision.title : decision.title,
       subtitle: decision.subtitle,
       bodyLabel: decision.bodyLabel,
       dateLabel: Data.formatDate(decision.date),
@@ -2754,6 +2776,9 @@
     dom['decision-date'].setAttribute('datetime', decision.date);
     dom['decision-title'].textContent = decision.title;
     dom['decision-subtitle'].textContent = decision.subtitle || '';
+    dom['decision-type'].textContent = decision.voteType || '';
+    dom['decision-type'].className = 'chip chip-type' + (decision.aside ? ' chip-aside' : '');
+    dom['decision-type'].hidden = !decision.voteType;
     dom['decision-summary'].textContent = decision.summary || '';
     dom['decision-asks'].innerHTML = asksBlock(decision);
     dom['decision-asks'].hidden = !(decision.whatItMeans || []).length;
@@ -2956,6 +2981,10 @@
     dom['member-section'].hidden = true;
     document.getElementById('country-panel').hidden = false;
     state.decision = cache[entry.id];
+    // What was put to the vote is read once, at build time, from the label
+    // (scripts/lib/vote-types.mjs); the index carries it, the record does not.
+    if (entry.voteType) state.decision.voteType = entry.voteType;
+    if (entry.aside) state.decision.aside = true;
     state.isolate = null;
     dom['decision-section'].hidden = false;
     document.querySelector('.layer-tabs').hidden = false;

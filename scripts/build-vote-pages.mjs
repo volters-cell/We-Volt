@@ -25,6 +25,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import path from 'node:path';
+import { voteType, NOT_THE_TEXT, MEANING } from './lib/vote-types.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const OUT = path.join(ROOT, 'v');
@@ -94,6 +95,12 @@ for (const entry of everyDecision) {
   const cast = totals.for + totals.against + totals.abstain;
   const result = (record.outcome && record.outcome.result) || 'recorded';
   const word = RESULT[result] || 'Recorded';
+  /* A procedural vote says so wherever the result is stated: a preview reading
+     "Framework for achieving climate neutrality — Rejected" for a motion to
+     reject that failed says the opposite of what happened. */
+  const kind = voteType(record);
+  const aside = NOT_THE_TEXT.has(kind);
+  const verdict = aside ? kind + ': ' + word.toLowerCase() : word;
   const id = record.sourceId;
   const preview = previewFor(id);
   const day = spoken(record.date);
@@ -106,7 +113,8 @@ for (const entry of everyDecision) {
   const asks = record.whatItMeans || [];
   const lead = asks.length ? '\u201c' + asks[0] + '.\u201d' : '';
 
-  const summary = word + ' by the European Parliament on ' + day + ' — ' +
+  const summary = (aside ? kind + ', ' + word.toLowerCase() : word) +
+    ' by the European Parliament on ' + day + ' — ' +
     totals.for + ' in favour, ' + totals.against + ' against, ' + totals.abstain +
     ' abstained. ' + (lead || ((houseOf(record.date) === null
       ? cast + ' members voted.'
@@ -136,24 +144,24 @@ for (const entry of everyDecision) {
   }());
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(record.title)} — ${esc(word)} — EU Tracker</title>
+<title>${esc(record.title)} — ${esc(verdict)} — EU Tracker</title>
 <meta name="description" content="${esc(summary)}">
 <link rel="canonical" href="${BASE}v/${id}/">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="EU Tracker">
 <meta property="og:url" content="${BASE}v/${id}/">
-<meta property="og:title" content="${esc(record.title)} — ${esc(word)}">
+<meta property="og:title" content="${esc(record.title)} — ${esc(verdict)}">
 <meta property="og:description" content="${esc(summary)}">
 <meta property="og:image" content="${preview.url}">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="${esc(record.title)}: ${esc(word)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained, with the European Union painted by the vote.">
+<meta property="og:image:alt" content="${esc(record.title)}: ${esc(verdict)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained, with the European Union painted by the vote.">
 <meta property="og:locale" content="en_GB">
 <meta property="article:published_time" content="${record.date}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${esc(record.title)} — ${esc(word)}">
+<meta name="twitter:title" content="${esc(record.title)} — ${esc(verdict)}">
 <meta name="twitter:description" content="${esc(summary)}">
 <meta name="twitter:image" content="${preview.url}">
 <meta name="theme-color" content="#0b3a8f">
@@ -202,10 +210,12 @@ for (const entry of everyDecision) {
 </script>
 <main class="vote-shell">
   ${preview.own ? `<img src="${preview.src}" width="1200" height="630"
-       alt="${esc(record.title)}: ${esc(word)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained.">` : ''}
+       alt="${esc(record.title)}: ${esc(verdict)}, ${totals.for} in favour, ${totals.against} against, ${totals.abstain} abstained.">` : ''}
   <p class="vote-day">European Parliament · ${esc(day)}</p>
   <h1>${esc(record.title)}</h1>
-  <p class="vote-word ${esc(result)}">${esc(word)}</p>
+  ${aside ? `<p class="vote-day">${esc(kind)}</p>
+  ` : ''}<p class="vote-word ${esc(result)}">${esc(word)}</p>
+  ${aside && MEANING[kind] ? `<p class="vote-numbers">${esc(MEANING[kind])}</p>` : ''}
   <p class="vote-numbers">${totals.for} in favour · ${totals.against} against ·
      ${totals.abstain} abstained. ${houseOf(record.date) === null
        ? `${cast} members voted.`

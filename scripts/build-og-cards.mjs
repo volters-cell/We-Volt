@@ -241,7 +241,9 @@ for (let i = 0; i < wanted.length; i++) {
     if (key && key in totals) totals[key] += 1;
   }
   await page.evaluate(v => window.paint(v), {
-    title: record.title,
+    // A procedural vote is named in its title (see scripts/lib/vote-types.mjs):
+    // "Rejected" under a law's name must not read as the law thrown out.
+    title: entry.aside && entry.voteType ? entry.voteType + ': ' + record.title : record.title,
     dateLabel: spoken(record.date),
     result: (record.outcome && record.outcome.result) || 'recorded',
     // Null for a term whose seat count this reference does not describe; the
