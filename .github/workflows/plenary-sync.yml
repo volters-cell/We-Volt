@@ -43,6 +43,12 @@ on:
         description: "Include amendment votes, not only final votes"
         type: boolean
         default: false
+      votes:
+        # date:votingId pairs, space-separated — the votes the audit lists as
+        # missing because they shared a text with another decision. Each is
+        # imported as its own record; nothing else on those days is touched.
+        description: "Only these votes, as date:votingId pairs"
+        required: false
 
 permissions:
   contents: write
@@ -91,8 +97,20 @@ jobs:
       # --refresh-meps re-reads the member directory: the ballots are lists of
       # person ids, so a newly seated MEP missing from the cache would appear in
       # a vote as a number with no name and no country.
+      - name: Import named votes
+        if: steps.sitting.outputs.go == 'true' && inputs.votes
+        env:
+          VOTES: ${{ inputs.votes }}
+        run: |
+          set -euo pipefail
+          for pair in $VOTES; do
+            date="${pair%%:*}"; id="${pair#*:}"
+            [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ && "$id" =~ ^[0-9]+$ ]] || { echo "::error::not a date:id pair: $pair"; exit 1; }
+            node scripts/fetch-plenary.mjs --date "$date" --ids "$id"
+          done
+
       - name: Import roll-call votes
-        if: steps.sitting.outputs.go == 'true'
+        if: steps.sitting.outputs.go == 'true' && !inputs.votes
         run: |
           node scripts/fetch-plenary.mjs --refresh-meps \
             ${{ inputs.since && format('--since {0}', inputs.since) || '' }} \

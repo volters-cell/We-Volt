@@ -7,6 +7,8 @@
  *   node scripts/fetch-plenary.mjs --since 2024-07-16    the whole term
  *   node scripts/fetch-plenary.mjs --all                 amendments too
  *   node scripts/fetch-plenary.mjs --date … --dry-run
+ *   node scripts/fetch-plenary.mjs --date 2024-11-27 --ids 170611
+ *                                   those roll-calls only, each its own record
  *   node scripts/fetch-plenary.mjs --refresh-meps        rebuild the directory
  *
  * The source is the Parliament's open data portal, data.europarl.europa.eu.
@@ -302,7 +304,7 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
 
   const stated = outcomeOf(decision);
   const adopted = stated ? stated === 'adopted' : totals.for > totals.against;
-  const votingId = decision.notation_votingId || lastSegment(decision.activity_id);
+  const votingId = votingIdOf(decision);
 
   const counted = ballots.filter(function (ballot) { return members[String(ballot[0])]; }).length;
 
@@ -445,7 +447,18 @@ export function oneVotePerText(rollCalls) {
   return chosen;
 }
 
-export async function sittingVotes(date, everyRollCall) {
+/* The Parliament's own number for one roll-call: what a record's sourceId is
+   and what the audit names a missing vote by. */
+export function votingIdOf(decision) {
+  return String(decision.notation_votingId || lastSegment(decision.activity_id));
+}
+
+/* `only`, when given, is a set of voting ids: those roll-calls and nothing
+   else, each as a record of its own. It is for the votes the audit finds
+   missing because they shared a text with another decision — the election
+   of the Commission shares its agenda item with two motions on it, and one
+   card per text kept a motion and dropped the election. */
+export async function sittingVotes(date, everyRollCall, only) {
   const decisions = await getAll(`/meetings/MTG-PL-${date}/decisions`, {}, 500);
   if (!decisions.length) return null;
 
@@ -494,9 +507,12 @@ export async function sittingVotes(date, everyRollCall) {
     };
   });
 
-  const votes = everyRollCall
-    ? rollCalls.map(function (vote) { return Object.assign({}, vote, { rollCalls: 1 }); })
-    : oneVotePerText(rollCalls);
+  const picked = only
+    ? rollCalls.filter(function (vote) { return only.has(votingIdOf(vote.decision)); })
+    : rollCalls;
+  const votes = everyRollCall || only
+    ? picked.map(function (vote) { return Object.assign({}, vote, { rollCalls: 1 }); })
+    : oneVotePerText(picked);
 
   /* Where neither route reaches a usable title, the report itself still has
      one, and a sitting turns on a handful of reports between a hundred votes —
@@ -582,6 +598,11 @@ async function main() {
   const dates = await sittingDates(from, window.until);
   console.log(`${dates.length} sitting day${dates.length === 1 ? '' : 's'} between ${from} and ${window.until}.`);
 
+  // --ids 170611,170398: only these roll-calls, each as its own record.
+  const only = typeof args.ids === 'string'
+    ? new Set(args.ids.split(/[\s,]+/).filter(Boolean))
+    : null;
+
   const held = await alreadyHeld(outDir);
   const written = [];
   const taken = new Set();
@@ -589,7 +610,7 @@ async function main() {
   let already = 0;
 
   for (const date of dates) {
-    const votes = await sittingVotes(date, Boolean(args.all));
+    const votes = await sittingVotes(date, Boolean(args.all), only);
     if (!votes || !votes.length) {
       console.log(`${date}: no roll-call votes recorded.`);
       continue;
