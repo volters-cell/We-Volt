@@ -1023,12 +1023,10 @@
     '</span>';
   }
 
-  /* The landing panel: the latest plenary at a glance. Every vote it took is a
-     square in the order it was taken, coloured by how it went; a vote whose
-     result is not the text's own fate (a motion to reject, an amendment, a
-     referral) is drawn apart, so the colours count decisions on texts and
-     nothing else. A square opens its vote; the same votes are in the list
-     below for anyone not using a mouse. */
+  /* The landing panel: the latest plenary at a glance — where and when, and
+     how many votes were adopted and rejected. A vote whose result is not the
+     text's own fate (a motion to reject, an amendment, a referral) is counted
+     apart, so the counts are decisions on texts and nothing else. */
   function latestPlenary() {
     const newest = index && index.decisions[0];
     if (!newest) return '';
@@ -1043,14 +1041,6 @@
       else if (item.result === 'rejected') counted.rejected += 1;
     });
     const label = sessionLabelFor({ key: where.key, session: where.session, items: items });
-    const squares = items.map(function (item) {
-      const kind = item.aside ? 'aside' : (item.result === 'adopted' || item.result === 'rejected' ? item.result : 'other');
-      return '<span class="sq sq-' + kind + '" data-id="' + esc(item.id) + '" title="' +
-        esc(item.title + ' — ' + (item.aside && item.voteType ? item.voteType + ': ' : '') +
-          (RESULT_LABEL[item.result] || item.result)) + '"></span>';
-    }).join('');
-    const summary = items.length + ' votes: ' + counted.adopted + ' adopted, ' + counted.rejected +
-      ' rejected' + (counted.aside ? ', ' + counted.aside + ' on amendments or procedure' : '');
     return '<p class="latest-where">' + esc(label) + '</p>' +
       '<p class="latest-stats">' +
         '<span><strong>' + items.length + '</strong> votes</span>' +
@@ -1058,9 +1048,7 @@
         '<span class="latest-rejected"><strong>' + counted.rejected + '</strong> rejected</span>' +
         (counted.aside ? '<span class="latest-aside"><strong>' + counted.aside +
           '</strong> on amendments or procedure</span>' : '') +
-      '</p>' +
-      '<div class="latest-strip" role="img" aria-label="' + esc(summary + ', in the order they were taken.') + '">' +
-        squares + '</div>';
+      '</p>';
   }
 
   function decisionCard(item, withDate) {
@@ -3246,11 +3234,6 @@
           // a sandbox that refuses history writes: nothing else to do
         }
       }
-
-      document.getElementById('latest-plenary').addEventListener('click', function (event) {
-        const square = event.target.closest('.sq[data-id]');
-        if (square) loadDecision(square.getAttribute('data-id'), state.country);
-      });
 
       dom['session-list'].addEventListener('click', function (event) {
         const card = event.target.closest('.decision-card');
