@@ -2583,14 +2583,14 @@ button.permalink {
    frame and matters to the Union. Faint, so it reads as context, and framed,
    so it reads as displaced. */
 .inset-frame {
-  /* A card of its own, lifted off the sea: the map's edge runs under it, and
-     a box that half-belongs to the water would read as a mistake. */
-  fill: var(--surface);
+  /* Part of the map, not a card on top of it: the same sea, with only a
+     faint dashed line to say this is somewhere else, drawn here. */
+  fill: none;
   stroke: var(--line-strong);
+  stroke-opacity: .55;
   stroke-width: 1;
   stroke-dasharray: 3 3;
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 4px 10px rgba(16, 24, 40, .12));
 }
 .is-inset .context-shape {
   /* A shade darker than the neighbours: at this size a pale shape on a pale

@@ -171,9 +171,7 @@
      Scotland (see LAPTOP); on a phone, higher, below Iceland (see NORTH).
      Clear of any land by six units, and hugging the country. */
   const WEST = {
-    right: 50, narrowest: 60,  // too little room west of Ireland: use the fixed place
-    edge: 8,        // px between the frame and the card's own edge
-    nudge: 10,      // px further right on a laptop, so it does not hug the edge
+    inside: 6,      // px between Canada's box and the map's own left edge
     aspect: 1.17,   // Canada as drawn, width over height
     caption: 26     // room for its name above it: Canada is centred, so half of this
                     // is above it and half below
@@ -199,9 +197,7 @@
     if (!shown.width || !shown.height) return null;
     const scale = Math.min(shown.width / WIDTH, shown.height / HEIGHT);
     const w = shown.width / scale, h = shown.height / scale;
-    const card = svg.closest('.map-section');
-    const room = card ? Math.max(0, shown.left - card.getBoundingClientRect().left - WEST.edge) : 0;
-    return { x: -(w - WIDTH) / 2, y: -(h - HEIGHT) / 2, w: w, h: h, scale: scale, room: room / scale };
+    return { x: -(w - WIDTH) / 2, y: -(h - HEIGHT) / 2, w: w, h: h, scale: scale };
   };
 
   EUMap.prototype.insetOptions = function () {
@@ -209,10 +205,10 @@
     const options = { insets: true, wide: wide };
     const view = this.view();
     if (!view) return options;
-    // Always from the left edge; where there is more room than Canada needs,
-    // the frame ends short of Ireland rather than starting short of the edge.
-    const left = view.x - view.room;
-    if (WEST.right - left < WEST.narrowest) return options;
+    // Inside the map, at its left edge: the box of sea the reader sees, a few
+    // pixels in. (It used to reach out into the card's padding, past the edge
+    // of the map, which on a phone put Canada outside the map's frame.)
+    const left = view.x + WEST.inside / view.scale;
     // As tall as Canada needs at that width and no taller, centred on the
     // level of the United Kingdom, so the frame hugs the country instead of
     // standing round it with empty sea above and below.
@@ -232,8 +228,8 @@
     // Larger than beside Ireland allows: the frame sits above Ireland, its
     // bottom on the line that clears it (LAPTOP.bottom), and reaches east as
     // far as Scotland lets it. It grows upward from there, beside northern
-    // Britain, towards Iceland. A little in from the card's edge.
-    const x = left + WEST.nudge / view.scale;
+    // Britain, towards Iceland.
+    const x = left;
     // As wide as the sea allows, or as wide as Canada can be at the full
     // height, whichever is less: nothing is left unused.
     const w = Math.min(LAPTOP.right - x, (LAPTOP.bottom - LAPTOP.top - WEST.caption) * WEST.aspect);
