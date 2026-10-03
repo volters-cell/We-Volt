@@ -2798,12 +2798,12 @@
       dom['panel-body'].hidden = true;
       dom['panel-empty'].hidden = false;
       panelLabelled('panel-empty-title');
-      dom['panel-empty'].querySelector('p').textContent = state.decision
+      const hint = dom['panel-empty'].querySelector(':scope > p');
+      hint.textContent = state.decision
         ? 'Every member state holds the same answers for this vote: how it voted, and how ' +
           'its own members voted.'
-        : 'Select a member state on the map for its profile: its members of the European ' +
-          'Parliament, and whether it is in the euro area, Schengen and NATO. Then choose a ' +
-          'vote from the list to see how its members voted.';
+        : '';
+      hint.hidden = !state.decision;
       // On landing, the latest plenary leads; once a vote is open the panel
       // is about that vote and goes back to its plain heading.
       const latest = document.getElementById('latest-plenary');
