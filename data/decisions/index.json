@@ -62,9 +62,9 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 774,
+      "votes": 775,
       "from": "2024-07-17",
-      "until": "2026-09-17",
+      "until": "2026-10-05",
       "file": null
     },
     {
@@ -78,6 +78,27 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-05-request-from-the-ecr-group-student-riots-in-france-197673",
+      "sourceId": 197673,
+      "title": "Request from the ECR group – Student riots in France",
+      "subtitle": "Ordre du jour de lundi - Demande du groupe ECR – Émeutes de lycéens en France — vote in plenary",
+      "date": "2026-10-05",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        217,
+        198,
+        4
+      ],
+      "mepCount": 419,
+      "keywords": ""
+    },
     {
       "id": "ep-2026-09-17-2025-2010-196157",
       "sourceId": 196157,
