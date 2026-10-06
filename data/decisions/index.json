@@ -62,9 +62,9 @@
       "term": 10,
       "label": "This Parliament",
       "span": "2024–2029",
-      "votes": 775,
+      "votes": 783,
       "from": "2024-07-17",
-      "until": "2026-10-05",
+      "until": "2026-10-06",
       "file": null
     },
     {
@@ -78,6 +78,225 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-06-2025-0232-197460",
+      "sourceId": 197460,
+      "title": "Amending Directive 2004/37/EC as regards the addition of substances and setting limit values in its Annexes I, III and IIIa",
+      "subtitle": "A10-0100/2026 - Liesbet Sommen - Accord provisoire - Am 46 — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        499,
+        49,
+        104
+      ],
+      "mepCount": 652,
+      "keywords": "2025/0232"
+    },
+    {
+      "id": "ep-2026-10-06-2025-0311-197356",
+      "sourceId": 197356,
+      "title": "Amending Regulations (EU) No 1173/2011 and (EU) No 473/2013 as regards alignment with the EU economic governance framework and further simplification of that framework",
+      "subtitle": "A10-0099/2026 - Markus Ferber, Carla Tavares - Accord provisoire - Am 2 — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Economy"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        450,
+        135,
+        75
+      ],
+      "mepCount": 660,
+      "keywords": "2025/0311"
+    },
+    {
+      "id": "ep-2026-10-06-2025-0312-197352",
+      "sourceId": 197352,
+      "title": "Amending Regulation (EU) No 472/2013 as regards the economic and budgetary surveillance of Member States in the euro area experiencing or threatened with serious difficulties with respect to their financial stability",
+      "subtitle": "A10-0097/2026 - Markus Ferber, Carla Tavares - Accord provisoire - Am 2 — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Economy and Budget"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        458,
+        138,
+        61
+      ],
+      "mepCount": 657,
+      "keywords": "2025/0312"
+    },
+    {
+      "id": "ep-2026-10-06-2025-0313-197472",
+      "sourceId": 197472,
+      "title": "Draft Council regulation amending Council Regulation (EC) No 332/2002 as regards funding arrangements and the use of a diversified funding strategy",
+      "subtitle": "A10-0206/2026 - Markus Ferber, Carla Tavares - Projet de règlement du Conseil — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Draft Council act",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        462,
+        121,
+        75
+      ],
+      "mepCount": 658,
+      "keywords": "2025/0313"
+    },
+    {
+      "id": "ep-2026-10-06-2025-0393-197467",
+      "sourceId": 197467,
+      "title": "Amending Directive 2007/2/EC as regards simplification of certain requirements for the establishment of the Infrastructure for Spatial Information in the Union",
+      "subtitle": "A10-0233/2026 - Emma Wiesner - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        515,
+        108,
+        35
+      ],
+      "mepCount": 658,
+      "keywords": "2025/0393"
+    },
+    {
+      "id": "ep-2026-10-06-2025-2210-197600",
+      "sourceId": 197600,
+      "title": "EU’s approach to corporate tax policy in a changing international environment",
+      "subtitle": "A10-0238/2026 - Kinga Kollár - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        364,
+        69,
+        162
+      ],
+      "mepCount": 595,
+      "keywords": "2025/2210"
+    },
+    {
+      "id": "ep-2026-10-06-2026-0078-197601",
+      "sourceId": 197601,
+      "title": "Establishing the Programme for agile and rapid defence innovation (AGILE)",
+      "subtitle": "A10-0188/2026 - Tonino Picula, Ivars Ijabs - Proposition de rejet - Am 3 — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Defence and security"
+      ],
+      "voteType": "Motion to reject",
+      "aside": true,
+      "committee": {
+        "code": "SEDE",
+        "label": "Security and Defence",
+        "short": "Security and Defence"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        83,
+        540,
+        24
+      ],
+      "mepCount": 647,
+      "keywords": "2026/0078"
+    },
+    {
+      "id": "ep-2026-10-06-2026-2023-197643",
+      "sourceId": 197643,
+      "title": "Report with recommendations to the Commission on psychosocial risk, stress and mental health at work",
+      "subtitle": "A10-0225/2026 - Estelle Ceulemans - Annexe, recommandation 16/3 — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Recommendation",
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 17,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        298,
+        226,
+        130
+      ],
+      "mepCount": 654,
+      "keywords": "2026/2023"
+    },
     {
       "id": "ep-2026-10-05-request-from-the-ecr-group-student-riots-in-france-197673",
       "sourceId": 197673,
