@@ -62651,6 +62651,8 @@
       "topics": [
         "Economy"
       ],
+      "voteType": "Part of the text",
+      "aside": true,
       "committee": null,
       "rollCalls": 5,
       "result": "rejected",

@@ -491,6 +491,18 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   const kept = oneVotePerText(day).map((v) => v.decision.notation_votingId).sort();
   assert.deepEqual(kept, ['170611', '170722', '170726'],
     'the election is kept beside the motions on the same item; the amendment is folded');
+  // A split vote on one paragraph is part of the text, even on the day it is
+  // held, when the portal has not yet marked it as anything.
+  const split = [
+    vote('197457', 'A10-0237/2026 - Hilde Vautmans - Proposition de résolution (ensemble du texte)'),
+    vote('197847', 'A10-0237/2026 - Hilde Vautmans - § 1, point au/2'),
+    vote('197855', 'A10-0237/2026 - Hilde Vautmans - Considérant F/2')
+  ].map((v) => Object.assign(v, { part: /§|Considérant/.test(v.label), code: 'A10-0237/2026' }));
+  assert.deepEqual(oneVotePerText(split).map((v) => v.decision.notation_votingId), ['197457'],
+    'paragraph and recital votes fold into the vote on the whole text');
+  const { isFinalVote } = await import('../scripts/fetch-plenary.mjs');
+  assert.equal(isFinalVote(split[2].decision), false, 'and the audit does not count them');
+  assert.equal(voteType({ subtitle: 'A10-0237/2026 - Hilde Vautmans - Considérant F/2 — vote in plenary' }), 'Part of the text');
   const budget = [1, 2, 3].map((n) => vote('5' + n, 'Am ' + n, { decisionAboutId: 'x' }))
     .concat([vote('59', 'Motion for a resolution')]);
   assert.equal(oneVotePerText(budget).length, 1, 'a hundred amendments still make one card');

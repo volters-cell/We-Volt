@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 812,
+      "votes": 808,
       "from": "2024-07-17",
       "until": "2026-10-07",
       "file": null
@@ -160,126 +160,7 @@
         110
       ],
       "mepCount": 650,
-      "keywords": "a10-0237/2026",
-      "twin": true
-    },
-    {
-      "id": "ep-2026-10-07-a10-0237-2026-197847",
-      "sourceId": 197847,
-      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
-      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point au/2 — vote in plenary",
-      "date": "2026-10-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "topics": [
-        "China"
-      ],
-      "voteType": "Part of the text",
-      "aside": true,
-      "committee": {
-        "code": "AFET",
-        "label": "Foreign Affairs",
-        "short": "Foreign Affairs"
-      },
-      "rollCalls": 1,
-      "result": "adopted",
-      "status": "verified",
-      "tally": [
-        415,
-        218,
-        31
-      ],
-      "mepCount": 664,
-      "keywords": "a10-0237/2026",
-      "twin": true
-    },
-    {
-      "id": "ep-2026-10-07-a10-0237-2026-197848",
-      "sourceId": 197848,
-      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
-      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point au/3 — vote in plenary",
-      "date": "2026-10-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "topics": [
-        "China"
-      ],
-      "voteType": "Part of the text",
-      "aside": true,
-      "committee": {
-        "code": "AFET",
-        "label": "Foreign Affairs",
-        "short": "Foreign Affairs"
-      },
-      "rollCalls": 1,
-      "result": "adopted",
-      "status": "verified",
-      "tally": [
-        379,
-        266,
-        19
-      ],
-      "mepCount": 664,
-      "keywords": "a10-0237/2026",
-      "twin": true
-    },
-    {
-      "id": "ep-2026-10-07-a10-0237-2026-197855",
-      "sourceId": 197855,
-      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
-      "subtitle": "A10-0237/2026 - Hilde Vautmans - Considérant F/2 — vote in plenary",
-      "date": "2026-10-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "topics": [
-        "China"
-      ],
-      "committee": {
-        "code": "AFET",
-        "label": "Foreign Affairs",
-        "short": "Foreign Affairs"
-      },
-      "rollCalls": 1,
-      "result": "adopted",
-      "status": "verified",
-      "tally": [
-        468,
-        106,
-        76
-      ],
-      "mepCount": 650,
-      "keywords": "a10-0237/2026",
-      "twin": true
-    },
-    {
-      "id": "ep-2026-10-07-a10-0237-2026-197871",
-      "sourceId": 197871,
-      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
-      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point aa — vote in plenary",
-      "date": "2026-10-07",
-      "body": "parliament",
-      "bodyLabel": "European Parliament",
-      "topics": [
-        "China"
-      ],
-      "voteType": "Part of the text",
-      "aside": true,
-      "committee": {
-        "code": "AFET",
-        "label": "Foreign Affairs",
-        "short": "Foreign Affairs"
-      },
-      "rollCalls": 1,
-      "result": "adopted",
-      "status": "verified",
-      "tally": [
-        498,
-        76,
-        86
-      ],
-      "mepCount": 660,
-      "keywords": "a10-0237/2026",
-      "twin": true
+      "keywords": "a10-0237/2026"
     },
     {
       "id": "ep-2026-10-07-a10-0241-2026-197497",

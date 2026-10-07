@@ -379,7 +379,12 @@ export function buildRecord(decision, item, members, date, subject, code, rollCa
    rather than a reading of its title. */
 export function isFinalVote(decision) {
   if (decision.decisionAboutId) return false;
-  return !AMENDMENT.test(english(decision.activity_label));
+  const label = english(decision.activity_label);
+  // Nor a vote on one part of it — a paragraph, a recital, a split vote — which
+  // the portal does not mark as an amendment on the day it is held: "§ 1,
+  // point au/2", "Considérant F/2". The importer folds these into the text's
+  // own card, and the audit, which uses this same rule, does not count them.
+  return !AMENDMENT.test(label) && !isPartOfAText(label);
 }
 
 /* One card per text, which is what a sitting actually decided.

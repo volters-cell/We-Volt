@@ -51,7 +51,7 @@ const GENERAL = [
 // What the last part of a label says when the roll-call was on a piece of the
 // text: "A9-0161/2023 – Jan Huitema – Am 10", "B9-0239/2019 – § 11/2".
 const AMENDMENT = /^(?:ams?\b|am\s*\d|am\/|amendments?\s+\d)/i;
-const PART = /^(?:§|after §|title before|paragraph\b|recital\b|visa\b|point\b|annex\b|article\b|block\b|bloc\b|vote en bloc\b|original text\b|directive\b.*\barticle\b)/i;
+const PART = /^(?:§|after §|title before|paragraph\b|recital\b|consid(?:é|e)rant\b|visa\b|citation\b|point\b|annex\b|article\b|block\b|bloc\b|vote en bloc\b|original text\b|directive\b.*\barticle\b)/i;
 
 // The parts of a label: "A9-0228/2020 - Ondřej Kovařík - Provisional
 // Agreement - Am 2". A hyphen inside a name has no space beside it.
