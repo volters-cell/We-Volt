@@ -415,6 +415,8 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
     'a word in the title does not outrank what the last part says');
   assert.equal(is('B10-0322/2025 – Motion for a resolution'), 'Motion for a resolution');
   assert.equal(is('2024/0017(COD)'), null, 'a label naming no type gets none, not a guess');
+  assert.ok(isProcedural('Considers that the financial implications of the requested proposal should be covered by existing budgetary allocations'),
+    'the closing line of a request for legislation asks for nothing');
   assert.equal(voteType({ subtitle: 'vote in plenary' }), null);
   assert.equal(voteType({ title: 'Monday’s agenda – Request by The Left Group – ECB', subtitle: 'vote in plenary' }),
     'Agenda request', 'an agenda change is named in its title');

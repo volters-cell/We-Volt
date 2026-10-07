@@ -41,7 +41,9 @@ const PROCEDURAL = [
   /^Instructs its President to forward/i,
   /^Decides to (consult|forward|refer)/i,
   /^Consents? to (the )?conclusion of/i,
-  /alter its proposal accordingly, in accordance with Article 293\(2\)/i
+  /alter its proposal accordingly, in accordance with Article 293\(2\)/i,
+  // The closing line of every request for a legislative proposal (INL).
+  /financial implications of the requested proposal/i
 ];
 
 export function isProcedural(text) {
