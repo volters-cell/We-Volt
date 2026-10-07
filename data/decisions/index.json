@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 801,
+      "votes": 812,
       "from": "2024-07-17",
-      "until": "2026-10-06",
+      "until": "2026-10-07",
       "file": null
     },
     {
@@ -80,6 +80,317 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-07-a10-0095-2026-197470",
+      "sourceId": 197470,
+      "title": "Decision of the European Parliament and of the Council empowering France to accede to the Inter-American Convention for the Protection and Conservation of Sea Turtles",
+      "subtitle": "A10-0095/2026 - Pierfrancesco Maran, Mélissa Camara - Accord provisoire - Am 6 — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        658,
+        2,
+        4
+      ],
+      "mepCount": 664,
+      "keywords": "a10-0095/2026"
+    },
+    {
+      "id": "ep-2026-10-07-a10-0131-2026-197486",
+      "sourceId": 197486,
+      "title": "Amended proposal for a directive of the European Parliament and of the Council amending Directive 1999/62/EC, Council Directive 1999/37/EC and Directive (EU) 2019/520 as regards the CO2 emission class of heavy-duty vehicles with trailers and clarifying and simplifying certain provisions",
+      "subtitle": "A10-0131/2026 - Matteo Ricci - Accord provisoire - Am 18 — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Climate"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        475,
+        96,
+        70
+      ],
+      "mepCount": 641,
+      "keywords": "a10-0131/2026"
+    },
+    {
+      "id": "ep-2026-10-07-a10-0237-2026-197457",
+      "sourceId": 197457,
+      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+      "subtitle": "A10-0237/2026 - Hilde Vautmans - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "China"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 43,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        454,
+        86,
+        110
+      ],
+      "mepCount": 650,
+      "keywords": "a10-0237/2026",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-07-a10-0237-2026-197847",
+      "sourceId": 197847,
+      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point au/2 — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "China"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        415,
+        218,
+        31
+      ],
+      "mepCount": 664,
+      "keywords": "a10-0237/2026",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-07-a10-0237-2026-197848",
+      "sourceId": 197848,
+      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point au/3 — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "China"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        379,
+        266,
+        19
+      ],
+      "mepCount": 664,
+      "keywords": "a10-0237/2026",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-07-a10-0237-2026-197855",
+      "sourceId": 197855,
+      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+      "subtitle": "A10-0237/2026 - Hilde Vautmans - Considérant F/2 — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "China"
+      ],
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        468,
+        106,
+        76
+      ],
+      "mepCount": 650,
+      "keywords": "a10-0237/2026",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-07-a10-0237-2026-197871",
+      "sourceId": 197871,
+      "title": "A European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+      "subtitle": "A10-0237/2026 - Hilde Vautmans - § 1, point aa — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "China"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        498,
+        76,
+        86
+      ],
+      "mepCount": 660,
+      "keywords": "a10-0237/2026",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-07-a10-0241-2026-197497",
+      "sourceId": 197497,
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Belgium",
+      "subtitle": "A10-0241/2026 - Hélder Sousa Silva - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        605,
+        56,
+        7
+      ],
+      "mepCount": 668,
+      "keywords": "a10-0241/2026"
+    },
+    {
+      "id": "ep-2026-10-07-a10-0242-2026-197464",
+      "sourceId": 197464,
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Spain",
+      "subtitle": "A10-0242/2026 - Sandra Gómez López - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        608,
+        55,
+        7
+      ],
+      "mepCount": 670,
+      "keywords": "a10-0242/2026"
+    },
+    {
+      "id": "ep-2026-10-07-a10-0243-2026-197501",
+      "sourceId": 197501,
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Finland",
+      "subtitle": "A10-0243/2026 - Nicolae Ștefănuță - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        601,
+        57,
+        9
+      ],
+      "mepCount": 667,
+      "keywords": "a10-0243/2026"
+    },
+    {
+      "id": "ep-2026-10-07-a10-0254-2026-197509",
+      "sourceId": 197509,
+      "title": "Draft for a Council directive amending Directive (EU) 2015/637 on the coordination and cooperation measures to facilitate consular protection for unrepresented citizens of the Union in third countries and Directive (EU) 2019/997 establishing an EU Emergency Travel Document",
+      "subtitle": "A10-0254/2026 - Lena Düpont - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 6,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        470,
+        180,
+        18
+      ],
+      "mepCount": 668,
+      "keywords": "a10-0254/2026"
+    },
     {
       "id": "ep-2026-10-06-2025-0232-197460",
       "sourceId": 197460,
@@ -244,7 +555,7 @@
         162
       ],
       "mepCount": 595,
-      "keywords": "2025/2210 notes in general that international taxation rules should seek to provide greater legal certainty, administrative stability and simplicity, thereby reducing compliance burdens by avoiding overlapping reporting requirements"
+      "keywords": "2025/2210"
     },
     {
       "id": "ep-2026-10-06-2026-0078-197601",
@@ -302,7 +613,7 @@
         29
       ],
       "mepCount": 652,
-      "keywords": "2026/2023 stresses that individual resilience training or wellbeing programmes cannot replace employers’ legal obligations to prevent work-related psychosocial risks through proper work organisation stresses the urgent need to strengthen the eu legislative framework on the prevention, identification and management of work-related psychosocial risks and to ensure a high level of protection of workers’ health and safety",
+      "keywords": "2026/2023",
       "twin": true
     },
     {
@@ -332,7 +643,7 @@
         130
       ],
       "mepCount": 654,
-      "keywords": "2026/2023 stresses that individual resilience training or wellbeing programmes cannot replace employers’ legal obligations to prevent work-related psychosocial risks through proper work organisation stresses the urgent need to strengthen the eu legislative framework on the prevention, identification and management of work-related psychosocial risks and to ensure a high level of protection of workers’ health and safety",
+      "keywords": "2026/2023",
       "twin": true
     },
     {
