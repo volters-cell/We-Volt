@@ -24,6 +24,7 @@
   let geoData = null;          // the outlines, kept for the story card
   let outside = null;          // the countries the map draws in grey
   let memberIndex = null;      // every MEP, for search
+  let byId = null;             // memberIndex by id, built on first use
   let manyBodies = false;      // is there more than one institution to filter between?
   let memberCache = {};        // their voting records, fetched on demand
   let bySourceId = {};         // vote id in the source data -> record in the index
@@ -267,6 +268,32 @@
       state.topics.length || state.countries.length || state.committees.length);
   }
 
+  /* The member directory (who each ballot's id is) and the member index (every
+     MEP, for search and for a country's list) are a hundred kilobytes between
+     them, compressed — a third of a first visit — and the start page needs
+     neither: it shows the map and the list of votes. They used to be in the
+     set the page waited for before drawing anything, which on a slow phone
+     connection held the first screen back by seconds. Now they load the first
+     time something needs them — a vote opened, a search typed, a country's
+     members unfolded — and, once the page is up and idle, in the background,
+     so they are usually there before anyone asks. */
+  let membersLoading = null;
+  function needMembers() {
+    if (!membersLoading) {
+      membersLoading = Promise.all([
+        // Identities live here, once, rather than inside every vote record.
+        Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
+        // Every member, for search; their voting records load one at a time.
+        Data.getJSON('data/meps/index.json').catch(function () { return null; })
+      ]).then(function (got) {
+        directory = got[0] && got[0].members ? got[0].members : null;
+        memberIndex = (got[1] && got[1].members) || null;
+        byId = null;
+      });
+    }
+    return membersLoading;
+  }
+
   /* Members are searched across the whole term, not only inside whatever vote
      happens to be open: following one MEP is the point of the site. */
   function mepMatches() {
@@ -341,6 +368,18 @@
     if (button.getAttribute('aria-expanded') === 'true') {
       list.hidden = true;
       button.setAttribute('aria-expanded', 'false');
+      return;
+    }
+
+    if (!memberIndex) {
+      list.innerHTML = '<p class="neutral-note">Loading the members…</p>';
+      list.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+      needMembers().then(function () {
+        list.innerHTML = countryMembersHTML(code);
+        list.dataset.code = code;
+        if (window.Groups) Groups.loadLogos(list);
+      });
       return;
     }
 
@@ -514,6 +553,7 @@
     if (state.query) loadEveryTerm();
     renderFeed();
     renderMepResults();
+    if (state.query && !memberIndex) needMembers().then(renderMepResults);
   }
 
   /* ------------------------------------------------------- plenary sessions */
@@ -1916,8 +1956,8 @@
     '</div>';
   }
 
-  /* One member out of the directory, by the id every ballot uses. */
-  let byId = null;
+  /* One member out of the directory, by the id every ballot uses. (byId is
+     declared with the other state, above, so needMembers can reset it.) */
   function memberById(id) {
     if (!memberIndex) return null;
     if (!byId) {
@@ -3051,7 +3091,8 @@
       return;
     }
     if (!cache[entry.id]) {
-      cache[entry.id] = Data.expandBallots(await Data.getJSON(recordFile(entry)), directory);
+      const loaded = await Promise.all([Data.getJSON(recordFile(entry)), needMembers()]);
+      cache[entry.id] = Data.expandBallots(loaded[0], directory);
     }
     const changed = !state.decision || state.decision.id !== entry.id;
     state.member = null;
@@ -3117,7 +3158,7 @@
 
   async function start() {
     try {
-      const [reference, geo, decisionIndex, plenary, members, people, neighbours, blocs] =
+      const [reference, geo, decisionIndex, plenary, neighbours, blocs] =
         await Promise.all([
         Data.getJSON('data/reference/member-states.json'),
         Data.getJSON('data/eu-countries.geo.json'),
@@ -3125,10 +3166,6 @@
         Data.getJSON('data/reference/plenary-calendar.json').catch(function () {
           return { sessions: [] };
         }),
-        // Identities live here, once, rather than inside every vote record.
-        Data.getJSON('data/reference/meps.json').catch(function () { return null; }),
-        // Every member, for search; their voting records load one at a time.
-        Data.getJSON('data/meps/index.json').catch(function () { return null; }),
         Data.getJSON('data/reference/neighbours.json').catch(function () { return null; }),
         // Parties worth following as a bloc: the Parliament records a member's
         // group but not the party they were elected for, so the membership is
@@ -3136,8 +3173,6 @@
         Data.getJSON('data/reference/delegations.json').catch(function () { return null; })
       ]);
       calendar = plenary || { sessions: [] };
-      directory = members && members.members ? members.members : null;
-      memberIndex = (people && people.members) || null;
       outside = (neighbours && neighbours.countries) || {};
       delegations = (blocs && blocs.delegations) || [];
 
@@ -3235,6 +3270,10 @@
       // Opening the site on nothing in particular: the Union, once, before the
       // reader starts. A shared link naming a vote has that to show instead.
       greetHome();
+      // The member files, in the background once the page has drawn, so a
+      // search or a vote opened a moment later rarely waits for them.
+      (window.requestIdleCallback || function (fn) { return setTimeout(fn, 1500); })(
+        function () { needMembers(); }, { timeout: 4000 });
       if (location.hash) {
         try {
           history.replaceState(null, '', location.pathname + location.search);
