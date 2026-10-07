@@ -30,14 +30,27 @@ let chromium;
 try {
   ({ chromium } = await import('playwright'));
 } catch (error) {
-  console.error('This needs playwright: npm i -D playwright && npx playwright install chromium');
-  process.exit(1);
+  try {
+    ({ chromium } = await import('playwright-core'));
+  } catch (again) {
+    console.error('This needs playwright: npm i -D playwright && npx playwright install chromium');
+    process.exit(1);
+  }
 }
 
 const geo = readFileSync(path.join(ROOT, 'data/eu-countries.geo.json'), 'utf8');
 const projection = readFileSync(path.join(ROOT, 'assets/js/projection.js'), 'utf8');
 const states = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8')).states;
 const seats = states.reduce(function (sum, state) { return sum + state.seats; }, 0);
+/* When the archive begins, from the index rather than typed in: the card said
+   "2024, since July" for months after the previous Parliament's votes were
+   added and the record reached back to July 2019. */
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+  'September', 'October', 'November', 'December'];
+const terms = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions/index.json'), 'utf8')).terms || [];
+const first = terms.map(function (row) { return row.from; }).filter(Boolean).sort()[0] || '2024-07-17';
+const sinceYear = first.slice(0, 4);
+const sinceMonth = MONTHS[Number(first.slice(5, 7)) - 1];
 
 const html = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
@@ -68,7 +81,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <div class="facts">
       <span><b>${seats}</b>members</span>
       <span><b>${states.length}</b>member states</span>
-      <span><b>2024</b>since July</span>
+      <span><b>${sinceYear}</b>since ${sinceMonth}</span>
     </div>
   </div>
   <div class="map" id="map"></div>
@@ -101,4 +114,4 @@ await page.waitForTimeout(400);
 await page.screenshot({ path: OUT });
 await browser.close();
 unlinkSync(SCRATCH);
-console.log(`assets/social-card.png — ${seats} seats, ${states.length} member states`);
+console.log(`assets/social-card.png — ${seats} seats, ${states.length} member states, since ${sinceMonth} ${sinceYear}`);

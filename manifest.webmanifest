@@ -1,7 +1,7 @@
 {
   "name": "EU Tracker — every vote of the European Parliament",
   "short_name": "EU Tracker",
-  "description": "Every vote of the European Parliament since July 2024, member by member, built from the Parliament's own open data.",
+  "description": "Every vote of the European Parliament since July 2019, member by member, built from the Parliament's own open data.",
   "lang": "en",
   "dir": "ltr",
   "start_url": "./",
