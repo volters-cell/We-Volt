@@ -16,7 +16,10 @@
   },
   "document": "A9-0180/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the Parliament does not request any additional posts for 2025",
+    "Notes that the 98 permanent posts created in the 2023 budget to facilitate the application of Article 29(4) of the Staff Regulation have been removed from the 2025 establishment plan"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 338 in favour, 148 against, 46 abstained. Result derived from the totals."
@@ -2174,5 +2177,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0180/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0180_EN.html"
+  }
 }

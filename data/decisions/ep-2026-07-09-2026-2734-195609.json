@@ -16,7 +16,10 @@
   },
   "document": "B10-0339/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the importance of conflict-sensitive programming and calls on the Commission and partners to systematically integrate conflict analysis into humanitarian and development interventions in fragile contexts",
+    "Stresses the need to strengthen the EU’s capacity to monitor and document violations of IHL, including through support for independent accountability mechanisms and cooperation with international investigative bodies"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 255 in favour, 315 against, 19 abstained. Result derived from the totals."
@@ -2402,5 +2405,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0339/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0339_EN.html"
+  }
 }

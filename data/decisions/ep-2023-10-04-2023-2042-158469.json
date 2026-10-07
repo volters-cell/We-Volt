@@ -2537,5 +2537,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes, further, Switzerland’s participation in the summits of the European Political Community",
+    "Welcomes Switzerland’s 2023-2024 term as a non-permanent member of the UN Security Council as an opportunity to strengthen international cooperation and promote common priorities at the multilateral level",
+    "Regrets the Swiss Government’s unilateral decision to terminate negotiations on the EU-Swiss institutional framework agreement in 2021, which affected Switzerland’s participation in the Erasmus+ programme"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0248/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0248_EN.html"
+  }
 }

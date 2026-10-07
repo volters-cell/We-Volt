@@ -16,7 +16,11 @@
   },
   "document": "B10-0450/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on all Parties to CITES to step up their implementation and enforcement of the convention, making full use of the available legal framework",
+    "Calls on the Member States to advocate for stronger protection of the polar bear (Ursus maritimus) and to tackle the threats posed to it by exploitation for trade in trophies and hides",
+    "Urges the closure of remaining legal domestic ivory markets, as a matter of urgency, and calls for the EU and all Parties to oppose any proposals seeking to remove restrictions on trade in ivory"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 378 in favour, 127 against, 63 abstained. Result derived from the totals."
@@ -2318,5 +2322,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0450/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0450_EN.html"
+  }
 }

@@ -2408,5 +2408,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the Joint Undertaking's objective and role in developing a supercomputing ecosystem in Europe",
+    "Notes that from the nine observations issued by the Court in 2020 and 2021, only two (from 2021) are closed",
+    "Notes that, in response, in December 2022, the Joint Undertaking developed an action plan, which the IAS considered to be adequate"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0095/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0095_EN.html"
+  }
 }

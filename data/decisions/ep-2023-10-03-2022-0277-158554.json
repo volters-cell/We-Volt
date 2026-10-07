@@ -2548,5 +2548,14 @@
   "countries": {},
   "topics": [
     "Single market"
-  ]
+  ],
+  "whatItMeans": [
+    "Requests for cooperation including accelerated cooperation or mutual assistance, shall contain all the necessary information, including the purpose of and reasons for it",
+    "Requests for cooperation or mutual assistance, including accelerated cooperation or mutual assistance, shall contain all the necessary information, including the purpose of and reasons for it",
+    "Requests for cooperation, such as the exchange of information and mutual assistance, shall contain all the necessary information related to the request, including the purpose of and reasons for it"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0264/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0264_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "B10-0261/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Tanzanian government to bring the country’s cybercrime and media laws in line with international human rights law standards",
+    "Calls on the EU and its Member States to step up engagement with the Tanzanian authorities and to ensure observation of trials against government critics and opposition members",
+    "Calls on the Tanzanian authorities to immediately and unconditionally release Tundu Lissu and to withdraw the charges brought against him without respect for fair trial standards"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 154 in favour, 389 against, 12 abstained. Result derived from the totals."
@@ -2262,5 +2266,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0261/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0261_EN.html"
+  }
 }

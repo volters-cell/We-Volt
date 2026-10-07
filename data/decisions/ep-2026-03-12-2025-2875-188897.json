@@ -16,7 +16,9 @@
   },
   "document": "B10-0155/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Council to ensure that Parliament continues to be closely involved in the preparation of MC14 and is promptly updated and consulted during MC14"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 133 in favour, 385 against, 25 abstained. Result derived from the totals."
@@ -2218,5 +2220,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0155/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0155_EN.html"
+  }
 }

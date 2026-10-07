@@ -2553,5 +2553,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission, when assessing the CAP strategic plans, to focus on the extent to which they simplify matters and reduce administrative burdens for the final beneficiaries",
+    "Calls on the Commission to contribute to improving the common understanding of the Single Audit approach in order to achieve a more uniform interpretation and implementation of this model across the Member States",
+    "Welcomes the Commission’s ‘EU budget focused on results’ strategy, aimed at improving the efficiency of spending and achieving more with the available resources"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0297/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0297_EN.html"
+  }
 }

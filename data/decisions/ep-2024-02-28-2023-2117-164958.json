@@ -2229,5 +2229,13 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Condemns the role of the illegitimate regime of Aliaksandr Lukashenka for de facto surrendering national sovereignty to the Kremlin in order to maintain its grip on Belarus",
+    "Reiterates the need to re-think the Eastern Partnership multilateral policy to restore regional engagement and the regional democratic reform agenda, including through the EuroNest Parliamentary Assembly"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0389/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0389_EN.html"
+  }
 }

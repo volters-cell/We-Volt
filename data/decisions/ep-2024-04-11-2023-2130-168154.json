@@ -2492,5 +2492,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes the fact that independent external auditors for the political groups only issued unqualified opinions for the financial year 2022",
+    "Welcomes that the percentage of zero-emission or plug-in hybrid cars in the people transport service fleet has increased from 81% in 2021 to 97% in 2022",
+    "Welcomes that DG PERS implemented the Positive Action Scheme for candidates with a disability, resulting in a significantly higher number of applications than in previous years"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0067/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0067_EN.html"
+  }
 }

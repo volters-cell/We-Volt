@@ -16,7 +16,10 @@
   },
   "document": "A9-0181/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Regrets that the European Council decided not to join the Agreement",
+    "Notes that the independent experts shall designate a speaker from amongst them; takes the view that the independent experts should have full autonomy in organising their work, as well as in convening their own meetings"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 301 in favour, 216 against, 23 abstained. Result derived from the totals."
@@ -2206,5 +2209,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A9-0181/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0181_EN.html"
+  }
 }

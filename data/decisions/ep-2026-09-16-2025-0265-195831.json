@@ -16,7 +16,9 @@
   },
   "document": "A10-0196/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that there is a need to ensure and emphasise synergies and complementarity with other EU policies and programmes, such as the Euratom Research and Training Programme"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 600 in favour, 21 against, 48 abstained. Result derived from the totals."
@@ -2725,5 +2727,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0196/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0196_EN.html"
+  }
 }

@@ -2568,5 +2568,12 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Stresses that Belgium has confirmed that the measures described below receiving a financial contribution from the EGF will not also receive financial contributions from other Union financial instruments"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0351/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0351_EN.html"
+  }
 }

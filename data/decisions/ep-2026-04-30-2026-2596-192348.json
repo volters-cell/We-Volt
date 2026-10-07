@@ -16,7 +16,10 @@
   },
   "document": "B10-0190/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure complementarity, coherence and legal certainty between the DMA, the Data Act and the Artificial Intelligence Act[13], including through coordinated guidance and implementation",
+    "Calls on the Commission to ensure sufficient human and financial resources for DMA enforcement, in line with the Regulation’s scope, complexity and strategic importance, and calls for a significant reinforcement of staffing"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 399 in favour, 104 against, 75 abstained. Result derived from the totals."
@@ -2361,5 +2364,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0190/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0190_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "A10-0254/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to establish clearer economic indicators to assess “serious injury”, as current criteria lack precision",
+    "Welcomes that any Member State, association or representative of the Union industry may request initiation or extension of safeguard measures, provided evidence is available"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 206 in favour, 430 against, 12 abstained. Result derived from the totals."
@@ -2641,5 +2644,9 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0254/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2025-0254_EN.html"
+  }
 }

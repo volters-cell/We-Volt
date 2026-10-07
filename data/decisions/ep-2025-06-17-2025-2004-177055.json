@@ -16,7 +16,11 @@
   },
   "document": "A10-0101/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the EU and the Member States to devote 15 % of their ODA to education by 2030",
+    "Calls on the EU to take effective measures against the shrinking of civic space, and ensure civil society participation in the reform of the current structures for development finance",
+    "Urges the Commission to increase efforts to implement the development finance objectives under the GAP III, namely that 85 % of all new actions integrate a gender perspective and support gender equality"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 282 in favour, 340 against, 26 abstained. Result derived from the totals."
@@ -2638,5 +2642,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0101/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2025-0101_EN.html"
+  }
 }

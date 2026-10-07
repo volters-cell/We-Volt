@@ -16,7 +16,9 @@
   },
   "document": "A10-0205/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Underlines the importance of strengthening support for traditional and sustainable practices, ensuring proper financing for projects and measures contributing to that aim"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 467 in favour, 92 against, 44 abstained. Result derived from the totals."
@@ -2461,5 +2463,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0205/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0205_EN.html"
+  }
 }

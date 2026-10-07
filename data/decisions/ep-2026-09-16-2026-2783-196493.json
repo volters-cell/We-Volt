@@ -16,7 +16,11 @@
   },
   "document": "B10-0380/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw its draft implementing decision",
+    "Calls on the Commission not to authorise the GM soybean due to the lack of sufficient evidence on long-term impacts on biodiversity, food safety, farmers’ livelihoods and animal health, in line with the One Health approach",
+    "Considers that the draft Commission implementing decision exceeds the implementing powers provided for in Regulation (EC) No 1829/2003"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 442 in favour, 184 against, 12 abstained. Result derived from the totals."
@@ -2598,5 +2602,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0380/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0380_EN.html"
+  }
 }

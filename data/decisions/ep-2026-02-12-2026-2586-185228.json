@@ -16,7 +16,9 @@
   },
   "document": "B10-0142/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to ensure strong alignment and complementarity between Europe’s Beating Cancer Plan and any future European action on diseases, including the ‘Safe Hearts Plan’ and action on rare diseases"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 459 in favour, 45 against, 40 abstained. Result derived from the totals."
@@ -2221,5 +2223,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0142/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0142_EN.html"
+  }
 }

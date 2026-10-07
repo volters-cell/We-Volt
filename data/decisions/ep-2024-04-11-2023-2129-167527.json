@@ -2492,5 +2492,14 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeans": [
+    "Calls on the Commission to promote good working conditions and staff retention policies in order to ensure a stable and resilient workforce",
+    "Calls on the Commission to ensure that Member States apply a zero-tolerance approach to corruption and fraud, including embezzlement, without any exception",
+    "Calls on the Commission to follow up and take necessary action with regards to all errors found by the Court and to implement additional financial corrections, where deemed necessary"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0139/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0139_EN.html"
+  }
 }

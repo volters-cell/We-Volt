@@ -16,7 +16,9 @@
   },
   "document": "B10-0215/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns in the strongest terms the terrorist attacks and targeted massacre of Christians carried out by the ADF in the eastern DRC; expresses its solidarity with the families of the victims and with Christian communities"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 46 in favour, 466 against, 14 abstained. Result derived from the totals."
@@ -2146,5 +2148,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0215/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0215_EN.html"
+  }
 }

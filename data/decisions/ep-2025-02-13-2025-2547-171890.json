@@ -16,7 +16,11 @@
   },
   "document": "B10-0126/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests the Nicaraguan regime to implement the recommendations made by the GHREN, as well as those of the United Nations High Commissioner for Human Rights",
+    "Urges the EU to increase support for members of the Nicaraguan opposition and CSOs in exile, and to support countries receiving migrants fleeing Nicaragua, like Costa Rica",
+    "Calls on the EU Member States and the UN Security Council, in accordance with the Rome Statute, to open investigations through the International Criminal Court into Nicaragua and Daniel Ortega for crimes against humanity"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 194 in favour, 225 against, 19 abstained. Result derived from the totals."
@@ -1798,5 +1802,9 @@
   "topics": [
     "Nicaragua",
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0126/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0126_EN.html"
+  }
 }

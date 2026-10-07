@@ -16,7 +16,10 @@
   },
   "document": "A10-0224/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Takes note of Draft amending budget No 2/2026 as submitted by the Commission",
+    "Takes note of the updated remarks for InvestEU following the adoption of the InvestEU Omnibus II Regulation, as a means for improving budgetary coherence and reflecting the current state of implementation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 440 in favour, 127 against, 104 abstained. Result derived from the totals."
@@ -2738,5 +2741,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0224/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0224_EN.html"
+  }
 }

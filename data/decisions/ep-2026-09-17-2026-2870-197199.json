@@ -16,7 +16,10 @@
   },
   "document": "B10-0411/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to strengthen operational cooperation with the Kingdom of Morocco and other countries of origin and transit",
+    "Calls on the Kingdom of Morocco to fully comply with its international obligations and cooperate fully and transparently with the relevant Spanish and EU authorities"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 339 in favour, 225 against, 16 abstained. Result derived from the totals."
@@ -2362,5 +2365,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0411/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0411_EN.html"
+  }
 }

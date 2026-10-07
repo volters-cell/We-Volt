@@ -16,7 +16,10 @@
   },
   "document": "A10-0214/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission, in cooperation with the ECB, to present, by the end of 2026, a joint euro internationalisation strategy to Parliament and the Council",
+    "Underlines the reliance of euro area banks on US dollar wholesale funding; warns that this may expose the euro area in times of stress to a possible instrumental geo-economic use of US dollar swap lines"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 405 in favour, 146 against, 60 abstained. Result derived from the totals."
@@ -2498,5 +2501,9 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0214/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0214_EN.html"
+  }
 }

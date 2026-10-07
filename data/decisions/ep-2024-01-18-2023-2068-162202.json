@@ -2221,5 +2221,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges the Member States to support or at least refrain from opposing the adoption of the draft decision",
+    "Calls on the current and future Presidencies of the Council of the Union to consider the Commission’s proposal as a priority when drawing up their agenda and defining objectives",
+    "Calls on the Member States to tackle the problem of under-reporting and the issues victims are facing in obtaining access to criminal procedures and protection, in a gender-sensitive way"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0377/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0377_EN.html"
+  }
 }

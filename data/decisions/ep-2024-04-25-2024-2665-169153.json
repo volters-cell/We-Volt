@@ -16,7 +16,9 @@
   },
   "document": "B9-0255/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Delegation of the European Union to the Russian Federation to monitor the situation and court cases of political prisoners in Russia as closely as possible, and to provide support where feasible"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 493 in favour, 11 against, 18 abstained. Result derived from the totals."
@@ -2133,5 +2135,9 @@
   "countries": {},
   "topics": [
     "Russia"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0255/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0255_EN.html"
+  }
 }

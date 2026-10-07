@@ -16,7 +16,11 @@
   },
   "document": "B10-0385/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to strengthen coordination with Member States ahead of the replenishment of international health initiatives, working towards a joint replenishment figure and a coordinated, multi-year approach",
+    "Calls on the Commission to consider greater geographical flexibility for global health research cooperation, including by enabling stronger participation of partner countries beyond existing regional mandates, where relevant",
+    "Recalls that any bilateral or regional health agreements should respect partner country ownership and health sovereignty and avoid purely transactional approaches"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 319 in favour, 142 against, 19 abstained. Result derived from the totals."
@@ -1969,5 +1973,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0385/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0385_EN.html"
+  }
 }

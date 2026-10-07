@@ -16,7 +16,11 @@
   },
   "document": "A10-0065/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on the need to strengthen procurement cooperation between EUAN and the European Commission",
+    "Requests that cooperation between Europol and other JHA Agencies is fully transparent and accountability ensured in accordance with EU rules on transparency as well as fundamental rights and data protection standards",
+    "Welcomes the agency's efforts towards an Eco-Management and Audit Scheme (EMAS) certification, which was finally granted in January 2024"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 520 in favour, 126 against, 6 abstained. Result derived from the totals."
@@ -2657,5 +2661,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0065/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2025-0065_EN.html"
+  }
 }

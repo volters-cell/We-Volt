@@ -16,7 +16,9 @@
   },
   "document": "A10-0197/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that decommissioning activities meet long-term legal and technical obligations; considers, therefore, that stable and predictable financial programming is a condition for sound budgetary management"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 625 in favour, 20 against, 22 abstained. Result derived from the totals."
@@ -2717,5 +2719,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0197/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0197_EN.html"
+  }
 }

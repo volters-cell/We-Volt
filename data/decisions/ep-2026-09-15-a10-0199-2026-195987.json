@@ -16,7 +16,9 @@
   },
   "document": "A10-0199/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to establish regional EDMO hubs covering relevant EU candidate, potential candidate and neighbourhood countries, following the model of the existing hub for Moldova"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 420 in favour, 220 against, 26 abstained. Result derived from the totals."
@@ -2715,5 +2717,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0199/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0199_EN.html"
+  }
 }

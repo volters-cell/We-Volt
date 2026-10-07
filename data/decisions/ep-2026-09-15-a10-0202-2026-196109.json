@@ -16,7 +16,9 @@
   },
   "document": "A10-0202/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Takes note of the estimated administrative costs of approximately EUR 1 million per year, and the fact that these are to be covered by redeployment in 2026 and 2027, and by external assigned revenue once available until 2031"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 433 in favour, 97 against, 146 abstained. Result derived from the totals."
@@ -2755,5 +2757,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0202/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0202_EN.html"
+  }
 }

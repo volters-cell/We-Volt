@@ -2473,5 +2473,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to include specific initiatives for EU volunteers to contribute to the post-war rebuilding of Ukraine",
+    "Calls on the Commission and the Member States to introduce a special visa category for ESC participants from non-Schengen countries, as host organisations cannot assist them in acquiring visas",
+    "Calls on the Commission to address grant funding delays and suggests creating a centralised platform where grant holders can upload contract amendments and thus avoid delays in project implementation"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0308/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0308_EN.html"
+  }
 }

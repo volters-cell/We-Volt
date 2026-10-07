@@ -16,7 +16,9 @@
   },
   "document": "B10-0209/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates its commitment to the EU’s decarbonisation objectives and to stable and predictable climate and industrial policies"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 300 in favour, 248 against, 59 abstained. Result derived from the totals."
@@ -2477,5 +2479,9 @@
   "countries": {},
   "topics": [
     "Energy"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0209/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0209_EN.html"
+  }
 }

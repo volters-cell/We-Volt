@@ -16,7 +16,11 @@
   },
   "document": "A10-0220/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports the introduction for online platforms of a ‘youth mode’, disabling targeted advertising and limiting addictive design features for minors",
+    "Regrets the fact that several mechanisms used by online platforms to control access to their services, such as self-declaration, are easily bypassed, and that minors still have widespread access to age-inappropriate content",
+    "Stresses that social media can cause addiction and thus serious mental health harms, particularly for minors, with links to anxiety, depression, low self-esteem and body image issues"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 395 in favour, 136 against, 80 abstained. Result derived from the totals."
@@ -2493,5 +2497,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0220/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0220_EN.html"
+  }
 }

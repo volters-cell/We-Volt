@@ -16,7 +16,11 @@
   },
   "document": "A10-0129/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission report on transfers in a traceable and timely way, to make the impact of the mid-term review clearly identifiable for the budgetary authority, including on payment schedules and payment forecasts",
+    "Notes that the proposal does not require additional human resources, despite the changes in the policy areas concerned",
+    "Notes, however, that extending the eligibility period by one more year increases the risk of delayed payment claims, further delays to the implementation of cohesion policy and a higher stock of outstanding commitments"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 151 in favour, 495 against, 19 abstained. Result derived from the totals."
@@ -2706,5 +2710,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0129/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2025-0129_EN.html"
+  }
 }

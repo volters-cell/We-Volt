@@ -2193,5 +2193,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Regrets that issues are being raised at EU level that go beyond the EU’s competences, as regards the inclusion in the Charter of health and medical care matters that are the exclusive competence of the Member States"
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0207/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0207_EN.html"
+  }
 }

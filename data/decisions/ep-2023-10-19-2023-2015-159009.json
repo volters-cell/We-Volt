@@ -2057,5 +2057,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Believes that public procurement should incentivise more sustainable protein production and consumption",
+    "Considers that increasing the EU’s food self-sufficiency is a key objective that requires a level playing field and strong support for the European agricultural sector",
+    "Stresses the importance of applying sustainability standards to imported products, protecting the competitiveness of European producers and ensuring transparent information for consumers"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0281/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0281_EN.html"
+  }
 }

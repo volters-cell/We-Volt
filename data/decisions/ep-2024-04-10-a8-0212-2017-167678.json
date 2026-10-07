@@ -2545,5 +2545,14 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeans": [
+    "Requests for comparison with Eurodac data shall be limited to searching with biometric or alphanumeric data",
+    "Requests for comparison with Eurodac data shall be limited to comparisons of biometric or alphanumeric data",
+    "Requests for comparison with Eurodac data shall be limited to searching with fingerprint or facial image data"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A8-0212/2017",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-8-2017-0212_EN.html"
+  }
 }

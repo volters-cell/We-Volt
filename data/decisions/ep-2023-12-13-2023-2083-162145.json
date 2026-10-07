@@ -2557,5 +2557,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Notes that the respective procedures involve Parliament and the Council to differing degrees",
+    "Underlines that, although Parliament and the Council are both involved, SLPs do not put the two institutions on an equal footing",
+    "Reiterates its call on the Council to immediately adopt a positive decision on the accession of Romania and Bulgaria to the Schengen area of free movement"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0384/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0384_EN.html"
+  }
 }

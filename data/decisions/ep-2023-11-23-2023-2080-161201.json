@@ -2093,5 +2093,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Welcomes the reports from the Commission on Monitoring the application of European Union law 2020, 2021 and 2022 and recognises their importance to ensure that EU law is implemented correctly and accordingly to the EU Treaties",
+    "Stresses the importance of the CJEU as the sole responsible for ruling on the validity of EU law and ensuring its correct interpretation and application",
+    "Stresses that, pursuant to Article 2 of the Treaty on European Union (TEU), rule of law is one of our founding values and shall be respected across Member States"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0328/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0328_EN.html"
+  }
 }

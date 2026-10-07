@@ -16,7 +16,11 @@
   },
   "document": "B9-0225/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to apply the precautionary principle, to ensure consumer safety and information and to take into account the One Health approach",
+    "Regrets that the proposed threshold of 50 % does not take into account technical and scientific progress",
+    "Considers that the Commission delegated regulation is not compatible with the aim and content of Regulation (EU) 2015/2283 and that it exceeds the delegated powers conferred on the Commission in Article 31 of that Regulation"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 388 in favour, 188 against, 47 abstained. Result derived from the totals."
@@ -2544,5 +2548,9 @@
     }
   ],
   "countries": {},
-  "topics": []
+  "topics": [],
+  "whatItMeansFrom": {
+    "reference": "B9-0225/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0225_EN.html"
+  }
 }

@@ -2125,5 +2125,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Council to unblock and start its work on the European cross-border mechanism file",
+    "Insists on the need to implement a rural proofing mechanism to assess the impact of EU legislative initiatives on rural areas",
+    "Calls on the remaining Member States to join the EPPO in order to enhance the fight against corruption and the misuse of EU funds"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0049/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0049_EN.html"
+  }
 }

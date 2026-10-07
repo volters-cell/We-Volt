@@ -16,7 +16,11 @@
   },
   "document": "B10-0104/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Nigerian authorities, pending Sharif-Aminuʼs release, to ensure his appropriate treatment in custody and allow regular access to his family and lawyer",
+    "Calls on the Nigerian authorities to promptly and unconditionally release Yahaya Sharif-Aminu and withdraw the appeal against the Court of Appeal's decision overturning his conviction",
+    "Calls on the government of Nigeria to declare an immediate moratorium on all executions nationwide and, pending the abolition of the death penalty, to commute all death sentences into life sentences"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 246 in favour, 259 against, 20 abstained. Result derived from the totals."
@@ -2146,5 +2150,9 @@
   "topics": [
     "Nigeria",
     "Human rights"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0104/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0104_EN.html"
+  }
 }

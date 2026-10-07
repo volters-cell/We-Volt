@@ -16,7 +16,11 @@
   },
   "document": "B10-0220/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Member States to facilitate visas, asylum and emergency grants for those who need to flee Iran",
+    "Demands Iranian authorities to grant Ehsani and Hassani access to their families, independently lawyers of their choice, and to adequate medical assistance",
+    "Urges Member States to launch criminal investigations into Iranian officials responsible for grave human rights violations, particularly under universal jurisdiction"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 180 in favour, 404 against, 13 abstained. Result derived from the totals."
@@ -2433,5 +2437,9 @@
   "countries": {},
   "topics": [
     "Iran"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0220/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0220_EN.html"
+  }
 }

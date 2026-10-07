@@ -16,7 +16,11 @@
   },
   "document": "A10-0221/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to include data on cardiovascular health, its determinants and public attitudes in Eurobarometer surveys and statistics",
+    "Calls on the Commission and the Member States to support research, innovation, production and marketing of nutritious foods, in order to improve dietary quality and reduce the burden of CVD",
+    "Insists that publicly funded research must deliver clear public benefit, including open access to results, affordable resulting innovations and equitable access for patients across all Member States"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 545 in favour, 47 against, 75 abstained. Result derived from the totals."
@@ -2714,5 +2718,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0221/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0221_EN.html"
+  }
 }

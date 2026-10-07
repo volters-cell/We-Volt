@@ -2269,5 +2269,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Member States to adopt targeted measures to formalise informal, substandard jobs in environment-related sectors, such as waste management and recycling, to transform them into decent jobs",
+    "Stresses that VET can become an important driver in the transition to a green economy, and the importance of increasing its attractiveness",
+    "Stresses the importance of leveraging face-to-face classroom sessions and short training courses or modules without underestimating the potential of online learning"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0342/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0342_EN.html"
+  }
 }

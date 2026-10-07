@@ -2448,5 +2448,12 @@
   "countries": {},
   "topics": [
     "Economy"
-  ]
+  ],
+  "whatItMeans": [
+    "Notes that according to the Court the internal control weakness affecting recruitment procedures reported in 2021 have been corrected as the Authority modified its procedures accordingly"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0111/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0111_EN.html"
+  }
 }

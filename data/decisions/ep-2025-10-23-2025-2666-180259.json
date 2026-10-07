@@ -16,7 +16,11 @@
   },
   "document": "B10-0445/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Reiterates its call for loss and damage to be a standing agenda item at COP meetings",
+    "Stresses the importance of granular and transparent reporting to assess progress on the NDCs",
+    "Stresses the need to support and protect environmental defenders and to hold accountable those who threaten them"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 156 in favour, 404 against, 10 abstained. Result derived from the totals."
@@ -2330,5 +2334,9 @@
   "topics": [
     "Brazil",
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0445/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0445_EN.html"
+  }
 }

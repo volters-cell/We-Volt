@@ -16,7 +16,11 @@
   },
   "document": "A10-0212/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission, the EEAS, in close coordination with NATO and the Member States, to develop a common understanding of hybrid threats and to establish a coherent response mechanism for the EU and NATO",
+    "Welcomes the Commission’s and the High Representative’s announcement of a new global EU security strategy and calls for it to comprehensively address the full spectrum of hybrid threats",
+    "Regrets that the recent shift in US policy has weakened the common front of democracies at a time of intensifying hybrid threats; stresses that transatlantic unity remains essential to fighting them"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 470 in favour, 129 against, 62 abstained. Result derived from the totals."
@@ -2693,5 +2697,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0212/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0212_EN.html"
+  }
 }

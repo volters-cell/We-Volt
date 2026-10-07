@@ -16,7 +16,10 @@
   },
   "document": "A9-0171/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Welcomes the fact that the co-ordinated package of personalised services was drawn up by Denmark in consultation with targeted beneficiaries, their representatives and social partners",
+    "Stresses that Denmark has confirmed that the measures supported by the EGF will not receive any financial contributions from other Union financial instruments"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 590 in favour, 24 against, 12 abstained. Result derived from the totals."
@@ -2553,5 +2556,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0171/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0171_EN.html"
+  }
 }

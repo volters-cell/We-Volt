@@ -2217,5 +2217,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges the EU to extend such protections to HRDs in EU Member States",
+    "Calls on all Member States to adopt national LGBTIQ+ action plans and strategies until 2025",
+    "Calls on the Member States to implement the Directive on equal treatment in employment and occupation"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0030/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0030_EN.html"
+  }
 }

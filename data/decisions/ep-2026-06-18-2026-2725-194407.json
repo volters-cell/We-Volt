@@ -16,7 +16,11 @@
   },
   "document": "B10-0276/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Europol to strengthen its work on the recruitment of minors into organised crime, including by examining the role of digital platforms, gaming environments and cross-border gang structures",
+    "Urges the Member States to prioritise the identification, prosecution and severe punishment of adult recruiters, handlers, family members, gang leaders and intermediaries who use minors as criminal tools",
+    "Stresses that minors recruited into organised crime may be victims of exploitation, but that this status must not automatically exclude criminal responsibility where serious, violent or repeated offences have been committed"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 167 in favour, 363 against, 36 abstained. Result derived from the totals."
@@ -2309,5 +2313,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0276/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0276_EN.html"
+  }
 }

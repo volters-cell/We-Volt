@@ -2293,5 +2293,12 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Urges the Commission, again, together with the Member States, to ensure the correct implementation of EU legislation in the environmental field"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0333/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0333_EN.html"
+  }
 }

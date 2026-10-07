@@ -2573,5 +2573,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to heed Parliament’s various calls in its resolution of 16 January 2019 to improve the EU’s authorisation procedure for pesticides",
+    "Calls on the Member States to identify and remove policy barriers to optimal NCD care, improving adherence to clinical guidelines and reducing the risk of complications",
+    "Calls on the Commission and the Member States to contribute to the implementation of the 2019 WHO resolution on improving the transparency of markets for medicines, vaccines, and other health products"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0366/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0366_EN.html"
+  }
 }

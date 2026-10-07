@@ -16,7 +16,11 @@
   },
   "document": "A10-0168/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Urges the Member States to build a sustainable cancer workforce to save lives, reduce the burden of cancer in the EU, and achieve the Europe’s Beating Cancer Plan objectives",
+    "Calls on the Commission and the Member States to take measures to minimise ‘brain waste’ caused by health professionals working in a low- or medium-skilled job positions, for which a degree is not required",
+    "Supports making the protection of staff mental health a key performance indicator to build on the accountability of healthcare managers to promote and protect staff mental health and well-being"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 514 in favour, 61 against, 33 abstained. Result derived from the totals."
@@ -2481,5 +2485,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0168/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0168_EN.html"
+  }
 }

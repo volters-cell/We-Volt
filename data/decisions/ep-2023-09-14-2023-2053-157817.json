@@ -2173,5 +2173,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Commission to create a ‘Printed in Europe’ label",
+    "Urges the Commission to include the interoperability of e-book formats and devices within the scope of the Digital Markets Act",
+    "Calls on all Member States to recognise books as essential goods and take measures at national level to further promote reading from an early age"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0257/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0257_EN.html"
+  }
 }

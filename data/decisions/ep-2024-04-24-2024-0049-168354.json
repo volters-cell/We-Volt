@@ -16,7 +16,10 @@
   },
   "document": "A9-0166/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that Germany has confirmed that the measures supported by the EGF will not receive any financial contributions from other Union financial instruments",
+    "Notes that the application relates to 1 518 workers made redundant in the company Vallourec Deutschland GmbH (VAD); notes further that 835 workers will be targeted beneficiaries in total"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 602 in favour, 24 against, 3 abstained. Result derived from the totals."
@@ -2565,5 +2568,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0166/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0166_EN.html"
+  }
 }

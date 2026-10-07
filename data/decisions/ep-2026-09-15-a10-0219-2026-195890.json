@@ -16,7 +16,11 @@
   },
   "document": "A10-0219/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to develop a monitoring and evaluation system for the post-2027 EUYS",
+    "Calls on the Member States to support marginalised young people in accessing formal education",
+    "Calls on the Member States to ensure that national youth councils are equipped with adequate resources"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 477 in favour, 124 against, 66 abstained. Result derived from the totals."
@@ -2722,5 +2726,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0219/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0219_EN.html"
+  }
 }

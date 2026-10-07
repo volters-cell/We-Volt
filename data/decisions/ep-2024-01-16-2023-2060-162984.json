@@ -2548,5 +2548,13 @@
   "countries": {},
   "topics": [
     "Transport"
-  ]
+  ],
+  "whatItMeans": [
+    "Recalls that the altitude conditions specific to air transport impose particular technical constraints on batteries, compared to other modes of transport",
+    "Notes that smaller electric aircraft can operate from existing shorter and simpler runways, which could reduce the need for large and expensive infrastructure in the future"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0438/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0438_EN.html"
+  }
 }

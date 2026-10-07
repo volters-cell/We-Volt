@@ -16,7 +16,11 @@
   },
   "document": "B10-0322/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on Slovenia and the other Member States to strive to strengthen historical memory, mutual understanding and reconciliation based on truth and respect for all victims of totalitarian regimes",
+    "Underlines that all totalitarian regimes should be condemned and that their symbols should not be promoted",
+    "Underlines the importance of including historical facts in educational programmes and history textbooks to ensure that young people understand the importance of democracy and human rights"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 278 in favour, 352 against, 21 abstained. Result derived from the totals."
@@ -2650,5 +2654,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0322/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0322_EN.html"
+  }
 }

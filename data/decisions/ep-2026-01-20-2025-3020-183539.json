@@ -16,7 +16,10 @@
   },
   "document": "B10-0057/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that actions by grassroots associations contribute to youth protection, social cohesion and democratic vitality and that they are often poorly recognised, supported or protected",
+    "Stresses that the fight against drug trafficking and organised crime is a major challenge for the European Union as a whole, in terms of both security and public health, social justice and respect for the rule of law"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 202 in favour, 442 against, 4 abstained. Result derived from the totals."
@@ -2637,5 +2640,9 @@
   "countries": {},
   "topics": [
     "Justice and policing"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0057/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0057_EN.html"
+  }
 }

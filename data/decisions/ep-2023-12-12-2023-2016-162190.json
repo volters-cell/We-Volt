@@ -2501,5 +2501,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Recalls the prerogative of the European Parliament to choose its own President",
+    "Believes that establishing a single common European voting day would create a more coherent pan-European election",
+    "Underlines that it will be the prerogative of the President of the European Parliament to communicate the name of Parliament’s common candidate for the position of President of the European Commission to the European Council"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0332/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0332_EN.html"
+  }
 }

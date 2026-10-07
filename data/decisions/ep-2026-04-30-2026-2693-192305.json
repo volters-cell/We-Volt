@@ -16,7 +16,11 @@
   },
   "document": "B10-0235/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to step up its enforcement of the Digital Services Act in order to protect minors and safeguard mental well-being",
+    "Calls on the Commission and the Member States to strengthen preventive measures, including digital literacy, education and awareness-raising initiatives targeting children, parents and educators",
+    "Calls on the Commission to ensure that victims of cyberbullying, in particular minors, have access to effective remedies, including rapid content removal, access to justice and appropriate psychological support"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 378 in favour, 161 against, 12 abstained. Result derived from the totals."
@@ -2249,5 +2253,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0235/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0235_EN.html"
+  }
 }

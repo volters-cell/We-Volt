@@ -2241,5 +2241,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Calls on the Member States to consolidate policies for attracting teachers to regions and localities facing ‘talent development traps’, ensuring attractive salaries and decent living conditions",
+    "Urges all Member States to make childcare more affordable and accessible in order to help ensure the fair and unhindered participation of caregivers, who are predominately female, in the labour market",
+    "Calls on the Commission and the Member States to promote the dissemination of social innovation hubs to foster the upgrade of infrastructure and improve the conditions of accessibility to innovative services for citizens"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0325/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0325_EN.html"
+  }
 }

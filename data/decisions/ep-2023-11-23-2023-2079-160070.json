@@ -2201,5 +2201,14 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeans": [
+    "Recalls the utmost importance of parliamentary scrutiny in the Union’s legislative process and reiterates its call for Parliament’s right to initiate policy proposals",
+    "Believes that European legislation should be fit for purpose, proportionate, clear, transparent, future-proof and comprehensive in order to effectively benefit citizens and stakeholders",
+    "Notes also that, in 2020, of a total number of 39 chambers of national parliaments, only eight issued reasoned opinions, that, in 2021, that number fell to seven and that, in 2022, it increased to 13"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0310/2023",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2023-0310_EN.html"
+  }
 }

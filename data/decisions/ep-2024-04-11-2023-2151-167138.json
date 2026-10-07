@@ -2488,5 +2488,14 @@
   "countries": {},
   "topics": [
     "Food and farming"
-  ]
+  ],
+  "whatItMeans": [
+    "Welcomes EFSA's intention to strengthen joint data management with Member States and other agencies in order to improve data quality and interoperability (in line with the One Health approach)",
+    "Welcomes the Authority's intention to strengthen joint data management with Member States and other agencies in order to improve data quality and interoperability (in line with the One Health approach)",
+    "Welcomes the fact that EFSA, in cooperation with ECHA, has taken steps to promote the 'one substance - one assessment' principle to ensure greater consistency in the hazard and risk assessment of active substances"
+  ],
+  "whatItMeansFrom": {
+    "reference": "A9-0129/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-9-2024-0129_EN.html"
+  }
 }

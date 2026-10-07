@@ -16,7 +16,11 @@
   },
   "document": "B9-0231/2024",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to reconsider the ‘strategic partnership’ with Azerbaijan in the field of energy in light of the country’s alarming human rights record",
+    "Stresses that the release of all political prisoners is an indispensable condition for signing any future partnership agreement with the EU",
+    "Reiterates its call for EU sanctions under the EU Global Human Rights Sanctions Regime to be imposed on Azerbaijani officials who have committed serious human rights violations"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 474 in favour, 4 against, 51 abstained. Result derived from the totals."
@@ -2161,5 +2165,9 @@
   "countries": {},
   "topics": [
     "Armenia and Azerbaijan"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B9-0231/2024",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-9-2024-0231_EN.html"
+  }
 }

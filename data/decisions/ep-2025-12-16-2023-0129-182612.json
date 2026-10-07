@@ -16,7 +16,10 @@
   },
   "document": "A10-0246/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes that the act is adopted in accordance with the Council position",
+    "Takes note of the statement by the Commission annexed to this resolution, which will be published in the C series of the Official Journal of the European Union"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 128 in favour, 454 against, 57 abstained. Result derived from the totals."
@@ -2602,5 +2605,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "A10-0246/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2025-0246_EN.html"
+  }
 }

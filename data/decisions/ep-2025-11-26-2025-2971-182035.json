@@ -16,7 +16,9 @@
   },
   "document": "B10-0500/2025",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises that the recent findings concerning SHEIN demonstrate systemic failures rather than isolated incidents and cannot be remedied merely through product withdrawal or public apologies"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 170 in favour, 399 against, 71 abstained. Result derived from the totals."
@@ -2605,5 +2607,9 @@
   "countries": {},
   "topics": [
     "Defence and security"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0500/2025",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2025-0500_EN.html"
+  }
 }

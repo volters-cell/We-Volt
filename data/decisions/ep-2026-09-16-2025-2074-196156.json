@@ -16,7 +16,11 @@
   },
   "document": "A10-0200/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission and the Member States to promote respectful maternity care and to establish complaint mechanisms, data collection and training for healthcare professionals, regarding obstetric violence",
+    "Regrets the fact that, despite a prevalence of adverse menopause symptoms among women, the menopause is still not routinely integrated into primary healthcare and remains shrouded in social stigma",
+    "Deplores the fact that since the inception of the EU’s Community Research and Development Information Service almost 40 years ago, only 10 of the 145 983 EU-funded projects have focused specifically on endometriosis16"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 390 in favour, 218 against, 29 abstained. Result derived from the totals."
@@ -2597,5 +2601,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0200/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0200_EN.html"
+  }
 }
