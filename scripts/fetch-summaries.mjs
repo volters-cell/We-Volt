@@ -4,6 +4,7 @@
  *
  *   node scripts/fetch-summaries.mjs --minutes 80
  *   node scripts/fetch-summaries.mjs --again      re-read records already done
+ *   node scripts/fetch-summaries.mjs --since 2026-08-01   only votes from then on
  *
  * HowTheyVote writes three bullets under each title and asks its readers what
  * they think of them, because a machine wrote them. This site cannot do that:
@@ -65,8 +66,17 @@ function documentOf(record) {
   return null;
 }
 
+/* Newest first, so a run on the clock reaches the votes just imported before
+   it spends its time on old ones. And --since, for the scheduled run: the
+   Parliament publishes the texts a few days to a few weeks after a sitting,
+   so a weekly pass over the last months picks each one up once it exists,
+   without reopening the 1,600 older texts that have nothing to quote. */
+const SINCE = arg('since');
 const files = (await readdir(path.join(ROOT, DIR)))
-  .filter((n) => n.endsWith('.json') && n !== 'index.json' && !/^term-\d+\.json$/.test(n));
+  .filter((n) => n.endsWith('.json') && n !== 'index.json' && !/^term-\d+\.json$/.test(n))
+  .filter((n) => !SINCE || (n.match(/^ep-(\d{4}-\d{2}-\d{2})/) || [])[1] >= SINCE)
+  .sort()
+  .reverse();
 
 if (TIDY) {
   let trimmed = 0;

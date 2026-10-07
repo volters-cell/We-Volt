@@ -29,9 +29,11 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { getAll, isRollCall, ballotsOf, tallyOf } from './lib/portal.mjs';
 import { isFinalVote } from './fetch-plenary.mjs';
+import { currentTerm } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const TERM_START = '2024-07-16';
+// The sitting Parliament's first day, from data/reference/terms.json.
+const TERM_START = currentTerm().start;
 const REPORT = 'data/reference/coverage.json';
 
 function parseArgs(argv) {

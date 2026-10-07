@@ -246,11 +246,14 @@ That reads the Parliament's record of the sitting, maps every voter's id to a na
 country through the member directory, and writes one record per final vote with each
 MEP's own vote in it. The summary field is left empty: summaries are written by hand.
 
-**It can run itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
+**It runs itself.** `.github/workflows/plenary-sync.yml` imports during the sitting
 and again each night — the second pass catching whether each text carried, which the
 Parliament publishes a day later than the votes themselves — then validates and commits
-only if something changed. Set it up, and verify the first run, following
-[docs/AUTOMATION.md](docs/AUTOMATION.md).
+only if something changed. Monthly and weekly jobs read the members' portraits and
+parties, audit the archive against the Parliament's and import anything missing, put
+English titles on new votes and quote what each one asks for; the next Parliament, in
+2029, is picked up from the Parliament's own data. The full schedule, and the one thing
+an election leaves for a person to update, are in [docs/AUTOMATION.md](docs/AUTOMATION.md).
 
 The full field reference is in [docs/DATA-MODEL.md](docs/DATA-MODEL.md).
 

@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "source": "European Parliament open data portal: the parliamentary_term of each plenary meeting (/meetings).",
+    "note": "The date each Parliament first sat. Every part of the site that needs to know which Parliament a vote belongs to reads it from here: the index and its folds, the address of the minutes a record cites, the audit's window, the seat counts. scripts/fetch-sessions.mjs adds the next Parliament by itself, the first time the portal lists a plenary meeting of it."
+  },
+  "terms": [
+    { "term": 10, "start": "2024-07-16" },
+    { "term": 9, "start": "2019-07-02" },
+    { "term": 8, "start": "2014-07-01" }
+  ]
+}

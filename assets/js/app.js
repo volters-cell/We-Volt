@@ -31,6 +31,7 @@
   const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cache = {};
   let states = [];
+  let seatsTerm = 10;      // the Parliament member-states.json's seats describe
   let statesByCode = {};
   /* The votes of each plenary, so a fold that was rendered empty can be filled
      when it opens without rebuilding the feed around it. */
@@ -622,18 +623,26 @@
   /* Votes belong to sittings, and sittings belong to plenary sessions. Grouping
      them that way is how the Parliament's own week is shaped, and it keeps the
      landing page to a handful of lines instead of a wall of votes. */
-  /* Which Parliament a date belongs to. The same boundaries as
-     scripts/lib/ep-sources.mjs, which uses them to build the address of the
-     minutes a record cites; a vote and its citation must agree about which
-     term they are in. */
-  const TERMS = [
-    { term: 10, from: '2024-07-16', label: 'This Parliament', span: '2024–2029' },
-    { term: 9, from: '2019-07-02', label: 'Previous Parliament', span: '2019–2024' },
-    { term: 8, from: '0000-00-00', label: 'Eighth Parliament', span: '2014–2019' }
-  ];
+  /* Which Parliament a date belongs to. The index carries the terms it holds,
+     each with the day it first sat (from data/reference/terms.json, which the
+     calendar refresh extends after an election), so the page needs no table of
+     its own and cannot disagree with the minutes a record cites. */
+  let termRows = null;
+  function terms() {
+    if (!termRows || termRows.source !== index) {
+      const rows = ((index && index.terms) || []).map(function (row) {
+        return { term: row.term, from: row.start || row.from, label: row.label, span: row.span };
+      }).sort(function (a, b) { return a.from < b.from ? 1 : -1; });
+      rows.source = index;
+      termRows = rows;
+    }
+    return termRows;
+  }
 
   function termFor(date) {
-    return TERMS.find(function (term) { return date >= term.from; }) || TERMS[TERMS.length - 1];
+    const rows = terms();
+    return rows.find(function (term) { return date >= term.from; }) || rows[rows.length - 1] ||
+      { term: 0, from: '', label: '', span: '' };
   }
 
   function sessionFor(date) {
@@ -1293,7 +1302,7 @@
     const today = new Date();
     const iso = function (date) { return date.toISOString().slice(0, 10); };
     if (which === 'term') {
-      const term = TERMS && TERMS[0];
+      const term = terms()[0];
       return { from: (term && term.from) || '2024-07-16', until: iso(today) };
     }
     if (which === 'year') {
@@ -1670,12 +1679,12 @@
      not one typed from memory. Until then, silence. */
   function chamberSeats(date) {
     const current = states.reduce(function (sum, item) { return sum + item.seats; }, 0);
-    if (!date) return current;
-    const latest = (index.terms || []).reduce(function (top, row) {
-      return !top || row.term > top.term ? row : top;
-    }, null);
-    const sitting = latest ? latest.term : 10;
-    return termFor(date).term === sitting ? current : null;
+    // The Parliament member-states.json describes. After an election the file
+    // still describes the last one until it is updated, so the new term's
+    // votes print how many voted and no House size.
+    const described = seatsTerm || 10;
+    if (!date) return terms()[0] && terms()[0].term !== described ? null : current;
+    return termFor(date).term === described ? current : null;
   }
 
   function seatsOf(code) {
@@ -3142,6 +3151,7 @@
       window.addEventListener('resize', fitPlaceholder);
 
       states = reference.states;
+      seatsTerm = (reference.metadata && reference.metadata.termNumber) || 10;
       statesByCode = {};
       states.forEach(function (item) { statesByCode[item.code] = item; });
       /* And the states that have left. The ninth term opened with the United
@@ -3174,13 +3184,13 @@
          when this site held one Parliament and stopped being true the day it
          gained another — 2,637 votes of the previous term sat behind a line
          claiming the record began in 2024. */
-      const seats = states.reduce(function (sum, item) { return sum + item.seats; }, 0);
-      const terms = (index.terms && index.terms.length ? index.terms : null);
-      const began = terms
-        ? terms.map(function (row) { return row.from; }).filter(Boolean).sort()[0]
+      const seats = chamberSeats(null);
+      const held = (index.terms && index.terms.length ? index.terms : null);
+      const began = held
+        ? held.map(function (row) { return row.from; }).filter(Boolean).sort()[0]
         : (index.decisions[index.decisions.length - 1] || {}).date;
       document.getElementById('intro-stats').textContent =
-        seats + ' seats · ' +
+        (seats ? seats + ' seats · ' : '') +
         (began ? 'since ' + Data.formatDate(began) : '');
 
       index.decisions.forEach(function (item) {

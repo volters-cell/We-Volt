@@ -15,14 +15,11 @@
  * which fails on four sittings out of five.
  */
 
-/* The parliamentary term, which is part of every minutes address. The tenth
-   began on 16 July 2024, and the ninth ran from 2019. A record from before
-   this project's window would still be numbered correctly. */
-export function termOf(date) {
-  if (date >= '2024-07-16') return 10;
-  if (date >= '2019-07-02') return 9;
-  return 8;
-}
+/* The parliamentary term, which is part of every minutes address: read from
+   data/reference/terms.json (scripts/lib/terms.mjs), so a vote of the next
+   Parliament is addressed under its own term from its first sitting. */
+export { termOf } from './terms.mjs';
+import { termOf } from './terms.mjs';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December'];

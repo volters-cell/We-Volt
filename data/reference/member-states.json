@@ -1,6 +1,8 @@
 {
   "metadata": {
     "term": "2024-2029",
+    "termNumber": 10,
+    "termNumberNote": "The Parliament these seats describe. Seats are printed only for votes of this term; after an election the counts stay silent until this file is updated to the new Council decision on the composition of the Parliament.",
     "seatsTotal": 720,
     "seatsSource": "European Council Decision (EU) 2023/2061 on the composition of the European Parliament",
     "populationSource": "Eurostat, population on 1 January 2024 (rounded to 0.1 million)",

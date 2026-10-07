@@ -67,29 +67,67 @@ as being about an amendment. `--all` overrides it. It is `isFinalVote` in
 
 ## Running it on a schedule
 
-`.github/workflows/plenary-sync.yml` follows the publishing rhythm rather than a
-generic nightly job:
+Everything the site needs runs on GitHub Actions by itself. Times are UTC; GitHub may
+start a scheduled run some minutes late.
 
-| When | Why |
-| --- | --- |
-| Mon–Thu 12:40 UTC | After the midday votes, while the sitting is running |
-| Mon–Thu 18:40 UTC | After the evening votes |
-| Every night 21:30 UTC | Re-imports the past fortnight, replacing derived results with the Parliament's own and picking up anything published late |
-| Mondays 04:00 UTC | Refreshes the plenary calendar and the member directory |
+| Workflow | When | What it does |
+| --- | --- | --- |
+| `plenary-sync.yml` | Every two hours, 08:05–20:05, on a sitting day and the day after | Imports the sitting's votes as they are published |
+| `plenary-sync.yml` | Every night, 21:30 | Re-imports the past fortnight: the Parliament's own result replaces the one derived from the totals, and anything published late is picked up |
+| `plenary-sync.yml` | Mondays, 04:00 | Refreshes the plenary calendar and the member directory, and adds a new Parliament after an election (see below) |
+| `profiles-sync.yml` | The 2nd of each month, 04:20 | Reads members' portraits and national parties |
+| `faces-mirror.yml` | The 3rd, 04:40 | Mirrors the portraits onto the site |
+| `audit-sources.yml` | The 5th, 05:00 | Compares every sitting with what is on file, imports any vote found missing, audits again |
+| `retitle.yml` | Saturdays, 03:47 | Puts the English title on votes of the last four months that came in another language |
+| `summaries.yml` | Sundays, 03:17 | Quotes what each vote of the last four months asks for, once its text is published |
+| `keep-schedules-alive.yml` | The 15th, 06:11 | Switches every schedule above back on, in case GitHub turned it off (see below) |
 
-Each run refreshes the member directory, imports whatever is new, rebuilds the index,
-runs the tests and the validator, and commits only if something changed. The Pages
-workflow then publishes.
+Each job that changes something commits it through `scripts/push-changes.sh`, which
+retries when another job pushed first — replaying its commit on top and rebuilding the
+index from both — and then publishes the site. The monthly jobs are on different days so
+they do not push in the same minute; on 1 October 2026, when they all ran on the 1st, the
+profiles job lost a whole month's reading that way.
+
+Each run validates the data and runs the tests before it commits, so a bad import stops
+rather than reaching the site. A failed scheduled run is reported by GitHub by e-mail to
+whoever last changed that workflow's schedule.
 
 Two settings have to be right for it to work:
 
 1. **Settings → Actions → General → Workflow permissions**: *Read and write*.
    Without this the run imports correctly and then cannot commit.
-2. **Settings → Pages**: publishing from `main` via GitHub Actions, so a commit from
-   the sync triggers a deploy.
+2. **Settings → Pages**: publishing via GitHub Actions, from the repository's default
+   branch — schedules only ever run there.
 
-You can also run it from the Actions tab by hand (*Run workflow*), optionally giving a
-start date — that is how to backfill a term.
+You can also run any of them from the Actions tab by hand (*Run workflow*).
+
+### GitHub's 60-day rule
+
+GitHub switches off the scheduled workflows of a public repository after 60 days in which
+nothing was committed. The site commits most weeks, and the audit commits its report every
+month, but the summer recess is long and a schedule switched off then would leave the site
+quietly stale. `keep-schedules-alive.yml` asks GitHub once a month to enable each of them
+again: for one that is on this changes nothing, for one that was switched off it is back
+within the month.
+
+### After an election
+
+The next Parliament is elected in 2029. Which Parliament a vote belongs to is read from
+one file, `data/reference/terms.json`, and the Monday calendar refresh adds the new term
+to it the first time the Parliament's data lists a sitting of it. From then on, with
+nobody editing anything:
+
+- its votes are imported, and the member directory follows the members now sitting;
+- they open a fold of their own labelled *This Parliament*; the 2024–2029 one becomes
+  *Previous Parliament*;
+- the minutes each record cites are addressed under the new term;
+- the audit covers the new term.
+
+One thing needs a person: the number of seats. `data/reference/member-states.json` holds
+the seats of the Parliament it names in `termNumber`, cited to the Council decision that
+set them. Until it is updated to the new decision, the site prints how many members voted
+on the new Parliament's votes and no House size, rather than a number that may no longer
+be true.
 
 ## Checking that nothing is missing
 
@@ -118,6 +156,9 @@ Two differences are counted rather than flagged, because they are not errors:
 
 `.github/workflows/audit-sources.yml` runs it monthly and writes
 `data/reference/coverage.json`, which is what the About page's completeness table quotes.
+Any vote it finds missing — usually one that shared a text with another decision and was
+folded into it — it imports as a record of its own (`fetch-plenary.mjs --ids`), then
+audits again; it fails only if something is still missing after that.
 
 ## Verify a real run before trusting the schedule
 

@@ -17,6 +17,11 @@
 name: Quote what each vote asks for
 
 on:
+  # Weekly. The Parliament publishes a text days to weeks after the vote, so a
+  # scheduled run reads the votes of the last four months, newest first, and
+  # picks each text up once it exists. By hand, it reads the whole archive.
+  schedule:
+    - cron: "17 3 * * 0"
   workflow_dispatch:
     inputs:
       minutes:
@@ -27,6 +32,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: summaries
+  cancel-in-progress: false
+
 jobs:
   quote:
     outputs:
@@ -36,8 +45,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
 
@@ -58,37 +67,30 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Read what the votes ask for
-        id: quote
         run: |
           set -euo pipefail
-          git config user.name "eu-tracker-bot"
-          git config user.email "actions@github.com"
-
-          node scripts/fetch-summaries.mjs --minutes "${{ inputs.minutes }}" \
+          since=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            since="--since $(date -u -d '120 days ago' +%F)"
+          fi
+          node scripts/fetch-summaries.mjs --minutes "${{ inputs.minutes || '80' }}" $since \
             ${{ inputs.again && '--again' || '' }}
 
           node scripts/build-index.mjs
           node tests/import.test.mjs
           node scripts/validate-data.mjs
 
-          if [ -z "$(git status --porcelain data/)" ]; then
-            echo "Nothing to quote."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-          git add data/
-          git commit -m "Quote what each vote asks for, from the text that was voted
+      - name: Commit what was quoted
+        id: quote
+        env:
+          REBUILD: node scripts/build-index.mjs && node scripts/validate-data.mjs
+        run: |
+          scripts/push-changes.sh "Quote what each vote asks for, from the text that was voted
 
           Three operative paragraphs lifted whole out of the Parliament's own
           document by .github/workflows/summaries.yml. Nothing is written,
           paraphrased or condensed: a vote whose text asks for nothing gets
-          nothing.
-
-          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-          Claude-Session: https://claude.ai/code/session_01Q2GR9PWbYZc6kZnv6W9Gx7"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          nothing." data/
 
   publish:
     needs: quote

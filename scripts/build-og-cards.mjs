@@ -28,6 +28,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import path from 'node:path';
+import { termOf } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const OUT = path.join(ROOT, 'assets/og');
@@ -45,8 +46,11 @@ catch { console.error('needs playwright: npm i --no-save playwright'); process.e
 const index = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions/index.json'), 'utf8'));
 const geo = readFileSync(path.join(ROOT, 'data/eu-countries.geo.json'), 'utf8');
 const projection = readFileSync(path.join(ROOT, 'assets/js/projection.js'), 'utf8');
-const states = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8')).states;
+const statesFile = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8'));
+const states = statesFile.states;
 const SEATS = states.reduce((sum, s) => sum + s.seats, 0);
+// The Parliament those seats describe (member-states.json); other terms print no House size.
+const SEATS_TERM = (statesFile.metadata && statesFile.metadata.termNumber) || 10;
 const byCode = Object.fromEntries(states.map(s => [s.code, s]));
 
 /* A ballot stores [memberId, position], and position is an index into this —
@@ -248,7 +252,7 @@ for (let i = 0; i < wanted.length; i++) {
     result: (record.outcome && record.outcome.result) || 'recorded',
     // Null for a term whose seat count this reference does not describe; the
     // card drops the line rather than printing a denominator that is not its.
-    totals, seats: record.date >= '2024-07-16' ? SEATS : null,
+    totals, seats: termOf(record.date) === SEATS_TERM ? SEATS : null,
     positions: countryPositions(record)
   });
   const file = path.join(OUT, entry.sourceId + '.png');

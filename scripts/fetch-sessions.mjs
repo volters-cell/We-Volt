@@ -23,14 +23,13 @@
    SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { PORTAL, getAll, english, lastSegment, meetingDate } from './lib/portal.mjs';
+import { allTerms, currentTerm, newTerms, TERMS_FILE } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const OUT = 'data/reference/plenary-calendar.json';
-const TERM = 10;
-const TERM_START = '2024-07-16';
 
 function parseArgs(argv) {
   const args = {};
@@ -80,7 +79,11 @@ export function foldSessions(days) {
   return sessions;
 }
 
-export async function fetchSittings(term, from, until) {
+/* Every plenary sitting day between two dates, whatever term it belongs to,
+   each with the term the portal files it under. Across an election the
+   calendar holds the last sessions of one Parliament and the first of the
+   next, and the reader's "next plenary" is the next one either way. */
+export async function fetchSittings(from, until) {
   const days = [];
   for (let year = Number(from.slice(0, 4)); year <= Number(until.slice(0, 4)); year += 1) {
     const meetings = await getAll('/meetings', { year: year }, 400);
@@ -88,8 +91,12 @@ export async function fetchSittings(term, from, until) {
       const date = meetingDate(meeting);
       if (!date || date < from || date > until) return;
       if (meeting.had_activity_type && meeting.had_activity_type.indexOf('PLENARY') === -1) return;
-      if (meeting.parliamentary_term && termNumber(meeting.parliamentary_term) !== term) return;
-      days.push({ date: date, location: locationOf(meeting), label: english(meeting.activity_label) });
+      days.push({
+        date: date,
+        term: termNumber(meeting.parliamentary_term),
+        location: locationOf(meeting),
+        label: english(meeting.activity_label)
+      });
     });
   }
   return days;
@@ -97,14 +104,29 @@ export async function fetchSittings(term, from, until) {
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
-  const term = Number(args.term || TERM);
-  const from = typeof args.from === 'string' ? args.from : TERM_START;
+  const sitting = currentTerm();
+  const from = typeof args.from === 'string' ? args.from : sitting.start;
   const until = typeof args.until === 'string'
     ? args.until
     : new Date(Date.now() + 400 * 86400000).toISOString().slice(0, 10);
 
-  const days = await fetchSittings(term, from, until);
-  if (!days.length) throw new Error('The portal returned no sittings — check the term and the dates.');
+  const days = await fetchSittings(from, until);
+  if (!days.length) throw new Error('The portal returned no sittings — check the dates.');
+
+  /* A new Parliament, the first time the portal lists a sitting of it: its
+     first sitting day goes into data/reference/terms.json, and from then on
+     the index, the minutes addresses, the audit and the page file its votes
+     under it. Nothing has to be edited by hand after an election. */
+  const added = newTerms(allTerms(), days);
+  if (added.length) {
+    const file = JSON.parse(await readFile(TERMS_FILE, 'utf8'));
+    file.terms = added.concat(file.terms).sort((a, b) => b.term - a.term);
+    await writeFile(TERMS_FILE, JSON.stringify(file, null, 2) + '\n', 'utf8');
+    added.forEach((row) => console.log(`New Parliament on file: term ${row.term}, first sitting ${row.start}.`));
+  }
+  // The term sitting now: the newest that has held a sitting by today.
+  const now = new Date().toISOString().slice(0, 10);
+  const term = Math.max(sitting.term, ...days.filter((day) => day.term && day.date <= now).map((day) => day.term));
 
   const sessions = foldSessions(days);
   const today = new Date().toISOString().slice(0, 10);

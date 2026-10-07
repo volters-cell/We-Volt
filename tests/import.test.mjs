@@ -22,6 +22,8 @@ import { shorten } from '../scripts/lib/titles.mjs';
 import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
 import { bulletsFrom, operativeParagraphs, isProcedural } from '../scripts/lib/operative.mjs';
 import { voteType, NOT_THE_TEXT, MEANING } from '../scripts/lib/vote-types.mjs';
+import { termOf as termAt, currentTerm, spanOf, labelOf, newTerms, allTerms } from '../scripts/lib/terms.mjs';
+import { termOf as minutesTerm } from '../scripts/lib/ep-sources.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const read = async (name) => JSON.parse(await readFile(path.join(here, 'fixtures', name), 'utf8'));
@@ -420,6 +422,37 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.equal(voteType({ title: 'Implementing the 2030 Agenda', subtitle: 'B9-0001/2021 – Motion for a resolution' }),
     'Motion for a resolution', 'the 2030 Agenda is not an agenda request');
   for (const type of NOT_THE_TEXT) assert.ok(MEANING[type], `${type} says what its result means`);
+}
+
+// Which Parliament a date belongs to: one table, data/reference/terms.json.
+{
+  assert.equal(termAt('2024-07-16'), 10, 'the tenth from its first sitting');
+  assert.equal(termAt('2024-07-15'), 9);
+  assert.equal(termAt('2019-07-02'), 9);
+  assert.equal(termAt('2012-03-01'), 8, 'before the earliest on file: the earliest');
+  assert.equal(minutesTerm('2025-05-07'), 10, 'the minutes addresses read the same table');
+  assert.equal(spanOf(9), '2019–2024');
+  assert.equal(labelOf(10, 10), 'This Parliament');
+  assert.equal(labelOf(9, 10), 'Previous Parliament');
+  assert.equal(labelOf(9, 11), 'Ninth Parliament', 'after an election the ninth is named, not "previous"');
+  assert.ok(currentTerm('2026-10-07').term >= 10);
+
+  // The next election, as the calendar refresh will see it in 2029.
+  const known = allTerms();
+  const days = [
+    { date: '2029-06-20', term: 10 },
+    { date: '2029-07-17', term: 11 },
+    { date: '2029-07-16', term: 11 },
+    { date: '2029-09-10', term: 11 },
+    { date: '2029-07-18', term: null }
+  ];
+  assert.deepEqual(newTerms(known, days), [{ term: 11, start: '2029-07-16' }],
+    'a new Parliament is added with its first sitting day');
+  const after = [{ term: 11, start: '2029-07-16' }].concat(known);
+  assert.equal(termAt('2029-07-16', after), 11);
+  assert.equal(termAt('2029-07-15', after), 10, 'the last days of the old Parliament stay in it');
+  assert.equal(currentTerm('2029-10-01', after).term, 11);
+  assert.deepEqual(newTerms(after, days), [], 'and only once');
 }
 
 console.log('import.test.mjs: ok');

@@ -10,6 +10,11 @@
 name: Put English titles on the votes
 
 on:
+  # Weekly, over the votes of the last four months: a vote imported under a
+  # title in another language gets the English one as soon as the Parliament
+  # publishes it. By hand, from any date.
+  schedule:
+    - cron: "47 3 * * 6"
   workflow_dispatch:
     inputs:
       from:
@@ -22,6 +27,10 @@ on:
         description: "Stop reading after this many minutes and commit what was read"
         default: "80"
 
+concurrency:
+  group: retitle
+  cancel-in-progress: false
+
 jobs:
   topics:
     outputs:
@@ -31,45 +40,38 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
 
       - name: Read the English titles
-        id: label
         run: |
           set -euo pipefail
-          git config user.name "eu-tracker-bot"
-          git config user.email "actions@github.com"
-
+          from="${{ inputs.from }}"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ -z "$from" ]; then
+            from="$(date -u -d '120 days ago' +%F)"
+          fi
           until=""
           if [ -n "${{ inputs.until }}" ]; then until="--until ${{ inputs.until }}"; fi
-          node scripts/retitle.mjs --from "${{ inputs.from }}" $until \
-            --minutes "${{ inputs.minutes }}"
+          node scripts/retitle.mjs --from "$from" $until \
+            --minutes "${{ inputs.minutes || '80' }}"
 
           node scripts/tag-topics.mjs
           node scripts/build-index.mjs
           node tests/import.test.mjs
           node scripts/validate-data.mjs
 
-          if [ -z "$(git status --porcelain data/)" ]; then
-            echo "Nothing to label."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            git add data/
-            git commit -m "Put the English title on votes published in another language
+      - name: Commit the titles
+        id: label
+        env:
+          REBUILD: node scripts/tag-topics.mjs && node scripts/build-index.mjs && node scripts/validate-data.mjs
+        run: |
+          scripts/push-changes.sh "Put the English title on votes published in another language
 
           Read from each document on the Parliament's open data portal, by
           .github/workflows/retitle.yml. Nothing is translated: a vote whose
-          document carries no English keeps what the Parliament published.
-
-          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-          Claude-Session: https://claude.ai/code/session_01Q2GR9PWbYZc6kZnv6W9Gx7"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
+          document carries no English keeps what the Parliament published." data/
 
   # A push made with the built-in token does not trigger other workflows, so the
   # labels would otherwise sit in the repository and never reach the site. This

@@ -14,7 +14,9 @@ name: Faces and parties
 
 on:
   schedule:
-    - cron: "20 4 1 * *"
+    # The 2nd: one job a day at the start of the month, so they do not all
+    # push in the same minute (see scripts/push-changes.sh).
+    - cron: "20 4 2 * *"
   workflow_dispatch:
     inputs:
       everyone:
@@ -33,14 +35,16 @@ concurrency:
 jobs:
   read:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Read each member's record
         run: |
@@ -57,13 +61,18 @@ jobs:
           node scripts/validate-data.mjs
 
       - name: Commit what changed
-        run: |
-          git config user.name "eu-tracker"
-          git config user.email "actions@users.noreply.github.com"
-          if git diff --quiet -- data; then
-            echo "Nothing changed."
-            exit 0
-          fi
-          git add data
-          git commit -m "Read the members' portraits and parties from the Parliament"
-          git push
+        id: commit
+        env:
+          REBUILD: node scripts/build-members.mjs && node scripts/build-index.mjs && node scripts/validate-data.mjs
+        run: scripts/push-changes.sh "Read the members' portraits and parties from the Parliament" data
+
+  # A push made with the workflow's own token starts no other workflow, so
+  # what this job changed would wait for the next plenary to reach the site.
+  publish:
+    needs: read
+    if: needs.read.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

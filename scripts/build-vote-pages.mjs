@@ -26,6 +26,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { voteType, NOT_THE_TEXT, MEANING } from './lib/vote-types.mjs';
+import { termOf } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const OUT = path.join(ROOT, 'v');
@@ -38,14 +39,17 @@ const BASE = SITE.replace(/\/?$/, '/');
 
 const index = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions/index.json'), 'utf8'));
 const VOTE_KEYS = ['for', 'against', 'abstain', 'absent'];
-const states = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8')).states;
+const statesFile = JSON.parse(readFileSync(path.join(ROOT, 'data/reference/member-states.json'), 'utf8'));
+const states = statesFile.states;
 const SEATS = states.reduce((sum, s) => sum + s.seats, 0);
 /* member-states.json describes the sitting Parliament and no earlier one. A
    vote of the ninth term was taken in a House of a different size, so these
    pages say how many members voted and stop there rather than dividing by a
    number that does not apply to it. The same rule as the tracker's own. */
-const TERM_START = '2024-07-16';
-const houseOf = (date) => (date >= TERM_START ? SEATS : null);
+// The seats in member-states.json describe one Parliament (its termNumber);
+// a vote of any other prints only how many voted, not a House size.
+const SEATS_TERM = (statesFile.metadata && statesFile.metadata.termNumber) || 10;
+const houseOf = (date) => (termOf(date) === SEATS_TERM ? SEATS : null);
 
 const MONTHS = ['January','February','March','April','May','June','July','August',
   'September','October','November','December'];

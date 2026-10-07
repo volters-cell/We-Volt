@@ -63,9 +63,9 @@ jobs:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
 
@@ -143,52 +143,16 @@ jobs:
       - name: Commit what changed
         id: commit
         if: steps.sitting.outputs.go == 'true'
+        # Up to five tries, replaying on top of whatever another job pushed
+        # meanwhile and rebuilding the index from both: scripts/push-changes.sh.
+        env:
+          REBUILD: node scripts/tag-topics.mjs && node scripts/build-index.mjs && node scripts/build-members.mjs && node scripts/validate-data.mjs
         run: |
-          if [ -z "$(git status --porcelain data/)" ]; then
-            echo "Nothing new."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-          git config user.name "eu-tracker-bot"
-          git config user.email "actions@github.com"
-          git add data/
-          git commit -m "Import from the European Parliament
+          scripts/push-changes.sh "Import from the European Parliament
 
           Automated by .github/workflows/plenary-sync.yml. Records land with
-          an empty summary: writing one is editorial work."
+          an empty summary: writing one is editorial work." data/
 
-          # The import takes a few minutes, and anything pushed to the branch
-          # during them makes a bare push fail — the sitting is imported, and
-          # then thrown away, and the votes wait for the next run. Which is
-          # what happened the first time this ran: a one-line fix pushed to
-          # another file mid-import cost the whole sitting.
-          #
-          # So: rebase first, and where a conflict is inside data/ take the
-          # files this run just generated, because they were built from the
-          # portal minutes ago and the other side is a regenerated index. A
-          # conflict anywhere else is not something to guess at.
-          if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
-            if git diff --name-only --diff-filter=U | grep -qv '^data/'; then
-              echo "::error::Conflict outside data/ — stopping rather than guessing."
-              git rebase --abort || true
-              exit 1
-            fi
-            git checkout --theirs -- data/ 2>/dev/null || true
-            git add data/
-            GIT_EDITOR=true git rebase --continue
-          fi
-
-          # And if the branch moved again between the rebase and the push,
-          # try once more rather than lose the sitting to a second-long race.
-          git push origin "HEAD:${GITHUB_REF_NAME}" || {
-            sleep 5
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          }
-
-  # A push made with the built-in token does not trigger other workflows, so the
-  # import would otherwise sit in the repository without ever reaching the site.
   publish:
     needs: import
     if: needs.import.outputs.changed == 'true'

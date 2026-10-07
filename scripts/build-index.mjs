@@ -19,6 +19,7 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { PLACE_NAMES } from './lib/topics.mjs';
 import { voteType, NOT_THE_TEXT, MEANING } from './lib/vote-types.mjs';
+import { allTerms, termOf as termNumberOf, labelOf, spanOf } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DIR = 'data/decisions';
@@ -120,15 +121,17 @@ decisions.forEach((decision) => {
    and a manifest of the rest, and the page fetches an earlier term the moment
    somebody opens its fold.
 
-   The boundaries are the ones scripts/lib/ep-sources.mjs already uses to build
-   the address of the minutes a record cites. A vote and its citation have to
-   agree about which Parliament they belong to. */
-const TERMS = [
-  { term: 10, from: '2024-07-16', label: 'This Parliament', span: '2024–2029' },
-  { term: 9, from: '2019-07-02', label: 'Previous Parliament', span: '2019–2024' },
-  { term: 8, from: '0000-00-00', label: 'Eighth Parliament', span: '2014–2019' }
-];
-const termOf = (date) => TERMS.find((term) => date >= term.from) || TERMS[TERMS.length - 1];
+   The boundaries are read from data/reference/terms.json, the same file
+   scripts/lib/ep-sources.mjs uses to build the address of the minutes a record
+   cites — a vote and its citation have to agree about which Parliament they
+   belong to — and the one the calendar refresh extends after an election. So
+   the first votes of a new Parliament open a fold of their own, labelled
+   "This Parliament", and the one before becomes "Previous Parliament", with
+   nobody editing this file. */
+const termOf = (date) => {
+  const term = termNumberOf(date);
+  return { term, start: (allTerms().find((row) => row.term === term) || {}).start || null };
+};
 
 const metadata = {
   project: 'EU Tracker',
@@ -162,8 +165,11 @@ for (const row of present) {
   const file = row === latest ? 'index.json' : `term-${row.term.term}.json`;
   terms.push({
     term: row.term.term,
-    label: row.term.label,
-    span: row.term.span,
+    label: labelOf(row.term.term, latest.term.term),
+    span: spanOf(row.term.term),
+    // The day that Parliament first sat, so the page can tell which one a
+    // date belongs to without a table of its own.
+    start: row.term.start,
     votes: row.decisions.length,
     from: row.decisions[row.decisions.length - 1].date,
     until: row.decisions[0].date,

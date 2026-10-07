@@ -40,10 +40,15 @@ import {
 import { sourcesFor, procedureUrl, isPartOfAText, STAMPED } from './lib/ep-sources.mjs';
 import { committeeName, committeeShort } from './lib/committees.mjs';
 import { looksEnglish, shorten, englishHalf } from './lib/titles.mjs';
+import { currentTerm } from './lib/terms.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const TERM = 10; // 2024–2029
-const TERM_START = '2024-07-16'; // the constitutive sitting after the June 2024 elections
+// The Parliament sitting now, from data/reference/terms.json, which
+// scripts/fetch-sessions.mjs extends after an election.
+const TERM = currentTerm().term;
+// The default floor for a --since window: the tenth term's first sitting,
+// where this importer's own history begins. It does not stop a later term.
+const TERM_START = '2024-07-16';
 const MEP_CACHE = 'data/reference/meps.json';
 
 /* Amendments are the bulk of a plenary and the least of its meaning. By default

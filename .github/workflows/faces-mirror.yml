@@ -20,7 +20,8 @@ on:
         default: probe
   schedule:
     # After the monthly profile read, so a new member's face follows their name.
-    - cron: "40 4 1 * *"
+    # The 3rd, after the profiles job has read who sits (the 2nd).
+    - cron: "40 4 3 * *"
 
 permissions:
   contents: write
@@ -32,14 +33,16 @@ concurrency:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Get a browser
         run: |
@@ -70,14 +73,17 @@ jobs:
           echo "$(ls assets/faces/*.jpg | wc -l) portraits, $(du -sh assets/faces | cut -f1) in total"
 
       - name: Commit them
+        id: commit
         if: ${{ inputs.mode != 'probe' }}
-        run: |
-          git config user.name "eu-tracker"
-          git config user.email "actions@users.noreply.github.com"
-          if git diff --quiet -- assets/faces && [ -z "$(git status --porcelain assets/faces)" ]; then
-            echo "Nothing new."
-            exit 0
-          fi
-          git add assets/faces
-          git commit -m "Mirror the members' portraits from the Parliament"
-          git push
+        run: scripts/push-changes.sh "Mirror the members' portraits from the Parliament" assets/faces
+
+  # A push made with the workflow's own token starts no other workflow, so
+  # what this job changed would wait for the next plenary to reach the site.
+  publish:
+    needs: mirror
+    if: needs.mirror.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

@@ -1,0 +1,38 @@
+# Keep the scheduled workflows switched on.
+#
+# GitHub turns off every scheduled workflow in a public repository after 60
+# days in which nothing was committed, and says so only by e-mail. The site
+# commits most weeks — each plenary's votes, and the audit's report every month
+# — but the summer recess runs from mid-July to September, and a schedule
+# switched off then would leave the site silently stale with nobody watching.
+#
+# So once a month this asks GitHub to enable each scheduled workflow again. For
+# one that is on, that changes nothing; for one that was switched off, it is
+# back within the month. This workflow enables itself too, so it outlives the
+# others' quiet spells.
+
+name: Keep the schedules running
+
+on:
+  schedule:
+    - cron: "11 6 15 * *"   # the 15th, away from the jobs at the start of the month
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  keep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable every scheduled workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for workflow in plenary-sync.yml audit-sources.yml profiles-sync.yml faces-mirror.yml \
+                          summaries.yml retitle.yml keep-schedules-alive.yml; do
+            state=$(gh api "repos/${{ github.repository }}/actions/workflows/$workflow" --jq .state)
+            gh api -X PUT "repos/${{ github.repository }}/actions/workflows/$workflow/enable"
+            echo "$workflow: was $state, enabled"
+          done

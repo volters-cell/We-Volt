@@ -6,14 +6,17 @@
 # answer to data/reference/coverage.json so the claim on the About page is a
 # checked number rather than a hopeful one.
 #
-# Monthly, and on demand from the Actions tab. It fails loudly when the site is
-# behind, which is the point.
+# Monthly, and on demand from the Actions tab. What it finds missing it now
+# imports, each vote as its own record (fetch-plenary --ids), and then audits
+# again: it used to report the gap and leave it, and fail every month for the
+# same votes. It fails loudly only when something is still missing after
+# that, which is the point.
 
 name: Audit the sources
 
 on:
   schedule:
-    - cron: "0 5 1 * *"    # the first of the month
+    - cron: "0 5 5 * *"    # the 5th, after the profiles (2nd) and portraits (3rd)
   workflow_dispatch:
     inputs:
       since:
@@ -30,30 +33,77 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
 
       - name: Compare every sitting against what is on file
+        id: first
+        continue-on-error: true
         run: |
           node scripts/audit-sources.mjs --write \
             ${{ inputs.since && format('--since {0}', inputs.since) || '' }}
 
-      - name: Commit the report
-        if: always()
+      - name: Import what the audit found missing
+        if: steps.first.outcome == 'failure'
         run: |
-          if [ -z "$(git status --porcelain data/reference/coverage.json)" ]; then
-            echo "The report has not changed."
-            exit 0
-          fi
-          git config user.name "eu-tracker-bot"
-          git config user.email "actions@github.com"
-          git add data/reference/coverage.json
-          git commit -m "Record what the audit found
+          set -euo pipefail
+          pairs=$(node -e "
+            const c = require('./data/reference/coverage.json');
+            console.log((c.missing || []).filter((m) => m.ballots > 0)
+              .map((m) => m.date + ':' + m.votingId).join(' '));")
+          echo "Missing: ${pairs:-none}"
+          refresh="--refresh-meps"
+          for pair in $pairs; do
+            date="${pair%%:*}"; id="${pair#*:}"
+            [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ && "$id" =~ ^[0-9]+$ ]] || continue
+            node scripts/fetch-plenary.mjs $refresh --date "$date" --ids "$id"
+            refresh=""
+          done
+          node scripts/tag-topics.mjs
+          node scripts/build-index.mjs
+          node scripts/build-members.mjs
+          node tests/import.test.mjs
+          node scripts/validate-data.mjs
+
+      - name: Audit again
+        id: second
+        if: steps.first.outcome == 'failure'
+        continue-on-error: true
+        run: |
+          node scripts/audit-sources.mjs --write \
+            ${{ inputs.since && format('--since {0}', inputs.since) || '' }}
+
+      - name: Commit the report and any votes imported
+        id: commit
+        env:
+          REBUILD: node scripts/tag-topics.mjs && node scripts/build-index.mjs && node scripts/build-members.mjs && node scripts/validate-data.mjs
+        run: |
+          scripts/push-changes.sh "Record what the audit found, and import what it found missing
 
           Automated by .github/workflows/audit-sources.yml: every sitting of the
           term at the Parliament's open data portal, compared vote by vote with
-          the records on file."
-          git push
+          the records on file; any final vote held there and not here is
+          imported as its own record." data/
+
+      - name: Fail if anything is still missing
+        if: steps.first.outcome == 'failure' && steps.second.outcome != 'success'
+        run: |
+          echo "::error::The audit still finds votes the site does not hold, after importing. See data/reference/coverage.json."
+          exit 1
+
+  # A push made with the workflow's own token starts no other workflow, so
+  # what this job changed would wait for the next plenary to reach the site.
+  publish:
+    needs: audit
+    if: always() && needs.audit.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
