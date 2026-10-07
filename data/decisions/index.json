@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 783,
+      "votes": 801,
       "from": "2024-07-17",
       "until": "2026-10-06",
       "file": null
@@ -276,6 +276,36 @@
       "keywords": "2026/0078"
     },
     {
+      "id": "ep-2026-10-06-2026-2023-197484",
+      "sourceId": 197484,
+      "title": "Psychosocial risks, stress and mental health at work",
+      "subtitle": "A10-0225/2026 – Estelle Ceulemans – Motion for a resolution (as a whole) — vote in plenary",
+      "date": "2026-10-06",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        413,
+        210,
+        29
+      ],
+      "mepCount": 652,
+      "keywords": "2026/2023",
+      "twin": true
+    },
+    {
       "id": "ep-2026-10-06-2026-2023-197643",
       "sourceId": 197643,
       "title": "Psychosocial risks, stress and mental health at work",
@@ -302,7 +332,8 @@
         130
       ],
       "mepCount": 654,
-      "keywords": "2026/2023"
+      "keywords": "2026/2023",
+      "twin": true
     },
     {
       "id": "ep-2026-10-05-request-from-the-ecr-group-student-riots-in-france-197673",
@@ -5554,6 +5585,36 @@
       "keywords": "2026/2651(rsp)"
     },
     {
+      "id": "ep-2026-04-28-2021-0297-190404",
+      "sourceId": 190404,
+      "title": "Generalised scheme of tariff preferences",
+      "subtitle": "A9-0147/2022 – Bernd Lange – Proposal to vote on amendments — vote in plenary",
+      "date": "2026-04-28",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "voteType": "Request to vote on amendments",
+      "aside": true,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        412,
+        225,
+        13
+      ],
+      "mepCount": 650,
+      "keywords": "2021/0297",
+      "twin": true
+    },
+    {
       "id": "ep-2026-04-28-2021-0297-cod-190095",
       "sourceId": 190095,
       "title": "Generalised scheme of tariff preferences",
@@ -6175,6 +6236,36 @@
       ],
       "mepCount": 718,
       "keywords": "2025/0233(nle)"
+    },
+    {
+      "id": "ep-2026-03-26-2025-0260-189902",
+      "sourceId": 189902,
+      "title": "Non-application of customs duties on imports of certain goods",
+      "subtitle": "A10-0070/2026 – Bernd Lange – Motion for adjournment of vote — vote in plenary",
+      "date": "2026-03-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "voteType": "Adjournment request",
+      "aside": true,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        174,
+        450,
+        16
+      ],
+      "mepCount": 640,
+      "keywords": "2025/0260",
+      "twin": true
     },
     {
       "id": "ep-2026-03-26-2025-0260-cod-189313",
@@ -11111,6 +11202,34 @@
       "keywords": "2025/0009m(nle)"
     },
     {
+      "id": "ep-2025-11-13-2025-0045-181200",
+      "sourceId": 181200,
+      "title": "Certain corporate sustainability reporting and due diligence requirements",
+      "subtitle": "A10-0197/2025 – Jörgen Warborn – Request for referral back (Rule 60(4)) — vote in plenary",
+      "date": "2025-11-13",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Referral back to committee",
+      "aside": true,
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        426,
+        202,
+        8
+      ],
+      "mepCount": 636,
+      "keywords": "2025/0045",
+      "twin": true
+    },
+    {
       "id": "ep-2025-11-13-2025-0045-cod-180948",
       "sourceId": 180948,
       "title": "Certain corporate sustainability reporting and due diligence requirements",
@@ -11384,6 +11503,36 @@
         14
       ],
       "mepCount": 636,
+      "keywords": "2025/0524",
+      "twin": true
+    },
+    {
+      "id": "ep-2025-11-13-2025-0524-181446",
+      "sourceId": 181446,
+      "title": "Framework for achieving climate neutrality",
+      "subtitle": "A10-0223/2025 – Ondřej Knotek – Request for referral back (Rule 60(4)) — vote in plenary",
+      "date": "2025-11-13",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Climate"
+      ],
+      "voteType": "Referral back to committee",
+      "aside": true,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        409,
+        221,
+        7
+      ],
+      "mepCount": 637,
       "keywords": "2025/0524",
       "twin": true
     },
@@ -19174,6 +19323,54 @@
       "keywords": "2024/2841(rsp)"
     },
     {
+      "id": "ep-2024-11-25-monday-s-agenda-request-by-the-left-group-170665",
+      "sourceId": 170665,
+      "title": "Monday’s agenda – Request by The Left Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        156,
+        277,
+        10
+      ],
+      "mepCount": 443,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-11-25-wednesday-s-agenda-170667",
+      "sourceId": 170667,
+      "title": "Wednesday’s agenda",
+      "subtitle": "vote in plenary",
+      "date": "2024-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        415,
+        5,
+        3
+      ],
+      "mepCount": 423,
+      "keywords": ""
+    },
+    {
       "id": "ep-2024-11-14-2023-0187-cns-170381",
       "sourceId": 170381,
       "title": "Faster and Safer Relief of Excess Withholding Taxes",
@@ -19289,6 +19486,56 @@
       ],
       "mepCount": 641,
       "keywords": "c10-0119/2024"
+    },
+    {
+      "id": "ep-2024-11-13-thursday-s-agenda-request-by-the-left-group-170542",
+      "sourceId": 170542,
+      "title": "Thursday’s agenda – Request by The Left Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-11-13",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        201,
+        353,
+        7
+      ],
+      "mepCount": 561,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-11-13-wednesday-s-agenda-request-by-the-renew-and-ppe-groups-170541",
+      "sourceId": 170541,
+      "title": "Wednesday’s agenda – Request by the Renew and PPE groups",
+      "subtitle": "vote in plenary",
+      "date": "2024-11-13",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        309,
+        191,
+        34
+      ],
+      "mepCount": 534,
+      "keywords": ""
     },
     {
       "id": "ep-2024-10-24-2024-2890-rsp-170366",
@@ -19509,6 +19756,56 @@
       "keywords": "2024/0234(cod)"
     },
     {
+      "id": "ep-2024-10-21-tuesday-s-agenda-request-by-the-renew-group-170006",
+      "sourceId": 170006,
+      "title": "Tuesday’s agenda – Request by the Renew Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        158,
+        288,
+        34
+      ],
+      "mepCount": 480,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-10-21-tuesday-s-agenda-request-by-the-verts-ale-group-170005",
+      "sourceId": 170005,
+      "title": "Tuesday’s agenda – Request by the Verts/ALE Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        164,
+        319,
+        1
+      ],
+      "mepCount": 484,
+      "keywords": ""
+    },
+    {
       "id": "ep-2024-10-10-2024-2857-rsp-169857",
       "sourceId": 169857,
       "title": "Cases of unjustly imprisoned Uyghurs in China, notably Ilham Tohti and Gulshan Abbas",
@@ -19603,6 +19900,56 @@
       ],
       "mepCount": 718,
       "keywords": "2024/0212(bud)"
+    },
+    {
+      "id": "ep-2024-10-07-tuesday-s-agenda-request-by-the-left-group-169726",
+      "sourceId": 169726,
+      "title": "Tuesday’s agenda – Request by The Left Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        189,
+        254,
+        8
+      ],
+      "mepCount": 451,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-10-07-tuesday-s-agenda-request-by-the-pfe-group-169725",
+      "sourceId": 169725,
+      "title": "Tuesday’s agenda – Request by the PfE Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-10-07",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        85,
+        335,
+        5
+      ],
+      "mepCount": 425,
+      "keywords": ""
     },
     {
       "id": "ep-2024-09-19-2024-0046-nle-169401",
@@ -19798,6 +20145,79 @@
       "keywords": "2024/2759(rps)"
     },
     {
+      "id": "ep-2024-09-16-tuesday-s-agenda-request-by-the-pfe-group-169406",
+      "sourceId": 169406,
+      "title": "Tuesday’s agenda – Request by the PfE Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-09-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        102,
+        279,
+        13
+      ],
+      "mepCount": 394,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-09-16-wednesday-s-agenda-request-by-the-ecr-group-169407",
+      "sourceId": 169407,
+      "title": "Wednesday’s agenda – Request by the ECR Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-09-16",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        437,
+        13,
+        11
+      ],
+      "mepCount": 461,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-07-18-request-by-the-left-group-motion-for-adjournment-of-the-vo-169385",
+      "sourceId": 169385,
+      "title": "Request by The Left Group – Motion for adjournment of the vote on the election of the President of the Commission",
+      "subtitle": "Request by The Left Group – Motion for adjournment of the vote — vote in plenary",
+      "date": "2024-07-18",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Adjournment request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        101,
+        531,
+        8
+      ],
+      "mepCount": 640,
+      "keywords": ""
+    },
+    {
       "id": "ep-2024-07-17-2024-2721-rsp-169362",
       "sourceId": 169362,
       "title": "Need for the EU's continuous support for Ukraine",
@@ -19820,6 +20240,56 @@
       ],
       "mepCount": 719,
       "keywords": "2024/2721(rsp)"
+    },
+    {
+      "id": "ep-2024-07-17-wednesday-s-agenda-request-by-the-left-group-169367",
+      "sourceId": 169367,
+      "title": "Wednesday’s agenda – Request by The Left Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-07-17",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        149,
+        251,
+        16
+      ],
+      "mepCount": 416,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2024-07-17-wednesday-s-agenda-request-by-the-pfe-group-169368",
+      "sourceId": 169368,
+      "title": "Wednesday’s agenda – Request by the PfE Group",
+      "subtitle": "vote in plenary",
+      "date": "2024-07-17",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        119,
+        337,
+        15
+      ],
+      "mepCount": 471,
+      "keywords": ""
     }
   ]
 }

@@ -1,144 +1,17 @@
 {
-  "checked": "2026-10-01",
+  "checked": "2026-10-07",
   "window": {
     "from": "2024-07-16",
-    "until": "2026-10-01"
+    "until": "2026-10-07"
   },
-  "sittings": 116,
-  "rollCallVotes": 6282,
-  "finalVotes": 717,
-  "onFile": 659,
-  "withoutBallotsAtSource": 37,
+  "sittings": 119,
+  "rollCallVotes": 6319,
+  "finalVotes": 723,
+  "onFile": 685,
+  "withoutBallotsAtSource": 38,
   "absencesHeldHere": 47684,
-  "recordsHere": 3752,
-  "missing": [
-    {
-      "date": "2024-07-17",
-      "votingId": "169367",
-      "title": "Wednesday’s agenda – Request by The Left Group",
-      "ballots": 416
-    },
-    {
-      "date": "2024-07-17",
-      "votingId": "169368",
-      "title": "Wednesday’s agenda – Request by the PfE Group",
-      "ballots": 471
-    },
-    {
-      "date": "2024-07-18",
-      "votingId": "169385",
-      "title": "Request by The Left Group – Motion for adjournment of the vote",
-      "ballots": 640
-    },
-    {
-      "date": "2024-09-16",
-      "votingId": "169406",
-      "title": "Tuesday’s agenda – Request by the PfE Group",
-      "ballots": 394
-    },
-    {
-      "date": "2024-09-16",
-      "votingId": "169407",
-      "title": "Wednesday’s agenda – Request by the ECR Group",
-      "ballots": 461
-    },
-    {
-      "date": "2024-10-07",
-      "votingId": "169725",
-      "title": "Tuesday’s agenda – Request by the PfE Group",
-      "ballots": 425
-    },
-    {
-      "date": "2024-10-07",
-      "votingId": "169726",
-      "title": "Tuesday’s agenda – Request by The Left Group",
-      "ballots": 451
-    },
-    {
-      "date": "2024-10-21",
-      "votingId": "170005",
-      "title": "Tuesday’s agenda – Request by the Verts/ALE Group",
-      "ballots": 484
-    },
-    {
-      "date": "2024-10-21",
-      "votingId": "170006",
-      "title": "Tuesday’s agenda – Request by the Renew Group",
-      "ballots": 480
-    },
-    {
-      "date": "2024-11-13",
-      "votingId": "170541",
-      "title": "Wednesday’s agenda – Request by the Renew and PPE groups",
-      "ballots": 534
-    },
-    {
-      "date": "2024-11-13",
-      "votingId": "170542",
-      "title": "Thursday’s agenda – Request by The Left Group",
-      "ballots": 561
-    },
-    {
-      "date": "2024-11-14",
-      "votingId": "170398",
-      "title": "C10-0119/2024 – Commission proposal",
-      "ballots": 641
-    },
-    {
-      "date": "2024-11-25",
-      "votingId": "170665",
-      "title": "Monday’s agenda – Request by The Left Group",
-      "ballots": 443
-    },
-    {
-      "date": "2024-11-25",
-      "votingId": "170667",
-      "title": "Wednesday’s agenda",
-      "ballots": 423
-    },
-    {
-      "date": "2024-11-27",
-      "votingId": "170611",
-      "title": "Election of the Commission",
-      "ballots": 688
-    },
-    {
-      "date": "2024-12-17",
-      "votingId": "171182",
-      "title": "C10-0119/2024 – Provisional agreement (Commission proposal – unamended)",
-      "ballots": 650
-    },
-    {
-      "date": "2025-05-07",
-      "votingId": "175859",
-      "title": "A10-0065/2025 – Erik Marquardt – Proposal for a decision on discharge (Frontex)",
-      "ballots": 657
-    },
-    {
-      "date": "2025-11-13",
-      "votingId": "181446",
-      "title": "A10-0223/2025 – Ondřej Knotek – Request for referral back (Rule 60(4))",
-      "ballots": 637
-    },
-    {
-      "date": "2025-11-13",
-      "votingId": "181200",
-      "title": "A10-0197/2025 – Jörgen Warborn – Request for referral back (Rule 60(4))",
-      "ballots": 636
-    },
-    {
-      "date": "2026-03-26",
-      "votingId": "189902",
-      "title": "A10-0070/2026 – Bernd Lange – Motion for adjournment of vote",
-      "ballots": 640
-    },
-    {
-      "date": "2026-04-28",
-      "votingId": "190404",
-      "title": "A9-0147/2022 – Bernd Lange – Proposal to vote on amendments",
-      "ballots": 650
-    }
-  ],
+  "recordsHere": 3783,
+  "missing": [],
   "unpublished": [
     {
       "date": "2025-06-18",
@@ -361,6 +234,12 @@
       "votingId": "197201",
       "title": null,
       "ballots": 0
+    },
+    {
+      "date": "2026-10-06",
+      "votingId": "197386",
+      "title": null,
+      "ballots": 0
     }
   ],
   "disagreeing": [],
@@ -377,13 +256,13 @@
       "date": "2024-07-17",
       "rollCalls": 23,
       "finalVotes": 3,
-      "onFile": 1
+      "onFile": 3
     },
     {
       "date": "2024-07-18",
       "rollCalls": 1,
       "finalVotes": 1,
-      "onFile": 0
+      "onFile": 1
     },
     {
       "date": "2024-07-19",
@@ -395,7 +274,7 @@
       "date": "2024-09-16",
       "rollCalls": 2,
       "finalVotes": 2,
-      "onFile": 0
+      "onFile": 2
     },
     {
       "date": "2024-09-17",
@@ -419,7 +298,7 @@
       "date": "2024-10-07",
       "rollCalls": 2,
       "finalVotes": 2,
-      "onFile": 0
+      "onFile": 2
     },
     {
       "date": "2024-10-08",
@@ -443,7 +322,7 @@
       "date": "2024-10-21",
       "rollCalls": 2,
       "finalVotes": 2,
-      "onFile": 0
+      "onFile": 2
     },
     {
       "date": "2024-10-22",
@@ -467,13 +346,13 @@
       "date": "2024-11-13",
       "rollCalls": 2,
       "finalVotes": 2,
-      "onFile": 0
+      "onFile": 2
     },
     {
       "date": "2024-11-14",
       "rollCalls": 44,
       "finalVotes": 5,
-      "onFile": 4
+      "onFile": 5
     },
     {
       "date": "2024-11-19",
@@ -485,7 +364,7 @@
       "date": "2024-11-25",
       "rollCalls": 2,
       "finalVotes": 2,
-      "onFile": 0
+      "onFile": 2
     },
     {
       "date": "2024-11-26",
@@ -497,7 +376,7 @@
       "date": "2024-11-27",
       "rollCalls": 11,
       "finalVotes": 8,
-      "onFile": 7
+      "onFile": 8
     },
     {
       "date": "2024-11-28",
@@ -515,7 +394,7 @@
       "date": "2024-12-17",
       "rollCalls": 13,
       "finalVotes": 6,
-      "onFile": 5
+      "onFile": 6
     },
     {
       "date": "2024-12-18",
@@ -647,7 +526,7 @@
       "date": "2025-05-07",
       "rollCalls": 228,
       "finalVotes": 32,
-      "onFile": 31
+      "onFile": 32
     },
     {
       "date": "2025-05-08",
@@ -797,7 +676,7 @@
       "date": "2025-11-13",
       "rollCalls": 299,
       "finalVotes": 19,
-      "onFile": 17
+      "onFile": 19
     },
     {
       "date": "2025-11-24",
@@ -941,7 +820,7 @@
       "date": "2026-03-26",
       "rollCalls": 83,
       "finalVotes": 16,
-      "onFile": 14
+      "onFile": 15
     },
     {
       "date": "2026-04-27",
@@ -953,7 +832,7 @@
       "date": "2026-04-28",
       "rollCalls": 240,
       "finalVotes": 13,
-      "onFile": 12
+      "onFile": 13
     },
     {
       "date": "2026-04-29",
@@ -1062,6 +941,24 @@
       "rollCalls": 132,
       "finalVotes": 13,
       "onFile": 10
+    },
+    {
+      "date": "2026-10-05",
+      "rollCalls": 1,
+      "finalVotes": 1,
+      "onFile": 1
+    },
+    {
+      "date": "2026-10-06",
+      "rollCalls": 36,
+      "finalVotes": 5,
+      "onFile": 4
+    },
+    {
+      "date": "2026-10-07",
+      "rollCalls": 0,
+      "finalVotes": 0,
+      "onFile": 0
     }
   ]
 }
