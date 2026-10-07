@@ -22,6 +22,7 @@ import { shorten } from '../scripts/lib/titles.mjs';
 import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
 import { bulletsFrom, operativeParagraphs, isProcedural } from '../scripts/lib/operative.mjs';
 import { voteType, NOT_THE_TEXT, MEANING } from '../scripts/lib/vote-types.mjs';
+import { figures, stamp } from '../scripts/stamp-coverage.mjs';
 import { termOf as termAt, currentTerm, spanOf, labelOf, newTerms, allTerms } from '../scripts/lib/terms.mjs';
 import { termOf as minutesTerm } from '../scripts/lib/ep-sources.mjs';
 
@@ -455,6 +456,44 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.equal(termAt('2029-07-15', after), 10, 'the last days of the old Parliament stay in it');
   assert.equal(currentTerm('2029-10-01', after).term, 11);
   assert.deepEqual(newTerms(after, days), [], 'and only once');
+}
+
+// The About page's figures come from the audit, and the claim of
+// completeness is only made when the audit supports it.
+{
+  const report = { checked: '2026-10-07', window: { from: '2024-07-16' }, sittings: 119,
+    rollCallVotes: 6319, finalVotes: 723, onFile: 685, unpublished: [1, 2], disagreeing: [], missing: [] };
+  const page = '<td data-coverage="onFile">647</td> <span data-coverage="verdict">old</span> <b data-coverage="nope">x</b>';
+  const done = stamp(page, figures(report));
+  assert.ok(done.includes('<td data-coverage="onFile">685</td>'));
+  assert.ok(/every vote on a text .* is here/.test(done));
+  assert.ok(done.includes('<b data-coverage="nope">x</b>'), 'an unknown field is left alone');
+  const behind = stamp(page, figures(Object.assign({}, report, { missing: [{}, {}, {}] })));
+  assert.ok(!/every vote on a text .* is here/.test(behind), 'no claim of completeness when votes are missing');
+  assert.ok(behind.includes('3 votes on a text'));
+  assert.equal(figures(report).amendments, '5,596');
+}
+
+// One card per text for its amendments, but every vote on a text as a whole
+// is a card of its own, as the audit expects.
+{
+  const { oneVotePerText } = await import('../scripts/fetch-plenary.mjs');
+  const vote = (id, label, extra) => Object.assign({
+    decision: Object.assign({ notation_votingId: id, activity_label: { en: label } }, extra || {}),
+    item: { activity_id: 'item-2877' }, code: null, label: label, subject: '', part: false
+  });
+  const day = [
+    vote('170722', 'Motion for a resolution B10-0200/2024'),
+    vote('170611', 'Election of the Commission'),
+    vote('170700', 'Am 3', { decisionAboutId: 'x' }),
+    vote('170726', 'Motion for a resolution B10-0201/2024')
+  ];
+  const kept = oneVotePerText(day).map((v) => v.decision.notation_votingId).sort();
+  assert.deepEqual(kept, ['170611', '170722', '170726'],
+    'the election is kept beside the motions on the same item; the amendment is folded');
+  const budget = [1, 2, 3].map((n) => vote('5' + n, 'Am ' + n, { decisionAboutId: 'x' }))
+    .concat([vote('59', 'Motion for a resolution')]);
+  assert.equal(oneVotePerText(budget).length, 1, 'a hundred amendments still make one card');
 }
 
 console.log('import.test.mjs: ok');

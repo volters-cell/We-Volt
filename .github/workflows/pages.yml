@@ -72,6 +72,11 @@ jobs:
       - name: Build a page for every vote, and the sitemap
         run: node scripts/build-vote-pages.mjs
 
+      # The About page's completeness table, from the latest audit rather than
+      # from numbers typed in once.
+      - name: Fill the About page from the latest audit
+        run: node scripts/stamp-coverage.mjs
+
       # Every asset gets the commit's number in its address, so a browser that
       # has been here before cannot serve yesterday's JavaScript for today's
       # page. Pages sends its own cache lifetime and gives us no way to set

@@ -447,6 +447,19 @@ export function oneVotePerText(rollCalls) {
       subject: pick.subject || named,
       rollCalls: members.length
     }));
+
+    /* Every other vote on the text as a whole is a decision of its own, not a
+       sibling to fold away. An agenda item can carry several: on 27 November
+       2024 the election of the Commission shared one with two motions on it,
+       and one card per item kept a motion and dropped the election; a report
+       can carry the discharges of two agencies, and the Frontex one was lost
+       behind the EUAA's. The audit found them a month later. Kept here, they
+       are on the site the day they are voted — the same rule as the audit's,
+       isFinalVote, so the two agree about what should be on file. */
+    members.forEach(function (vote) {
+      if (vote === pick || !isFinalVote(vote.decision)) return;
+      chosen.push(Object.assign({}, vote, { subject: vote.subject || named, rollCalls: 1 }));
+    });
   });
 
   return chosen;
