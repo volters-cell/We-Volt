@@ -5,12 +5,12 @@
     "until": "2026-10-07"
   },
   "sittings": 119,
-  "rollCallVotes": 6319,
-  "finalVotes": 723,
-  "onFile": 685,
+  "rollCallVotes": 6373,
+  "finalVotes": 728,
+  "onFile": 690,
   "withoutBallotsAtSource": 38,
   "absencesHeldHere": 47684,
-  "recordsHere": 3783,
+  "recordsHere": 3790,
   "missing": [],
   "unpublished": [
     {
@@ -956,9 +956,9 @@
     },
     {
       "date": "2026-10-07",
-      "rollCalls": 0,
-      "finalVotes": 0,
-      "onFile": 0
+      "rollCalls": 54,
+      "finalVotes": 5,
+      "onFile": 5
     }
   ]
 }
