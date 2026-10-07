@@ -5,8 +5,8 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Amending Directive 2004/37/EC as regards the addition of substances and setting limit values in its Annexes I, III and IIIa",
-  "subtitle": "A10-0100/2026 - Liesbet Sommen - Accord provisoire - Am 46 — vote in plenary",
+  "title": "Protection of workers from the risks related to exposure to carcinogens, mutagens or reprotoxic substances at work",
+  "subtitle": "A10-0100/2026 – Liesbet Sommen – Provisional agreement – Am 46 — vote in plenary",
   "date": "2026-10-06",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2654,5 +2654,8 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "topics": [
+    "Jobs and workers"
+  ]
 }

@@ -5,11 +5,11 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "Report with recommendations to the Commission on psychosocial risk, stress and mental health at work",
-  "subtitle": "A10-0225/2026 - Estelle Ceulemans - Annexe, recommandation 16/3 — vote in plenary",
+  "title": "Psychosocial risks, stress and mental health at work",
+  "subtitle": "A10-0225/2026 – Estelle Ceulemans – Annex, recommendation 16/3 — vote in plenary",
   "date": "2026-10-06",
-  "voteRule": "simple-majority",
-  "voteRuleLabel": "Majority of votes cast",
+  "voteRule": "absolute-majority",
+  "voteRuleLabel": "Majority of Parliament's component members",
   "procedure": {
     "reference": "2026/2023",
     "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026/2023"
