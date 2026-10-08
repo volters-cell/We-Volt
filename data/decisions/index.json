@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 820,
+      "votes": 822,
       "from": "2024-07-17",
       "until": "2026-10-08",
       "file": null
@@ -81,6 +81,66 @@
   ],
   "decisions": [
     {
+      "id": "ep-2026-10-08-2026-2624-198187",
+      "sourceId": 198187,
+      "title": "State of play of advancing EU-Africa trade and investment relations",
+      "subtitle": "B10-0435/2026 - § 30/2 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 10,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        399,
+        150,
+        34
+      ],
+      "mepCount": 583,
+      "keywords": "2026/2624",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197893",
+      "sourceId": 197893,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 - § 24 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        407,
+        146,
+        36
+      ],
+      "mepCount": 589,
+      "keywords": "2026/2790",
+      "twin": true
+    },
+    {
       "id": "ep-2026-10-08-b10-0423-2026-197899",
       "sourceId": 197899,
       "title": "Upcoming EU anti-corruption strategy",
@@ -88,7 +148,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Rule of law"
+      ],
       "voteType": "Amendment",
       "aside": true,
       "committee": {
@@ -105,7 +167,8 @@
         205
       ],
       "mepCount": 587,
-      "keywords": "b10-0423/2026"
+      "keywords": "b10-0423/2026",
+      "twin": true
     },
     {
       "id": "ep-2026-10-08-b10-0424-2026-198051",
@@ -137,7 +200,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Environment"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 1,
@@ -160,7 +225,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Environment"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 1,
@@ -183,7 +250,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Trade"
+      ],
       "voteType": "Amendment",
       "aside": true,
       "committee": {
@@ -200,7 +269,8 @@
         10
       ],
       "mepCount": 582,
-      "keywords": "b10-0435/2026"
+      "keywords": "b10-0435/2026",
+      "twin": true
     },
     {
       "id": "ep-2026-10-08-b10-0436-2026-198204",
@@ -284,7 +354,10 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Armenia and Azerbaijan",
+        "Human rights"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 1,
@@ -306,7 +379,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Russia"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 4,
@@ -328,7 +403,9 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Georgia"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 1,
@@ -350,7 +427,10 @@
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Iran",
+        "Human rights"
+      ],
       "voteType": "Motion for a resolution",
       "committee": null,
       "rollCalls": 5,
@@ -564,7 +644,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Jobs and workers"
+      ],
       "voteType": "Provisional agreement",
       "committee": {
         "code": "EMPL",
@@ -590,7 +672,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Economy"
+      ],
       "voteType": "Provisional agreement",
       "committee": {
         "code": "ECON",
@@ -616,7 +700,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Economy and Budget"
+      ],
       "voteType": "Provisional agreement",
       "committee": {
         "code": "ECON",
@@ -668,7 +754,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Environment"
+      ],
       "voteType": "Commission proposal",
       "committee": {
         "code": "ENVI",
@@ -694,7 +782,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Environment"
+      ],
       "voteType": "Motion for a resolution",
       "committee": {
         "code": "ECON",
@@ -720,7 +810,9 @@
       "date": "2026-10-06",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Defence and security"
+      ],
       "voteType": "Motion to reject",
       "aside": true,
       "committee": {
@@ -748,7 +840,9 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [],
+      "topics": [
+        "Public health"
+      ],
       "voteType": "Motion for a resolution",
       "committee": {
         "code": "EMPL",
@@ -776,7 +870,9 @@
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "voteRuleLabel": "Majority of Parliament's component members",
-      "topics": [],
+      "topics": [
+        "Public health"
+      ],
       "voteType": "Recommendation",
       "committee": {
         "code": "EMPL",
