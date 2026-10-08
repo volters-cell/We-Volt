@@ -2599,7 +2599,7 @@ button.permalink {
 }
 .is-inset:hover .context-shape { fill: color-mix(in srgb, var(--context) 60%, var(--ink)); }
 .inset-caption {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: .04em;
   fill: var(--ink-soft);
@@ -2607,7 +2607,7 @@ button.permalink {
 }
 /* The map is drawn at half the size on a phone; the name is set larger in
    drawing units so that it reads at about nine pixels, not five. */
-@media (max-width: 62rem) { .inset-caption { font-size: 19px; } }
+@media (max-width: 62rem) { .inset-caption { font-size: 18px; } }
 
 /* What a vote asks for, quoted from the text that was voted. Set apart from
    the site's own writing, because these are not the site's words. */
