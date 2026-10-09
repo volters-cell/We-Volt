@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 822,
+      "votes": 823,
       "from": "2024-07-17",
       "until": "2026-10-08",
       "file": null
@@ -105,6 +105,36 @@
         399,
         150,
         34
+      ],
+      "mepCount": 583,
+      "keywords": "2026/2624",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2624-198188",
+      "sourceId": 198188,
+      "title": "State of play of advancing EU-Africa trade and investment relations",
+      "subtitle": "B10-0435/2026 – After recital D – Am 1 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 10,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        198,
+        367,
+        18
       ],
       "mepCount": 583,
       "keywords": "2026/2624",
@@ -301,11 +331,12 @@
     {
       "id": "ep-2026-10-08-b10-0465-2026-198175",
       "sourceId": 198175,
-      "title": "Draft Commission regulation amending Annex III to Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards certain botanical species containing hydroxyanthracene derivatives",
-      "subtitle": "B10-0465/2026 - Proposition de résolution — vote in plenary",
+      "title": "Objection: Certain botanical species containing hydroxyanthracene derivatives",
+      "subtitle": "B10-0465/2026 – Motion for a resolution — vote in plenary",
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
       "topics": [],
       "voteType": "Motion for a resolution",
       "committee": {
@@ -327,11 +358,12 @@
     {
       "id": "ep-2026-10-08-b10-0466-2026-198176",
       "sourceId": 198176,
-      "title": "Draft Commission regulation amending Annex III to Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards monacolins from red yeast rice",
-      "subtitle": "B10-0466/2026 - Proposition de résolution — vote in plenary",
+      "title": "Objection: Monacolins from red yeast rice",
+      "subtitle": "B10-0466/2026 – Motion for a resolution — vote in plenary",
       "date": "2026-10-08",
       "body": "parliament",
       "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
       "topics": [],
       "voteType": "Motion for a resolution",
       "committee": null,
