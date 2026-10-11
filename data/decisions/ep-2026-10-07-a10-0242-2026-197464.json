@@ -16,7 +16,10 @@
   },
   "document": "A10-0242/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses that Spain has confirmed that the measures supported by the EGF will not receive any financial contributions from other Union financial instruments",
+    "Recalls that national and regional authorities shall ensure equal opportunities in terms of gender, ensuring gender equality is integrated into and promoted throughout the implementation of the EGF measures"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 608 in favour, 55 against, 7 abstained. Result derived from the totals."
@@ -2734,5 +2737,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0242/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0242_EN.html"
+  }
 }

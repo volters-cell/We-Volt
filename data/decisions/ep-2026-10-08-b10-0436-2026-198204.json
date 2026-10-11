@@ -16,7 +16,10 @@
   },
   "document": "B10-0436/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that Parliament be regularly informed during the preparatory phase and implementation of the pilot, including through timely exchanges on objectives, governance, selection criteria and interim results",
+    "Stresses that European cooperation in school education should complement and support national systems, while fully respecting Member State competences in the field of education"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 443 in favour, 98 against, 47 abstained. Result derived from the totals."
@@ -2403,5 +2406,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0436/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0436_EN.html"
+  }
 }

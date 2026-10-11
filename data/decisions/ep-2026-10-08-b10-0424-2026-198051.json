@@ -16,7 +16,11 @@
   },
   "document": "B10-0424/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests that the Commission provide a comprehensive overview of all cases of EU funds awarded to persons and entities suspected of links to the Muslim Brotherhood or political Islam",
+    "Stresses that the fight against discrimination must not be diverted to prevent any criticism of political Islam or to confer institutional legitimacy on organised Islamist networks",
+    "Stresses that Europe must remain free, open and faithful to its principles, but that it can no longer fund, consult or legitimise networks that use its language, procedures and funding to weaken its values from within"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 381 in favour, 167 against, 15 abstained. Result derived from the totals."
@@ -2299,5 +2303,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0424/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0424_EN.html"
+  }
 }

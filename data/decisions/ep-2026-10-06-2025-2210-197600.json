@@ -16,7 +16,9 @@
   },
   "document": "A10-0238/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Notes in general that international taxation rules should seek to provide greater legal certainty, administrative stability and simplicity, thereby reducing compliance burdens by avoiding overlapping reporting requirements"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 364 in favour, 69 against, 162 abstained. Result derived from the totals."
@@ -2429,5 +2431,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0238/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0238_EN.html"
+  }
 }

@@ -16,7 +16,11 @@
   },
   "document": "B10-0423/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Member States that have yet to join the EPPO to do so without further delay",
+    "Urges the development of guidelines for efficient anti-corruption schemes in both the private and public sectors",
+    "Calls on the Commission to develop common indicators and an appropriate monitoring framework to assess the implementation and effectiveness of the strategy and of national anti-corruption policies across the EU"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 407 in favour, 146 against, 36 abstained. Result derived from the totals."
@@ -2405,5 +2409,9 @@
   "countries": {},
   "topics": [
     "Rule of law"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0423/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0423_EN.html"
+  }
 }

@@ -16,7 +16,10 @@
   },
   "document": "B10-0431/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to replace the fixed three-year recovery interval with a risk-based approach reflecting soil and water monitoring, actual lead accumulation and the technical and economic viability of recovery[14]",
+    "Calls on the Commission to assess the environmental impacts of surface plastic coverings, including soil sealing and micro- and nanoplastic pollution, before treating them as a generally applicable containment measure[15]"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 166 in favour, 346 against, 21 abstained. Result derived from the totals."
@@ -2182,5 +2185,9 @@
   "countries": {},
   "topics": [
     "Environment"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0431/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0431_EN.html"
+  }
 }
