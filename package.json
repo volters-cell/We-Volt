@@ -19,5 +19,5 @@
     "faces": "node scripts/mirror-faces.mjs",
     "previews": "node scripts/build-og-cards.mjs && node scripts/build-vote-pages.mjs"
   },
-  "license": "AGPL-3.0-or-later"
+
 }

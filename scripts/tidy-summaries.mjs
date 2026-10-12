@@ -19,7 +19,6 @@
  *
  * Offline.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

@@ -14,7 +14,6 @@
  * It needs Playwright. Where there is none it says so and exits 0, so that
  * running the test suite on a machine without a browser is not a failure.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';

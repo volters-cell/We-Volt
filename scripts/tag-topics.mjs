@@ -19,7 +19,6 @@
  * when a word is added to the vocabulary, the votes that word describes should
  * gain it, and a pass that only filled in blanks would leave them behind.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

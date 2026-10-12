@@ -24,7 +24,6 @@
  * every summary in the range is empty — and anything that were hand-written
  * would have to be checked before a deletion like this, not after.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, unlink } from 'node:fs/promises';
 import path from 'node:path';

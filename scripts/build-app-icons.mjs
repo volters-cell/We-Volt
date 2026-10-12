@@ -16,7 +16,6 @@
  *
  *   node scripts/build-app-icons.mjs
  *
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFileSync, mkdirSync } from 'node:fs';
 import { chromium } from 'playwright';

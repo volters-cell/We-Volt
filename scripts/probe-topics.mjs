@@ -21,7 +21,6 @@
  *
  * Reads and prints. Writes nothing.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { get, getAll, english, isRollCall } from './lib/portal.mjs';
 import { documentCode } from './fetch-plenary.mjs';

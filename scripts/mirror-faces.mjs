@@ -24,7 +24,6 @@
  * notice with attribution, which the about page carries.
  
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';

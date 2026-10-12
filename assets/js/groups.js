@@ -6,7 +6,6 @@
    of this table would drift, and a reader would meet two different marks for
    the same group on one page. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

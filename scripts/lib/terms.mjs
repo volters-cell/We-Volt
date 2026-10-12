@@ -7,7 +7,6 @@
    extends the first time the Parliament's own data lists a sitting of a new
    term.
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 import { readFileSync } from 'node:fs';
 

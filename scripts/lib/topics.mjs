@@ -1,6 +1,5 @@
 /* What a vote is about, read from its own title.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  *
  * The Parliament tags its documents with EuroVoc, and its open data portal
  * publishes the tags as bare numbers and refuses to name them: every concept

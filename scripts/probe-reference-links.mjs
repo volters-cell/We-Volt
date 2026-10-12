@@ -27,7 +27,6 @@
  *
  * Writes nothing. Run it from the Actions tab and read the table.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { chromium } from 'playwright';
 import { documentPath } from './lib/portal.mjs';

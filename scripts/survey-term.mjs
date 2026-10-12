@@ -12,7 +12,6 @@
  *
  * It reads and counts. It writes no records.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { getAll, isRollCall, ballotsOf } from './lib/portal.mjs';
 import { sittingDates, isFinalVote } from './fetch-plenary.mjs';

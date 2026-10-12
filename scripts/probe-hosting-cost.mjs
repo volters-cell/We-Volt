@@ -10,7 +10,6 @@
  *
  * It reads and reports; it changes nothing.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { chromium } from 'playwright';
 import { execSync } from 'node:child_process';

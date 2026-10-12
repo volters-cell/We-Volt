@@ -10,7 +10,6 @@
 
    The algorithm is ISO/IEC 18004. The tables below are from it. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

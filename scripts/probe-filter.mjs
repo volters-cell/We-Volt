@@ -14,7 +14,6 @@
  *
  * Reads and counts. Writes nothing.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { getAll, isRollCall, english } from './lib/portal.mjs';
 import { sittingDates } from './fetch-plenary.mjs';

@@ -18,7 +18,6 @@
  * English title either keeps what the Parliament published, because a French
  * title is worth more than no title.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

@@ -10,7 +10,6 @@
  * It reads and reports; it changes nothing. If the answer has moved, this is
  * where that shows up.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { chromium } from 'playwright';
 

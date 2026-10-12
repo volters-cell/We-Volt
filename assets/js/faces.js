@@ -12,7 +12,6 @@
    stay, which is a face-shaped thing with the right name on it rather than a
    broken image. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

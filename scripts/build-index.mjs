@@ -12,7 +12,6 @@
  * has dropped in yet.
  
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';

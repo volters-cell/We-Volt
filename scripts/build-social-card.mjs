@@ -16,7 +16,6 @@
  * needs it, which is why playwright is not a dependency of this project.
  
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import { readFileSync, writeFileSync, unlinkSync } from 'node:fs';

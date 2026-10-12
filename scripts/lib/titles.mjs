@@ -1,6 +1,5 @@
 /* A vote's title, in English and short enough to read in a list.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  *
  * The Parliament writes a title three ways and this site inherits all three.
  * The vote item gives a short name — "Global role of the euro" — and often

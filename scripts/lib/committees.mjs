@@ -1,6 +1,5 @@
 /* The committee that wrote a report, and what to call it.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  *
  * Which committee is data: it is on the document, as creator, in the
  * Parliament's own record — EP_ENVI, org/INTA. What is not data is the name.

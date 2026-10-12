@@ -15,7 +15,6 @@
  * dates back into delegations.json so the site can show, on any vote, the
  * people who were there to cast one.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

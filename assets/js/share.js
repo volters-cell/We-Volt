@@ -8,7 +8,6 @@
    Where the browser has a share sheet of its own — a phone, mostly — that is
    offered first, because it reaches whatever the reader actually uses. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

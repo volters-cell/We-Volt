@@ -1,6 +1,5 @@
 /* What a resolution actually asks for, in the Parliament's own words.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  *
  * A motion for a resolution is built of numbered operative paragraphs, each
  * beginning with a verb the Parliament uses deliberately: "Calls on Member

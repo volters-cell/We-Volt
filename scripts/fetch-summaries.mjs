@@ -25,7 +25,6 @@
  * www.europarl.europa.eu answers a plain HTTP client with an empty 202, so the
  * documents are opened in a browser. Run from Actions.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

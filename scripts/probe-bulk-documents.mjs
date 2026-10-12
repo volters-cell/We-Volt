@@ -17,7 +17,6 @@
  *
  * Reads and prints. Writes nothing.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { get } from './lib/portal.mjs';
 import { committeeOf } from './lib/committees.mjs';

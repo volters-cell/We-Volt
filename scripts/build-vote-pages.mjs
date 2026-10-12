@@ -21,7 +21,6 @@
  * Built at publish time and not committed — they are derived from the records,
  * and a copy of derived data in a repository is a copy that goes stale.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import path from 'node:path';

@@ -18,7 +18,6 @@
  *
  * Reads and prints. Writes nothing.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { sittingVotes } from './fetch-plenary.mjs';
 

@@ -3,7 +3,6 @@
    portal, so a change in its shape shows up here rather than on the site.
    Run with `npm test`. No framework — node is enough. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import assert from 'node:assert/strict';

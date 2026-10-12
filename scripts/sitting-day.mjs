@@ -25,7 +25,6 @@
  * out of date — the answer is yes. Importing on a quiet day costs a minute and
  * writes nothing. Missing a sitting is the failure that matters.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';

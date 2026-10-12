@@ -1,7 +1,6 @@
 /* The country panel — the thing the whole map exists to open: how did this
    country vote, member by member and group by group. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

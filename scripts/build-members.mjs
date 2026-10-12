@@ -16,7 +16,6 @@
  * megabytes of static files.
  
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import { readFile, writeFile, mkdir, readdir, rm } from 'node:fs/promises';

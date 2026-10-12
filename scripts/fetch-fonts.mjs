@@ -22,7 +22,6 @@
  * Run by .github/workflows/fonts.yml, because this sandbox cannot reach
  * fonts.gstatic.com.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';

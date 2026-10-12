@@ -1,6 +1,5 @@
 /* Where one vote can be checked, at the Parliament's own address.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  *
  * Every record used to cite data.europarl.europa.eu — the front door, with
  * nothing behind it for this vote — or, at best, the JSON of a whole sitting.

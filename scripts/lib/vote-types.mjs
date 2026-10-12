@@ -17,7 +17,6 @@
    into one vocabulary. It only names what the label says; a label it does not
    recognise gets no type rather than a guess.
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 // Order matters: the first that matches wins, so the specific comes before

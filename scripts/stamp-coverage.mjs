@@ -15,7 +15,6 @@
  *   node scripts/stamp-coverage.mjs           # write into about.html
  *   node scripts/stamp-coverage.mjs --check   # say what would change
  *
- *   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

@@ -1,7 +1,6 @@
 /* The map itself: one SVG, one path per member state, three colour layers.
    Everything a mouse can do here, a keyboard can do too. 
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 (function (global) {
   'use strict';

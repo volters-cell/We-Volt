@@ -17,7 +17,6 @@
  *
  * Offline: it needs no portal, only the rule.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';

@@ -7,7 +7,6 @@
  *   node scripts/build-single-file.mjs           -> dist/eu-tracker.html
  
 
-   SPDX-License-Identifier: AGPL-3.0-or-later
 */
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';

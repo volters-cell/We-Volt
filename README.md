@@ -305,12 +305,6 @@ views, and an inset for the outermost regions. The full plan is in
 
 ## Licence
 
-Code: **AGPL-3.0-or-later** ([LICENSE](LICENSE)). Copy it, change it, run your own — and
-publish your changes under the same licence. Section 13 is the clause that matters for a
-website: anyone running a modified version where other people can reach it over a network
-must offer those people the source of their version. Taking this site, renaming it, and
-keeping the changes to yourself is the one thing the licence does not allow.
-
 Data files authored here: CC BY 4.0. The votes themselves are the European Parliament's
 public record, reused under its own reuse notice — not ours to license, and nobody needs
 our permission to read them. The political groups' marks and the Volt wordmark are their

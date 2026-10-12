@@ -19,8 +19,6 @@
 # conflict anywhere else stops the job rather than guess.
 #
 # Writes changed=true|false to $GITHUB_OUTPUT, for a publish job to read.
-#
-#   SPDX-License-Identifier: AGPL-3.0-or-later
 set -euo pipefail
 
 message="$1"; shift

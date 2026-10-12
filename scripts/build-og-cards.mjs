@@ -24,7 +24,6 @@
  * The map is projected once and only its fills change per vote, which is what
  * makes seven hundred cards a matter of seconds rather than minutes.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import path from 'node:path';

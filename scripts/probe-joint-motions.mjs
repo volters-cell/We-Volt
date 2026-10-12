@@ -20,7 +20,6 @@
  *
  * Reads and prints. Writes nothing.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';

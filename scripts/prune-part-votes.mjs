@@ -12,7 +12,6 @@
  *
  * This deletes those records. A one-off: once run, the importer keeps them out.
  
-   SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { readdir, readFile, unlink } from 'node:fs/promises';
 import path from 'node:path';

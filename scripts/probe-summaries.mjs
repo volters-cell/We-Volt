@@ -27,7 +27,6 @@
  * of whatever text sits under them, and counts how much there is. It decides
  * nothing and writes nothing.
  *
- * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import { chromium } from 'playwright';
 
