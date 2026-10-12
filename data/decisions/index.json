@@ -53,7 +53,7 @@
       "Inadmissibility motion": "This was a vote on declaring the matter inadmissible.",
       "Agenda request": "This was a vote on a political group’s request to change the agenda."
     },
-    "updated": "2026-10-11",
+    "updated": "2026-10-12",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -137,7 +137,7 @@
         18
       ],
       "mepCount": 583,
-      "keywords": "2026/2624 stresses that long-term, stable trade and investment relations must be mutually beneficial and constitute a win-win for all parties involved recalls that the eu has been a reliable partner that adheres to the international rules-based order, providing stability and predictability, which create a competitive advantage for its trade partners notes that several epas remain non-operational or only partially applied; calls on the commission to intensify political dialogue aimed at concluding mutually beneficial agreements and ensuring their swift implementation",
+      "keywords": "2026/2624",
       "twin": true
     },
     {
@@ -376,7 +376,7 @@
         13
       ],
       "mepCount": 580,
-      "keywords": "b10-0466/2026 calls on the commission to withdraw the draft regulation and submit a new one to the committee"
+      "keywords": "b10-0466/2026"
     },
     {
       "id": "ep-2026-10-08-rc-b10-0438-2026-198252",
@@ -832,7 +832,7 @@
         162
       ],
       "mepCount": 595,
-      "keywords": "2025/2210 notes in general that international taxation rules should seek to provide greater legal certainty, administrative stability and simplicity, thereby reducing compliance burdens by avoiding overlapping reporting requirements"
+      "keywords": "2025/2210"
     },
     {
       "id": "ep-2026-10-06-2026-0078-197601",
@@ -890,7 +890,7 @@
         29
       ],
       "mepCount": 652,
-      "keywords": "2026/2023 stresses that individual resilience training or wellbeing programmes cannot replace employers’ legal obligations to prevent work-related psychosocial risks through proper work organisation stresses the urgent need to strengthen the eu legislative framework on the prevention, identification and management of work-related psychosocial risks and to ensure a high level of protection of workers’ health and safety",
+      "keywords": "2026/2023",
       "twin": true
     },
     {
@@ -920,7 +920,7 @@
         130
       ],
       "mepCount": 654,
-      "keywords": "2026/2023 stresses that individual resilience training or wellbeing programmes cannot replace employers’ legal obligations to prevent work-related psychosocial risks through proper work organisation stresses the urgent need to strengthen the eu legislative framework on the prevention, identification and management of work-related psychosocial risks and to ensure a high level of protection of workers’ health and safety",
+      "keywords": "2026/2023",
       "twin": true
     },
     {
