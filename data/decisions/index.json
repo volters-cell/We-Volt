@@ -53,7 +53,7 @@
       "Inadmissibility motion": "This was a vote on declaring the matter inadmissible.",
       "Agenda request": "This was a vote on a political group’s request to change the agenda."
     },
-    "updated": "2026-10-12",
+    "updated": "2026-10-13",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 823,
+      "votes": 825,
       "from": "2024-07-17",
       "until": "2026-10-08",
       "file": null
@@ -80,6 +80,36 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-08-2026-2624-198184",
+      "sourceId": 198184,
+      "title": "State of play of advancing EU-Africa trade and investment relations",
+      "subtitle": "B10-0435/2026 – After § 29 – Am 8 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "INTA",
+        "label": "International Trade",
+        "short": "Trade"
+      },
+      "rollCalls": 10,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        187,
+        386,
+        7
+      ],
+      "mepCount": 580,
+      "keywords": "2026/2624",
+      "twin": true
+    },
     {
       "id": "ep-2026-10-08-2026-2624-198187",
       "sourceId": 198187,
@@ -138,6 +168,36 @@
       ],
       "mepCount": 583,
       "keywords": "2026/2624",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197876",
+      "sourceId": 197876,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 – § 7 – Am 9 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        83,
+        427,
+        71
+      ],
+      "mepCount": 581,
+      "keywords": "2026/2790",
       "twin": true
     },
     {
