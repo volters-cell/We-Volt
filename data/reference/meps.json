@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-10-14",
+  "fetched": "2026-10-15",
   "term": 10,
   "terms": [
     10,
@@ -6555,7 +6555,7 @@
       "party": "Fidesz-Magyar Polgári Szövetség-Kereszténydemokrata Néppárt"
     },
     "214839": {
-      "name": "Emma WIESNER",
+      "name": "Emma YTTERELL",
       "country": "SE",
       "group": "Renew",
       "party": "Centerpartiet"

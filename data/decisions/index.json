@@ -53,7 +53,7 @@
       "Inadmissibility motion": "This was a vote on declaring the matter inadmissible.",
       "Agenda request": "This was a vote on a political group’s request to change the agenda."
     },
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 827,
+      "votes": 828,
       "from": "2024-07-17",
       "until": "2026-10-08",
       "file": null
@@ -257,6 +257,36 @@
         185
       ],
       "mepCount": 587,
+      "keywords": "2026/2790",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197891",
+      "sourceId": 197891,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 – § 22/3 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Part of the text",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        462,
+        115,
+        11
+      ],
+      "mepCount": 588,
       "keywords": "2026/2790",
       "twin": true
     },
