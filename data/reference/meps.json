@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-10-15",
+  "fetched": "2026-10-16",
   "term": 10,
   "terms": [
     10,
@@ -297,9 +297,7 @@
       "name": "Brice HORTEFEUX",
       "country": "FR",
       "group": "EPP",
-      "party": "Les Républicains",
-      "former": true,
-      "photo": "https://www.europarl.europa.eu/mepphoto/5565.jpg"
+      "party": "Les Républicains"
     },
     "5729": {
       "name": "Kathleen VAN BREMPT",
@@ -7737,7 +7735,8 @@
       "name": "Laurent CASTILLO",
       "country": "FR",
       "group": "PfE",
-      "party": "Union des droites pour la République"
+      "party": "Union des droites pour la République",
+      "former": true
     },
     "256922": {
       "name": "Marion MARÉCHAL",
