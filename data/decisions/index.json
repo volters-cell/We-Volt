@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 828,
+      "votes": 833,
       "from": "2024-07-17",
-      "until": "2026-10-08",
+      "until": "2026-10-19",
       "file": null
     },
     {
@@ -80,6 +80,130 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-19-ordre-du-jour-de-lundi-demande-des-groupes-ppe-et-ecr-emeu-198883",
+      "sourceId": 198883,
+      "title": "Ordre du jour de lundi - Demande des groupes PPE et ECR - Émeutes - Monday’s Agenda - Request from the PPE and ECR groups - Riots - Tagesordnung für Montag - Antrag der Fraktionen PPE und ECR - Proteste",
+      "subtitle": "Ordre du jour de lundi - Demande des groupes PPE et ECR - Émeutes — vote in plenary",
+      "date": "2026-10-19",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        282,
+        161,
+        6
+      ],
+      "mepCount": 449,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2026-10-19-ordre-du-jour-de-lundi-demande-du-groupe-pfe-emeutes-monda-198880",
+      "sourceId": 198880,
+      "title": "Ordre du jour de lundi - Demande du groupe PfE - Émeutes - Monday’s Agenda - Request from the PfE Group - Riots - Tagesordnung für Montag - Antrag der PfE-Fraktion - Proteste",
+      "subtitle": "Ordre du jour de lundi - Demande du groupe PfE - Émeutes — vote in plenary",
+      "date": "2026-10-19",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        115,
+        317,
+        12
+      ],
+      "mepCount": 444,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2026-10-19-ordre-du-jour-de-lundi-demande-du-groupe-s-d-emeutes-monda-198882",
+      "sourceId": 198882,
+      "title": "Ordre du jour de lundi - Demande du groupe S&D - Émeutes - Monday’s Agenda - Request from the S&D Group - Riots - Tagesordnung für Montag - Antrag der S&D-Fraktion - Proteste",
+      "subtitle": "Ordre du jour de lundi - Demande du groupe S&D - Émeutes — vote in plenary",
+      "date": "2026-10-19",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        166,
+        281,
+        1
+      ],
+      "mepCount": 448,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2026-10-19-ordre-du-jour-de-lundi-demande-du-groupe-the-left-emeutes--198881",
+      "sourceId": 198881,
+      "title": "Ordre du jour de lundi - Demande du groupe The Left - Émeutes - Monday’s Agenda - Request from The Left Group - Riots - Tagesordnung für Montag - Antrag der Fraktion The Left - Proteste",
+      "subtitle": "Ordre du jour de lundi - Demande du groupe The Left - Émeutes — vote in plenary",
+      "date": "2026-10-19",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Agenda request",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        64,
+        369,
+        11
+      ],
+      "mepCount": 444,
+      "keywords": ""
+    },
+    {
+      "id": "ep-2026-10-19-trump-administration-waiving-of-sanctions-and-tariffs-requ-198884",
+      "sourceId": 198884,
+      "title": "Trump administration waiving of sanctions and tariffs required on Russia",
+      "subtitle": "Ordre du jour de mardi - Demande du groupe Renew - Levée, par l'administration Trump, des sanctions et des droits de douane imposés à la Russie — vote in plenary",
+      "date": "2026-10-19",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Russia",
+        "Trade"
+      ],
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        351,
+        38,
+        55
+      ],
+      "mepCount": 444,
+      "keywords": ""
+    },
     {
       "id": "ep-2026-10-08-2026-2624-198183",
       "sourceId": 198183,
