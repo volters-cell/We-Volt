@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 833,
+      "votes": 844,
       "from": "2024-07-17",
-      "until": "2026-10-19",
+      "until": "2026-10-20",
       "file": null
     },
     {
@@ -80,6 +80,276 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-20-2023-0169-198290",
+      "sourceId": 198290,
+      "title": "Regulation of the European Parliament and of the Council Jurisdiction, applicable law, recognition and enforcement of measures and cooperation in matters relating to the protection of adults",
+      "subtitle": "A10-0128/2025 - Jana Toom - Accord provisoire - Am 140 — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "JURI",
+        "label": "Legal Affairs",
+        "short": "Legal Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        531,
+        93,
+        41
+      ],
+      "mepCount": 665,
+      "keywords": "2023/0169"
+    },
+    {
+      "id": "ep-2026-10-20-2023-0437-198338",
+      "sourceId": 198338,
+      "title": "Amending Regulations (EC) No 261/2004, (EC) No 1107/2006, (EU) No 1177/2010, (EU) No 181/2011 and (EU) 2021/782 as regards enforcement of passenger rights in the Union",
+      "subtitle": "A10-0136/2025 - Matteo Ricci - Accord provisoire - Am 172 — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        652,
+        2,
+        8
+      ],
+      "mepCount": 662,
+      "keywords": "2023/0437"
+    },
+    {
+      "id": "ep-2026-10-20-2024-0301-198311",
+      "sourceId": 198311,
+      "title": "Public interface connected to the Internal Market Information System for the declaration of posting of workers and amending Regulation (EU) No 1024/2012",
+      "subtitle": "A10-0162/2025 - Johan Danielsson, Andreas Schwab - Accord provisoire - Am 65 — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Jobs and workers"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        558,
+        93,
+        18
+      ],
+      "mepCount": 669,
+      "keywords": "2024/0301"
+    },
+    {
+      "id": "ep-2026-10-20-2025-0385-198425",
+      "sourceId": 198425,
+      "title": "Second report on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2024/1252",
+      "subtitle": "A10-0265/2026 - Mohammed Chahim - Proposition de la Commission et amendement — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        470,
+        83,
+        108
+      ],
+      "mepCount": 661,
+      "keywords": "2025/0385"
+    },
+    {
+      "id": "ep-2026-10-20-2025-0395-198423",
+      "sourceId": 198423,
+      "title": "Regulation of the European Parliament and of the Council suspending the application of the rules on the appointment of an authorised representative for extended producer responsibility for batteries and waste batteries and packaging and packaging waste",
+      "subtitle": "A10-0266/2026 - Ingeborg Ter Laak - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        616,
+        9,
+        39
+      ],
+      "mepCount": 664,
+      "keywords": "2025/0395"
+    },
+    {
+      "id": "ep-2026-10-20-2025-0396-198335",
+      "sourceId": 198335,
+      "title": "Directive of the European Parliament and of the Council suspending the application of the rules on the appointment of authorised representatives for extended producer responsibility for waste, waste electrical and electronical equipment and single use plastic waste",
+      "subtitle": "A10-0267/2026 - Ingeborg Ter Laak - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 7,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        612,
+        8,
+        39
+      ],
+      "mepCount": 659,
+      "keywords": "2025/0396"
+    },
+    {
+      "id": "ep-2026-10-20-2025-2121-198309",
+      "sourceId": 198309,
+      "title": "Combating VAT fraud – the effectiveness of cross-border cooperation when it comes to VAT fraud and its impact on the EU budget",
+      "subtitle": "A10-0213/2026 - Ondřej Knotek - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Tax"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        357,
+        274,
+        31
+      ],
+      "mepCount": 662,
+      "keywords": "2025/2121"
+    },
+    {
+      "id": "ep-2026-10-20-2026-2003-198291",
+      "sourceId": 198291,
+      "title": "Connecting Europe through high-speed rail",
+      "subtitle": "A10-0262/2026 - Vicent Marzà Ibáñez - Proposition de résolution — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Transport"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        558,
+        23,
+        73
+      ],
+      "mepCount": 654,
+      "keywords": "2026/2003"
+    },
+    {
+      "id": "ep-2026-10-20-2026-2027-198350",
+      "sourceId": 198350,
+      "title": "Report ‘Cohesion policy – the driving force in implementing the EU agenda for cities’",
+      "subtitle": "A10-0263/2026 - Denis Nesci - Proposition de résolution — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "REGI",
+        "label": "Regional Development",
+        "short": "Regional Development"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        601,
+        20,
+        36
+      ],
+      "mepCount": 657,
+      "keywords": "2026/2027"
+    },
+    {
+      "id": "ep-2026-10-20-2026-2819-198885",
+      "sourceId": 198885,
+      "title": "Commission delegated regulation of 9 July 2026 supplementing Regulation (EU) 2024/3012 of the European Parliament and of the Council by establishing the certification methodologies for carbon farming activities",
+      "subtitle": "B10-0471/2026 - Proposition de résolution — vote in plenary",
+      "date": "2026-10-20",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Climate"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        199,
+        407,
+        45
+      ],
+      "mepCount": 651,
+      "keywords": "2026/2819"
+    },
     {
       "id": "ep-2026-10-19-ordre-du-jour-de-lundi-demande-des-groupes-ppe-et-ecr-emeu-198883",
       "sourceId": 198883,
@@ -442,6 +712,36 @@
       ],
       "mepCount": 589,
       "keywords": "2026/2790 calls on the member states that have yet to join the eppo to do so without further delay urges the development of guidelines for efficient anti-corruption schemes in both the private and public sectors calls on the commission to develop common indicators and an appropriate monitoring framework to assess the implementation and effectiveness of the strategy and of national anti-corruption policies across the eu",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197902",
+      "sourceId": 197902,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 – After recital F – Am 1 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        195,
+        389,
+        4
+      ],
+      "mepCount": 588,
+      "keywords": "2026/2790",
       "twin": true
     },
     {
