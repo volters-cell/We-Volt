@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 844,
+      "votes": 854,
       "from": "2024-07-17",
-      "until": "2026-10-20",
+      "until": "2026-10-21",
       "file": null
     },
     {
@@ -81,10 +81,260 @@
   ],
   "decisions": [
     {
+      "id": "ep-2026-10-21-2025-0258-198325",
+      "sourceId": 198325,
+      "title": "Establishing the exchange, assistance and training programme for the protection of the euro against counterfeiting for the period 2028-2034 (the 'Pericles V' programme) and repealing Regulation (EU) 2021/840",
+      "subtitle": "A10-0256/2026 - Michael McNamara - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Economy"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 4,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        629,
+        7,
+        31
+      ],
+      "mepCount": 667,
+      "keywords": "2025/0258"
+    },
+    {
+      "id": "ep-2026-10-21-2025-2147-198357",
+      "sourceId": 198357,
+      "title": "Second report on discharge in respect of the implementation of the general budget of the European Union for the financial year 2024, Section II",
+      "subtitle": "A10-0258/2026 - Pasquale Tridico - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
+      "rollCalls": 5,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        434,
+        203,
+        21
+      ],
+      "mepCount": 658,
+      "keywords": "2025/2147"
+    },
+    {
+      "id": "ep-2026-10-21-2026-0137-198386",
+      "sourceId": 198386,
+      "title": "Guidelines for the employment policies of the Member States",
+      "subtitle": "A10-0260/2026 - Li Andersson - Proposition de la Commission au Conseil — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Jobs and workers"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 17,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        434,
+        212,
+        23
+      ],
+      "mepCount": 669,
+      "keywords": "2026/0137"
+    },
+    {
+      "id": "ep-2026-10-21-2026-0196-198774",
+      "sourceId": 198774,
+      "title": "Council position on the draft general budget of the European Union for the financial year 2027",
+      "subtitle": "A10-0272/2026 - Nils Ušakovs, Michalis Hadjipantela - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 104,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        400,
+        189,
+        84
+      ],
+      "mepCount": 673,
+      "keywords": "2026/0196"
+    },
+    {
+      "id": "ep-2026-10-21-2026-0254-198409",
+      "sourceId": 198409,
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Finland",
+      "subtitle": "A10-0273/2026 - Aura Salla - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        609,
+        51,
+        14
+      ],
+      "mepCount": 674,
+      "keywords": "2026/0254"
+    },
+    {
+      "id": "ep-2026-10-21-2026-0284-198299",
+      "sourceId": 198299,
+      "title": "Mobilisation of the European Union Solidarity Fund to provide assistance to Malta and Italy regarding the storm Harry in January 2026 and to Portugal and Spain following the storms in January and February 2026",
+      "subtitle": "A10-0274/2026 - Lucia Yar - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Malta",
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        651,
+        17,
+        3
+      ],
+      "mepCount": 671,
+      "keywords": "2026/0284"
+    },
+    {
+      "id": "ep-2026-10-21-2026-2070-198302",
+      "sourceId": 198302,
+      "title": "Boosting skills in the Union – opportunities for vocational education and training in times of transition",
+      "subtitle": "A10-0259/2026 - Brigitte van den Berg - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Education and culture"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        504,
+        63,
+        99
+      ],
+      "mepCount": 666,
+      "keywords": "2026/2070"
+    },
+    {
+      "id": "ep-2026-10-21-2026-2880-198947",
+      "sourceId": 198947,
+      "title": "Draft Commission implementing decision renewing the authorisation for placing on the market of products containing, consisting of or produced from genetically modified soybean MON 87769 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
+      "subtitle": "B10-0469/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Food and farming"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        442,
+        196,
+        9
+      ],
+      "mepCount": 647,
+      "keywords": "2026/2880"
+    },
+    {
+      "id": "ep-2026-10-21-draft-general-budget-of-the-european-union-for-the-financi-199244",
+      "sourceId": 199244,
+      "title": "Draft general budget of the European Union for the financial year 2027 – all sections",
+      "subtitle": "Projet de budget général de l'Union européenne pour l'exercice 2027 - toutes sections - 1 0 0 6 - Am 296 — vote in plenary",
+      "date": "2026-10-21",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 14,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        112,
+        465,
+        87
+      ],
+      "mepCount": 664,
+      "keywords": ""
+    },
+    {
       "id": "ep-2026-10-20-2023-0169-198290",
       "sourceId": 198290,
-      "title": "Regulation of the European Parliament and of the Council Jurisdiction, applicable law, recognition and enforcement of measures and cooperation in matters relating to the protection of adults",
-      "subtitle": "A10-0128/2025 - Jana Toom - Accord provisoire - Am 140 — vote in plenary",
+      "title": "Protection of adults: jurisdiction, applicable law, recognition and enforcement of measures and cooperation",
+      "subtitle": "A10-0128/2025 – Jana Toom – Provisional agreement – Am 140 — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -109,12 +359,14 @@
     {
       "id": "ep-2026-10-20-2023-0437-198338",
       "sourceId": 198338,
-      "title": "Amending Regulations (EC) No 261/2004, (EC) No 1107/2006, (EU) No 1177/2010, (EU) No 181/2011 and (EU) 2021/782 as regards enforcement of passenger rights in the Union",
-      "subtitle": "A10-0136/2025 - Matteo Ricci - Accord provisoire - Am 172 — vote in plenary",
+      "title": "Transport: enforcement of passenger rights in the Union",
+      "subtitle": "A10-0136/2025 – Matteo Ricci – Provisional agreement – Am 172 — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Transport"
+      ],
       "voteType": "Provisional agreement",
       "committee": {
         "code": "TRAN",
@@ -135,8 +387,8 @@
     {
       "id": "ep-2026-10-20-2024-0301-198311",
       "sourceId": 198311,
-      "title": "Public interface connected to the Internal Market Information System for the declaration of posting of workers and amending Regulation (EU) No 1024/2012",
-      "subtitle": "A10-0162/2025 - Johan Danielsson, Andreas Schwab - Accord provisoire - Am 65 — vote in plenary",
+      "title": "Public interface connected to the Internal Market Information System for the declaration of posting of workers",
+      "subtitle": "A10-0162/2025 – Johan Danielsson, Andreas Schwab – Provisional agreement – Am 65 — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -163,8 +415,8 @@
     {
       "id": "ep-2026-10-20-2025-0385-198425",
       "sourceId": 198425,
-      "title": "Second report on the proposal for a regulation of the European Parliament and of the Council amending Regulation (EU) 2024/1252",
-      "subtitle": "A10-0265/2026 - Mohammed Chahim - Proposition de la Commission et amendement — vote in plenary",
+      "title": "Amendments to the Critical Raw Materials Act",
+      "subtitle": "A10-0265/2026 – Mohammed Chahim – Commission proposal and amendment — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -189,8 +441,8 @@
     {
       "id": "ep-2026-10-20-2025-0395-198423",
       "sourceId": 198423,
-      "title": "Regulation of the European Parliament and of the Council suspending the application of the rules on the appointment of an authorised representative for extended producer responsibility for batteries and waste batteries and packaging and packaging waste",
-      "subtitle": "A10-0266/2026 - Ingeborg Ter Laak - Proposition de la Commission — vote in plenary",
+      "title": "Suspending the application of the rules on extended producer responsibility for batteries and waste batteries and packaging and packaging waste (Omnibus VIII on environmental legislation)",
+      "subtitle": "A10-0266/2026 – Ingeborg Ter Laak – Commission proposal — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -217,8 +469,8 @@
     {
       "id": "ep-2026-10-20-2025-0396-198335",
       "sourceId": 198335,
-      "title": "Directive of the European Parliament and of the Council suspending the application of the rules on the appointment of authorised representatives for extended producer responsibility for waste, waste electrical and electronical equipment and single use plastic waste",
-      "subtitle": "A10-0267/2026 - Ingeborg Ter Laak - Proposition de la Commission — vote in plenary",
+      "title": "Suspending the application of the rules on extended producer responsibility for waste, waste electrical and electronical equipment and single use plastic waste (Omnibus VIII on environmental legislation)",
+      "subtitle": "A10-0267/2026 – Ingeborg Ter Laak – Commission proposal — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -246,7 +498,7 @@
       "id": "ep-2026-10-20-2025-2121-198309",
       "sourceId": 198309,
       "title": "Combating VAT fraud – the effectiveness of cross-border cooperation when it comes to VAT fraud and its impact on the EU budget",
-      "subtitle": "A10-0213/2026 - Ondřej Knotek - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "A10-0213/2026 – Ondřej Knotek – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -274,7 +526,7 @@
       "id": "ep-2026-10-20-2026-2003-198291",
       "sourceId": 198291,
       "title": "Connecting Europe through high-speed rail",
-      "subtitle": "A10-0262/2026 - Vicent Marzà Ibáñez - Proposition de résolution — vote in plenary",
+      "subtitle": "A10-0262/2026 – Vicent Marzà Ibáñez – Motion for a resolution — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -301,8 +553,8 @@
     {
       "id": "ep-2026-10-20-2026-2027-198350",
       "sourceId": 198350,
-      "title": "Report ‘Cohesion policy – the driving force in implementing the EU agenda for cities’",
-      "subtitle": "A10-0263/2026 - Denis Nesci - Proposition de résolution — vote in plenary",
+      "title": "Cohesion policy – the driving force in implementing the EU agenda for cities",
+      "subtitle": "A10-0263/2026 – Denis Nesci – Motion for a resolution — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -329,11 +581,12 @@
     {
       "id": "ep-2026-10-20-2026-2819-198885",
       "sourceId": 198885,
-      "title": "Commission delegated regulation of 9 July 2026 supplementing Regulation (EU) 2024/3012 of the European Parliament and of the Council by establishing the certification methodologies for carbon farming activities",
-      "subtitle": "B10-0471/2026 - Proposition de résolution — vote in plenary",
+      "title": "Objection: Certification methodologies for carbon farming activities",
+      "subtitle": "B10-0471/2026 – Motion for a resolution — vote in plenary",
       "date": "2026-10-20",
       "body": "parliament",
       "bodyLabel": "European Parliament",
+      "voteRuleLabel": "Majority of Parliament's component members",
       "topics": [
         "Climate"
       ],
@@ -651,6 +904,36 @@
         185
       ],
       "mepCount": 587,
+      "keywords": "2026/2790",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197887",
+      "sourceId": 197887,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 – After § 19 – Am 4 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        198,
+        378,
+        12
+      ],
+      "mepCount": 588,
       "keywords": "2026/2790",
       "twin": true
     },
