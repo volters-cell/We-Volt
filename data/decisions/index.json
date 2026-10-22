@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 854,
+      "votes": 862,
       "from": "2024-07-17",
-      "until": "2026-10-21",
+      "until": "2026-10-22",
       "file": null
     },
     {
@@ -81,10 +81,221 @@
   ],
   "decisions": [
     {
+      "id": "ep-2026-10-22-a10-0104-2026-199380",
+      "sourceId": 199380,
+      "title": "Amending Regulations (EC) No 1272/2008, (EC) No 1223/2009 and (EU) 2019/1009 as regards simplification of certain requirements and procedures for chemical products",
+      "subtitle": "A10-0104/2026 - Dimitris Tsiodras, Piotr Müller - Proposition de rejet - Am 119 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Motion to reject",
+      "aside": true,
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        93,
+        480,
+        2
+      ],
+      "mepCount": 575,
+      "keywords": "a10-0104/2026"
+    },
+    {
+      "id": "ep-2026-10-22-a10-0257-2026-198405",
+      "sourceId": 198405,
+      "title": "Establishing the Erasmus+ programme for the period 2028-2034, and repealing Regulations (EU) 2021/817 and (EU) 2021/888",
+      "subtitle": "A10-0257/2026 - Bogdan Andrzej Zdrojewski - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Education and culture"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "CULT",
+        "label": "Culture and Education",
+        "short": "Culture and Education"
+      },
+      "rollCalls": 9,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        454,
+        34,
+        93
+      ],
+      "mepCount": 581,
+      "keywords": "a10-0257/2026"
+    },
+    {
+      "id": "ep-2026-10-22-a10-0264-2026-198292",
+      "sourceId": 198292,
+      "title": "Cohesion policy in the EU’s eastern border regions: strengthening territorial resilience and cross-border cooperation",
+      "subtitle": "A10-0264/2026 - Jacek Protas - Proposition de résolution — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "REGI",
+        "label": "Regional Development",
+        "short": "Regional Development"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        414,
+        79,
+        90
+      ],
+      "mepCount": 583,
+      "keywords": "a10-0264/2026"
+    },
+    {
+      "id": "ep-2026-10-22-a10-0276-2026-199470",
+      "sourceId": 199470,
+      "title": "Amending Directive 2003/87/EC as regards revised benchmark values for the heat and fuel benchmarks for the period from 2026 to 2030",
+      "subtitle": "A10-0276/2026 - Adam Jarubas - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        474,
+        82,
+        28
+      ],
+      "mepCount": 584,
+      "keywords": "a10-0276/2026"
+    },
+    {
+      "id": "ep-2026-10-22-b10-0468-2026-199356",
+      "sourceId": 199356,
+      "title": "The 2026 UN Climate Change Conference in Antalya, Türkiye (COP31)",
+      "subtitle": "B10-0468/2026 - Considérant G - Am 15 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Türkiye",
+        "Climate"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 8,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        128,
+        362,
+        56
+      ],
+      "mepCount": 546,
+      "keywords": "b10-0468/2026"
+    },
+    {
+      "id": "ep-2026-10-22-c10-0258-2026-199592",
+      "sourceId": 199592,
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "subtitle": "C10-0258/2026 - Proposition de la Commission — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Climate"
+      ],
+      "voteType": "Commission proposal",
+      "committee": null,
+      "rollCalls": 23,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        341,
+        225,
+        6
+      ],
+      "mepCount": 572,
+      "keywords": "c10-0258/2026"
+    },
+    {
+      "id": "ep-2026-10-22-rc-b10-0476-2026-199517",
+      "sourceId": 199517,
+      "title": "Escalation of Russian strikes in the EU, particularly on Black Sea shipping, threatening human life, regional stability and food security",
+      "subtitle": "RC-B10-0476/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Russia",
+        "Food and farming"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 16,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        432,
+        52,
+        88
+      ],
+      "mepCount": 572,
+      "keywords": "rc-b10-0476/2026"
+    },
+    {
+      "id": "ep-2026-10-22-rc-b10-0482-2026-199486",
+      "sourceId": 199486,
+      "title": "Escalation of Houthi attacks and implications for regional security",
+      "subtitle": "RC-B10-0482/2026 - Après le considérant D - Am 3/2 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 9,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        116,
+        390,
+        57
+      ],
+      "mepCount": 563,
+      "keywords": "rc-b10-0482/2026"
+    },
+    {
       "id": "ep-2026-10-21-2025-0258-198325",
       "sourceId": 198325,
-      "title": "Establishing the exchange, assistance and training programme for the protection of the euro against counterfeiting for the period 2028-2034 (the 'Pericles V' programme) and repealing Regulation (EU) 2021/840",
-      "subtitle": "A10-0256/2026 - Michael McNamara - Proposition de la Commission — vote in plenary",
+      "title": "Pericles V exchange, assistance and training programme for the protection of the euro against counterfeiting 2028–2034",
+      "subtitle": "A10-0256/2026 – Michael McNamara – Commission proposal — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -111,8 +322,8 @@
     {
       "id": "ep-2026-10-21-2025-2147-198357",
       "sourceId": 198357,
-      "title": "Second report on discharge in respect of the implementation of the general budget of the European Union for the financial year 2024, Section II",
-      "subtitle": "A10-0258/2026 - Pasquale Tridico - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Discharge 2024: EU general budget – European Council and Council",
+      "subtitle": "A10-0258/2026 – Pasquale Tridico – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -140,7 +351,7 @@
       "id": "ep-2026-10-21-2026-0137-198386",
       "sourceId": 198386,
       "title": "Guidelines for the employment policies of the Member States",
-      "subtitle": "A10-0260/2026 - Li Andersson - Proposition de la Commission au Conseil — vote in plenary",
+      "subtitle": "A10-0260/2026 – Li Andersson – Commission proposal to the Council — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -167,8 +378,8 @@
     {
       "id": "ep-2026-10-21-2026-0196-198774",
       "sourceId": 198774,
-      "title": "Council position on the draft general budget of the European Union for the financial year 2027",
-      "subtitle": "A10-0272/2026 - Nils Ušakovs, Michalis Hadjipantela - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "General budget of the European Union for the financial year 2027 – all sections",
+      "subtitle": "A10-0272/2026 – Nils Ušakovs, Michalis Hadjipantela – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -195,8 +406,8 @@
     {
       "id": "ep-2026-10-21-2026-0254-198409",
       "sourceId": 198409,
-      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Finland",
-      "subtitle": "A10-0273/2026 - Aura Salla - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/004 FI/Etelä-Suomi and Helsinki-Uusimaa paper",
+      "subtitle": "A10-0273/2026 – Aura Salla – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -223,8 +434,8 @@
     {
       "id": "ep-2026-10-21-2026-0284-198299",
       "sourceId": 198299,
-      "title": "Mobilisation of the European Union Solidarity Fund to provide assistance to Malta and Italy regarding the storm Harry in January 2026 and to Portugal and Spain following the storms in January and February 2026",
-      "subtitle": "A10-0274/2026 - Lucia Yar - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Mobilisation of the European Union Solidarity Fund: assistance to Malta, Italy, Portugal and Spain with regard to storms in 2026",
+      "subtitle": "A10-0274/2026 – Lucia Yar – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -253,7 +464,7 @@
       "id": "ep-2026-10-21-2026-2070-198302",
       "sourceId": 198302,
       "title": "Boosting skills in the Union – opportunities for vocational education and training in times of transition",
-      "subtitle": "A10-0259/2026 - Brigitte van den Berg - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "A10-0259/2026 – Brigitte van den Berg – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -280,8 +491,8 @@
     {
       "id": "ep-2026-10-21-2026-2880-198947",
       "sourceId": 198947,
-      "title": "Draft Commission implementing decision renewing the authorisation for placing on the market of products containing, consisting of or produced from genetically modified soybean MON 87769 pursuant to Regulation (EC) No 1829/2003 of the European Parliament and of the Council",
-      "subtitle": "B10-0469/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Objection: Genetically modified soybean MON 87769",
+      "subtitle": "B10-0469/2026 – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-10-21",
       "body": "parliament",
       "bodyLabel": "European Parliament",
