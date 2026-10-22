@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 862,
+      "votes": 865,
       "from": "2024-07-17",
       "until": "2026-10-22",
       "file": null
@@ -80,6 +80,61 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-10-22-2026-2666-199351",
+      "sourceId": 199351,
+      "title": "The 2026 UN Climate Change Conference in Antalya, Türkiye (COP31)",
+      "subtitle": "B10-0468/2026 - Après le § 43 - Am 5 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Türkiye",
+        "Climate"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        448,
+        56,
+        51
+      ],
+      "mepCount": 555,
+      "keywords": "2026/2666",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-22-2026-2939-199475",
+      "sourceId": 199475,
+      "title": "Escalation of Houthi attacks and implications for regional security",
+      "subtitle": "RC-B10-0482/2026 - § 1 - Am 1 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 9,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        287,
+        253,
+        22
+      ],
+      "mepCount": 562,
+      "keywords": "2026/2939",
+      "twin": true
+    },
     {
       "id": "ep-2026-10-22-a10-0104-2026-199380",
       "sourceId": 199380,
@@ -217,7 +272,8 @@
         56
       ],
       "mepCount": 546,
-      "keywords": "b10-0468/2026"
+      "keywords": "b10-0468/2026",
+      "twin": true
     },
     {
       "id": "ep-2026-10-22-c10-0258-2026-199592",
@@ -289,7 +345,8 @@
         57
       ],
       "mepCount": 563,
-      "keywords": "rc-b10-0482/2026"
+      "keywords": "rc-b10-0482/2026",
+      "twin": true
     },
     {
       "id": "ep-2026-10-21-2025-0258-198325",
@@ -1206,6 +1263,36 @@
       ],
       "mepCount": 589,
       "keywords": "2026/2790 calls on the member states that have yet to join the eppo to do so without further delay urges the development of guidelines for efficient anti-corruption schemes in both the private and public sectors calls on the commission to develop common indicators and an appropriate monitoring framework to assess the implementation and effectiveness of the strategy and of national anti-corruption policies across the eu",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-08-2026-2790-197895",
+      "sourceId": 197895,
+      "title": "Upcoming EU anti-corruption strategy",
+      "subtitle": "B10-0423/2026 – After § 27 – Am 13 — vote in plenary",
+      "date": "2026-10-08",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 14,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        57,
+        311,
+        216
+      ],
+      "mepCount": 584,
+      "keywords": "2026/2790",
       "twin": true
     },
     {
