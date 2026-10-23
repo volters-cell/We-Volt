@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 865,
+      "votes": 867,
       "from": "2024-07-17",
       "until": "2026-10-22",
       "file": null
@@ -112,6 +112,36 @@
       "twin": true
     },
     {
+      "id": "ep-2026-10-22-2026-2666-199353",
+      "sourceId": 199353,
+      "title": "UN Climate Change Conference 2026 in Antalya, Türkiye (COP31)",
+      "subtitle": "B10-0468/2026 – § 54 – Am 19 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Türkiye",
+        "Climate"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 8,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        217,
+        338,
+        10
+      ],
+      "mepCount": 565,
+      "keywords": "2026/2666"
+    },
+    {
       "id": "ep-2026-10-22-2026-2939-199475",
       "sourceId": 199475,
       "title": "Escalation of Houthi attacks and implications for regional security",
@@ -132,6 +162,30 @@
         22
       ],
       "mepCount": 562,
+      "keywords": "2026/2939",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-22-2026-2939-199483",
+      "sourceId": 199483,
+      "title": "Escalation of Houthi attacks and implications for regional security",
+      "subtitle": "RC-B10-0482/2026 – After § 25 – Am 2/2 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 9,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        175,
+        390,
+        9
+      ],
+      "mepCount": 574,
       "keywords": "2026/2939",
       "twin": true
     },
@@ -279,7 +333,7 @@
       "id": "ep-2026-10-22-c10-0258-2026-199592",
       "sourceId": 199592,
       "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
-      "subtitle": "C10-0258/2026 - Proposition de la Commission — vote in plenary",
+      "subtitle": "C10-0258/2026 – Commission proposal — vote in plenary",
       "date": "2026-10-22",
       "body": "parliament",
       "bodyLabel": "European Parliament",
