@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-10-23",
+  "fetched": "2026-10-25",
   "term": 10,
   "terms": [
     10,
@@ -6324,10 +6324,7 @@
       "name": "Antoni COMÍN I OLIVERES",
       "country": "ES",
       "group": "NI",
-      "party": "Junts per Catalunya - Lliures per Europa",
-      "former": true,
-      "photo": "https://www.europarl.europa.eu/mepphoto/202352.jpg",
-      "partyShort": "JxCat-Junts"
+      "party": "Junts per Catalunya - Lliures per Europa"
     },
     "204129": {
       "name": "Nikolina BRNJAC",
