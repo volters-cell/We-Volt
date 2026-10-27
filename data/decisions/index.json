@@ -53,7 +53,7 @@
       "Inadmissibility motion": "This was a vote on declaring the matter inadmissible.",
       "Agenda request": "This was a vote on a political group’s request to change the agenda."
     },
-    "updated": "2026-10-26",
+    "updated": "2026-10-27",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 867,
+      "votes": 868,
       "from": "2024-07-17",
       "until": "2026-10-22",
       "file": null
@@ -81,10 +81,38 @@
   ],
   "decisions": [
     {
+      "id": "ep-2026-10-22-2025-0531-198430",
+      "sourceId": 198430,
+      "title": "Simplification of certain requirements and procedures for chemical products",
+      "subtitle": "A10-0104/2026 – Dimitris Tsiodras, Piotr Müller – Provisional agreement – Am 118 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        477,
+        59,
+        41
+      ],
+      "mepCount": 577,
+      "keywords": "2025/0531"
+    },
+    {
       "id": "ep-2026-10-22-2026-2666-199351",
       "sourceId": 199351,
-      "title": "The 2026 UN Climate Change Conference in Antalya, Türkiye (COP31)",
-      "subtitle": "B10-0468/2026 - Après le § 43 - Am 5 — vote in plenary",
+      "title": "UN Climate Change Conference 2026 in Antalya, Türkiye (COP31)",
+      "subtitle": "B10-0468/2026 – After § 43 – Am 5 — vote in plenary",
       "date": "2026-10-22",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -139,13 +167,14 @@
         10
       ],
       "mepCount": 565,
-      "keywords": "2026/2666"
+      "keywords": "2026/2666",
+      "twin": true
     },
     {
       "id": "ep-2026-10-22-2026-2939-199475",
       "sourceId": 199475,
       "title": "Escalation of Houthi attacks and implications for regional security",
-      "subtitle": "RC-B10-0482/2026 - § 1 - Am 1 — vote in plenary",
+      "subtitle": "RC-B10-0482/2026 – § 1 – Am 1 — vote in plenary",
       "date": "2026-10-22",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -326,8 +355,7 @@
         56
       ],
       "mepCount": 546,
-      "keywords": "b10-0468/2026",
-      "twin": true
+      "keywords": "b10-0468/2026"
     },
     {
       "id": "ep-2026-10-22-c10-0258-2026-199592",
