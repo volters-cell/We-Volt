@@ -1,6 +1,6 @@
 {
   "source": "https://data.europarl.europa.eu/api/v2/meps/show-current",
-  "fetched": "2026-10-27",
+  "fetched": "2026-10-28",
   "term": 10,
   "terms": [
     10,
@@ -4905,7 +4905,7 @@
     "197662": {
       "name": "Vangelis MEIMARAKIS",
       "country": "GR",
-      "group": null,
+      "group": "EPP",
       "party": "Nea Demokratia"
     },
     "197663": {
