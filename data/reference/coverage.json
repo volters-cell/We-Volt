@@ -1,16 +1,16 @@
 {
-  "checked": "2026-10-07",
+  "checked": "2026-11-05",
   "window": {
     "from": "2024-07-16",
-    "until": "2026-10-07"
+    "until": "2026-11-05"
   },
-  "sittings": 119,
-  "rollCallVotes": 6373,
-  "finalVotes": 728,
-  "onFile": 690,
-  "withoutBallotsAtSource": 38,
+  "sittings": 124,
+  "rollCallVotes": 6809,
+  "finalVotes": 769,
+  "onFile": 725,
+  "withoutBallotsAtSource": 44,
   "absencesHeldHere": 47684,
-  "recordsHere": 3790,
+  "recordsHere": 3854,
   "missing": [],
   "unpublished": [
     {
@@ -159,13 +159,13 @@
     },
     {
       "date": "2026-06-16",
-      "votingId": "193486",
+      "votingId": "193685",
       "title": null,
       "ballots": 0
     },
     {
       "date": "2026-06-16",
-      "votingId": "193685",
+      "votingId": "193486",
       "title": null,
       "ballots": 0
     },
@@ -177,13 +177,13 @@
     },
     {
       "date": "2026-06-18",
-      "votingId": "193659",
+      "votingId": "194468",
       "title": null,
       "ballots": 0
     },
     {
       "date": "2026-06-18",
-      "votingId": "194468",
+      "votingId": "193659",
       "title": null,
       "ballots": 0
     },
@@ -225,19 +225,55 @@
     },
     {
       "date": "2026-09-17",
-      "votingId": "197202",
+      "votingId": "197201",
       "title": null,
       "ballots": 0
     },
     {
       "date": "2026-09-17",
-      "votingId": "197201",
+      "votingId": "197202",
       "title": null,
       "ballots": 0
     },
     {
       "date": "2026-10-06",
       "votingId": "197386",
+      "title": null,
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-07",
+      "votingId": "197491",
+      "title": null,
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-08",
+      "votingId": "198052",
+      "title": "B10-0429/2026",
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-08",
+      "votingId": "198053",
+      "title": "B10-0430/2026",
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-20",
+      "votingId": "198323",
+      "title": null,
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-20",
+      "votingId": "198349",
+      "title": null,
+      "ballots": 0
+    },
+    {
+      "date": "2026-10-22",
+      "votingId": "198456",
       "title": null,
       "ballots": 0
     }
@@ -956,8 +992,38 @@
     },
     {
       "date": "2026-10-07",
-      "rollCalls": 54,
+      "rollCalls": 55,
+      "finalVotes": 6,
+      "onFile": 5
+    },
+    {
+      "date": "2026-10-08",
+      "rollCalls": 150,
+      "finalVotes": 12,
+      "onFile": 10
+    },
+    {
+      "date": "2026-10-19",
+      "rollCalls": 5,
       "finalVotes": 5,
+      "onFile": 5
+    },
+    {
+      "date": "2026-10-20",
+      "rollCalls": 28,
+      "finalVotes": 9,
+      "onFile": 7
+    },
+    {
+      "date": "2026-10-21",
+      "rollCalls": 158,
+      "finalVotes": 8,
+      "onFile": 8
+    },
+    {
+      "date": "2026-10-22",
+      "rollCalls": 94,
+      "finalVotes": 6,
       "onFile": 5
     }
   ]
