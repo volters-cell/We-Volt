@@ -53,7 +53,7 @@
       "Inadmissibility motion": "This was a vote on declaring the matter inadmissible.",
       "Agenda request": "This was a vote on a political group’s request to change the agenda."
     },
-    "updated": "2026-11-04",
+    "updated": "2026-11-05",
     "dataStatus": "Votes of the European Parliament, from its open data portal. Summaries are editorial and may be absent. See about.html."
   },
   "term": 10,
@@ -63,7 +63,7 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 871,
+      "votes": 872,
       "from": "2024-07-17",
       "until": "2026-10-22",
       "file": null
@@ -220,6 +220,30 @@
         287,
         253,
         22
+      ],
+      "mepCount": 562,
+      "keywords": "2026/2939",
+      "twin": true
+    },
+    {
+      "id": "ep-2026-10-22-2026-2939-199478",
+      "sourceId": 199478,
+      "title": "Escalation of Houthi attacks and implications for regional security",
+      "subtitle": "RC-B10-0482/2026 – After § 1 – Am 4/2 — vote in plenary",
+      "date": "2026-10-22",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 9,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        106,
+        400,
+        56
       ],
       "mepCount": 562,
       "keywords": "2026/2939",
