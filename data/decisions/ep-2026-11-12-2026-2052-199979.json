@@ -5,8 +5,8 @@
   "dataNote": "Vote of the European Parliament, imported from its open data portal. The portal records how each member voted; it does not state whether this text carried, so the result below follows from the totals — more in favour than against. Votes needing an absolute majority are the exception.",
   "body": "parliament",
   "bodyLabel": "European Parliament",
-  "title": "A draft regulation of the European Parliament amending Decision 2005/684/EC, Euratom adopting the Statute for Members of the European Parliament, as regards proxy voting",
-  "subtitle": "A10-0270/2026 - Lara Wolters - Proposition de résolution (ensemble du texte) — vote in plenary",
+  "title": "Amendment of the Statute for Members of the European Parliament, as regards proxy voting",
+  "subtitle": "A10-0270/2026 – Lara Wolters – Motion for a resolution (as a whole) — vote in plenary",
   "date": "2026-11-12",
   "voteRule": "simple-majority",
   "voteRuleLabel": "Majority of votes cast",
@@ -2474,8 +2474,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "topics": [
-    "Energy"
-  ]
+  "countries": {}
 }
