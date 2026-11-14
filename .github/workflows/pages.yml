@@ -223,17 +223,19 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-  # The copy GitLab builds and serves at we-volt.eu. Set up once, with a
-  # repository variable and a secret (docs/HOSTING.md); until then this says
-  # so and stops, and the rest of the publish is unaffected.
+  # The copy GitLab builds and serves at we-volt.eu: the project volt/we-volt
+  # on gitlab.cybermindnet.eu. It needs one secret, a key or a token that may
+  # write to that project (docs/HOSTING.md); until it has one this says so and
+  # stops, and the rest of the publish is unaffected. The GITLAB_* variables
+  # override the project if it ever moves.
   gitlab:
     if: >-
       github.event_name != 'push' ||
       github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     env:
-      PROJECT: ${{ vars.GITLAB_PROJECT }}
-      HOST: ${{ vars.GITLAB_HOST || 'gitlab.com' }}
+      PROJECT: ${{ vars.GITLAB_PROJECT || 'volt/we-volt' }}
+      HOST: ${{ vars.GITLAB_HOST || 'gitlab.cybermindnet.eu' }}
       BRANCH: ${{ vars.GITLAB_BRANCH || 'main' }}
       TOKEN: ${{ secrets.GITLAB_TOKEN }}
       DEPLOY_KEY: ${{ secrets.GITLAB_DEPLOY_KEY }}
@@ -242,7 +244,7 @@ jobs:
         id: setup
         run: |
           if [ -z "$PROJECT" ] || { [ -z "$TOKEN" ] && [ -z "$DEPLOY_KEY" ]; }; then
-            echo "::notice title=Not copied to GitLab::Set the GITLAB_PROJECT variable and the GITLAB_TOKEN or GITLAB_DEPLOY_KEY secret — see docs/HOSTING.md."
+            echo "::notice title=Not copied to GitLab::Add a GITLAB_DEPLOY_KEY or GITLAB_TOKEN secret that may write to $HOST/$PROJECT — see docs/HOSTING.md."
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
@@ -274,6 +276,6 @@ jobs:
           if git push --force "$remote" "HEAD:refs/heads/$BRANCH"; then
             echo "Copied $(git rev-parse --short HEAD) to $HOST/$PROJECT ($BRANCH)."
           else
-            echo "::error title=GitLab refused the copy::Check that GITLAB_PROJECT is the project's path (as in its address, e.g. name/We-Volt), that the token or deploy key may write to it, and — if GitLab created the project with a README — allow force push on $BRANCH once under Settings → Repository → Protected branches. See docs/HOSTING.md."
+            echo "::error title=GitLab refused the copy::Check that the deploy key has write access to $HOST/$PROJECT (or the token the write_repository scope and the Maintainer role), and — if the project has commits of its own, such as a README GitLab created — allow force push on $BRANCH once under Settings → Repository → Protected branches. See docs/HOSTING.md."
             exit 1
           fi

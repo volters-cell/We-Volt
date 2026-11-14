@@ -1,9 +1,12 @@
-# Hosting: we-volt.eu on GitLab Pages
+# Hosting: we-volt.eu on GitLab
 
-The site's address is **https://we-volt.eu/**, and GitLab Pages serves it.
+The site's address is **https://we-volt.eu/**. GitLab serves it, from the project
+**volt/we-volt** on **gitlab.cybermindnet.eu**:
+
+    git@gitlab.cybermindnet.eu:volt/we-volt.git
 
 ```
-GitHub (this repository)                    GitLab (the project "We-Volt")
+GitHub (this repository)                    gitlab.cybermindnet.eu (volt/we-volt)
   scheduled imports from the Parliament
   commit the records
   .github/workflows/pages.yml
@@ -14,7 +17,7 @@ GitHub (this repository)                    GitLab (the project "We-Volt")
 ```
 
 The records are collected on GitHub because that is where the scheduled imports
-run, for free. Every publish copies the repository to GitLab, and GitLab builds
+run. Every publish copies the repository to the GitLab project, and GitLab builds
 the same site from it: the vote pages, their preview pictures, the sitemap. On
 that build the "source code", "issues" and "NOTICE" links are pointed at the
 GitLab project (`scripts/stamp-repo.mjs`), as long as the project is public.
@@ -24,59 +27,45 @@ every publish, so a commit made only on GitLab would be lost.
 
 ## Setting it up, once
 
-### 1. The GitLab project
+### 1. Let GitHub write to the project
 
-Create the project **empty**: untick *Initialize repository with a README*. If
-it already has a README commit, allow force push on `main` once (Settings →
-Repository → Protected branches), or the first copy is refused.
+The project is already filled in (`pages.yml`). What GitHub needs is permission
+to push to it — one secret, in this repository's **Settings → Secrets and
+variables → Actions → New repository secret**. Either:
 
-Make it **public** (Settings → General → Visibility) so the site's source links
-can point to it. While it is private they keep pointing at GitHub.
+- **`GITLAB_DEPLOY_KEY`** — recommended, because it never expires. Make an SSH
+  key pair on any computer:
 
-GitLab.com runs the build on its shared runners. A new account may first have to
-verify itself (GitLab asks for a phone number or card) before they run any job.
-Each build takes a few minutes of the free tier's monthly CI minutes.
+      ssh-keygen -t ed25519 -N "" -C we-volt-copy -f we-volt-copy
 
-### 2. Let GitHub copy to it
+  In GitLab, open the project, **Settings → Repository → Deploy keys → Add new
+  key**, paste the contents of `we-volt-copy.pub`, and tick **Grant write
+  permissions to this key**. On GitHub, paste the contents of `we-volt-copy`
+  (the file without `.pub`) as the secret. Then delete both files.
 
-On GitHub, in this repository's **Settings → Secrets and variables → Actions**:
-
-| Kind | Name | Value |
-|---|---|---|
-| Variable | `GITLAB_PROJECT` | the project's path, as in its address: for `https://gitlab.com/name/We-Volt`, `name/We-Volt` |
-| Secret | `GITLAB_TOKEN` | a GitLab access token with the `write_repository` scope |
-
-Create the token in GitLab under **User settings → Access tokens** (or, on a
-paid plan, the project's own Settings → Access tokens). GitLab tokens expire —
-about a year after they are made, at most — and GitLab e-mails before that
-happens: put a new one in the secret.
-
-If you would rather nothing expired, use a **deploy key** instead of the token:
-an SSH key pair whose public half is added in the GitLab project under
-Settings → Repository → Deploy keys, with *Grant write permissions* ticked.
-Its private half goes in a secret named `GITLAB_DEPLOY_KEY`.
-
-Optional variables: `GITLAB_HOST` (default `gitlab.com`, for a self-hosted
-GitLab) and `GITLAB_BRANCH` (default `main`).
+- **`GITLAB_TOKEN`** — simpler, but it expires. In the project, **Settings →
+  Access tokens → Add new token**, role *Maintainer*, scope `write_repository`.
+  GitLab caps how long a token lives (a year, unless the server's administrator
+  set otherwise) and e-mails before it runs out: put a new one in the secret.
 
 Then run **Actions → Publish → Run workflow**. The `gitlab` job copies the
-repository, and the GitLab project's pipeline (Build → Pipelines) builds and
-publishes the site.
+repository, and the project's pipeline (Build → Pipelines) builds and publishes
+the site.
 
-### 3. The domain
+### 2. Things on the GitLab side
 
-In the GitLab project: **Deploy → Pages → New domain**, `we-volt.eu`, with
-automatic certificates (Let's Encrypt) left on. GitLab then shows two DNS
-records to add wherever we-volt.eu is registered:
-
-- an **A** record for `we-volt.eu` pointing to `35.185.44.232`, GitLab Pages' address;
-- a **TXT** record named `_gitlab-pages-verification-code.we-volt.eu` with the code GitLab shows.
-
-For `www.we-volt.eu`, add it as a second domain in the same place, with a
-**CNAME** to `<your-namespace>.gitlab.io` and its own TXT record.
-
-Once GitLab says the domain is verified and the certificate is issued, the site is
-at https://we-volt.eu/.
+- If the project has commits of its own — a README GitLab created, an earlier
+  copy — the first push is refused. Allow force push on `main` once (Settings →
+  Repository → Protected branches) or empty the branch.
+- Make the project **public** (Settings → General → Visibility) so the site's
+  source links can point to it. While it is private they keep pointing at GitHub.
+- The build runs on the server's own runners, so the minute limits of gitlab.com
+  do not apply. The `pages` job uses a container image
+  (`mcr.microsoft.com/playwright`, with the browser that draws the preview
+  pictures), so it needs a runner with the Docker executor that can pull it.
+- GitLab Pages must be enabled on the server, with we-volt.eu added to the
+  project under **Deploy → Pages → Domains**. The domain already answers, so this
+  is done; if it is ever redone, the server shows the DNS records it wants.
 
 ## The old address
 
@@ -85,9 +74,9 @@ site — its front page and its vote records — and whether those records are u
 date, no more than a week behind the repository's (`where` job in `pages.yml`).
 Until both are true, the old github.io address keeps serving the full site, so
 nothing goes dark during the move, and a GitLab copy that stops updating is not
-where anyone gets sent: the run shows a warning instead. From the first
-publish after it does, the old address serves only a page that forwards each
-link to the same place on we-volt.eu — `/We-Volt/v/196157/` to
+where anyone gets sent: the run shows a warning instead. From the first publish
+where both hold, the old address serves only a page that forwards each link to
+the same place on we-volt.eu — `/We-Volt/v/196157/` to
 `https://we-volt.eu/v/196157/` — so votes shared before the move still open.
 Nothing needs switching by hand.
 
