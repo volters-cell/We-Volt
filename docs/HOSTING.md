@@ -81,8 +81,11 @@ at https://we-volt.eu/.
 ## The old address
 
 Every publish on GitHub first asks whether https://we-volt.eu/ answers with the
-site (`where` job in `pages.yml`). Until it does, the old github.io address keeps
-serving the full site, so nothing goes dark during the move. From the first
+site — its front page and its vote records — and whether those records are up to
+date, no more than a week behind the repository's (`where` job in `pages.yml`).
+Until both are true, the old github.io address keeps serving the full site, so
+nothing goes dark during the move, and a GitLab copy that stops updating is not
+where anyone gets sent: the run shows a warning instead. From the first
 publish after it does, the old address serves only a page that forwards each
 link to the same place on we-volt.eu — `/We-Volt/v/196157/` to
 `https://we-volt.eu/v/196157/` — so votes shared before the move still open.
