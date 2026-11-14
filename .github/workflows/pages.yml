@@ -59,12 +59,20 @@ jobs:
           case "$site" in
             ""|*github.io*) ;;
             *)
-              # Live means: the address answers with this site's front page,
-              # naming itself, and it is not GitHub answering. If GitHub Pages
-              # were serving the domain, forwarding to it would forward to
-              # itself.
-              if curl -fsSL --max-time 20 -D headers.txt -o front.html "$site" &&
-                 grep -q "<link rel=\"canonical\" href=\"$site\">" front.html &&
+              # Live means: the address serves this site — its front page
+              # naming itself, and the vote records behind it — and it is not
+              # GitHub answering. Any site at that address names itself, so the
+              # records are what tell this one apart. And if GitHub Pages were
+              # serving the domain, forwarding to it would forward to itself.
+              curl -sSL --max-time 20 -D headers.txt -o front.html -w 'front page: HTTP %{http_code}\n' "$site" || true
+              curl -sSL --max-time 30 -o index.json -w 'records: HTTP %{http_code}\n' "${site%/}/data/decisions/index.json" || true
+              grep -i '^server:' headers.txt || true
+              echo "title: $(grep -o '<title>[^<]*' front.html | head -n 1 | cut -c8-)"
+              votes=$(node -e 'try { const i = JSON.parse(require("fs").readFileSync("index.json", "utf8")); console.log(Array.isArray(i.decisions) ? i.decisions.length : 0) } catch (e) { console.log(0) }')
+              echo "votes on file there: $votes"
+              if grep -q "<link rel=\"canonical\" href=\"$site\">" front.html &&
+                 grep -q '<meta property="og:url" content="'"$site"'">' front.html &&
+                 [ "$votes" -gt 0 ] &&
                  ! grep -qi '^server: GitHub.com\|^x-github-request-id:' headers.txt; then
                 moved=true
               fi ;;
