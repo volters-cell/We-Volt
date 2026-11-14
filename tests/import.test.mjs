@@ -507,4 +507,12 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
   assert.equal(oneVotePerText(budget).length, 1, 'a hundred amendments still make one card');
 }
 
+// package.json must stay valid JSON: the publish step runs npm, and on
+// 12 October a trailing comma left there stopped every publish for a month
+// while the imports went on committing votes nobody could see.
+{
+  const pkg = await readFile(path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'package.json'), 'utf8');
+  assert.doesNotThrow(() => JSON.parse(pkg), 'package.json parses');
+}
+
 console.log('import.test.mjs: ok');
