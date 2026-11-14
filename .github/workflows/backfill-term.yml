@@ -172,6 +172,9 @@ jobs:
     needs: backfill
     if: always() && needs.backfill.outputs.changed == 'true'
     uses: ./.github/workflows/pages.yml
+    # The GitLab copy's token, if one is set: a called workflow sees no
+    # secrets unless they are handed on.
+    secrets: inherit
     permissions:
       contents: read
       pages: write

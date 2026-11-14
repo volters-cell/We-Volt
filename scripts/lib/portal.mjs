@@ -27,7 +27,7 @@
 import { committeeOf } from './committees.mjs';
 
 const BASE = 'https://data.europarl.europa.eu/api/v2';
-const AGENT = 'eu-tracker/0.1 (open data import; https://github.com/volters-cell/We-Volt)';
+const AGENT = 'eu-tracker/0.1 (open data import; https://we-volt.eu/)';
 
 /* The portal writes group names its own way. These are the forms the interface
    uses; anything unrecognised passes through so a new group is visible rather

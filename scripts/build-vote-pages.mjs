@@ -33,7 +33,7 @@ const OUT = path.join(ROOT, 'v');
 /* The site's own address, taken from the page rather than typed again here. */
 const SITE = (readFileSync(path.join(ROOT, 'index.html'), 'utf8')
   .match(/<meta property="og:url" content="([^"]+)"/) || [])[1] ||
-  'https://volters-cell.github.io/We-Volt/';
+  'https://we-volt.eu/';
 const BASE = SITE.replace(/\/?$/, '/');
 
 const index = JSON.parse(readFileSync(path.join(ROOT, 'data/decisions/index.json'), 'utf8'));

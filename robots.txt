@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://volters-cell.github.io/We-Volt/sitemap.xml
+Sitemap: https://we-volt.eu/sitemap.xml

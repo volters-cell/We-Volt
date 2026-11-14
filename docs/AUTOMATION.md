@@ -98,6 +98,9 @@ Two settings have to be right for it to work:
    Without this the run imports correctly and then cannot commit.
 2. **Settings → Pages**: publishing via GitHub Actions, from the repository's default
    branch — schedules only ever run there.
+3. For we-volt.eu: the `GITLAB_PROJECT` variable and the `GITLAB_TOKEN` secret, so each
+   publish is copied to GitLab, which builds and serves the site. See
+   [HOSTING.md](HOSTING.md).
 
 You can also run any of them from the Actions tab by hand (*Run workflow*).
 

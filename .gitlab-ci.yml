@@ -1,0 +1,43 @@
+# Builds the site and publishes it on GitLab Pages: https://we-volt.eu/
+#
+# The records are collected on GitHub, where the scheduled imports run, and
+# every update is copied here (the "gitlab" job in .github/workflows/pages.yml).
+# Each copy lands on the default branch and this builds it: the same steps as
+# the GitHub publish, then the finished site goes into public/, which is what
+# GitLab Pages serves.
+#
+# The domain is set once, in this project's Deploy → Pages → Domains; see
+# docs/HOSTING.md. Nothing here names it: the pages carry their own address.
+
+pages:
+  stage: deploy
+  # Chromium and everything it needs, already installed: it draws the preview
+  # picture each vote's page serves. The version is the one the GitHub publish
+  # installs, so both copies draw the same pictures.
+  image: mcr.microsoft.com/playwright:v1.49.1-noble
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  # Two updates close together: the newer one is the site, so the older build
+  # is not worth finishing.
+  interruptible: true
+  resource_group: pages
+  variables:
+    GIT_DEPTH: "1"
+  script:
+    - node --version
+    - node scripts/validate-data.mjs
+    - node scripts/build-single-file.mjs
+    - npm install --no-save --no-audit --no-fund playwright@1.49.1
+    - node scripts/build-og-cards.mjs
+    - node scripts/build-vote-pages.mjs
+    - node scripts/stamp-coverage.mjs
+    # The "source code" links open this project, if it is public.
+    - node scripts/stamp-repo.mjs
+    - node scripts/stamp-assets.mjs
+    # Everything a visitor can be sent to; not the tooling around it.
+    - mkdir public
+    - tar --exclude=./public --exclude=./.git --exclude=./.github --exclude=./node_modules -cf - . | tar -xf - -C public
+    - du -sh public
+  artifacts:
+    paths:
+      - public

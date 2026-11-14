@@ -522,15 +522,16 @@
        It was, for a while, and the reasoning was sound: a story is often
        watched on the very phone that would otherwise have to scan the code,
        and words survive a screenshot. What the reasoning missed is what the
-       words actually said. The site is hosted on GitHub Pages, so the address
-       reads "volters-cell.github.io/..." — and a card carrying somebody's
-       repository host across the bottom looks like a draft, not like a record
-       of how the Parliament voted.
+       words actually said. The site was served from GitHub Pages then, so the
+       address read "volters-cell.github.io/..." — and a card carrying
+       somebody's repository host across the bottom looks like a draft, not
+       like a record of how the Parliament voted.
 
        So the two ways in are the code and the pill, both of which say what
-       they are without naming anyone's hosting. If this ever gets a domain of
-       its own, printing it here again would be worth doing: the line is one
-       fillText, and its place is still free. */
+       they are without naming anyone's hosting. The site now has a domain of
+       its own, we-volt.eu, and printing it would be worth doing again — but
+       the room it had under the pill went to the signature below, so it needs
+       a place found on a real story first, as the signature's was. */
     /* Who is asking, and why: under the way in, beside the code, in the room
        that row already has. Putting it below would have cost the map eighty
        pixels, and the map is the reason anyone stops on this card at all.

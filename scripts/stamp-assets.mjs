@@ -33,9 +33,10 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
 
 function version() {
-  // In Actions the commit is handed to us; on a laptop, ask git; failing both,
-  // the clock, which at least changes.
-  const sha = process.env.GITHUB_SHA;
+  // In CI the commit is handed to us (GitHub Actions and GitLab each name it
+  // their own way); on a laptop, ask git; failing both, the clock, which at
+  // least changes.
+  const sha = process.env.GITHUB_SHA || process.env.CI_COMMIT_SHA;
   if (sha) return sha.slice(0, 8);
   try {
     return execSync('git rev-parse --short=8 HEAD', { cwd: ROOT }).toString().trim();

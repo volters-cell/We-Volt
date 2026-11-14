@@ -80,8 +80,9 @@
        that has been served without running that build, and a vote id that no
        longer exists. The first is not an error and should not look like one,
        so the vote is recovered from the path and opened in the tracker, which
-       has always been able to open it. GitHub Pages serves this file for any
-       path it does not have, which is what makes the rescue possible. -->
+       has always been able to open it. GitLab Pages, like GitHub Pages, serves
+       this file for any path it does not have, which is what makes the rescue
+       possible. -->
   <script>
     (function () {
       var vote = (location.pathname.match(/\/v\/(\d+)\/?$/) || [])[1];

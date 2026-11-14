@@ -21,7 +21,7 @@
  */
 import { sittingVotes } from './fetch-plenary.mjs';
 
-const AGENT = 'EU-Tracker/1.0 (+https://github.com/volters-cell/We-Volt) probe';
+const AGENT = 'EU-Tracker/1.0 (+https://we-volt.eu/) probe';
 const DAYS = ['2020-02-12', '2021-03-09', '2023-04-18',
   '2024-10-22', '2025-04-01', '2025-09-09', '2024-11-13'];
 const WAS = { '2020-02-12': 9, '2021-03-09': 0, '2023-04-18': 4,

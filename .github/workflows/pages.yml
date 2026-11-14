@@ -1,6 +1,12 @@
 # The site is static files, so publishing is a copy. Enable Pages for the
 # repository with "GitHub Actions" as the source, and this does the rest.
 #
+# The site's own address is https://we-volt.eu/, served by GitLab Pages. Every
+# publish also copies the repository to GitLab (the "gitlab" job), where
+# .gitlab-ci.yml builds the same site. Once we-volt.eu answers with it, the
+# copy here stops being a second site and forwards every old address to the
+# same page there (the "forward" job). docs/HOSTING.md has the setup.
+#
 # It publishes on every push to the repository's default branch, whatever that
 # branch is called — this repository's is not main, and naming a branch here
 # that does not exist is how a site quietly stops being published.
@@ -27,17 +33,59 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publish:
+  # Is https://we-volt.eu/ serving the site yet? Until it is, the copy here is
+  # the site; from then on it only forwards. Asked on every publish, so nothing
+  # needs switching by hand when the domain goes live.
+  where:
     # A push to some other branch is somebody's work in progress, not the site.
     if: >-
       github.event_name != 'push' ||
       github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    outputs:
+      site: ${{ steps.check.outputs.site }}
+      moved: ${{ steps.check.outputs.moved }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
+          sparse-checkout: index.html
+          sparse-checkout-cone-mode: false
+      - id: check
+        run: |
+          site=$(sed -n 's/.*<meta property="og:url" content="\([^"]*\)".*/\1/p' index.html | head -n 1)
+          echo "site=$site" >> "$GITHUB_OUTPUT"
+          moved=false
+          case "$site" in
+            ""|*github.io*) ;;
+            *)
+              # Live means: the address answers with this site's front page,
+              # naming itself, and it is not GitHub answering. If GitHub Pages
+              # were serving the domain, forwarding to it would forward to
+              # itself.
+              if curl -fsSL --max-time 20 -D headers.txt -o front.html "$site" &&
+                 grep -q "<link rel=\"canonical\" href=\"$site\">" front.html &&
+                 ! grep -qi '^server: GitHub.com\|^x-github-request-id:' headers.txt; then
+                moved=true
+              fi ;;
+          esac
+          echo "moved=$moved" >> "$GITHUB_OUTPUT"
+          echo "$site serves the site: $moved"
+
+  publish:
+    needs: where
+    if: needs.where.outputs.moved != 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # The branch as it is now. Called after an import, the run's own commit
+      # is the one from before the import was committed, and without this the
+      # new votes would wait for the next publish to reach the site.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
@@ -91,3 +139,110 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Once we-volt.eu is the site, this address only forwards: every old link —
+  # a vote shared months ago, a bookmark — opens the same page there.
+  forward:
+    needs: where
+    if: needs.where.outputs.moved == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: A page that sends every old address to the same one on the new site
+        env:
+          SITE: ${{ needs.where.outputs.site }}
+        run: |
+          mkdir forward
+          cat > forward/404.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>EU Tracker has moved</title>
+          <meta name="robots" content="noindex">
+          <link rel="canonical" href="__SITE__">
+          <script>
+            (function () {
+              var site = '__SITE__'.replace(/\/+$/, '');
+              var prefix = '__PREFIX__';
+              var path = location.pathname;
+              if (path.toLowerCase().indexOf(prefix.toLowerCase()) === 0) path = path.slice(prefix.length);
+              if (path.charAt(0) !== '/') path = '/' + path;
+              var target = site + path + location.search + location.hash;
+              if (new URL(target).host !== location.host) location.replace(target);
+            }());
+          </script>
+          </head>
+          <body style="font-family: system-ui, sans-serif; max-width: 34rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.5">
+          <h1 style="font-size: 1.4rem">EU Tracker has moved</h1>
+          <p>It is now at <a href="__SITE__">__HOST__</a>.</p>
+          </body>
+          </html>
+          HTML
+          host=${SITE#*://}; host=${host%/}
+          sed -i "s#__SITE__#$SITE#g; s#__HOST__#$host#g; s#__PREFIX__#/${GITHUB_REPOSITORY#*/}#g" forward/404.html
+          cp forward/404.html forward/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: forward
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # The copy GitLab builds and serves at we-volt.eu. Set up once, with a
+  # repository variable and a secret (docs/HOSTING.md); until then this says
+  # so and stops, and the rest of the publish is unaffected.
+  gitlab:
+    if: >-
+      github.event_name != 'push' ||
+      github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    env:
+      PROJECT: ${{ vars.GITLAB_PROJECT }}
+      HOST: ${{ vars.GITLAB_HOST || 'gitlab.com' }}
+      BRANCH: ${{ vars.GITLAB_BRANCH || 'main' }}
+      TOKEN: ${{ secrets.GITLAB_TOKEN }}
+      DEPLOY_KEY: ${{ secrets.GITLAB_DEPLOY_KEY }}
+    steps:
+      - name: Is the GitLab copy set up?
+        id: setup
+        run: |
+          if [ -z "$PROJECT" ] || { [ -z "$TOKEN" ] && [ -z "$DEPLOY_KEY" ]; }; then
+            echo "::notice title=Not copied to GitLab::Set the GITLAB_PROJECT variable and the GITLAB_TOKEN or GITLAB_DEPLOY_KEY secret — see docs/HOSTING.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      # All of the history: GitLab refuses a shallow copy into a project that
+      # does not already hold the commits it starts from.
+      - uses: actions/checkout@v5
+        if: steps.setup.outputs.ready == 'true'
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Copy to GitLab
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          set -euo pipefail
+          if [ -n "$DEPLOY_KEY" ]; then
+            mkdir -p ~/.ssh
+            printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/gitlab
+            chmod 600 ~/.ssh/gitlab
+            ssh-keyscan -t ed25519,rsa "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+            export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/gitlab -o IdentitiesOnly=yes"
+            remote="git@$HOST:$PROJECT.git"
+          else
+            remote="https://oauth2:$TOKEN@$HOST/$PROJECT.git"
+          fi
+          # GitHub is where the records are collected, so its branch is the
+          # one that counts: --force keeps the copy identical to it.
+          if git push --force "$remote" "HEAD:refs/heads/$BRANCH"; then
+            echo "Copied $(git rev-parse --short HEAD) to $HOST/$PROJECT ($BRANCH)."
+          else
+            echo "::error title=GitLab refused the copy::Check that GITLAB_PROJECT is the project's path (as in its address, e.g. name/We-Volt), that the token or deploy key may write to it, and — if GitLab created the project with a README — allow force push on $BRANCH once under Settings → Repository → Protected branches. See docs/HOSTING.md."
+            exit 1
+          fi

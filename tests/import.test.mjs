@@ -22,6 +22,7 @@ import { opensOnOeil } from '../scripts/lib/ep-sources.mjs';
 import { bulletsFrom, operativeParagraphs, isProcedural } from '../scripts/lib/operative.mjs';
 import { voteType, NOT_THE_TEXT, MEANING } from '../scripts/lib/vote-types.mjs';
 import { figures, stamp } from '../scripts/stamp-coverage.mjs';
+import { restamp, toGitLab } from '../scripts/stamp-repo.mjs';
 import { termOf as termAt, currentTerm, spanOf, labelOf, newTerms, allTerms } from '../scripts/lib/terms.mjs';
 import { termOf as minutesTerm } from '../scripts/lib/ep-sources.mjs';
 
@@ -513,6 +514,26 @@ assert.deepEqual(bulletsFrom('5. Calls on the Member States to effectively comba
 {
   const pkg = await readFile(path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'package.json'), 'utf8');
   assert.doesNotThrow(() => JSON.parse(pkg), 'package.json parses');
+}
+
+/* The source links follow the copy the site is built from: on GitLab, the
+   GitLab project, with GitLab's /-/ paths. */
+{
+  const gl = 'https://gitlab.com/someone/We-Volt';
+  assert.equal(toGitLab('https://github.com/volters-cell/We-Volt', gl), gl);
+  assert.equal(toGitLab('https://github.com/volters-cell/We-Volt/issues', gl), gl + '/-/issues');
+  assert.equal(toGitLab('https://github.com/volters-cell/We-Volt/blob/HEAD/NOTICE', gl), gl + '/-/blob/HEAD/NOTICE');
+  assert.equal(toGitLab('https://github.com/volters-cell/We-Volt.git', gl), gl);
+  const page = '<a href="https://github.com/volters-cell/We-Volt">code</a> ' +
+    '<a href="https://github.com/volters-cell/We-Volt/issues">an issue</a> ' +
+    '<a href="https://github.com/volters-cell/We-Volt-other">not ours</a> ' +
+    '<a href="https://github.com/IBM/plex">fonts</a>';
+  const { html, count } = restamp(page, gl, true);
+  assert.equal(count, 2);
+  assert.ok(html.includes('href="' + gl + '"'));
+  assert.ok(html.includes('href="' + gl + '/-/issues"'));
+  assert.ok(html.includes('We-Volt-other') && html.includes('github.com/IBM/plex'), 'other links untouched');
+  assert.equal(restamp(html, gl, true).count, 0, 'a second run changes nothing');
 }
 
 console.log('import.test.mjs: ok');

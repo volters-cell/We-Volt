@@ -167,9 +167,11 @@ back into `#/…` rather than showing anybody an error.
 ## Publishing
 
 Pushing to the default branch publishes the site, because it is static files and
-publishing is a copy (`.github/workflows/pages.yml`).
+publishing is a copy (`.github/workflows/pages.yml`). The site's address is
+https://we-volt.eu/, served by GitLab Pages from a copy of this repository that every
+publish updates; [docs/HOSTING.md](docs/HOSTING.md) has how that is set up.
 
-One step in that copy is worth knowing about. GitHub Pages sends its own cache
+One step in that copy is worth knowing about. The host sends its own cache
 lifetime with every file and gives us no way to set one, so a plain
 `<script src="assets/js/app.js">` tells a returning browser nothing about whether that
 file has changed — and a phone that has been here before will happily keep running the

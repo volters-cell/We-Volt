@@ -13,7 +13,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const REPO = 'https://github.com/volters-cell/We-Volt/blob/main';
+const REPO = 'https://github.com/volters-cell/We-Volt/blob/HEAD';
 
 /* Read from index.html rather than listed here: a list drifts, and this one
    had — the bundle was shipping without the theme toggle, the share menu, the
