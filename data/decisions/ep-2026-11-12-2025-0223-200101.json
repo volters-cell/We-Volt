@@ -16,7 +16,11 @@
   },
   "document": "A10-0271/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Stresses the need to distinguish, including for financial planning and monitoring purposes, between the areas of civil protection and of health emergency preparedness and response",
+    "Considers that the programme envelope should be increased from EUR 10.7 billion to EUR 12.4 billion in current prices (EUR 11 billion in 2025 prices) in order to be sufficiently equipped to fulfil its objectives",
+    "Considers that fostering a Union-wide culture of preparedness in order to guarantee a uniform level of protection for all EU citizens, Member States and regions requires stable and predictable multiannual funding"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 424 in favour, 105 against, 83 abstained. Result derived from the totals."
@@ -2497,5 +2501,9 @@
   "countries": {},
   "topics": [
     "Public health"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0271/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0271_EN.html"
+  }
 }

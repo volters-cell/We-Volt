@@ -16,7 +16,11 @@
   },
   "document": "A10-0263/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to enhance the implementation of the new EU drugs strategy, taking into account the growing impact those drugs have on cities and the most vulnerable groups",
+    "Calls on the Commission to enhance the implementation of the new action plan against drug trafficking by strengthening prevention, cross-border cooperation and monitoring in order to step up security in cities",
+    "Stresses the need to make it easier for cities to access EU funding more directly, where appropriate and compatible with the governance model adopted, in compliance with the principle of subsidiarity"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 601 in favour, 20 against, 36 abstained. Result derived from the totals."
@@ -2677,5 +2681,9 @@
   "countries": {},
   "topics": [
     "How Parliament works"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0263/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0263_EN.html"
+  }
 }

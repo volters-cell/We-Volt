@@ -16,7 +16,11 @@
   },
   "document": "A10-0259/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Supports EU- and national-level partnerships between employers and VET providers to improve the relevance and quality of VET curricula; calls for the linking of VET providers to regional industrial and technological clusters",
+    "Stresses that equal value should mean effective opportunities for learners, not a zero-sum competition between education and training sectors",
+    "Stresses the need to ensure that VET students and graduates feel that their qualifications and professions are valued equally to academic education, to ensure social cohesion and inclusion"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 504 in favour, 63 against, 99 abstained. Result derived from the totals."
@@ -2713,5 +2717,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0259/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0259_EN.html"
+  }
 }

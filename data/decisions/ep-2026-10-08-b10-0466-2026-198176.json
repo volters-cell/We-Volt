@@ -16,7 +16,9 @@
   },
   "document": "B10-0466/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to withdraw the draft regulation and submit a new one to the committee"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 291 in favour, 276 against, 13 abstained. Result derived from the totals."
@@ -2367,5 +2369,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0466/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0466_EN.html"
+  }
 }

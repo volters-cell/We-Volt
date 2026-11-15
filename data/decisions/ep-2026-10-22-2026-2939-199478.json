@@ -16,7 +16,9 @@
   },
   "document": "B10-0487/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Condemns the systematic violations of women’s rights in Yemen, including restrictions on freedom of movement and gender-based violence"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 106 in favour, 400 against, 56 abstained. Result derived from the totals."
@@ -2290,5 +2292,9 @@
       "role": "data"
     }
   ],
-  "countries": {}
+  "countries": {},
+  "whatItMeansFrom": {
+    "reference": "B10-0487/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0487_EN.html"
+  }
 }

@@ -16,7 +16,9 @@
   },
   "document": "B10-0500/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Emphasises that any genuine peace deal must entail the return of the children and accountability for their illegal transfers to Russian-occupied territories of Ukraine and deportation to Russia"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 536 in favour, 8 against, 37 abstained. Result derived from the totals."
@@ -2369,5 +2371,9 @@
   "countries": {},
   "topics": [
     "Ukraine"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0500/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0500_EN.html"
+  }
 }

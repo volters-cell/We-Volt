@@ -16,7 +16,10 @@
   },
   "document": "A10-0280/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Chair of the AI Board to invite the European Parliament AI Observatory, if established, to the board’s meetings to ensure parliamentary scrutiny and interinstitutional coherence in the EU’s AI policy",
+    "Calls on the Chair of the AI Board to invite the European Parliament AI Observatory, once it is established, to the board’s meetings to ensure parliamentary scrutiny and interinstitutional coherence in the EU’s AI policy"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 405 in favour, 133 against, 60 abstained. Result derived from the totals."
@@ -2441,5 +2444,9 @@
   "countries": {},
   "topics": [
     "Digital and tech"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0280/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0280_EN.html"
+  }
 }

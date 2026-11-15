@@ -16,7 +16,11 @@
   },
   "document": "A10-0272/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Requests adequate support for small and medium-sized enterprises (SMEs), mid-caps and start-ups, including greater assistance for them to scale up and compete globally",
+    "Calls on the Commission to make full use of the applicable conditionality mechanisms in the event of serious and persistent shortcomings in these areas mentioned above",
+    "Reiterates its call to urgently increase humanitarian support for Sudan, including for survivors of sexual violence, those facing hunger, IDPs and refugees"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 400 in favour, 189 against, 84 abstained. Result derived from the totals."
@@ -2741,5 +2745,9 @@
   "countries": {},
   "topics": [
     "The EU budget"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0272/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0272_EN.html"
+  }
 }

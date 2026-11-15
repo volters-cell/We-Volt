@@ -16,7 +16,11 @@
   },
   "document": "B10-0468/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Calls on the Commission to provide data regarding the expected decrease of EU fossil fuel demand and imports over the coming decades, in order to provide greater predictability",
+    "Welcomes the EU’s and a number of EU Member States’ exit from the Energy Charter Treaty; calls on the Member States who have not yet done so to move forward with their individual withdrawals",
+    "Notes that reducing fossil dependency is the best way to lessen inflationary pressure, while also acting as a security measure"
+  ],
   "outcome": {
     "result": "rejected",
     "headline": "Rejected — 128 in favour, 362 against, 56 abstained. Result derived from the totals."
@@ -2239,5 +2243,9 @@
   "topics": [
     "Türkiye",
     "Climate"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "B10-0468/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/B-10-2026-0468_EN.html"
+  }
 }

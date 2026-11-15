@@ -16,7 +16,10 @@
   },
   "document": "A10-0257/2026",
   "summary": "",
-  "whatItMeans": [],
+  "whatItMeans": [
+    "Insists on a structured cooperation with national agencies in the preparation of the work programmes and the revised funding rules",
+    "Stresses the need to equip the programme with the necessary tools to respond effectively to crisis situations affecting participants, including armed conflicts, geopolitical instability, pandemics or other major disruptions"
+  ],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 454 in favour, 34 against, 93 abstained. Result derived from the totals."
@@ -2378,5 +2381,9 @@
   "countries": {},
   "topics": [
     "Education and culture"
-  ]
+  ],
+  "whatItMeansFrom": {
+    "reference": "A10-0257/2026",
+    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0257_EN.html"
+  }
 }
