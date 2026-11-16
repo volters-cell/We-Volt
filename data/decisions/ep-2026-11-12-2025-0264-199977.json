@@ -16,9 +16,7 @@
   },
   "document": "A10-0275/2026",
   "summary": "",
-  "whatItMeans": [
-    "Considers that sufficient human resources must be available from the outset and throughout the entire programming period of the next MFF to ensure an effective implementation of the OCT programme"
-  ],
+  "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 460 in favour, 76 against, 81 abstained. Result derived from the totals."
@@ -2516,9 +2514,5 @@
       "role": "data"
     }
   ],
-  "countries": {},
-  "whatItMeansFrom": {
-    "reference": "A10-0275/2026",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0275_EN.html"
-  }
+  "countries": {}
 }

@@ -16,11 +16,7 @@
   },
   "document": "A10-0261/2026",
   "summary": "",
-  "whatItMeans": [
-    "Emphasises the need for Member States to invest in their national health systems’ capacity to improve the quality and timeliness of cancer care pathways",
-    "Notes with concern the increasing availability and appeal of new nicotine products, including devices designed to resemble toys, flavoured products, and oral nicotine pouches, which disproportionately attract young users",
-    "Stresses that cancer inequalities between and within Member States have deeper structural causes, and underlines the need to address social and environmental determinants, as well as territorial inequalities, in healthcare"
-  ],
+  "whatItMeans": [],
   "outcome": {
     "result": "adopted",
     "headline": "Adopted — 447 in favour, 66 against, 91 abstained. Result derived from the totals."
@@ -2469,9 +2465,5 @@
   "countries": {},
   "topics": [
     "Public health"
-  ],
-  "whatItMeansFrom": {
-    "reference": "A10-0261/2026",
-    "url": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0261_EN.html"
-  }
+  ]
 }
