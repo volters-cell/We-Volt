@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 884,
+      "votes": 892,
       "from": "2024-07-17",
-      "until": "2026-11-12",
+      "until": "2026-11-24",
       "file": null
     },
     {
@@ -80,6 +80,223 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-11-24-2025-0130-200541",
+      "sourceId": 200541,
+      "title": "Amending Regulations (EU) 2016/679, (EU) 2016/1036, (EU) 2016/1037, (EU) 2017/1129, (EU) 2023/1542 and (EU) 2024/573 as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplification measures",
+      "subtitle": "A10-0041/2026 - Mariateresa Vivaldini, Niels Flemming Hansen, Lukas Mandl - Accord provisoire - Am 44 — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        572,
+        44,
+        42
+      ],
+      "mepCount": 658,
+      "keywords": "2025/0130"
+    },
+    {
+      "id": "ep-2026-11-24-2025-0131-200539",
+      "sourceId": 200539,
+      "title": "Amending Directives 2014/65/EU and (EU) 2022/2557 as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplifying measures",
+      "subtitle": "A10-0034/2026 - Mariateresa Vivaldini, Kristian Vigenin - Accord provisoire - Am 15 — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        575,
+        46,
+        34
+      ],
+      "mepCount": 655,
+      "keywords": "2025/0131"
+    },
+    {
+      "id": "ep-2026-11-24-2025-0133-200531",
+      "sourceId": 200531,
+      "title": "Amending Directives 2000/14/EC, 2011/65/EU, 2013/53/EU, 2014/29/EU, 2014/30/EU, 2014/31/EU, 2014/32/EU, 2014/33/EU, 2014/34/EU, 2014/35/EU, 2014/53/EU, 2014/68/EU and 2014/90/EU of the European Parliament and of the Council as regards digitalisation and common specifications",
+      "subtitle": "A10-0023/2026 - Reinier Van Lanschot - Accord provisoire - Am 181 — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Digital and tech"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        627,
+        4,
+        36
+      ],
+      "mepCount": 667,
+      "keywords": "2025/0133"
+    },
+    {
+      "id": "ep-2026-11-24-2025-0134-200533",
+      "sourceId": 200533,
+      "title": "Amending Regulations (EU) No 765/2008, (EU) 2016/424, (EU) 2016/425, (EU) 2016/426, (EU) 2023/1230, (EU) 2023/1542 and (EU) 2024/1781 as regards digitalisation and common specifications",
+      "subtitle": "A10-0024/2026 - Reinier Van Lanschot - Accord provisoire - Am 86 — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Digital and tech"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "IMCO",
+        "label": "Internal Market and Consumer Protection",
+        "short": "Single Market"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        622,
+        2,
+        38
+      ],
+      "mepCount": 662,
+      "keywords": "2025/0134"
+    },
+    {
+      "id": "ep-2026-11-24-2025-0417-200972",
+      "sourceId": 200972,
+      "title": "Amending Regulation (EU) 2018/848 as regards certain production, labelling and certification rules and certain rules on trade with third countries",
+      "subtitle": "A10-0209/2026 - Camilla Laureti - Demande de procéder au vote sur les amendements — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Trade"
+      ],
+      "committee": {
+        "code": "AGRI",
+        "label": "Agriculture and Rural Development",
+        "short": "Agriculture"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        117,
+        484,
+        61
+      ],
+      "mepCount": 662,
+      "keywords": "2025/0417"
+    },
+    {
+      "id": "ep-2026-11-24-2026-0085-200575",
+      "sourceId": 200575,
+      "title": "Amending Decision (EU) 2015/1814 as regards ceasing the invalidation of allowances in the market stability reserve",
+      "subtitle": "A10-0230/2026 - Pierfrancesco Maran - Accord provisoire - Am 10 — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        403,
+        78,
+        146
+      ],
+      "mepCount": 627,
+      "keywords": "2026/0085"
+    },
+    {
+      "id": "ep-2026-11-24-2026-2006-200529",
+      "sourceId": 200529,
+      "title": "Protection of the Union’s financial interests in the post-2027 multiannual financial framework through the revision of the anti-fraud architecture",
+      "subtitle": "A10-0288/2026 - Tomáš Zdechovský, Dick Erixon - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "CONT",
+        "label": "Budgetary Control",
+        "short": "Budget Control"
+      },
+      "rollCalls": 11,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        552,
+        9,
+        101
+      ],
+      "mepCount": 662,
+      "keywords": "2026/2006"
+    },
+    {
+      "id": "ep-2026-11-24-2026-2074-200557",
+      "sourceId": 200557,
+      "title": "Multiannual plan for the fisheries exploiting demersal stocks in the Western Mediterranean Sea",
+      "subtitle": "A10-0279/2026 - Carmen Crespo Díaz - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-24",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Fisheries"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "PECH",
+        "label": "Fisheries",
+        "short": "Fisheries"
+      },
+      "rollCalls": 14,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        515,
+        99,
+        14
+      ],
+      "mepCount": 628,
+      "keywords": "2026/2074"
+    },
     {
       "id": "ep-2026-11-12-2023-0166-199987",
       "sourceId": 199987,
