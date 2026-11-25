@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 892,
+      "votes": 915,
       "from": "2024-07-17",
-      "until": "2026-11-24",
+      "until": "2026-11-25",
       "file": null
     },
     {
@@ -81,10 +81,641 @@
   ],
   "decisions": [
     {
+      "id": "ep-2026-11-25-a10-0235-2026-200558",
+      "sourceId": 200558,
+      "title": "Interim report on the proposal for a Council decision on the conclusion of a broad package of agreements to consolidate, deepen and expand the bilateral relations with the Swiss Confederation",
+      "subtitle": "A10-0235/2026 - Christophe Grudler - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        554,
+        22,
+        79
+      ],
+      "mepCount": 655,
+      "keywords": "a10-0235/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0236-2026-200559",
+      "sourceId": 200559,
+      "title": "A broad package of agreements between the European Union, of the one part, and the Swiss Confederation, of the other part, to consolidate, deepen and expand the bilateral relations, and amending Decisions 2011/51/EU and 2011/738/EU",
+      "subtitle": "A10-0236/2026 - Christophe Grudler - Projet de décision du Conseil — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Draft Council act",
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        584,
+        13,
+        60
+      ],
+      "mepCount": 657,
+      "keywords": "a10-0236/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0272-2025-201175",
+      "sourceId": 201175,
+      "title": "Regulation of the European Parliament and of the Council laying a framework for strengthening the availability and security of supply of critical medicinal products as well as the availability of, and accessibility of, medicinal products of common interest, and amending Regulation (EU) 2024/795",
+      "subtitle": "A10-0272/2025 - Tomislav Sokol - Proposition de rejet - Am 262 — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Motion to reject",
+      "aside": true,
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
+      "rollCalls": 2,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        46,
+        595,
+        14
+      ],
+      "mepCount": 655,
+      "keywords": "a10-0272/2025"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0277-2026-200609",
+      "sourceId": 200609,
+      "title": "Establishing Global Europe",
+      "subtitle": "A10-0277/2026 - Michael Gahler, Robert Biedroń - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        416,
+        233,
+        9
+      ],
+      "mepCount": 658,
+      "keywords": "a10-0277/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0278-2026-200604",
+      "sourceId": 200604,
+      "title": "EU-Syria political relations",
+      "subtitle": "A10-0278/2026 - Nathalie Loiseau - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Syria"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 13,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        416,
+        126,
+        101
+      ],
+      "mepCount": 643,
+      "keywords": "a10-0278/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0281-2026-200608",
+      "sourceId": 200608,
+      "title": "Report ‘Towards an EU strategy to protect and strengthen the international justice system and its institutions, mechanisms and partners’",
+      "subtitle": "A10-0281/2026 - Mounir Satouri - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Justice and policing"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "AFET",
+        "label": "Foreign Affairs",
+        "short": "Foreign Affairs"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        438,
+        168,
+        38
+      ],
+      "mepCount": 644,
+      "keywords": "a10-0281/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0282-2026-200586",
+      "sourceId": 200586,
+      "title": "Amending Directive 2006/112/EC as regards the extension of the application period of the optional reverse charge mechanism in relation to supplies of certain goods and services susceptible to fraud and of the Quick Reaction Mechanism against VAT fraud",
+      "subtitle": "A10-0282/2026 - Aurore Lalucq - Proposition de la Commission au Conseil — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Tax"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        629,
+        2,
+        26
+      ],
+      "mepCount": 657,
+      "keywords": "a10-0282/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0290-2026-201445",
+      "sourceId": 201445,
+      "title": "Speeding-up environmental assessments",
+      "subtitle": "A10-0290/2026 - Emma Ytterell - Proposition de la Commission — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Environment"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 40,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        367,
+        268,
+        25
+      ],
+      "mepCount": 660,
+      "keywords": "a10-0290/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0291-2026-201349",
+      "sourceId": 201349,
+      "title": "Establishing the European Social Fund as part of the National and Regional Partnership Plan set out in Regulation (EU) […] [NRPPlan] establishing conditions for the implementation of the Union support to quality employment, skills and social inclusion for the period from 2028 to 2034",
+      "subtitle": "A10-0291/2026 - David Casa, Marit Maij - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Jobs and workers"
+      ],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "EMPL",
+        "label": "Employment and Social Affairs",
+        "short": "Employment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        457,
+        199,
+        6
+      ],
+      "mepCount": 662,
+      "keywords": "a10-0291/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0293-2026-200977",
+      "sourceId": 200977,
+      "title": "Establishing the research and training programme of the European Atomic Energy Community for the period 2028-2032, complementing Horizon Europe, the Framework Programme for Research and Innovation, and providing for the Community’s contribution to the ITER project, and repealing Regulation (Euratom) 2025/1304",
+      "subtitle": "A10-0293/2026 - Sophie Wilmès - Proposition de la Commission au Conseil — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Energy"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        512,
+        96,
+        48
+      ],
+      "mepCount": 656,
+      "keywords": "a10-0293/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0296-2026-201228",
+      "sourceId": 201228,
+      "title": "Laying down Union procedures for the authorisation and supervision of medicinal products for human use and establishing rules governing the European Medicines Agency, amending Regulation (EC) No 1394/2007 and Regulation (EU) No 536/2014 and repealing Regulation (EC) No 726/2004, Regulation (EC) No 141/2000 and Regulation (EC) No 1901/2006",
+      "subtitle": "A10-0296/2026 - Tiemo Wölken - Demande d'ajournement du vote — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Adjournment request",
+      "aside": true,
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
+      "rollCalls": 1,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        118,
+        536,
+        6
+      ],
+      "mepCount": 660,
+      "keywords": "a10-0296/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0297-2026-201232",
+      "sourceId": 201232,
+      "title": "Union code relating to medicinal products for human use, and repealing Directives 2001/83/EC and 2009/35/EC",
+      "subtitle": "A10-0297/2026 - Dolors Montserrat - Demande d'ajournement du vote — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Adjournment request",
+      "aside": true,
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
+      "rollCalls": 3,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        147,
+        507,
+        7
+      ],
+      "mepCount": 661,
+      "keywords": "a10-0297/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0298-2026-200537",
+      "sourceId": 200537,
+      "title": "Amendments to Parliament’s Rules of Procedure on proxy voting during pregnancy and immediately after childbirth",
+      "subtitle": "A10-0298/2026 - Juan Fernando López Aguilar - Proposition de décision — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "How Parliament works"
+      ],
+      "voteType": "Proposal for a decision",
+      "committee": {
+        "code": "AFCO",
+        "label": "Constitutional Affairs",
+        "short": "Constitutional Affairs"
+      },
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        627,
+        25,
+        5
+      ],
+      "mepCount": 657,
+      "keywords": "a10-0298/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0299-2026-201347",
+      "sourceId": 201347,
+      "title": "Establishing Horizon Europe, the Framework Programme for Research and Innovation, for the period 2028-2034 laying down its rules for participation and dissemination, and repealing Regulation (EU) 2021/695",
+      "subtitle": "A10-0299/2026 - Christian Ehler - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "ITRE",
+        "label": "Industry, Research and Energy",
+        "short": "Industry and Energy"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        458,
+        190,
+        14
+      ],
+      "mepCount": 662,
+      "keywords": "a10-0299/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0300-2026-200572",
+      "sourceId": 200572,
+      "title": "Implementation of the VAT reverse-charge mechanism",
+      "subtitle": "A10-0300/2026 - Pierre Pimpie - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Tax"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "ECON",
+        "label": "Economic and Monetary Affairs",
+        "short": "Economy"
+      },
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        409,
+        185,
+        30
+      ],
+      "mepCount": 624,
+      "keywords": "a10-0300/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0301-2026-201348",
+      "sourceId": 201348,
+      "title": "Establishing the Connecting Europe Facility for the period 2028-2034, amending Regulation (EU) 2024/1679 and repealing Regulation (EU) 2021/1153",
+      "subtitle": "A10-0301/2026 - Kamila Gasiuk-Pihowicz, Oihane Agirregoitia Martínez - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "TRAN",
+        "label": "Transport and Tourism",
+        "short": "Transport"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        451,
+        173,
+        38
+      ],
+      "mepCount": 662,
+      "keywords": "a10-0301/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0304-2026-200637",
+      "sourceId": 200637,
+      "title": "Amending Directives 2001/18/EC and 2010/53/EU as regards the placing on the market of genetically modified micro-organisms and the processing of organs",
+      "subtitle": "A10-0304/2026 - Marta Temido, Adam Jarubas - Proposition de la Commission — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Food and farming"
+      ],
+      "voteType": "Commission proposal",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 23,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        351,
+        176,
+        132
+      ],
+      "mepCount": 659,
+      "keywords": "a10-0304/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0305-2026-200606",
+      "sourceId": 200606,
+      "title": "Joint text on the draft general budget of the European Union for the financial year 2027 approved by the Conciliation Committee under the budgetary procedure",
+      "subtitle": "A10-0305/2026 - Nils Ušakovs, Michalis Hadjipantela - Projet commun — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Joint text",
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        406,
+        184,
+        69
+      ],
+      "mepCount": 659,
+      "keywords": "a10-0305/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0310-2026-201185",
+      "sourceId": 201185,
+      "title": "Council position on Draft amending budget No 3/2026 of the European Union for the financial year 2026",
+      "subtitle": "A10-0310/2026 - Andrzej Halicki - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "The EU budget"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "BUDG",
+        "label": "Budgets",
+        "short": "Budgets"
+      },
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        441,
+        97,
+        120
+      ],
+      "mepCount": 658,
+      "keywords": "a10-0310/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0312-2026-201345",
+      "sourceId": 201345,
+      "title": "Establishing the Union support for asylum, migration and integration for the period from 2028 to 2034",
+      "subtitle": "A10-0312/2026 - Ana Catarina Mendes - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Migration"
+      ],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        445,
+        208,
+        10
+      ],
+      "mepCount": 663,
+      "keywords": "a10-0312/2026"
+    },
+    {
+      "id": "ep-2026-11-25-a10-0313-2026-201344",
+      "sourceId": 201344,
+      "title": "Establishing the ‘AgoraEU’ programme for the period 2028-2034, and repealing Regulations (EU) 2021/692 and (EU) 2021/818",
+      "subtitle": "A10-0313/2026 - Emma Rafowicz, Alice Kuhnke - Décision d'engager des négociations interinstitutionnelles — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Mandate for negotiations",
+      "aside": true,
+      "committee": {
+        "code": "LIBE",
+        "label": "Civil Liberties, Justice and Home Affairs",
+        "short": "Civil Liberties"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        448,
+        206,
+        10
+      ],
+      "mepCount": 664,
+      "keywords": "a10-0313/2026"
+    },
+    {
+      "id": "ep-2026-11-25-b10-0505-2026-201176",
+      "sourceId": 201176,
+      "title": "Draft Commission implementing decision amending Implementing Decision (EU) 2016/2323 as regards updates to the European List of ship recycling facilities",
+      "subtitle": "B10-0505/2026 - Proposition de résolution — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Motion for a resolution",
+      "committee": {
+        "code": "ENVI",
+        "label": "Environment, Public Health and Food Safety",
+        "short": "Environment"
+      },
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        377,
+        214,
+        24
+      ],
+      "mepCount": 615,
+      "keywords": "b10-0505/2026"
+    },
+    {
+      "id": "ep-2026-11-25-rc-b10-0508-2026-201258",
+      "sourceId": 201258,
+      "title": "Media freedom and rule of law in the Czech Republic: threats to the independence of public broadcasters",
+      "subtitle": "RC-B10-0508/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Rule of law"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 8,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        442,
+        158,
+        47
+      ],
+      "mepCount": 647,
+      "keywords": "rc-b10-0508/2026"
+    },
+    {
       "id": "ep-2026-11-24-2025-0130-200541",
       "sourceId": 200541,
-      "title": "Amending Regulations (EU) 2016/679, (EU) 2016/1036, (EU) 2016/1037, (EU) 2017/1129, (EU) 2023/1542 and (EU) 2024/573 as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplification measures",
-      "subtitle": "A10-0041/2026 - Mariateresa Vivaldini, Niels Flemming Hansen, Lukas Mandl - Accord provisoire - Am 44 — vote in plenary",
+      "title": "Amending certain Regulations as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplification measures (Omnibus IV)",
+      "subtitle": "A10-0041/2026 – Mariateresa Vivaldini, Niels Flemming Hansen, Lukas Mandl – Provisional agreement – Am 44 — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -109,8 +740,8 @@
     {
       "id": "ep-2026-11-24-2025-0131-200539",
       "sourceId": 200539,
-      "title": "Amending Directives 2014/65/EU and (EU) 2022/2557 as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplifying measures",
-      "subtitle": "A10-0034/2026 - Mariateresa Vivaldini, Kristian Vigenin - Accord provisoire - Am 15 — vote in plenary",
+      "title": "Amending certain Directives as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplifying measures (Omnibus IV)",
+      "subtitle": "A10-0034/2026 – Mariateresa Vivaldini, Kristian Vigenin – Provisional agreement – Am 15 — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -135,8 +766,8 @@
     {
       "id": "ep-2026-11-24-2025-0133-200531",
       "sourceId": 200531,
-      "title": "Amending Directives 2000/14/EC, 2011/65/EU, 2013/53/EU, 2014/29/EU, 2014/30/EU, 2014/31/EU, 2014/32/EU, 2014/33/EU, 2014/34/EU, 2014/35/EU, 2014/53/EU, 2014/68/EU and 2014/90/EU of the European Parliament and of the Council as regards digitalisation and common specifications",
-      "subtitle": "A10-0023/2026 - Reinier Van Lanschot - Accord provisoire - Am 181 — vote in plenary",
+      "title": "Amending certain Directives as regards digitalisation and common specifications (Omnibus IV)",
+      "subtitle": "A10-0023/2026 – Reinier Van Lanschot – Provisional agreement – Am 181 — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -163,8 +794,8 @@
     {
       "id": "ep-2026-11-24-2025-0134-200533",
       "sourceId": 200533,
-      "title": "Amending Regulations (EU) No 765/2008, (EU) 2016/424, (EU) 2016/425, (EU) 2016/426, (EU) 2023/1230, (EU) 2023/1542 and (EU) 2024/1781 as regards digitalisation and common specifications",
-      "subtitle": "A10-0024/2026 - Reinier Van Lanschot - Accord provisoire - Am 86 — vote in plenary",
+      "title": "Amending certain Regulations as regards digitalisation and common specifications (Omnibus IV)",
+      "subtitle": "A10-0024/2026 – Reinier Van Lanschot – Provisional agreement – Am 86 — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -191,14 +822,16 @@
     {
       "id": "ep-2026-11-24-2025-0417-200972",
       "sourceId": 200972,
-      "title": "Amending Regulation (EU) 2018/848 as regards certain production, labelling and certification rules and certain rules on trade with third countries",
-      "subtitle": "A10-0209/2026 - Camilla Laureti - Demande de procéder au vote sur les amendements — vote in plenary",
+      "title": "Organic production: amending certain production, labelling and certification rules and certain rules on trade with third countries",
+      "subtitle": "A10-0209/2026 – Camilla Laureti – Proposal to vote on amendments — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
       "topics": [
         "Trade"
       ],
+      "voteType": "Request to vote on amendments",
+      "aside": true,
       "committee": {
         "code": "AGRI",
         "label": "Agriculture and Rural Development",
@@ -218,12 +851,14 @@
     {
       "id": "ep-2026-11-24-2026-0085-200575",
       "sourceId": 200575,
-      "title": "Amending Decision (EU) 2015/1814 as regards ceasing the invalidation of allowances in the market stability reserve",
-      "subtitle": "A10-0230/2026 - Pierfrancesco Maran - Accord provisoire - Am 10 — vote in plenary",
+      "title": "Market stability reserve for the EU Emissions Trading System (EU ETS): ceasing the invalidation of allowances",
+      "subtitle": "A10-0230/2026 – Pierfrancesco Maran – Provisional agreement – Am 10 — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
-      "topics": [],
+      "topics": [
+        "Climate"
+      ],
       "voteType": "Provisional agreement",
       "committee": {
         "code": "ENVI",
@@ -245,7 +880,7 @@
       "id": "ep-2026-11-24-2026-2006-200529",
       "sourceId": 200529,
       "title": "Protection of the Union’s financial interests in the post-2027 multiannual financial framework through the revision of the anti-fraud architecture",
-      "subtitle": "A10-0288/2026 - Tomáš Zdechovský, Dick Erixon - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "subtitle": "A10-0288/2026 – Tomáš Zdechovský, Dick Erixon – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
@@ -272,8 +907,8 @@
     {
       "id": "ep-2026-11-24-2026-2074-200557",
       "sourceId": 200557,
-      "title": "Multiannual plan for the fisheries exploiting demersal stocks in the Western Mediterranean Sea",
-      "subtitle": "A10-0279/2026 - Carmen Crespo Díaz - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "title": "Multiannual plan for the fisheries exploiting demersal stocks in the western Mediterranean Sea",
+      "subtitle": "A10-0279/2026 – Carmen Crespo Díaz – Motion for a resolution (as a whole) — vote in plenary",
       "date": "2026-11-24",
       "body": "parliament",
       "bodyLabel": "European Parliament",
