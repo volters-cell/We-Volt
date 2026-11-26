@@ -63,9 +63,9 @@
       "label": "This Parliament",
       "span": "2024–2029",
       "start": "2024-07-16",
-      "votes": 915,
+      "votes": 922,
       "from": "2024-07-17",
-      "until": "2026-11-25",
+      "until": "2026-11-26",
       "file": null
     },
     {
@@ -80,6 +80,175 @@
     }
   ],
   "decisions": [
+    {
+      "id": "ep-2026-11-26-2026-2981-201487",
+      "sourceId": 201487,
+      "title": "Illegal Türkiye–Libya Memorandum of Understanding and infringement of the United Nations Convention on the Law of the Sea",
+      "subtitle": "RC-B10-0533/2026 - Considérant N - Am 1 — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Türkiye"
+      ],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 5,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        175,
+        391,
+        15
+      ],
+      "mepCount": 581,
+      "keywords": "2026/2981"
+    },
+    {
+      "id": "ep-2026-11-26-2026-2990-201482",
+      "sourceId": 201482,
+      "title": "Motion FOR A RESOLUTION Case of Eritrean Swedish journalist Dawit Isaak, arbitrarily detained in Eritrea",
+      "subtitle": "B10-0515/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Education and culture"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 1,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        529,
+        2,
+        25
+      ],
+      "mepCount": 556,
+      "keywords": "2026/2990"
+    },
+    {
+      "id": "ep-2026-11-26-2026-2991-201490",
+      "sourceId": 201490,
+      "title": "Motion FOR A RESOLUTION condemnation of pro-democracy activist and former lawmaker Au Kam San in Macao",
+      "subtitle": "B10-0521/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        469,
+        9,
+        87
+      ],
+      "mepCount": 565,
+      "keywords": "2026/2991"
+    },
+    {
+      "id": "ep-2026-11-26-2026-2992-201496",
+      "sourceId": 201496,
+      "title": "Case of Paata Burchuladze and political prisoners under the Georgian Dream regime",
+      "subtitle": "B10-0516/2026 - Proposition de résolution (ensemble du texte) — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Human rights"
+      ],
+      "voteType": "Motion for a resolution",
+      "committee": null,
+      "rollCalls": 3,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        441,
+        47,
+        86
+      ],
+      "mepCount": 574,
+      "keywords": "2026/2992"
+    },
+    {
+      "id": "ep-2026-11-26-2026-2997-201525",
+      "sourceId": 201525,
+      "title": "Supporting EU cities' candidacies to host a new United Nations pillar for the independent assessment and ethical governance of AI",
+      "subtitle": "RC-B10-0520/2026 - Après le considérant F - Am 2 — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [],
+      "voteType": "Amendment",
+      "aside": true,
+      "committee": null,
+      "rollCalls": 9,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        184,
+        375,
+        20
+      ],
+      "mepCount": 579,
+      "keywords": "2026/2997"
+    },
+    {
+      "id": "ep-2026-11-26-c10-0258-2026-201319",
+      "sourceId": 201319,
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "subtitle": "C10-0258/2026 - Demande de procéder au vote sur les amendements — vote in plenary",
+      "date": "2026-11-26",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Climate"
+      ],
+      "committee": null,
+      "rollCalls": 3,
+      "result": "rejected",
+      "status": "verified",
+      "tally": [
+        240,
+        346,
+        9
+      ],
+      "mepCount": 595,
+      "keywords": "c10-0258/2026"
+    },
+    {
+      "id": "ep-2026-11-25-2025-0102-200563",
+      "sourceId": 200563,
+      "title": "Framework for strengthening the availability and security of supply of critical medicinal products as well as the availability of, and accessibility of, medicinal products of common interest",
+      "subtitle": "A10-0272/2025 – Tomislav Sokol – Provisional agreement – Am 261 — vote in plenary",
+      "date": "2026-11-25",
+      "body": "parliament",
+      "bodyLabel": "European Parliament",
+      "topics": [
+        "Public health"
+      ],
+      "voteType": "Provisional agreement",
+      "committee": {
+        "code": "SANT",
+        "label": "Public Health",
+        "short": "Public Health"
+      },
+      "rollCalls": 2,
+      "result": "adopted",
+      "status": "verified",
+      "tally": [
+        592,
+        35,
+        30
+      ],
+      "mepCount": 657,
+      "keywords": "2025/0102"
+    },
     {
       "id": "ep-2026-11-25-a10-0235-2026-200558",
       "sourceId": 200558,
